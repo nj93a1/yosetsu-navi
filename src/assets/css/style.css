@@ -1,0 +1,8 @@
+/* 溶接ナビ 共通スタイル（要件定義確定後に本実装） */
+:root {
+  --font-base: "Noto Sans JP", system-ui, -apple-system, sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { font-family: var(--font-base); line-height: 1.7; }
+body { margin: 0; color: #1f2933; background: #fff; }
+.placeholder { min-height: 100vh; display: grid; place-content: center; text-align: center; }
