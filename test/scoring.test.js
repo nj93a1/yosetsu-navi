@@ -6,8 +6,9 @@ import { runDiagnosis, tagCount, productSlug, alternatives } from "../src/assets
 const config = JSON.parse(readFileSync(new URL("../src/data/diagnosis.json", import.meta.url)));
 const products = JSON.parse(readFileSync(new URL("../src/data/products.json", import.meta.url)));
 
-test("ダミー商品は10点・平均10タグ以上・スラッグ重複なし", () => {
-  assert.equal(products.length, 10);
+test("公開商品は10点・平均10タグ以上・スラッグ重複なし・非公開3点は診断に出ない", () => {
+  assert.equal(products.filter((p) => p.is_published !== false).length, 10);
+  assert.equal(products.filter((p) => p.is_published === false).length, 3);
   const avg = products.reduce((n, p) => n + tagCount(p), 0) / products.length;
   assert.ok(avg >= 10, `平均タグ数 ${avg}`);
   const slugs = new Set(products.map(productSlug));
