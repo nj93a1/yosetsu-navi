@@ -90,18 +90,29 @@ async function productPage(env, slug) {
   ].map(([k, v]) => `<div class="spec__row"><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join("");
 
   const body = `
-<main class="wrap product">
-  <nav class="crumbs" aria-label="パンくず"><a href="/">トップ</a> › <a href="/diagnosis/">診断</a> › <span>${esc(p.name)}</span></nav>
-  ${p.handled_by_operator ? `<p class="label-handled">運営元で取り扱い</p>` : ""}
-  <h1>${esc(p.name)}</h1>
-  <p class="product__maker">${esc(p.maker_name)}</p>
-  <img class="product__image" src="${esc(p.image || "/assets/images/products/placeholder.svg")}" alt="" width="640" height="400" loading="lazy">
+<nav class="subnav" aria-label="ページ内メニュー"><ul>
+  <li><a href="#top" aria-current="true">概要</a></li><li><a href="#spec">スペック</a></li><li><a href="#fit">向き不向き</a></li><li><a href="#alts">代替候補</a></li>
+</ul></nav>
+<main class="narrow product" id="top">
+  <nav class="crumbs" aria-label="パンくず"><a href="/">トップ</a> › <a href="/lineup/">機種一覧</a> › <span>${esc(p.name)}</span></nav>
+  <div class="product__head">
+    ${p.handled_by_operator ? `<span class="badge">運営元で取り扱い</span>` : ""}
+    <h1>${esc(p.name)}</h1>
+    <p class="product__maker">${esc(p.maker_name)}</p>
+    <div class="product__band"><span>価格帯：<b>${esc(p.price_band)}</b></span><span>習得難易度：<b>${esc(p.skill_level)}</b></span><span>${esc(p.portability)}</span></div>
+  </div>
+  <img class="product__image" src="${esc(p.image || "/assets/images/products/placeholder.svg")}" alt="" width="640" height="400">
   <section><h2>運営者の選定コメント</h2><p class="comment">${esc(p.comment)}</p></section>
-  <section><h2>スペック</h2><dl class="spec">${spec}</dl></section>
-  <section class="fit"><div><h2>向いている用途</h2><ul>${li(p.suitable_for)}</ul></div><div><h2>向いていない用途</h2><ul>${li(p.not_suitable_for)}</ul></div></section>
-  <section><h2>同じ価格帯の代替候補</h2><ul class="alts">${alts.map((a) => `<li><a href="/products/${esc(a.slug)}/">${esc(a.name)}<span>${esc(a.maker_name)}</span></a></li>`).join("") || "<li>該当なし</li>"}</ul></section>
+  <section class="subsec" id="spec"><h2>スペック</h2><dl class="spec">${spec}</dl></section>
+  <section class="subsec" id="fit"><h2>向いている用途・向いていない用途</h2>
+    <div class="fit"><div class="ok"><h3>向いている</h3><ul>${li(p.suitable_for)}</ul></div><div class="ng"><h3>向いていない</h3><ul>${li(p.not_suitable_for)}</ul></div></div></section>
+  <section class="subsec" id="alts"><h2>同じ価格帯の代替候補</h2>
+    <ul class="pnav">${alts.map((a) => `<li><a href="/products/${esc(a.slug)}/"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-list"></use></svg><span class="pnav__label">${esc(a.name)}<span class="pnav__sub">${esc(a.maker_name)}${a.handled_by_operator ? "｜運営元で取り扱い" : ""}</span></span><svg class="ico ico--chev" aria-hidden="true"><use href="/assets/icons.svg#i-chevron"></use></svg></a></li>`).join("") || "<li class=\"empty\">同じ価格帯の候補はありません</li>"}</ul></section>
   <p class="src">情報源：${esc(p.source || "—")}</p>
-  <div class="cta"><a class="btn btn--primary" href="/diagnosis/">診断でほかの候補も見る</a></div>
+  <div class="cta">
+    <a class="btn btn--primary" href="/diagnosis/"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-diag"></use></svg>診断でほかの候補も見る</a>
+    <a class="btn btn--accent" href="/contact/?product=${esc(p.slug)}"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-contact"></use></svg>この機種について相談する</a>
+  </div>
 </main>`;
   return html(pageShell(`${p.name}｜${p.maker_name}｜比較`, body));
 }
@@ -109,9 +120,12 @@ async function productPage(env, slug) {
 function pageShell(title, body) {
   return `<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex,nofollow"><title>${esc(title)}</title>
-<link rel="stylesheet" href="/assets/css/style.css?v=2"></head><body>
-<header class="header"><a class="header__brand" href="/">レーザー溶接機 比較・選定（仮）</a></header>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css?v=3"></head><body>
+<div id="siteHeader"></div>
 ${body}
-<footer class="footer"><p>運営：ノースヒルズ溶接工業株式会社（レーザー溶接機の販売事業者です。一部製品を取り扱っています）</p><p><a href="/about/">運営者について・評価基準</a></p></footer>
+<div id="siteFooter"></div>
+<script type="module">import { mountChrome } from "/assets/js/partials.js?v=3"; mountChrome({ current: "/lineup/" });</script>
 </body></html>`;
 }

@@ -3,18 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 本番公開時に削除：検索エンジンのインデックスを許可する -->
   <meta name="robots" content="noindex,nofollow">
-  <title>運営者について・評価基準</title>
-  <link rel="stylesheet" href="/assets/css/style.css?v=2">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css?v=3">
+  <title>運営者について・評価基準｜レーザー溶接機 比較・選定</title>
 </head>
 <body>
-<header class="header"><a class="header__brand" href="/">レーザー溶接機 比較・選定（仮）</a></header>
-<main class="wrap">
-  <h1>運営者について</h1>
-  <p>本サイトは、ノースヒルズ溶接工業株式会社が運営しています。当社はレーザー溶接機の販売事業者であり、本サイトに掲載する製品の一部を取り扱っています。取り扱い製品には「運営元で取り扱い」のラベルを表示しています。</p>
-  <h2>評価基準と情報源</h2>
-  <p>（未決事項2の確定後に記載：実機検証／カタログスペック／ヒアリングのいずれを根拠とするか）</p>
+<div id="siteHeader"></div>
+<main class="section">
+  <div class="narrow">
+    <h1 class="sec-title">運営者について</h1>
+    <p>本サイトは、ノースヒルズ溶接工業株式会社が運営しています。当社はレーザー溶接機の販売事業者であり、本サイトに掲載する製品の一部を取り扱っています。取り扱い製品には「運営元で取り扱い」のラベルを表示しています。</p>
+    <div class="subsec"><h2>評価基準と情報源</h2>
+    <p>（未決事項2の確定後に記載：実機検証／カタログスペック／ヒアリングのいずれを根拠とするか）</p></div>
+    <div class="subsec"><h2>掲載製品の選定について</h2>
+    <p>（未決事項3の確定後に記載：仕入れ先製品と競合製品の扱い）</p></div>
+  </div>
 </main>
-<footer class="footer"><p>運営：ノースヒルズ溶接工業株式会社</p></footer>
+<div id="siteFooter"></div>
+<script type="module">
+  import { mountChrome } from "/assets/js/partials.js?v=3";
+  mountChrome({ current: "/about/" });
+</script>
 </body>
 </html>

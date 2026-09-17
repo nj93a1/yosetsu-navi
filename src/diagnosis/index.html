@@ -3,20 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 本番公開時に削除：検索エンジンのインデックスを許可する -->
   <meta name="robots" content="noindex,nofollow">
-  <title>レーザー溶接機 選定診断</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/style.css?v=2">
+  <link rel="stylesheet" href="/assets/css/style.css?v=3">
+  <title>5つの質問で選ぶ｜レーザー溶接機 選定診断</title>
 </head>
 <body class="diag">
+  <div id="siteHeader"></div>
   <div class="progress" id="progress" aria-live="polite">
-    <p class="progress__text" id="progressText">読み込み中…</p>
-    <div class="progress__bar"><div class="progress__fill" id="progressFill" style="width:0%"></div></div>
+    <div class="progress__in">
+      <ol class="steps" id="steps"></ol>
+      <div class="progress__bar"><div class="progress__fill" id="progressFill" style="width:0%"></div></div>
+    </div>
   </div>
-  <main class="diag__body" id="app"></main>
-  <div class="diag__foot" id="foot"><button class="btn btn--ghost" id="backBtn" type="button">← 戻る</button></div>
-  <script type="module" src="/assets/js/diagnosis.js?v=2"></script>
+  <main class="diag__body" id="app"><p>読み込み中…</p></main>
+  <div id="siteFooter"></div>
+  <nav class="bottombar" aria-label="操作"><ul id="foot"><li><button class="btn btn--ghost" id="backBtn" type="button"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-back"></use></svg>戻る</button></li></ul></nav>
+  <script type="module" src="/assets/js/diagnosis.js?v=3"></script>
 </body>
 </html>
