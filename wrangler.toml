@@ -1,0 +1,15 @@
+name = "yosetsu-navi"
+main = "worker/index.js"
+compatibility_date = "2026-09-01"
+
+# src/ 配下（HTML・CSS・JS・診断用JSON）は静的アセットとして配信し、
+# /api/* と /products/* だけ Worker が処理する。
+[assets]
+directory = "./src"
+binding = "ASSETS"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "yosetsu-navi"
+# 本番DB作成後に `npm run db:create` の出力IDへ差し替える
+database_id = "00000000-0000-0000-0000-000000000000"

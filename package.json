@@ -1,0 +1,22 @@
+{
+  "name": "yosetsu-navi",
+  "version": "0.1.0",
+  "private": true,
+  "description": "レーザー溶接機 比較・選定サイト（Cloudflare Workers + D1）",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "test": "node --test",
+    "validate": "node scripts/build-seed.js --check",
+    "seed:build": "node scripts/build-seed.js",
+    "db:create": "wrangler d1 create yosetsu-navi",
+    "db:init:local": "wrangler d1 execute yosetsu-navi --local --file=./schema.sql",
+    "db:init": "wrangler d1 execute yosetsu-navi --remote --file=./schema.sql",
+    "db:seed:local": "npm run seed:build && wrangler d1 execute yosetsu-navi --local --file=./seed.sql",
+    "db:seed": "npm run seed:build && wrangler d1 execute yosetsu-navi --remote --file=./seed.sql"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}

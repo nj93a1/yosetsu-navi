@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,nofollow">
+  <title>レーザー溶接機 選定診断</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css?v=2">
+</head>
+<body class="diag">
+  <div class="progress" id="progress" aria-live="polite">
+    <p class="progress__text" id="progressText">読み込み中…</p>
+    <div class="progress__bar"><div class="progress__fill" id="progressFill" style="width:0%"></div></div>
+  </div>
+  <main class="diag__body" id="app"></main>
+  <div class="diag__foot" id="foot"><button class="btn btn--ghost" id="backBtn" type="button">← 戻る</button></div>
+  <script type="module" src="/assets/js/diagnosis.js?v=2"></script>
+</body>
+</html>

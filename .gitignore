@@ -24,3 +24,8 @@ npm-debug.log*
 
 # Claude
 .claude/settings.local.json
+
+# 生成物 / wrangler
+seed.sql
+.wrangler/
+.dev.vars

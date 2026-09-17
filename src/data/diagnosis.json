@@ -1,0 +1,81 @@
+{
+  "_comment": "診断の設問・重み・枠配分ルール。診断ロジックの条件はコードに直書きせず、このファイルで管理する。",
+  "axes": {
+    "material":    { "label": "素材",     "weight": 3 },
+    "thickness":   { "label": "板厚",     "weight": 3 },
+    "skill":       { "label": "使用者",   "weight": 2 },
+    "environment": { "label": "環境",     "weight": 2 },
+    "price":       { "label": "予算",     "weight": 2 }
+  },
+  "questions": [
+    {
+      "id": "q1_material",
+      "axis": "material",
+      "title": "主に溶接する素材は？",
+      "options": [
+        { "id": "steel",    "label": "鉄・ステンレス", "sub": "SS400、SUS304 など", "image": "material-steel", "match": { "mode": "any", "tags": ["鉄", "ステンレス"] }, "reason": "鉄・ステンレスに対応" },
+        { "id": "alcu",     "label": "アルミ・銅",     "sub": "A5052、C1100 など",  "image": "material-alcu",  "match": { "mode": "any", "tags": ["アルミ", "銅"] }, "reason": "アルミ・銅に対応" },
+        { "id": "ti",       "label": "チタン・特殊",   "sub": "チタン、マグネシウム", "image": "material-ti",   "match": { "mode": "any", "tags": ["チタン", "マグネシウム"] }, "reason": "チタン・特殊材に対応" },
+        { "id": "multi",    "label": "複数の素材",     "sub": "鉄もアルミも扱う",   "image": "material-multi", "match": { "mode": "min_count", "tags": ["鉄", "ステンレス", "アルミ", "銅", "チタン", "マグネシウム"], "min": 3 }, "reason": "幅広い素材に対応" },
+        { "id": "unknown",  "label": "わからない",     "unknown": true }
+      ]
+    },
+    {
+      "id": "q2_thickness",
+      "axis": "thickness",
+      "title": "溶接する板の厚さは？",
+      "options": [
+        { "id": "thin",    "label": "薄板",   "sub": "3mm 以下",     "image": "thickness-thin",   "match": { "mode": "any", "tags": ["0.5mm未満", "0.5〜3mm"] }, "reason": "薄板向き" },
+        { "id": "mid",     "label": "中厚",   "sub": "3〜6mm",       "image": "thickness-mid",    "match": { "mode": "any", "tags": ["3〜6mm"] }, "reason": "3〜6mm の中厚に対応" },
+        { "id": "thick",   "label": "厚物",   "sub": "6mm 以上",     "image": "thickness-thick",  "match": { "mode": "any", "tags": ["6mm以上"] }, "reason": "厚物に対応" },
+        { "id": "mixed",   "label": "混在",   "sub": "薄いものも厚いものも", "image": "thickness-mixed", "match": { "mode": "min_count", "tags": ["0.5mm未満", "0.5〜3mm", "3〜6mm", "6mm以上"], "min": 3 }, "reason": "幅広い板厚に対応" },
+        { "id": "unknown", "label": "わからない", "unknown": true }
+      ]
+    },
+    {
+      "id": "q3_skill",
+      "axis": "skill",
+      "title": "誰が使いますか？",
+      "options": [
+        { "id": "expert",   "label": "熟練工が使う",   "sub": "溶接経験が豊富",   "match": { "mode": "any", "tags": ["未経験可", "経験者向け", "熟練者向け"] }, "reason": "熟練者の技能を活かせる" },
+        { "id": "novice",   "label": "新人も使う",     "sub": "経験の浅い人も操作", "match": { "mode": "any", "tags": ["未経験可", "経験者向け"] }, "reason": "新人でも扱いやすい" },
+        { "id": "beginner", "label": "これから始める", "sub": "溶接は未経験",     "match": { "mode": "any", "tags": ["未経験可"] }, "reason": "未経験から始めやすい" },
+        { "id": "unknown",  "label": "わからない",     "unknown": true }
+      ]
+    },
+    {
+      "id": "q4_environment",
+      "axis": "environment",
+      "title": "使う場所は？",
+      "options": [
+        { "id": "indoor",  "label": "屋内で固定して使う", "sub": "工場内の作業台",  "match": { "mode": "any", "tags": ["屋内"] }, "reason": "屋内作業向き" },
+        { "id": "outdoor", "label": "屋外でも使う",       "sub": "現場・出張作業",  "match": { "mode": "any", "tags": ["屋外"] }, "reason": "屋外・現場に持ち出せる" },
+        { "id": "line",    "label": "自動化ラインに組み込む", "sub": "ロボット・専用機", "match": { "mode": "any", "tags": ["ライン組込"] }, "reason": "ライン組込に対応" },
+        { "id": "unknown", "label": "わからない", "unknown": true }
+      ]
+    },
+    {
+      "id": "q5_budget",
+      "axis": "price",
+      "title": "ご予算は？",
+      "options": [
+        { "id": "b100_200", "label": "100〜200万円", "match": { "mode": "any", "tags": ["100万円未満", "100〜200万円"] }, "reason": "200万円以内" },
+        { "id": "b200_400", "label": "200〜400万円", "match": { "mode": "any", "tags": ["100万円未満", "100〜200万円", "200〜400万円"] }, "reason": "400万円以内" },
+        { "id": "b400_600", "label": "400〜600万円", "match": { "mode": "any", "tags": ["100万円未満", "100〜200万円", "200〜400万円", "400〜600万円"] }, "reason": "600万円以内" },
+        { "id": "unknown",  "label": "未定", "unknown": true }
+      ]
+    }
+  ],
+  "relax": {
+    "_comment": "完全一致ゼロのとき、この順で条件を1つずつ「わからない」扱いにして再検索する",
+    "order": ["price", "environment", "skill", "thickness", "material"]
+  },
+  "slots": {
+    "_comment": "1〜3枠: 適合度順 / 4枠: 専門用途 / 5枠: 価格重視",
+    "specialty": {
+      "material":    ["アルミ", "銅", "チタン", "マグネシウム"],
+      "environment": ["真空", "屋外", "ライン組込"]
+    },
+    "priceOrder": ["100万円未満", "100〜200万円", "200〜400万円", "400〜600万円", "600万円以上"]
+  }
+}
