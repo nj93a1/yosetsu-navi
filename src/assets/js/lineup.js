@@ -16,7 +16,7 @@ const PRICES = ["100万円未満", "100〜200万円", "200〜400万円", "400〜
 
 export function card(p) {
   return `<li class="pcard"><a href="/products/${esc(productSlug(p))}/">
-    <img class="pcard__img" src="${esc(p.image || "/assets/images/products/placeholder.svg")}" alt="" width="320" height="240" loading="lazy">
+    <img class="pcard__img" src="${esc(p.image || "/assets/images/products/placeholder.svg")}" alt="" width="320" height="240" loading="lazy"><span class="image-note image-label">設備イメージ（AI生成）</span>
     <p class="pcard__name">${esc(p.name)}</p>
     <p class="pcard__maker">${esc(p.maker_name)}</p>
     <p class="pcard__price">価格帯：<b>${esc(p.tags.price[0])}</b></p>
