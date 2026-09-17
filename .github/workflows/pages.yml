@@ -1,5 +1,10 @@
 name: Deploy to GitHub Pages
 
+# 静的部分（トップ・診断・機種一覧）の確認用プレビュー。
+# 本番は Cloudflare Workers（ルート配信）のため、ソースは絶対パス（/assets/...）で書いている。
+# Pages は /yosetsu-navi/ 配下になるので、デプロイ時にパスを書き換えたコピーを配信する。
+# 商品詳細（/products/）と診断ログ API は Worker が必要なため Pages では動かない。
+
 on:
   push:
     branches: [main]
@@ -22,11 +27,19 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+      - name: Rewrite absolute paths for the /yosetsu-navi/ subpath
+        run: |
+          rm -rf out && cp -R src out
+          find out -type f \( -name '*.html' -o -name '*.js' -o -name '*.css' \) -print0 | xargs -0 perl -pi -e '
+            s#(["'"'"'(])/(assets|data|diagnosis|lineup|about|articles|contact|products)/#$1/yosetsu-navi/$2/#g;
+            s#href="/"#href="/yosetsu-navi/"#g;
+            s#location\.href = "/"#location.href = "/yosetsu-navi/"#g;
+          '
       - uses: actions/configure-pages@v5
         with:
           enablement: true
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: src
+          path: out
       - id: deployment
         uses: actions/deploy-pages@v4
