@@ -1,17 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 720" width="1600" height="720">
-  <!-- ヒーロー写真の仮画像（溶接作業の実写真に差し替える） -->
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a3f47"/><stop offset="1" stop-color="#1e2229"/></linearGradient>
-    <radialGradient id="glow" cx=".28" cy=".62" r=".22"><stop offset="0" stop-color="#ffd9a0" stop-opacity=".9"/><stop offset=".35" stop-color="#ff9a3c" stop-opacity=".45"/><stop offset="1" stop-color="#ff7a1a" stop-opacity="0"/></radialGradient>
-  </defs>
-  <rect width="1600" height="720" fill="url(#bg)"/>
-  <rect x="0" y="520" width="1600" height="200" fill="#15181d"/>
-  <path d="M0 520L1600 470" stroke="#5a6472" stroke-width="2" opacity=".5"/>
-  <path d="M120 600h700l260-110H380z" fill="#8f98a4"/>
-  <path d="M120 600v24h700v-24z" fill="#5d6673"/>
-  <circle cx="450" cy="446" r="150" fill="url(#glow)"/>
-  <g stroke="#ffb35c" stroke-width="3" stroke-linecap="round" opacity=".85"><path d="M450 446l-60-18M450 446l-40 40M450 446l10 52M450 446l52 34M450 446l60 4"/></g>
-  <path d="M470 300l40 30-70 90-40-30z" fill="#23272e" stroke="#7a8492" stroke-width="2"/>
-  <path d="M510 330l120-70 26 20-126 76" fill="#1a1e24" stroke="#7a8492" stroke-width="2"/>
-  <text x="40" y="700" font-family="sans-serif" font-size="18" fill="#8a94a3">写真は仮。溶接作業の実写真に差し替え予定</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 720" width="1600" height="720"><rect width="1600" height="720" fill="#e6e8eb"/><rect x="0.5" y="0.5" width="1599" height="719" fill="none" stroke="#c9ced5"/><text x="800.0" y="360.0" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="40" fill="#6b7280">ヒーロー写真（差し替え予定）</text></svg>

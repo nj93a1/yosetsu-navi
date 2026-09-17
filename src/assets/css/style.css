@@ -82,9 +82,9 @@ mark { background: linear-gradient(transparent 55%, var(--c-marker) 55%); color:
 /* ---------- ヒーロー（写真＋中央の白文字、下端に重なる検索ピル） ---------- */
 .hero { position: relative; color: #fff; }
 .hero__img { width: 100%; height: 400px; object-fit: cover; }
-.hero__text { position: absolute; inset: 0 0 60px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 0 16px; text-shadow: 0 1px 3px rgba(0,0,0,.5); }
-.hero__title { font-size: 30px; font-weight: 700; line-height: 1.35; margin: 0 0 12px; color: #fff; }
-.hero__lead { font-size: 17px; margin: 0; color: #fff; }
+.hero__text { position: absolute; inset: 0 0 60px; color: var(--c-text); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 0 16px; text-shadow: none; }
+.hero__title { font-size: 30px; font-weight: 700; line-height: 1.35; margin: 0 0 12px; color: var(--c-text); }
+.hero__lead { font-size: 17px; margin: 0; color: var(--c-text); }
 .hero__search { position: relative; max-width: 720px; margin: -28px auto 0; padding: 0 16px; }
 .hero__search form { display: flex; align-items: center; gap: 8px; background: #fff; border: 1px solid var(--c-line-2); border-radius: 999px; min-height: 56px; padding: 4px 8px 4px 18px; box-shadow: 0 2px 8px rgba(0,0,0,.12); }
 .hero__search .ico { width: 22px; height: 22px; color: var(--c-muted); }
