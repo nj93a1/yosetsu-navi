@@ -5,15 +5,15 @@ export const icon = (name, cls = "ico") => `<svg class="${cls}" aria-hidden="tru
 export function header(current = "") {
   const items = [
     ["/diagnosis/", "diag", "5つの質問で選ぶ（診断）"],
-    ["/lineup/", "list", "機種一覧から探す"],
-    ["/articles/", "article", "選び方・比較のコツを読む"],
-    ["/contact/", "contact", "相談・問い合わせ"],
-    ["/about/", "article", "運営者について・評価基準"],
+    ["/lineup/", "lineup", "機種一覧から探す"],
+    ["/articles/", "guide", "選び方・比較のコツを読む"],
+    ["/contact/", "consult", "相談・問い合わせ"],
+    ["/about/", "guide", "運営者について・評価基準"],
   ];
   return `
 <header class="header">
   <div class="header__in">
-    <a class="header__brand" href="/"><span>レーザー溶接機 比較・選定<small>中立的な比較情報サイト（サイト名 仮）</small></span></a>
+    <a class="header__brand" href="/"><span class="header__mark">${icon("diag")}</span><span>レーザー溶接機 比較・選定<small>中立的な比較情報サイト（サイト名 仮）</small></span></a>
     <button class="header__menu" type="button" id="menuBtn" aria-expanded="false" aria-controls="gnav">${icon("menu")}MENU</button>
   </div>
   <nav class="gnav" id="gnav" data-open="false" aria-label="メニュー">
@@ -25,9 +25,9 @@ export function header(current = "") {
 export function bottombar(current = "") {
   const items = [
     ["/diagnosis/", "diag", "診断で選ぶ"],
-    ["/lineup/", "list", "機種一覧"],
+    ["/lineup/", "lineup", "機種一覧"],
     ["/diagnosis/#compare", "compare", "2台を比較"],
-    ["/contact/", "contact", "相談する"],
+    ["/contact/", "consult", "相談する"],
   ];
   return `
 <nav class="bottombar" aria-label="主要メニュー">

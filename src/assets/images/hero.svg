@@ -1,1 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0f2f6b"/><stop offset="1" stop-color="#17408b"/></linearGradient><radialGradient id="s" cx="0.72" cy="0.55" r="0.25"><stop offset="0" stop-color="#ffd27a" stop-opacity=".95"/><stop offset=".4" stop-color="#ff9a3c" stop-opacity=".5"/><stop offset="1" stop-color="#ff7a1a" stop-opacity="0"/></radialGradient></defs><rect width="1200" height="560" fill="url(#g)"/><rect x="0" y="380" width="1200" height="180" fill="#0b2352" opacity=".6"/><path d="M0 400 L1200 340" stroke="#4c6ea8" stroke-width="3" opacity=".5"/><circle cx="860" cy="310" r="140" fill="url(#s)"/><path d="M700 120 L860 310" stroke="#ffb35c" stroke-width="8" stroke-linecap="round"/><rect x="640" y="60" width="110" height="70" rx="10" transform="rotate(50 695 95)" fill="#c9d2e3"/><text x="72" y="470" font-family="sans-serif" font-size="22" fill="#c9d2e3">写真は仮のイメージです（実写真に差し替え予定）</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 720" width="1000" height="720" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <!-- 技術図面調のイラスト（実写真に差し替えるまでの仮） -->
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" stroke="#fff" stroke-opacity=".08" stroke-width="1"/></pattern>
+  </defs>
+  <rect width="1000" height="720" fill="url(#grid)"/>
+  <!-- 母材 -->
+  <path d="M120 520h520l240-150H360z" fill="#AEB6C2"/>
+  <path d="M120 520v34h520v-34z" fill="#7F8896"/>
+  <path d="M640 520l240-150v34L640 554z" fill="#5E6775"/>
+  <path d="M120 520h520l240-150H360z" stroke="#fff" stroke-opacity=".6" stroke-width="2"/>
+  <!-- 継ぎ目とビード -->
+  <path d="M250 500L700 400" stroke="#fff" stroke-opacity=".5" stroke-width="2" stroke-dasharray="6 8"/>
+  <path d="M250 500c14-9 20-9 34-3s20 6 34-3 20-9 34-3 20 6 34-3 20-9 34-3 20 6 34-3 20-9 34-3 20 6 34-3 20-9 34-3" stroke="#E9EDF3" stroke-width="7"/>
+  <path d="M250 500c14-9 20-9 34-3s20 6 34-3 20-9 34-3 20 6 34-3 20-9 34-3 20 6 34-3 20-9 34-3 20 6 34-3 20-9 34-3" stroke="#23D3EB" stroke-opacity=".7" stroke-width="2"/>
+  <!-- トーチ -->
+  <path d="M690 150l86 66-120 128-86-66z" fill="#1B2A4A" stroke="#fff" stroke-opacity=".7" stroke-width="2"/>
+  <path d="M720 176l40 30" stroke="#23D3EB" stroke-width="3"/>
+  <path d="M776 216l70-52 20 16-72 54" fill="#0E1B3A" stroke="#fff" stroke-opacity=".7" stroke-width="2"/>
+  <path d="M866 180c40 20 60 90 40 170" stroke="#fff" stroke-opacity=".5" stroke-width="3"/>
+  <path d="M632 322l-24 26" stroke="#fff" stroke-opacity=".7" stroke-width="2"/>
+  <!-- ビーム -->
+  <path d="M608 348L570 402" stroke="#23D3EB" stroke-width="5"/>
+  <path d="M608 348L570 402" stroke="#fff" stroke-width="1.5"/>
+  <!-- 火花 -->
+  <circle cx="570" cy="402" r="9" fill="#FFD9A8"/>
+  <circle cx="570" cy="402" r="4" fill="#fff"/>
+  <g stroke="#F0821E" stroke-width="3"><path d="M570 402l-40-10M570 402l-30 26M570 402l-8 36M570 402l30 30M570 402l40 6"/></g>
+  <g stroke="#F0821E" stroke-width="2" stroke-opacity=".7"><path d="M528 388l-18-2M538 430l-14 16M562 440l-2 18M602 434l10 14M612 410l20 2"/></g>
+  <!-- 寸法線 -->
+  <path d="M120 600h520M120 590v20M640 590v20" stroke="#23D3EB" stroke-opacity=".8" stroke-width="1.5"/>
+  <path d="M900 372v148M890 372h20M890 520h20" stroke="#23D3EB" stroke-opacity=".8" stroke-width="1.5"/>
+  <text x="380" y="640" text-anchor="middle" font-family="Barlow Condensed, Arial Narrow, sans-serif" font-size="22" fill="#9BE8F2" letter-spacing="2">MATERIAL / THICKNESS</text>
+  <text x="920" y="450" font-family="Barlow Condensed, Arial Narrow, sans-serif" font-size="22" fill="#9BE8F2" letter-spacing="2" transform="rotate(90 920 450)">t</text>
+  <text x="60" y="690" font-family="sans-serif" font-size="16" fill="#8A99B8">イラストは仮。実写真に差し替え予定</text>
+</svg>
