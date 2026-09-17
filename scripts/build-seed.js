@@ -21,7 +21,8 @@ for (const p of products) {
   if (slugs.has(slug)) errors.push(`${p.id}: スラッグ重複 ${slug}`);
   slugs.add(slug);
   for (const a of AXES) if (!Array.isArray(p.tags?.[a])) errors.push(`${p.id}: tags.${a} が配列でない`);
-  if ((p.tags?.price || []).length !== 1) errors.push(`${p.id}: 価格帯タグは1つだけ`);
+  // 非公開（is_published:false）の商品は価格帯未確定を許容する（確認後に1つ入れて公開）
+  if ((p.tags?.price || []).length !== 1 && p.is_published !== false) errors.push(`${p.id}: 価格帯タグは1つだけ`);
   if ((p.tags?.skill || []).length !== 1) errors.push(`${p.id}: 習得難易度タグは1つだけ`);
   if (!p.comment || p.comment.length < 5) errors.push(`${p.id}: 選定コメントは必須（1文以上）`);
   totalTags += AXES.reduce((n, a) => n + (p.tags?.[a]?.length || 0), 0);
@@ -43,7 +44,7 @@ for (const p of products) {
   lines.push(
     `INSERT INTO products (id, maker_slug, model_slug, slug, name, maker_name, method, wavelength, output_w, portability, price_band, skill_level, comment, suitable_for, not_suitable_for, handled_by_operator, image, source, is_published) VALUES (` +
       [p.id, p.maker_slug, p.model_slug, slug, p.name, p.maker_name, p.method, p.wavelength, p.output_w, p.portability,
-        p.tags.price[0], p.tags.skill[0], p.comment, JSON.stringify(p.suitable_for || []), JSON.stringify(p.not_suitable_for || []),
+        p.tags.price[0] ?? null, p.tags.skill[0], p.comment, JSON.stringify(p.suitable_for || []), JSON.stringify(p.not_suitable_for || []),
         p.handled_by_operator ? 1 : 0, p.image, p.source, p.is_published === false ? 0 : 1]
         .map((v) => (typeof v === "number" ? v : q(v))).join(", ") + ");"
   );

@@ -1,162 +1,688 @@
 [
   {
-    "id": "p001", "maker_slug": "maker-a", "model_slug": "hw-1500",
-    "name": "HW-1500 ハンドヘルド", "maker_name": "メーカーA（ダミー）",
-    "method": "ハンドヘルドファイバーレーザー", "wavelength": "1080nm", "output_w": 1500, "portability": "台車型",
+    "id": "p001",
+    "maker_slug": "maker-a",
+    "model_slug": "hw-1500",
+    "name": "HW-1500 ハンドヘルド",
+    "maker_name": "メーカーA（ダミー）",
+    "method": "ハンドヘルドファイバーレーザー",
+    "wavelength": "1080nm",
+    "output_w": 1500,
+    "portability": "台車型",
     "tags": {
-      "use": ["薄板接合", "補修"],
-      "material": ["鉄", "ステンレス"],
-      "thickness": ["0.5mm未満", "0.5〜3mm", "3〜6mm"],
-      "environment": ["屋内"],
-      "price": ["200〜400万円"],
-      "skill": ["未経験可"]
+      "use": [
+        "薄板接合",
+        "補修"
+      ],
+      "material": [
+        "鉄",
+        "ステンレス"
+      ],
+      "thickness": [
+        "0.5mm未満",
+        "0.5〜3mm",
+        "3〜6mm"
+      ],
+      "environment": [
+        "屋内"
+      ],
+      "price": [
+        "200〜400万円"
+      ],
+      "skill": [
+        "未経験可"
+      ]
     },
     "comment": "ステンレス薄板の見た目重視の仕上げで最も導入例が多い、標準的な1台です。",
-    "suitable_for": ["板金の薄板接合", "ステンレス製品の仕上げ溶接"], "not_suitable_for": ["6mm以上の厚物", "アルミ・銅の溶接"],
-    "handled_by_operator": true, "image": "/assets/images/products/placeholder.svg", "source": "ダミーデータ"
+    "suitable_for": [
+      "板金の薄板接合",
+      "ステンレス製品の仕上げ溶接"
+    ],
+    "not_suitable_for": [
+      "6mm以上の厚物",
+      "アルミ・銅の溶接"
+    ],
+    "handled_by_operator": true,
+    "image": "/assets/images/products/placeholder.svg",
+    "source": "ダミーデータ"
   },
   {
-    "id": "p002", "maker_slug": "maker-a", "model_slug": "hw-2000",
-    "name": "HW-2000 ハンドヘルド", "maker_name": "メーカーA（ダミー）",
-    "method": "ハンドヘルドファイバーレーザー", "wavelength": "1080nm", "output_w": 2000, "portability": "台車型",
+    "id": "p002",
+    "maker_slug": "maker-a",
+    "model_slug": "hw-2000",
+    "name": "HW-2000 ハンドヘルド",
+    "maker_name": "メーカーA（ダミー）",
+    "method": "ハンドヘルドファイバーレーザー",
+    "wavelength": "1080nm",
+    "output_w": 2000,
+    "portability": "台車型",
     "tags": {
-      "use": ["薄板接合", "補修", "異材接合"],
-      "material": ["鉄", "ステンレス", "アルミ"],
-      "thickness": ["0.5〜3mm", "3〜6mm"],
-      "environment": ["屋内", "屋外"],
-      "price": ["200〜400万円"],
-      "skill": ["経験者向け"]
+      "use": [
+        "薄板接合",
+        "補修",
+        "異材接合"
+      ],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ"
+      ],
+      "thickness": [
+        "0.5〜3mm",
+        "3〜6mm"
+      ],
+      "environment": [
+        "屋内",
+        "屋外"
+      ],
+      "price": [
+        "200〜400万円"
+      ],
+      "skill": [
+        "経験者向け"
+      ]
     },
     "comment": "鉄・ステンレスに加えアルミも扱う現場で、1台で回したいときの選択肢です。",
-    "suitable_for": ["鉄・ステンレス・アルミの混在現場", "現場への持ち出し"], "not_suitable_for": ["溶接未経験者のみでの運用", "銅の本格溶接"],
-    "handled_by_operator": true, "image": "/assets/images/products/placeholder.svg", "source": "ダミーデータ"
+    "suitable_for": [
+      "鉄・ステンレス・アルミの混在現場",
+      "現場への持ち出し"
+    ],
+    "not_suitable_for": [
+      "溶接未経験者のみでの運用",
+      "銅の本格溶接"
+    ],
+    "handled_by_operator": true,
+    "image": "/assets/images/products/placeholder.svg",
+    "source": "ダミーデータ"
   },
   {
-    "id": "p003", "maker_slug": "maker-b", "model_slug": "pro-3000",
-    "name": "PRO-3000", "maker_name": "メーカーB（ダミー）",
-    "method": "ハンドヘルドファイバーレーザー", "wavelength": "1080nm", "output_w": 3000, "portability": "据置",
+    "id": "p003",
+    "maker_slug": "maker-b",
+    "model_slug": "pro-3000",
+    "name": "PRO-3000",
+    "maker_name": "メーカーB（ダミー）",
+    "method": "ハンドヘルドファイバーレーザー",
+    "wavelength": "1080nm",
+    "output_w": 3000,
+    "portability": "据置",
     "tags": {
-      "use": ["厚物", "異材接合", "補修"],
-      "material": ["鉄", "ステンレス", "アルミ", "銅"],
-      "thickness": ["0.5〜3mm", "3〜6mm", "6mm以上"],
-      "environment": ["屋内"],
-      "price": ["400〜600万円"],
-      "skill": ["熟練者向け"]
+      "use": [
+        "厚物",
+        "異材接合",
+        "補修"
+      ],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ",
+        "銅"
+      ],
+      "thickness": [
+        "0.5〜3mm",
+        "3〜6mm",
+        "6mm以上"
+      ],
+      "environment": [
+        "屋内"
+      ],
+      "price": [
+        "400〜600万円"
+      ],
+      "skill": [
+        "熟練者向け"
+      ]
     },
     "comment": "6mm以上の厚物まで狙うなら、この出力帯からが現実的です。",
-    "suitable_for": ["厚物の突合せ溶接", "多品種の素材"], "not_suitable_for": ["未経験者の運用", "屋外作業"],
-    "handled_by_operator": false, "image": "/assets/images/products/placeholder.svg", "source": "ダミーデータ"
+    "suitable_for": [
+      "厚物の突合せ溶接",
+      "多品種の素材"
+    ],
+    "not_suitable_for": [
+      "未経験者の運用",
+      "屋外作業"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/placeholder.svg",
+    "source": "ダミーデータ"
   },
   {
-    "id": "p004", "maker_slug": "maker-c", "model_slug": "compact-1000",
-    "name": "COMPACT-1000", "maker_name": "メーカーC（ダミー）",
-    "method": "ハンドヘルドファイバーレーザー", "wavelength": "1080nm", "output_w": 1000, "portability": "ハンドヘルド",
+    "id": "p004",
+    "maker_slug": "maker-c",
+    "model_slug": "compact-1000",
+    "name": "COMPACT-1000",
+    "maker_name": "メーカーC（ダミー）",
+    "method": "ハンドヘルドファイバーレーザー",
+    "wavelength": "1080nm",
+    "output_w": 1000,
+    "portability": "ハンドヘルド",
     "tags": {
-      "use": ["薄板接合", "補修"],
-      "material": ["鉄", "ステンレス"],
-      "thickness": ["0.5mm未満", "0.5〜3mm"],
-      "environment": ["屋内"],
-      "price": ["100〜200万円"],
-      "skill": ["未経験可"]
+      "use": [
+        "薄板接合",
+        "補修"
+      ],
+      "material": [
+        "鉄",
+        "ステンレス"
+      ],
+      "thickness": [
+        "0.5mm未満",
+        "0.5〜3mm"
+      ],
+      "environment": [
+        "屋内"
+      ],
+      "price": [
+        "100〜200万円"
+      ],
+      "skill": [
+        "未経験可"
+      ]
     },
     "comment": "薄板専用と割り切れば、200万円以内で導入できる手軽な1台です。",
-    "suitable_for": ["1〜2mmの薄板", "小物・試作"], "not_suitable_for": ["3mm以上の板厚", "長時間の連続作業"],
-    "handled_by_operator": true, "image": "/assets/images/products/placeholder.svg", "source": "ダミーデータ"
+    "suitable_for": [
+      "1〜2mmの薄板",
+      "小物・試作"
+    ],
+    "not_suitable_for": [
+      "3mm以上の板厚",
+      "長時間の連続作業"
+    ],
+    "handled_by_operator": true,
+    "image": "/assets/images/products/placeholder.svg",
+    "source": "ダミーデータ"
   },
   {
-    "id": "p005", "maker_slug": "maker-d", "model_slug": "vac-station",
-    "name": "VAC-STATION 真空溶接機", "maker_name": "メーカーD（ダミー）",
-    "method": "真空チャンバー型レーザー", "wavelength": "1064nm", "output_w": 600, "portability": "据置",
+    "id": "p005",
+    "maker_slug": "maker-d",
+    "model_slug": "vac-station",
+    "name": "VAC-STATION 真空溶接機",
+    "maker_name": "メーカーD（ダミー）",
+    "method": "真空チャンバー型レーザー",
+    "wavelength": "1064nm",
+    "output_w": 600,
+    "portability": "据置",
     "tags": {
-      "use": ["異材接合", "薄板接合"],
-      "material": ["チタン", "マグネシウム", "アルミ", "ステンレス"],
-      "thickness": ["0.5mm未満", "0.5〜3mm"],
-      "environment": ["真空", "クリーン", "屋内"],
-      "price": ["600万円以上"],
-      "skill": ["熟練者向け"]
+      "use": [
+        "異材接合",
+        "薄板接合"
+      ],
+      "material": [
+        "チタン",
+        "マグネシウム",
+        "アルミ",
+        "ステンレス"
+      ],
+      "thickness": [
+        "0.5mm未満",
+        "0.5〜3mm"
+      ],
+      "environment": [
+        "真空",
+        "クリーン",
+        "屋内"
+      ],
+      "price": [
+        "600万円以上"
+      ],
+      "skill": [
+        "熟練者向け"
+      ]
     },
     "comment": "チタンやマグネシウムを酸化させずに溶接したい用途では、真空型が最も確実です。",
-    "suitable_for": ["チタン・マグネシウムの精密溶接", "医療・航空部品"], "not_suitable_for": ["大型ワーク", "低予算での導入"],
-    "handled_by_operator": false, "image": "/assets/images/products/placeholder.svg", "source": "ダミーデータ"
+    "suitable_for": [
+      "チタン・マグネシウムの精密溶接",
+      "医療・航空部品"
+    ],
+    "not_suitable_for": [
+      "大型ワーク",
+      "低予算での導入"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/placeholder.svg",
+    "source": "ダミーデータ"
   },
   {
-    "id": "p006", "maker_slug": "maker-e", "model_slug": "robot-cell-2000",
-    "name": "ROBOT-CELL 2000", "maker_name": "メーカーE（ダミー）",
-    "method": "ロボット組込ファイバーレーザー", "wavelength": "1080nm", "output_w": 2000, "portability": "ライン組込",
+    "id": "p006",
+    "maker_slug": "maker-e",
+    "model_slug": "robot-cell-2000",
+    "name": "ROBOT-CELL 2000",
+    "maker_name": "メーカーE（ダミー）",
+    "method": "ロボット組込ファイバーレーザー",
+    "wavelength": "1080nm",
+    "output_w": 2000,
+    "portability": "ライン組込",
     "tags": {
-      "use": ["自動化", "薄板接合", "厚物"],
-      "material": ["鉄", "ステンレス", "アルミ"],
-      "thickness": ["0.5〜3mm", "3〜6mm", "6mm以上"],
-      "environment": ["ライン組込", "屋内"],
-      "price": ["600万円以上"],
-      "skill": ["経験者向け"]
+      "use": [
+        "自動化",
+        "薄板接合",
+        "厚物"
+      ],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ"
+      ],
+      "thickness": [
+        "0.5〜3mm",
+        "3〜6mm",
+        "6mm以上"
+      ],
+      "environment": [
+        "ライン組込",
+        "屋内"
+      ],
+      "price": [
+        "600万円以上"
+      ],
+      "skill": [
+        "経験者向け"
+      ]
     },
     "comment": "量産ラインに組み込む前提なら、ハンドヘルドではなくこのクラスを検討します。",
-    "suitable_for": ["量産品の自動溶接", "ロボットとの連携"], "not_suitable_for": ["手持ちでの補修作業", "少量多品種"],
-    "handled_by_operator": false, "image": "/assets/images/products/placeholder.svg", "source": "ダミーデータ"
+    "suitable_for": [
+      "量産品の自動溶接",
+      "ロボットとの連携"
+    ],
+    "not_suitable_for": [
+      "手持ちでの補修作業",
+      "少量多品種"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/placeholder.svg",
+    "source": "ダミーデータ"
   },
   {
-    "id": "p007", "maker_slug": "maker-f", "model_slug": "field-1500",
-    "name": "FIELD-1500 現場用", "maker_name": "メーカーF（ダミー）",
-    "method": "ハンドヘルドファイバーレーザー", "wavelength": "1080nm", "output_w": 1500, "portability": "台車型",
+    "id": "p007",
+    "maker_slug": "maker-f",
+    "model_slug": "field-1500",
+    "name": "FIELD-1500 現場用",
+    "maker_name": "メーカーF（ダミー）",
+    "method": "ハンドヘルドファイバーレーザー",
+    "wavelength": "1080nm",
+    "output_w": 1500,
+    "portability": "台車型",
     "tags": {
-      "use": ["補修", "薄板接合"],
-      "material": ["鉄", "ステンレス"],
-      "thickness": ["0.5〜3mm", "3〜6mm"],
-      "environment": ["屋外", "屋内"],
-      "price": ["200〜400万円"],
-      "skill": ["経験者向け"]
+      "use": [
+        "補修",
+        "薄板接合"
+      ],
+      "material": [
+        "鉄",
+        "ステンレス"
+      ],
+      "thickness": [
+        "0.5〜3mm",
+        "3〜6mm"
+      ],
+      "environment": [
+        "屋外",
+        "屋内"
+      ],
+      "price": [
+        "200〜400万円"
+      ],
+      "skill": [
+        "経験者向け"
+      ]
     },
     "comment": "発電機で動かせる設計で、現場での補修が主な仕事なら候補に入れたい1台です。",
-    "suitable_for": ["屋外現場の補修", "出張溶接"], "not_suitable_for": ["アルミ・銅", "厚物"],
-    "handled_by_operator": true, "image": "/assets/images/products/placeholder.svg", "source": "ダミーデータ"
+    "suitable_for": [
+      "屋外現場の補修",
+      "出張溶接"
+    ],
+    "not_suitable_for": [
+      "アルミ・銅",
+      "厚物"
+    ],
+    "handled_by_operator": true,
+    "image": "/assets/images/products/placeholder.svg",
+    "source": "ダミーデータ"
   },
   {
-    "id": "p008", "maker_slug": "maker-g", "model_slug": "green-2000",
-    "name": "GREEN-2000 銅・アルミ用", "maker_name": "メーカーG（ダミー）",
-    "method": "グリーンレーザー", "wavelength": "515nm", "output_w": 2000, "portability": "据置",
+    "id": "p008",
+    "maker_slug": "maker-g",
+    "model_slug": "green-2000",
+    "name": "GREEN-2000 銅・アルミ用",
+    "maker_name": "メーカーG（ダミー）",
+    "method": "グリーンレーザー",
+    "wavelength": "515nm",
+    "output_w": 2000,
+    "portability": "据置",
     "tags": {
-      "use": ["異材接合", "薄板接合"],
-      "material": ["アルミ", "銅"],
-      "thickness": ["0.5mm未満", "0.5〜3mm"],
-      "environment": ["屋内", "クリーン"],
-      "price": ["400〜600万円"],
-      "skill": ["経験者向け"]
+      "use": [
+        "異材接合",
+        "薄板接合"
+      ],
+      "material": [
+        "アルミ",
+        "銅"
+      ],
+      "thickness": [
+        "0.5mm未満",
+        "0.5〜3mm"
+      ],
+      "environment": [
+        "屋内",
+        "クリーン"
+      ],
+      "price": [
+        "400〜600万円"
+      ],
+      "skill": [
+        "経験者向け"
+      ]
     },
     "comment": "銅の吸収率が高い波長で、銅・アルミの薄板が主体なら通常のファイバーより安定します。",
-    "suitable_for": ["銅バスバー", "アルミ薄板", "電池・電装部品"], "not_suitable_for": ["鉄・ステンレスの厚物", "屋外作業"],
-    "handled_by_operator": false, "image": "/assets/images/products/placeholder.svg", "source": "ダミーデータ"
+    "suitable_for": [
+      "銅バスバー",
+      "アルミ薄板",
+      "電池・電装部品"
+    ],
+    "not_suitable_for": [
+      "鉄・ステンレスの厚物",
+      "屋外作業"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/placeholder.svg",
+    "source": "ダミーデータ"
   },
   {
-    "id": "p009", "maker_slug": "maker-c", "model_slug": "entry-800",
-    "name": "ENTRY-800", "maker_name": "メーカーC（ダミー）",
-    "method": "ハンドヘルドファイバーレーザー", "wavelength": "1080nm", "output_w": 800, "portability": "ハンドヘルド",
+    "id": "p009",
+    "maker_slug": "maker-c",
+    "model_slug": "entry-800",
+    "name": "ENTRY-800",
+    "maker_name": "メーカーC（ダミー）",
+    "method": "ハンドヘルドファイバーレーザー",
+    "wavelength": "1080nm",
+    "output_w": 800,
+    "portability": "ハンドヘルド",
     "tags": {
-      "use": ["薄板接合", "補修"],
-      "material": ["鉄", "ステンレス"],
-      "thickness": ["0.5mm未満", "0.5〜3mm"],
-      "environment": ["屋内"],
-      "price": ["100万円未満"],
-      "skill": ["未経験可"]
+      "use": [
+        "薄板接合",
+        "補修"
+      ],
+      "material": [
+        "鉄",
+        "ステンレス"
+      ],
+      "thickness": [
+        "0.5mm未満",
+        "0.5〜3mm"
+      ],
+      "environment": [
+        "屋内"
+      ],
+      "price": [
+        "100万円未満"
+      ],
+      "skill": [
+        "未経験可"
+      ]
     },
     "comment": "まず試したい、という段階で最も導入のハードルが低い入門機です。",
-    "suitable_for": ["溶接未経験からの導入", "1mm前後の薄板"], "not_suitable_for": ["3mm以上", "アルミ・銅", "連続量産"],
-    "handled_by_operator": true, "image": "/assets/images/products/placeholder.svg", "source": "ダミーデータ"
+    "suitable_for": [
+      "溶接未経験からの導入",
+      "1mm前後の薄板"
+    ],
+    "not_suitable_for": [
+      "3mm以上",
+      "アルミ・銅",
+      "連続量産"
+    ],
+    "handled_by_operator": true,
+    "image": "/assets/images/products/placeholder.svg",
+    "source": "ダミーデータ"
   },
   {
-    "id": "p010", "maker_slug": "maker-h", "model_slug": "ti-1200",
-    "name": "TI-1200 チタン対応", "maker_name": "メーカーH（ダミー）",
-    "method": "ハンドヘルドファイバーレーザー（シールドガス強化）", "wavelength": "1080nm", "output_w": 1200, "portability": "台車型",
+    "id": "p010",
+    "maker_slug": "maker-h",
+    "model_slug": "ti-1200",
+    "name": "TI-1200 チタン対応",
+    "maker_name": "メーカーH（ダミー）",
+    "method": "ハンドヘルドファイバーレーザー（シールドガス強化）",
+    "wavelength": "1080nm",
+    "output_w": 1200,
+    "portability": "台車型",
     "tags": {
-      "use": ["異材接合", "薄板接合", "補修"],
-      "material": ["チタン", "ステンレス"],
-      "thickness": ["0.5〜3mm", "3〜6mm"],
-      "environment": ["屋内", "クリーン"],
-      "price": ["400〜600万円"],
-      "skill": ["熟練者向け"]
+      "use": [
+        "異材接合",
+        "薄板接合",
+        "補修"
+      ],
+      "material": [
+        "チタン",
+        "ステンレス"
+      ],
+      "thickness": [
+        "0.5〜3mm",
+        "3〜6mm"
+      ],
+      "environment": [
+        "屋内",
+        "クリーン"
+      ],
+      "price": [
+        "400〜600万円"
+      ],
+      "skill": [
+        "熟練者向け"
+      ]
     },
     "comment": "真空設備までは要らないが、チタンをきれいに溶接したい現場向けの構成です。",
-    "suitable_for": ["チタン部品の手持ち溶接", "ステンレスとの併用"], "not_suitable_for": ["未経験者の運用", "厚物"],
-    "handled_by_operator": false, "image": "/assets/images/products/placeholder.svg", "source": "ダミーデータ"
+    "suitable_for": [
+      "チタン部品の手持ち溶接",
+      "ステンレスとの併用"
+    ],
+    "not_suitable_for": [
+      "未経験者の運用",
+      "厚物"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/placeholder.svg",
+    "source": "ダミーデータ"
+  },
+  {
+    "maker_slug": "uwjapan",
+    "maker_name": "UWJAPAN（ノースヒルズ溶接工業との国内共同開発）",
+    "method": "ハンド式ファイバーレーザ（第4世代）",
+    "wavelength": "1080nm ±10nm（シングルモード）",
+    "portability": "台車型",
+    "handled_by_operator": true,
+    "image": "/assets/images/products/placeholder.svg",
+    "source": "クライアントKB（NH｜技術力・設備）2026-09-18",
+    "is_published": false,
+    "pending": [
+      "価格帯: 未確定（確認事項1）",
+      "板厚タグ: 暫定（確認事項2）",
+      "屋外使用の可否: 未確認（確認事項4）",
+      "メーカー実名掲載: 未確認（確認事項5）"
+    ],
+    "id": "p101",
+    "model_slug": "uw-sh500c",
+    "name": "UW-SH500C",
+    "output_w": 500,
+    "tags": {
+      "use": [
+        "薄板接合",
+        "補修"
+      ],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ",
+        "銅"
+      ],
+      "thickness": [
+        "0.5mm未満",
+        "0.5〜3mm"
+      ],
+      "environment": [
+        "屋内"
+      ],
+      "price": [],
+      "skill": [
+        "未経験可"
+      ]
+    },
+    "comment": "薄板の補修や小物から始めたい現場向けの500W。チラー内蔵で置き場所を取らず、革手袋のまま操作できる調整ボリュームはTIG経験者にも馴染みます。",
+    "suitable_for": [
+      "ステンレス・鉄の薄板接合",
+      "現場での補修",
+      "溶接未経験者からの導入"
+    ],
+    "not_suitable_for": [
+      "6mm以上の厚物",
+      "屋外での使用（確認中）"
+    ],
+    "spec": {
+      "fiber_length": "7m",
+      "laser_class": "クラス4（JIS C6802）",
+      "pulse": "ショート 0.0〜900.0ms／ロング 0.00〜99.99s／CW",
+      "modulation": "20〜10,000Hz（矩形波）",
+      "power_input": "単相AC200V ±10%、50/60Hz",
+      "dimensions": "W570×D1050×H1060mm",
+      "stability": "±2%以内",
+      "core_um": 14,
+      "max_power_kw": 3.5,
+      "max_current_a": 18,
+      "weight_kg": 220
+    }
+  },
+  {
+    "maker_slug": "uwjapan",
+    "maker_name": "UWJAPAN（ノースヒルズ溶接工業との国内共同開発）",
+    "method": "ハンド式ファイバーレーザ（第4世代）",
+    "wavelength": "1080nm ±10nm（シングルモード）",
+    "portability": "台車型",
+    "handled_by_operator": true,
+    "image": "/assets/images/products/placeholder.svg",
+    "source": "クライアントKB（NH｜技術力・設備）2026-09-18",
+    "is_published": false,
+    "pending": [
+      "価格帯: 未確定（確認事項1）",
+      "板厚タグ: 暫定（確認事項2）",
+      "屋外使用の可否: 未確認（確認事項4）",
+      "メーカー実名掲載: 未確認（確認事項5）"
+    ],
+    "id": "p102",
+    "model_slug": "uw-sh1000c",
+    "name": "UW-SH1000C",
+    "output_w": 1000,
+    "tags": {
+      "use": [
+        "薄板接合",
+        "厚物",
+        "補修"
+      ],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ",
+        "銅"
+      ],
+      "thickness": [
+        "0.5〜3mm",
+        "3〜6mm"
+      ],
+      "environment": [
+        "屋内"
+      ],
+      "price": [],
+      "skill": [
+        "未経験可"
+      ]
+    },
+    "comment": "薄板から中厚板まで1台で回したい現場の標準機。反射率の高いアルミ・銅にも有効で、0.5mm程度の隙間まで対応します。",
+    "suitable_for": [
+      "鉄・ステンレス・アルミ・銅の混在現場",
+      "3〜6mmの中厚板"
+    ],
+    "not_suitable_for": [
+      "自動化ラインへの組込",
+      "屋外での使用（確認中）"
+    ],
+    "spec": {
+      "fiber_length": "7m",
+      "laser_class": "クラス4（JIS C6802）",
+      "pulse": "ショート 0.0〜900.0ms／ロング 0.00〜99.99s／CW",
+      "modulation": "20〜10,000Hz（矩形波）",
+      "power_input": "単相AC200V ±10%、50/60Hz",
+      "dimensions": "W570×D1050×H1060mm",
+      "stability": "±2%以内",
+      "core_um": 20,
+      "max_power_kw": 7.5,
+      "max_current_a": 35,
+      "weight_kg": 230
+    }
+  },
+  {
+    "maker_slug": "uwjapan",
+    "maker_name": "UWJAPAN（ノースヒルズ溶接工業との国内共同開発）",
+    "method": "ハンド式ファイバーレーザ（第4世代）",
+    "wavelength": "1080nm ±10nm（シングルモード）",
+    "portability": "台車型",
+    "handled_by_operator": true,
+    "image": "/assets/images/products/placeholder.svg",
+    "source": "クライアントKB（NH｜技術力・設備）2026-09-18",
+    "is_published": false,
+    "pending": [
+      "価格帯: 未確定（確認事項1）",
+      "板厚タグ: 暫定（確認事項2）",
+      "屋外使用の可否: 未確認（確認事項4）",
+      "メーカー実名掲載: 未確認（確認事項5）"
+    ],
+    "id": "p103",
+    "model_slug": "uw-sh1500c",
+    "name": "UW-SH1500C",
+    "output_w": 1500,
+    "tags": {
+      "use": [
+        "薄板接合",
+        "厚物",
+        "補修",
+        "自動化"
+      ],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ",
+        "銅"
+      ],
+      "thickness": [
+        "0.5〜3mm",
+        "3〜6mm",
+        "6mm以上"
+      ],
+      "environment": [
+        "屋内"
+      ],
+      "price": [],
+      "skill": [
+        "未経験可"
+      ]
+    },
+    "comment": "厚物まで視野に入れるならこの1500W。発熱しにくい軽量トーチで長時間作業の負担が少なく、開発元として修理・トラブル対応まで一貫して受けられます。",
+    "suitable_for": [
+      "6mm以上の厚物",
+      "多品種の素材",
+      "自動化との併用"
+    ],
+    "not_suitable_for": [
+      "省電力での運用（最大消費電力9.0kW）",
+      "屋外での使用（確認中）"
+    ],
+    "spec": {
+      "fiber_length": "7m",
+      "laser_class": "クラス4（JIS C6802）",
+      "pulse": "ショート 0.0〜900.0ms／ロング 0.00〜99.99s／CW",
+      "modulation": "20〜10,000Hz（矩形波）",
+      "power_input": "単相AC200V ±10%、50/60Hz",
+      "dimensions": "W570×D1050×H1060mm",
+      "stability": "±2%以内",
+      "core_um": 20,
+      "max_power_kw": 9.0,
+      "max_current_a": 45,
+      "weight_kg": 240
+    }
   }
 ]

@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS products (
   wavelength      TEXT,                           -- 波長（例: 1080nm）
   output_w        INTEGER,                        -- 出力（W）
   portability     TEXT NOT NULL,                  -- 可搬性（ハンドヘルド / 台車型 / 据置 / ライン組込）
-  price_band      TEXT NOT NULL,                  -- 価格帯タグ（実売価格は掲載しない）
+  price_band      TEXT,                           -- 価格帯タグ（実売価格は掲載しない。未確定なら NULL・非公開）
   skill_level     TEXT NOT NULL,                  -- 習得難易度タグ
   comment         TEXT NOT NULL,                  -- 運営者による選定コメント（必須・1文以上）
   suitable_for    TEXT NOT NULL DEFAULT '[]',     -- 向いている用途（JSON配列）
