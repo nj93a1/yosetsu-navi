@@ -7,8 +7,8 @@
   <meta name="robots" content="noindex,nofollow">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/style.css?v=4">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;800&family=Noto+Serif+JP:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css?v=5">
   <title>レーザー溶接機 比較・選定｜5つの質問で現場に合う1台を</title>
   <meta name="description" content="レーザー溶接機を素材・板厚・使う人・場所・予算の5問で選定する中立的な比較サイト。ハンドヘルドから自動化ライン組込まで、他社製品を含めて比較できます。">
 </head>
@@ -16,52 +16,46 @@
 <div id="siteHeader"></div>
 
 <section class="hero" aria-label="サイト紹介">
-  <div class="hero__in">
-    <div class="hero__text">
-      <p class="hero__eyebrow">Laser Welding Machine Guide</p>
-      <h1 class="hero__title">5つの質問で、<br>あなたの現場に合う<br><em>レーザー溶接機</em><span class="nowrap">がわかります</span></h1>
-      <p class="hero__lead">素材・板厚・使う人・場所・予算を選ぶだけ。わからない項目は「わからない」で進めます。</p>
-    </div>
-    <figure class="hero__fig">
-      <img src="/assets/images/hero.svg" alt="" width="1000" height="720">
-    </figure>
-    <ol class="hero__steps" aria-label="診断の5つの質問">
-      <li><b>01</b><span>素材</span></li>
-      <li><b>02</b><span>板厚</span></li>
-      <li><b>03</b><span>使う人</span></li>
-      <li><b>04</b><span>場所</span></li>
-      <li><b>05</b><span>予算</span></li>
-    </ol>
-    <div class="hero__cta">
-      <a class="btn btn--spark" href="/diagnosis/"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-diag"></use></svg>診断をはじめる（約1分）</a>
-      <a class="hero__alt" href="/lineup/">機種一覧から探す<svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-chevron"></use></svg></a>
-    </div>
+  <img class="hero__bg" src="/assets/images/hero.svg" alt="" width="1600" height="1000">
+  <div class="hero__body">
+    <p class="hero__en">LASER WELDING MACHINE GUIDE</p>
+    <h1 class="hero__title"><span>現場に合う一台を、</span><span>5つの質問で見つける。</span></h1>
+    <p class="hero__lead">素材・板厚・使う人・場所・予算を選ぶだけ。<br>他社製品を含めて、中立の立場で比較します。</p>
+  </div>
+  <div class="hero__scroll" aria-hidden="true">SCROLL</div>
+  <p class="hero__cap">写真は溶接現場のイメージです（仮）</p>
+</section>
+
+<nav class="purpose" aria-label="目的別メニュー">
+  <h2>お探しの情報はこちら</h2>
+  <ul>
+    <li><a href="/diagnosis/"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-diag"></use></svg><span><span class="num">01</span><strong>はじめて選ぶ方</strong><small>質問に答えて候補を絞る</small></span><b class="arrow" aria-hidden="true">→</b></a></li>
+    <li><a href="/lineup/"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-lineup"></use></svg><span><span class="num">02</span><strong>機種一覧から探す</strong><small>素材・価格帯で絞り込み</small></span><b class="arrow" aria-hidden="true">→</b></a></li>
+    <li><a href="/articles/"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-guide"></use></svg><span><span class="num">03</span><strong>選び方を読む</strong><small>TIGとの違い・方式の適性</small></span><b class="arrow" aria-hidden="true">→</b></a></li>
+    <li><a href="/contact/"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-consult"></use></svg><span><span class="num">04</span><strong>今すぐ相談する</strong><small>電話・LINE・フォーム</small></span><b class="arrow" aria-hidden="true">→</b></a></li>
+  </ul>
+</nav>
+
+<section class="intro">
+  <div class="wrap">
+    <p>本サイトは、レーザー溶接機の導入を検討する中小製造業の方に向けた比較・選定サイトです。ハンドヘルドから真空型、自動化ライン組込まで、他社製品を含めて同じ基準で並べています。</p>
+    <p>どれを選べばよいか迷ったら、5つの質問に答えるだけの診断からお試しください。わからない項目は「わからない」のまま進められます。</p>
   </div>
 </section>
 
-<section class="section">
+<section class="section" id="lineup-section">
   <div class="wrap">
-    <div class="hd"><span class="hd__en">Menu</span><h2>目的から選ぶ</h2></div>
-    <ul class="pnav pnav--row" aria-label="目的別メニュー">
-      <li><a href="/diagnosis/"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-diag"></use></svg><span class="pnav__label">はじめて選ぶ方<span class="pnav__sub">質問に答えて候補を絞る</span></span><svg class="ico ico--chev" aria-hidden="true"><use href="/assets/icons.svg#i-chevron"></use></svg></a></li>
-      <li><a href="/lineup/"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-lineup"></use></svg><span class="pnav__label">機種一覧から探す<span class="pnav__sub">素材・価格帯で絞り込み</span></span><svg class="ico ico--chev" aria-hidden="true"><use href="/assets/icons.svg#i-chevron"></use></svg></a></li>
-      <li><a href="/articles/"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-guide"></use></svg><span class="pnav__label">選び方を読む<span class="pnav__sub">TIGとの違い・方式の適性</span></span><svg class="ico ico--chev" aria-hidden="true"><use href="/assets/icons.svg#i-chevron"></use></svg></a></li>
-      <li><a href="/contact/"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-consult"></use></svg><span class="pnav__label">今すぐ相談する<span class="pnav__sub">電話・LINE・フォーム</span></span><svg class="ico ico--chev" aria-hidden="true"><use href="/assets/icons.svg#i-chevron"></use></svg></a></li>
-    </ul>
-  </div>
-</section>
-
-<section class="section section--gray" id="lineup-section">
-  <div class="wrap">
-    <div class="hd"><span class="hd__en">Lineup</span><h2>機種ラインアップ</h2><p>タブで種類を切り替えられます。詳しい絞り込みは「機種一覧」へ。</p></div>
+    <div class="heading"><div class="ja">機種ラインアップ</div><div class="en">LINEUP</div></div>
+    <p class="lead">タブで種類を切り替えられます。詳しい絞り込みは「機種一覧」へ。</p>
     <div id="lineup"></div>
-    <a class="btn" href="/lineup/" style="margin-top:20px">機種一覧で絞り込む<svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-chevron"></use></svg></a>
+    <a class="btn" href="/lineup/" style="margin:24px auto 0;max-width:420px">機種一覧で絞り込む<svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-chevron"></use></svg></a>
   </div>
 </section>
 
-<section class="section">
+<section class="section off">
   <div class="wrap">
-    <div class="hd"><span class="hd__en">Special use</span><h2>専門用途から探す</h2><p>一般的な診断では埋もれやすい機種を、用途別にまとめています。</p></div>
+    <div class="heading"><div class="ja">専門用途から探す</div><div class="en">SPECIAL USE</div></div>
+    <p class="lead">一般的な診断では埋もれやすい機種を、用途別にまとめています。</p>
     <ul class="feature">
       <li><a href="/lineup/?material=アルミ"><svg class="ico ico--f" aria-hidden="true"><use href="/assets/icons.svg#i-alcu"></use></svg><span class="feature__t">アルミ・銅・チタンを溶接したい<span class="feature__s">波長や設備で向き不向きが大きい素材</span></span><svg class="ico ico--chev" aria-hidden="true"><use href="/assets/icons.svg#i-chevron"></use></svg></a></li>
       <li><a href="/diagnosis/?q1_material=ti"><svg class="ico ico--f" aria-hidden="true"><use href="/assets/icons.svg#i-vacuum"></use></svg><span class="feature__t">真空・特殊材<span class="feature__s">チタン・マグネシウムを酸化させずに</span></span><svg class="ico ico--chev" aria-hidden="true"><use href="/assets/icons.svg#i-chevron"></use></svg></a></li>
@@ -73,14 +67,16 @@
 
 <section class="section section--navy">
   <div class="wrap">
-    <div class="hd"><span class="hd__en">Contact</span><h2>この結果について相談する</h2><p>診断の回答を添えて相談できます。導入前の疑問にお答えします。</p></div>
     <div class="consult">
       <div>
+        <p class="consult__en">CONTACT</p>
+        <h2 class="consult__title">導入前のご相談</h2>
+        <p class="lead">診断の回答を添えて相談できます。導入前の疑問にお答えします。</p>
         <a class="consult__tel" href="tel:0000000000"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-phone"></use></svg>000-000-0000</a>
         <p class="consult__hours">平日 9:00〜17:00（番号は仮）</p>
       </div>
       <div class="consult__btns">
-        <a class="btn btn--spark" href="/contact/">フォームで相談する</a>
+        <a class="btn btn--accent" href="/contact/">フォームで相談する</a>
         <a class="btn btn--outline-white" href="https://line.me/" target="_blank" rel="noopener">LINEで相談する</a>
       </div>
     </div>
@@ -89,8 +85,8 @@
 
 <div id="siteFooter"></div>
 <script type="module">
-  import { mountChrome } from "/assets/js/partials.js?v=4";
-  import { mountLineup } from "/assets/js/lineup.js?v=4";
+  import { mountChrome } from "/assets/js/partials.js?v=5";
+  import { mountLineup } from "/assets/js/lineup.js?v=5";
   mountChrome({ current: "/" });
   mountLineup(document.getElementById("lineup"), { limit: 6 });
 </script>
