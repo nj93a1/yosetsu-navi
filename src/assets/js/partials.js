@@ -14,17 +14,10 @@ export function header(current = "") {
 <header class="header">
   <div class="header__in">
     <a class="header__brand" href="/"><span class="header__mark">${icon("diag")}</span><span>レーザー溶接機 比較・選定<small>中立的な比較情報サイト（サイト名 仮）</small></span></a>
-    <nav class="pcnav" aria-label="メインメニュー">
-      <a href="/"${current === "/" ? ' aria-current="page"' : ""}>ホーム</a>
-      <a href="/diagnosis/"${current === "/diagnosis/" ? ' aria-current="page"' : ""}>診断で選ぶ</a>
-      <a href="/lineup/"${current === "/lineup/" ? ' aria-current="page"' : ""}>機種一覧</a>
-      <a href="/articles/">選び方を読む</a>
-      <a class="cta" href="/contact/">相談する</a>
-    </nav>
     <button class="header__menu" type="button" id="menuBtn" aria-expanded="false" aria-controls="gnav">${icon("menu")}MENU</button>
   </div>
   <nav class="gnav" id="gnav" data-open="false" aria-label="メニュー">
-    <ul>${items.map(([href, ic, label]) => `<li><a href="${href}"${href === current ? ' aria-current="page"' : ""}${href === "/contact/" ? ' class="cta"' : ""}><span>${label}</span>${icon(ic)}</a></li>`).join("")}</ul>
+    <ul>${items.map(([href, ic, label]) => `<li><a href="${href}"${href === current ? ' aria-current="page"' : ""}><span>${label}</span>${icon(ic)}</a></li>`).join("")}</ul>
   </nav>
 </header>`;
 }
@@ -51,7 +44,7 @@ export function footer() {
       <li><a href="/lineup/">機種一覧${icon("chevron")}</a></li>
       <li><a href="/contact/">お問い合わせ${icon("chevron")}</a></li>
     </ul>
-    <p class="footer__op"><strong>運営：ノースヒルズ溶接工業株式会社</strong></p>
+    <p class="footer__op">運営：ノースヒルズ溶接工業株式会社</p>
     <p class="footer__op">当社はレーザー溶接機の販売事業者です。本サイトに掲載する製品の一部を取り扱っており、該当製品には「運営元で取り扱い」と表示しています。</p>
     <p class="footer__copy">© 2026 ノースヒルズ溶接工業株式会社</p>
   </div>
