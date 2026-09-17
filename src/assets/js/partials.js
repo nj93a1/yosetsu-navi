@@ -4,20 +4,23 @@ export const icon = (name, cls = "ico") => `<svg class="${cls}" aria-hidden="tru
 
 export function header(current = "") {
   const items = [
-    ["/diagnosis/", "diag", "5つの質問で選ぶ（診断）"],
-    ["/lineup/", "lineup", "機種一覧から探す"],
-    ["/articles/", "guide", "選び方・比較のコツを読む"],
-    ["/contact/", "consult", "相談・問い合わせ"],
-    ["/about/", "guide", "運営者について・評価基準"],
+    ["/diagnosis/", "5つの質問で選ぶ（診断）"],
+    ["/lineup/", "機種一覧から探す"],
+    ["/articles/", "選び方・比較のコツを読む"],
+    ["/contact/", "相談・問い合わせ"],
+    ["/about/", "運営者について・評価基準"],
   ];
   return `
 <header class="header">
   <div class="header__in">
-    <a class="header__brand" href="/"><span class="header__mark">${icon("diag")}</span><span>レーザー溶接機 比較・選定<small>中立的な比較情報サイト（サイト名 仮）</small></span></a>
-    <button class="header__menu" type="button" id="menuBtn" aria-expanded="false" aria-controls="gnav">${icon("menu")}MENU</button>
+    <a class="header__brand" href="/">${icon("diag", "ico header__mark")}<span class="header__name">レーザー溶接機 比較・選定<small>中立的な比較情報サイト（サイト名 仮）</small></span></a>
+    <div class="header__tools">
+      <a class="header__tool" href="/lineup/">${icon("search")}<span>検索</span></a>
+      <button class="header__tool" type="button" id="menuBtn" aria-expanded="false" aria-controls="gnav">${icon("menu")}<span>メニュー</span></button>
+    </div>
   </div>
   <nav class="gnav" id="gnav" data-open="false" aria-label="メニュー">
-    <ul>${items.map(([href, ic, label]) => `<li><a href="${href}"${href === current ? ' aria-current="page"' : ""}><span>${label}</span>${icon(ic)}</a></li>`).join("")}</ul>
+    <ul>${items.map(([href, label]) => `<li><a href="${href}"${href === current ? ' aria-current="page"' : ""}><span>${label}</span>${icon("chevron")}</a></li>`).join("")}</ul>
   </nav>
 </header>`;
 }
@@ -54,6 +57,7 @@ export function footer() {
 export function mountChrome({ current = "", withBottombar = true } = {}) {
   document.getElementById("siteHeader").innerHTML = header(current);
   document.getElementById("siteFooter").innerHTML = footer() + (withBottombar ? bottombar(current) : "");
+  if (withBottombar) document.body.classList.add("has-bar");
   const btn = document.getElementById("menuBtn");
   const nav = document.getElementById("gnav");
   btn.addEventListener("click", () => {
