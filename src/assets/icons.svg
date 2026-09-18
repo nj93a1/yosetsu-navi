@@ -1,118 +1,110 @@
 <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
   <!--
-    オリジナル図案アイコン（溶接の道具・母材を題材にした線画）
-    描き方の規約: viewBox 0 0 96 96 / 線幅 2.5 / 線色 currentColor /
-    薄い塗り = CSS変数 i-tint (#E3ECFB) / 火花 = i-spark (#F0821E) / ビーム = i-beam (#23D3EB)
+    ピクトグラム一式（東急公式サイトの「ピクトグラム＋文字」ナビを参考に、このサイト向けに設計）
+    規約: viewBox 0 0 48 48 / 線幅 2.5 / 角丸線端 / 色は currentColor のみ（単色）/ 装飾なし・情報伝達目的
+    必ず文字ラベルとセットで使う
   -->
 
-  <!-- 診断で選ぶ: ハンドトーチが母材の継ぎ目を溶接している -->
-  <symbol id="i-diag" viewBox="0 0 96 96" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M8 72h46l30-18H38z" fill="var(--i-tint,#E3ECFB)"/>
-    <path d="M22 66l30-10" stroke-dasharray="4 4"/>
-    <path d="M60 10l14 12-18 22-14-12z" fill="#fff"/>
-    <path d="M74 22l10-9M58 42l-6 5"/>
-    <path d="M52 47l-6 9" stroke="var(--i-beam,#23D3EB)" stroke-width="3"/>
-    <g stroke="var(--i-spark,#F0821E)" stroke-width="2.5"><path d="M46 56l-6 2M46 56l-4 6M46 56l2 6"/></g>
-    <circle cx="46" cy="56" r="2.5" fill="var(--i-spark,#F0821E)" stroke="none"/>
+  <!-- 診断: 質問票にチェック -->
+  <symbol id="i-diag" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="9" y="6" width="30" height="36" rx="3"/><path d="M17 5v4h14V5"/><path d="M15 20l3 3 6-6M15 31l3 3 6-6"/><path d="M28 21h6M28 32h6"/>
   </symbol>
-
-  <!-- 機種一覧: 台車型の溶接機本体とケーブル・トーチ -->
-  <symbol id="i-lineup" viewBox="0 0 96 96" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-    <rect x="12" y="24" width="44" height="50" rx="3" fill="var(--i-tint,#E3ECFB)"/>
-    <rect x="18" y="30" width="22" height="12" rx="1.5" fill="#fff"/>
-    <circle cx="47" cy="36" r="2.5"/><circle cx="24" cy="52" r="3"/><circle cx="34" cy="52" r="3"/>
-    <path d="M18 62h32"/>
-    <circle cx="20" cy="80" r="4"/><circle cx="48" cy="80" r="4"/>
-    <path d="M56 44c14 0 14-18 26-18"/>
-    <path d="M80 18l10 8-8 10-10-8z" fill="#fff"/>
-    <path d="M72 28l-5 4"/>
+  <!-- 機種一覧: 4つの機体（グリッド） -->
+  <symbol id="i-lineup" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="7" y="7" width="15" height="15" rx="2"/><rect x="26" y="7" width="15" height="15" rx="2"/><rect x="7" y="26" width="15" height="15" rx="2"/><rect x="26" y="26" width="15" height="15" rx="2"/>
+    <path d="M11 12h7M30 12h7M11 31h7M30 31h7" stroke-width="2"/>
   </symbol>
-
-  <!-- 選び方を読む: 仕様書と母材断面・板厚の寸法線 -->
-  <symbol id="i-guide" viewBox="0 0 96 96" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M18 10h44l14 14v62H18z" fill="#fff"/>
-    <path d="M62 10v14h14"/>
-    <path d="M28 30h28M28 40h20"/>
-    <rect x="28" y="56" width="34" height="12" fill="var(--i-tint,#E3ECFB)"/>
-    <path d="M70 52v20M66 56h8M66 68h8M70 56l-2 3M70 56l2 3M70 68l-2-3M70 68l2-3" stroke-width="2"/>
+  <!-- 比較: 2枚を天秤で -->
+  <symbol id="i-compare" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M24 8v32M14 40h20"/><path d="M8 14h32"/><path d="M13 14l-6 12h12zM35 14l-6 12h12z"/>
   </symbol>
-
-  <!-- 相談する: 溶接面（遮光面）と吹き出し -->
-  <symbol id="i-consult" viewBox="0 0 96 96" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M26 20h32a6 6 0 0 1 6 6v36l-8 20H28l-8-20V26a6 6 0 0 1 6-6z" fill="var(--i-tint,#E3ECFB)"/>
-    <rect x="30" y="40" width="24" height="12" rx="1.5" fill="currentColor" opacity=".85"/>
-    <path d="M26 20v-6h32v6"/>
-    <path d="M66 8h22v14h-8l-4 5v-5H66z" fill="#fff"/>
+  <!-- 選び方ガイド: 開いた本 -->
+  <symbol id="i-guide" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M24 12c-4-3-9-4-16-4v28c7 0 12 1 16 4 4-3 9-4 16-4V8c-7 0-12 1-16 4z"/><path d="M24 12v28"/><path d="M13 16h6M13 22h6M29 16h6M29 22h6" stroke-width="2"/>
   </symbol>
-
-  <!-- アルミ・銅・チタン: 種類の違う3枚の母材 -->
-  <symbol id="i-alcu" viewBox="0 0 96 96" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M10 42h40l22-14H32z" fill="#fff"/>
-    <path d="M10 60h40l22-14H32z" fill="var(--i-tint,#E3ECFB)"/>
-    <path d="M10 78h40l22-14H32z" fill="#fff"/>
-    <path d="M22 76l14-9M30 76l14-9M38 76l10-6" stroke-width="1.8"/>
-    <circle cx="28" cy="55" r="1.5" fill="currentColor" stroke="none"/><circle cx="36" cy="52" r="1.5" fill="currentColor" stroke="none"/><circle cx="44" cy="55" r="1.5" fill="currentColor" stroke="none"/><circle cx="40" cy="58" r="1.5" fill="currentColor" stroke="none"/>
-    <path d="M76 20v58" stroke-dasharray="3 4" stroke-width="2"/>
+  <!-- 相談: 吹き出しに「？」 -->
+  <symbol id="i-consult" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M8 10h32v22H22l-9 8v-8H8z"/><path d="M20 17c0-3 2-4.5 4.5-4.5S29 14 29 16.5c0 3-4.5 3-4.5 6"/><circle cx="24.5" cy="27" r="1.2" fill="currentColor" stroke="none"/>
   </symbol>
-
-  <!-- 真空・特殊材: 真空チャンバーと計器 -->
-  <symbol id="i-vacuum" viewBox="0 0 96 96" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M28 72V40a20 20 0 0 1 40 0v32z" fill="var(--i-tint,#E3ECFB)"/>
-    <rect x="16" y="72" width="64" height="10" rx="2" fill="#fff"/>
-    <rect x="40" y="60" width="16" height="5" fill="#fff"/>
-    <path d="M48 20v-6"/>
-    <circle cx="48" cy="10" r="6" fill="#fff"/><path d="M48 10l3-3" stroke-width="2"/>
-    <path d="M36 44h24" stroke-dasharray="3 3" stroke-width="2"/>
+  <!-- 運営者・情報: 丸に i -->
+  <symbol id="i-info" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="24" cy="24" r="17"/><path d="M24 22v11"/><circle cx="24" cy="15.5" r="1.6" fill="currentColor" stroke="none"/>
   </symbol>
-
-  <!-- 屋外・現場: 発電機とトーチ、地面 -->
-  <symbol id="i-outdoor" viewBox="0 0 96 96" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M6 80h84"/>
-    <rect x="10" y="50" width="38" height="24" rx="2" fill="var(--i-tint,#E3ECFB)"/>
-    <path d="M16 58h12M16 64h12M16 70h12" stroke-width="2"/>
-    <path d="M14 50v-6h30v6"/>
-    <circle cx="18" cy="78" r="3"/><circle cx="40" cy="78" r="3"/>
-    <path d="M48 60c14 0 12-24 26-24"/>
-    <path d="M72 30l12 8-8 10-12-8z" fill="#fff"/>
-    <path d="M80 48l4 8" stroke="var(--i-beam,#23D3EB)" stroke-width="3"/>
-    <path d="M84 56l-5 2M84 56l4 4" stroke="var(--i-spark,#F0821E)"/>
-  </symbol>
-
-  <!-- 自動化ライン: ロボットアーム先端のトーチ -->
-  <symbol id="i-robot" viewBox="0 0 96 96" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-    <rect x="10" y="74" width="34" height="10" rx="2" fill="var(--i-tint,#E3ECFB)"/>
-    <path d="M27 74V50l22-22"/>
-    <circle cx="27" cy="50" r="5" fill="#fff"/><circle cx="49" cy="28" r="5" fill="#fff"/>
-    <path d="M52 24l14 6-6 12-14-6z" fill="#fff"/>
-    <path d="M62 44l8 20" stroke="var(--i-beam,#23D3EB)" stroke-width="3"/>
-    <path d="M56 84h34l-8-16H60z" fill="var(--i-tint,#E3ECFB)"/>
-    <path d="M70 64l-6 1M70 64l5 4" stroke="var(--i-spark,#F0821E)"/>
-    <circle cx="70" cy="64" r="2" fill="var(--i-spark,#F0821E)" stroke="none"/>
-  </symbol>
-
-  <!-- 比較: 板厚の違う2枚の母材と寸法線 -->
-  <symbol id="i-compare" viewBox="0 0 96 96" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-    <rect x="8" y="44" width="34" height="12" fill="var(--i-tint,#E3ECFB)"/>
-    <rect x="54" y="36" width="34" height="20" fill="var(--i-tint,#E3ECFB)"/>
-    <path d="M14 34v-6M36 34v-6M14 31h22M60 26v-6M82 26v-6M60 23h22" stroke-width="2"/>
-    <path d="M48 14v68" stroke-dasharray="3 4" stroke-width="2"/>
-    <path d="M8 68h34M54 68h34" stroke-width="2"/>
-  </symbol>
-
   <!-- 電話 -->
-  <symbol id="i-phone" viewBox="0 0 96 96" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M30 14l10 12-6 8c4 10 12 18 22 22l8-6 12 10-6 12c-26-2-46-22-48-48z" fill="var(--i-tint,#E3ECFB)"/>
+  <symbol id="i-phone" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M15 7l7 8-4 5c3 6 8 11 14 14l5-4 8 7-4 6C24 41 7 24 5 11z"/>
+  </symbol>
+  <!-- 資格・認定: リボン付き証書 -->
+  <symbol id="i-cert" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M8 8h32v26H30M8 8v26h10"/><path d="M14 16h20M14 22h12" stroke-width="2"/><circle cx="24" cy="30" r="5"/><path d="M21 34l-2 9 5-3 5 3-2-9"/>
   </symbol>
 
-  <!-- 機能アイコン（矢印・メニュー・検索・チェック） -->
+  <!-- ハンドヘルド: 手持ちトーチ（銃型） -->
+  <symbol id="i-handheld" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M8 14h26l6-4v12l-6-2H22v10h-8V20H8z"/><path d="M40 16l4-2M40 20l4 2" stroke-width="2"/><path d="M14 30c0 8 6 10 14 10" stroke-width="2"/>
+  </symbol>
+  <!-- 据置・専用機: 筐体と窓 -->
+  <symbol id="i-fixed" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="8" y="8" width="32" height="30" rx="2"/><rect x="14" y="14" width="20" height="10" rx="1"/><path d="M14 30h8M28 30h6" stroke-width="2"/><path d="M12 38v4M36 38v4"/>
+  </symbol>
+  <!-- ライン組込: ロボットアーム -->
+  <symbol id="i-robot" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M8 40h20"/><path d="M18 40V26l12-12"/><circle cx="18" cy="26" r="3.5"/><circle cx="30" cy="14" r="3.5"/><path d="M33 12l8 5-4 6"/><path d="M28 34h14" stroke-width="2"/>
+  </symbol>
+  <!-- 屋外・現場: テントと太陽 -->
+  <symbol id="i-outdoor" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M6 40h36"/><path d="M10 40L24 16l14 24"/><path d="M19 40l5-10 5 10"/><circle cx="38" cy="11" r="4"/><path d="M38 3v2M46 11h-2M43.5 5.5l-1.4 1.4" stroke-width="2"/>
+  </symbol>
+  <!-- 鉄・ステンレス: 板と溶接ビード -->
+  <symbol id="i-steel" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M6 32h24l12-10H18z"/><path d="M6 32v6h24v-6M30 38l12-10v-6"/><path d="M14 30l10-8" stroke-dasharray="2.5 3" stroke-width="2"/>
+  </symbol>
+  <!-- アルミ・銅: 丸棒・板の断面 -->
+  <symbol id="i-alcu" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="16" cy="30" r="9"/><circle cx="16" cy="30" r="3.5"/><path d="M30 12h12v28H30z"/><path d="M34 18h4M34 24h4M34 30h4" stroke-width="2"/>
+  </symbol>
+  <!-- チタン・真空: ベルジャー -->
+  <symbol id="i-vacuum" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M14 34V20a10 10 0 0 1 20 0v14"/><rect x="8" y="34" width="32" height="6" rx="1.5"/><path d="M24 10V6"/><circle cx="24" cy="4" r="1.5" fill="currentColor" stroke="none"/><path d="M20 26h8" stroke-width="2"/>
+  </symbol>
+  <!-- 厚物: 厚い板と寸法 t -->
+  <symbol id="i-thick" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M6 22h22l10-8H16z"/><path d="M6 22v14h22V22M28 36l10-8V14"/><path d="M42 20v12M39.5 20h5M39.5 32h5" stroke-width="2"/>
+  </symbol>
+  <!-- 薄板: 薄い板 -->
+  <symbol id="i-thin" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M6 30h22l12-10H18z"/><path d="M6 30v3h22v-3M28 33l12-10v-3"/>
+  </symbol>
+  <!-- 素材（一般）: 重ねた板 -->
+  <symbol id="i-material" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M6 20l18-8 18 8-18 8z"/><path d="M6 28l18 8 18-8M6 36l18 8 18-8"/>
+  </symbol>
+  <!-- 作業環境: 工場 -->
+  <symbol id="i-factory" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M6 40V18l10 7v-7l10 7v-7l10 7V10h6v30z"/><path d="M6 40h36"/><path d="M12 32h4M22 32h4M32 32h4" stroke-width="2"/>
+  </symbol>
+  <!-- 使う人: 溶接面をつけた人 -->
+  <symbol id="i-user" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 8h16v14l-3 8H19l-3-8z"/><rect x="19" y="14" width="10" height="5" rx="1"/><path d="M8 42c2-8 8-10 16-10s14 2 16 10"/>
+  </symbol>
+  <!-- 予算: 円マーク -->
+  <symbol id="i-yen" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="24" cy="24" r="17"/><path d="M17 14l7 10 7-10M24 24v10M18 26h12M18 31h12"/>
+  </symbol>
+  <!-- 用途: 溶接中の火花（作業） -->
+  <symbol id="i-work" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M6 38h20l14-10H20z"/><path d="M30 8l8 6-10 12-8-6z"/><path d="M20 20l-4 5" stroke-width="2"/><path d="M14 27l-5-1M14 27l-2 5M14 27l3 4" stroke-width="2"/>
+  </symbol>
+
+  <!-- 機能アイコン -->
   <symbol id="i-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></symbol>
   <symbol id="i-back" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></symbol>
   <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></symbol>
-  <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
-  <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></symbol>
   <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></symbol>
-  <!-- 旧名の互換（配下ページが参照） -->
-  <symbol id="i-list" viewBox="0 0 96 96" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><use href="#i-lineup"/></symbol>
-  <symbol id="i-contact" viewBox="0 0 96 96" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><use href="#i-consult"/></symbol>
-  <symbol id="i-article" viewBox="0 0 96 96" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><use href="#i-guide"/></symbol>
+  <!-- 旧名の互換 -->
+  <symbol id="i-list" viewBox="0 0 48 48"><use href="#i-lineup"/></symbol>
+  <symbol id="i-contact" viewBox="0 0 48 48"><use href="#i-consult"/></symbol>
+  <symbol id="i-article" viewBox="0 0 48 48"><use href="#i-guide"/></symbol>
 </svg>

@@ -8,13 +8,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/style.css?v=8">
+  <link rel="stylesheet" href="/assets/css/style.css?v=9">
   <title>レーザー溶接機 比較・選定｜5つの質問で現場に合う1台を</title>
   <meta name="description" content="レーザー溶接機を素材・板厚・使う人・場所・予算の5問で選定する中立的な比較サイト。ハンドヘルドから自動化ライン組込まで、他社製品を含めて比較できます。">
 </head>
 <body class="home">
 <a class="skip-link" href="#main">本文へ移動</a>
-<div class="topstrip"><div class="topstrip__in"><p class="topstrip__text">素材・板厚・予算から、<br class="sp">現場に合う一台を。</p><a class="topstrip__btn" href="/diagnosis/">約1分の選定診断 →</a></div></div>
 <div id="siteHeader"></div>
 
 <section class="hero" aria-label="サイト紹介">
@@ -22,6 +21,7 @@
   <div class="hero__text">
     <h1 class="hero__title">現場に合う溶接機、<br class="sp">選ぶなら</h1>
     <p class="hero__lead">素材・板厚・用途から機種を比較。<br>選び方と、それぞれの向き不向きを紹介します。</p>
+    <div class="hero__cta"><a class="btn btn--accent" href="/diagnosis/"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-diag"></use></svg>5つの質問で選ぶ（約1分）</a></div>
   </div>
   <span class="hero__caption">溶接現場のイメージ（AI生成）</span>
 </section>
@@ -34,57 +34,64 @@
   </form>
 </div>
 
-<div class="wrap">
-  <ul class="catgrid" aria-label="種類・用途から探す">
-    <li><a href="/lineup/?cat=handheld">ハンドヘルド</a></li>
-    <li><a href="/lineup/?cat=fixed">据置・専用機</a></li>
-    <li><a href="/lineup/?cat=line">ライン組込</a></li>
-    <li><a href="/lineup/?material=アルミ">アルミ・銅</a></li>
-    <li><a href="/diagnosis/?q1_material=ti">チタン・真空</a></li>
-    <li><a href="/diagnosis/?q4_environment=outdoor">屋外・現場</a></li>
-  </ul>
-  <p class="catgrid__more"><a href="/lineup/">すべてを見る<svg class="ico ico--chev" aria-hidden="true"><use href="/assets/icons.svg#i-chevron"></use></svg></a></p>
-</div>
+<section class="band" aria-label="条件から探す">
+  <div class="wrap">
+    <div class="sec-head sec-head--ico"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-material"></use></svg><span class="sec-head__eyebrow">機種の種類と、溶接する素材・条件</span><h2>条件から探す</h2></div>
+    <p class="pictonav__group">機種の種類</p>
+    <ul class="pictonav">
+      <li><a href="/lineup/?cat=handheld"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-handheld"></use></svg>ハンドヘルド<small>手持ちのトーチ</small></a></li>
+      <li><a href="/lineup/?cat=fixed"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-fixed"></use></svg>据置・専用機<small>工場内に固定</small></a></li>
+      <li><a href="/lineup/?cat=line"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-robot"></use></svg>ライン組込<small>ロボット・自動化</small></a></li>
+      <li><a href="/diagnosis/?q4_environment=outdoor"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-outdoor"></use></svg>屋外・現場<small>持ち出して使う</small></a></li>
+    </ul>
+    <p class="pictonav__group" style="margin-top:20px">素材・板厚</p>
+    <ul class="pictonav">
+      <li><a href="/diagnosis/?q1_material=steel"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-steel"></use></svg>鉄・ステンレス<small>SS400・SUS304 など</small></a></li>
+      <li><a href="/lineup/?material=アルミ"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-alcu"></use></svg>アルミ・銅<small>反射率の高い素材</small></a></li>
+      <li><a href="/diagnosis/?q1_material=ti"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-vacuum"></use></svg>チタン・真空<small>酸化させずに溶接</small></a></li>
+      <li><a href="/diagnosis/?q2_thickness=thick"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-thick"></use></svg>厚物（6mm以上）<small>高出力が必要</small></a></li>
+    </ul>
+  </div>
+</section>
 
 <div class="wrap cols">
   <main id="main">
-    <section class="section">
-      <div class="sec-head"><span class="sec-head__eyebrow">素材・板厚・使う人・場所・予算の5問で候補を絞り込み</span><h2>5つの質問で選ぶ</h2></div>
-      <ul class="rows">
-        <li><a href="/diagnosis/"><img class="rows__img" src="/assets/images/choices/material-steel.svg" alt="" width="96" height="72"><span><p class="rows__title">はじめて選ぶ方の診断</p><p class="rows__meta">全5問・約1分</p><span class="chip">おすすめ5台を表示</span></span><svg class="ico ico--chev" aria-hidden="true"><use href="/assets/icons.svg#i-chevron"></use></svg></a></li>
-        <li><a href="/diagnosis/?q1_material=alcu"><img class="rows__img" src="/assets/images/choices/material-alcu.svg" alt="" width="96" height="72"><span><p class="rows__title">アルミ・銅を溶接したい</p><p class="rows__meta">波長と設備で向き不向きが大きい素材</p><span class="chip">専門用途</span></span><svg class="ico ico--chev" aria-hidden="true"><use href="/assets/icons.svg#i-chevron"></use></svg></a></li>
-        <li><a href="/diagnosis/?q2_thickness=thick"><img class="rows__img" src="/assets/images/choices/thickness-thick.svg" alt="" width="96" height="72"><span><p class="rows__title">6mm以上の厚物を溶接したい</p><p class="rows__meta">出力と方式で候補が絞られます</p><span class="chip">専門用途</span></span><svg class="ico ico--chev" aria-hidden="true"><use href="/assets/icons.svg#i-chevron"></use></svg></a></li>
-        <li><a href="/diagnosis/?q4_environment=line"><img class="rows__img" src="/assets/images/products/robot.jpg" alt="自動化設備のイメージ（AI生成）" width="96" height="72"><span><p class="rows__title">自動化ラインに組み込みたい</p><p class="rows__meta">ロボット・専用機との連携</p><span class="chip">専門用途</span></span><svg class="ico ico--chev" aria-hidden="true"><use href="/assets/icons.svg#i-chevron"></use></svg></a></li>
-      </ul>
-      <a class="sec-more" href="/diagnosis/">診断をはじめる<svg class="ico ico--chev" aria-hidden="true"><use href="/assets/icons.svg#i-chevron"></use></svg></a>
+    <section class="band band--blue" style="border-radius:var(--radius);padding:28px 20px 32px;margin-top:8px">
+      <div class="sec-head sec-head--ico"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-diag"></use></svg><span class="sec-head__eyebrow">5つの質問に答えるだけ。わからない項目は「わからない」で進めます</span><h2>5つの質問で選ぶ</h2></div>
+      <ol class="stepline" aria-label="質問の順番">
+        <li><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-material"></use></svg>素材<b>Q1</b></li>
+        <li><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-thick"></use></svg>板厚<b>Q2</b></li>
+        <li><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-user"></use></svg>使う人<b>Q3</b></li>
+        <li><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-factory"></use></svg>場所<b>Q4</b></li>
+        <li><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-yen"></use></svg>予算<b>Q5</b></li>
+      </ol>
+      <a class="btn btn--accent" href="/diagnosis/" style="margin-top:20px;max-width:480px"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-diag"></use></svg>診断をはじめる（約1分）</a>
     </section>
 
     <section class="section">
-      <div class="sec-head"><span class="sec-head__eyebrow">やりたい作業から、候補を見つける</span><h2>用途から探す</h2></div>
+      <div class="sec-head sec-head--ico"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-work"></use></svg><span class="sec-head__eyebrow">やりたい作業から候補を見つける</span><h2>用途から探す</h2></div>
       <ul class="rows rows--2col" id="useRows"></ul>
-      <a class="sec-more" href="/lineup/">機種一覧を見る<svg class="ico ico--chev" aria-hidden="true"><use href="/assets/icons.svg#i-chevron"></use></svg></a>
     </section>
 
     <section class="section">
-      <div class="sec-head"><span class="sec-head__eyebrow">迷いやすいところを先に読む</span><h2>選び方ガイド</h2></div>
+      <div class="sec-head sec-head--ico"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-guide"></use></svg><span class="sec-head__eyebrow">迷いやすいところを先に読む</span><h2>選び方ガイド</h2></div>
       <ul class="news">
-        <li><a href="/articles/"><time datetime="2026-09-18">2026.09.18</time><b>TIG溶接とレーザー溶接の違い。板金・ステンレスの現場でどちらを選ぶか</b></a></li>
-        <li><a href="/articles/"><time datetime="2026-09-18">2026.09.18</time><b>ハンドヘルド型と据置型、方式別の適性と向いていない用途</b></a></li>
-        <li><a href="/articles/"><time datetime="2026-09-18">2026.09.18</time><b>未経験の新人でも扱える機種の見分け方。習得難易度の考え方</b></a></li>
-        <li><a href="/articles/"><time datetime="2026-09-18">2026.09.18</time><b>アルミ・銅は普通のファイバーで溶接できる？波長で変わること</b></a></li>
+        <li><a href="/articles/"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-compare"></use></svg><b>TIG溶接とレーザー溶接の違い。板金・ステンレスの現場でどちらを選ぶか</b><svg class="ico ico--chev" aria-hidden="true"><use href="/assets/icons.svg#i-chevron"></use></svg></a></li>
+        <li><a href="/articles/"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-handheld"></use></svg><b>ハンドヘルド型と据置型、方式別の適性と向いていない用途</b><svg class="ico ico--chev" aria-hidden="true"><use href="/assets/icons.svg#i-chevron"></use></svg></a></li>
+        <li><a href="/articles/"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-user"></use></svg><b>未経験の新人でも扱える機種の見分け方。習得難易度の考え方</b><svg class="ico ico--chev" aria-hidden="true"><use href="/assets/icons.svg#i-chevron"></use></svg></a></li>
+        <li><a href="/articles/"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-alcu"></use></svg><b>アルミ・銅は普通のファイバーで溶接できる？波長で変わること</b><svg class="ico ico--chev" aria-hidden="true"><use href="/assets/icons.svg#i-chevron"></use></svg></a></li>
       </ul>
       <a class="sec-more" href="/articles/">選び方ガイドの一覧へ<svg class="ico ico--chev" aria-hidden="true"><use href="/assets/icons.svg#i-chevron"></use></svg></a>
     </section>
 
     <section class="section">
-      <div class="sec-head"><span class="sec-head__eyebrow">スペックと選定コメント、向き不向きを機種ごとに掲載</span><h2>掲載機種</h2></div>
-      <p class="image-note">掲載情報はサンプルです。設備画像はAI生成のイメージで、実際の製品外観ではありません。</p>
+      <div class="sec-head sec-head--ico"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-lineup"></use></svg><span class="sec-head__eyebrow">スペックと選定コメント、向き不向きを機種ごとに掲載</span><h2>掲載機種</h2></div>
       <ul class="cards" id="newCards"></ul>
       <a class="sec-more" href="/lineup/">掲載機種の一覧へ<svg class="ico ico--chev" aria-hidden="true"><use href="/assets/icons.svg#i-chevron"></use></svg></a>
     </section>
   </main>
 
-  <aside class="side">
+  <aside class="side" aria-label="主要メニュー">
     <h2>メニュー</h2>
     <ul class="rows">
       <li><a href="/diagnosis/"><svg class="ico ico--s" aria-hidden="true"><use href="/assets/icons.svg#i-diag"></use></svg><span><p class="rows__title">5つの質問で選ぶ</p><p class="rows__meta">診断・約1分・おすすめ5台</p></span><svg class="ico ico--chev" aria-hidden="true"><use href="/assets/icons.svg#i-chevron"></use></svg></a></li>
@@ -92,21 +99,20 @@
       <li><a href="/diagnosis/#compare"><svg class="ico ico--s" aria-hidden="true"><use href="/assets/icons.svg#i-compare"></use></svg><span><p class="rows__title">2台を比較</p><p class="rows__meta">診断結果から2台を横並びで</p></span><svg class="ico ico--chev" aria-hidden="true"><use href="/assets/icons.svg#i-chevron"></use></svg></a></li>
       <li><a href="/articles/"><svg class="ico ico--s" aria-hidden="true"><use href="/assets/icons.svg#i-guide"></use></svg><span><p class="rows__title">選び方ガイド</p><p class="rows__meta">方式の違い・課題別の選び方</p></span><svg class="ico ico--chev" aria-hidden="true"><use href="/assets/icons.svg#i-chevron"></use></svg></a></li>
       <li><a href="/contact/"><svg class="ico ico--s" aria-hidden="true"><use href="/assets/icons.svg#i-consult"></use></svg><span><p class="rows__title">相談・問い合わせ</p><p class="rows__meta">フォーム・電話・LINE</p></span><svg class="ico ico--chev" aria-hidden="true"><use href="/assets/icons.svg#i-chevron"></use></svg></a></li>
-      <li><a href="/about/"><svg class="ico ico--s" aria-hidden="true"><use href="/assets/icons.svg#i-guide"></use></svg><span><p class="rows__title">運営者について</p><p class="rows__meta">販売事業者としての開示・評価基準</p></span><svg class="ico ico--chev" aria-hidden="true"><use href="/assets/icons.svg#i-chevron"></use></svg></a></li>
     </ul>
-    <div class="box box--gray" style="margin-top:24px">
-      <h2 style="font-size:20px">この結果について相談する</h2>
-      <p style="font-size:16px;margin:0 0 12px">診断の回答を添えて相談できます。導入前の疑問にお答えします。</p>
-      <a class="btn btn--primary" href="/contact/">フォームで相談する</a>
-      <a class="btn" href="tel:0000000000">電話 000-000-0000（仮）</a>
+    <div class="box box--consult" style="margin-top:20px">
+      <h2><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-consult"></use></svg>相談する</h2>
+      <p style="font-size:16px;margin:0 0 12px">診断の回答を添えて相談できます。</p>
+      <a class="btn btn--accent" href="/contact/">フォームで相談する</a>
+      <a class="btn" href="tel:0000000000"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-phone"></use></svg>000-000-0000（仮）</a>
     </div>
   </aside>
 </div>
 
 <div id="siteFooter"></div>
 <script type="module">
-  import { mountChrome } from "/assets/js/partials.js?v=6";
-  import { productSlug } from "/assets/js/scoring.js?v=6";
+  import { mountChrome } from "/assets/js/partials.js?v=9";
+  import { productSlug } from "/assets/js/scoring.js?v=9";
   mountChrome({ current: "/", withBottombar: false });
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const chev = '<svg class="ico ico--chev" aria-hidden="true"><use href="/assets/icons.svg#i-chevron"></use></svg>';
@@ -116,9 +122,9 @@
   document.getElementById("useRows").innerHTML = uses.map(([tag, sub]) => {
     const list = products.filter((p) => p.tags.use.includes(tag));
     if (!list.length) return "";
-    return `<li><a href="/lineup/?use=${encodeURIComponent(tag)}"><img class="rows__img" src="${esc(list[0].image)}" alt="" width="96" height="72" loading="lazy"><span><p class="rows__title">${esc(tag)}</p><p class="rows__meta">${list.length}機種・${esc(sub)}</p><span class="chip">選定コメント付き</span></span>${chev}</a></li>`;
+    return `<li><a href="/lineup/?use=${encodeURIComponent(tag)}"><img class="rows__img" src="${esc(list[0].image)}" alt="" width="96" height="72" loading="lazy"><span><p class="rows__title">${esc(tag)}</p><p class="rows__meta">${list.length}機種・${esc(sub)}</p></span>${chev}</a></li>`;
   }).join("");
-  document.getElementById("newCards").innerHTML = products.slice(0, 6).map((p) => `<li class="card"><a href="/products/${esc(productSlug(p))}/"><img class="card__img" src="${esc(p.image)}" alt="" width="240" height="240" loading="lazy"><span class="image-note image-label">設備イメージ（AI生成）</span><p class="card__cat">${esc(p.method)}</p><p class="card__name">${esc(p.name)}</p><p class="card__maker">${esc(p.maker_name)}</p><p class="card__price">価格帯 <b>${esc(p.tags.price[0])}</b></p>${p.handled_by_operator ? '<span class="chip">運営元で取り扱い</span>' : ""}</a></li>`).join("");
+  document.getElementById("newCards").innerHTML = products.slice(0, 6).map((p) => `<li class="card"><a href="/products/${esc(productSlug(p))}/"><img class="card__img" src="${esc(p.image)}" alt="" width="240" height="240" loading="lazy"><p class="card__cat">${esc(p.method)}</p><p class="card__name">${esc(p.name)}</p><p class="card__maker">${esc(p.maker_name)}</p><p class="card__price">価格帯 <b>${esc(p.tags.price[0])}</b></p>${p.handled_by_operator ? '<span class="chip">運営元で取り扱い</span>' : ""}</a></li>`).join("");
 </script>
 </body>
 </html>

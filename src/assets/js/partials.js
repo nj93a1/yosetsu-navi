@@ -3,12 +3,13 @@ const ICONS = "/assets/icons.svg";
 export const icon = (name, cls = "ico") => `<svg class="${cls}" aria-hidden="true"><use href="${ICONS}#i-${name}"></use></svg>`;
 
 export function header(current = "") {
+  // スマホ用メニュー。PCでは右カラムのメニューが主要ナビゲーションなので、このメニューは出さない
   const items = [
-    ["/diagnosis/", "5つの質問で選ぶ（診断）"],
-    ["/lineup/", "機種一覧から探す"],
-    ["/articles/", "選び方・比較のコツを読む"],
-    ["/contact/", "相談・問い合わせ"],
-    ["/about/", "運営者について・評価基準"],
+    ["/diagnosis/", "diag", "5つの質問で選ぶ"],
+    ["/lineup/", "lineup", "機種一覧"],
+    ["/diagnosis/#compare", "compare", "2台を比較"],
+    ["/articles/", "guide", "選び方ガイド"],
+    ["/contact/", "consult", "相談・問い合わせ"],
   ];
   return `
 <header class="header">
@@ -16,11 +17,11 @@ export function header(current = "") {
     <a class="header__brand" href="/">${icon("diag", "ico header__mark")}<span class="header__name">レーザー溶接機 比較・選定<small>中立的な比較情報サイト（サイト名 仮）</small></span></a>
     <div class="header__tools">
       <a class="header__tool" href="/lineup/">${icon("search")}<span>検索</span></a>
-      <button class="header__tool" type="button" id="menuBtn" aria-expanded="false" aria-controls="gnav">${icon("menu")}<span>メニュー</span></button>
+      <button class="header__tool header__tool--menu" type="button" id="menuBtn" aria-expanded="false" aria-controls="gnav">${icon("menu")}<span>メニュー</span></button>
     </div>
   </div>
   <nav class="gnav" id="gnav" data-open="false" aria-label="メニュー">
-    <ul>${items.map(([href, label]) => `<li><a href="${href}"${href === current ? ' aria-current="page"' : ""}><span>${label}</span>${icon("chevron")}</a></li>`).join("")}</ul>
+    <ul>${items.map(([href, ic, label]) => `<li><a href="${href}"${href === current ? ' aria-current="page"' : ""}>${icon(ic)}<span>${label}</span>${icon("chevron", "ico ico--chev")}</a></li>`).join("")}</ul>
   </nav>
 </header>`;
 }
@@ -43,14 +44,14 @@ export function footer() {
 <footer class="footer">
   <div class="wrap">
     <ul class="footer__links">
-      <li><a href="/about/">運営者について・評価基準${icon("chevron")}</a></li>
+      <li><a href="/diagnosis/">5つの質問で選ぶ${icon("chevron")}</a></li>
       <li><a href="/lineup/">機種一覧${icon("chevron")}</a></li>
-      <li><a href="/contact/">お問い合わせ${icon("chevron")}</a></li>
+      <li><a href="/articles/">選び方ガイド${icon("chevron")}</a></li>
+      <li><a href="/contact/">相談・問い合わせ${icon("chevron")}</a></li>
+      <li><a href="/about/">運営者情報・評価基準${icon("chevron")}</a></li>
     </ul>
-    <p class="footer__op">運営：ノースヒルズ溶接工業株式会社</p>
-    <p class="footer__op">当社はレーザー溶接機の販売事業者です。本サイトに掲載する製品の一部を取り扱っており、該当製品には「運営元で取り扱い」と表示しています。</p>
     <p class="footer__op">掲載機種はサンプルデータです。現場・設備の写真調画像はAI生成のイメージで、実機や導入事例を撮影したものではありません。</p>
-    <p class="footer__copy">© 2026 ノースヒルズ溶接工業株式会社</p>
+    <p class="footer__copy">© 2026 レーザー溶接機 比較・選定</p>
   </div>
 </footer>`;
 }

@@ -122,10 +122,10 @@ function pageShell(title, body) {
 <meta name="robots" content="noindex,nofollow"><title>${esc(title)}</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/css/style.css?v=8"></head><body>
+<link rel="stylesheet" href="/assets/css/style.css?v=9"></head><body>
 <div id="siteHeader"></div>
 ${body}
 <div id="siteFooter"></div>
-<script type="module">import { mountChrome } from "/assets/js/partials.js?v=6"; mountChrome({ current: "/lineup/" });</script>
+<script type="module">import { mountChrome } from "/assets/js/partials.js?v=9"; mountChrome({ current: "/lineup/" });</script>
 </body></html>`;
 }
