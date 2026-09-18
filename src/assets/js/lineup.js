@@ -16,7 +16,7 @@ const PRICES = ["100万円未満", "100〜200万円", "200〜400万円", "400〜
 
 export function card(p) {
   return `<li class="pcard"><a href="/products/${esc(productSlug(p))}/">
-    <img class="pcard__img" src="${esc(p.image || "/assets/images/products/placeholder.svg")}" alt="" width="320" height="240" loading="lazy"><span class="image-note image-label">設備イメージ（AI生成）</span>
+    <img class="pcard__img" src="${esc(p.image || "/assets/images/products/placeholder.svg")}" alt="" width="320" height="240" loading="lazy">
     <p class="pcard__name">${esc(p.name)}</p>
     <p class="pcard__maker">${esc(p.maker_name)}</p>
     <p class="pcard__price">価格帯：<b>${esc(p.tags.price[0])}</b></p>
@@ -44,8 +44,8 @@ export async function mountLineup(root, opts = {}) {
       <input id="q" type="search" placeholder="機種名・メーカー名で探す" autocomplete="off">
       <button class="btn btn--primary" type="submit">${icon("search")}検索</button>
     </form>
-    <div class="filter"><p class="filter__title">素材で絞り込む</p><ul class="chips" data-axis="materials">${MATERIALS.map((m) => `<li><button type="button" aria-pressed="false" data-v="${m}">${icon("check")}${m}</button></li>`).join("")}</ul></div>
-    <div class="filter"><p class="filter__title">価格帯で絞り込む</p><ul class="chips" data-axis="prices">${PRICES.map((m) => `<li><button type="button" aria-pressed="false" data-v="${m}">${icon("check")}${m}</button></li>`).join("")}</ul></div>` : ""}
+    <div class="filterbox"><div class="filter"><p class="filter__title">素材で絞り込む</p><ul class="chips" data-axis="materials">${MATERIALS.map((m) => `<li><button type="button" aria-pressed="false" data-v="${m}">${icon("check")}${m}</button></li>`).join("")}</ul></div>
+    <div class="filter"><p class="filter__title">価格帯で絞り込む</p><ul class="chips" data-axis="prices">${PRICES.map((m) => `<li><button type="button" aria-pressed="false" data-v="${m}">${icon("check")}${m}</button></li>`).join("")}</ul></div></div>` : ""}
     <ul class="tabs" role="tablist">${CATEGORIES.map((c) => `<li role="presentation"><button role="tab" type="button" data-cat="${c.id}" aria-selected="${c.id === state.cat}">${c.label}</button></li>`).join("")}</ul>
     <div class="tabpanel" role="tabpanel">
       <p class="result-count" id="count"></p>

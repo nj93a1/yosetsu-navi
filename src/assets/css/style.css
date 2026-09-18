@@ -124,7 +124,7 @@ mark { background: linear-gradient(transparent 55%, var(--c-marker) 55%); color:
 .sec-head--ico .sec-head__eyebrow { grid-column: 2; }
 .sec-head--ico h2 { grid-column: 2; }
 .sec-head { margin: 0 0 12px; }
-.sec-head__eyebrow { display: block; font-size: 14px; color: var(--c-sub); margin: 0 0 4px; }
+.sec-head__eyebrow { display: block; font-size: 15px; color: var(--c-sub); margin: 0 0 4px; }
 .sec-head h2, .sec-head h1 { margin: 0; font-size: 24px; }
 .sec-more { display: flex; align-items: center; justify-content: center; gap: 6px; min-height: 56px; margin: 8px 0 0; text-decoration: none; color: var(--c-text); font-weight: 700; border-top: 1px solid var(--c-line); }
 .sec-more .ico { width: 18px; height: 18px; }
@@ -228,20 +228,21 @@ mark { background: linear-gradient(transparent 55%, var(--c-marker) 55%); color:
 @media (min-width: 760px) { .feature { display: grid; grid-template-columns: repeat(2, 1fr); column-gap: 32px; } }
 
 /* ---------- タブ・検索・フィルタ（機種一覧） ---------- */
-.tabs { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0; margin: 0; padding: 0; list-style: none; border-bottom: 1px solid var(--c-line-2); }
+.tabs { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin: 0; padding: 0; list-style: none; }
 @media (min-width: 600px) { .tabs { grid-template-columns: repeat(4, 1fr); } }
 .tabs li { display: contents; }
-.tabs button { width: 100%; min-height: var(--btn-h); padding: 8px 10px; border: 0; border-bottom: 3px solid transparent; background: none; color: var(--c-muted); font-family: inherit; font-size: 17px; font-weight: 700; cursor: pointer; line-height: 1.3; }
-.tabs button[aria-selected="true"] { color: var(--c-text); border-bottom-color: var(--c-text); }
+.tabs button { width: 100%; min-height: var(--btn-h); padding: 8px 10px; border: 1px solid var(--c-line-2); border-radius: var(--radius-s); background: #fff; color: var(--c-sub); font-family: inherit; font-size: 17px; font-weight: 700; cursor: pointer; line-height: 1.3; }
+.tabs button[aria-selected="true"] { color: #fff; background: var(--c-brand); border-color: var(--c-brand); }
 .tabpanel { padding: 20px 0; }
 .search { display: grid; grid-template-columns: 1fr auto; gap: var(--gap); margin: 0 0 16px; }
-.search input { min-height: var(--btn-h); padding: 8px 14px; border: 1px solid var(--c-line-2); border-radius: 999px; font-family: inherit; width: 100%; }
+.search input { min-height: var(--btn-h); padding: 8px 14px; border: 1px solid var(--c-line-2); border-radius: 999px; font-family: inherit; width: 100%; background: #fff; }
 .search .btn { width: auto; padding: 0 16px; border-radius: 999px; }
 .filter { margin: 0 0 16px; }
+.filterbox { background: var(--c-bg-gray); border-radius: var(--radius); padding: 16px 16px 4px; margin: 0 0 20px; }
 .filter__title { font-weight: 700; margin: 0 0 8px; font-size: 16px; color: var(--c-sub); }
 .chips { display: flex; flex-wrap: wrap; gap: var(--gap); list-style: none; margin: 0; padding: 0; }
 .chips button { min-height: 48px; padding: 6px 16px; border: 1px solid var(--c-line-2); border-radius: 999px; background: #fff; color: var(--c-text); font-family: inherit; font-size: 17px; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; }
-.chips button[aria-pressed="true"] { border-color: var(--c-text); background: var(--c-text); color: #fff; }
+.chips button[aria-pressed="true"] { border-color: var(--c-brand); background: var(--c-brand-light); color: var(--c-brand); }
 .chips button .ico { width: 18px; height: 18px; display: none; }
 .chips button[aria-pressed="true"] .ico { display: block; }
 .result-count { margin: 0 0 12px; color: var(--c-sub); font-weight: 700; font-size: 16px; }
@@ -257,6 +258,7 @@ mark { background: linear-gradient(transparent 55%, var(--c-marker) 55%); color:
 
 /* ---------- 下部固定バー（配下ページのみ） ---------- */
 .bottombar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 30; background: #fff; border-top: 1px solid var(--c-line-2); }
+@media (min-width: 900px) { .bottombar { display: none; } body.has-bar { padding-bottom: 0; } }
 .bottombar ul { list-style: none; margin: 0 auto; padding: 0; max-width: var(--wrap); display: grid; grid-template-columns: repeat(4, 1fr); }
 .bottombar a { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; min-height: var(--bar-h); text-decoration: none; color: var(--c-text); font-size: 13px; font-weight: 700; line-height: 1.2; text-align: center; }
 .bottombar .ico { width: 28px; height: 28px; }
@@ -433,10 +435,10 @@ mark { background: linear-gradient(transparent 55%, var(--c-marker) 55%); color:
 @media (min-width: 600px) { .pictonav { grid-template-columns: repeat(4, 1fr); gap: 16px; } }
 .pictonav a { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; min-height: 128px; padding: 18px 10px 16px; background: #fff; border: 1px solid var(--c-line-2); border-radius: var(--radius); box-shadow: var(--shadow-card); text-decoration: none; color: var(--c-text); font-weight: 700; font-size: 17px; line-height: 1.3; text-align: center; }
 .pictonav a .ico { width: 56px; height: 56px; color: var(--c-brand); }
-.pictonav a small { display: block; font-size: 13px; color: var(--c-sub); font-weight: 400; margin-top: 2px; }
+.pictonav a small { display: block; font-size: 14px; color: var(--c-sub); font-weight: 400; margin-top: 2px; }
 .pictonav a:active { background: var(--c-brand-light); border-color: var(--c-brand); }
 .pictonav--accent a { border-top: 4px solid var(--c-accent); }
-.pictonav__group { margin: 0 0 8px; font-size: 15px; font-weight: 700; color: var(--c-sub); display: flex; align-items: center; gap: 8px; }
+.pictonav__group { margin: 0 0 8px; font-size: 16px; font-weight: 700; color: var(--c-sub); display: flex; align-items: center; gap: 8px; }
 .pictonav__group::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--c-brand); }
 
 /* ヒーロー内 CTA（写真の上に置く） */
@@ -446,7 +448,7 @@ mark { background: linear-gradient(transparent 55%, var(--c-marker) 55%); color:
 
 /* ステップ表示（診断の5問を数字付きで） */
 .stepline { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
-.stepline li { display: flex; flex-direction: column; align-items: center; gap: 6px; text-align: center; font-size: 14px; font-weight: 700; line-height: 1.2; }
+.stepline li { display: flex; flex-direction: column; align-items: center; gap: 6px; text-align: center; font-size: 15px; font-weight: 700; line-height: 1.2; }
 .stepline .ico { width: 44px; height: 44px; padding: 8px; color: var(--c-brand); background: #fff; border: 2px solid var(--c-brand-light); border-radius: 50%; }
 .stepline b { font-size: 12px; color: var(--c-sub); font-weight: 700; }
 
