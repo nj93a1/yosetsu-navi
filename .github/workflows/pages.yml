@@ -30,7 +30,7 @@ jobs:
       - name: Rewrite absolute paths for the /yosetsu-navi/ subpath
         run: |
           rm -rf out && cp -R src out
-          find out -type f \( -name '*.html' -o -name '*.js' -o -name '*.css' \) -print0 | xargs -0 perl -pi -e '
+          find out -type f \( -name '*.html' -o -name '*.js' -o -name '*.css' -o -name '*.json' \) -print0 | xargs -0 perl -pi -e '
             s#(["'"'"'(])/(assets|data|diagnosis|lineup|about|articles|contact|products)/#$1/yosetsu-navi/$2/#g;
             s#href="/"#href="/yosetsu-navi/"#g;
             s#location\.href = "/"#location.href = "/yosetsu-navi/"#g;

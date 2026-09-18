@@ -43,7 +43,7 @@
       "アルミ・銅の溶接"
     ],
     "handled_by_operator": true,
-    "image": "/assets/images/products/placeholder.svg",
+    "image": "/assets/images/products/handheld.jpg",
     "source": "ダミーデータ"
   },
   {
@@ -92,7 +92,7 @@
       "銅の本格溶接"
     ],
     "handled_by_operator": true,
-    "image": "/assets/images/products/placeholder.svg",
+    "image": "/assets/images/products/handheld.jpg",
     "source": "ダミーデータ"
   },
   {
@@ -142,7 +142,7 @@
       "屋外作業"
     ],
     "handled_by_operator": false,
-    "image": "/assets/images/products/placeholder.svg",
+    "image": "/assets/images/products/workstation.jpg",
     "source": "ダミーデータ"
   },
   {
@@ -188,7 +188,7 @@
       "長時間の連続作業"
     ],
     "handled_by_operator": true,
-    "image": "/assets/images/products/placeholder.svg",
+    "image": "/assets/images/products/handheld.jpg",
     "source": "ダミーデータ"
   },
   {
@@ -238,7 +238,7 @@
       "低予算での導入"
     ],
     "handled_by_operator": false,
-    "image": "/assets/images/products/placeholder.svg",
+    "image": "/assets/images/products/workstation.jpg",
     "source": "ダミーデータ"
   },
   {
@@ -288,7 +288,7 @@
       "少量多品種"
     ],
     "handled_by_operator": false,
-    "image": "/assets/images/products/placeholder.svg",
+    "image": "/assets/images/products/robot.jpg",
     "source": "ダミーデータ"
   },
   {
@@ -335,7 +335,7 @@
       "厚物"
     ],
     "handled_by_operator": true,
-    "image": "/assets/images/products/placeholder.svg",
+    "image": "/assets/images/products/handheld.jpg",
     "source": "ダミーデータ"
   },
   {
@@ -383,7 +383,7 @@
       "屋外作業"
     ],
     "handled_by_operator": false,
-    "image": "/assets/images/products/placeholder.svg",
+    "image": "/assets/images/products/workstation.jpg",
     "source": "ダミーデータ"
   },
   {
@@ -430,7 +430,7 @@
       "連続量産"
     ],
     "handled_by_operator": true,
-    "image": "/assets/images/products/placeholder.svg",
+    "image": "/assets/images/products/handheld.jpg",
     "source": "ダミーデータ"
   },
   {
@@ -478,7 +478,7 @@
       "厚物"
     ],
     "handled_by_operator": false,
-    "image": "/assets/images/products/placeholder.svg",
+    "image": "/assets/images/products/handheld.jpg",
     "source": "ダミーデータ"
   },
   {

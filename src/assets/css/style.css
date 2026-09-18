@@ -323,5 +323,71 @@ mark { background: linear-gradient(transparent 55%, var(--c-marker) 55%); color:
 .cta { margin: 32px 0 0; display: grid; gap: var(--gap); }
 @media (min-width: 760px) { .cta { grid-template-columns: 1fr 1fr; } .cta .btn + .btn { margin-top: 0; } }
 
+/* 元の比較メディアの構成を保ち、写真の視認性と商品表示を調整 */
+.skip-link { position: fixed; top: -100px; left: 16px; padding: 16px; z-index: 100; background: #fff; }
+.skip-link:focus { top: 8px; }
+.hero { isolation: isolate; background: #263039; }
+.hero::after { content: ""; position: absolute; inset: 0; z-index: -1; background: rgba(12, 20, 27, .46); }
+.hero__img { position: absolute; inset: 0; z-index: -2; height: 100%; object-position: center 58%; }
+.hero__text { position: relative; inset: auto; min-height: 360px; max-width: var(--wrap); margin: auto; padding: 52px 16px 76px; color: #fff; }
+.hero__title { color: #fff; font-size: 36px; line-height: 1.55; margin-bottom: 16px; text-shadow: 0 1px 8px #0006; }
+.hero__lead { color: #fff; font-size: 18px; line-height: 1.8; text-shadow: 0 1px 6px #0008; }
+.hero__caption { position: absolute; right: 12px; bottom: 10px; padding: 2px 6px; background: #263039; color: #fff; font-size: 11px; }
+.hero__search input::placeholder { color: #757575; }
+.hero__search input, .hero__search button, .topstrip__btn { min-height: 56px; }
+.cols > main, .card, .pcard { min-width: 0; }
+.image-note { font-size: 14px; color: var(--c-sub); line-height: 1.7; margin: 0 0 16px; }
+.image-label { display: block; font-size: 12px; margin-bottom: 8px; }
+.rcard__body > .image-label { grid-column: 1; grid-row: 2; }
+.rcard__body > div { grid-column: 2; grid-row: 1 / 3; }
+.card__img, .pcard__img, .rcard__img, .product__image { object-fit: contain; background: #e9eef3; }
+.card__name, .pcard__name { font-size: 18px; line-height: 1.5; }
+.card__price b, .pcard__price b { font-size: 18px; }
+.tabs button, .subnav a { color: var(--c-sub); }
+.chips button { min-height: 56px; }
+.header__tools { gap: 12px; }
+@media (min-width: 900px) {
+  .cols { grid-template-columns: minmax(0, 1fr) 288px; gap: 32px; }
+  .home .cards { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px 16px; }
+  .rows--2col { column-gap: 20px; }
+  .rows--2col a { grid-template-columns: 72px minmax(0, 1fr) 16px; gap: 10px; }
+  .rows--2col .rows__img { width: 72px; }
+  .rows--2col .rows__title { font-size: 18px; }
+}
+@media (min-width: 600px) and (max-width: 899px) {
+  .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 599px) {
+  .hero__text { min-height: 300px; padding: 36px 20px 62px; }
+  .hero__title { font-size: 28px; }
+  .hero__lead { font-size: 16px; }
+  .hero__img { object-position: 64% center; }
+  .hero__caption { bottom: 34px; font-size: 10px; }
+  .hero__search form { padding-left: 12px; }
+  .hero__search .ico { display: none; }
+  .hero__search input { font-size: 16px; }
+  .hero__search button { padding-inline: 16px; }
+  .header__name { font-size: 14px; }
+  .header__name small { font-size: 10px; white-space: normal; max-width: 160px; }
+  .header__brand { gap: 6px; }
+  .header__mark { width: 26px; }
+  .header__tool { min-width: 44px; }
+  .topstrip__text, .topstrip__btn { font-size: 14px; }
+  .rows a { grid-template-columns: 80px minmax(0, 1fr) 18px; gap: 12px; }
+  .rows__img { width: 80px; }
+  .rows__title { font-size: 18px; }
+  .card__name, .pcard__name { overflow-wrap: anywhere; }
+  .rcard__body { grid-template-columns: 88px minmax(0, 1fr); }
+  .rcard__img { width: 88px; }
+}
+@media (max-width: 359px) {
+  .header__tools > a { display: none; }
+  .header__tools { flex-shrink: 0; }
+  .header__tool { white-space: nowrap; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; }
+}
+
 /* スマホだけ改行 */
 @media (min-width: 600px) { .sp { display: none; } }

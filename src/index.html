@@ -8,20 +8,22 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/style.css?v=5">
+  <link rel="stylesheet" href="/assets/css/style.css?v=8">
   <title>レーザー溶接機 比較・選定｜5つの質問で現場に合う1台を</title>
   <meta name="description" content="レーザー溶接機を素材・板厚・使う人・場所・予算の5問で選定する中立的な比較サイト。ハンドヘルドから自動化ライン組込まで、他社製品を含めて比較できます。">
 </head>
-<body>
-<div class="topstrip"><div class="topstrip__in"><p class="topstrip__text">掲載 <b>10</b> 機種を運営者が<br class="sp">実機とカタログで確認</p><a class="topstrip__btn" href="/diagnosis/">診断をはじめる</a></div></div>
+<body class="home">
+<a class="skip-link" href="#main">本文へ移動</a>
+<div class="topstrip"><div class="topstrip__in"><p class="topstrip__text">素材・板厚・予算から、<br class="sp">現場に合う一台を。</p><a class="topstrip__btn" href="/diagnosis/">約1分の選定診断 →</a></div></div>
 <div id="siteHeader"></div>
 
 <section class="hero" aria-label="サイト紹介">
-  <img class="hero__img" src="/assets/images/hero.svg" alt="" width="1600" height="720">
+  <img class="hero__img" src="/assets/images/workshop.jpg" alt="保護具を着用して金属を溶接する作業者のイメージ" width="1536" height="1024" fetchpriority="high">
   <div class="hero__text">
-    <h1 class="hero__title">現場に合う溶接機、選ぶなら</h1>
-    <p class="hero__lead">運営者の実機確認と現場の声をもとに<br>比較情報を用意しました</p>
+    <h1 class="hero__title">現場に合う溶接機、<br class="sp">選ぶなら</h1>
+    <p class="hero__lead">素材・板厚・用途から機種を比較。<br>選び方と、それぞれの向き不向きを紹介します。</p>
   </div>
+  <span class="hero__caption">溶接現場のイメージ（AI生成）</span>
 </section>
 <div class="hero__search">
   <form action="/lineup/" method="get" role="search">
@@ -45,20 +47,20 @@
 </div>
 
 <div class="wrap cols">
-  <main>
+  <main id="main">
     <section class="section">
       <div class="sec-head"><span class="sec-head__eyebrow">素材・板厚・使う人・場所・予算の5問で候補を絞り込み</span><h2>5つの質問で選ぶ</h2></div>
       <ul class="rows">
         <li><a href="/diagnosis/"><img class="rows__img" src="/assets/images/choices/material-steel.svg" alt="" width="96" height="72"><span><p class="rows__title">はじめて選ぶ方の診断</p><p class="rows__meta">全5問・約1分</p><span class="chip">おすすめ5台を表示</span></span><svg class="ico ico--chev" aria-hidden="true"><use href="/assets/icons.svg#i-chevron"></use></svg></a></li>
         <li><a href="/diagnosis/?q1_material=alcu"><img class="rows__img" src="/assets/images/choices/material-alcu.svg" alt="" width="96" height="72"><span><p class="rows__title">アルミ・銅を溶接したい</p><p class="rows__meta">波長と設備で向き不向きが大きい素材</p><span class="chip">専門用途</span></span><svg class="ico ico--chev" aria-hidden="true"><use href="/assets/icons.svg#i-chevron"></use></svg></a></li>
         <li><a href="/diagnosis/?q2_thickness=thick"><img class="rows__img" src="/assets/images/choices/thickness-thick.svg" alt="" width="96" height="72"><span><p class="rows__title">6mm以上の厚物を溶接したい</p><p class="rows__meta">出力と方式で候補が絞られます</p><span class="chip">専門用途</span></span><svg class="ico ico--chev" aria-hidden="true"><use href="/assets/icons.svg#i-chevron"></use></svg></a></li>
-        <li><a href="/diagnosis/?q4_environment=line"><img class="rows__img" src="/assets/images/products/placeholder.svg" alt="" width="96" height="72"><span><p class="rows__title">自動化ラインに組み込みたい</p><p class="rows__meta">ロボット・専用機との連携</p><span class="chip">専門用途</span></span><svg class="ico ico--chev" aria-hidden="true"><use href="/assets/icons.svg#i-chevron"></use></svg></a></li>
+        <li><a href="/diagnosis/?q4_environment=line"><img class="rows__img" src="/assets/images/products/robot.jpg" alt="自動化設備のイメージ（AI生成）" width="96" height="72"><span><p class="rows__title">自動化ラインに組み込みたい</p><p class="rows__meta">ロボット・専用機との連携</p><span class="chip">専門用途</span></span><svg class="ico ico--chev" aria-hidden="true"><use href="/assets/icons.svg#i-chevron"></use></svg></a></li>
       </ul>
       <a class="sec-more" href="/diagnosis/">診断をはじめる<svg class="ico ico--chev" aria-hidden="true"><use href="/assets/icons.svg#i-chevron"></use></svg></a>
     </section>
 
     <section class="section">
-      <div class="sec-head"><span class="sec-head__eyebrow">運営者が実機とカタログで確認し、選定コメントを付けています</span><h2>用途別のおすすめ機種</h2></div>
+      <div class="sec-head"><span class="sec-head__eyebrow">やりたい作業から、候補を見つける</span><h2>用途から探す</h2></div>
       <ul class="rows rows--2col" id="useRows"></ul>
       <a class="sec-more" href="/lineup/">機種一覧を見る<svg class="ico ico--chev" aria-hidden="true"><use href="/assets/icons.svg#i-chevron"></use></svg></a>
     </section>
@@ -76,6 +78,7 @@
 
     <section class="section">
       <div class="sec-head"><span class="sec-head__eyebrow">スペックと選定コメント、向き不向きを機種ごとに掲載</span><h2>掲載機種</h2></div>
+      <p class="image-note">掲載情報はサンプルです。設備画像はAI生成のイメージで、実際の製品外観ではありません。</p>
       <ul class="cards" id="newCards"></ul>
       <a class="sec-more" href="/lineup/">掲載機種の一覧へ<svg class="ico ico--chev" aria-hidden="true"><use href="/assets/icons.svg#i-chevron"></use></svg></a>
     </section>
@@ -102,8 +105,8 @@
 
 <div id="siteFooter"></div>
 <script type="module">
-  import { mountChrome } from "/assets/js/partials.js?v=5";
-  import { productSlug } from "/assets/js/scoring.js?v=5";
+  import { mountChrome } from "/assets/js/partials.js?v=6";
+  import { productSlug } from "/assets/js/scoring.js?v=6";
   mountChrome({ current: "/", withBottombar: false });
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const chev = '<svg class="ico ico--chev" aria-hidden="true"><use href="/assets/icons.svg#i-chevron"></use></svg>';
@@ -115,7 +118,7 @@
     if (!list.length) return "";
     return `<li><a href="/lineup/?use=${encodeURIComponent(tag)}"><img class="rows__img" src="${esc(list[0].image)}" alt="" width="96" height="72" loading="lazy"><span><p class="rows__title">${esc(tag)}</p><p class="rows__meta">${list.length}機種・${esc(sub)}</p><span class="chip">選定コメント付き</span></span>${chev}</a></li>`;
   }).join("");
-  document.getElementById("newCards").innerHTML = products.slice(0, 5).map((p) => `<li class="card"><a href="/products/${esc(productSlug(p))}/"><img class="card__img" src="${esc(p.image)}" alt="" width="240" height="240" loading="lazy"><p class="card__cat">${esc(p.method)}</p><p class="card__name">${esc(p.name)}</p><p class="card__maker">${esc(p.maker_name)}</p><p class="card__price">価格帯 <b>${esc(p.tags.price[0])}</b></p>${p.handled_by_operator ? '<span class="chip">運営元で取り扱い</span>' : ""}</a></li>`).join("");
+  document.getElementById("newCards").innerHTML = products.slice(0, 6).map((p) => `<li class="card"><a href="/products/${esc(productSlug(p))}/"><img class="card__img" src="${esc(p.image)}" alt="" width="240" height="240" loading="lazy"><span class="image-note image-label">設備イメージ（AI生成）</span><p class="card__cat">${esc(p.method)}</p><p class="card__name">${esc(p.name)}</p><p class="card__maker">${esc(p.maker_name)}</p><p class="card__price">価格帯 <b>${esc(p.tags.price[0])}</b></p>${p.handled_by_operator ? '<span class="chip">運営元で取り扱い</span>' : ""}</a></li>`).join("");
 </script>
 </body>
 </html>

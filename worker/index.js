@@ -101,7 +101,7 @@ async function productPage(env, slug) {
     <p class="product__maker">${esc(p.maker_name)}</p>
     <div class="product__band"><span>価格帯：<b>${esc(p.price_band)}</b></span><span>習得難易度：<b>${esc(p.skill_level)}</b></span><span>${esc(p.portability)}</span></div>
   </div>
-  <img class="product__image" src="${esc(p.image || "/assets/images/products/placeholder.svg")}" alt="" width="640" height="400">
+  <img class="product__image" src="${esc(p.image || "/assets/images/products/placeholder.svg")}" alt="" width="640" height="400"><span class="image-note image-label">設備イメージ（AI生成）</span>
   <section><h2>運営者の選定コメント</h2><p class="comment">${esc(p.comment)}</p></section>
   <section class="subsec" id="spec"><h2>スペック</h2><dl class="spec">${spec}</dl></section>
   <section class="subsec" id="fit"><h2>向いている用途・向いていない用途</h2>
@@ -122,10 +122,10 @@ function pageShell(title, body) {
 <meta name="robots" content="noindex,nofollow"><title>${esc(title)}</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/css/style.css?v=5"></head><body>
+<link rel="stylesheet" href="/assets/css/style.css?v=8"></head><body>
 <div id="siteHeader"></div>
 ${body}
 <div id="siteFooter"></div>
-<script type="module">import { mountChrome } from "/assets/js/partials.js?v=5"; mountChrome({ current: "/lineup/" });</script>
+<script type="module">import { mountChrome } from "/assets/js/partials.js?v=6"; mountChrome({ current: "/lineup/" });</script>
 </body></html>`;
 }

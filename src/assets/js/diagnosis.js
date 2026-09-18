@@ -187,7 +187,7 @@ function card(x) {
     <li class="rcard">
       <div class="rcard__head"><span class="rcard__slot ${slotClass}">${x.slot}位 ${esc(x.slotLabel)}</span>${p.handled_by_operator ? `<span class="badge" style="margin:0">運営元で取り扱い</span>` : ""}</div>
       <div class="rcard__body">
-        <img class="rcard__img" src="${esc(p.image || "/assets/images/products/placeholder.svg")}" alt="" width="112" height="84" loading="lazy">
+        <img class="rcard__img" src="${esc(p.image || "/assets/images/products/placeholder.svg")}" alt="" width="112" height="84" loading="lazy"><span class="image-note image-label">設備イメージ（AI生成）</span>
         <div><p class="rcard__name">${esc(p.name)}</p><p class="rcard__meta">${esc(p.maker_name)}<br>価格帯：${esc(p.tags.price[0])}｜${esc(p.tags.skill[0])}</p></div>
       </div>
       <p class="rcard__reason">${esc(x.reason)}</p>
@@ -215,7 +215,7 @@ function renderCompare() {
     <div class="compare">
       ${items.map((x) => `
         <div class="compare__col">
-          <img class="pcard__img" src="${esc(x.product.image || "/assets/images/products/placeholder.svg")}" alt="" width="160" height="120" loading="lazy">
+          <img class="pcard__img" src="${esc(x.product.image || "/assets/images/products/placeholder.svg")}" alt="" width="160" height="120" loading="lazy"><span class="image-note image-label">設備イメージ（AI生成）</span>
           <h3>${esc(x.product.name)}</h3>
           <p class="rcard__meta">${esc(x.product.maker_name)}</p>
           ${x.product.handled_by_operator ? `<span class="badge">運営元で取り扱い</span>` : ""}
