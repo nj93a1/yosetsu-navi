@@ -67,7 +67,7 @@ p, li, dt, dd, label, input, button { font-size: var(--fs-body); }
 a { color: var(--c-text); }
 img, svg { max-width: 100%; }
 img { height: auto; display: block; }
-.ico { width: 1em; height: 1em; fill: none; flex: none; }
+.ico { width: 1em; height: 1em; flex: none; }
 .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
 .narrow { max-width: var(--narrow); margin: 0 auto; padding: 0 16px; }
 .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
@@ -446,9 +446,8 @@ mark { background: linear-gradient(transparent 55%, var(--c-marker) 55%); color:
    ========================================================== */
 .pictonav { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
 @media (min-width: 600px) { .pictonav { grid-template-columns: repeat(4, 1fr); gap: 16px; } }
-.pictonav a { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; min-height: 128px; padding: 18px 10px 16px; background: #fff; border: 1px solid var(--c-line-2); border-radius: var(--radius); box-shadow: var(--shadow-card); text-decoration: none; color: var(--c-text); font-weight: 700; font-size: 17px; line-height: 1.3; text-align: center; }
-.pictonav a .ico { width: 56px; height: 56px; color: var(--c-brand); }
-.pictonav a small { display: block; font-size: 14px; color: var(--c-sub); font-weight: 400; margin-top: 2px; }
+.pictonav a { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; min-height: 124px; padding: 20px 16px; background: #fff; border: 1px solid var(--c-line); border-radius: var(--radius); text-decoration: none; color: var(--c-text); font-weight: 700; font-size: 17px; line-height: 1.3; text-align: center; white-space: nowrap; }
+.pictonav a .ico { width: 48px; height: 48px; color: var(--c-brand-dark); fill: currentColor; }
 .pictonav a:active { background: var(--c-brand-light); border-color: var(--c-brand); }
 .pictonav--accent a { border-top: 4px solid var(--c-accent); }
 .pictonav__group { margin: 0 0 8px; font-size: 16px; font-weight: 700; color: var(--c-sub); display: flex; align-items: center; gap: 8px; }
