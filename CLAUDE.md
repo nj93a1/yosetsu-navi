@@ -11,3 +11,4 @@
 - プレビュー: `.claude/launch.json` の `site`（wrangler dev、port 8766）
 - コミットは `feat:` / `fix:` / `docs:` / `chore:` 接頭辞、日本語
 - 現在はダミー商品10点。実データ投入は未決事項1・2の確定後
+- 採用配色（2026-09-19）: Main #14A3A6 / Sub #6A4FA8 / Accent #D2DF1E / Neutral #AEB6BF / Base #FAFAFA。`style.css` の `:root` で管理。白文字を載せる塗りとリンク文字は `--c-main-dark`（#0E7F82）を使う（Main は白と3.1:1で不足）。Accent の上は必ず黒文字。Neutral は線・非活性のみで文字には使わない
