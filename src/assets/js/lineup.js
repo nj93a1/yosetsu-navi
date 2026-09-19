@@ -36,6 +36,8 @@ export async function mountLineup(root, opts = {}) {
   if (params.get("cat") && CATEGORIES.some((c) => c.id === params.get("cat"))) state.cat = params.get("cat");
   if (params.get("q")) state.q = params.get("q");
   state.use = params.get("use") || "";
+  state.env = params.get("env") || "";
+  state.thickness = params.get("thickness") || "";
 
   root.innerHTML = `
     ${opts.full ? `
@@ -63,6 +65,8 @@ export async function mountLineup(root, opts = {}) {
     if (state.materials.size) list = list.filter((p) => [...state.materials].every((m) => p.tags.material.includes(m)));
     if (state.prices.size) list = list.filter((p) => state.prices.has((p.tags.price[0] || "非公開")));
     if (state.use) list = list.filter((p) => p.tags.use.includes(state.use));
+    if (state.env) list = list.filter((p) => p.tags.environment.includes(state.env));
+    if (state.thickness) list = list.filter((p) => p.tags.thickness.includes(state.thickness));
     if (opts.limit) list = list.slice(0, opts.limit);
     count.textContent = list.length ? `${list.length} 機種` : "";
     grid.innerHTML = list.map(card).join("") || `<li class="empty">条件に合う機種がありません。条件を減らしてみてください。</li>`;
@@ -88,7 +92,7 @@ export async function mountLineup(root, opts = {}) {
     form.addEventListener("submit", (e) => { e.preventDefault(); state.q = input.value; draw(); });
     input.addEventListener("input", () => { state.q = input.value; draw(); });
     root.querySelector("#clearBtn").addEventListener("click", () => {
-      state.q = ""; input.value = ""; state.materials.clear(); state.prices.clear(); state.cat = "all"; state.use = "";
+      state.q = ""; input.value = ""; state.materials.clear(); state.prices.clear(); state.cat = "all"; state.use = ""; state.env = ""; state.thickness = "";
       root.querySelectorAll(".chips button").forEach((b) => b.setAttribute("aria-pressed", "false"));
       root.querySelectorAll("[role=tab]").forEach((x) => x.setAttribute("aria-selected", String(x.dataset.cat === "all")));
       draw();

@@ -74,12 +74,6 @@ img { height: auto; display: block; }
 :focus-visible { outline: 3px solid var(--c-brand); outline-offset: 2px; }
 mark { background: linear-gradient(transparent 55%, var(--c-marker) 55%); color: inherit; font-weight: 700; }
 
-/* ---------- 上部の帯（トレース元: 緑の「年間16,000商品を徹底検証!」帯） ---------- */
-.topstrip { display: none; }
-.topstrip__in { max-width: var(--wrap); margin: 0 auto; padding: 8px 16px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
-.topstrip__text { margin: 0; font-size: 16px; font-weight: 700; line-height: 1.4; }
-.topstrip__text b { font-size: 22px; }
-.topstrip__btn { flex: none; display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 6px 14px; background: #fff; color: var(--c-brand-dark); border-radius: var(--radius); text-decoration: none; font-weight: 700; font-size: 16px; white-space: nowrap; }
 
 /* ---------- ヘッダー（ロゴ＋小さな説明 / 右にアイコン＋小ラベル） ---------- */
 #siteHeader { position: sticky; top: 0; z-index: 20; }
@@ -116,21 +110,12 @@ mark { background: linear-gradient(transparent 55%, var(--c-marker) 55%); color:
 .hero__search button { flex: none; min-height: 46px; padding: 0 18px; border: 0; border-radius: 999px; background: var(--c-brand-dark); color: #fff; font-family: inherit; font-size: 16px; font-weight: 700; cursor: pointer; }
 @media (min-width: 900px) { .hero__img { height: 480px; } .hero__title { font-size: 44px; } .hero__lead { font-size: 20px; } }
 
-/* ---------- カテゴリの文字リンク格子（トレース元: 家電/パソコン…の3列） ---------- */
-.catgrid { list-style: none; margin: 0; padding: 32px 0 8px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; }
-.catgrid a { display: flex; align-items: center; justify-content: center; text-align: center; min-height: 64px; padding: 8px 4px; text-decoration: none; color: var(--c-text); font-weight: 700; font-size: 17px; line-height: 1.3; border-radius: var(--radius); }
-.catgrid a:active { background: var(--c-gray); }
-.catgrid__more { text-align: center; margin: 4px 0 0; }
-.catgrid__more a { display: inline-flex; align-items: center; gap: 4px; min-height: 48px; color: var(--c-text); font-weight: 700; text-decoration: none; }
-.catgrid__more .ico { width: 18px; height: 18px; }
-@media (min-width: 900px) { .catgrid { grid-template-columns: repeat(6, 1fr); padding-top: 40px; } }
 
 /* ---------- セクション見出し（小さな灰色のリード＋太い見出し） ---------- */
 .section { padding: 40px 0 8px; }
 .band { padding: 40px 0 44px; }
 .band--gray { background: var(--c-bg-gray); }
 .band--blue { background: var(--c-bg-blue); }
-.band--grad { background: linear-gradient(180deg, #FFFFFF 0%, var(--c-bg-blue) 100%); }
 .band + .band { border-top: 1px solid rgba(0,0,0,.04); }
 .sec-head--ico { display: grid; grid-template-columns: 52px 1fr; column-gap: 14px; align-items: center; }
 .sec-head--ico .ico { width: 52px; height: 52px; padding: 10px; background: var(--c-brand); color: #fff; border-radius: 50%; grid-row: 1 / 3; }
@@ -232,13 +217,6 @@ mark { background: linear-gradient(transparent 55%, var(--c-marker) 55%); color:
 .pnav a:active, .pnav button:active { background: var(--c-gray); }
 .pnav--row { display: grid; }
 @media (min-width: 760px) { .pnav--row { grid-template-columns: repeat(2, 1fr); column-gap: 32px; } }
-.feature { list-style: none; margin: 0; padding: 0; }
-.feature li { border-bottom: 1px solid var(--c-line); }
-.feature a { display: grid; grid-template-columns: 56px 1fr 24px; align-items: center; gap: 14px; min-height: 80px; padding: 10px 0; text-decoration: none; color: var(--c-text); font-weight: 700; font-size: 19px; line-height: 1.35; }
-.feature .ico--f { width: 56px; height: 56px; color: var(--c-text); }
-.feature__s { display: block; font-size: 15px; color: var(--c-sub); font-weight: 400; margin-top: 2px; }
-.feature .ico--chev { width: 22px; height: 22px; color: var(--c-muted); }
-@media (min-width: 760px) { .feature { display: grid; grid-template-columns: repeat(2, 1fr); column-gap: 32px; } }
 
 /* ---------- タブ・検索・フィルタ（機種一覧） ---------- */
 .tabs { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin: 0; padding: 0; list-style: none; }
@@ -383,7 +361,6 @@ mark { background: linear-gradient(transparent 55%, var(--c-marker) 55%); color:
 .hero__lead { color: #fff; font-size: 18px; line-height: 1.8; text-shadow: 0 1px 6px #0008; }
 .hero__caption { position: absolute; right: 12px; bottom: 10px; padding: 2px 6px; background: #263039; color: #fff; font-size: 11px; }
 .hero__search input::placeholder { color: var(--c-sub); }
-.hero__search input, .hero__search button, .topstrip__btn { min-height: 56px; }
 .cols > main, .card, .pcard { min-width: 0; }
 .image-note { font-size: 14px; color: var(--c-sub); line-height: 1.7; margin: 0 0 16px; }
 .image-label { display: block; font-size: 12px; margin-bottom: 8px; }
@@ -421,7 +398,6 @@ mark { background: linear-gradient(transparent 55%, var(--c-marker) 55%); color:
   .header__brand { gap: 6px; }
   .header__mark { width: 26px; }
   .header__tool { min-width: 44px; }
-  .topstrip__text, .topstrip__btn { font-size: 14px; }
   .rows a { grid-template-columns: 80px minmax(0, 1fr) 18px; gap: 12px; }
   .rows__img { width: 80px; }
   .rows__title { font-size: 18px; }
