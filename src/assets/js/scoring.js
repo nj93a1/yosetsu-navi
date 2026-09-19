@@ -175,7 +175,7 @@ export function buildReason(r) {
   const parts = r.reasons.slice(0, 3);
   let text = parts.length ? parts.join("・") : "条件に近い候補";
   if (r.slotType === "specialty") text = `専門用途（${(r.specialty || []).join("・")}対応）：${text}`;
-  if (r.slotType === "price") text = `価格重視：${(r.product.tags?.price || [])[0] || ""}・${text}`;
+  if (r.slotType === "price") text = `価格重視：${(r.product.tags?.price || [])[0] || "価格非公開"}・${text}`;
   if (!r.matched && r.misses?.length) text += `（${r.misses.join("・")}は条件外）`;
   return text;
 }

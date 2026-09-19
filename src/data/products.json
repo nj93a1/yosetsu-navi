@@ -44,7 +44,9 @@
     ],
     "handled_by_operator": true,
     "image": "/assets/images/products/handheld.jpg",
-    "source": "ダミーデータ"
+    "source": "ダミーデータ",
+    "is_published": false,
+    "notes": "ダミーデータ（実データ投入後に非公開化）"
   },
   {
     "id": "p002",
@@ -93,7 +95,9 @@
     ],
     "handled_by_operator": true,
     "image": "/assets/images/products/handheld.jpg",
-    "source": "ダミーデータ"
+    "source": "ダミーデータ",
+    "is_published": false,
+    "notes": "ダミーデータ（実データ投入後に非公開化）"
   },
   {
     "id": "p003",
@@ -143,7 +147,9 @@
     ],
     "handled_by_operator": false,
     "image": "/assets/images/products/workstation.jpg",
-    "source": "ダミーデータ"
+    "source": "ダミーデータ",
+    "is_published": false,
+    "notes": "ダミーデータ（実データ投入後に非公開化）"
   },
   {
     "id": "p004",
@@ -189,7 +195,9 @@
     ],
     "handled_by_operator": true,
     "image": "/assets/images/products/handheld.jpg",
-    "source": "ダミーデータ"
+    "source": "ダミーデータ",
+    "is_published": false,
+    "notes": "ダミーデータ（実データ投入後に非公開化）"
   },
   {
     "id": "p005",
@@ -239,7 +247,9 @@
     ],
     "handled_by_operator": false,
     "image": "/assets/images/products/workstation.jpg",
-    "source": "ダミーデータ"
+    "source": "ダミーデータ",
+    "is_published": false,
+    "notes": "ダミーデータ（実データ投入後に非公開化）"
   },
   {
     "id": "p006",
@@ -289,7 +299,9 @@
     ],
     "handled_by_operator": false,
     "image": "/assets/images/products/robot.jpg",
-    "source": "ダミーデータ"
+    "source": "ダミーデータ",
+    "is_published": false,
+    "notes": "ダミーデータ（実データ投入後に非公開化）"
   },
   {
     "id": "p007",
@@ -336,7 +348,9 @@
     ],
     "handled_by_operator": true,
     "image": "/assets/images/products/handheld.jpg",
-    "source": "ダミーデータ"
+    "source": "ダミーデータ",
+    "is_published": false,
+    "notes": "ダミーデータ（実データ投入後に非公開化）"
   },
   {
     "id": "p008",
@@ -384,7 +398,9 @@
     ],
     "handled_by_operator": false,
     "image": "/assets/images/products/workstation.jpg",
-    "source": "ダミーデータ"
+    "source": "ダミーデータ",
+    "is_published": false,
+    "notes": "ダミーデータ（実データ投入後に非公開化）"
   },
   {
     "id": "p009",
@@ -431,7 +447,9 @@
     ],
     "handled_by_operator": true,
     "image": "/assets/images/products/handheld.jpg",
-    "source": "ダミーデータ"
+    "source": "ダミーデータ",
+    "is_published": false,
+    "notes": "ダミーデータ（実データ投入後に非公開化）"
   },
   {
     "id": "p010",
@@ -479,7 +497,9 @@
     ],
     "handled_by_operator": false,
     "image": "/assets/images/products/handheld.jpg",
-    "source": "ダミーデータ"
+    "source": "ダミーデータ",
+    "is_published": false,
+    "notes": "ダミーデータ（実データ投入後に非公開化）"
   },
   {
     "maker_slug": "uwjapan",
@@ -684,5 +704,915 @@
       "max_current_a": 45,
       "weight_kg": 240
     }
+  },
+  {
+    "id": "p201",
+    "maker_slug": "laserx",
+    "model_slug": "opticel-fh-pulse",
+    "name": "OPTICEL FH-PULSE",
+    "maker_name": "株式会社レーザックス",
+    "method": "ハンドヘルド",
+    "wavelength": null,
+    "output_w": 2000,
+    "portability": "コピー機1台程度のサイズ。チラー内蔵で移動可能",
+    "official_url": "https://laser-navi.com/products/opticelfh/",
+    "source_url": "https://laser-navi.com/products/opticelfh/",
+    "source": "レーザックス公式製品情報",
+    "tags": {
+      "use": [
+        "薄板接合",
+        "異材接合"
+      ],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "チタン"
+      ],
+      "thickness": [
+        "0.5〜3mm"
+      ],
+      "environment": [],
+      "price": [],
+      "skill": [
+        "未経験可"
+      ]
+    },
+    "comment": "2mm以下のステンレス薄板のスポット・重ね溶接や、SUSと鉄の差厚溶接に向く機種です。公式に「初心者スタッフもすぐに溶接」と記載があります。",
+    "suitable_for": [
+      "2mm以下のステンレス薄板",
+      "スポット溶接・重ね溶接",
+      "SUS＋鉄の異材・差厚溶接"
+    ],
+    "not_suitable_for": [
+      "アルミ（公式に対応不可と明記）",
+      "銅（公式に対応不可と明記）"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/placeholder.svg",
+    "is_published": true,
+    "notes": "出力は最大ピーク出力。波長・環境・価格は非公開"
+  },
+  {
+    "id": "p202",
+    "maker_slug": "laserx",
+    "model_slug": "opticel-fh-1500",
+    "name": "OPTICEL FH-1500",
+    "maker_name": "株式会社レーザックス",
+    "method": "ハンドヘルド",
+    "wavelength": "1070nm",
+    "output_w": 1500,
+    "portability": "コピー機1台程度のサイズ。チラー内蔵で移動可能",
+    "official_url": "https://laser-navi.com/products/opticelfh/",
+    "source_url": "https://laser-navi.com/dcms_media/other/fhsiyou.pdf",
+    "source": "レーザックス公式仕様表PDF",
+    "tags": {
+      "use": [
+        "薄板接合"
+      ],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ",
+        "銅",
+        "チタン",
+        "マグネシウム"
+      ],
+      "thickness": [
+        "0.5〜3mm"
+      ],
+      "environment": [],
+      "price": [],
+      "skill": [
+        "未経験可"
+      ]
+    },
+    "comment": "アルミの突合せ・隅肉・凸角や銅1.0mmの突合せまで公式実例があり、素材の幅で選ぶならシリーズ中の本命です。",
+    "suitable_for": [
+      "アルミ溶接（A5052 t1.5mm の突合せ・隅肉・凸角）",
+      "銅 t1.0mm の突合せ",
+      "SUS304 の溶込み 1〜5mm"
+    ],
+    "not_suitable_for": [],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/placeholder.svg",
+    "is_published": true,
+    "notes": "CW・シングルモード。環境・価格は非公開"
+  },
+  {
+    "id": "p203",
+    "maker_slug": "amada",
+    "model_slug": "flw-1500mts",
+    "name": "FLW-1500MTS",
+    "maker_name": "株式会社アマダ",
+    "method": "ハンドヘルド／協働ロボットによる自動化対応",
+    "wavelength": "1070nm",
+    "output_w": 1500,
+    "portability": "トーチはハンドヘルド。本体の可搬性は公開記載なし",
+    "official_url": "https://www.sheetmetal.amada.co.jp/lineup/weld/flw-mts/flw-1500mts.html",
+    "source_url": "https://www.sheetmetal.amada.co.jp/lineup/weld/flw-mts/flw-1500mts.html",
+    "source": "アマダ公式製品・仕様ページ",
+    "tags": {
+      "use": [
+        "薄板接合",
+        "厚物",
+        "自動化"
+      ],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ",
+        "銅"
+      ],
+      "thickness": [
+        "0.5〜3mm",
+        "3〜6mm"
+      ],
+      "environment": [
+        "ライン組込"
+      ],
+      "price": [],
+      "skill": [
+        "未経験可"
+      ]
+    },
+    "comment": "ワーク接触式トーチで作業者によるばらつきを抑える設計で、薄板から6mmの貫通溶接、協働ロボットでの自動化まで1台で見据える現場向けです。",
+    "suitable_for": [
+      "薄板から中厚板の低ひずみ溶接",
+      "開先なし6mmまでの貫通溶接",
+      "アルミ・高反射材の銅2mm",
+      "隙間のある製缶板金",
+      "協働ロボットによる自動化"
+    ],
+    "not_suitable_for": [],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/placeholder.svg",
+    "is_published": true,
+    "notes": "定格1,500W／最大2,500W。価格は非公開"
+  },
+  {
+    "id": "p204",
+    "maker_slug": "thm",
+    "model_slug": "thfi-1500h",
+    "name": "THFI-1500H",
+    "maker_name": "THM株式会社",
+    "method": "ハンドヘルド",
+    "wavelength": null,
+    "output_w": null,
+    "portability": "空冷式・チラー不要。「取り回し性に優れる」と公式記載",
+    "official_url": "https://thm-co.jp/fiber/thm-30r-f-2",
+    "source_url": "https://thm-co.jp/fiber/thm-30r-f-2",
+    "source": "THM公式製品ページ・電子カタログ案内",
+    "tags": {
+      "use": [
+        "薄板接合"
+      ],
+      "material": [],
+      "thickness": [],
+      "environment": [],
+      "price": [],
+      "skill": []
+    },
+    "comment": "空冷でチラーが要らず取り回しがよい機種です。薄板の低ひずみ溶接に加え、切断・クリーニング・標準ワイヤ送給装置にも対応します。",
+    "suitable_for": [
+      "薄板の低ひずみ溶接",
+      "簡単なスポット溶接",
+      "切断・クリーニング",
+      "標準ワイヤ送給装置"
+    ],
+    "not_suitable_for": [],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/placeholder.svg",
+    "is_published": true,
+    "notes": "波長・出力・素材・板厚・環境・価格・難易度は非公開"
+  },
+  {
+    "id": "p205",
+    "maker_slug": "wel-ken",
+    "model_slug": "v-hf1000",
+    "name": "V-HF1000",
+    "maker_name": "株式会社WEL-KEN",
+    "method": "ハンドヘルド",
+    "wavelength": "1070nm（シングルモード）",
+    "output_w": 300,
+    "portability": "本体約180kg。小型筐体だが手運び用途ではない。ハンドトーチ式",
+    "official_url": "https://www.wel-ken.co.jp/v-hp1000/",
+    "source_url": "https://www.wel-ken.co.jp/video/",
+    "source": "WEL-KEN公式 溶接動画",
+    "tags": {
+      "use": [
+        "薄板接合"
+      ],
+      "material": [
+        "鉄",
+        "アルミ"
+      ],
+      "thickness": [
+        "0.5〜3mm"
+      ],
+      "environment": [],
+      "price": [],
+      "skill": [
+        "未経験可"
+      ]
+    },
+    "comment": "1mm以下の極薄材や電子部品・装飾品など、細かい対象向けの300W。メーカー自身が「はじめてのレーザー溶接」と位置付けています。",
+    "suitable_for": [
+      "1mm以下の極薄材",
+      "電子部品・装飾品",
+      "狭い場所・複雑形状"
+    ],
+    "not_suitable_for": [],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/placeholder.svg",
+    "is_published": true,
+    "notes": "環境・価格は非公開"
+  },
+  {
+    "id": "p206",
+    "maker_slug": "wel-ken",
+    "model_slug": "v-hf2000",
+    "name": "V-HF2000",
+    "maker_name": "株式会社WEL-KEN",
+    "method": "ハンドヘルド",
+    "wavelength": "1070nm（シングルモード）",
+    "output_w": 500,
+    "portability": "本体約230kg。トーチ約500gまたは690g",
+    "official_url": "https://www.wel-ken.co.jp/v-hf2000/",
+    "source_url": "https://www.wel-ken.co.jp/video/",
+    "source": "WEL-KEN公式 溶接動画",
+    "tags": {
+      "use": [
+        "薄板接合"
+      ],
+      "material": [
+        "ステンレス",
+        "アルミ"
+      ],
+      "thickness": [
+        "0.5〜3mm"
+      ],
+      "environment": [],
+      "price": [],
+      "skill": []
+    },
+    "comment": "SUS304やAL5052の1.5mm級の薄板を、パルスと溶加棒で施工した実例がある500W機です。",
+    "suitable_for": [
+      "SUS304 t1.5mm の薄板溶接",
+      "AL5052 t1.5mm の薄板溶接",
+      "パルス＋溶加棒による施工"
+    ],
+    "not_suitable_for": [],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/placeholder.svg",
+    "is_published": true,
+    "notes": "環境・価格・難易度は非公開"
+  },
+  {
+    "id": "p207",
+    "maker_slug": "wel-ken",
+    "model_slug": "v-hf3000",
+    "name": "V-HF3000",
+    "maker_name": "株式会社WEL-KEN",
+    "method": "ハンドヘルド",
+    "wavelength": "1070nm（シングルモード）",
+    "output_w": 1000,
+    "portability": "本体約270kg。トーチ約500gまたは690g",
+    "official_url": "https://www.wel-ken.co.jp/v-hp3000/",
+    "source_url": "https://www.wel-ken.co.jp/video/",
+    "source": "WEL-KEN公式 溶接動画",
+    "tags": {
+      "use": [
+        "薄板接合"
+      ],
+      "material": [
+        "ステンレス",
+        "アルミ"
+      ],
+      "thickness": [
+        "0.5〜3mm"
+      ],
+      "environment": [],
+      "price": [],
+      "skill": [
+        "未経験可"
+      ]
+    },
+    "comment": "アルミ3mm＋1.5mmやSUS304 3mmの継手実例がある1,000W機。公式で「熟練の技術がなくても」と説明されています。",
+    "suitable_for": [
+      "AL5052 t3mm＋t1.5mm の継手",
+      "SUS304 t3mm の継手"
+    ],
+    "not_suitable_for": [],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/placeholder.svg",
+    "is_published": true,
+    "notes": "環境・価格は非公開"
+  },
+  {
+    "id": "p208",
+    "maker_slug": "wel-ken",
+    "model_slug": "v-hp1500",
+    "name": "V-HP1500",
+    "maker_name": "株式会社WEL-KEN",
+    "method": "ハンドヘルド",
+    "wavelength": "1080nm（マルチモード）",
+    "output_w": 1500,
+    "portability": "T型トーチ約75g、ストレート型約70g。本体重量は非公開",
+    "official_url": "https://www.wel-ken.co.jp/v-hp1500/",
+    "source_url": "https://www.wel-ken.co.jp/video/",
+    "source": "WEL-KEN公式 溶接動画",
+    "tags": {
+      "use": [],
+      "material": [],
+      "thickness": [],
+      "environment": [],
+      "price": [],
+      "skill": []
+    },
+    "comment": "軽量の可動式スイングヘッドが特徴で、肉盛り溶接や自動ワイヤ送給、奥まった溶接部へのアクセスを想定した機種です。",
+    "suitable_for": [
+      "肉盛り溶接",
+      "自動ワイヤ送給",
+      "奥まった溶接部へのアクセス"
+    ],
+    "not_suitable_for": [],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/placeholder.svg",
+    "is_published": true,
+    "notes": "用途・素材・板厚・環境・価格・難易度は非公開"
+  },
+  {
+    "id": "p209",
+    "maker_slug": "ikura",
+    "model_slug": "isk-fl1500w",
+    "name": "ISK-FL1500W",
+    "maker_name": "育良精機株式会社",
+    "method": "ハンドヘルド／ロボット接続対応",
+    "wavelength": "1064nm",
+    "output_w": 1500,
+    "portability": "メーカー呼称「ポータブル」。本体約130kg、10mトーチ、トーチヘッド0.8kg",
+    "official_url": "https://www.ikuratools.com/w_FL.html",
+    "source_url": "https://www.uedakanamono.co.jp/ISK-FL1500W",
+    "source": "ウエダ金物 販売ページ",
+    "tags": {
+      "use": [
+        "薄板接合",
+        "自動化"
+      ],
+      "material": [],
+      "thickness": [
+        "0.5〜3mm"
+      ],
+      "environment": [
+        "ライン組込"
+      ],
+      "price": [
+        "200〜400万円"
+      ],
+      "skill": []
+    },
+    "comment": "最大3mmの溶接に加え切断・クリーニングもこなし、Ethernet等でロボット接続できる価格帯の分かる機種です。",
+    "suitable_for": [
+      "最大3mmの溶接",
+      "スポット・パルス・連続溶接",
+      "レーザーカット・クリーニング",
+      "Ethernet／RS232C／RS485 によるロボット対応"
+    ],
+    "not_suitable_for": [
+      "3mmを超える板厚（公式対応板厚外）"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/placeholder.svg",
+    "is_published": true,
+    "notes": "価格根拠: 販売店公開価格 税込2,763,200円"
+  },
+  {
+    "id": "p210",
+    "maker_slug": "ikura",
+    "model_slug": "isk-fl2000w",
+    "name": "ISK-FL2000W",
+    "maker_name": "育良精機株式会社",
+    "method": "ハンドヘルド／ロボット接続対応",
+    "wavelength": "1064nm",
+    "output_w": 2000,
+    "portability": "本体約130kg、10mトーチ、トーチヘッド0.8kg",
+    "official_url": "https://www.ikuratools.com/w_FL.html",
+    "source_url": "https://www.uedakanamono.co.jp/ISK-FL2000W",
+    "source": "ウエダ金物 販売ページ",
+    "tags": {
+      "use": [
+        "厚物",
+        "自動化"
+      ],
+      "material": [],
+      "thickness": [
+        "3〜6mm"
+      ],
+      "environment": [
+        "ライン組込"
+      ],
+      "price": [
+        "200〜400万円"
+      ],
+      "skill": []
+    },
+    "comment": "最大6mmまで対応する2,000W機。切断・クリーニング・ロボット連携も同じ本体で行えます。",
+    "suitable_for": [
+      "最大6mmの溶接",
+      "スポット・パルス・連続溶接",
+      "切断・クリーニング",
+      "ロボット連携"
+    ],
+    "not_suitable_for": [
+      "6mm超の板厚（公式対応板厚外）"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/placeholder.svg",
+    "is_published": true,
+    "notes": "価格根拠: ウエダ金物 税込3,593,700円。別販売店では税込4,332,706円の掲載あり"
+  },
+  {
+    "id": "p211",
+    "maker_slug": "fuji-kiko",
+    "model_slug": "hw200",
+    "name": "HW200",
+    "maker_name": "株式会社富士機工",
+    "method": "ハンドヘルド",
+    "wavelength": "1080（公式仕様表の表記）",
+    "output_w": 1000,
+    "portability": "本体38kg、トーチ600g",
+    "official_url": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
+    "source_url": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
+    "source": "富士機工公式仕様表",
+    "tags": {
+      "use": [
+        "薄板接合"
+      ],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ"
+      ],
+      "thickness": [
+        "0.5〜3mm"
+      ],
+      "environment": [],
+      "price": [],
+      "skill": []
+    },
+    "comment": "本体38kgの軽量機で、鉄・ステンレス最大2.8mm、アルミ最大2mmまで対応します。",
+    "suitable_for": [
+      "鉄・ステンレス最大2.8mm",
+      "アルミ最大2mm"
+    ],
+    "not_suitable_for": [
+      "上記の最大対応板厚を超える施工"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/placeholder.svg",
+    "is_published": true,
+    "notes": "出力はレーザーピーク出力相当。波長の単位は公式表記のまま。環境・価格・難易度は非公開"
+  },
+  {
+    "id": "p212",
+    "maker_slug": "fuji-kiko",
+    "model_slug": "hw350",
+    "name": "HW350",
+    "maker_name": "株式会社富士機工",
+    "method": "ハンドヘルド",
+    "wavelength": "1080（公式仕様表の表記）",
+    "output_w": 1500,
+    "portability": "本体39kg、トーチ600g",
+    "official_url": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
+    "source_url": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
+    "source": "富士機工公式仕様表",
+    "tags": {
+      "use": [
+        "薄板接合"
+      ],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ"
+      ],
+      "thickness": [
+        "0.5〜3mm"
+      ],
+      "environment": [],
+      "price": [],
+      "skill": []
+    },
+    "comment": "本体39kgの軽量機で、鉄・ステンレス最大3mm、アルミ最大2.5mmまで対応します。",
+    "suitable_for": [
+      "鉄・ステンレス最大3mm",
+      "アルミ最大2.5mm"
+    ],
+    "not_suitable_for": [
+      "上記の最大対応板厚を超える施工"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/placeholder.svg",
+    "is_published": true,
+    "notes": "出力はレーザーピーク出力相当。波長の単位は公式表記のまま。環境・価格・難易度は非公開"
+  },
+  {
+    "id": "p213",
+    "maker_slug": "fuji-kiko",
+    "model_slug": "hw450",
+    "name": "HW450",
+    "maker_name": "株式会社富士機工",
+    "method": "ハンドヘルド",
+    "wavelength": "1080（公式仕様表の表記）",
+    "output_w": 2000,
+    "portability": "本体43kg、トーチ600g",
+    "official_url": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
+    "source_url": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
+    "source": "富士機工公式仕様表",
+    "tags": {
+      "use": [
+        "薄板接合",
+        "厚物"
+      ],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ"
+      ],
+      "thickness": [
+        "0.5〜3mm",
+        "3〜6mm"
+      ],
+      "environment": [],
+      "price": [],
+      "skill": []
+    },
+    "comment": "本体43kgの軽量機で、鉄・ステンレス最大5mm、アルミ最大4mmまで対応します。",
+    "suitable_for": [
+      "鉄・ステンレス最大5mm",
+      "アルミ最大4mm"
+    ],
+    "not_suitable_for": [
+      "上記の最大対応板厚を超える施工"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/placeholder.svg",
+    "is_published": true,
+    "notes": "出力はレーザーピーク出力相当。波長の単位は公式表記のまま。環境・価格・難易度は非公開"
+  },
+  {
+    "id": "p214",
+    "maker_slug": "fuji-kiko",
+    "model_slug": "hw550",
+    "name": "HW550",
+    "maker_name": "株式会社富士機工",
+    "method": "ハンドヘルド",
+    "wavelength": "1080（公式仕様表の表記）",
+    "output_w": 2500,
+    "portability": "本体45kg、トーチ600g",
+    "official_url": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
+    "source_url": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
+    "source": "富士機工公式仕様表",
+    "tags": {
+      "use": [
+        "薄板接合",
+        "厚物"
+      ],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ"
+      ],
+      "thickness": [
+        "0.5〜3mm",
+        "3〜6mm"
+      ],
+      "environment": [],
+      "price": [],
+      "skill": []
+    },
+    "comment": "本体45kgの軽量機で、鉄・ステンレス最大6mm、アルミ最大5mmまで対応します。",
+    "suitable_for": [
+      "鉄・ステンレス最大6mm",
+      "アルミ最大5mm"
+    ],
+    "not_suitable_for": [
+      "上記の最大対応板厚を超える施工"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/placeholder.svg",
+    "is_published": true,
+    "notes": "出力はレーザーピーク出力相当。波長の単位は公式表記のまま。環境・価格・難易度は非公開"
+  },
+  {
+    "id": "p215",
+    "maker_slug": "hsg",
+    "model_slug": "fmw-v2",
+    "name": "FMW-V2.0",
+    "maker_name": "HSG LASER（国内代理店：株式会社ヨコハマシステムズ）",
+    "method": "ハンドヘルド",
+    "wavelength": "1080nm ±5nm（シングルモード）",
+    "output_w": 3000,
+    "portability": "1,000〜2,000W＝150kg、3,000W＝250kg。チラー内蔵・キャスター構成",
+    "official_url": "https://www.hsglaser.com/product/laser-welding-machine-fmw.html",
+    "source_url": "https://yokohamalaser.com/products/hsg-welding-cleaner/fmw-v2/",
+    "source": "国内代理店ヨコハマシステムズ｜FMW-V2.0",
+    "tags": {
+      "use": [
+        "薄板接合",
+        "厚物"
+      ],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ"
+      ],
+      "thickness": [
+        "0.5〜3mm",
+        "3〜6mm"
+      ],
+      "environment": [],
+      "price": [],
+      "skill": [
+        "未経験可"
+      ]
+    },
+    "comment": "1,000〜3,000Wから出力を選べ、鉄・ステンレス0.5〜5mmの突合せ・角・重ね・肉盛りに対応。「TIGのような経験を問わない」と明記されています。",
+    "suitable_for": [
+      "ステンレス・アルミ薄板",
+      "鉄・ステンレス 0.5〜5mm",
+      "突合せ・内角・外角・重ね・肉盛り",
+      "クリーニング・簡易切断"
+    ],
+    "not_suitable_for": [
+      "鉄・ステンレス5mm超（品質推奨厚 0.5〜5mm の範囲外）"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/placeholder.svg",
+    "is_published": true,
+    "notes": "出力は 1,000／1,500／2,000／3,000W。価格は非公開"
+  },
+  {
+    "id": "p216",
+    "maker_slug": "ydl",
+    "model_slug": "d50p",
+    "name": "YDL D50P",
+    "maker_name": "YDL（国内販売：株式会社ヨコハマシステムズ）",
+    "method": "ハンドヘルド",
+    "wavelength": null,
+    "output_w": 1200,
+    "portability": "本体41kg未満、空冷。トーチ480g",
+    "official_url": null,
+    "source_url": "https://yokohamalaser.com/products/ydl-welding-cleaner/d/",
+    "source": "ヨコハマシステムズ｜YDL Dシリーズ",
+    "tags": {
+      "use": [],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ",
+        "銅"
+      ],
+      "thickness": [],
+      "environment": [],
+      "price": [],
+      "skill": [
+        "未経験可"
+      ]
+    },
+    "comment": "1人で持ち運べる空冷の1200W機。公表の溶け込み深さはSUS・炭素鋼5mm、アルミ3.5mm、純銅1mmです。",
+    "suitable_for": [
+      "移動を伴う溶接、スポット・シール・パルス溶接",
+      "溶け込み深さ SUS・炭素鋼5mm／アルミ3.5mm／純銅1mm",
+      "簡易切断・錆取り・クリーニング"
+    ],
+    "not_suitable_for": [],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/placeholder.svg",
+    "is_published": true,
+    "notes": "公表の数値は対応板厚ではなく溶け込み深さのため板厚タグには転用していない。メーカー公式ページは不明（国内販売元ページを掲載）。用途・板厚・環境・価格は非公開"
+  },
+  {
+    "id": "p217",
+    "maker_slug": "ydl",
+    "model_slug": "d60p",
+    "name": "YDL D60P",
+    "maker_name": "YDL（国内販売：株式会社ヨコハマシステムズ）",
+    "method": "ハンドヘルド",
+    "wavelength": null,
+    "output_w": 1500,
+    "portability": "本体42kg未満、空冷。トーチ480g",
+    "official_url": null,
+    "source_url": "https://yokohamalaser.com/products/ydl-welding-cleaner/d/",
+    "source": "ヨコハマシステムズ｜YDL Dシリーズ",
+    "tags": {
+      "use": [],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ",
+        "銅"
+      ],
+      "thickness": [],
+      "environment": [],
+      "price": [],
+      "skill": [
+        "未経験可"
+      ]
+    },
+    "comment": "1人で持ち運べる空冷の1500W機。公表の溶け込み深さはSUS・炭素鋼6mm、アルミ4.5mm、純銅1.5mmです。",
+    "suitable_for": [
+      "可搬性を求める溶接",
+      "溶け込み深さ SUS・炭素鋼6mm／アルミ4.5mm／純銅1.5mm",
+      "簡易切断・錆取り・クリーニング"
+    ],
+    "not_suitable_for": [],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/placeholder.svg",
+    "is_published": true,
+    "notes": "公表の数値は対応板厚ではなく溶け込み深さのため板厚タグには転用していない。メーカー公式ページは不明（国内販売元ページを掲載）。用途・板厚・環境・価格は非公開"
+  },
+  {
+    "id": "p218",
+    "maker_slug": "ydl",
+    "model_slug": "d70p",
+    "name": "YDL D70P",
+    "maker_name": "YDL（国内販売：株式会社ヨコハマシステムズ）",
+    "method": "ハンドヘルド",
+    "wavelength": null,
+    "output_w": 1800,
+    "portability": "本体43kg未満、空冷。トーチ480g",
+    "official_url": null,
+    "source_url": "https://yokohamalaser.com/products/ydl-welding-cleaner/d/",
+    "source": "ヨコハマシステムズ｜YDL Dシリーズ",
+    "tags": {
+      "use": [],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ",
+        "銅"
+      ],
+      "thickness": [],
+      "environment": [],
+      "price": [],
+      "skill": [
+        "未経験可"
+      ]
+    },
+    "comment": "1人で持ち運べる空冷の1800W機。公表の溶け込み深さはSUS・炭素鋼7mm、アルミ5.5mm、純銅2.5mmです。",
+    "suitable_for": [
+      "Dシリーズ中で深い溶け込みを必要とする施工。Turboモード搭載",
+      "溶け込み深さ SUS・炭素鋼7mm／アルミ5.5mm／純銅2.5mm",
+      "簡易切断・錆取り・クリーニング"
+    ],
+    "not_suitable_for": [],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/placeholder.svg",
+    "is_published": true,
+    "notes": "公表の数値は対応板厚ではなく溶け込み深さのため板厚タグには転用していない。メーカー公式ページは不明（国内販売元ページを掲載）。用途・板厚・環境・価格は非公開"
+  },
+  {
+    "id": "p219",
+    "maker_slug": "smartdiys",
+    "model_slug": "slw700",
+    "name": "SLW700",
+    "maker_name": "smartDIYs",
+    "method": "ハンドヘルド",
+    "wavelength": "1080nm",
+    "output_w": 700,
+    "portability": "約32kg、空冷。「持ち運びが簡単」と公式記載",
+    "official_url": "https://www.smartdiys.com/slw700/",
+    "source_url": "https://www.smartdiys.com/laser-welding/",
+    "source": "smartDIYs レーザー溶接機全ラインナップ",
+    "tags": {
+      "use": [
+        "薄板接合"
+      ],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ",
+        "銅"
+      ],
+      "thickness": [
+        "0.5mm未満",
+        "0.5〜3mm"
+      ],
+      "environment": [],
+      "price": [
+        "100〜200万円"
+      ],
+      "skill": [
+        "未経験可"
+      ]
+    },
+    "comment": "約32kgで持ち運べる700W機。0.5〜1.5mm級の薄板が主体で、自動車板金など大きな対象物へ本体を持って行く使い方に向きます。",
+    "suitable_for": [
+      "鉄・SUS・アルミの約0.5〜1.5mm級薄板",
+      "アルミ0.3mmの公式加工例",
+      "大型対象物へ本体を移動させる用途"
+    ],
+    "not_suitable_for": [
+      "鉄・ステンレス・アルミ1.5mm超（公式の溶接可能板厚外）"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/placeholder.svg",
+    "is_published": true,
+    "notes": "価格: 税込1,199,000円（税別109万円）"
+  },
+  {
+    "id": "p220",
+    "maker_slug": "smartdiys",
+    "model_slug": "slw1500a",
+    "name": "SLW1500A",
+    "maker_name": "smartDIYs",
+    "method": "ハンドヘルド",
+    "wavelength": "1080nm",
+    "output_w": 1500,
+    "portability": "約60kg、空冷。移動しながらの溶接作業に対応",
+    "official_url": "https://www.smartdiys.com/laser-welding/",
+    "source_url": "https://www.smartdiys.com/support/qa-product/slw1500/slw1500-2000/",
+    "source": "smartDIYs SLWシリーズ比較",
+    "tags": {
+      "use": [
+        "薄板接合",
+        "異材接合"
+      ],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ",
+        "銅"
+      ],
+      "thickness": [
+        "0.5〜3mm"
+      ],
+      "environment": [],
+      "price": [
+        "100〜200万円"
+      ],
+      "skill": []
+    },
+    "comment": "約0.5〜3mmの薄板板金と異材溶接をカバーする1,500W機で、200万円以内に収まる価格が公開されています。",
+    "suitable_for": [
+      "薄板板金（鉄・ステンレス・アルミ 約0.5〜3mm）",
+      "異材溶接",
+      "鉄2mm肉盛り・SUS1mm・アルミ1mmの加工例"
+    ],
+    "not_suitable_for": [
+      "鉄・ステンレス・アルミ3mm超（公式対応板厚外）"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/placeholder.svg",
+    "is_published": true,
+    "notes": "価格: 税込1,815,000円（税別165万円）。難易度は非公開"
+  },
+  {
+    "id": "p221",
+    "maker_slug": "smartdiys",
+    "model_slug": "slw2000",
+    "name": "SLW2000",
+    "maker_name": "smartDIYs",
+    "method": "ハンドヘルド",
+    "wavelength": "1080nm",
+    "output_w": 2000,
+    "portability": "約100kg、水冷",
+    "official_url": "https://www.smartdiys.com/laser-welding/",
+    "source_url": "https://www.smartdiys.com/support/qa-product/slw1500/slw1500-2000/",
+    "source": "smartDIYs SLWシリーズ比較",
+    "tags": {
+      "use": [
+        "薄板接合",
+        "厚物",
+        "異材接合"
+      ],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ",
+        "銅"
+      ],
+      "thickness": [
+        "0.5〜3mm",
+        "3〜6mm"
+      ],
+      "environment": [],
+      "price": [
+        "200〜400万円"
+      ],
+      "skill": []
+    },
+    "comment": "薄板から約4.5mmの厚板まで扱える2,000W機。切断・錆取り・焼け取りも搭載し、価格が公開されています。",
+    "suitable_for": [
+      "薄板〜厚板（鉄・SUS・アルミ 約0.5〜4.5mm）",
+      "異材溶接",
+      "デュアルワイヤ使用時に鉄5mmの施工例",
+      "切断・錆取り・溶接焼け取り"
+    ],
+    "not_suitable_for": [],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/placeholder.svg",
+    "is_published": true,
+    "notes": "価格: 税込2,475,000円（税別225万円）。難易度は非公開"
   }
 ]

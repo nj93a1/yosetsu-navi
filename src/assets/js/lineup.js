@@ -7,9 +7,9 @@ const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "
 // 可搬性からカテゴリを決める（商品データを変えずに絞り込めるようにする）
 export const CATEGORIES = [
   { id: "all", label: "すべて", test: () => true },
-  { id: "handheld", label: "ハンドヘルド", test: (p) => ["ハンドヘルド", "台車型"].includes(p.portability) },
-  { id: "fixed", label: "据置・専用機", test: (p) => p.portability === "据置" },
-  { id: "line", label: "ライン組込", test: (p) => p.portability === "ライン組込" },
+  { id: "handheld", label: "ハンドヘルド", test: (p) => /ハンド/.test(p.method) || ["ハンドヘルド", "台車型"].includes(p.portability) },
+  { id: "fixed", label: "据置・専用機", test: (p) => /据置|真空|チャンバー/.test(p.method) || p.portability === "据置" },
+  { id: "line", label: "ライン組込", test: (p) => /ロボット|ライン|自動化/.test(p.method) || p.tags.environment.includes("ライン組込") || p.portability === "ライン組込" },
 ];
 const MATERIALS = ["鉄", "ステンレス", "アルミ", "銅", "チタン", "マグネシウム"];
 const PRICES = ["100万円未満", "100〜200万円", "200〜400万円", "400〜600万円", "600万円以上"];
@@ -19,7 +19,7 @@ export function card(p) {
     <img class="pcard__img" src="${esc(p.image || "/assets/images/products/placeholder.svg")}" alt="" width="320" height="240" loading="lazy">
     <p class="pcard__name">${esc(p.name)}</p>
     <p class="pcard__maker">${esc(p.maker_name)}</p>
-    <p class="pcard__price">価格帯：<b>${esc(p.tags.price[0])}</b></p>
+    <p class="pcard__price">価格帯：<b>${esc((p.tags.price[0] || "非公開"))}</b></p>
     ${p.handled_by_operator ? `<span class="badge">運営元で取り扱い</span>` : ""}
   </a></li>`;
 }
@@ -61,7 +61,7 @@ export async function mountLineup(root, opts = {}) {
     let list = products.filter((p) => cat.test(p));
     if (q) list = list.filter((p) => `${p.name} ${p.maker_name} ${p.method}`.toLowerCase().includes(q));
     if (state.materials.size) list = list.filter((p) => [...state.materials].every((m) => p.tags.material.includes(m)));
-    if (state.prices.size) list = list.filter((p) => state.prices.has(p.tags.price[0]));
+    if (state.prices.size) list = list.filter((p) => state.prices.has((p.tags.price[0] || "非公開")));
     if (state.use) list = list.filter((p) => p.tags.use.includes(state.use));
     if (opts.limit) list = list.slice(0, opts.limit);
     count.textContent = list.length ? `${list.length} 機種` : "";

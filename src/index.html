@@ -124,7 +124,7 @@
     if (!list.length) return "";
     return `<li><a href="/lineup/?use=${encodeURIComponent(tag)}"><img class="rows__img" src="${esc(list[0].image)}" alt="" width="96" height="72" loading="lazy"><span><p class="rows__title">${esc(tag)}</p><p class="rows__meta">${list.length}機種・${esc(sub)}</p></span>${chev}</a></li>`;
   }).join("");
-  document.getElementById("newCards").innerHTML = products.slice(0, 6).map((p) => `<li class="card"><a href="/products/${esc(productSlug(p))}/"><img class="card__img" src="${esc(p.image)}" alt="" width="240" height="240" loading="lazy"><p class="card__cat">${esc(p.method)}</p><p class="card__name">${esc(p.name)}</p><p class="card__maker">${esc(p.maker_name)}</p><p class="card__price">価格帯 <b>${esc(p.tags.price[0])}</b></p>${p.handled_by_operator ? '<span class="chip">運営元で取り扱い</span>' : ""}</a></li>`).join("");
+  document.getElementById("newCards").innerHTML = products.slice(0, 6).map((p) => `<li class="card"><a href="/products/${esc(productSlug(p))}/"><img class="card__img" src="${esc(p.image)}" alt="" width="240" height="240" loading="lazy"><p class="card__cat">${esc(p.method)}</p><p class="card__name">${esc(p.name)}</p><p class="card__maker">${esc(p.maker_name)}</p><p class="card__price">価格帯 <b>${esc((p.tags.price[0] || "非公開"))}</b></p>${p.handled_by_operator ? '<span class="chip">運営元で取り扱い</span>' : ""}</a></li>`).join("");
 </script>
 </body>
 </html>

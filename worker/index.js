@@ -65,6 +65,7 @@ async function safeJson(request) {
   try { return await request.json(); } catch { return null; }
 }
 
+function hostOf(u) { try { return new URL(u).host; } catch { return u; } }
 function rowToProduct(r) {
   return { ...r, suitable_for: JSON.parse(r.suitable_for || "[]"), not_suitable_for: JSON.parse(r.not_suitable_for || "[]"), handled_by_operator: !!r.handled_by_operator };
 }
@@ -85,8 +86,8 @@ async function productPage(env, slug) {
   const li = (arr) => arr.map((x) => `<li>${esc(x)}</li>`).join("");
   const spec = [
     ["方式", p.method], ["波長", p.wavelength || "—"], ["出力", p.output_w ? `${p.output_w} W` : "—"], ["可搬性", p.portability],
-    ["対応素材", (tags.material || []).join("・")], ["対応板厚", (tags.thickness || []).join("・")],
-    ["使用環境", (tags.environment || []).join("・")], ["価格帯", p.price_band], ["習得難易度", p.skill_level],
+    ["対応素材", (tags.material || []).join("・") || "非公開"], ["対応板厚", (tags.thickness || []).join("・") || "非公開"],
+    ["使用環境", (tags.environment || []).join("・") || "非公開"], ["価格帯", p.price_band || "非公開"], ["習得難易度", p.skill_level || "非公開"],
   ].map(([k, v]) => `<div class="spec__row"><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join("");
 
   const body = `
@@ -99,16 +100,22 @@ async function productPage(env, slug) {
     ${p.handled_by_operator ? `<span class="badge">運営元で取り扱い</span>` : ""}
     <h1>${esc(p.name)}</h1>
     <p class="product__maker">${esc(p.maker_name)}</p>
-    <div class="product__band"><span>価格帯：<b>${esc(p.price_band)}</b></span><span>習得難易度：<b>${esc(p.skill_level)}</b></span><span>${esc(p.portability)}</span></div>
+    <div class="product__band"><span>価格帯：<b>${esc(p.price_band || "非公開")}</b></span><span>習得難易度：<b>${esc(p.skill_level || "非公開")}</b></span><span>${esc(p.portability)}</span></div>
   </div>
-  <img class="product__image" src="${esc(p.image || "/assets/images/products/placeholder.svg")}" alt="" width="640" height="400"><span class="image-note image-label">設備イメージ（AI生成）</span>
+  <img class="product__image" src="${esc(p.image || "/assets/images/products/placeholder.svg")}" alt="" width="640" height="400">
   <section><h2>運営者の選定コメント</h2><p class="comment">${esc(p.comment)}</p></section>
   <section class="subsec" id="spec"><h2>スペック</h2><dl class="spec">${spec}</dl></section>
   <section class="subsec" id="fit"><h2>向いている用途・向いていない用途</h2>
     <div class="fit"><div class="ok"><h3>向いている</h3><ul>${li(p.suitable_for)}</ul></div><div class="ng"><h3>向いていない</h3><ul>${li(p.not_suitable_for)}</ul></div></div></section>
   <section class="subsec" id="alts"><h2>同じ価格帯の代替候補</h2>
     <ul class="pnav">${alts.map((a) => `<li><a href="/products/${esc(a.slug)}/"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-list"></use></svg><span class="pnav__label">${esc(a.name)}<span class="pnav__sub">${esc(a.maker_name)}${a.handled_by_operator ? "｜運営元で取り扱い" : ""}</span></span><svg class="ico ico--chev" aria-hidden="true"><use href="/assets/icons.svg#i-chevron"></use></svg></a></li>`).join("") || "<li class=\"empty\">同じ価格帯の候補はありません</li>"}</ul></section>
-  <p class="src">情報源：${esc(p.source || "—")}</p>
+  <section class="subsec" id="links"><h2>メーカー公式・情報源</h2>
+    <ul class="pnav">
+      ${p.official_url ? `<li><a href="${esc(p.official_url)}" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-lineup"></use></svg><span class="pnav__label">メーカー公式の商品ページ<span class="pnav__sub">${esc(hostOf(p.official_url))}（別ウィンドウで開く）</span></span><svg class="ico ico--chev" aria-hidden="true"><use href="/assets/icons.svg#i-chevron"></use></svg></a></li>` : `<li class="empty">メーカー公式の商品ページは未確認です</li>`}
+      ${p.source_url && p.source_url !== p.official_url ? `<li><a href="${esc(p.source_url)}" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-guide"></use></svg><span class="pnav__label">情報源：${esc(p.source || "資料")}<span class="pnav__sub">${esc(hostOf(p.source_url))}（別ウィンドウで開く）</span></span><svg class="ico ico--chev" aria-hidden="true"><use href="/assets/icons.svg#i-chevron"></use></svg></a></li>` : ""}
+    </ul>
+    <p class="src">掲載内容は${esc(p.source || "公開情報")}に基づきます。価格帯や対応板厚など、メーカーが公開していない項目は「非公開」としています。</p>
+  </section>
   <div class="cta">
     <a class="btn btn--primary" href="/diagnosis/"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-diag"></use></svg>診断でほかの候補も見る</a>
     <a class="btn btn--accent" href="/contact/?product=${esc(p.slug)}"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-contact"></use></svg>この機種について相談する</a>

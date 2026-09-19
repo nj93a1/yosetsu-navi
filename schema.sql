@@ -18,13 +18,15 @@ CREATE TABLE IF NOT EXISTS products (
   output_w        INTEGER,                        -- 出力（W）
   portability     TEXT NOT NULL,                  -- 可搬性（ハンドヘルド / 台車型 / 据置 / ライン組込）
   price_band      TEXT,                           -- 価格帯タグ（実売価格は掲載しない。未確定なら NULL・非公開）
-  skill_level     TEXT NOT NULL,                  -- 習得難易度タグ
+  skill_level     TEXT,                           -- 習得難易度タグ（非公開なら NULL）
   comment         TEXT NOT NULL,                  -- 運営者による選定コメント（必須・1文以上）
   suitable_for    TEXT NOT NULL DEFAULT '[]',     -- 向いている用途（JSON配列）
   not_suitable_for TEXT NOT NULL DEFAULT '[]',    -- 向いていない用途（JSON配列）
   handled_by_operator INTEGER NOT NULL DEFAULT 0, -- 自社取り扱い区分（1=運営元で取り扱い）
   image           TEXT,                           -- 画像パス
-  source          TEXT,                           -- 情報源（カタログURL等）
+  source          TEXT,                           -- 情報源の名称（カタログ名等）
+  official_url    TEXT,                           -- メーカー公式の商品ページURL
+  source_url      TEXT,                           -- 情報源URL（カタログ・仕様表・販売店）
   is_published    INTEGER NOT NULL DEFAULT 1,
   created_at      TEXT NOT NULL DEFAULT (datetime('now')),
   updated_at      TEXT NOT NULL DEFAULT (datetime('now'))

@@ -188,7 +188,7 @@ function card(x) {
       <div class="rcard__head"><span class="rcard__slot ${slotClass}">${x.slot}位 ${esc(x.slotLabel)}</span>${p.handled_by_operator ? `<span class="badge" style="margin:0">運営元で取り扱い</span>` : ""}</div>
       <div class="rcard__body">
         <img class="rcard__img" src="${esc(p.image || "/assets/images/products/placeholder.svg")}" alt="" width="112" height="84" loading="lazy">
-        <div><p class="rcard__name">${esc(p.name)}</p><p class="rcard__meta">${esc(p.maker_name)}<br>価格帯：${esc(p.tags.price[0])}｜${esc(p.tags.skill[0])}</p></div>
+        <div><p class="rcard__name">${esc(p.name)}</p><p class="rcard__meta">${esc(p.maker_name)}<br>価格帯：${esc((p.tags.price[0] || "非公開"))}｜${esc((p.tags.skill[0] || "非公開"))}</p></div>
       </div>
       <p class="rcard__reason">${esc(x.reason)}</p>
       <div class="rcard__actions">
@@ -207,7 +207,7 @@ function renderCompare() {
   const rows = [
     ["方式", (p) => p.method], ["出力", (p) => (p.output_w ? `${p.output_w} W` : "—")], ["波長", (p) => p.wavelength || "—"],
     ["可搬性", (p) => p.portability], ["対応素材", (p) => p.tags.material.join("・")], ["対応板厚", (p) => p.tags.thickness.join("・")],
-    ["使用環境", (p) => p.tags.environment.join("・")], ["価格帯", (p) => p.tags.price[0]], ["習得難易度", (p) => p.tags.skill[0]],
+    ["使用環境", (p) => p.tags.environment.join("・")], ["価格帯", (p) => (p.tags.price[0] || "非公開")], ["習得難易度", (p) => (p.tags.skill[0] || "非公開")],
     ["向いている用途", (p) => p.suitable_for.join("、")], ["向いていない用途", (p) => p.not_suitable_for.join("、")],
   ];
   h(`

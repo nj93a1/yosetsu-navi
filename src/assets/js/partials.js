@@ -50,7 +50,7 @@ export function footer() {
       <li><a href="/contact/">相談・問い合わせ${icon("chevron")}</a></li>
       <li><a href="/about/">運営者情報・評価基準${icon("chevron")}</a></li>
     </ul>
-    <p class="footer__op">掲載機種はサンプルデータです。現場・設備の写真調画像はAI生成のイメージで、実機や導入事例を撮影したものではありません。</p>
+    <p class="footer__op">掲載内容はメーカー公開情報に基づきます。現場の写真調画像はAI生成のイメージで、実機や導入事例を撮影したものではありません。</p>
     <p class="footer__copy">© 2026 レーザー溶接機 比較・選定</p>
   </div>
 </footer>`;
