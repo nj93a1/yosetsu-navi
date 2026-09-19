@@ -34,7 +34,7 @@
   </form>
 </div>
 
-<section class="band band--gray" aria-label="条件から探す">
+<section class="band band--blue" aria-label="条件から探す">
   <div class="wrap">
     <div class="sec-head sec-head--ico"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-material"></use></svg><span class="sec-head__eyebrow">機種の種類と、溶接する素材・条件</span><h2>条件から探す</h2></div>
     <p class="pictonav__group">機種の種類</p>
@@ -107,13 +107,14 @@
   const chev = '<svg class="ico ico--chev" aria-hidden="true"><use href="/assets/icons.svg#i-chevron"></use></svg>';
   const products = (await fetch("/data/products.json").then((r) => r.json())).filter((p) => p.is_published !== false);
   // 用途別の行（用途タグごとに件数を数え、代表画像は先頭機種のもの）
-  const uses = [["薄板接合", "薄板の接合に向く機種"], ["厚物", "6mm以上の厚物に向く機種"], ["異材接合", "アルミ・銅・チタンなど素材が混ざる現場"], ["補修", "現場での補修・出張作業"], ["自動化", "ロボット・ライン組込"]];
-  document.getElementById("useRows").innerHTML = uses.map(([tag, sub]) => {
+  const uses = [["薄板接合", "薄板の接合に向く機種", "thin"], ["厚物", "6mm以上の厚物に向く機種", "thick"], ["異材接合", "アルミ・銅・チタンなど素材が混ざる現場", "alcu"], ["補修", "現場での補修・出張作業", "work"], ["自動化", "ロボット・ライン組込", "robot"]];
+  const tile = (ic) => `<span class="ph ph--row"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-${ic}"></use></svg></span>`;
+  document.getElementById("useRows").innerHTML = uses.map(([tag, sub, ic]) => {
     const list = products.filter((p) => p.tags.use.includes(tag));
     if (!list.length) return "";
-    return `<li><a href="/lineup/?use=${encodeURIComponent(tag)}"><img class="rows__img" src="${esc(list[0].image)}" alt="" width="96" height="72" loading="lazy"><span><p class="rows__title">${esc(tag)}</p><p class="rows__meta">${list.length}機種・${esc(sub)}</p></span>${chev}</a></li>`;
+    return `<li><a href="/lineup/?use=${encodeURIComponent(tag)}">${tile(ic)}<span><p class="rows__title">${esc(tag)}</p><p class="rows__meta">${list.length}機種・${esc(sub)}</p></span>${chev}</a></li>`;
   }).join("");
-  document.getElementById("newCards").innerHTML = products.slice(0, 6).map((p) => `<li class="card"><a href="/products/${esc(productSlug(p))}/"><img class="card__img" src="${esc(p.image)}" alt="" width="240" height="240" loading="lazy"><p class="card__cat">${esc(p.method)}</p><p class="card__name">${esc(p.name)}</p><p class="card__maker">${esc(p.maker_name)}</p><p class="card__price">価格帯 <b>${esc((p.tags.price[0] || "非公開"))}</b></p>${p.handled_by_operator ? '<span class="chip">運営元で取り扱い</span>' : ""}</a></li>`).join("");
+  document.getElementById("newCards").innerHTML = products.slice(0, 6).map((p) => `<li class="card"><a href="/products/${esc(productSlug(p))}/">${p.image && !p.image.includes("placeholder") ? `<img class="card__img" src="${esc(p.image)}" alt="" width="240" height="240" loading="lazy">` : `<span class="ph ph--card"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-${/ロボット|ライン/.test(p.method) ? "robot" : /据置|真空/.test(p.method) ? "fixed" : "handheld"}"></use></svg><small>写真 準備中</small></span>`}<p class="card__cat">${esc(p.method.split("／")[0])}</p><p class="card__name">${esc(p.name)}</p><p class="card__maker">${esc(p.maker_name)}</p><p class="card__price">価格帯 <b>${esc((p.tags.price[0] || "非公開"))}</b></p>${p.handled_by_operator ? '<span class="chip">運営元で取り扱い</span>' : ""}</a></li>`).join("");
 </script>
 </body>
 </html>

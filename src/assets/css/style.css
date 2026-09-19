@@ -442,3 +442,46 @@ mark { background: linear-gradient(transparent 55%, var(--c-marker) 55%); color:
 
 /* 検索ピルはアクセントで目立たせない（CTAと役割を分ける） */
 .hero__search button { background: var(--c-text); }
+
+/* 写真が無い機種のタイル（プレースホルダー画像の代わり） */
+.ph { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; background: var(--c-main-light); color: var(--c-main-dark); border-radius: var(--radius-s); }
+.ph .ico { width: 44px; height: 44px; }
+.ph small { font-size: 12px; color: var(--c-sub); }
+.ph--row { width: 72px; height: 72px; flex: none; }
+.ph--row .ico { width: 36px; height: 36px; }
+.ph--card { width: 100%; aspect-ratio: 4 / 3; margin-bottom: 10px; }
+.card .ph--card { aspect-ratio: 1 / 1; margin-bottom: 8px; }
+.rows a { grid-template-columns: 72px 1fr 24px; }
+
+/* ===== 東急トップの型に寄せる調整（見出し・一覧ボタン・カード・余白） ===== */
+.section { padding: 56px 0 8px; }
+.sec-head--ico { display: block; }
+.sec-head--ico .ico { display: none; }
+.sec-head h2, .sec-head h1 { font-size: 30px; letter-spacing: .01em; }
+.sec-head__eyebrow { order: 2; margin: 6px 0 0; font-size: 15px; }
+.sec-head { display: flex; flex-direction: column; margin-bottom: 20px; }
+.sec-more { width: min(330px, 100%); margin: 24px auto 0; border: 1px solid var(--c-line-2); border-radius: 999px; background: #fff; font-size: 16px; min-height: 56px; }
+.sec-more .ico { display: none; }
+.rows a, .pictonav a, .card a, .pcard a, .news a, .side .rows a { border-radius: 14px; }
+.rows li, .news li { border: 1px solid var(--c-line); border-radius: 14px; background: #fff; margin-bottom: 12px; }
+.rows a, .news a { padding: 12px 16px; border-bottom: 0; }
+.news li { margin-bottom: 8px; }
+.news a { min-height: 64px; display: grid; grid-template-columns: 1fr 24px; align-items: center; gap: 12px; }
+.news a .ico:first-child { display: none; }
+.news b { font-size: 17px; }
+.card, .pcard { border: 1px solid var(--c-line); border-radius: 16px; background: #fff; padding: 12px; box-shadow: none; }
+.card__cat { display: none; }
+.pictonav a { border-radius: 16px; }
+.band--blue { background: var(--c-main-tint); }
+.pictonav__group { font-size: 15px; }
+.side h2 { font-size: 22px; }
+.side h2::before { display: none; }
+.side .rows li { margin-bottom: 8px; }
+.side .rows a { min-height: 64px; padding: 8px 14px; }
+.box--consult { border-radius: 16px; border: 1px solid var(--c-line); background: #fff; }
+.box--consult h2::before { display: none; }
+.box--consult h2 .ico { background: var(--c-main); }
+.btn--accent { box-shadow: none; border: 0; background: var(--c-accent); }
+.hero__cta .btn--accent { box-shadow: 0 2px 8px rgba(0,0,0,.25); }
+.footer { background: #fff; }
+.footer__links a { border-radius: 999px; min-height: 52px; padding: 6px 18px; font-size: 15px; }
