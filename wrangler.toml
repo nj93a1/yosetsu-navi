@@ -11,5 +11,4 @@ binding = "ASSETS"
 [[d1_databases]]
 binding = "DB"
 database_name = "yosetsu-navi"
-# 本番DB作成後に `npm run db:create` の出力IDへ差し替える
-database_id = "00000000-0000-0000-0000-000000000000"
+database_id = "2bb93c16-5b60-42f1-9f51-c540801d8695"
