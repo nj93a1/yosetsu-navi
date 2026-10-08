@@ -145,7 +145,7 @@
   const known = (p) => (p.output_w ? 1 : 0) + (p.tags.material.length ? 1 : 0);
   const byMaker = new Map();
   for (const p of products) if (!byMaker.has(p.maker_slug) || known(p) > known(byMaker.get(p.maker_slug))) byMaker.set(p.maker_slug, p);
-  const picks = [...byMaker.values()].sort((a, b) => known(b) - known(a)).slice(0, 9);
+  const picks = [...byMaker.values()].sort((a, b) => known(b) - known(a)).slice(0, 6);
   document.getElementById("newCards").innerHTML = picks.map(card).join("");
 </script>
 </body>

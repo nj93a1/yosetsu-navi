@@ -576,7 +576,7 @@ p, li, dd { text-wrap: pretty; }
 .pgrid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr; gap: 12px; }
 @media (min-width: 600px) { .pgrid { grid-template-columns: repeat(2, 1fr); gap: 20px; } }
 @media (min-width: 1000px) { .pgrid { grid-template-columns: repeat(3, 1fr); } .pgrid--home { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 1200px) { .pgrid--home { grid-template-columns: repeat(3, 1fr); } }
+/* トップの本文欄は狭いので 2列まで */
 .pgrid .pcard { background: var(--c-card, #F3F4F5); border: 0; border-radius: 16px; padding: 0; box-shadow: none; }
 .pgrid .pcard > a { display: grid; grid-template-columns: 112px 1fr; grid-template-areas: "photo text" "photo btn"; gap: 6px 14px; align-items: start; height: 100%; padding: 14px; text-decoration: none; color: var(--c-text); border-radius: 16px; }
 .pgrid .pcard__text { grid-area: text; min-width: 0; }

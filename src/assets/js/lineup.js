@@ -30,8 +30,11 @@ const tagsOf = (p, axis) => (axis.key === "price" ? [p.tags.price[0] || "非公�
 /** 検索用の正規化: 全角半角（NFKC）・大文字小文字・空白・ハイフンの違いを無視する */
 export const normalize = (s) => String(s ?? "").normalize("NFKC").toLowerCase().replace(/[\s\-‐‑‒–—―−_]/g, "");
 
+/** 公開機種を中立な順（出力の小さい順。出力が非公開の機種は最後、同じなら機種名順）で返す。
+ *  運営元の取り扱いの有無は並び順に使わない（運営者ページの説明どおり） */
 export async function loadProducts() {
-  return (await fetch("/data/products.json").then((r) => r.json())).filter((p) => p.is_published !== false);
+  const list = (await fetch("/data/products.json").then((r) => r.json())).filter((p) => p.is_published !== false);
+  return list.sort((a, b) => (a.output_w ?? Infinity) - (b.output_w ?? Infinity) || a.name.localeCompare(b.name, "ja"));
 }
 
 /** URL のパラメータから絞り込み条件を作る（値はカンマ区切りでも、同じ名前の繰り返しでもよい） */
