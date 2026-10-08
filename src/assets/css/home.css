@@ -38,10 +38,18 @@
 .home .card a { border: 0; box-shadow: none; padding: 0; background: none; }
 .home .card .ph--card { aspect-ratio: 4 / 3; }
 .home .card .ph-img--card { width: 100%; aspect-ratio: 4 / 3; object-fit: contain; background: #EEF1F3; border: 1px solid var(--c-line); border-radius: var(--radius-s); margin-bottom: 8px; }
+/* 機種名と価格帯は語（.nseg）の間でだけ折り返し、型番をハイフンの位置で切らない。1語が枠より長いときだけ語の中で折り返す。
+   390px 未満はカードの内側の余白を詰めて、長い型番（FLW-1500MTS など）が1行に収まる幅を確保する */
+.home .card .nseg { display: inline-block; max-width: 100%; }
+@media (max-width: 389px) { .home .cards > .card { padding: 8px; } }
 .home .card__maker { font-size: 16px; }
 .card__spec { margin: 4px 0 0; font-size: 16px; line-height: 1.5; }
 .card__spec > span { color: var(--c-sub); }
 .card__spec .nw { white-space: nowrap; }
+/* スマホ（2列）で枚数が奇数のときは、最後の1枚を片側に寄せず中央に置く */
+@media (max-width: 599px) {
+  .home .cards > .card:last-child:nth-child(odd) { grid-column: 1 / -1; justify-self: center; width: calc((100% - 12px) / 2); }
+}
 
 /* 右カラム: メニュー一覧は PC の主要ナビ。スマホはヘッダーのメニューとフッターがあるので出さず、相談の箱だけ残す */
 .home .side .rows__title { font-size: 18px; }

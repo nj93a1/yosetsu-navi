@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/assets/css/style.css?v=11">
-  <link rel="stylesheet" href="/assets/css/home.css?v=11">
+  <link rel="stylesheet" href="/assets/css/home.css?v=12">
   <title>レーザー溶接機 比較・選定｜5つの質問で現場に合う1台を</title>
   <meta name="description" content="レーザー溶接機を素材・板厚・使う人・場所・予算の5問で選定する中立的な比較サイト。ハンドヘルドから自動化ライン組込まで、他社製品を含めて比較できます。">
   <meta property="og:type" content="website">
@@ -51,7 +51,7 @@
     <p class="pictonav__group">用途</p>
     <ul class="pictonav" data-count>
       <li><a href="/lineup/?use=薄板接合"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-thin"></use></svg><span class="pictonav__label">薄板接合</span><span class="pictonav__count"></span></a></li>
-      <li><a href="/lineup/?thickness=3〜6mm"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-thick"></use></svg><span class="pictonav__label"><span class="wseg">厚物</span><span class="wseg">（3〜6mm）</span></span><span class="pictonav__count"></span></a></li>
+      <li><a href="/lineup/?thickness=3〜6mm"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-thick"></use></svg><span class="pictonav__label"><span class="wseg">中厚</span><span class="wseg">（3〜6mm）</span></span><span class="pictonav__count"></span></a></li>
       <li><a href="/lineup/?use=異材接合"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-mixed"></use></svg><span class="pictonav__label">異材接合</span><span class="pictonav__count"></span></a></li>
       <li><a href="/lineup/?use=自動化"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-robot"></use></svg><span class="pictonav__label"><span class="wseg">ロボット・</span><span class="wseg">自動化</span></span><span class="pictonav__count"></span></a></li>
     </ul>
@@ -92,7 +92,6 @@
     <ul class="rows">
       <li><a href="/diagnosis/"><svg class="ico ico--s" aria-hidden="true"><use href="/assets/icons.svg#i-diag"></use></svg><span><p class="rows__title">5つの質問で選ぶ</p><p class="rows__meta">約1分でおすすめ5台</p></span><svg class="ico ico--chev" aria-hidden="true"><use href="/assets/icons.svg#i-chevron"></use></svg></a></li>
       <li><a href="/lineup/"><svg class="ico ico--s" aria-hidden="true"><use href="/assets/icons.svg#i-lineup"></use></svg><span><p class="rows__title">機種一覧</p><p class="rows__meta">用途・素材で絞り込み</p></span><svg class="ico ico--chev" aria-hidden="true"><use href="/assets/icons.svg#i-chevron"></use></svg></a></li>
-      <li><a href="/diagnosis/#compare"><svg class="ico ico--s" aria-hidden="true"><use href="/assets/icons.svg#i-compare"></use></svg><span><p class="rows__title">2台を比較</p><p class="rows__meta">診断のあとで選べます</p></span><svg class="ico ico--chev" aria-hidden="true"><use href="/assets/icons.svg#i-chevron"></use></svg></a></li>
       <li><a href="/articles/"><svg class="ico ico--s" aria-hidden="true"><use href="/assets/icons.svg#i-guide"></use></svg><span><p class="rows__title">選び方ガイド</p><p class="rows__meta">方式の違い・選び方</p></span><svg class="ico ico--chev" aria-hidden="true"><use href="/assets/icons.svg#i-chevron"></use></svg></a></li>
     </ul>
     </div>
@@ -109,7 +108,7 @@
 <script type="module">
   import { mountChrome, productPhoto } from "/assets/js/partials.js?v=11";
   import { productSlug } from "/assets/js/scoring.js?v=11";
-  import { loadProducts, parseState, filterProducts, specLines } from "/assets/js/lineup.js?v=11";
+  import { loadProducts, parseState, filterProducts, specLines, nameHtml } from "/assets/js/lineup.js?v=12";
   mountChrome({ current: "/", withBottombar: false });
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const products = await loadProducts();
@@ -121,11 +120,13 @@
     a.querySelector(".pictonav__count").textContent = `${n}機種`;
   });
 
-  // 掲載機種: メーカーごとに1機種（公開されている項目が多い機種を優先）。同じメーカーは並ばない
-  const known = (p) => (p.output_w ? 1 : 0) + (p.tags.material.length ? 1 : 0) + (p.tags.price[0] ? 1 : 0);
+  // 掲載機種: メーカーごとに1機種なので同じメーカーは並ばない。出力・対応素材のうち公開されている項目が多い機種を選び、多い順に並べる
+  // （価格帯は数えない。数えると価格を公開しているメーカーだけが先に来るため）。同数はデータの順、全部非公開の機種は最後になる
+  const known = (p) => (p.output_w ? 1 : 0) + (p.tags.material.length ? 1 : 0);
   const byMaker = new Map();
   for (const p of products) if (!byMaker.has(p.maker_slug) || known(p) > known(byMaker.get(p.maker_slug))) byMaker.set(p.maker_slug, p);
-  document.getElementById("newCards").innerHTML = [...byMaker.values()].slice(0, 9).map((p) => `<li class="card"><a href="/products/${esc(productSlug(p))}/">${productPhoto(p, "card")}<p class="card__name">${esc(p.name)}</p><p class="card__maker">${esc(p.maker_name)}</p>${specLines(p, "card__spec", { price: "known" })}${p.handled_by_operator ? '<span class="chip">運営元で取り扱い</span>' : ""}</a></li>`).join("");
+  const picks = [...byMaker.values()].sort((a, b) => known(b) - known(a)).slice(0, 9);
+  document.getElementById("newCards").innerHTML = picks.map((p) => `<li class="card"><a href="/products/${esc(productSlug(p))}/">${productPhoto(p, "card")}<p class="card__name">${nameHtml(p.name)}</p><p class="card__maker">${esc(p.maker_name)}</p>${specLines(p, "card__spec", { price: "known" })}${p.handled_by_operator ? '<span class="chip">運営元で取り扱い</span>' : ""}</a></li>`).join("");
 </script>
 </body>
 </html>

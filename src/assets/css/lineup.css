@@ -9,6 +9,11 @@
 #lineup .tabs button { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0 8px; font-size: 18px; }
 .tabs__n { font-size: 16px; font-weight: 400; }
 #lineup .tabs button:disabled { background: #fff; border-style: dashed; color: var(--c-sub); cursor: not-allowed; }
+/* 条件なしで0件の種類のタブは出さない（li は display:contents なので hidden を明示する）。
+   出ているタブの数で列を決め、スマホで奇数のときは「すべて」を1段まるごと使う */
+#lineup .tabs li[hidden] { display: none; }
+@media (min-width: 600px) { #lineup .tabs { grid-template-columns: repeat(var(--tabs-n, 4), minmax(0, 1fr)); } }
+@media (max-width: 599px) { #lineup .tabs--odd [data-cat="all"] { grid-column: 1 / -1; } }
 
 /* 絞り込み欄（スマホは閉じた状態。押すと開く） */
 #lineup .filterbox { padding: 0; margin: 0 0 16px; }
@@ -43,6 +48,10 @@
 .grid .empty { grid-column: 1 / -1; padding: 32px 16px; background: #fff; border: 1px solid var(--c-line); border-radius: 16px; color: var(--c-text); }
 .grid .empty p { margin: 0; }
 .grid .empty .btn { width: auto; margin: 16px auto 0; padding: 8px 24px; }
+/* 機種名と価格帯は語（.nseg）の間でだけ折り返し、型番をハイフンの位置で切らない。1語が枠より長いときだけ語の中で折り返す。
+   390px 未満はカードの内側の余白を詰めて、長い型番（FLW-1500MTS など）が1行に収まる幅を確保する */
+.pcard .nseg { display: inline-block; max-width: 100%; }
+@media (max-width: 389px) { .grid > .pcard { padding: 8px; } }
 .pcard__maker { font-size: 16px; }
 .pcard__spec { margin: 4px 0 0; font-size: 16px; line-height: 1.5; }
 .pcard__spec > span { color: var(--c-sub); }
