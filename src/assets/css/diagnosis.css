@@ -1,0 +1,72 @@
+/* ==========================================================
+   診断ページ専用（style.css の後に読み込む）
+   共通の部品・色（:root の変数）だけを使い、診断画面の大きさ・配置を整える
+   ========================================================== */
+
+/* ---- 下部の操作バー（戻る・2台を比較）: PC でも出し、本文の幅にそろえる ---- */
+body.diag { padding-bottom: calc(77px + 16px + env(safe-area-inset-bottom)); }
+body.diag .bottombar { padding-bottom: env(safe-area-inset-bottom); }
+body.diag .bottombar .btn { min-height: var(--btn-h); font-size: 18px; }
+@media (min-width: 900px) {
+  body.diag .bottombar { display: block; }
+  body.diag .bottombar ul { max-width: var(--narrow); }
+}
+@media (max-width: 359px) {
+  body.diag .bottombar .btn { padding-inline: 6px; gap: 4px; }
+}
+/* 押せないときの比較ボタン: 薄くせず、白地に灰色の文字（4.7:1） */
+body.diag #compareBtn:disabled { opacity: 1; background: #fff; color: var(--c-sub); border-color: var(--c-line-2); }
+
+/* ---- 文字の大きさ（本文18px以上・見出し24px以上・補足16px以上） ---- */
+body.diag .steps li { font-size: 16px; }
+body.diag .question__no { font-size: 18px; }
+body.diag .question__help { font-size: 18px; margin-top: 0; }
+body.diag .pnav__sub { font-size: 16px; }
+body.diag .answers li { font-size: 16px; }
+body.diag .note { font-size: 16px; margin: 0 0 20px; }
+body.diag .subsec h2 { font-size: 24px; }
+
+/* ---- 設問の選択肢: 素材・板厚はトップと同じ青緑タイル＋ピクトグラム ---- */
+.pnav--choices .ph--row .ico { width: 36px; height: 36px; color: var(--c-main-dark); }
+
+/* ---- 結果カード ---- */
+body.diag .rcard__slot { font-size: 16px; }
+.rcard__maker { color: var(--c-sub); font-size: 16px; margin: 4px 0 0; }
+body.diag .rcard__meta { display: flex; flex-wrap: wrap; gap: 0 14px; color: var(--c-text); font-size: 18px; margin: 4px 0 0; }
+body.diag .rcard__meta > span > span { white-space: nowrap; } /* 「未経／験可」のような途中の改行を防ぎ、項目名と値の間だけで折り返す */
+body.diag .rcard__reason { font-size: 18px; }
+body.diag .rcard__actions .btn, body.diag .chk { font-size: 18px; }
+/* 比較に選んだ状態: 文字は本文色のまま（青緑の文字は薄い地で 4.5:1 に届かない） */
+body.diag .chk--on { color: var(--c-text); border-color: var(--c-main-dark); background: var(--c-main-light); }
+body.diag .chk input { accent-color: var(--c-main-dark); }
+.rcard__msg .notice { margin: 0 16px 16px; }
+@media (max-width: 599px) {
+  body.diag .rcard__body .ph--result { width: 88px; height: 66px; }
+}
+@media (max-width: 359px) {
+  body.diag .rcard__actions { grid-template-columns: 1fr; }
+}
+
+/* ---- 2台比較: 項目名を全幅の行に、値を左右2セルに置き、左右の高さをそろえる ---- */
+.cmp { background: #fff; border: 1px solid var(--c-line-2); border-radius: var(--radius); padding: 12px; }
+.cmp__heads, .cmp__row, .cmp__actions { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: 12px; }
+.cmp__head { min-width: 0; padding-bottom: 12px; }
+.cmp__name { font-size: 20px; font-weight: 700; line-height: 1.3; margin: 0; overflow-wrap: anywhere; }
+.cmp__maker { font-size: 16px; color: var(--c-sub); margin: 4px 0 0; overflow-wrap: anywhere; }
+.cmp__rows { margin: 0; }
+.cmp__row { border-top: 1px solid var(--c-line); padding: 10px 0; }
+.cmp__row dt { grid-column: 1 / -1; font-size: 16px; color: var(--c-sub); margin: 0 0 4px; }
+.cmp__row dd { margin: 0; min-width: 0; font-size: 18px; font-weight: 700; line-height: 1.5; overflow-wrap: anywhere; }
+.cmp__list { margin: 0; padding-left: 1.1em; }
+.cmp__list li { font-size: 18px; margin: 0 0 4px; }
+.cmp__none { color: var(--c-sub); font-weight: 400; }
+.cmp__actions { border-top: 1px solid var(--c-line); padding-top: 12px; }
+.cmp__actions .btn + .btn { margin-top: 0; }
+@media (max-width: 359px) {
+  .cmp { padding: 10px 8px; }
+  .cmp__heads, .cmp__row, .cmp__actions { column-gap: 8px; }
+  .cmp__actions .btn { padding-inline: 6px; }
+}
+@media (min-width: 600px) {
+  .cmp .ph--compare { aspect-ratio: auto; height: 160px; }
+}
