@@ -1,5 +1,5 @@
 // 選定診断の画面制御。スコアリングは scoring.js、設問・商品は /data/*.json。
-import { runDiagnosis, productSlug } from "./scoring.js?v=11";
+import { runDiagnosis, productSlug } from "./scoring.js?v=12";
 import { mountChrome, icon, productPhoto } from "./partials.js?v=11";
 
 const app = document.getElementById("app");
@@ -13,7 +13,8 @@ const state = {
   step: 0,             // 0..N-1 = 設問, N = 結果, N+1 = 比較
   answers: {}, result: null, logId: null,
   compare: [], viewed: new Set(), rechangeOnly: null,
-  presets: [],         // URL で事前に受け取った回答（専門用途メニューからの入口）
+  preset: {},          // URL で事前に受け取った回答 { 設問id: 選択肢id }（専門用途メニューからの入口）。自分で答え直したら消す
+  compareHint: false,  // メニューの「2台を比較」から来た・押したときの案内を出す
   startStep: 0,        // このページで最初に出した画面
   histIdx: 0,          // このページで積んだ履歴の位置（0 = 最初の画面）
   resultScroll: 0,     // 比較へ進む前の結果画面のスクロール位置
@@ -28,7 +29,7 @@ const firstUnanswered = () => state.config.questions.findIndex((q) => !(q.id in 
 async function init() {
   mountChrome({ current: "/diagnosis/", withBottombar: false });
   const [config, products] = await Promise.all([
-    fetch("/data/diagnosis.json?v=11").then((r) => r.json()),
+    fetch("/data/diagnosis.json?v=12").then((r) => r.json()),
     fetch("/data/products.json").then((r) => r.json()),
   ]);
   state.config = config;
@@ -40,8 +41,9 @@ async function init() {
     const o = v && q.options.find((x) => x.id === v);
     if (!o) continue;
     state.answers[q.id] = v;
-    state.presets.push(`${config.axes[q.axis].label}：${o.label}`);
+    state.preset[q.id] = v;
   }
+  state.compareHint = location.hash === "#compare";
   const first = firstUnanswered();
   state.step = first === -1 ? N() : first;
   if (state.step === N()) runAndLog();
@@ -50,6 +52,8 @@ async function init() {
   if ("scrollRestoration" in history) history.scrollRestoration = "manual";
   history.replaceState({ diag: true, step: state.step, rechange: null, idx: 0 }, "");
   window.addEventListener("popstate", onPopState);
+  // メニューの「2台を比較」（/diagnosis/#compare）は、このページでは画面の案内に置き換える（ページ内リンクの履歴を積まない）
+  document.addEventListener("click", onCompareLink);
   backBtn.addEventListener("click", goBack);
   render();
 }
@@ -79,7 +83,13 @@ function replaceWith(step) {
 }
 function onPopState(e) {
   const st = e.state;
-  if (!st || !st.diag) return; // メニューの「2台を比較」（#compare）などのページ内リンク。画面はそのまま
+  if (!st || !st.diag) {
+    // ページ内リンク（#compare など）で積まれた履歴。いまの画面の履歴に差し替え、#compare なら案内を出す
+    const compare = location.hash === "#compare";
+    history.replaceState({ diag: true, step: state.step, rechange: state.rechangeOnly, idx: state.histIdx }, "", location.pathname + location.search);
+    if (compare) showCompareGuide();
+    return;
+  }
   const from = state.step;
   state.histIdx = st.idx || 0;
   state.rechangeOnly = st.rechange || null;
@@ -94,6 +104,26 @@ function reachable(step) {
   if (step === N() + 1 && state.compare.length !== 2) return N();
   return Math.min(step, N() + 1);
 }
+/** メニューの「2台を比較」を押したとき */
+function onCompareLink(e) {
+  const a = e.target.closest && e.target.closest('a[href*="#compare"]');
+  if (!a || a.pathname !== location.pathname) return;
+  e.preventDefault();
+  const nav = document.getElementById("gnav");
+  if (nav && nav.dataset.open === "true") {
+    nav.dataset.open = "false";
+    document.getElementById("menuBtn")?.setAttribute("aria-expanded", "false");
+  }
+  showCompareGuide();
+}
+function showCompareGuide() {
+  if (state.step < N()) { state.compareHint = true; renderQuestion(state.step); return; }
+  if (state.step === N() + 1) { window.scrollTo({ top: 0 }); return; }
+  if (state.compare.length === 2) { patchLog({ compared_products: state.compare, exit_point: "compare" }); go(N() + 1); return; }
+  state.pendingNotice = compareGuideText();
+  renderResult(0);
+}
+const compareGuideText = () => `比較したい2台の「比較に追加」にチェックを入れて、画面下の「2台を比較」を押してください。いまは${state.compare.length}台を選んでいます。`;
 // 画面下の「戻る」はブラウザの戻ると同じ動きにする（このページで積んだ履歴がある間）
 function goBack() {
   if (state.histIdx > 0) { history.back(); return; }
@@ -105,6 +135,7 @@ function answer(qid, optId) {
     const before = state.result ? ids(state.result) : null;
     const changed = state.answers[qid] !== optId;
     state.answers[qid] = optId;
+    delete state.preset[qid];
     runAndLog();
     state.pendingNotice = changed && before === ids(state.result) ? unchangedNotice(qid) : null;
     if (state.histIdx > 0) { history.back(); return; } // 結果の画面の履歴へ戻る（popstate で描画）
@@ -112,6 +143,7 @@ function answer(qid, optId) {
     return;
   }
   state.answers[qid] = optId;
+  delete state.preset[qid]; // 自分で答えたら「選択済みです」の案内は出さない
   const next = state.step + 1;
   if (next === N()) runAndLog();
   go(next);
@@ -123,7 +155,9 @@ function unchangedNotice(qid) {
   const axis = state.config.axes[q.axis];
   const known = state.products.filter((p) => (p.tags?.[q.axis] || []).length > 0).length;
   let text = `「${axis.label}」を「${answerLabel(qid)}」に変えても、おすすめの5台は変わりませんでした。`;
-  if (state.config.unknownTags?.policy === "neutral" && known < state.products.length) {
+  // この条件を外した・近い条件に置き換えたときは、その案内が上に出るので、公開機種数の説明は重ねない
+  const handled = state.result.relaxedAxis === q.axis || state.result.preferredAxis === q.axis;
+  if (!handled && state.config.unknownTags?.policy === "neutral" && known < state.products.length) {
     text += `${axis.unknownLabel || axis.label}を公開している機種は、掲載${state.products.length}機種のうち${known}機種です。公開していない機種は、${axis.label}では絞り込んでいません。`;
   }
   return text;
@@ -147,12 +181,16 @@ function renderQuestion(i) {
   backBtn.innerHTML = `${icon("back")}${i === 0 ? "トップに戻る" : state.rechangeOnly ? "結果に戻る" : "前の質問に戻る"}`;
   setFoot([backBtn]);
   const current = state.answers[q.id];
-  const preset = state.presets.length && i === state.startStep && i > 0
-    ? `<div class="info"><p>${state.presets.map((x) => `「${esc(x)}」`).join("")}は選択済みです。変えるときは「前の質問に戻る」を押してください。</p></div>` : "";
+  // URL で受け取った回答のうち、いまも同じ回答のものだけを「選択済み」と案内する（答え直したものは出さない）
+  const presets = Object.entries(state.preset)
+    .filter(([qid, v]) => state.answers[qid] === v)
+    .map(([qid]) => `${state.config.axes[state.config.questions.find((x) => x.id === qid).axis].label}：${answerLabel(qid)}`);
+  const preset = presets.length && i === state.startStep && i > 0
+    ? `<div class="info"><p>${presets.map((x) => `「${esc(x)}」`).join("")}は選択済みです。変えるときは「前の質問に戻る」を押してください。</p></div>` : "";
   h(`
     <p class="question__no">質問 ${i + 1} / ${N()}</p>
     <h1>${esc(q.title)}</h1>
-    ${i === 0 && location.hash === "#compare" ? `<div class="info"><p>2台の比較は、診断結果のおすすめ5台から選べます。まず5つの質問に答えてください。</p></div>` : ""}
+    ${state.compareHint ? `<div class="info" role="status"><p>2台の比較は、診断結果のおすすめ5台から選べます。まず5つの質問に答えてください。</p></div>` : ""}
     ${preset}
     <p class="question__help">あてはまるものを1つ押してください。</p>
     <ul class="pnav pnav--choices">
@@ -171,8 +209,10 @@ function runAndLog() {
   state.result = runDiagnosis(state.config, state.products, state.answers);
   state.compare = [];
   state.logId = crypto.randomUUID();
+  const r = state.result;
   postJson("/api/logs", {
-    id: state.logId, answers: state.answers, relaxed_axis: state.result.relaxedAxis,
+    // 近い条件に置き換えたとき（厚物→3〜6mm）は「thickness:prefer」と記録する
+    id: state.logId, answers: state.answers, relaxed_axis: r.relaxedAxis || (r.preferredAxis ? `${r.preferredAxis}:prefer` : null),
     shown_products: state.result.results.map((r) => r.product.id), exit_point: "result",
   });
 }
@@ -188,11 +228,20 @@ function answerLabel(qid) {
   const o = q.options.find((x) => x.id === state.answers[qid]);
   return o ? o.label : "わからない";
 }
+/** 条件に合う機種の台数と、メーカー上限で表示しなかった機種の案内 */
+function countInfo(r) {
+  const capped = r.cappedOut ? `同じメーカーの機種は${state.config.slots.maxPerMaker}台までとしているため、条件に合う機種のうち${r.cappedOut}台は表示していません。` : "";
+  if (!r.relaxedLabel && r.matchedCount < 5) return `条件に合う機種は ${r.matchedCount} 台でした。${capped}残りは条件に近い順に表示しています。`;
+  if (capped) return `${capped}代わりに、条件に近い機種を表示しています。`;
+  return "";
+}
 function renderResult(scrollTop = 0) {
   const r = state.result;
   drawSteps(N());
-  const notice = state.pendingNotice;
+  // 「条件を1つ変える」の結果の案内。メニューの「2台を比較」から診断を始めた人には、最初の結果で比較の手順を出す
+  const notice = state.pendingNotice || (state.compareHint ? compareGuideText() : null);
   state.pendingNotice = null;
+  state.compareHint = false;
   const inquiryQs = new URLSearchParams({ log: state.logId || "", ...state.answers }).toString();
   h(`
     <h1>おすすめの5台</h1>
@@ -200,8 +249,9 @@ function renderResult(scrollTop = 0) {
       ${state.config.questions.map((q) => `<li>${esc(state.config.axes[q.axis].label)}：<b>${esc(answerLabel(q.id))}</b></li>`).join("")}
     </ul>
     ${notice ? `<div class="info" role="status"><p>${esc(notice)}</p></div>` : ""}
+    ${r.preferredNote ? `<div class="notice"><p>${esc(r.preferredNote)}</p></div>` : ""}
     ${r.relaxedLabel ? `<div class="notice"><p>条件にぴったり合う機種がなかったため、<strong>「${esc(r.relaxedLabel)}」の条件を外して</strong>候補を広げました。${esc(r.relaxedNote || "")}</p></div>` : ""}
-    ${!r.relaxedLabel && r.matchedCount < 5 ? `<div class="info"><p>条件に合う機種は ${r.matchedCount} 台でした。残りは条件に近い順に表示しています。</p></div>` : ""}
+    ${countInfo(r) ? `<div class="info"><p>${esc(countInfo(r))}</p></div>` : ""}
     ${r.results.some((x) => x.unknowns?.length) ? `<p class="note">メーカーが公開していない項目（価格帯・使用環境など）は「非公開」と表示し、不一致とはしていません。導入前にメーカーへご確認ください。</p>` : ""}
     <ul class="results">${r.results.map(card).join("")}</ul>
 

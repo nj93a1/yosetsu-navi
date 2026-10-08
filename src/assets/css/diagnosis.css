@@ -19,10 +19,11 @@ body.diag #compareBtn:disabled { opacity: 1; background: #fff; color: var(--c-su
 
 /* ---- 文字の大きさ（本文18px以上・見出し24px以上・補足16px以上） ---- */
 body.diag .steps li { font-size: 16px; }
+body.diag .steps b { font-size: 16px; }
 body.diag .question__no { font-size: 18px; }
 body.diag .question__help { font-size: 18px; margin-top: 0; }
 body.diag .pnav__sub { font-size: 16px; }
-body.diag .answers li { font-size: 16px; }
+body.diag .answers li { font-size: 16px; color: var(--c-text); } /* 灰色の地に補助色の文字は 4.5:1 に届かないため本文色に */
 body.diag .note { font-size: 16px; margin: 0 0 20px; }
 body.diag .subsec h2 { font-size: 24px; }
 
@@ -43,6 +44,8 @@ body.diag .chk input { accent-color: var(--c-main-dark); }
 @media (max-width: 599px) {
   body.diag .rcard__body .ph--result { width: 88px; height: 66px; }
 }
+/* 写真タイルの「写真 準備中」: 補足の 16px にそろえ、文字は本文色（淡い青緑の地で 4.5:1 以上） */
+body.diag .ph small { font-size: 16px; color: var(--c-text); line-height: 1.2; white-space: nowrap; }
 @media (max-width: 359px) {
   body.diag .rcard__actions { grid-template-columns: 1fr; }
 }

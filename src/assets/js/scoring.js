@@ -52,11 +52,14 @@ export function scoreProduct(config, resolved, product) {
   const reasons = [];
   const reasonItems = []; // [{ axis, text }]（枠ごとに理由を出し分けるため軸も持つ）
   const misses = []; // 適合しなかった軸のラベル
+  const missAxes = []; // 適合しなかった軸（キー）
   const unknowns = []; // メーカー非公開で判定できなかった軸のラベル
+  let unknownLast = 0; // rankAboveUnknown の選択肢で、その軸が非公開のまま通った数（公開情報で合う機種より後ろに並べる）
   let near = 0; // 不一致だが、選択肢の relaxPrefer（いちばん近い条件）には合う軸の数
   for (const { axis, option } of resolved) {
     if (neutral && !axisKnown(product, axis)) {
       unknowns.push(config.axes[axis].unknownLabel || config.axes[axis].label);
+      if (option.rankAboveUnknown ?? option.relaxPrefer?.rankAboveUnknown) unknownLast += 1;
       continue;
     }
     const ok = optionMatches(option, product);
@@ -73,6 +76,7 @@ export function scoreProduct(config, resolved, product) {
         if (pref.reason) { reasons.push(pref.reason); reasonItems.push({ axis, text: pref.reason }); }
       } else {
         misses.push(config.axes[axis].label);
+        missAxes.push(axis);
       }
     }
   }
@@ -85,7 +89,7 @@ export function scoreProduct(config, resolved, product) {
     const axisTags = product.tags?.[axis] || [];
     return n + (option.match?.tags || []).filter((t) => axisTags.includes(t)).length;
   }, 0);
-  return { product, score, matched, exact: matched && unknowns.length === 0, near, reasons, reasonItems, misses, unknowns, overlap };
+  return { product, score, matched, exact: matched && unknowns.length === 0, near, unknownLast, reasons, reasonItems, misses, missAxes, unknowns, overlap };
 }
 
 /**
@@ -102,9 +106,24 @@ export function optionReason(option, product) {
   return option.reason || "";
 }
 
-// 並び順: 条件に合う機種 → 合わない条件が「近い候補」に収まる機種 → 公開情報で全項目を確認できた機種 → 適合度 → タグの重なり
+// 並び順: 条件に合う機種（rankAboveUnknown の軸を公開情報で確認できたものが先）→ 合わない条件が「近い候補」に収まる機種
+//  → 公開情報で全項目を確認できた機種 → 適合度 → タグの重なり
 function sortByScore(a, b) {
-  return (b.matched - a.matched) || ((b.near || 0) - (a.near || 0)) || (b.exact - a.exact) || b.score - a.score || b.overlap - a.overlap || a.product.id.localeCompare(b.product.id);
+  return (b.matched - a.matched) || ((a.unknownLast || 0) - (b.unknownLast || 0)) || ((b.near || 0) - (a.near || 0)) || (b.exact - a.exact) || b.score - a.score || b.overlap - a.overlap || a.product.id.localeCompare(b.product.id);
+}
+
+/**
+ * 選択肢を relaxPrefer（いちばん近い条件）に置き換えたもの。
+ * 例: 「厚物（6mm以上）」→「3〜6mm に対応」。理由文は relaxPrefer.reason を使う
+ */
+export function preferOption(option) {
+  const p = option.relaxPrefer;
+  return {
+    ...option,
+    match: { mode: p.mode, tags: p.tags, ...(p.min ? { min: p.min } : {}) },
+    reason: p.reason, reasonByTag: undefined, relaxPrefer: undefined,
+    rankAboveUnknown: p.rankAboveUnknown, preferredFrom: option.id,
+  };
 }
 
 /**
@@ -180,7 +199,9 @@ export function allocateSlots(config, scored, resolved, reserve = []) {
   if (specialty) take(specialty, "specialty", "専門用途");
   // 5枠: 価格重視（価格帯が公開されている機種のうち最も安いもの。同率は適合度順）
   // 価格帯が分かる候補が無いときは「価格重視」を名乗れないので適合度順で補う
-  const priced = pool.filter((s) => ok(s) && priceRank(config, s.product) < config.slots.priceOrder.length);
+  // slots.priceSlot.withinBudget: 予算を答えたときは、予算に収まる機種だけを候補にする（予算オーバーの機種を「価格重視」と出さない）
+  const withinBudget = (s) => !config.slots.priceSlot?.withinBudget || !(s.missAxes || []).includes("price");
+  const priced = pool.filter((s) => ok(s) && withinBudget(s) && priceRank(config, s.product) < config.slots.priceOrder.length);
   if (priced.length) {
     const cheapest = [...priced].sort(
       (a, b) => priceRank(config, a.product) - priceRank(config, b.product) || sortByScore(a, b)
@@ -196,31 +217,57 @@ export function allocateSlots(config, scored, resolved, reserve = []) {
 
 /**
  * 診断の実行
- * @returns {{ results, relaxedAxis, relaxedLabel, relaxedNote, resolved, matchedCount, exactCount }}
+ * @returns {{ results, relaxedAxis, relaxedLabel, relaxedNote, preferredAxis, preferredNote, spareUsed, cappedOut, resolved, matchedCount, exactCount }}
  *  matchedCount: 不一致のない機種数（非公開の項目を含む）/ exactCount: すべて公開情報で一致を確認できた機種数
+ *  preferredAxis / preferredNote: 回答の条件を、いちばん近い条件（relaxPrefer）に置き換えて探したときの軸と案内文
+ *  spareUsed: メーカー上限（slots.maxPerMaker）のため、条件に合う機種の代わりに条件外の機種を表示した / cappedOut: その「条件に合うが表示しなかった機種」の数
  */
 export function runDiagnosis(config, products, answers) {
   const published = products.filter((p) => p.is_published !== false);
+  const scoreAll = (res) => published.map((p) => scoreProduct(config, res, p));
   let resolved = resolveAnswers(config, answers);
-  let scored = published.map((p) => scoreProduct(config, resolved, p));
+  let scored = scoreAll(resolved);
   let matched = scored.filter((s) => s.matched);
   let relaxedAxis = null;
   let relaxedOption = null;
+  let preferred = null;
 
-  // 完全一致ゼロ → 条件を1つだけ「わからない」扱いにして再検索
+  // 段階1（relax.preferBeforeDrop）: relaxPrefer を持つ選択肢（厚物・混在）で、その条件を公開情報で満たす機種が無いとき
+  //  （0件、または非公開のまま通る機種だけのとき）は、軸ごと外す前に「いちばん近い条件」に置き換えて探す。
+  //  置き換えても公開情報で合う機種が無ければ、元の回答のまま段階2へ
+  if (config.relax?.preferBeforeDrop) {
+    for (const r of resolved) {
+      if (!r.option.relaxPrefer) continue;
+      if (matched.some((s) => axisKnown(s.product, r.axis))) continue;
+      const res2 = resolved.map((x) => (x === r ? { ...x, option: preferOption(x.option) } : x));
+      const s2 = scoreAll(res2);
+      const m2 = s2.filter((s) => s.matched);
+      if (!m2.some((s) => axisKnown(s.product, r.axis))) continue;
+      resolved = res2;
+      scored = s2;
+      matched = m2;
+      preferred = r;
+      break;
+    }
+  }
+
+  // 段階2: 完全一致ゼロ → 条件を1つだけ「わからない」扱いにして再検索
   //  relax.pick = "most_matched": 回答した軸を1つずつ外して一致件数を比べ、最も多く残る軸を外す（同数なら relax.order の順）
+  //    件数は「公開情報で合う機種」を先に比べる。rankAboveUnknown の軸（厚物・混在の板厚）を非公開のまま通っただけの機種は、
+  //    公開情報で合う機種が同数のときにだけ数える（例: チタン×厚物で「素材」を外し、板厚が非公開の機種だけが残る、を避ける）
   //  relax.pick = "first"       : relax.order の順で、1件でも一致が出た最初の軸を外す
   if (matched.length === 0 && resolved.length > 0) {
     const trials = [];
     for (const axis of config.relax.order) {
       if (!resolved.some((r) => r.axis === axis)) continue;
       const relaxed = resolved.filter((r) => r.axis !== axis);
-      const s2 = published.map((p) => scoreProduct(config, relaxed, p));
+      const s2 = scoreAll(relaxed);
       const m2 = s2.filter((s) => s.matched);
-      trials.push({ axis, relaxed, s2, m2 });
+      trials.push({ axis, relaxed, s2, m2, known: m2.filter((s) => !s.unknownLast).length });
       if (config.relax.pick !== "most_matched" && m2.length > 0) break;
     }
-    const best = trials.reduce((b, t) => (t.m2.length > (b ? b.m2.length : 0) ? t : b), null);
+    const better = (t, b) => t.known > b.known || (t.known === b.known && t.m2.length > b.m2.length);
+    const best = trials.filter((t) => t.m2.length > 0).reduce((b, t) => (!b || better(t, b) ? t : b), null);
     if (best) {
       relaxedAxis = best.axis;
       relaxedOption = resolved.find((r) => r.axis === best.axis).option;
@@ -229,7 +276,7 @@ export function runDiagnosis(config, products, answers) {
       const full = new Map(scored.map((s) => [s.product.id, s]));
       scored = best.s2.map((s) => {
         const f = full.get(s.product.id);
-        return { ...s, near: f.near, reasons: f.reasons, reasonItems: f.reasonItems, misses: f.misses, unknowns: f.unknowns };
+        return { ...s, near: f.near, reasons: f.reasons, reasonItems: f.reasonItems, misses: f.misses, missAxes: f.missAxes, unknowns: f.unknowns };
       });
       matched = scored.filter((s) => s.matched);
     }
@@ -243,13 +290,24 @@ export function runDiagnosis(config, products, answers) {
     ...r,
     reason: buildReason(r),
   }));
+  // メーカー上限のために表示しなかった「条件に合う機種」（その代わりに条件外の機種を出したときだけ数える）
+  const shown = new Set(results.map((r) => r.product.id));
+  const cappedOut = results.some((r) => !r.matched) ? matched.filter((s) => !shown.has(s.product.id)).length : 0;
+
+  // 外した条件に「近い候補」を先に出したときの一文。1位が近い候補で、適合度の枠で近い候補がそうでない機種より前に並ぶときだけ出す
+  const fit = results.filter((r) => r.slotType === "fit");
+  const firstOther = fit.findIndex((r) => !r.near);
+  const nearFirst = results[0]?.near > 0 && (firstOther === -1 || fit.slice(firstOther).every((r) => !r.near));
 
   return {
     results,
     relaxedAxis,
     relaxedLabel: relaxedAxis ? config.axes[relaxedAxis].label : null,
-    // 外した条件に「近い候補」を先に出したときの一文（例: 3〜6mm に対応する機種を先に表示しています）
-    relaxedNote: relaxedOption?.relaxPrefer?.note && results.some((r) => r.near) ? relaxedOption.relaxPrefer.note : null,
+    relaxedNote: relaxedOption?.relaxPrefer?.note && nearFirst ? relaxedOption.relaxPrefer.note : null,
+    preferredAxis: preferred ? preferred.axis : null,
+    preferredNote: preferred ? preferred.option.relaxPrefer.preferNote : null,
+    spareUsed: cappedOut > 0,
+    cappedOut,
     resolved,
     matchedCount: matched.length,
     exactCount: matched.filter((s) => s.exact).length,
