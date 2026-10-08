@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { existsSync, readFileSync } from "node:fs";
-import { runDiagnosis, productSlug, alternatives, scoreProduct, resolveAnswers } from "../src/assets/js/scoring.js";
+import { runDiagnosis, productSlug, alternatives, scoreProduct, resolveAnswers, optionMatches } from "../src/assets/js/scoring.js";
 
 const config = JSON.parse(readFileSync(new URL("../src/data/diagnosis.json", import.meta.url)));
 // src/data/products.json は公開分だけの生成物になる予定なので、診断のテストは is_published で絞った公開機種だけを対象にする
@@ -24,6 +24,8 @@ function allAnswers() {
   return out;
 }
 const ALL = allAnswers();
+const RESULTS = ALL.map((ans) => ({ ans, r: runDiagnosis(config, published, ans) }));
+const has36 = (p) => (p.tags.thickness || []).includes("3〜6mm");
 
 test("公開商品は実データ21点・スラッグ重複なし・公式か情報源のURLあり", () => {
   assert.equal(published.length, 21);
@@ -91,15 +93,16 @@ test("完全一致ゼロ → 条件を1つ緩めて、緩めた条件を明示�
   assert.ok(r.results[0].matched);
 });
 
-test("緩和する条件は、外したときに最も多くの機種が残る条件（同数なら relax.order の順）", () => {
+test("緩和する条件は、外したときに公開情報で合う機種が最も多く残る条件（同数なら全体の件数、さらに同数なら relax.order の順）", () => {
   assert.equal(config.relax.pick, "most_matched");
+  // 件数の比べ方: [公開情報で合う機種（厚物・混在の板厚を非公開のまま通った機種を除く）, 条件に合う機種の総数]
   const countWithout = (ans, axis) => {
     const rel = resolveAnswers(config, ans).filter((x) => x.axis !== axis);
-    return published.map((p) => scoreProduct(config, rel, p)).filter((s) => s.matched).length;
+    const m = published.map((p) => scoreProduct(config, rel, p)).filter((s) => s.matched);
+    return m.filter((s) => !s.unknownLast).length * 1000 + m.length;
   };
   let relaxedCases = 0;
-  for (const ans of ALL) {
-    const r = runDiagnosis(config, published, ans);
+  for (const { ans, r } of RESULTS) {
     if (!r.relaxedAxis) continue;
     relaxedCases++;
     const axes = resolveAnswers(config, ans).map((x) => x.axis);
@@ -112,17 +115,57 @@ test("緩和する条件は、外したときに最も多くの機種が残る�
   assert.ok(relaxedCases > 0);
 });
 
-test("厚物で合う機種が無いとき、外すのは「予算」ではなく「板厚」。3〜6mm 対応機を薄板専用機より先に出す", () => {
+test("厚物・混在に合う機種が無いとき、条件を外す前に「近い条件」（3〜6mm 等）に置き換えて探し、その旨を出す", () => {
+  assert.equal(config.relax.preferBeforeDrop, true);
   for (const q2 of ["thick", "mixed"]) {
     const r = runDiagnosis(config, published, {
       q1_material: "steel", q2_thickness: q2, q3_skill: "beginner", q4_environment: "indoor", q5_budget: "b200_400",
     });
-    assert.equal(r.relaxedAxis, "thickness", q2);
-    assert.ok(r.relaxedNote, "近い候補を先に出したことを画面に出す一文");
-    assert.ok((r.results[0].product.tags.thickness || []).includes("3〜6mm"), `${q2}: 1位 ${r.results[0].product.name}`);
+    assert.equal(r.relaxedAxis, null, q2);
+    assert.equal(r.preferredAxis, "thickness", q2);
+    assert.ok(r.preferredNote, "近い条件で探したことを画面に出す一文");
+    assert.ok(has36(r.results[0].product), `${q2}: 1位 ${r.results[0].product.name}`);
+    assert.match(r.results[0].reason, q2 === "thick" ? /3〜6mm まで対応/ : /薄板と3〜6mm に対応/);
     // 薄板専用機には「板厚は条件外」と出す
     for (const x of r.results) {
-      if (!(x.product.tags.thickness || []).includes("3〜6mm") && (x.product.tags.thickness || []).length) assert.match(x.reason, /板厚は条件外/);
+      if (!has36(x.product) && (x.product.tags.thickness || []).length) assert.match(x.reason, /（[^）]*板厚[^）]*は条件外）/);
+    }
+  }
+});
+
+test("全回答: 近い条件に置き換えたときは、1位は置き換えた条件を公開情報で満たす機種", () => {
+  let n = 0;
+  for (const { ans, r } of RESULTS) {
+    if (!r.preferredAxis) continue;
+    n++;
+    const opt = config.questions.find((q) => q.axis === r.preferredAxis).options.find((o) => o.id === ans.q2_thickness);
+    assert.ok(optionMatches({ axis: r.preferredAxis, match: opt.relaxPrefer }, r.results[0].product) && (r.results[0].product.tags.thickness || []).length,
+      `${JSON.stringify(ans)} → 1位 ${r.results[0].product.name}`);
+  }
+  assert.ok(n > 0);
+});
+
+test("全回答: 「近い候補を先に表示しています」と出すなら、1位は近い候補で、適合度の枠では近い候補が先に並ぶ", () => {
+  for (const { ans, r } of RESULTS) {
+    if (!r.relaxedNote) continue;
+    assert.ok(r.results[0].near > 0, `${JSON.stringify(ans)} → 1位 ${r.results[0].product.name}`);
+    const fit = r.results.filter((x) => x.slotType === "fit").map((x) => x.near > 0);
+    assert.ok(fit.indexOf(false) === -1 || fit.lastIndexOf(true) < fit.indexOf(false), JSON.stringify(ans));
+  }
+});
+
+test("全回答: 厚物・混在で、1位が板厚非公開の機種になる回答は0件（3〜6mm 対応を公開している機種を先に出す）", () => {
+  const bad = RESULTS.filter(({ ans, r }) => ["thick", "mixed"].includes(ans.q2_thickness) && !(r.results[0].product.tags.thickness || []).length);
+  assert.equal(bad.length, 0, bad.slice(0, 3).map(({ ans, r }) => `${JSON.stringify(ans)} → ${r.results[0].product.name}`).join("\n"));
+});
+
+test("全回答: 厚物・混在で1位が薄板専用機になるのは、板厚の条件を外したときだけ（素材がチタン等で 3〜6mm 対応機が無い）", () => {
+  for (const { ans, r } of RESULTS) {
+    if (!["thick", "mixed"].includes(ans.q2_thickness)) continue;
+    const t = r.results[0].product.tags.thickness || [];
+    if (t.length && !t.includes("3〜6mm")) {
+      assert.equal(r.relaxedAxis, "thickness", JSON.stringify(ans));
+      assert.equal(r.relaxedNote, null, "近い候補を先に出していないのに、その一文を出さない");
     }
   }
 });
@@ -130,8 +173,7 @@ test("厚物で合う機種が無いとき、外すのは「予算」ではな�
 test("TOP5 に同じメーカーは slots.maxPerMaker 台まで（全回答の組み合わせ）", () => {
   const max = config.slots.maxPerMaker;
   assert.ok(Number.isInteger(max) && max >= 1);
-  for (const ans of ALL) {
-    const r = runDiagnosis(config, published, ans);
+  for (const { ans, r } of RESULTS) {
     assert.equal(r.results.length, 5);
     assert.equal(new Set(r.results.map((x) => x.product.id)).size, 5);
     const per = {};
@@ -150,6 +192,29 @@ test("maxPerMaker を外すと同じメーカーが3台以上並ぶ回答があ�
   assert.ok(over);
 });
 
+test("全回答: メーカー上限のために条件外の機種を出したときは spareUsed / cappedOut で分かる（案内なしで条件外を出さない）", () => {
+  let n = 0;
+  for (const { ans, r } of RESULTS) {
+    const hiddenMatched = r.matchedCount - r.results.filter((x) => x.matched).length;
+    if (r.results.some((x) => !x.matched) && hiddenMatched > 0) {
+      n++;
+      assert.equal(r.spareUsed, true, JSON.stringify(ans));
+      assert.equal(r.cappedOut, hiddenMatched, JSON.stringify(ans));
+    } else assert.equal(r.spareUsed, false, JSON.stringify(ans));
+  }
+  assert.ok(n > 0);
+});
+
+test("全回答: 5位「価格重視」は予算を答えたとき予算内の機種だけ（予算オーバーなら枠を作らず適合度で埋める）", () => {
+  assert.equal(config.slots.priceSlot?.withinBudget, true);
+  for (const { ans, r } of RESULTS) {
+    const p = r.results.find((x) => x.slotType === "price");
+    if (!p) continue;
+    assert.ok(!(p.misses || []).includes(config.axes.price.label), `${JSON.stringify(ans)} → ${p.product.name}`);
+    assert.ok((p.product.tags.price || []).length > 0);
+  }
+});
+
 test("選定理由: 「熟練工が使う」でも未経験可の機種に「熟練者の技能を活かせる」と書かない", () => {
   const r = runDiagnosis(config, published, { q1_material: "steel", q2_thickness: "thin", q3_skill: "expert", q4_environment: "indoor", q5_budget: "b400_600" });
   for (const x of r.results) {
@@ -158,14 +223,17 @@ test("選定理由: 「熟練工が使う」でも未経験可の機種に「熟
   }
 });
 
-test("複数素材・混在板厚 は min_count で判定（混在は板厚3区分以上）", () => {
+test("複数素材・混在板厚 は min_count で判定（混在は板厚3区分以上）。3区分を公開している機種が無いので、薄板＋3〜6mm で探す", () => {
+  const mixed = config.questions.find((q) => q.id === "q2_thickness").options.find((o) => o.id === "mixed");
+  const p203 = published.find((p) => p.id === "p203"); // 板厚2区分（0.5〜3mm・3〜6mm）のアマダ
+  assert.equal(optionMatches({ ...mixed, axis: "thickness" }, p203), false);
   const r = runDiagnosis(config, published, { q1_material: "multi", q2_thickness: "mixed" });
-  const byId = Object.fromEntries(r.results.map((x) => [x.product.id, x]));
+  assert.equal(r.preferredAxis, "thickness");
   assert.ok(r.results[0].matched);
-  assert.match(r.results[0].reason, /板厚は非公開/); // 板厚を公開していない機種は「非公開」と明示して残す
-  const amada = runDiagnosis(config, published, { q1_material: "multi" }).results.map((x) => x.product.id);
-  assert.ok(amada.length === 5);
-  if (byId.p203) assert.equal(byId.p203.matched, false); // 板厚2区分のアマダは「混在」に不一致
+  assert.match(r.results[0].reason, /幅広い素材に対応、薄板と3〜6mm に対応/);
+  // 板厚を公開していない機種は、残す場合も「非公開」と明示する
+  for (const x of r.results) if (!(x.product.tags.thickness || []).length) assert.match(x.reason, /板厚は非公開/);
+  assert.equal(runDiagnosis(config, published, { q1_material: "multi" }).results.length, 5);
 });
 
 test("代替候補は同価格帯・自分以外・最大2件", () => {
