@@ -129,7 +129,8 @@ function renderResult() {
       ${state.config.questions.map((q) => `<li>${esc(state.config.axes[q.axis].label)}：<b>${esc(answerLabel(q.id))}</b></li>`).join("")}
     </ul>
     ${r.relaxedLabel ? `<div class="notice"><p>条件にぴったり合う機種がなかったため、<strong>「${esc(r.relaxedLabel)}」の条件を外して</strong>候補を広げました。</p></div>` : ""}
-    ${!r.relaxedLabel && r.matchedCount < 5 ? `<div class="info"><p>すべての条件に合う機種は ${r.matchedCount} 台でした。残りは条件に近い順に表示しています。</p></div>` : ""}
+    ${!r.relaxedLabel && r.matchedCount < 5 ? `<div class="info"><p>条件に合う機種は ${r.matchedCount} 台でした。残りは条件に近い順に表示しています。</p></div>` : ""}
+    ${r.results.some((x) => x.unknowns?.length) ? `<p class="note">メーカーが公開していない項目（価格帯・使用環境など）は「非公開」と表示し、不一致とはしていません。導入前にメーカーへご確認ください。</p>` : ""}
     <ul class="results">${r.results.map(card).join("")}</ul>
 
     <section class="subsec">
@@ -143,9 +144,9 @@ function renderResult() {
       <h2>この結果について相談する</h2>
       <p>診断の回答内容を添えてお問い合わせできます。</p>
       <ul class="pnav">
-        <li><a href="/contact/?${esc(inquiryQs)}" data-inquiry>${icon("contact")}<span class="pnav__label">フォームで問い合わせる</span>${icon("chevron", "ico ico--chev")}</a></li>
-        <li><a href="tel:0000000000" data-inquiry>${icon("phone")}<span class="pnav__label">電話で相談する<span class="pnav__sub">平日 9:00〜17:00</span></span>${icon("chevron", "ico ico--chev")}</a></li>
-        <li><a href="https://line.me/" target="_blank" rel="noopener" data-inquiry>${icon("contact")}<span class="pnav__label">LINEで相談する</span>${icon("chevron", "ico ico--chev")}</a></li>
+        <li><a href="/contact/?${esc(inquiryQs)}" data-inquiry>${icon("consult")}<span class="pnav__label">フォームで問い合わせる</span>${icon("chevron", "ico ico--chev")}</a></li>
+        <li><a href="/contact/#tel">${icon("phone")}<span class="pnav__label">電話で相談する<span class="pnav__sub">番号は掲載準備中</span></span>${icon("chevron", "ico ico--chev")}</a></li>
+        <li><a href="/contact/#line">${icon("consult")}<span class="pnav__label">LINEで相談する<span class="pnav__sub">準備中</span></span>${icon("chevron", "ico ico--chev")}</a></li>
       </ul>
     </section>`);
 

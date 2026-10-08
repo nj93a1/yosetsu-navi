@@ -3,7 +3,7 @@ const ICONS = "/assets/icons.svg";
 export const icon = (name, cls = "ico") => `<svg class="${cls}" aria-hidden="true"><use href="${ICONS}#i-${name}"></use></svg>`;
 
 export function header(current = "") {
-  // スマホ用メニュー。PCでは右カラムのメニューが主要ナビゲーションなので、このメニューは出さない
+  // スマホはメニューボタンで開く一覧。PC はトップだけ右カラムのメニューが主要ナビで、下層ページはヘッダーに文字メニュー（hnav）を出す
   const items = [
     ["/diagnosis/", "diag", "5つの質問で選ぶ"],
     ["/lineup/", "lineup", "機種一覧"],
@@ -15,6 +15,7 @@ export function header(current = "") {
 <header class="header">
   <div class="header__in">
     <a class="header__brand" href="/">${icon("diag", "ico header__mark")}<span class="header__name">レーザー溶接機 比較・選定<small>中立的な比較情報サイト（サイト名 仮）</small></span></a>
+    <nav class="hnav" aria-label="主要メニュー">${items.filter(([href]) => !href.includes("#")).map(([href, ic, label]) => `<a href="${href}"${href === current ? ' aria-current="page"' : ""}>${icon(ic)}<span>${label}</span></a>`).join("")}</nav>
     <div class="header__tools">
       <a class="header__tool" href="/lineup/">${icon("search")}<span>検索</span></a>
       <button class="header__tool header__tool--menu" type="button" id="menuBtn" aria-expanded="false" aria-controls="gnav">${icon("menu")}<span>メニュー</span></button>

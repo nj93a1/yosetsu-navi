@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 本番公開時に削除：検索エンジンのインデックスを許可する -->
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css?v=9">
+  <title>相談・問い合わせ｜レーザー溶接機 比較・選定</title>
+</head>
+<body>
+<div id="siteHeader"></div>
+<main class="section">
+  <div class="narrow">
+    <div class="sec-head"><h1>相談・問い合わせ</h1><span class="sec-head__eyebrow">機種選びの相談を受け付けています。診断の回答は自動で添えられます。</span></div>
+
+    <section class="attach" id="attach" hidden>
+      <h2 class="attach__title"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-diag"></use></svg>この内容が一緒に送られます</h2>
+      <dl class="attach__list" id="attachList"></dl>
+    </section>
+
+    <ul class="contact-ways" aria-label="相談の方法">
+      <li><a href="#form"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-consult"></use></svg>フォームで相談</a></li>
+      <li id="tel"><span class="is-pending"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-phone"></use></svg>電話で相談<small>番号は掲載準備中</small></span></li>
+      <li id="line"><span class="is-pending"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-consult"></use></svg>LINEで相談<small>準備中</small></span></li>
+    </ul>
+
+    <form class="form" id="form" novalidate>
+      <div class="form__row"><label for="company">会社名</label><input id="company" name="company" type="text" autocomplete="organization"></div>
+      <div class="form__row"><label for="name">お名前<span class="req">必須</span></label><input id="name" name="name" type="text" autocomplete="name" required></div>
+      <div class="form__row"><label for="email">メールアドレス<span class="req">必須</span></label><input id="email" name="email" type="email" autocomplete="email" inputmode="email" required></div>
+      <div class="form__row"><label for="tel2">電話番号</label><input id="tel2" name="tel" type="tel" autocomplete="tel" inputmode="tel"></div>
+      <div class="form__row"><label for="body">ご相談内容</label><textarea id="body" name="body" rows="6" placeholder="例：SUS304 の 1.5mm を溶接したい。新人2名で使う予定。"></textarea></div>
+      <p class="form__error" id="formError" hidden>お名前とメールアドレスを入力してください。</p>
+      <button class="btn btn--accent" type="submit">入力内容を確認する</button>
+    </form>
+
+    <section class="confirm" id="confirm" hidden aria-live="polite">
+      <h2>入力内容の確認</h2>
+      <dl class="attach__list" id="confirmList"></dl>
+      <p class="confirm__demo">デモ版のため、送信は行っていません。公開時には、この内容（診断の回答を含む）が相談窓口に届きます。</p>
+      <button class="btn" type="button" id="backToForm">入力画面に戻る</button>
+    </section>
+  </div>
+</main>
+<div id="siteFooter"></div>
+<script type="module" src="/assets/js/contact.js?v=10"></script>
+</body>
+</html>

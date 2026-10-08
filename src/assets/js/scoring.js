@@ -34,13 +34,29 @@ export function resolveAnswers(config, answers) {
   return out;
 }
 
-/** 1商品を採点。全回答軸に適合すれば matched=true */
+/** 商品がその軸のタグを持っているか（空 = メーカー非公開） */
+export function axisKnown(product, axis) {
+  return (product.tags?.[axis] || []).length > 0;
+}
+
+/**
+ * 1商品を採点。
+ *  matched: 回答した軸に「不一致」が1つもない
+ *  exact:   さらに、どの軸も非公開ではない（すべて公開情報で一致を確認できた）
+ * 非公開の軸の扱いは diagnosis.json の unknownTags.policy に従う。
+ */
 export function scoreProduct(config, resolved, product) {
+  const neutral = (config.unknownTags?.policy || "mismatch") === "neutral";
   let score = 0;
   let matched = true;
   const reasons = [];
   const misses = []; // 適合しなかった軸のラベル
+  const unknowns = []; // メーカー非公開で判定できなかった軸のラベル
   for (const { axis, option } of resolved) {
+    if (neutral && !axisKnown(product, axis)) {
+      unknowns.push(config.axes[axis].label);
+      continue;
+    }
     const ok = optionMatches(option, product);
     if (ok) {
       score += config.axes[axis].weight;
@@ -50,16 +66,21 @@ export function scoreProduct(config, resolved, product) {
       misses.push(config.axes[axis].label);
     }
   }
+  // 情報が少なすぎる機種（ほぼ全項目が非公開）を「条件に合う」と数えない
+  const known = resolved.length - unknowns.length;
+  const minKnown = Math.ceil(resolved.length * (config.unknownTags?.minKnownRatio ?? 0));
+  if (known < minKnown) matched = false;
   // 同点時の補助: 回答した軸のタグ重なり数（多い方が汎用性が高い）
   const overlap = resolved.reduce((n, { axis, option }) => {
     const axisTags = product.tags?.[axis] || [];
     return n + (option.match?.tags || []).filter((t) => axisTags.includes(t)).length;
   }, 0);
-  return { product, score, matched, reasons, misses, overlap };
+  return { product, score, matched, exact: matched && unknowns.length === 0, reasons, misses, unknowns, overlap };
 }
 
+// 並び順: 条件に合う機種 → 公開情報で全項目を確認できた機種 → 適合度 → タグの重なり
 function sortByScore(a, b) {
-  return b.score - a.score || b.overlap - a.overlap || a.product.id.localeCompare(b.product.id);
+  return (b.matched - a.matched) || (b.exact - a.exact) || b.score - a.score || b.overlap - a.overlap || a.product.id.localeCompare(b.product.id);
 }
 
 /**
@@ -114,9 +135,11 @@ export function allocateSlots(config, scored, resolved) {
     pool.find((s) => isSpecialty(config, s.product, resolved, true)) ||
     pool.find((s) => isSpecialty(config, s.product, resolved, false));
   if (specialty) take(specialty, "specialty", "専門用途");
-  // 5枠: 価格重視（最も安い価格帯。同率は適合度順）
-  if (pool.length) {
-    const cheapest = [...pool].sort(
+  // 5枠: 価格重視（価格帯が公開されている機種のうち最も安いもの。同率は適合度順）
+  // 価格帯が分かる候補が無いときは「価格重視」を名乗れないので適合度順で補う
+  const priced = pool.filter((s) => priceRank(config, s.product) < config.slots.priceOrder.length);
+  if (priced.length) {
+    const cheapest = [...priced].sort(
       (a, b) => priceRank(config, a.product) - priceRank(config, b.product) || sortByScore(a, b)
     )[0];
     take(cheapest, "price", "価格重視");
@@ -128,7 +151,8 @@ export function allocateSlots(config, scored, resolved) {
 
 /**
  * 診断の実行
- * @returns {{ results, relaxedAxis, relaxedLabel, resolved, matchedCount }}
+ * @returns {{ results, relaxedAxis, relaxedLabel, resolved, matchedCount, exactCount }}
+ *  matchedCount: 不一致のない機種数（非公開の項目を含む）/ exactCount: すべて公開情報で一致を確認できた機種数
  */
 export function runDiagnosis(config, products, answers) {
   const published = products.filter((p) => p.is_published !== false);
@@ -167,16 +191,19 @@ export function runDiagnosis(config, products, answers) {
     relaxedLabel: relaxedAxis ? config.axes[relaxedAxis].label : null,
     resolved,
     matchedCount: matched.length,
+    exactCount: matched.filter((s) => s.exact).length,
   };
 }
 
 /** 選定理由を1行に */
 export function buildReason(r) {
   const parts = r.reasons.slice(0, 3);
-  let text = parts.length ? parts.join("・") : "条件に近い候補";
+  const use = (r.product.suitable_for || [])[0];
+  let text = parts.length ? parts.join("・") : use ? `向いている用途：${use}` : "条件に近い候補";
   if (r.slotType === "specialty") text = `専門用途（${(r.specialty || []).join("・")}対応）：${text}`;
   if (r.slotType === "price") text = `価格重視：${(r.product.tags?.price || [])[0] || "価格非公開"}・${text}`;
-  if (!r.matched && r.misses?.length) text += `（${r.misses.join("・")}は条件外）`;
+  if (r.misses?.length) text += `（${r.misses.join("・")}は条件外）`;
+  else if (r.unknowns?.length) text += r.matched ? `（${r.unknowns.join("・")}は非公開）` : `（${r.unknowns.join("・")}は非公開のため要確認）`;
   return text;
 }
 

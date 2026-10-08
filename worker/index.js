@@ -79,20 +79,37 @@ async function productPage(env, slug) {
   const { results: tagRows } = await env.DB.prepare("SELECT axis, tag FROM product_tags WHERE product_id = ? ORDER BY rowid").bind(p.id).all();
   const tags = {};
   for (const t of tagRows) (tags[t.axis] ||= []).push(t.tag);
-  const { results: alts } = await env.DB
-    .prepare("SELECT slug, name, maker_name, handled_by_operator FROM products WHERE price_band = ? AND id <> ? AND is_published = 1 ORDER BY id LIMIT 2")
-    .bind(p.price_band, p.id).all();
+  // 代替候補: 価格帯が公開されていれば同じ価格帯から2件。無ければ（または該当なしなら）用途が近い機種から2件
+  let altTitle = "同じ価格帯の代替候補";
+  let alts = [];
+  if (p.price_band) {
+    ({ results: alts } = await env.DB
+      .prepare("SELECT slug, name, maker_name, handled_by_operator FROM products WHERE price_band = ? AND id <> ? AND is_published = 1 ORDER BY id LIMIT 2")
+      .bind(p.price_band, p.id).all());
+  }
+  if (!alts.length && (tags.use || []).length) {
+    altTitle = "用途が近い候補";
+    ({ results: alts } = await env.DB
+      .prepare(`SELECT p.slug, p.name, p.maker_name, p.handled_by_operator, COUNT(*) AS shared FROM products p
+        JOIN product_tags t ON t.product_id = p.id AND t.axis = 'use' AND t.tag IN (${tags.use.map(() => "?").join(",")})
+        WHERE p.id <> ? AND p.is_published = 1 AND p.maker_slug <> ? GROUP BY p.id ORDER BY shared DESC, p.id LIMIT 2`)
+      .bind(...tags.use, p.id, p.maker_slug).all());
+  }
 
-  const li = (arr) => arr.map((x) => `<li>${esc(x)}</li>`).join("");
+  const li = (arr) => arr.length ? arr.map((x) => `<li>${esc(x)}</li>`).join("") : `<li class="fit__none">メーカーの公開情報に記載はありません</li>`;
+  const kind = /ロボット|ライン/.test(p.method) ? "robot" : /据置|真空|チャンバー/.test(p.method) ? "fixed" : "handheld";
+  const photo = p.image && !p.image.includes("placeholder")
+    ? `<img class="product__image" src="${esc(p.image)}" alt="${esc(p.name)}" width="640" height="400">`
+    : `<div class="ph ph--product" role="img" aria-label="商品写真は準備中"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-${kind}"></use></svg><small>写真 準備中</small></div>`;
   const spec = [
-    ["方式", p.method], ["波長", p.wavelength || "—"], ["出力", p.output_w ? `${p.output_w} W` : "—"], ["可搬性", p.portability],
+    ["方式", p.method], ["波長", p.wavelength || "非公開"], ["出力", p.output_w ? `${p.output_w.toLocaleString()} W` : "非公開"], ["可搬性", p.portability],
     ["対応素材", (tags.material || []).join("・") || "非公開"], ["対応板厚", (tags.thickness || []).join("・") || "非公開"],
     ["使用環境", (tags.environment || []).join("・") || "非公開"], ["価格帯", p.price_band || "非公開"], ["習得難易度", p.skill_level || "非公開"],
   ].map(([k, v]) => `<div class="spec__row"><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join("");
 
   const body = `
 <nav class="subnav" aria-label="ページ内メニュー"><ul>
-  <li><a href="#top" aria-current="true">概要</a></li><li><a href="#spec">スペック</a></li><li><a href="#fit">向き不向き</a></li><li><a href="#alts">代替候補</a></li>
+  <li><a href="#top" aria-current="true">概要</a></li><li><a href="#spec">スペック</a></li><li><a href="#fit">向き不向き</a></li><li><a href="#links">公式情報</a></li>
 </ul></nav>
 <main class="narrow product" id="top">
   <nav class="crumbs" aria-label="パンくず"><a href="/">トップ</a> › <a href="/lineup/">機種一覧</a> › <span>${esc(p.name)}</span></nav>
@@ -100,15 +117,15 @@ async function productPage(env, slug) {
     ${p.handled_by_operator ? `<span class="badge">運営元で取り扱い</span>` : ""}
     <h1>${esc(p.name)}</h1>
     <p class="product__maker">${esc(p.maker_name)}</p>
-    <div class="product__band"><span>価格帯：<b>${esc(p.price_band || "非公開")}</b></span><span>習得難易度：<b>${esc(p.skill_level || "非公開")}</b></span><span>${esc(p.portability)}</span></div>
+    <div class="product__band"><span>価格帯：<b>${esc(p.price_band || "非公開")}</b></span><span>習得難易度：<b>${esc(p.skill_level || "非公開")}</b></span>${p.output_w ? `<span>出力：<b>${esc(p.output_w.toLocaleString())} W</b></span>` : ""}</div>
   </div>
-  <img class="product__image" src="${esc(p.image || "/assets/images/products/placeholder.svg")}" alt="" width="640" height="400">
-  <section><h2>運営者の選定コメント</h2><p class="comment">${esc(p.comment)}</p></section>
+  ${photo}
+  <section><h2>選定コメント</h2><p class="comment">${esc(p.comment)}</p></section>
   <section class="subsec" id="spec"><h2>スペック</h2><dl class="spec">${spec}</dl></section>
   <section class="subsec" id="fit"><h2>向いている用途・向いていない用途</h2>
     <div class="fit"><div class="ok"><h3>向いている</h3><ul>${li(p.suitable_for)}</ul></div><div class="ng"><h3>向いていない</h3><ul>${li(p.not_suitable_for)}</ul></div></div></section>
-  <section class="subsec" id="alts"><h2>同じ価格帯の代替候補</h2>
-    <ul class="pnav">${alts.map((a) => `<li><a href="/products/${esc(a.slug)}/"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-list"></use></svg><span class="pnav__label">${esc(a.name)}<span class="pnav__sub">${esc(a.maker_name)}${a.handled_by_operator ? "｜運営元で取り扱い" : ""}</span></span><svg class="ico ico--chev" aria-hidden="true"><use href="/assets/icons.svg#i-chevron"></use></svg></a></li>`).join("") || "<li class=\"empty\">同じ価格帯の候補はありません</li>"}</ul></section>
+  <section class="subsec" id="alts"><h2>${altTitle}</h2>
+    <ul class="pnav">${alts.map((a) => `<li><a href="/products/${esc(a.slug)}/"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-lineup"></use></svg><span class="pnav__label">${esc(a.name)}<span class="pnav__sub">${esc(a.maker_name)}${a.handled_by_operator ? "｜運営元で取り扱い" : ""}</span></span><svg class="ico ico--chev" aria-hidden="true"><use href="/assets/icons.svg#i-chevron"></use></svg></a></li>`).join("") || "<li class=\"empty\">候補はありません</li>"}</ul></section>
   <section class="subsec" id="links"><h2>メーカー公式・情報源</h2>
     <ul class="pnav">
       ${p.official_url ? `<li><a href="${esc(p.official_url)}" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-lineup"></use></svg><span class="pnav__label">メーカー公式の商品ページ<span class="pnav__sub">${esc(hostOf(p.official_url))}（別ウィンドウで開く）</span></span><svg class="ico ico--chev" aria-hidden="true"><use href="/assets/icons.svg#i-chevron"></use></svg></a></li>` : `<li class="empty">メーカー公式の商品ページは未確認です</li>`}
@@ -118,7 +135,7 @@ async function productPage(env, slug) {
   </section>
   <div class="cta">
     <a class="btn btn--primary" href="/diagnosis/"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-diag"></use></svg>診断でほかの候補も見る</a>
-    <a class="btn btn--accent" href="/contact/?product=${esc(p.slug)}"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-contact"></use></svg>この機種について相談する</a>
+    <a class="btn btn--accent" href="/contact/?product=${esc(p.slug)}"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-consult"></use></svg>この機種について相談する</a>
   </div>
 </main>`;
   return html(pageShell(`${p.name}｜${p.maker_name}｜比較`, body));
