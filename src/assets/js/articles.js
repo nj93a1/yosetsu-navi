@@ -1,5 +1,5 @@
 // 選び方ガイド。記事本文は未公開のため、各テーマで「扱う内容」と、いま見られる機種一覧への近道（件数は実データから）を出す。
-import { mountChrome, icon } from "./partials.js?v=10";
+import { mountChrome, icon } from "./partials.js?v=11";
 
 mountChrome({ current: "/articles/" });
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
