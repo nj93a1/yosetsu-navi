@@ -1,7 +1,8 @@
 -- 溶接機比較サイト D1 スキーマ
 -- D1 に持たせるのは「商品マスタ」と「診断ログ」のみ。
--- 診断スコアリングはクライアント側で src/data/products.json を参照して行う。
--- products.json は scripts/build-seed.js で seed.sql に変換して本テーブルへ投入する。
+-- 診断スコアリングはクライアント側で src/data/products.json（配信用・生成物）を参照して行う。
+-- 商品マスタ data/products.json を scripts/build-seed.js で seed.sql に変換して本テーブルへ投入する。
+-- 既存の D1 に列を足すときは migrations/ の ALTER TABLE を流す（CREATE TABLE IF NOT EXISTS は既存表を変えない）。
 
 -- ---------------------------------------------------------------
 -- 商品マスタ（要件定義書 6章「データ項目」に対応）
@@ -16,7 +17,9 @@ CREATE TABLE IF NOT EXISTS products (
   method          TEXT NOT NULL,                  -- 方式（例: ハンドヘルドファイバー / 真空チャンバー / ロボット組込）
   wavelength      TEXT,                           -- 波長（例: 1080nm）
   output_w        INTEGER,                        -- 出力（W）
+  output_note     TEXT,                           -- 出力の注記（例: 最大ピーク出力 / 定格。最大2,500W）。無ければ NULL
   portability     TEXT NOT NULL,                  -- 可搬性（ハンドヘルド / 台車型 / 据置 / ライン組込）
+  thickness_note  TEXT,                           -- メーカー公表の板厚・溶け込みの数値（表示用。診断の板厚区分は product_tags）。無ければ NULL
   price_band      TEXT,                           -- 価格帯タグ（実売価格は掲載しない。未確定なら NULL・非公開）
   skill_level     TEXT,                           -- 習得難易度タグ（非公開なら NULL）
   comment         TEXT NOT NULL,                  -- 運営者による選定コメント（必須・1文以上）
