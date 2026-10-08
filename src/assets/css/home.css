@@ -1,0 +1,55 @@
+/* ==========================================================
+   トップページ専用（style.css の後に読み込む）
+   ========================================================== */
+
+/* ヒーロー: スマホでも h1 をセクション見出し（30px）より小さくしない。リードは本文の18px */
+.home .hero__title { font-size: clamp(30px, 8.6vw, 36px); }
+.home .hero__lead { font-size: 18px; }
+@media (max-width: 599px) { .home .hero__text { padding-bottom: 72px; } }
+
+/* 画像の注記: 12px以上で、どの幅でも検索ピル（ヒーロー下端に28px重なる）に隠れない高さに置く */
+.home .hero__caption { bottom: 36px; padding: 3px 8px; font-size: 13px; line-height: 1.4; }
+
+/* 検索ピルの下半分を次の帯と同じ背景にして、ヒーローと帯の間の白い筋をなくす */
+.home .hero__search { max-width: none; padding: 0 16px; background: linear-gradient(transparent 28px, var(--c-bg-blue) 28px); }
+.home .hero__search form { max-width: 688px; margin: 0 auto; }
+
+/* 語のまとまり。狭い幅ではこの単位で改行し、「す。」だけが次の行に落ちるような折り返しを防ぐ */
+.home .wseg { display: inline-block; }
+
+/* 見出しの補足・導線の文字（補足16px以上・本文18px） */
+.home .sec-head__eyebrow { font-size: 16px; }
+.home .band--blue .sec-head__eyebrow { color: var(--c-text); }
+.home .sec-more { font-size: 18px; }
+.home .news b { font-size: 18px; }
+
+/* 条件ナビ（東急「電車に乗る」型: 48px のピクトグラム＋ラベル）。4列×2段、スマホは2列。
+   320px でもはみ出さないよう列幅を minmax(0,1fr) にし、長いラベルは語のまとまり（.wseg）の間でだけ折り返す */
+.home .pictonav { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+@media (min-width: 760px) { .home .pictonav { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; } }
+.home .pictonav a { height: 100%; gap: 8px; min-height: 140px; padding: 18px 8px 14px; font-size: 18px; white-space: normal; overflow-wrap: anywhere; }
+.home .pictonav a .ico { margin-bottom: 4px; }
+.pictonav__count { min-height: 1.5em; font-size: 16px; font-weight: 400; line-height: 1.5; color: var(--c-sub); }
+.home .pictonav__group { font-size: 16px; color: var(--c-text); }
+.home .pictonav__group--next { margin-top: 24px; }
+
+/* 掲載機種のカード: 機種ごとに違う公開情報（出力・対応素材、公開されていれば価格帯）を出す */
+/* 枠は li（.card）の1重だけにする（機種一覧の .pcard と同じ形。内側のリンクにも枠があると二重になり、スマホで文字幅が狭まる） */
+.home .card a { border: 0; box-shadow: none; padding: 0; background: none; }
+.home .card .ph--card { aspect-ratio: 4 / 3; }
+.home .card .ph-img--card { width: 100%; aspect-ratio: 4 / 3; object-fit: contain; background: #EEF1F3; border: 1px solid var(--c-line); border-radius: var(--radius-s); margin-bottom: 8px; }
+.home .card__maker { font-size: 16px; }
+.card__spec { margin: 4px 0 0; font-size: 16px; line-height: 1.5; }
+.card__spec > span { color: var(--c-sub); }
+.card__spec .nw { white-space: nowrap; }
+
+/* 右カラム: メニュー一覧は PC の主要ナビ。スマホはヘッダーのメニューとフッターがあるので出さず、相談の箱だけ残す */
+.home .side .rows__title { font-size: 18px; }
+.home .side .rows__meta { font-size: 16px; white-space: normal; overflow: visible; }
+.home .side .box--consult { margin-top: 20px; }
+.side-lead { margin: 0 0 12px; }
+.home .side-note { font-size: 16px; }
+@media (max-width: 899px) {
+  .home .side__menu { display: none; }
+  .home .side .box--consult { margin-top: 0; }
+}

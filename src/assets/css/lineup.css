@@ -1,0 +1,50 @@
+/* ==========================================================
+   機種一覧ページ専用（style.css の後に読み込む）
+   並び: 種類タブ → 検索 → 絞り込み（折りたたみ）→ 絞り込み中のチップ → 件数 → 一覧
+   ========================================================== */
+.sec-head__eyebrow { font-size: 16px; }
+
+/* 種類タブ。件数を添え、0件のタブは押せない見た目にする */
+#lineup .tabs { gap: 12px; margin: 0 0 16px; }
+#lineup .tabs button { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0 8px; font-size: 18px; }
+.tabs__n { font-size: 16px; font-weight: 400; }
+#lineup .tabs button:disabled { background: #fff; border-style: dashed; color: var(--c-sub); cursor: not-allowed; }
+
+/* 絞り込み欄（スマホは閉じた状態。押すと開く） */
+#lineup .filterbox { padding: 0; margin: 0 0 16px; }
+.filterbox summary { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 56px; padding: 8px 16px; font-weight: 700; cursor: pointer; list-style: none; }
+.filterbox summary::-webkit-details-marker { display: none; }
+.filterbox summary .ico--chev { width: 22px; height: 22px; color: var(--c-main-dark); transform: rotate(90deg); }
+.filterbox[open] summary .ico--chev { transform: rotate(-90deg); }
+.filterbox__n { margin-left: 4px; font-size: 16px; font-weight: 400; }
+.filterbox__note { margin: 0 16px 16px; font-size: 16px; color: var(--c-text); }
+#lineup .filter { padding: 0 16px; margin: 0 0 20px; }
+#lineup .filter__title { font-size: 18px; color: var(--c-text); }
+
+/* チップ（件数つき）。押した状態は濃い青緑の枠＋黒文字、0件は点線で押せない */
+#lineup .chips button { font-size: 18px; min-height: 56px; }
+.chips__n { font-size: 16px; font-weight: 400; color: var(--c-sub); }
+#lineup .chips button[aria-pressed="true"] { border-color: var(--c-main-dark); background: var(--c-main-light); color: var(--c-text); }
+#lineup .chips button[aria-pressed="true"] .ico { color: var(--c-main-dark); }
+#lineup .chips button[aria-pressed="true"] .chips__n { color: var(--c-text); }
+#lineup .chips button:disabled { background: #fff; border-style: dashed; color: var(--c-sub); cursor: not-allowed; }
+
+/* 絞り込み中の条件（URL で渡された条件も含む）。× で1つずつ外せる */
+.active { margin: 0 0 4px; }
+.active[hidden] { display: none; }
+.active__title { margin: 0 0 8px; font-weight: 700; }
+.active__chips button[data-remove] { border-color: var(--c-main-dark); background: var(--c-main-light); color: var(--c-text); }
+.active__chips button .ico { display: block; width: 18px; height: 18px; color: var(--c-main-dark); }
+.active__chips .active__clear { border-radius: var(--radius-s); }
+
+/* 件数と一覧 */
+#lineup .tabpanel { padding: 16px 0 20px; }
+#lineup .result-count { font-size: 18px; color: var(--c-text); }
+.grid .empty { grid-column: 1 / -1; padding: 32px 16px; background: #fff; border: 1px solid var(--c-line); border-radius: 16px; color: var(--c-text); }
+.grid .empty p { margin: 0; }
+.grid .empty .btn { width: auto; margin: 16px auto 0; padding: 8px 24px; }
+.pcard__maker { font-size: 16px; }
+.pcard__spec { margin: 4px 0 0; font-size: 16px; line-height: 1.5; }
+.pcard__spec > span { color: var(--c-sub); }
+.pcard__spec .nw { white-space: nowrap; }
+.pcard .ph-img--card { width: 100%; aspect-ratio: 4 / 3; object-fit: contain; background: #EEF1F3; border: 1px solid var(--c-line); border-radius: var(--radius); margin-bottom: 8px; }

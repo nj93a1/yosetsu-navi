@@ -10,14 +10,15 @@
   <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/assets/css/style.css?v=9">
+  <link rel="stylesheet" href="/assets/css/lineup.css?v=1">
   <title>機種一覧｜レーザー溶接機 比較・選定</title>
-  <meta name="description" content="レーザー溶接機の機種一覧。種類・素材・価格帯で絞り込み、機種名やメーカー名で検索できます。">
+  <meta name="description" content="レーザー溶接機の機種一覧。種類・用途・素材・板厚・価格帯で絞り込み、機種名やメーカー名で検索できます。">
 </head>
 <body>
 <div id="siteHeader"></div>
 <main class="section">
   <div class="wrap">
-    <div class="sec-head sec-head--ico"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-lineup"></use></svg><span class="sec-head__eyebrow">機種名で検索するか、素材・価格帯・種類で絞り込めます</span><h1>機種一覧</h1></div>
+    <div class="sec-head sec-head--ico"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-lineup"></use></svg><span class="sec-head__eyebrow">種類・用途・素材などで絞り込めます</span><h1>機種一覧</h1></div>
     <div id="lineup"></div>
     <div class="info" style="margin-top:28px"><p>どれを選べばよいか迷ったら、<a href="/diagnosis/">5つの質問で選ぶ診断</a>をお試しください。</p></div>
   </div>
@@ -25,9 +26,9 @@
 <div id="siteFooter"></div>
 <script type="module">
   import { mountChrome } from "/assets/js/partials.js?v=9";
-  import { mountLineup } from "/assets/js/lineup.js?v=9";
+  import { mountLineup } from "/assets/js/lineup.js?v=10";
   mountChrome({ current: "/lineup/" });
-  mountLineup(document.getElementById("lineup"), { full: true });
+  mountLineup(document.getElementById("lineup"));
 </script>
 </body>
 </html>
