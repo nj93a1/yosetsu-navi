@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "dev": "wrangler dev",
-    "deploy": "wrangler deploy",
+    "build": "node scripts/build-seed.js",
+    "deploy": "npm run build && wrangler deploy",
     "test": "node --test",
     "validate": "node scripts/build-seed.js --check",
     "seed:build": "node scripts/build-seed.js",
