@@ -37,7 +37,7 @@
           "id": "steel",
           "label": "鉄・ステンレス",
           "sub": "SS400、SUS304 など",
-          "image": "material-steel",
+          "icon": "steel",
           "match": {
             "mode": "any",
             "tags": [
@@ -51,7 +51,7 @@
           "id": "alcu",
           "label": "アルミ・銅",
           "sub": "A5052、C1100 など",
-          "image": "material-alcu",
+          "icon": "alcu",
           "match": {
             "mode": "any",
             "tags": [
@@ -65,7 +65,7 @@
           "id": "ti",
           "label": "チタン・特殊",
           "sub": "チタン、マグネシウム",
-          "image": "material-ti",
+          "icon": "vacuum",
           "match": {
             "mode": "any",
             "tags": [
@@ -79,7 +79,7 @@
           "id": "multi",
           "label": "複数の素材",
           "sub": "鉄もアルミも扱う",
-          "image": "material-multi",
+          "icon": "material",
           "match": {
             "mode": "min_count",
             "tags": [
@@ -110,7 +110,7 @@
           "id": "thin",
           "label": "薄板",
           "sub": "3mm 以下",
-          "image": "thickness-thin",
+          "icon": "thin",
           "match": {
             "mode": "any",
             "tags": [
@@ -124,7 +124,7 @@
           "id": "mid",
           "label": "中厚",
           "sub": "3〜6mm",
-          "image": "thickness-mid",
+          "icon": "mid",
           "match": {
             "mode": "any",
             "tags": [
@@ -137,20 +137,29 @@
           "id": "thick",
           "label": "厚物",
           "sub": "6mm 以上",
-          "image": "thickness-thick",
+          "icon": "thick",
           "match": {
             "mode": "any",
             "tags": [
               "6mm以上"
             ]
           },
-          "reason": "厚物に対応"
+          "reason": "厚物に対応",
+          "relaxPrefer": {
+            "_comment": "厚物に合う機種が無いときは、3〜6mm に対応する機種を近い候補として薄板専用機より先に出す",
+            "mode": "any",
+            "tags": [
+              "3〜6mm"
+            ],
+            "reason": "3〜6mm まで対応",
+            "note": "板厚は、3〜6mm に対応する機種を先に表示しています。"
+          }
         },
         {
           "id": "mixed",
           "label": "混在",
           "sub": "薄いものも厚いものも",
-          "image": "thickness-mixed",
+          "icon": "mixed",
           "match": {
             "mode": "min_count",
             "tags": [
@@ -161,7 +170,18 @@
             ],
             "min": 3
           },
-          "reason": "幅広い板厚に対応"
+          "reason": "幅広い板厚に対応",
+          "relaxPrefer": {
+            "_comment": "混在に合う機種が無いときは、薄板と3〜6mm の両方に対応する機種を近い候補として先に出す",
+            "mode": "min_count",
+            "tags": [
+              "0.5〜3mm",
+              "3〜6mm"
+            ],
+            "min": 2,
+            "reason": "薄板と3〜6mm に対応",
+            "note": "板厚は、薄板と3〜6mm の両方に対応する機種を先に表示しています。"
+          }
         },
         {
           "id": "unknown",
@@ -187,7 +207,12 @@
               "熟練者向け"
             ]
           },
-          "reason": "熟練者の技能を活かせる"
+          "reason": "熟練者も扱える",
+          "reasonByTag": {
+            "未経験可": "未経験でも扱える",
+            "経験者向け": "経験者向け",
+            "熟練者向け": "熟練者向け"
+          }
         },
         {
           "id": "novice",
@@ -200,7 +225,11 @@
               "経験者向け"
             ]
           },
-          "reason": "新人でも扱いやすい"
+          "reason": "新人でも扱いやすい",
+          "reasonByTag": {
+            "未経験可": "新人でも扱いやすい",
+            "経験者向け": "経験者向け"
+          }
         },
         {
           "id": "beginner",
@@ -322,7 +351,8 @@
     }
   ],
   "relax": {
-    "_comment": "完全一致ゼロのとき、この順で条件を1つずつ「わからない」扱いにして再検索する",
+    "_comment": "完全一致ゼロのとき、回答した条件を1つだけ「わからない」扱いにして再検索する。pick: most_matched = 条件を1つずつ外したときの一致件数を比べ、最も多く残る条件を外す（同数なら order の順）/ first = order の順で、1件でも一致が出た最初の条件を外す",
+    "pick": "most_matched",
     "order": [
       "price",
       "environment",
@@ -337,7 +367,8 @@
     "minKnownRatio": 0.5
   },
   "slots": {
-    "_comment": "1〜3枠: 適合度順 / 4枠: 専門用途 / 5枠: 価格重視",
+    "_comment": "1〜3枠: 適合度順 / 4枠: 専門用途 / 5枠: 価格重視。maxPerMaker: TOP5 に同じメーカーの機種を何台まで入れるか（特定メーカーに偏らないため。上限に達したメーカーの機種は飛ばして次の候補を出す）",
+    "maxPerMaker": 2,
     "specialty": {
       "material": [
         "アルミ",
