@@ -2,6 +2,8 @@
 // 診断スコアリングはクライアント側（src/assets/js/scoring.js）で行い、
 // Worker は D1 の「商品マスタ」と「診断ログ」だけを扱う。
 
+import { allocateAlternatives, productKind } from "./alternatives.js";
+
 const json = (data, status = 200) =>
   new Response(JSON.stringify(data), { status, headers: { "content-type": "application/json; charset=utf-8" } });
 const html = (body, status = 200) =>
@@ -76,20 +78,18 @@ async function safeJson(request) {
 }
 
 function hostOf(u) { try { return new URL(u).host; } catch { return u; } }
+/** ドメイン名の HTML。「.」の後でだけ折り返し、末尾の「amada.co.jp」「hsglaser.com」などは分けない */
+function hostHtml(u) {
+  const labels = hostOf(u).split(".");
+  const keep = labels.length >= 3 && /^(co|or|ne|ac|go|lg|ed)$/.test(labels[labels.length - 2]) ? 3 : 2;
+  const parts = [...labels.slice(0, -keep).map((l) => `${l}.`), labels.slice(-keep).join(".")];
+  return parts.map((x) => `<span class="nowrap">${esc(x)}</span>`).join("<wbr>");
+}
 function rowToProduct(r) {
   return { ...r, suitable_for: JSON.parse(r.suitable_for || "[]"), not_suitable_for: JSON.parse(r.not_suitable_for || "[]"), handled_by_operator: !!r.handled_by_operator };
 }
 
 const icon = (name, cls = "ico") => `<svg class="${cls}" aria-hidden="true"><use href="/assets/icons.svg#i-${name}"></use></svg>`;
-
-/** 機種の種類（src/assets/js/partials.js の productKind と同じ規則）。方式の先頭が「ハンド」ならハンドヘルド */
-function productKind(p) {
-  const m = p.method || "";
-  if (/^ハンド/.test(m)) return "handheld";
-  if (/ロボット|ライン/.test(m)) return "robot";
-  if (/据置|真空|チャンバー/.test(m)) return "fixed";
-  return "handheld";
-}
 
 /** 商品写真（partials.js の productPhoto と同じ HTML）。実写真が無いときは青緑のタイル＋種類のピクトグラム */
 function productPhoto(p, variant = "card") {
@@ -103,62 +103,67 @@ function splitMaker(name = "") {
   return m ? [m[1], m[2]] : [name, ""];
 }
 
-/** 出力の表示。output_note（例: 最大ピーク出力）があれば括弧で添える */
-function outputText(p) {
-  if (!p.output_w) return "";
-  return `${Number(p.output_w).toLocaleString("ja-JP")} W${p.output_note ? `（${p.output_note}）` : ""}`;
-}
-
-/** 0〜1 の重なり（共通タグ数 ÷ 和集合のタグ数） */
-function overlap(a = [], b = []) {
-  if (!a.length || !b.length) return 0;
-  const s = new Set(a);
-  const shared = b.filter((x) => s.has(x)).length;
-  return shared / (a.length + b.length - shared);
-}
-
 /**
- * 代替候補（最大2件。同じメーカーの機種は出さず、1メーカー1機種まで）
- * 1. 価格帯が公開されていれば、同じ価格帯の機種を出力の近い順に
- * 2. 足りなければ、用途タグ（用途が非公開なら素材タグ）の重なりが大きい順、同じなら出力の近い順に
- * 3. 用途も素材も非公開なら、同じ種類で出力の近い機種
+ * 語の途中で折り返さないための HTML。語のまとまりの境目にだけ <wbr> を入れ、全体を .kw（word-break: keep-all）で囲む。
+ * word-break: auto-phrase は Chrome だけで iPhone の Safari では効かないため、この方法にしている。
+ * 境目は、漢字⇔カタカナ・カタカナ→英数字の切り替わり、括弧の前、ひらがなや句読点（、。・／：｜）の後、空白。
+ * 漢字と英数字、英数字→カタカナは一続きにする（「最大2.8mm」「200〜400万円」「10mトーチ」を分けない）。
+ * 「WEL-KEN」「0.5〜1.5mm」のようなハイフン・波線入りの英数字は、記号の後でも折り返さないよう .nowrap で囲む。
+ * 「／」「｜」は行頭に来ないよう、直前に U+2060（改行させない印）を入れる。
+ * 1つのまとまりが行より長いときは、CSS の overflow-wrap: anywhere で折り返す（横にはみ出さない）。
  */
-function pickAlternatives(p, tags, others, tagsOf) {
-  const gap = (o) => (p.output_w && o.output_w ? Math.abs(o.output_w - p.output_w) : Infinity);
-  const nearer = (a, b) => (gap(a) - gap(b)) || String(a.id).localeCompare(String(b.id));
-  const pool = others.filter((o) => o.maker_slug !== p.maker_slug);
-  const picked = [];
-  const take = (list, basis) => {
-    for (const o of list) {
-      if (picked.length >= 2) return;
-      if (picked.some((x) => x.o.maker_slug === o.maker_slug)) continue;
-      picked.push({ o, basis });
+function kw(text) {
+  const s = String(text ?? "");
+  if (!s) return "";
+  const kind = (c) =>
+    /[\p{Script=Han}々〆ヶ]/u.test(c) ? "kanji"
+    : /[\p{Script=Katakana}ー]/u.test(c) && c !== "・" ? "kana"
+    : /[A-Za-z0-9０-９Ａ-Ｚａ-ｚ.,%+〜～~-]/.test(c) ? "alnum"
+    : /[（「『【〈《(\[]/.test(c) ? "open"
+    : /\s/.test(c) ? "space"
+    : "tail"; // ひらがな・閉じ括弧・句読点・記号（前の語に付ける）
+  const parts = [];
+  let cur = "", prev = null;
+  for (const c of s) {
+    const k = kind(c);
+    let cut = false;
+    if (cur && k !== "tail" && k !== "space") {
+      if (k === "open") cut = prev !== "open";
+      else if (prev === "tail" || prev === "space") cut = true;
+      else if (prev !== "open" && k !== prev) cut = k === "alnum" ? prev === "kana" : prev !== "alnum";
     }
-  };
-  if (p.price_band) take(pool.filter((o) => o.price_band === p.price_band).sort(nearer), "price");
-  const axis = (tags.use || []).length ? "use" : (tags.material || []).length ? "material" : null;
-  if (axis) {
-    const scored = pool
-      .map((o) => {
-        const t = tagsOf.get(o.id) || {};
-        return { o, s: overlap(tags[axis], t[axis]), mat: overlap(tags.material, t.material) };
-      })
-      .filter((x) => x.s > 0)
-      .sort((a, b) => (b.s - a.s) || (gap(a.o) - gap(b.o)) || (b.mat - a.mat) || String(a.o.id).localeCompare(String(b.o.id)));
-    take(scored.map((x) => x.o), axis);
-  } else if (!picked.length && p.output_w) {
-    take(pool.filter((o) => o.output_w && productKind(o) === productKind(p)).sort(nearer), "output");
+    if (cut) { parts.push(cur); cur = ""; }
+    cur += c;
+    prev = k;
   }
-  return picked;
+  if (cur) parts.push(cur);
+  const keep = (t) => esc(t)
+    .replace(/[A-Za-z0-9][A-Za-z0-9.,]*(?:[-〜～~][A-Za-z0-9][A-Za-z0-9.,]*)+/g, (m) => `<span class="nowrap">${m}</span>`)
+    .replace(/[／｜]/g, "&#8288;$&"); // 「／」「｜」の前で折り返さない（U+2060 で前の語に付ける）
+  return `<span class="kw">${parts.map(keep).join("<wbr>")}</span>`;
 }
 
-function altsHeading(p, picked) {
-  const bases = new Set(picked.map((x) => x.basis));
-  const what = bases.has("material") ? "対応素材" : "用途";
-  if (bases.has("price") && bases.size === 1) return ["同じ価格帯の代替候補", `同じ価格帯（${p.price_band}）で、メーカーが異なる機種です。`];
-  if (bases.has("price")) return ["代替候補", `同じ価格帯（${p.price_band}）の機種と、${what}が近い機種です。いずれもメーカーが異なります。`];
-  if (bases.has("output")) return ["出力が近い候補", "用途や対応素材が公開されていないため、出力が近く、メーカーが異なる機種を出しています。"];
-  return [`${what}が近い候補`, `${what}が近く、メーカーが異なる機種です。`];
+/** 出力の表示。[値, 注記]（例: ["2,000 W", "最大ピーク出力"]）。output_note が無ければ注記は "" */
+function outputParts(p) {
+  if (!p.output_w) return ["", ""];
+  return [`${Number(p.output_w).toLocaleString("ja-JP")} W`, p.output_note || ""];
+}
+/** 出力の HTML。「項目名＋値」は折り返さず、注記は括弧付きで語のまとまりごとに折り返す */
+function outputHtml(p, label = "", bold = false) {
+  const [v, note] = outputParts(p);
+  if (!v) return "";
+  return `<span class="nowrap">${esc(label)}${bold ? `<b>${esc(v)}</b>` : esc(v)}</span>${note ? `<wbr>${kw(`（${note}）`)}` : ""}`;
+}
+
+function altsHeading(p, tags, picked) {
+  const hasPrice = picked.some((x) => x.basis === "price");
+  const onlyPrice = picked.every((x) => x.basis === "price");
+  const tagPart = [(tags.use || []).length ? "用途" : "", (tags.material || []).length ? "対応素材" : ""].filter(Boolean).join("・");
+  const basis = tagPart && p.output_w ? `${tagPart}と出力` : tagPart || "出力";
+  if (onlyPrice) return ["同じ価格帯の代替候補", `同じ価格帯（${p.price_band}）で、メーカーが異なる機種です。`];
+  if (hasPrice) return ["代替候補", `同じ価格帯（${p.price_band}）の機種と、${basis}の近さをもとに選んだ機種です。いずれもメーカーが異なります。`];
+  if (!tagPart) return ["代替候補", "用途や対応素材が公開されていないため、出力の近さをもとに選んだ、メーカーが異なる機種です。"];
+  return ["代替候補", `${basis}の近さをもとに選んだ、メーカーが異なる機種です。`];
 }
 
 // 商品詳細ページ: /products/{maker_slug}-{model_slug}/
@@ -167,8 +172,9 @@ async function productPage(env, slug) {
   const row = await env.DB.prepare("SELECT * FROM products WHERE slug = ? AND is_published = 1").bind(slug).first();
   if (!row) return notFoundPage(true);
   const p = rowToProduct(row);
-  const [{ results: others }, { results: tagRows }] = await env.DB.batch([
-    env.DB.prepare("SELECT * FROM products WHERE is_published = 1 AND id <> ? ORDER BY id").bind(p.id),
+  const [{ results: all }, { results: tagRows }] = await env.DB.batch([
+    // 列を名指ししない（output_note・thickness_note の列がまだ無い D1 でも動くように）
+    env.DB.prepare("SELECT * FROM products WHERE is_published = 1 ORDER BY id"),
     env.DB.prepare("SELECT t.product_id, t.axis, t.tag FROM product_tags t JOIN products p ON p.id = t.product_id WHERE p.is_published = 1 ORDER BY t.rowid"),
   ]);
   const tagsOf = new Map();
@@ -178,41 +184,51 @@ async function productPage(env, slug) {
     tagsOf.set(t.product_id, m);
   }
   const tags = tagsOf.get(p.id) || {};
-  const alts = pickAlternatives(p, tags, others, tagsOf);
+  // 代替候補は公開中の全ページ分をまとめて割り当てる（特定のメーカーに偏らないように。worker/alternatives.js）
+  const alts = allocateAlternatives(all, tagsOf).get(p.id) || [];
   const [maker, makerAgent] = splitMaker(p.maker_name);
   const NA = "非公開";
 
-  const li = (arr) => arr.length ? arr.map((x) => `<li>${esc(x)}</li>`).join("") : `<li class="fit__none">メーカーの公開情報に記載はありません</li>`;
+  const li = (arr) => arr.length ? arr.map((x) => `<li>${kw(x)}</li>`).join("") : `<li class="fit__none">${kw("メーカーの公開情報に記載はありません")}</li>`;
 
-  // スペック表。メーカーが公開していない項目は「非公開」を実値と区別できる見た目（.is-na）で出す
-  const thickness = (tags.thickness || []).join("・");
-  const thicknessRows = thickness && p.thickness_note
-    ? [["対応板厚", thickness], ["公表値", p.thickness_note, "sub"]]
-    : [["対応板厚", thickness || p.thickness_note]];
+  // スペック表。メーカーが公開していない項目は「非公開」を実値と区別できる見た目（.is-na）で出す。
+  // 板厚はメーカーの公表値（thickness_note）を出す。診断用の板厚区分（product_tags）は、公表値が無いときだけ行名を分けて出す
+  const thicknessTags = (tags.thickness || []).join("・");
+  const thicknessRows = [["板厚の公表値", p.thickness_note && kw(p.thickness_note)]];
+  if (!p.thickness_note && thicknessTags) thicknessRows.push(["板厚の区分（診断用）", kw(thicknessTags)]);
   const spec = [
-    ["方式", p.method], ["波長", p.wavelength], ["出力", outputText(p)], ["可搬性", p.portability],
-    ["対応素材", (tags.material || []).join("・")], ...thicknessRows,
-    ["使用環境", (tags.environment || []).join("・")], ["価格帯", p.price_band], ["習得難易度", p.skill_level],
-  ].map(([k, v, mod]) => `<div class="spec__row${mod ? ` spec__row--${mod}` : ""}"><dt>${esc(k)}</dt>${v ? `<dd>${esc(v)}</dd>` : `<dd class="is-na">${NA}</dd>`}</div>`).join("");
+    ["方式", kw(p.method)], ["波長", kw(p.wavelength)], ["出力", outputHtml(p)], ["可搬性", kw(p.portability)],
+    ["対応素材", kw((tags.material || []).join("・"))], ...thicknessRows,
+    ["使用環境", kw((tags.environment || []).join("・"))], ["価格帯", kw(p.price_band)], ["習得難易度", kw(p.skill_level)],
+  ].map(([k, v]) => `<div class="spec__row"><dt>${kw(k)}</dt>${v ? `<dd>${v}</dd>` : `<dd class="is-na">${NA}</dd>`}</div>`).join("");
 
   // 頭の帯: 公開されている値を先に、非公開の項目は後ろに控えめに
-  const bandItems = [["出力", outputText(p)], ["価格帯", p.price_band], ["習得難易度", p.skill_level]];
+  const bandItems = [
+    ["出力", outputHtml(p, "出力：", true)],
+    ["価格帯", p.price_band && `<span class="nowrap">価格帯：<b>${esc(p.price_band)}</b></span>`],
+    ["習得難易度", p.skill_level && `<span class="nowrap">習得難易度：<b>${esc(p.skill_level)}</b></span>`],
+  ];
   const band = [...bandItems.filter(([, v]) => v), ...bandItems.filter(([, v]) => !v)]
-    .map(([k, v]) => v ? `<span>${k}：<b>${esc(v)}</b></span>` : `<span class="is-na">${k}：${NA}</span>`).join("");
+    .map(([k, v]) => v ? `<span>${v}</span>` : `<span class="is-na nowrap">${k}：${NA}</span>`).join("");
 
   const newWin = `<span class="nowrap">（別ウィンドウで開く）</span>`;
   const links = [
-    p.official_url ? `<li><a href="${esc(p.official_url)}" target="_blank" rel="noopener">${icon("external")}<span class="pnav__label">メーカー公式の商品ページ<span class="pnav__sub">${esc(hostOf(p.official_url))}${newWin}</span></span>${icon("chevron", "ico ico--chev")}</a></li>` : "",
-    p.source_url && p.source_url !== p.official_url ? `<li><a href="${esc(p.source_url)}" target="_blank" rel="noopener">${icon("doc")}<span class="pnav__label">情報源：${esc(p.source || "資料")}<span class="pnav__sub">${esc(hostOf(p.source_url))}${newWin}</span></span>${icon("chevron", "ico ico--chev")}</a></li>` : "",
+    p.official_url ? `<li><a href="${esc(p.official_url)}" target="_blank" rel="noopener">${icon("external")}<span class="pnav__label">${kw("メーカー公式の商品ページ")}<span class="pnav__sub">${hostHtml(p.official_url)}${newWin}</span></span>${icon("chevron", "ico ico--chev")}</a></li>` : "",
+    p.source_url && p.source_url !== p.official_url ? `<li><a href="${esc(p.source_url)}" target="_blank" rel="noopener">${icon("doc")}<span class="pnav__label">${kw(`情報源：${p.source || "資料"}`)}<span class="pnav__sub">${hostHtml(p.source_url)}${newWin}</span></span>${icon("chevron", "ico ico--chev")}</a></li>` : "",
   ].join("");
 
   let altsSection = "";
   if (alts.length) {
-    const [altTitle, altNote] = altsHeading(p, alts);
-    altsSection = `<section class="subsec" id="alts"><h2>${esc(altTitle)}</h2><p class="alts__note">${esc(altNote)}</p>
+    const [altTitle, altNote] = altsHeading(p, tags, alts);
+    altsSection = `<section class="subsec" id="alts"><h2>${kw(altTitle)}</h2><p class="alts__note">${kw(altNote)}</p>
     <ul class="pnav">${alts.map(({ o }) => {
-      const sub = [splitMaker(o.maker_name)[0], o.output_w ? `出力 ${outputText(o)}` : "", o.price_band ? `価格帯 ${o.price_band}` : "", o.handled_by_operator ? "運営元で取り扱い" : ""].filter(Boolean).join("｜");
-      return `<li><a href="/products/${esc(o.slug)}/">${icon(productKind(o))}<span class="pnav__label">${esc(o.name)}<span class="pnav__sub">${esc(sub)}</span></span>${icon("chevron", "ico ico--chev")}</a></li>`;
+      const sub = [
+        kw(splitMaker(o.maker_name)[0]),
+        outputHtml(o, "出力 "),
+        o.price_band ? `<span class="nowrap">価格帯 ${esc(o.price_band)}</span>` : "",
+        o.handled_by_operator ? `<span class="nowrap">運営元で取り扱い</span>` : "",
+      ].filter(Boolean).join("&#8288;｜<wbr>"); // U+2060（改行させない印）で「｜」を前の項目に付け、行頭に来ないようにする
+      return `<li><a href="/products/${esc(o.slug)}/">${icon(productKind(o))}<span class="pnav__label">${kw(o.name)}<span class="pnav__sub">${sub}</span></span>${icon("chevron", "ico ico--chev")}</a></li>`;
     }).join("")}</ul></section>`;
   }
 
@@ -221,30 +237,30 @@ async function productPage(env, slug) {
   <li><a href="#top" aria-current="true">概要</a></li><li><a href="#spec">スペック</a></li><li><a href="#fit">向き不向き</a></li><li><a href="#links">公式情報</a></li>
 </ul></nav>
 <main class="narrow product">
-  <nav class="crumbs" aria-label="パンくず"><a href="/">トップ</a> › <a href="/lineup/">機種一覧</a> › <span>${esc(p.name)}</span></nav>
+  <nav class="crumbs" aria-label="パンくず"><a href="/">トップ</a> › <a href="/lineup/">機種一覧</a> › <span>${kw(p.name)}</span></nav>
   <section class="product__intro" id="top">
     <div class="product__top">
       <div class="product__head">
         ${p.handled_by_operator ? `<span class="badge">運営元で取り扱い</span>` : ""}
-        <h1>${esc(p.name)}</h1>
-        <p class="product__maker">${esc(maker)}${makerAgent ? `<span class="product__agent">${esc(makerAgent)}</span>` : ""}</p>
+        <h1>${kw(p.name)}</h1>
+        <p class="product__maker">${kw(maker)}${makerAgent ? `<span class="product__agent">${kw(makerAgent)}</span>` : ""}</p>
         <div class="product__band">${band}</div>
       </div>
       ${productPhoto(p, "product")}
     </div>
-    <h2>選定コメント</h2><p class="comment">${esc(p.comment)}</p>
+    <h2>${kw("選定コメント")}</h2><p class="comment">${kw(p.comment)}</p>
   </section>
   <section class="subsec" id="spec"><h2>スペック</h2><dl class="spec">${spec}</dl></section>
-  <section class="subsec" id="fit"><h2>向いている用途・向いていない用途</h2>
-    <div class="fit"><div class="ok"><h3>向いている</h3><ul>${li(p.suitable_for)}</ul></div><div class="ng"><h3>向いていない</h3><ul>${li(p.not_suitable_for)}</ul></div></div></section>
+  <section class="subsec" id="fit"><h2>${kw("向いている用途・向いていない用途")}</h2>
+    <div class="fit"><div class="ok"><h3>${kw("向いている")}</h3><ul>${li(p.suitable_for)}</ul></div><div class="ng"><h3>${kw("向いていない")}</h3><ul>${li(p.not_suitable_for)}</ul></div></div></section>
   ${altsSection}
-  <section class="subsec" id="links"><h2>メーカー公式・情報源</h2>
+  <section class="subsec" id="links"><h2>${kw("メーカー公式・情報源")}</h2>
     ${links ? `<ul class="pnav">${links}</ul>` : ""}
-    <p class="src">掲載内容は${esc(p.source || "公開情報")}に基づきます。価格帯や対応板厚など、メーカーが公開していない項目は「非公開」としています。</p>
+    <p class="src">${kw("掲載内容は")}${kw(p.source || "公開情報")}${kw("に基づきます。価格帯や板厚など、メーカーが公開していない項目は「非公開」としています。")}</p>
   </section>
   <div class="cta">
-    <a class="btn btn--primary" href="/diagnosis/">${icon("diag")}診断でほかの候補も見る</a>
-    <a class="btn btn--accent" href="/contact/?product=${esc(p.slug)}">${icon("consult")}この機種について相談する</a>
+    <a class="btn btn--primary" href="/diagnosis/">${icon("diag")}${kw("診断でほかの候補も見る")}</a>
+    <a class="btn btn--accent" href="/contact/?product=${esc(p.slug)}">${icon("consult")}${kw("この機種について相談する")}</a>
   </div>
 </main>
 <script>
@@ -279,8 +295,8 @@ function notFoundPage(isProduct = false) {
   const body = `
 <main class="section page-msg">
   <div class="narrow">
-    <div class="sec-head"><h1>${h1}</h1><span class="sec-head__eyebrow">${lead}</span></div>
-    <p>機種一覧から探すか、5つの質問に答えて現場に合う機種を絞り込めます。</p>
+    <div class="sec-head"><h1>${kw(h1)}</h1><span class="sec-head__eyebrow">${kw(lead)}</span></div>
+    <p>${kw("機種一覧から探すか、5つの質問に答えて現場に合う機種を絞り込めます。")}</p>
     <div class="cta">
       <a class="btn btn--primary" href="/lineup/">${icon("lineup")}機種一覧へ</a>
       <a class="btn" href="/diagnosis/">${icon("diag")}5つの質問で選ぶ</a>
@@ -295,8 +311,8 @@ function errorPage() {
   const body = `
 <main class="section page-msg">
   <div class="narrow">
-    <div class="sec-head"><h1>ただいま表示できません</h1><span class="sec-head__eyebrow">機種の情報を読み込めませんでした。</span></div>
-    <p>しばらく時間をおいて、もう一度お試しください。</p>
+    <div class="sec-head"><h1>${kw("ただいま表示できません")}</h1><span class="sec-head__eyebrow">${kw("機種の情報を読み込めませんでした。")}</span></div>
+    <p>${kw("しばらく時間をおいて、もう一度お試しください。")}</p>
     <div class="cta">
       <a class="btn btn--primary" href="/lineup/">${icon("lineup")}機種一覧へ</a>
       <a class="btn" href="/diagnosis/">${icon("diag")}5つの質問で選ぶ</a>
@@ -311,7 +327,7 @@ function pageShell(title, body, { current = "/lineup/" } = {}) {
 <meta name="robots" content="noindex,nofollow"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><meta property="og:type" content="website"><meta property="og:site_name" content="レーザー溶接機 比較・選定"><meta property="og:title" content="${esc(title)}"><meta property="og:image" content="https://yosetsu-navi.jolly-frost-2311.workers.dev/assets/images/ogp.jpg"><meta name="twitter:card" content="summary_large_image"><title>${esc(title)}｜${SITE_NAME}</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/css/style.css?v=11"><link rel="stylesheet" href="/assets/css/product.css?v=11"></head><body>
+<link rel="stylesheet" href="/assets/css/style.css?v=11"><link rel="stylesheet" href="/assets/css/product.css?v=12"></head><body>
 <div id="siteHeader"></div>
 ${body}
 <div id="siteFooter"></div>

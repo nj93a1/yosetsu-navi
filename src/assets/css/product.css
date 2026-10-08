@@ -7,19 +7,26 @@
 html { scroll-padding-top: 0; }
 .product section[id] { scroll-margin-top: 134px; }
 
-/* 語の途中で折り返さない（メーカー名・機種名・補足） */
+/* 語の途中で折り返さない（メーカー名・機種名・補足）。
+   worker の kw() が語のまとまりの境目に <wbr> を入れて .kw で囲む。keep-all は Safari でも効く（auto-phrase は Chrome だけ）。
+   1つのまとまりが行より長いときだけ、overflow-wrap: anywhere で折り返して横にはみ出さないようにする */
 .product { word-break: auto-phrase; overflow-wrap: anywhere; }
+.kw { word-break: keep-all; overflow-wrap: anywhere; }
+.nowrap { white-space: nowrap; }
 /* 長い語句で表や行の幅が広がらないように（320px 幅で横にはみ出さない） */
 .product .spec__row { grid-template-columns: 7.5em minmax(0, 1fr); }
 .product .pnav a { grid-template-columns: 48px minmax(0, 1fr) 24px; }
 .product p, .product dd, .product li, .product h1, .product h2 { text-wrap: pretty; }
-.product .nowrap { white-space: nowrap; }
 
 /* ページ内メニュー: 本文（.narrow）と同じ幅・同じ左右位置。高さ56px・文字16px */
 .subnav ul { max-width: var(--narrow); padding: 0 16px; }
 .subnav a { min-height: var(--btn-h); padding: 4px 2px; font-size: 16px; white-space: nowrap; }
-/* 幅 360px 未満では4等分だと「向き不向き」が入らないので、文字の幅に合わせて並べる */
-@media (max-width: 359px) { .subnav ul { grid-template-columns: repeat(4, auto); justify-content: space-between; } .subnav a { padding: 4px 4px; } }
+/* 幅 360px 未満では4等分だと「向き不向き」が入らないので、文字の幅に合わせて並べる。
+   どのタブも幅56px以上、タブの間は12px以上あける（左右の余白を8pxにして間隔にまわす） */
+@media (max-width: 359px) {
+  .subnav ul { padding: 0 8px; grid-template-columns: repeat(4, auto); justify-content: space-between; column-gap: 12px; }
+  .subnav a { min-width: 56px; padding: 4px 0; }
+}
 
 /* パンくず: 16px、上下に余白をとって押しやすく */
 .crumbs { font-size: 16px; padding: 4px 0 0; line-height: 1.6; }
@@ -38,10 +45,6 @@ html { scroll-padding-top: 0; }
 .product__band .is-na { color: var(--c-sub); }
 .spec dd.is-na { color: var(--c-sub); font-weight: 400; }
 
-/* 対応板厚の下の「公表値」行（対応板厚の続きとして罫線を付けない） */
-.spec__row--sub { border-top: 0; padding-top: 0; }
-.spec__row--sub dt { padding-left: 1em; }
-
 /* 写真タイル（productPhoto の product）。スマホは横幅いっぱい、PC は頭の情報と横並び */
 .ph--product small { font-size: 16px; color: var(--c-text); }
 .ph-img--product { width: 100%; aspect-ratio: 16 / 9; object-fit: contain; margin: 12px 0 20px; background: #EEF1F3; border: 1px solid var(--c-line); border-radius: 16px; }
@@ -57,6 +60,7 @@ html { scroll-padding-top: 0; }
 .product .fit__none { font-size: 18px; }
 .alts__note { font-size: 16px; color: var(--c-sub); margin: -8px 0 4px; }
 
-/* 404・500 の案内ページ（見出しを語の途中で折り返さない） */
+/* 404・500 の案内ページ（見出しを語の途中で折り返さない。案内文は16px以上） */
 .page-msg { word-break: auto-phrase; }
 .page-msg h1 { text-wrap: balance; }
+.page-msg .sec-head__eyebrow { font-size: 16px; }
