@@ -3,23 +3,28 @@
   "axes": {
     "material": {
       "label": "素材",
-      "weight": 3
+      "weight": 3,
+      "unknownLabel": "対応素材"
     },
     "thickness": {
       "label": "板厚",
-      "weight": 3
+      "weight": 3,
+      "unknownLabel": "対応板厚"
     },
     "skill": {
       "label": "使用者",
-      "weight": 2
+      "weight": 2,
+      "unknownLabel": "習得難易度"
     },
     "environment": {
       "label": "環境",
-      "weight": 2
+      "weight": 2,
+      "unknownLabel": "使用環境"
     },
     "price": {
       "label": "予算",
-      "weight": 2
+      "weight": 2,
+      "unknownLabel": "価格帯"
     }
   },
   "questions": [

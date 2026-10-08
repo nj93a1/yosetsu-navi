@@ -54,7 +54,7 @@ export function scoreProduct(config, resolved, product) {
   const unknowns = []; // メーカー非公開で判定できなかった軸のラベル
   for (const { axis, option } of resolved) {
     if (neutral && !axisKnown(product, axis)) {
-      unknowns.push(config.axes[axis].label);
+      unknowns.push(config.axes[axis].unknownLabel || config.axes[axis].label);
       continue;
     }
     const ok = optionMatches(option, product);

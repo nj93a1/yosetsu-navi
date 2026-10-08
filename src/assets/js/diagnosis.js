@@ -85,6 +85,7 @@ function renderQuestion(i) {
   h(`
     <p class="question__no">質問 ${i + 1} / ${N()}</p>
     <h1>${esc(q.title)}</h1>
+    ${i === 0 && location.hash === "#compare" ? `<div class="info"><p>2台の比較は、診断結果のおすすめ5台から選べます。まず5つの質問に答えてください。</p></div>` : ""}
     <p class="question__help">あてはまるものを1つ押してください。</p>
     <ul class="pnav pnav--choices">
       ${q.options.map((o) => `
