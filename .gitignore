@@ -29,3 +29,4 @@ npm-debug.log*
 seed.sql
 .wrangler/
 .dev.vars
+.claude/worktrees/
