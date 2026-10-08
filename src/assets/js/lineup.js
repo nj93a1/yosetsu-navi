@@ -13,12 +13,14 @@ export const CATEGORIES = [
 ];
 
 // 絞り込みの軸（URL のパラメータ名＝key）。values は商品データ仕様のタグ語彙で、チップとして並べる順。
+// 公開機種に1件も無い値のチップは出さない（keepEmpty の価格帯だけは0件でも並べ、押せない見た目にする）。
 // values が空の軸はチップを出さず、URL で渡されたときだけ「絞り込み中」に出す。同じ軸の中は「どれかに一致」
+// 用途の「厚物」はチップにしない。該当機種は板厚「3〜6mm」と同じで、診断の「厚物（6mm以上）」と呼び方が食い違うため、板厚の軸で探してもらう
 export const AXES = [
-  { key: "use", label: "用途", tag: "use", values: ["薄板接合", "厚物", "異材接合", "補修", "自動化"], names: { 自動化: "ロボット・自動化" } },
+  { key: "use", label: "用途", tag: "use", values: ["薄板接合", "異材接合", "補修", "自動化"], names: { 自動化: "ロボット・自動化" } },
   { key: "material", label: "素材", tag: "material", values: ["鉄", "ステンレス", "アルミ", "銅", "チタン", "マグネシウム"] },
   { key: "thickness", label: "板厚", tag: "thickness", values: ["0.5mm未満", "0.5〜3mm", "3〜6mm", "6mm以上"] },
-  { key: "price", label: "価格帯", tag: "price", values: ["100万円未満", "100〜200万円", "200〜400万円", "400〜600万円", "600万円以上"] },
+  { key: "price", label: "価格帯", tag: "price", values: ["100万円未満", "100〜200万円", "200〜400万円", "400〜600万円", "600万円以上"], keepEmpty: true },
   { key: "skill", label: "使う人", tag: "skill", values: [], names: { 未経験可: "未経験から使える" } },
   { key: "env", label: "使う場所", tag: "environment", values: [] },
 ];
@@ -57,21 +59,24 @@ export function filterProducts(products, st) {
     && AXES.every((a) => !st[a.key].size || tagsOf(p, a).some((t) => st[a.key].has(t))));
 }
 
+/** 機種名。型番がハイフンの位置（「FH-／PULSE」など）で切れないよう、空白で区切った語ごとに包む（.nseg は inline-block） */
+export const nameHtml = (name) => String(name ?? "").trim().split(/\s+/).map((w) => `<span class="nseg">${esc(w)}</span>`).join(" ");
+
 /** カードのスペック行（出力・対応素材・価格帯）。price:"known" のときは価格帯が公開されている機種だけ出す */
 export function specLines(p, cls, { price = "always" } = {}) {
-  // 素材名の途中（「アル／ミ」など）で改行しないよう、1語ずつ nowrap で包む
+  // 「2,000／W」や素材名の途中（「アル／ミ」など）で改行しないよう、値を nowrap で包む
   const lines = [
-    ["出力", esc(p.output_w ? `${p.output_w.toLocaleString()} W` : "非公開")],
+    ["出力", p.output_w ? `<span class="nw">${esc(`${p.output_w.toLocaleString()} W`)}</span>` : "非公開"],
     ["対応素材", p.tags.material.length ? p.tags.material.map((m) => `<span class="nw">${esc(m)}</span>`).join("・") : "非公開"],
   ];
-  if (p.tags.price[0] || price === "always") lines.push(["価格帯", esc(p.tags.price[0] || "非公開")]);
+  if (p.tags.price[0] || price === "always") lines.push(["価格帯", p.tags.price[0] ? `<span class="nseg">${esc(p.tags.price[0])}</span>` : "非公開"]);
   return lines.map(([k, v]) => `<p class="${cls}"><span>${k}</span> <b>${v}</b></p>`).join("");
 }
 
 export function card(p) {
   return `<li class="pcard"><a href="/products/${esc(productSlug(p))}/">
     ${productPhoto(p, "card")}
-    <p class="pcard__name">${esc(p.name)}</p>
+    <p class="pcard__name">${nameHtml(p.name)}</p>
     <p class="pcard__maker">${esc(p.maker_name)}</p>
     ${specLines(p, "pcard__spec")}
     ${p.handled_by_operator ? `<span class="badge">運営元で取り扱い</span>` : ""}
@@ -82,10 +87,14 @@ export function card(p) {
 export async function mountLineup(root) {
   const products = await loadProducts();
   const st = parseState(new URLSearchParams(location.search));
-  const groups = AXES.filter((a) => a.values.length);
+  // チップに出す値: 公開機種にある値だけ（価格帯は全部）
+  const groups = AXES.map((a) => ({ ...a, values: a.keepEmpty ? a.values : a.values.filter((v) => products.some((p) => tagsOf(p, a).includes(v))) }))
+    .filter((a) => a.values.length);
+  // 種類タブ: 条件なしで0件の種類は出さない（URL の ?cat= で選ばれたときだけ、選んだ状態で出して外せるようにする）
+  const hasAny = Object.fromEntries(CATEGORIES.map((c) => [c.id, c.id === "all" || products.some(c.test)]));
 
   root.innerHTML = `
-    <ul class="tabs" role="tablist" aria-label="機種の種類">${CATEGORIES.map((c) => `<li role="presentation"><button role="tab" type="button" data-cat="${c.id}" aria-selected="${c.id === st.cat}" aria-controls="lineupPanel">${c.label}<span class="tabs__n"></span></button></li>`).join("")}</ul>
+    <ul class="tabs" role="tablist" aria-label="機種の種類">${CATEGORIES.map((c) => `<li role="presentation" data-tab="${c.id}"><button role="tab" type="button" data-cat="${c.id}" aria-selected="${c.id === st.cat}" aria-controls="lineupPanel">${c.label}<span class="tabs__n"></span></button></li>`).join("")}</ul>
     <form class="search" role="search" id="searchForm">
       <label class="sr" for="q">機種名・メーカー名で探す</label>
       <input id="q" type="search" placeholder="機種名・メーカー名で探す" autocomplete="off" enterkeyhint="search">
@@ -112,13 +121,20 @@ export async function mountLineup(root) {
   const draw = () => {
     const list = filterProducts(products, st);
 
+    let shown = 0;
     root.querySelectorAll("[role=tab]").forEach((b) => {
       const n = filterProducts(products, { ...st, cat: b.dataset.cat }).length;
       const on = b.dataset.cat === st.cat;
+      const li = b.closest("li");
+      li.hidden = !on && !hasAny[b.dataset.cat];
+      if (!li.hidden) shown++;
       b.setAttribute("aria-selected", String(on));
       b.querySelector(".tabs__n").textContent = String(n);
       b.disabled = !on && n === 0;
     });
+    const tabs = root.querySelector(".tabs");
+    tabs.style.setProperty("--tabs-n", String(shown));
+    tabs.classList.toggle("tabs--odd", shown % 2 === 1);
 
     // チップの件数は「ほかの条件はそのままで、この値だけを選んだとき」の数。0件のチップは押せない
     root.querySelectorAll(".filterbox [data-axis]").forEach((b) => {
@@ -135,7 +151,7 @@ export async function mountLineup(root) {
     if (st.cat !== "all") items.push({ key: "cat", v: st.cat, text: `種類：${CATEGORIES.find((c) => c.id === st.cat).label}` });
     if (st.q) items.push({ key: "q", v: "", text: `検索：${st.q}` });
     for (const a of AXES) for (const v of st[a.key]) items.push({ key: a.key, v, text: `${a.label}：${valueName(a, v)}` });
-    const picked = AXES.reduce((n, a) => n + (a.values.length ? st[a.key].size : 0), 0);
+    const picked = groups.reduce((n, a) => n + a.values.filter((v) => st[a.key].has(v)).length, 0);
     root.querySelector("#filterN").textContent = picked ? `（${picked}件 選択中）` : "";
     active.hidden = !items.length;
     active.innerHTML = items.length ? `<p class="active__title">絞り込み中</p>
