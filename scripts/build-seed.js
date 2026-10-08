@@ -7,7 +7,7 @@
 //    `npm run build`（または seed:build / db:seed:local）で書き出し直す。notes・pending・実売価格などの内部情報は配信用に出さない。
 //
 //   node scripts/build-seed.js          → 検証して seed.sql と src/data/products.json を書き出す
-//   node scripts/build-seed.js --check  → 検証のみ（マスタを読む。配信用 JSON が古ければ警告）
+//   node scripts/build-seed.js --check  → 検証のみ（マスタを読む。配信用 JSON がマスタと一致しなければ exit 1）
 // 将来の CSV 一括更新は「CSV → data/products.json → 本スクリプト」の経路で D1 とクライアントJSONを同期する。
 import { readFileSync, writeFileSync, existsSync } from "node:fs";
 
@@ -53,10 +53,12 @@ for (const p of products) {
 const publicProducts = products
   .filter((p) => p.is_published !== false)
   .map((p) => Object.fromEntries(PUBLIC_FIELDS.filter((k) => p[k] !== undefined).map((k) => [k, p[k]])));
-// 実売価格（「税込」「〇〇円」）が公開項目に紛れ込んでいないか。価格は価格帯タグだけを出す
+// 実売価格（「税込」「〇〇円」「〇〇万円」「〇千円」）が公開項目に紛れ込んでいないか。価格は価格帯タグだけを出す
+// （tags は「200〜400万円」などの価格帯区分なので対象外）
+const PRICE_RE = /税込|税別|[0-9０-９][0-9０-９,，.．]*\s*(万|千)?円/;
 for (const p of publicProducts) {
   const text = JSON.stringify({ ...p, tags: undefined });
-  if (/税込|税別|[0-9０-９,，]+円/.test(text)) errors.push(`${p.id}: 公開項目に実売価格らしき記載がある（価格は価格帯タグのみ）`);
+  if (PRICE_RE.test(text)) errors.push(`${p.id}: 公開項目に実売価格らしき記載がある（価格は価格帯タグのみ）`);
 }
 const publicJson = JSON.stringify(publicProducts, null, 2) + "\n";
 
@@ -68,12 +70,16 @@ if (errors.length) {
   console.error("検証エラー:\n  " + errors.join("\n  "));
   process.exit(1);
 }
-console.log(`検証OK: ${products.length} 商品（公開 ${published}）/ 平均タグ数 ${avg.toFixed(1)}`);
 if (process.argv.includes("--check")) {
-  if (!existsSync(PUBLIC_JSON) || readFileSync(PUBLIC_JSON, "utf8") !== publicJson)
-    console.warn("警告: src/data/products.json がマスタと一致しない。`npm run build` で書き出し直す");
+  // 配信用 JSON を手で直した・マスタを直して build し忘れた、のどちらも deploy 時に上書きされて食い違うので失敗にする
+  if (!existsSync(PUBLIC_JSON) || readFileSync(PUBLIC_JSON, "utf8") !== publicJson) {
+    console.error("検証エラー: src/data/products.json がマスタ data/products.json と一致しない。編集はマスタで行い、`npm run build` で書き出し直す");
+    process.exit(1);
+  }
+  console.log(`検証OK: ${products.length} 商品（公開 ${published}）/ 平均タグ数 ${avg.toFixed(1)} / 配信用 JSON はマスタと一致`);
   process.exit(0);
 }
+console.log(`検証OK: ${products.length} 商品（公開 ${published}）/ 平均タグ数 ${avg.toFixed(1)}`);
 
 const q = (v) => (v == null ? "NULL" : `'${String(v).replace(/'/g, "''")}'`);
 const lines = ["-- 自動生成: scripts/build-seed.js（手で編集しない。元データは data/products.json）", "DELETE FROM product_tags;", "DELETE FROM products;"];
