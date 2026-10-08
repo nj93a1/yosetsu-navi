@@ -1,0 +1,62 @@
+/* ==========================================================
+   商品詳細ページ（worker/index.js の productPage / 404 / 500）
+   style.css の後に読み込み、商品詳細だけの指定を上書きする
+   ========================================================== */
+
+/* ページ内リンクの止まる位置は各節の scroll-margin-top で決める（固定ヘッダー 65px＋ページ内メニュー 57px＋余白） */
+html { scroll-padding-top: 0; }
+.product section[id] { scroll-margin-top: 134px; }
+
+/* 語の途中で折り返さない（メーカー名・機種名・補足） */
+.product { word-break: auto-phrase; overflow-wrap: anywhere; }
+/* 長い語句で表や行の幅が広がらないように（320px 幅で横にはみ出さない） */
+.product .spec__row { grid-template-columns: 7.5em minmax(0, 1fr); }
+.product .pnav a { grid-template-columns: 48px minmax(0, 1fr) 24px; }
+.product p, .product dd, .product li, .product h1, .product h2 { text-wrap: pretty; }
+.product .nowrap { white-space: nowrap; }
+
+/* ページ内メニュー: 本文（.narrow）と同じ幅・同じ左右位置。高さ56px・文字16px */
+.subnav ul { max-width: var(--narrow); padding: 0 16px; }
+.subnav a { min-height: var(--btn-h); padding: 4px 2px; font-size: 16px; white-space: nowrap; }
+/* 幅 360px 未満では4等分だと「向き不向き」が入らないので、文字の幅に合わせて並べる */
+@media (max-width: 359px) { .subnav ul { grid-template-columns: repeat(4, auto); justify-content: space-between; } .subnav a { padding: 4px 4px; } }
+
+/* パンくず: 16px、上下に余白をとって押しやすく */
+.crumbs { font-size: 16px; padding: 4px 0 0; line-height: 1.6; }
+.crumbs a { display: inline-block; padding: 12px 2px; }
+
+/* 見出しは24px以上（style.css の .subsec h2 22px を上書き） */
+.product h2, .product .subsec h2 { font-size: 24px; }
+.product__intro > h2 { margin-top: 28px; }
+
+/* メーカー名: 国内代理店・販売元は改行して補足として出す */
+.product__maker { margin: 0 0 12px; }
+.product__agent { display: block; font-size: 16px; }
+
+/* 頭の帯: 18px。非公開の項目は実値と区別する（灰色・細字） */
+.product__band span { font-size: 18px; }
+.product__band .is-na { color: var(--c-sub); }
+.spec dd.is-na { color: var(--c-sub); font-weight: 400; }
+
+/* 対応板厚の下の「公表値」行（対応板厚の続きとして罫線を付けない） */
+.spec__row--sub { border-top: 0; padding-top: 0; }
+.spec__row--sub dt { padding-left: 1em; }
+
+/* 写真タイル（productPhoto の product）。スマホは横幅いっぱい、PC は頭の情報と横並び */
+.ph--product small { font-size: 16px; color: var(--c-text); }
+.ph-img--product { width: 100%; aspect-ratio: 16 / 9; object-fit: contain; margin: 12px 0 20px; background: #EEF1F3; border: 1px solid var(--c-line); border-radius: 16px; }
+@media (min-width: 760px) {
+  .product__top { display: grid; grid-template-columns: 280px minmax(0, 1fr); gap: 0 24px; align-items: center; margin: 12px 0 0; }
+  .product__top > .product__head { grid-column: 2; grid-row: 1; padding: 0; }
+  .product__top > .ph--product, .product__top > .ph-img--product { grid-column: 1; grid-row: 1; aspect-ratio: 4 / 3; margin: 0; }
+}
+
+/* 補足の文字は16px以上 */
+.product .pnav__sub { font-size: 16px; }
+.product .src { font-size: 16px; }
+.product .fit__none { font-size: 18px; }
+.alts__note { font-size: 16px; color: var(--c-sub); margin: -8px 0 4px; }
+
+/* 404・500 の案内ページ（見出しを語の途中で折り返さない） */
+.page-msg { word-break: auto-phrase; }
+.page-msg h1 { text-wrap: balance; }
