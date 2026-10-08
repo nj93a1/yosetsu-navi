@@ -561,3 +561,8 @@ mark { background: linear-gradient(transparent 55%, var(--c-marker) 55%); color:
   .hnav a[aria-current="page"] { background: var(--c-main-light); color: var(--c-main-dark); }
   body:not(.home) .header__tools { margin-left: 8px; }
 }
+
+/* 写真タイルの大きさ（productPhoto の variant） */
+.ph--result { width: 112px; height: 84px; flex: none; }
+.ph--result .ico { width: 36px; height: 36px; }
+.ph--compare { width: 100%; aspect-ratio: 4 / 3; margin-bottom: 8px; }

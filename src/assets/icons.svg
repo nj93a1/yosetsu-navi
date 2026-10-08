@@ -55,4 +55,8 @@
   <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></symbol>
   <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></symbol>
   <!-- 旧名の互換 -->
+  <symbol id="i-mid" viewBox="0 0 24 24" fill="currentColor"><path d="M2 9.5h13v5H2zM17 7h5v2h-1.5v6H22v2h-5v-2h1.5V9H17z"/></symbol>
+  <symbol id="i-mixed" viewBox="0 0 24 24" fill="currentColor"><path d="M2 15h5.5v2H2zM9 12.5h5.5v5H9zM16 9h6v9.5h-6zM2 20h20v1.5H2z"/></symbol>
+  <symbol id="i-external" viewBox="0 0 24 24" fill="currentColor"><path d="M5 5h6v2H7v10h10v-4h2v6H5zM13 3h8v8h-2V6.4l-7.3 7.3-1.4-1.4L17.6 5H13z"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24" fill="currentColor"><path d="M6 2h9l5 5v15H6zm8 1.6V8h4.4zM8.5 11v1.5h9V11zm0 3.5V16h9v-1.5zm0 3.5v1.5h6V18z"/></symbol>
 </svg>

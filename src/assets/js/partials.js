@@ -1,5 +1,22 @@
 // ヘッダー・フッター・下部固定バーの共通パーツ（全ページで同じものを出す）
 const ICONS = "/assets/icons.svg";
+const escHtml = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+
+/** 機種の種類（ピクトグラムの選択用）。方式の先頭が「ハンド」ならハンドヘルド（ロボット接続対応の手持ち機を含む） */
+export function productKind(p) {
+  const m = p.method || "";
+  if (/^ハンド/.test(m)) return "handheld";
+  if (/ロボット|ライン/.test(m)) return "robot";
+  if (/据置|真空|チャンバー/.test(m)) return "fixed";
+  return "handheld";
+}
+
+/** 商品写真。実写真が無いときは青緑のタイル＋種類のピクトグラム（variant: card / row / result / compare / product） */
+export function productPhoto(p, variant = "card") {
+  if (p.image && !p.image.includes("placeholder")) return `<img class="ph-img ph-img--${variant}" src="${escHtml(p.image)}" alt="" loading="lazy">`;
+  return `<span class="ph ph--${variant}" role="img" aria-label="${escHtml(p.name)}の写真は準備中"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-${productKind(p)}"></use></svg><small>写真 準備中</small></span>`;
+}
+
 export const icon = (name, cls = "ico") => `<svg class="${cls}" aria-hidden="true"><use href="${ICONS}#i-${name}"></use></svg>`;
 
 export function header(current = "") {
