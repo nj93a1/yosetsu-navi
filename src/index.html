@@ -9,8 +9,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/assets/css/style.css?v=11">
-  <link rel="stylesheet" href="/assets/css/home.css?v=12">
+  <link rel="stylesheet" href="/assets/css/style.css?v=13">
+  <link rel="stylesheet" href="/assets/css/home.css?v=13">
   <title>レーザー溶接機 比較・選定｜5つの質問で現場に合う1台を</title>
   <meta name="description" content="レーザー溶接機を素材・板厚・使う人・場所・予算の5問で選定する中立的な比較サイト。ハンドヘルドから自動化ライン組込まで、他社製品を含めて比較できます。">
   <meta property="og:type" content="website">
@@ -81,7 +81,7 @@
 
     <section class="section">
       <div class="sec-head sec-head--ico"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-lineup"></use></svg><span class="sec-head__eyebrow">掲載しているメーカーから1機種ずつ紹介します</span><h2>掲載機種</h2></div>
-      <ul class="cards" id="newCards"></ul>
+      <ul class="pgrid pgrid--home" id="newCards"></ul>
       <a class="sec-more" href="/lineup/">掲載機種の一覧へ<svg class="ico ico--chev" aria-hidden="true"><use href="/assets/icons.svg#i-chevron"></use></svg></a>
     </section>
   </main>
@@ -104,11 +104,31 @@
   </aside>
 </div>
 
+<section class="opband" aria-labelledby="opbandTitle">
+  <div class="wrap">
+    <div class="opband__head">
+      <h2 id="opbandTitle">導入前の不安は、実機と専門スタッフで解消</h2>
+      <p>本サイトの運営元（レーザー溶接機の販売事業者）が、導入の相談に対応しています。<a href="/about/">運営者について</a></p>
+    </div>
+    <ul class="opband__list">
+      <li><span class="opband__ico"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-handheld"></use></svg></span><b>テスト溶接</b><span>ワーク例の提示や、テスト溶接による検証に対応します</span></li>
+      <li><span class="opband__ico"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-factory"></use></svg></span><b>現場でのデモ</b><span>現場で実機のデモを行い、使い勝手を確かめられます</span></li>
+      <li><span class="opband__ico"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-yen"></use></svg></span><b>補助金・助成金の活用相談</b><span>活用支援チームが、補助金・助成金を使った導入を支援します</span></li>
+      <li><span class="opband__ico"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-work"></use></svg></span><b>修理・トラブル対応</b><span>取り扱い機は、開発元として修理とトラブル対応まで一貫して受けられます</span></li>
+    </ul>
+    <div class="opband__cta">
+      <a class="btn btn--accent" href="/contact/?type=test">テスト溶接・デモを相談する</a>
+      <a class="btn btn--outline-white" href="/contact/?type=subsidy">補助金の活用を相談する</a>
+    </div>
+    <p class="opband__note">テスト溶接・デモは、運営元が取り扱う機種で行います。</p>
+  </div>
+</section>
+
 <div id="siteFooter"></div>
 <script type="module">
-  import { mountChrome, productPhoto } from "/assets/js/partials.js?v=11";
-  import { productSlug } from "/assets/js/scoring.js?v=11";
-  import { loadProducts, parseState, filterProducts, specLines, nameHtml } from "/assets/js/lineup.js?v=12";
+  import { mountChrome, productPhoto } from "/assets/js/partials.js?v=13";
+  import { productSlug } from "/assets/js/scoring.js?v=13";
+  import { loadProducts, parseState, filterProducts, card } from "/assets/js/lineup.js?v=13";
   mountChrome({ current: "/", withBottombar: false });
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const products = await loadProducts();
@@ -126,7 +146,7 @@
   const byMaker = new Map();
   for (const p of products) if (!byMaker.has(p.maker_slug) || known(p) > known(byMaker.get(p.maker_slug))) byMaker.set(p.maker_slug, p);
   const picks = [...byMaker.values()].sort((a, b) => known(b) - known(a)).slice(0, 9);
-  document.getElementById("newCards").innerHTML = picks.map((p) => `<li class="card"><a href="/products/${esc(productSlug(p))}/">${productPhoto(p, "card")}<p class="card__name">${nameHtml(p.name)}</p><p class="card__maker">${esc(p.maker_name)}</p>${specLines(p, "card__spec", { price: "known" })}${p.handled_by_operator ? '<span class="chip">運営元で取り扱い</span>' : ""}</a></li>`).join("");
+  document.getElementById("newCards").innerHTML = picks.map(card).join("");
 </script>
 </body>
 </html>

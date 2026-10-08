@@ -86,7 +86,8 @@ function hostHtml(u) {
   return parts.map((x) => `<span class="nowrap">${esc(x)}</span>`).join("<wbr>");
 }
 function rowToProduct(r) {
-  return { ...r, suitable_for: JSON.parse(r.suitable_for || "[]"), not_suitable_for: JSON.parse(r.not_suitable_for || "[]"), handled_by_operator: !!r.handled_by_operator };
+  const arr = (v) => { try { return JSON.parse(v || "[]"); } catch { return []; } };
+  return { ...r, suitable_for: arr(r.suitable_for), not_suitable_for: arr(r.not_suitable_for), features: arr(r.features), support: arr(r.support), spec_rows: arr(r.spec_rows), handled_by_operator: !!r.handled_by_operator };
 }
 
 const icon = (name, cls = "ico") => `<svg class="${cls}" aria-hidden="true"><use href="/assets/icons.svg#i-${name}"></use></svg>`;
@@ -199,13 +200,14 @@ async function productPage(env, slug) {
   const spec = [
     ["方式", kw(p.method)], ["波長", kw(p.wavelength)], ["出力", outputHtml(p)], ["可搬性", kw(p.portability)],
     ["対応素材", kw((tags.material || []).join("・"))], ...thicknessRows,
-    ["使用環境", kw((tags.environment || []).join("・"))], ["価格帯", kw(p.price_band)], ["習得難易度", kw(p.skill_level)],
+    ["使用環境", kw((tags.environment || []).join("・"))], ["価格帯", p.price_band ? kw(p.price_band) : p.handled_by_operator ? `<a href="/contact/?type=quote&amp;product=${esc(p.slug)}">お問い合わせ</a>` : ""], ["習得難易度", kw(p.skill_level)],
+    ...(p.spec_rows || []).map(([k, v]) => [k, kw(v)]),
   ].map(([k, v]) => `<div class="spec__row"><dt>${kw(k)}</dt>${v ? `<dd>${v}</dd>` : `<dd class="is-na">${NA}</dd>`}</div>`).join("");
 
   // 頭の帯: 公開されている値を先に、非公開の項目は後ろに控えめに
   const bandItems = [
     ["出力", outputHtml(p, "出力：", true)],
-    ["価格帯", p.price_band && `<span class="nowrap">価格帯：<b>${esc(p.price_band)}</b></span>`],
+    ["価格帯", p.price_band ? `<span class="nowrap">価格帯：<b>${esc(p.price_band)}</b></span>` : p.handled_by_operator ? `<span class="nowrap">価格：<b>お問い合わせ</b></span>` : ""],
     ["習得難易度", p.skill_level && `<span class="nowrap">習得難易度：<b>${esc(p.skill_level)}</b></span>`],
   ];
   const band = [...bandItems.filter(([, v]) => v), ...bandItems.filter(([, v]) => !v)]
@@ -234,7 +236,7 @@ async function productPage(env, slug) {
 
   const body = `
 <nav class="subnav" aria-label="ページ内メニュー"><ul>
-  <li><a href="#top" aria-current="true">概要</a></li><li><a href="#spec">スペック</a></li><li><a href="#fit">向き不向き</a></li><li><a href="#links">公式情報</a></li>
+  <li><a href="#top" aria-current="true">概要</a></li><li><a href="#spec">スペック</a></li><li><a href="#fit">向き不向き</a></li><li><a href="#links">${p.handled_by_operator ? "資料" : "公式情報"}</a></li>
 </ul></nav>
 <main class="narrow product">
   <nav class="crumbs" aria-label="パンくず"><a href="/">トップ</a> › <a href="/lineup/">機種一覧</a> › <span>${kw(p.name)}</span></nav>
@@ -246,13 +248,25 @@ async function productPage(env, slug) {
         <p class="product__maker">${kw(maker)}${makerAgent ? `<span class="product__agent">${kw(makerAgent)}</span>` : ""}</p>
         <div class="product__band">${band}</div>
       </div>
-      ${productPhoto(p, "product")}
+      <figure class="product__fig">${productPhoto(p, "product")}${p.image_credit ? `<figcaption class="photo-credit">画像：${p.image_source ? `<a href="${esc(p.image_source)}" target="_blank" rel="noopener">${kw(p.image_credit)}</a>` : kw(p.image_credit)}</figcaption>` : ""}</figure>
     </div>
     <h2>${kw("選定コメント")}</h2><p class="comment">${kw(p.comment)}</p>
   </section>
+  ${(p.features || []).length ? `<section class="subsec" id="features"><h2>特長</h2><ul class="features">${p.features.map((f) => `<li>${icon("check")}<span>${kw(f)}</span></li>`).join("")}</ul></section>` : ""}
+  ${p.handled_by_operator && (p.support || []).length ? `<section class="subsec opsupport" id="support">
+    <h2>${kw("運営元のサポート")}</h2>
+    <p class="opsupport__lead">${kw("この機種は本サイトの運営元が取り扱っています。導入前の確認から導入後の修理まで、運営元が対応します。")}</p>
+    <ul class="opsupport__list">${p.support.map((x) => `<li>${icon("check")}<span>${kw(x)}</span></li>`).join("")}</ul>
+    <div class="opsupport__cta">
+      <a class="btn btn--accent" href="/contact/?type=test&amp;product=${esc(p.slug)}">${kw("テスト溶接・デモを相談する")}</a>
+      <a class="btn" href="/contact/?type=quote&amp;product=${esc(p.slug)}">${kw("見積もりを相談する")}</a>
+      <a class="btn" href="/contact/?type=subsidy&amp;product=${esc(p.slug)}">${kw("補助金の活用を相談する")}</a>
+    </div>
+  </section>` : ""}
   <section class="subsec" id="spec"><h2>スペック</h2><dl class="spec">${spec}</dl></section>
   <section class="subsec" id="fit"><h2>${kw("向いている用途・向いていない用途")}</h2>
     <div class="fit"><div class="ok"><h3>${kw("向いている")}</h3><ul>${li(p.suitable_for)}</ul></div><div class="ng"><h3>${kw("向いていない")}</h3><ul>${li(p.not_suitable_for)}</ul></div></div></section>
+  ${p.handled_by_operator ? "" : `<aside class="trybox">${icon("handheld", "ico trybox__ico")}<div><p class="trybox__title">${kw("実機で確かめたいとき")}</p><p>${kw("運営元が取り扱う機種で、テスト溶接やデモを相談できます。仕上がりを比べる参考にお使いください。")}</p><a class="btn" href="/contact/?type=test&amp;product=${esc(p.slug)}">${kw("テスト溶接・デモを相談する")}</a></div></aside>`}
   ${altsSection}
   <section class="subsec" id="links"><h2>${kw("メーカー公式・情報源")}</h2>
     ${links ? `<ul class="pnav">${links}</ul>` : ""}
@@ -260,7 +274,7 @@ async function productPage(env, slug) {
   </section>
   <div class="cta">
     <a class="btn btn--primary" href="/diagnosis/">${icon("diag")}${kw("診断でほかの候補も見る")}</a>
-    <a class="btn btn--accent" href="/contact/?product=${esc(p.slug)}">${icon("consult")}${kw("この機種について相談する")}</a>
+    <a class="btn btn--accent" href="/contact/?type=${p.handled_by_operator ? "quote" : "choose"}&amp;product=${esc(p.slug)}">${icon("consult")}${kw(p.handled_by_operator ? "見積もり・導入を相談する" : "この機種について相談する")}</a>
   </div>
 </main>
 <script>
@@ -327,10 +341,10 @@ function pageShell(title, body, { current = "/lineup/" } = {}) {
 <meta name="robots" content="noindex,nofollow"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><meta property="og:type" content="website"><meta property="og:site_name" content="レーザー溶接機 比較・選定"><meta property="og:title" content="${esc(title)}"><meta property="og:image" content="https://yosetsu-navi.jolly-frost-2311.workers.dev/assets/images/ogp.jpg"><meta name="twitter:card" content="summary_large_image"><title>${esc(title)}｜${SITE_NAME}</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/css/style.css?v=11"><link rel="stylesheet" href="/assets/css/product.css?v=12"></head><body>
+<link rel="stylesheet" href="/assets/css/style.css?v=13"><link rel="stylesheet" href="/assets/css/product.css?v=13"></head><body>
 <div id="siteHeader"></div>
 ${body}
 <div id="siteFooter"></div>
-<script type="module">import { mountChrome } from "/assets/js/partials.js?v=11"; mountChrome({ current: ${JSON.stringify(current)} });</script>
+<script type="module">import { mountChrome } from "/assets/js/partials.js?v=13"; mountChrome({ current: ${JSON.stringify(current)} });</script>
 </body></html>`;
 }

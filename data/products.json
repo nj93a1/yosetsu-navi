@@ -503,20 +503,14 @@
   },
   {
     "maker_slug": "uwjapan",
-    "maker_name": "UWJAPAN（ノースヒルズ溶接工業との国内共同開発）",
-    "method": "ハンド式ファイバーレーザ（第4世代）",
+    "maker_name": "UW JAPAN（ノースヒルズ溶接工業と国内共同開発）",
+    "method": "ハンドヘルド（ハンド式ファイバーレーザ・第4世代）",
     "wavelength": "1080nm ±10nm（シングルモード）",
-    "portability": "台車型",
+    "portability": "本体 220kg（冷却水含まず）。チラー内蔵で移動しやすい",
     "handled_by_operator": true,
-    "image": "/assets/images/products/placeholder.svg",
-    "source": "クライアントKB（NH｜技術力・設備）2026-09-18",
-    "is_published": false,
-    "pending": [
-      "価格帯: 未確定（確認事項1）",
-      "板厚タグ: 暫定（確認事項2）",
-      "屋外使用の可否: 未確認（確認事項4）",
-      "メーカー実名掲載: 未確認（確認事項5）"
-    ],
+    "image": "/assets/images/products/uwjapan-uw-sh.png",
+    "source": "ノースヒルズ溶接工業 公式サイト・提供資料",
+    "is_published": true,
     "id": "p101",
     "model_slug": "uw-sh500c",
     "name": "UW-SH500C",
@@ -551,8 +545,7 @@
       "溶接未経験者からの導入"
     ],
     "not_suitable_for": [
-      "6mm以上の厚物",
-      "屋外での使用（確認中）"
+      "6mm以上の厚物"
     ],
     "spec": {
       "fiber_length": "7m",
@@ -566,24 +559,86 @@
       "max_power_kw": 3.5,
       "max_current_a": 18,
       "weight_kg": 220
-    }
+    },
+    "output_note": "定格出力（CW）",
+    "features": [
+      "チラー内蔵で連続照射が可能。省スペースで移動しやすい",
+      "コントローラーは革手袋のまま操作でき、TIG と同じ調整ボリュームを搭載",
+      "トーチは発熱しにくい光学設計（特許申請中）で、従来比25%軽量",
+      "0.5mm程度の隙間まで対応",
+      "アルミ・銅など反射率の高い素材にも有効"
+    ],
+    "support": [
+      "開発元として、修理とトラブル対応まで一貫して対応",
+      "お手持ちのワークでのテスト溶接、ワーク例の提示、現場でのデモに対応",
+      "補助金・助成金の活用支援チームが導入を支援"
+    ],
+    "spec_rows": [
+      [
+        "ファイバコア径",
+        "14μm"
+      ],
+      [
+        "最大消費電力",
+        "3.5kW"
+      ],
+      [
+        "最大電流",
+        "18A（@200V-10%）"
+      ],
+      [
+        "質量（冷却水含まず）",
+        "220kg"
+      ],
+      [
+        "レーザ波長",
+        "1080nm ±10nm（シングルモード）"
+      ],
+      [
+        "出力安定度",
+        "±2%以内"
+      ],
+      [
+        "ファイバ長",
+        "7m"
+      ],
+      [
+        "レーザ分類",
+        "クラス4（JIS C6802）"
+      ],
+      [
+        "パルス幅",
+        "ショート 0.0〜900.0ms／ロング 0.00〜99.99s／CW"
+      ],
+      [
+        "変調機能",
+        "20〜10,000Hz（矩形波）"
+      ],
+      [
+        "入力電源",
+        "単相AC200V ±10%、50/60Hz"
+      ],
+      [
+        "外形寸法",
+        "W570 × D1050 × H1060mm"
+      ]
+    ],
+    "notes": "2026-10-09 公開。価格帯・板厚の上限・屋外使用の可否・UW JAPAN 名の掲載可否はクライアント確認中（社内メモ。配信しない）",
+    "image_credit": "ノースヒルズ溶接工業 公式サイト（UW-SH シリーズ共通の写真）",
+    "image_source": "https://nhillz-laser.com/",
+    "official_url": "https://nhillz-laser.com/",
+    "source_url": "https://nhillz-laser.com/"
   },
   {
     "maker_slug": "uwjapan",
-    "maker_name": "UWJAPAN（ノースヒルズ溶接工業との国内共同開発）",
-    "method": "ハンド式ファイバーレーザ（第4世代）",
+    "maker_name": "UW JAPAN（ノースヒルズ溶接工業と国内共同開発）",
+    "method": "ハンドヘルド（ハンド式ファイバーレーザ・第4世代）",
     "wavelength": "1080nm ±10nm（シングルモード）",
-    "portability": "台車型",
+    "portability": "本体 230kg（冷却水含まず）。チラー内蔵で移動しやすい",
     "handled_by_operator": true,
-    "image": "/assets/images/products/placeholder.svg",
-    "source": "クライアントKB（NH｜技術力・設備）2026-09-18",
-    "is_published": false,
-    "pending": [
-      "価格帯: 未確定（確認事項1）",
-      "板厚タグ: 暫定（確認事項2）",
-      "屋外使用の可否: 未確認（確認事項4）",
-      "メーカー実名掲載: 未確認（確認事項5）"
-    ],
+    "image": "/assets/images/products/uwjapan-uw-sh.png",
+    "source": "ノースヒルズ溶接工業 公式サイト・提供資料",
+    "is_published": true,
     "id": "p102",
     "model_slug": "uw-sh1000c",
     "name": "UW-SH1000C",
@@ -618,8 +673,7 @@
       "3〜6mmの中厚板"
     ],
     "not_suitable_for": [
-      "自動化ラインへの組込",
-      "屋外での使用（確認中）"
+      "自動化ラインへの組込"
     ],
     "spec": {
       "fiber_length": "7m",
@@ -633,24 +687,86 @@
       "max_power_kw": 7.5,
       "max_current_a": 35,
       "weight_kg": 230
-    }
+    },
+    "output_note": "定格出力（CW）",
+    "features": [
+      "チラー内蔵で連続照射が可能。省スペースで移動しやすい",
+      "コントローラーは革手袋のまま操作でき、TIG と同じ調整ボリュームを搭載",
+      "トーチは発熱しにくい光学設計（特許申請中）で、従来比25%軽量",
+      "0.5mm程度の隙間まで対応",
+      "アルミ・銅など反射率の高い素材にも有効"
+    ],
+    "support": [
+      "開発元として、修理とトラブル対応まで一貫して対応",
+      "お手持ちのワークでのテスト溶接、ワーク例の提示、現場でのデモに対応",
+      "補助金・助成金の活用支援チームが導入を支援"
+    ],
+    "spec_rows": [
+      [
+        "ファイバコア径",
+        "20μm"
+      ],
+      [
+        "最大消費電力",
+        "7.5kW"
+      ],
+      [
+        "最大電流",
+        "35A"
+      ],
+      [
+        "質量（冷却水含まず）",
+        "230kg"
+      ],
+      [
+        "レーザ波長",
+        "1080nm ±10nm（シングルモード）"
+      ],
+      [
+        "出力安定度",
+        "±2%以内"
+      ],
+      [
+        "ファイバ長",
+        "7m"
+      ],
+      [
+        "レーザ分類",
+        "クラス4（JIS C6802）"
+      ],
+      [
+        "パルス幅",
+        "ショート 0.0〜900.0ms／ロング 0.00〜99.99s／CW"
+      ],
+      [
+        "変調機能",
+        "20〜10,000Hz（矩形波）"
+      ],
+      [
+        "入力電源",
+        "単相AC200V ±10%、50/60Hz"
+      ],
+      [
+        "外形寸法",
+        "W570 × D1050 × H1060mm"
+      ]
+    ],
+    "notes": "2026-10-09 公開。価格帯・板厚の上限・屋外使用の可否・UW JAPAN 名の掲載可否はクライアント確認中（社内メモ。配信しない）",
+    "image_credit": "ノースヒルズ溶接工業 公式サイト（UW-SH シリーズ共通の写真）",
+    "image_source": "https://nhillz-laser.com/",
+    "official_url": "https://nhillz-laser.com/",
+    "source_url": "https://nhillz-laser.com/"
   },
   {
     "maker_slug": "uwjapan",
-    "maker_name": "UWJAPAN（ノースヒルズ溶接工業との国内共同開発）",
-    "method": "ハンド式ファイバーレーザ（第4世代）",
+    "maker_name": "UW JAPAN（ノースヒルズ溶接工業と国内共同開発）",
+    "method": "ハンドヘルド（ハンド式ファイバーレーザ・第4世代）",
     "wavelength": "1080nm ±10nm（シングルモード）",
-    "portability": "台車型",
+    "portability": "本体 240kg（冷却水含まず）。チラー内蔵で移動しやすい",
     "handled_by_operator": true,
-    "image": "/assets/images/products/placeholder.svg",
-    "source": "クライアントKB（NH｜技術力・設備）2026-09-18",
-    "is_published": false,
-    "pending": [
-      "価格帯: 未確定（確認事項1）",
-      "板厚タグ: 暫定（確認事項2）",
-      "屋外使用の可否: 未確認（確認事項4）",
-      "メーカー実名掲載: 未確認（確認事項5）"
-    ],
+    "image": "/assets/images/products/uwjapan-uw-sh.png",
+    "source": "ノースヒルズ溶接工業 公式サイト・提供資料",
+    "is_published": true,
     "id": "p103",
     "model_slug": "uw-sh1500c",
     "name": "UW-SH1500C",
@@ -683,13 +799,12 @@
     },
     "comment": "厚物まで視野に入れるならこの1500W。発熱しにくい軽量トーチで長時間作業の負担が少なく、開発元として修理・トラブル対応まで一貫して受けられます。",
     "suitable_for": [
-      "6mm以上の厚物",
+      "中厚板〜厚物",
       "多品種の素材",
       "自動化との併用"
     ],
     "not_suitable_for": [
-      "省電力での運用（最大消費電力9.0kW）",
-      "屋外での使用（確認中）"
+      "省電力での運用（最大消費電力9.0kW）"
     ],
     "spec": {
       "fiber_length": "7m",
@@ -703,7 +818,75 @@
       "max_power_kw": 9,
       "max_current_a": 45,
       "weight_kg": 240
-    }
+    },
+    "output_note": "定格出力（CW）",
+    "features": [
+      "チラー内蔵で連続照射が可能。省スペースで移動しやすい",
+      "コントローラーは革手袋のまま操作でき、TIG と同じ調整ボリュームを搭載",
+      "トーチは発熱しにくい光学設計（特許申請中）で、従来比25%軽量",
+      "0.5mm程度の隙間まで対応",
+      "アルミ・銅など反射率の高い素材にも有効"
+    ],
+    "support": [
+      "開発元として、修理とトラブル対応まで一貫して対応",
+      "お手持ちのワークでのテスト溶接、ワーク例の提示、現場でのデモに対応",
+      "補助金・助成金の活用支援チームが導入を支援"
+    ],
+    "spec_rows": [
+      [
+        "ファイバコア径",
+        "20μm"
+      ],
+      [
+        "最大消費電力",
+        "9.0kW"
+      ],
+      [
+        "最大電流",
+        "45A"
+      ],
+      [
+        "質量（冷却水含まず）",
+        "240kg"
+      ],
+      [
+        "レーザ波長",
+        "1080nm ±10nm（シングルモード）"
+      ],
+      [
+        "出力安定度",
+        "±2%以内"
+      ],
+      [
+        "ファイバ長",
+        "7m"
+      ],
+      [
+        "レーザ分類",
+        "クラス4（JIS C6802）"
+      ],
+      [
+        "パルス幅",
+        "ショート 0.0〜900.0ms／ロング 0.00〜99.99s／CW"
+      ],
+      [
+        "変調機能",
+        "20〜10,000Hz（矩形波）"
+      ],
+      [
+        "入力電源",
+        "単相AC200V ±10%、50/60Hz"
+      ],
+      [
+        "外形寸法",
+        "W570 × D1050 × H1060mm"
+      ]
+    ],
+    "notes": "2026-10-09 公開。価格帯・板厚の上限・屋外使用の可否・UW JAPAN 名の掲載可否はクライアント確認中（社内メモ。配信しない）",
+    "image_credit": "ノースヒルズ溶接工業 公式サイト（UW-SH シリーズ共通の写真）",
+    "image_source": "https://nhillz-laser.com/",
+    "official_url": "https://nhillz-laser.com/",
+    "source_url": "https://nhillz-laser.com/"
   },
   {
     "id": "p201",
@@ -750,9 +933,11 @@
       "銅（メーカーが対応不可としている）"
     ],
     "handled_by_operator": false,
-    "image": "/assets/images/products/placeholder.svg",
+    "image": "/assets/images/products/laserx-opticel-fh-pulse.jpg",
     "is_published": true,
-    "notes": "出力は最大ピーク出力。波長・環境・価格は非公開"
+    "notes": "出力は最大ピーク出力。波長・環境・価格は非公開",
+    "image_credit": "株式会社レーザックス 公式サイト（2機種の写真から切り出し）",
+    "image_source": "https://laser-navi.com/media/opticel/a142"
   },
   {
     "id": "p202",
@@ -798,9 +983,11 @@
     ],
     "not_suitable_for": [],
     "handled_by_operator": false,
-    "image": "/assets/images/products/placeholder.svg",
+    "image": "/assets/images/products/laserx-opticel-fh-1500.jpg",
     "is_published": true,
-    "notes": "CW・シングルモード。環境・価格は非公開"
+    "notes": "CW・シングルモード。環境・価格は非公開",
+    "image_credit": "株式会社レーザックス 公式サイト（2機種の写真から切り出し）",
+    "image_source": "https://laser-navi.com/media/opticel/a142"
   },
   {
     "id": "p203",
@@ -851,9 +1038,11 @@
     ],
     "not_suitable_for": [],
     "handled_by_operator": false,
-    "image": "/assets/images/products/placeholder.svg",
+    "image": "/assets/images/products/amada-flw-1500mts.png",
     "is_published": true,
-    "notes": "定格1,500W／最大2,500W。価格は非公開"
+    "notes": "定格1,500W／最大2,500W。価格は非公開",
+    "image_credit": "株式会社アマダ 公式サイト",
+    "image_source": "https://www.sheetmetal.amada.co.jp/lineup/weld/flw-mts/flw-1500mts.html"
   },
   {
     "id": "p204",
@@ -889,9 +1078,11 @@
     ],
     "not_suitable_for": [],
     "handled_by_operator": false,
-    "image": "/assets/images/products/placeholder.svg",
+    "image": "/assets/images/products/thm-thfi-1500h.jpg",
     "is_published": true,
-    "notes": "波長・出力・素材・板厚・環境・価格・難易度は非公開"
+    "notes": "波長・出力・素材・板厚・環境・価格・難易度は非公開",
+    "image_credit": "THM株式会社 公式サイト",
+    "image_source": "https://thm-co.jp/fiber/thm-30r-f-2"
   },
   {
     "id": "p205",
@@ -933,9 +1124,11 @@
     ],
     "not_suitable_for": [],
     "handled_by_operator": false,
-    "image": "/assets/images/products/placeholder.svg",
+    "image": "/assets/images/products/wel-ken-v-hf1000.jpg",
     "is_published": true,
-    "notes": "環境・価格は非公開。2026-10-08確認: 製品ラインナップ比較 /lineup/ では重量160kg（商品ページは約180kg）。商品ページの値を掲載"
+    "notes": "環境・価格は非公開。2026-10-08確認: 製品ラインナップ比較 /lineup/ では重量160kg（商品ページは約180kg）。商品ページの値を掲載",
+    "image_credit": "株式会社WEL-KEN 公式サイト",
+    "image_source": "https://www.wel-ken.co.jp/v-hp1000/"
   },
   {
     "id": "p206",
@@ -975,9 +1168,11 @@
     ],
     "not_suitable_for": [],
     "handled_by_operator": false,
-    "image": "/assets/images/products/placeholder.svg",
+    "image": "/assets/images/products/wel-ken-v-hf2000.jpg",
     "is_published": true,
-    "notes": "環境・価格・難易度は非公開。2026-10-08確認: 製品ラインナップ比較 /lineup/ では重量210kg（商品ページは約230kg）。商品ページの値を掲載"
+    "notes": "環境・価格・難易度は非公開。2026-10-08確認: 製品ラインナップ比較 /lineup/ では重量210kg（商品ページは約230kg）。商品ページの値を掲載",
+    "image_credit": "株式会社WEL-KEN 公式サイト",
+    "image_source": "https://www.wel-ken.co.jp/v-hf2000/"
   },
   {
     "id": "p207",
@@ -1018,9 +1213,11 @@
     ],
     "not_suitable_for": [],
     "handled_by_operator": false,
-    "image": "/assets/images/products/placeholder.svg",
+    "image": "/assets/images/products/wel-ken-v-hf3000.jpg",
     "is_published": true,
-    "notes": "環境・価格は非公開"
+    "notes": "環境・価格は非公開",
+    "image_credit": "株式会社WEL-KEN 公式サイト",
+    "image_source": "https://www.wel-ken.co.jp/v-hp3000/"
   },
   {
     "id": "p208",
@@ -1100,9 +1297,11 @@
       "板厚3mm超（公表されている対応板厚の範囲外）"
     ],
     "handled_by_operator": false,
-    "image": "/assets/images/products/placeholder.svg",
+    "image": "/assets/images/products/ikura-isk-fl.jpg",
     "is_published": true,
-    "notes": "価格根拠: 販売店公開価格 税込2,763,200円"
+    "notes": "価格根拠: 販売店公開価格 税込2,763,200円",
+    "image_credit": "育良精機株式会社 公式サイト（2機種共通の写真）",
+    "image_source": "https://www.ikuratools.com/w_FL.html"
   },
   {
     "id": "p210",
@@ -1147,9 +1346,11 @@
       "板厚6mm超（公表されている対応板厚の範囲外）"
     ],
     "handled_by_operator": false,
-    "image": "/assets/images/products/placeholder.svg",
+    "image": "/assets/images/products/ikura-isk-fl.jpg",
     "is_published": true,
-    "notes": "価格根拠: ウエダ金物 税込3,593,700円。別販売店では税込4,332,706円の掲載あり。板厚タグは受領データ（板厚：3〜6）のとおり「3〜6mm」だけにしている。公表値は「最大6mm」で、同程度の上限の機種（HW450・HW550・SLW2000・FLW-1500MTS・FMW-V2.0）は「0.5〜3mm」も持つため、薄板も可と扱うか要クライアント確認（足すと診断で薄板を選んだ人にも一致機種として出る）"
+    "notes": "価格根拠: ウエダ金物 税込3,593,700円。別販売店では税込4,332,706円の掲載あり。板厚タグは受領データ（板厚：3〜6）のとおり「3〜6mm」だけにしている。公表値は「最大6mm」で、同程度の上限の機種（HW450・HW550・SLW2000・FLW-1500MTS・FMW-V2.0）は「0.5〜3mm」も持つため、薄板も可と扱うか要クライアント確認（足すと診断で薄板を選んだ人にも一致機種として出る）",
+    "image_credit": "育良精機株式会社 公式サイト（2機種共通の写真）",
+    "image_source": "https://www.ikuratools.com/w_FL.html"
   },
   {
     "id": "p211",
@@ -1191,9 +1392,11 @@
       "公表されている最大板厚（鉄・ステンレス2.8mm、アルミ2mm）を超える施工"
     ],
     "handled_by_operator": false,
-    "image": "/assets/images/products/placeholder.svg",
+    "image": "/assets/images/products/fuji-kiko-hw200.jpg",
     "is_published": true,
-    "notes": "出力はレーザーピーク出力相当。波長の単位は公式表記のまま。環境・価格・難易度は非公開"
+    "notes": "出力はレーザーピーク出力相当。波長の単位は公式表記のまま。環境・価格・難易度は非公開",
+    "image_credit": "富士機工株式会社 公式サイト（シリーズ共通の写真）",
+    "image_source": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/"
   },
   {
     "id": "p212",
@@ -1235,9 +1438,11 @@
       "公表されている最大板厚（鉄・ステンレス3mm、アルミ2.5mm）を超える施工"
     ],
     "handled_by_operator": false,
-    "image": "/assets/images/products/placeholder.svg",
+    "image": "/assets/images/products/fuji-kiko-hw350.jpg",
     "is_published": true,
-    "notes": "出力はレーザーピーク出力相当。波長の単位は公式表記のまま。環境・価格・難易度は非公開"
+    "notes": "出力はレーザーピーク出力相当。波長の単位は公式表記のまま。環境・価格・難易度は非公開",
+    "image_credit": "富士機工株式会社 公式サイト",
+    "image_source": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/"
   },
   {
     "id": "p213",
@@ -1281,9 +1486,11 @@
       "公表されている最大板厚（鉄・ステンレス5mm、アルミ4mm）を超える施工"
     ],
     "handled_by_operator": false,
-    "image": "/assets/images/products/placeholder.svg",
+    "image": "/assets/images/products/fuji-kiko-hw450.jpg",
     "is_published": true,
-    "notes": "出力はレーザーピーク出力相当。波長の単位は公式表記のまま。環境・価格・難易度は非公開"
+    "notes": "出力はレーザーピーク出力相当。波長の単位は公式表記のまま。環境・価格・難易度は非公開",
+    "image_credit": "富士機工株式会社 公式サイト",
+    "image_source": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/"
   },
   {
     "id": "p214",
@@ -1327,9 +1534,11 @@
       "公表されている最大板厚（鉄・ステンレス6mm、アルミ5mm）を超える施工"
     ],
     "handled_by_operator": false,
-    "image": "/assets/images/products/placeholder.svg",
+    "image": "/assets/images/products/fuji-kiko-hw550.jpg",
     "is_published": true,
-    "notes": "出力はレーザーピーク出力相当。波長の単位は公式表記のまま。環境・価格・難易度は非公開"
+    "notes": "出力はレーザーピーク出力相当。波長の単位は公式表記のまま。環境・価格・難易度は非公開",
+    "image_credit": "富士機工株式会社 公式サイト",
+    "image_source": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/"
   },
   {
     "id": "p215",
@@ -1377,9 +1586,11 @@
       "鉄・ステンレス5mm超（公表されている品質推奨厚 0.5〜5mmの範囲外）"
     ],
     "handled_by_operator": false,
-    "image": "/assets/images/products/placeholder.svg",
+    "image": "/assets/images/products/hsg-fmw-v2.jpg",
     "is_published": true,
-    "notes": "出力は 1,000／1,500／2,000／3,000W。価格は非公開"
+    "notes": "出力は 1,000／1,500／2,000／3,000W。価格は非公開",
+    "image_credit": "株式会社ヨコハマシステムズ（HSG LASER 国内代理店）公式サイト",
+    "image_source": "https://yokohamalaser.com/products/hsg-welding-cleaner/fmw-v2/"
   },
   {
     "id": "p216",
@@ -1419,9 +1630,11 @@
     ],
     "not_suitable_for": [],
     "handled_by_operator": false,
-    "image": "/assets/images/products/placeholder.svg",
+    "image": "/assets/images/products/ydl-d-series.png",
     "is_published": true,
-    "notes": "公表の数値は対応板厚ではなく溶け込み深さのため板厚タグには転用していない。メーカー公式ページは不明（国内販売元ページを掲載）。用途・板厚・環境・価格は非公開"
+    "notes": "公表の数値は対応板厚ではなく溶け込み深さのため板厚タグには転用していない。メーカー公式ページは不明（国内販売元ページを掲載）。用途・板厚・環境・価格は非公開",
+    "image_credit": "株式会社ヨコハマシステムズ（YDL 販売元）公式サイト（D シリーズ共通の写真）",
+    "image_source": "https://yokohamalaser.com/products/ydl-welding-cleaner/d/"
   },
   {
     "id": "p217",
@@ -1460,9 +1673,11 @@
     ],
     "not_suitable_for": [],
     "handled_by_operator": false,
-    "image": "/assets/images/products/placeholder.svg",
+    "image": "/assets/images/products/ydl-d-series.png",
     "is_published": true,
-    "notes": "公表の数値は対応板厚ではなく溶け込み深さのため板厚タグには転用していない。メーカー公式ページは不明（国内販売元ページを掲載）。用途・板厚・環境・価格は非公開"
+    "notes": "公表の数値は対応板厚ではなく溶け込み深さのため板厚タグには転用していない。メーカー公式ページは不明（国内販売元ページを掲載）。用途・板厚・環境・価格は非公開",
+    "image_credit": "株式会社ヨコハマシステムズ（YDL 販売元）公式サイト（D シリーズ共通の写真）",
+    "image_source": "https://yokohamalaser.com/products/ydl-welding-cleaner/d/"
   },
   {
     "id": "p218",
@@ -1501,9 +1716,11 @@
     ],
     "not_suitable_for": [],
     "handled_by_operator": false,
-    "image": "/assets/images/products/placeholder.svg",
+    "image": "/assets/images/products/ydl-d-series.png",
     "is_published": true,
-    "notes": "公表の数値は対応板厚ではなく溶け込み深さのため板厚タグには転用していない。メーカー公式ページは不明（国内販売元ページを掲載）。用途・板厚・環境・価格は非公開"
+    "notes": "公表の数値は対応板厚ではなく溶け込み深さのため板厚タグには転用していない。メーカー公式ページは不明（国内販売元ページを掲載）。用途・板厚・環境・価格は非公開",
+    "image_credit": "株式会社ヨコハマシステムズ（YDL 販売元）公式サイト（D シリーズ共通の写真）",
+    "image_source": "https://yokohamalaser.com/products/ydl-welding-cleaner/d/"
   },
   {
     "id": "p219",
@@ -1552,9 +1769,11 @@
       "鉄・ステンレス・アルミの1.5mm超（公表されている溶接可能板厚の範囲外）"
     ],
     "handled_by_operator": false,
-    "image": "/assets/images/products/placeholder.svg",
+    "image": "/assets/images/products/smartdiys-slw700.jpg",
     "is_published": true,
-    "notes": "価格: 税込1,199,000円（税別109万円）"
+    "notes": "価格: 税込1,199,000円（税別109万円）",
+    "image_credit": "株式会社smartDIYs 公式サイト",
+    "image_source": "https://www.smartdiys.com/slw700/"
   },
   {
     "id": "p220",
@@ -1601,9 +1820,11 @@
       "鉄・ステンレス・アルミの3mm超（公表されている対応板厚の範囲外）"
     ],
     "handled_by_operator": false,
-    "image": "/assets/images/products/placeholder.svg",
+    "image": "/assets/images/products/smartdiys-slw1500a.jpg",
     "is_published": true,
-    "notes": "価格: 税込1,815,000円（税別165万円）。難易度は非公開"
+    "notes": "価格: 税込1,815,000円（税別165万円）。難易度は非公開",
+    "image_credit": "株式会社smartDIYs 公式サイト",
+    "image_source": "https://www.smartdiys.com/laser-welding/"
   },
   {
     "id": "p221",
@@ -1651,8 +1872,10 @@
     ],
     "not_suitable_for": [],
     "handled_by_operator": false,
-    "image": "/assets/images/products/placeholder.svg",
+    "image": "/assets/images/products/smartdiys-slw2000.jpg",
     "is_published": true,
-    "notes": "価格: 税込2,475,000円（税別225万円）。難易度は非公開"
+    "notes": "価格: 税込2,475,000円（税別225万円）。難易度は非公開",
+    "image_credit": "株式会社smartDIYs 公式サイト",
+    "image_source": "https://www.smartdiys.com/laser-welding/"
   }
 ]

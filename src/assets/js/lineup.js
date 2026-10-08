@@ -73,13 +73,38 @@ export function specLines(p, cls, { price = "always" } = {}) {
   return lines.map(([k, v]) => `<p class="${cls}"><span>${k}</span> <b>${v}</b></p>`).join("");
 }
 
+/** 価格帯の表示。公開されていなければ「非公開」。運営元の取り扱い機は見積もりの相談先があるので「お問い合わせ」 */
+export const priceLabel = (p) => p.tags.price[0] || (p.handled_by_operator ? "価格はお問い合わせ" : "非公開");
+
+/** カードの一言（種類｜出力） */
+export function catchLine(p) {
+  const kind = /^ハンド/.test(p.method || "") ? "ハンドヘルド" : /ロボット|ライン/.test(p.method || "") ? "ロボット・ライン組込" : /据置|真空|チャンバー/.test(p.method || "") ? "据置型" : "ハンドヘルド";
+  const robot = /ロボット/.test(p.method || "") && kind === "ハンドヘルド" ? "・ロボット接続対応" : "";
+  const out = p.output_w ? `${p.output_w.toLocaleString()} W${p.output_note && /定格|最大|ピーク/.test(p.output_note) ? `（${p.output_note.replace(/。.*$/, "").replace(/出力$/, "").replace("定格出力（CW）", "定格")}）` : ""}` : "出力 非公開";
+  return `${kind}${robot}｜${out}`;
+}
+
+/** カードのタグ（対応素材・板厚・使う人・価格帯。公開されている項目だけ） */
+export function cardTags(p) {
+  const th = { "0.5mm未満": "極薄", "0.5〜3mm": "薄板", "3〜6mm": "中厚", "6mm以上": "厚物" };
+  const tags = [...p.tags.material.slice(0, 4), ...p.tags.thickness.map((t) => th[t]).filter(Boolean)];
+  if (p.tags.skill[0] === "未経験可") tags.push("未経験可");
+  tags.push(priceLabel(p));
+  return tags;
+}
+
+/** 機種カード（LaserPecker の製品カード型: 名前→一言→タグ→写真→ボタン。スマホは横並びの小型） */
 export function card(p) {
-  return `<li class="pcard"><a href="/products/${esc(productSlug(p))}/">
-    ${productPhoto(p, "card")}
-    <p class="pcard__name">${nameHtml(p.name)}</p>
-    <p class="pcard__maker">${esc(p.maker_name)}</p>
-    ${specLines(p, "pcard__spec")}
-    ${p.handled_by_operator ? `<span class="badge">運営元で取り扱い</span>` : ""}
+  return `<li class="pcard${p.handled_by_operator ? " pcard--op" : ""}"><a href="/products/${esc(productSlug(p))}/">
+    <div class="pcard__text">
+      ${p.handled_by_operator ? `<span class="badge">運営元で取り扱い</span>` : ""}
+      <p class="pcard__name">${nameHtml(p.name)}</p>
+      <p class="pcard__maker">${esc(p.maker_name)}</p>
+      <p class="pcard__catch">${esc(catchLine(p))}</p>
+      <ul class="pcard__tags">${cardTags(p).map((t) => `<li>${esc(t)}</li>`).join("")}</ul>
+    </div>
+    <div class="pcard__photo">${productPhoto(p, "card")}</div>
+    <span class="pcard__btn">詳しく見る${icon("chevron", "ico")}</span>
   </a></li>`;
 }
 
@@ -108,7 +133,7 @@ export async function mountLineup(root) {
     <div class="active" id="active" hidden></div>
     <div class="tabpanel" role="tabpanel" id="lineupPanel">
       <p class="result-count" id="count" tabindex="-1" aria-live="polite"></p>
-      <ul class="grid" id="grid"></ul>
+      <ul class="pgrid" id="grid"></ul>
     </div>`;
 
   const grid = root.querySelector("#grid");

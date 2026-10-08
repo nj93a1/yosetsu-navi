@@ -29,6 +29,7 @@ export function header(current = "") {
     ["/contact/", "consult", "相談・問い合わせ"],
   ];
   return `
+<div class="topstrip"><div class="topstrip__in"><p>テスト溶接・補助金の活用相談<span class="topstrip__long">を受け付けています</span><span class="topstrip__by">（運営元が対応）</span></p><a href="/contact/?type=test">相談する${icon("chevron", "ico")}</a></div></div>
 <header class="header">
   <div class="header__in">
     <a class="header__brand" href="/">${icon("diag", "ico header__mark")}<span class="header__name">レーザー溶接機 比較・選定<small>中立的な比較情報サイト（サイト名 仮）</small></span></a>

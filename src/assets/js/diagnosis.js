@@ -1,6 +1,6 @@
 // 選定診断の画面制御。スコアリングは scoring.js、設問・商品は /data/*.json。
-import { runDiagnosis, productSlug } from "./scoring.js?v=12";
-import { mountChrome, icon, productPhoto } from "./partials.js?v=11";
+import { runDiagnosis, productSlug } from "./scoring.js?v=13";
+import { mountChrome, icon, productPhoto } from "./partials.js?v=13";
 
 const app = document.getElementById("app");
 const foot = document.getElementById("foot");
@@ -266,7 +266,9 @@ function renderResult(scrollTop = 0) {
       <h2>この結果について相談する</h2>
       <p>診断の回答内容を添えてお問い合わせできます。</p>
       <ul class="pnav">
-        <li><a href="/contact/?${esc(inquiryQs)}">${icon("consult")}<span class="pnav__label">フォームで問い合わせる</span>${icon("chevron", "ico ico--chev")}</a></li>
+        <li><a href="/contact/?type=choose&${esc(inquiryQs)}">${icon("consult")}<span class="pnav__label">この結果について相談する<span class="pnav__sub">診断の回答を添えて送れます</span></span>${icon("chevron", "ico ico--chev")}</a></li>
+        <li><a href="/contact/?type=test&${esc(inquiryQs)}">${icon("handheld")}<span class="pnav__label">テスト溶接・デモを相談する<span class="pnav__sub">運営元の取り扱い機で、仕上がりを確かめられます</span></span>${icon("chevron", "ico ico--chev")}</a></li>
+        <li><a href="/contact/?type=subsidy&${esc(inquiryQs)}">${icon("yen")}<span class="pnav__label">補助金・助成金の活用を相談する<span class="pnav__sub">運営元の活用支援チームが対応します</span></span>${icon("chevron", "ico ico--chev")}</a></li>
         <li><a href="/contact/#tel">${icon("phone")}<span class="pnav__label">電話で相談する<span class="pnav__sub">番号は掲載準備中</span></span>${icon("chevron", "ico ico--chev")}</a></li>
         <li><a href="/contact/#line">${icon("consult")}<span class="pnav__label">LINEで相談する<span class="pnav__sub">準備中</span></span>${icon("chevron", "ico ico--chev")}</a></li>
       </ul>
@@ -326,7 +328,7 @@ function card(x) {
         <div>
           <p class="rcard__name">${esc(p.name)}</p>
           <p class="rcard__maker">${esc(p.maker_name)}</p>
-          <p class="rcard__meta"><span><span>価格帯：</span><wbr><span>${esc(price || "非公開")}</span></span><span>${skill ? `<span>${esc(skill)}</span>` : `<span>習得難易度：</span><wbr><span>非公開</span>`}</span></p>
+          <p class="rcard__meta"><span><span>価格帯：</span><wbr><span>${esc(price || (p.handled_by_operator ? "お問い合わせ" : "非公開"))}</span></span><span>${skill ? `<span>${esc(skill)}</span>` : `<span>習得難易度：</span><wbr><span>非公開</span>`}</span></p>
         </div>
       </div>
       <p class="rcard__reason">${esc(x.reason)}</p>

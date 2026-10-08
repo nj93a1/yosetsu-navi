@@ -1,7 +1,7 @@
 // 相談・問い合わせ。診断結果や商品ページから来たときは、その内容を「一緒に送られる内容」として表示する。
 // 送信先は未確定のため、デモでは確認画面までで止める（送信したように見せない）。
-import { mountChrome } from "./partials.js?v=11";
-import { productSlug } from "./scoring.js?v=11";
+import { mountChrome } from "./partials.js?v=13";
+import { productSlug } from "./scoring.js?v=13";
 
 mountChrome({ current: "/contact/" });
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -27,6 +27,11 @@ if (attach.length) {
   document.getElementById("attach").hidden = false;
 }
 
+// ご相談の種類（?type= で選んだ状態にする）
+const TYPES = { choose: "機種選びの相談", quote: "見積もり", test: "テスト溶接・デモ", subsidy: "補助金・助成金の活用", other: "その他" };
+const t = params.get("type");
+if (t && TYPES[t]) document.querySelector(`input[name="type"][value="${t}"]`).checked = true;
+
 // 確認画面（送信はしない）
 const form = document.getElementById("form");
 const confirm = document.getElementById("confirm");
@@ -36,7 +41,7 @@ form.addEventListener("submit", (e) => {
   const ok = String(fd.get("name") || "").trim() && /.+@.+\..+/.test(String(fd.get("email") || ""));
   document.getElementById("formError").hidden = !!ok;
   if (!ok) return;
-  const rows = [["会社名", fd.get("company")], ["お名前", fd.get("name")], ["メールアドレス", fd.get("email")], ["電話番号", fd.get("tel")], ["ご相談内容", fd.get("body")], ...attach]
+  const rows = [["ご相談の種類", TYPES[fd.get("type")] || ""], ["会社名", fd.get("company")], ["お名前", fd.get("name")], ["メールアドレス", fd.get("email")], ["電話番号", fd.get("tel")], ["ご相談内容", fd.get("body")], ...attach]
     .filter(([, v]) => String(v || "").trim());
   document.getElementById("confirmList").innerHTML = rows.map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${esc(v).replace(/\n/g, "<br>")}</dd></div>`).join("");
   form.hidden = true;

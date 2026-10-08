@@ -61,3 +61,25 @@
   .home .side__menu { display: none; }
   .home .side .box--consult { margin-top: 0; }
 }
+
+/* 導入サポートの帯（LaserPecker「公式ストアを選ぶ理由」を参考に、ダークの帯で信頼訴求と CTA をまとめる） */
+.opband { background: #1F2A30; color: #fff; padding: 64px 0 56px; margin-top: 64px; }
+@media (min-width: 900px) { .opband { padding: 88px 0 80px; margin-top: 96px; } }
+.opband__head { text-align: center; margin: 0 0 28px; }
+.opband__head h2 { font-size: 26px; line-height: 1.4; margin: 0 0 10px; color: #fff; }
+@media (min-width: 900px) { .opband__head h2 { font-size: 32px; } }
+.opband__head p { margin: 0; color: #D5DBE0; font-size: 16px; }
+.opband__head a { color: #fff; }
+.opband__list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr; gap: 12px; }
+@media (min-width: 600px) { .opband__list { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1000px) { .opband__list { grid-template-columns: repeat(4, 1fr); gap: 16px; } }
+.opband__list li { display: grid; grid-template-columns: 56px 1fr; grid-template-areas: "ico t" "ico d"; gap: 2px 14px; align-items: start; padding: 18px; background: #2A363D; border-radius: 16px; }
+@media (min-width: 1000px) { .opband__list li { grid-template-columns: 1fr; grid-template-areas: "ico" "t" "d"; text-align: center; justify-items: center; gap: 10px; padding: 24px 18px; } }
+.opband__ico { grid-area: ico; display: grid; place-items: center; width: 56px; height: 56px; border-radius: 12px; background: var(--c-accent); color: var(--c-accent-text); }
+.opband__ico .ico { width: 32px; height: 32px; }
+.opband__list b { grid-area: t; font-size: 19px; line-height: 1.4; }
+.opband__list li > span:last-child { grid-area: d; font-size: 16px; color: #D5DBE0; line-height: 1.6; }
+.opband__cta { display: grid; gap: 12px; max-width: 760px; margin: 28px auto 0; }
+@media (min-width: 600px) { .opband__cta { grid-template-columns: 1fr 1fr; } .opband__cta .btn + .btn { margin-top: 0; } }
+.opband__note { text-align: center; margin: 14px 0 0; font-size: 14px; color: #C2CAD0; }
+.home .footer { margin-top: 0; }

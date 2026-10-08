@@ -334,7 +334,15 @@ export function buildReason(r) {
     if (band) text = `価格帯は${band}。${text}`;
   }
   if (r.misses?.length) text += `（${r.misses.join("・")}は条件外）`;
-  else if (r.unknowns?.length) text += r.matched ? `（${r.unknowns.join("・")}は非公開）` : `（${r.unknowns.join("・")}は非公開のため要確認）`;
+  else if (r.unknowns?.length) {
+    // 運営元の取り扱い機は価格の相談先があるので「価格帯はお問い合わせ」と分けて書く
+    const op = r.product.handled_by_operator && r.unknowns.includes("価格帯");
+    const rest = op ? r.unknowns.filter((u) => u !== "価格帯") : r.unknowns;
+    const parts = [];
+    if (rest.length) parts.push(r.matched ? `${rest.join("・")}は非公開` : `${rest.join("・")}は非公開のため要確認`);
+    if (op) parts.push("価格帯はお問い合わせ");
+    text += `（${parts.join("。")}）`;
+  }
   return text;
 }
 

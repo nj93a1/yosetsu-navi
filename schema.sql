@@ -19,7 +19,12 @@ CREATE TABLE IF NOT EXISTS products (
   output_w        INTEGER,                        -- 出力（W）
   output_note     TEXT,                           -- 出力の注記（例: 最大ピーク出力 / 定格。最大2,500W）。無ければ NULL
   portability     TEXT NOT NULL,                  -- 可搬性（ハンドヘルド / 台車型 / 据置 / ライン組込）
-  thickness_note  TEXT,                           -- メーカー公表の板厚・溶け込みの数値（表示用。診断の板厚区分は product_tags）。無ければ NULL
+  thickness_note  TEXT,
+  image_credit    TEXT,                           -- 画像の出典表記（例: 株式会社アマダ 公式サイト）
+  image_source    TEXT,                           -- 画像の掲載元ページURL
+  features        TEXT NOT NULL DEFAULT '[]',     -- 機能・特長（JSON配列。メーカー・クライアント提供資料に基づく）
+  support         TEXT NOT NULL DEFAULT '[]',     -- 運営元が提供する導入サポート（JSON配列。運営元取り扱い機のみ）
+  spec_rows       TEXT NOT NULL DEFAULT '[]',     -- 追加の仕様行（JSON配列 [[項目, 値], ...]）                           -- メーカー公表の板厚・溶け込みの数値（表示用。診断の板厚区分は product_tags）。無ければ NULL
   price_band      TEXT,                           -- 価格帯タグ（実売価格は掲載しない。未確定なら NULL・非公開）
   skill_level     TEXT,                           -- 習得難易度タグ（非公開なら NULL）
   comment         TEXT NOT NULL,                  -- 運営者による選定コメント（必須・1文以上）

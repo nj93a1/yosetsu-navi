@@ -64,3 +64,28 @@ html { scroll-padding-top: 0; }
 .page-msg { word-break: auto-phrase; }
 .page-msg h1 { text-wrap: balance; }
 .page-msg .sec-head__eyebrow { font-size: 16px; }
+
+/* 写真の出典 */
+.product__fig { margin: 0; }
+.photo-credit { margin: 6px 0 0; font-size: 13px; color: var(--c-sub); text-align: right; }
+.photo-credit a { color: var(--c-sub); }
+.product .ph-img--product { width: 100%; max-height: 300px; object-fit: contain; background: #F3F4F5; border-radius: 16px; padding: 12px; mix-blend-mode: normal; }
+/* 特長 */
+.features, .opsupport__list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.features li, .opsupport__list li { display: grid; grid-template-columns: 24px 1fr; gap: 10px; align-items: start; }
+.features .ico, .opsupport__list .ico { width: 22px; height: 22px; margin-top: 3px; color: var(--c-main-dark); }
+/* 運営元のサポート（ダークの帯と同じ色で、営業の入口を明確に） */
+.opsupport { background: #1F2A30; color: #fff; border-radius: 16px; padding: 24px 20px; }
+.opsupport h2 { color: #fff; margin-top: 0; }
+.opsupport__lead { color: #D5DBE0; margin: 0 0 14px; }
+.opsupport__list .ico { color: var(--c-accent); }
+.opsupport__cta { display: grid; gap: 12px; margin-top: 20px; }
+.opsupport__cta .btn + .btn { margin-top: 0; }
+.opsupport__cta .btn:not(.btn--accent) { background: transparent; color: #fff; border-color: rgba(255,255,255,.6); }
+@media (min-width: 760px) { .opsupport__cta { grid-template-columns: repeat(3, 1fr); } .opsupport__cta .btn { font-size: 16px; padding: 10px 12px; } }
+/* 他社機ページの「実機で確かめたいとき」 */
+.trybox { display: grid; grid-template-columns: 56px 1fr; gap: 14px; margin: 36px 0 0; padding: 20px; border-radius: 16px; background: var(--c-main-tint); border: 1px solid var(--c-main-light); }
+.trybox__ico { width: 56px; height: 56px; padding: 10px; border-radius: 12px; background: var(--c-main-light); color: var(--c-main-ink); }
+.trybox__title { font-weight: 700; font-size: 20px; margin: 0 0 4px; }
+.trybox p { margin: 0 0 12px; }
+.trybox .btn { width: auto; display: inline-flex; padding: 10px 24px; }
