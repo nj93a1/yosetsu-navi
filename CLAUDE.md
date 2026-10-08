@@ -10,5 +10,7 @@
 - 本番公開まで全ページ `noindex,nofollow`。CSS/JS は `?v=` でキャッシュ回避
 - プレビュー: `.claude/launch.json` の `site`（wrangler dev、port 8766）
 - コミットは `feat:` / `fix:` / `docs:` / `chore:` 接頭辞、日本語
-- 現在はダミー商品10点。実データ投入は未決事項1・2の確定後
+- 商品: 他社21機種の実データを公開。ダミー10点と自社 UW-SH 3機種は is_published:false（自社機の公開は未決事項1・2とクライアント確認事項の確定後）
+- 本番: Cloudflare Workers（KDM アカウント）https://yosetsu-navi.jolly-frost-2311.workers.dev 。`npm run deploy`、商品マスタを変えたら `npm run db:seed`（リモート D1）。GitHub Pages は商品詳細（Worker）が動かないので確認用のみ
+- 診断で商品側のタグが空（メーカー非公開）の軸は `diagnosis.json` の `unknownTags`（policy: neutral / minKnownRatio）で扱う
 - 採用配色（2026-09-19）: Main #14A3A6 / Sub #6A4FA8 / Accent #D2DF1E / Neutral #AEB6BF / Base #FAFAFA。`style.css` の `:root` で管理。白文字を載せる塗りとリンク文字は `--c-main-dark`（#0E7F82）を使う（Main は白と3.1:1で不足）。Accent の上は必ず黒文字。Neutral は線・非活性のみで文字には使わない
