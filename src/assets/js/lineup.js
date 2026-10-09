@@ -23,9 +23,11 @@ export const AXES = [
   { key: "price", label: "価格帯", tag: "price", values: ["100万円未満", "100〜200万円", "200〜400万円", "400〜600万円", "600万円以上"], keepEmpty: true },
   { key: "skill", label: "使う人", tag: "skill", values: [], names: { 未経験可: "未経験から使える" } },
   { key: "env", label: "使う場所", tag: "environment", values: [] },
+  // 国内での修理・保守を、メーカーか国内代理店の公式サイトが明記している機種（商品データの origin.service）
+  { key: "support", label: "サポート（公式に記載がある機種）", values: ["国内で修理・サポート"], get: (p) => (p.origin?.service ? ["国内で修理・サポート"] : []) },
 ];
 const valueName = (axis, v) => (axis.names && axis.names[v]) || v;
-const tagsOf = (p, axis) => (axis.key === "price" ? [p.tags.price[0] || "非公開"] : p.tags[axis.tag] || []);
+const tagsOf = (p, axis) => (axis.get ? axis.get(p) : axis.key === "price" ? [p.tags.price[0] || "非公開"] : p.tags[axis.tag] || []);
 
 /** 検索用の正規化: 全角半角（NFKC）・大文字小文字・空白・ハイフンの違いを無視する */
 export const normalize = (s) => String(s ?? "").normalize("NFKC").toLowerCase().replace(/[\s\-‐‑‒–—―−_]/g, "");
@@ -129,7 +131,7 @@ export async function mountLineup(root) {
       <button class="btn btn--primary" type="submit">${icon("search")}検索</button>
     </form>
     <details class="filterbox" id="filterbox">
-      <summary><span>用途・素材・板厚・価格帯で絞り込む<span class="filterbox__n" id="filterN"></span></span>${icon("chevron", "ico ico--chev")}</summary>
+      <summary><span>用途・素材・板厚・価格帯・サポートで絞り込む<span class="filterbox__n" id="filterN"></span></span>${icon("chevron", "ico ico--chev")}</summary>
       <p class="filterbox__note">同じ項目で複数選ぶと、どれかに当てはまる機種を出します。数字は該当する機種の数です。</p>
       ${groups.map((a) => `<div class="filter"><p class="filter__title">${a.label}</p><ul class="chips">${a.values.map((v) => `<li><button type="button" aria-pressed="false" data-axis="${a.key}" data-v="${esc(v)}">${icon("check")}<span>${esc(valueName(a, v))}</span><span class="chips__n"></span></button></li>`).join("")}</ul></div>`).join("")}
     </details>

@@ -56,6 +56,19 @@ async function handleApi(request, env, path) {
       JSON.stringify((b.shown_products || []).slice(0, 5)), b.exit_point ?? "result", request.headers.get("user-agent") || "").run();
     return json({ ok: true, id: b.id });
   }
+  // 相談の記録（種類 × 見ていた機種 × 来たページ。個人情報は受け取らない）
+  if (path === "/api/inquiries" && method === "POST") {
+    const b = await safeJson(request);
+    const TYPES = ["choose", "quote", "test", "subsidy", "other"];
+    if (!b || !TYPES.includes(b.type)) return json({ error: "invalid" }, 400);
+    const id = (v) => (typeof v === "string" && /^p[0-9]{3}$/.test(v) ? v : null);
+    const product = id(b.product), compare = id(b.compare);
+    const row = product ? await env.DB.prepare("SELECT handled_by_operator FROM products WHERE id = ?").bind(product).first() : null;
+    const from = typeof b.from === "string" && b.from.startsWith("/") ? b.from.slice(0, 120) : null;
+    await env.DB.prepare("INSERT INTO inquiry_logs (type, product_id, handled, compare_id, from_path) VALUES (?, ?, ?, ?, ?)")
+      .bind(b.type, row ? product : null, row ? (row.handled_by_operator ? 1 : 0) : null, compare, from).run();
+    return json({ ok: true });
+  }
   // 診断ログ更新（詳細閲覧 / 比較 / 問い合わせ / 離脱地点）
   const lm = path.match(/^\/api\/logs\/([0-9a-f-]{36})$/);
   if (lm && method === "PATCH") {
@@ -87,7 +100,9 @@ function hostHtml(u) {
 }
 function rowToProduct(r) {
   const arr = (v) => { try { return JSON.parse(v || "[]"); } catch { return []; } };
-  return { ...r, suitable_for: arr(r.suitable_for), not_suitable_for: arr(r.not_suitable_for), features: arr(r.features), support: arr(r.support), spec_rows: arr(r.spec_rows), handled_by_operator: !!r.handled_by_operator };
+  let origin = {};
+  try { origin = JSON.parse(r.origin || "{}") || {}; } catch {}
+  return { ...r, origin, suitable_for: arr(r.suitable_for), not_suitable_for: arr(r.not_suitable_for), features: arr(r.features), support: arr(r.support), spec_rows: arr(r.spec_rows), handled_by_operator: !!r.handled_by_operator };
 }
 
 const icon = (name, cls = "ico") => `<svg class="${cls}" aria-hidden="true"><use href="/assets/icons.svg#i-${name}"></use></svg>`;
@@ -167,6 +182,38 @@ function altsHeading(p, tags, picked) {
   return ["代替候補", `${basis}の近さをもとに選んだ、メーカーが異なる機種です。`];
 }
 
+/** スペック表の「本社所在地・製造国・国内のサポート」。公式に書かれた事実だけ（origin が空なら「公式に記載なし」） */
+function originRows(o = {}) {
+  const none = "公式に記載なし";
+  const src = (url) => (url ? `<a class="spec__src" href="${esc(url)}" target="_blank" rel="noopener">出典</a>` : "");
+  const link = (text, url) => kw(text) + src(url);
+  // 「※販売元…」と製造国の根拠は、値と分けて細字で出す
+  const [hq, hqNote] = String(o.hq || "").split(/\s*※/);
+  return [
+    ["本社所在地", o.hq && kw(hq) + (hqNote ? `<span class="spec__basis">${kw(`※${hqNote}`)}</span>` : "") + src(o.hq_url), none],
+    ["製造国", o.made && kw(o.made) + (o.made_basis ? `<span class="spec__basis">${kw(`根拠：${o.made_basis}`)}</span>` : "") + src(o.made_url), none],
+    ["国内のサポート", o.service && link(o.service, o.service_url), none],
+  ];
+}
+
+/**
+ * 他社機のページで並べて見せる「運営元の取り扱い機」を1台選ぶ。
+ * 方式（ハンドヘルド等）が同じ → 対応素材・板厚区分・用途の重なり → 出力の近さ、で比べる。出力が非公開の取り扱い機は選ばない。
+ * 一覧の並び順や診断の順位には使わない（このページの末尾の比較欄だけ）。
+ */
+function nearestHandled(p, all, tagsOf) {
+  const t = tagsOf.get(p.id) || {};
+  const ov = (a = [], b = []) => a.filter((x) => b.includes(x)).length;
+  const score = (o) => {
+    const u = tagsOf.get(o.id) || {};
+    const out = p.output_w ? Math.abs(Math.log(o.output_w / p.output_w)) * 4 : 0;
+    return (productKind(o) === productKind(p) ? 3 : 0) + ov(t.material, u.material) * 2 + ov(t.thickness, u.thickness) + ov(t.use, u.use) - out;
+  };
+  return all.filter((o) => o.handled_by_operator && o.id !== p.id && o.output_w)
+    .map((o) => ({ o, s: score(o) }))
+    .sort((a, b) => b.s - a.s || a.o.id.localeCompare(b.o.id))[0]?.o || null;
+}
+
 // 商品詳細ページ: /products/{maker_slug}-{model_slug}/
 // URL はスラッグのみで決まるため、メーカー実名NGの場合は maker_slug を差し替えるだけで移行できる。
 async function productPage(env, slug) {
@@ -202,7 +249,9 @@ async function productPage(env, slug) {
     ["対応素材", kw((tags.material || []).join("・"))], ...thicknessRows,
     ["使用環境", kw((tags.environment || []).join("・"))], ["価格帯", p.price_band ? kw(p.price_band) : p.handled_by_operator ? `<a href="/contact/?type=quote&amp;product=${esc(p.slug)}">お問い合わせ</a>` : ""], ["習得難易度", kw(p.skill_level)],
     ...(p.spec_rows || []).map(([k, v]) => [k, kw(v)]),
-  ].map(([k, v]) => `<div class="spec__row"><dt>${kw(k)}</dt>${v ? `<dd>${v}</dd>` : `<dd class="is-na">${NA}</dd>`}</div>`).join("");
+    ...originRows(p.origin),
+  ].map(([k, v, na]) => `<div class="spec__row"><dt>${kw(k)}</dt>${v ? `<dd>${v}</dd>` : `<dd class="is-na">${na || NA}</dd>`}</div>`).join("");
+  const madeInJapan = /^日本/.test(p.origin.made || "");
 
   // 頭の帯: 公開されている値を先に、非公開の項目は後ろに控えめに
   const bandItems = [
@@ -218,6 +267,35 @@ async function productPage(env, slug) {
     p.official_url ? `<li><a href="${esc(p.official_url)}" target="_blank" rel="noopener">${icon("external")}<span class="pnav__label">${kw("メーカー公式の商品ページ")}<span class="pnav__sub">${hostHtml(p.official_url)}${newWin}</span></span>${icon("chevron", "ico ico--chev")}</a></li>` : "",
     p.source_url && p.source_url !== p.official_url ? `<li><a href="${esc(p.source_url)}" target="_blank" rel="noopener">${icon("doc")}<span class="pnav__label">${kw(`情報源：${p.source || "資料"}`)}<span class="pnav__sub">${hostHtml(p.source_url)}${newWin}</span></span>${icon("chevron", "ico ico--chev")}</a></li>` : "",
   ].join("");
+
+  // 他社機のページ: 条件の近い運営元の取り扱い機と並べて見せ、実機で比べる相談につなげる
+  const vsItem = p.handled_by_operator ? null : nearestHandled(p, all.map(rowToProduct), tagsOf);
+  let vsSection = "";
+  if (vsItem) {
+    const vt = tagsOf.get(vsItem.id) || {};
+    const val = (x, xt, k) => ({
+      out: outputParts(x)[0] && `<span class="nowrap">${esc(outputParts(x)[0])}</span>`, method: kw(x.method), port: kw(x.portability),
+      mat: kw((xt.material || []).join("・")), thick: x.thickness_note && kw(x.thickness_note),
+      price: x.price_band ? kw(x.price_band) : x.handled_by_operator ? "お問い合わせ" : "",
+      skill: kw(x.skill_level), service: x.origin?.service && kw(x.origin.service),
+    })[k];
+    const rows = [["出力", "out"], ["方式", "method"], ["可搬性", "port"], ["対応素材", "mat"], ["板厚の公表値", "thick"], ["価格帯", "price"], ["習得難易度", "skill"], ["国内のサポート", "service"]]
+      .map(([label, k]) => {
+        const a = val(p, tags, k), b = val(vsItem, vt, k);
+        const na = k === "service" ? "公式に記載なし" : NA;
+        return `<div class="vs__row"><dt>${kw(label)}</dt>${a ? `<dd>${a}</dd>` : `<dd class="is-na">${na}</dd>`}${b ? `<dd>${b}</dd>` : `<dd class="is-na">${na}</dd>`}</div>`;
+      }).join("");
+    vsSection = `<section class="subsec vs" id="vs">
+    <h2>${kw("運営元の取り扱い機と比べる")}</h2>
+    <p class="vs__note">${kw("この機種と方式・対応素材・出力が近い、本サイトの運営元が取り扱う機種です。機種一覧の並び順や診断の順位には関係しません。")}</p>
+    <div class="vs__names"><div><span class="vs__tag">この機種</span>${productPhoto(p, "row")}<b>${kw(p.name)}</b><small>${kw(maker)}</small></div><div><span class="vs__tag vs__tag--op">運営元で取り扱い</span>${productPhoto(vsItem, "row")}<b>${kw(vsItem.name)}</b><small>${kw(splitMaker(vsItem.maker_name)[0])}</small></div></div>
+    <dl class="vs__rows">${rows}</dl>
+    <div class="vs__cta">
+      <a class="btn btn--accent" href="/contact/?type=test&amp;product=${esc(p.slug)}&amp;compare=${esc(vsItem.slug)}">${kw("2台を実機で比べる（テスト溶接）")}</a>
+      <a class="btn" href="/products/${esc(vsItem.slug)}/">${kw(`${vsItem.name} の詳細を見る`)}</a>
+    </div>
+  </section>`;
+  }
 
   let altsSection = "";
   if (alts.length) {
@@ -263,10 +341,12 @@ async function productPage(env, slug) {
       <a class="btn" href="/contact/?type=subsidy&amp;product=${esc(p.slug)}">${kw("補助金の活用を相談する")}</a>
     </div>
   </section>` : ""}
-  <section class="subsec" id="spec"><h2>スペック</h2><dl class="spec">${spec}</dl></section>
+  <section class="subsec" id="spec"><h2>スペック</h2><dl class="spec">${spec}</dl>
+    ${madeInJapan ? "" : `<p class="spec__more"><a href="/articles/overseas/">${icon("guide")}${kw("製造国やサポート体制の確かめ方（海外製を選ぶときのポイント）")}</a></p>`}</section>
   <section class="subsec" id="fit"><h2>${kw("向いている用途・向いていない用途")}</h2>
     <div class="fit"><div class="ok"><h3>${kw("向いている")}</h3><ul>${li(p.suitable_for)}</ul></div><div class="ng"><h3>${kw("向いていない")}</h3><ul>${li(p.not_suitable_for)}</ul></div></div></section>
-  ${p.handled_by_operator ? "" : `<aside class="trybox">${icon("handheld", "ico trybox__ico")}<div><p class="trybox__title">${kw("実機で確かめたいとき")}</p><p>${kw("運営元が取り扱う機種で、テスト溶接やデモを相談できます。仕上がりを比べる参考にお使いください。")}</p><a class="btn" href="/contact/?type=test&amp;product=${esc(p.slug)}">${kw("テスト溶接・デモを相談する")}</a></div></aside>`}
+  ${vsSection}
+  ${p.handled_by_operator || vsSection ? "" : `<aside class="trybox">${icon("handheld", "ico trybox__ico")}<div><p class="trybox__title">${kw("実機で確かめたいとき")}</p><p>${kw("運営元が取り扱う機種で、テスト溶接やデモを相談できます。仕上がりを比べる参考にお使いください。")}</p><a class="btn" href="/contact/?type=test&amp;product=${esc(p.slug)}">${kw("テスト溶接・デモを相談する")}</a></div></aside>`}
   <aside class="subsidybox">${icon("yen", "ico subsidybox__ico")}<div><p class="subsidybox__title">${kw("補助金・税制で導入費を抑える")}</p><p>${kw("設備投資に使われることの多い補助金・助成金と、即時償却などの税制をまとめています。")}</p><a class="btn" href="/subsidy/">${kw("補助金・税制の一覧を見る")}</a></div></aside>
   ${altsSection}
   <section class="subsec" id="links"><h2>${kw("メーカー公式・情報源")}</h2>
@@ -342,10 +422,10 @@ function pageShell(title, body, { current = "/lineup/" } = {}) {
 <meta name="robots" content="noindex,nofollow"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><meta property="og:type" content="website"><meta property="og:site_name" content="レーザー溶接機 比較・選定"><meta property="og:title" content="${esc(title)}"><meta property="og:image" content="https://yosetsu-navi.jolly-frost-2311.workers.dev/assets/images/ogp.jpg"><meta name="twitter:card" content="summary_large_image"><title>${esc(title)}｜${SITE_NAME}</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/css/style.css?v=14"><link rel="stylesheet" href="/assets/css/product.css?v=14"></head><body>
+<link rel="stylesheet" href="/assets/css/style.css?v=15"><link rel="stylesheet" href="/assets/css/product.css?v=15"></head><body>
 <div id="siteHeader"></div>
 ${body}
 <div id="siteFooter"></div>
-<script type="module">import { mountChrome } from "/assets/js/partials.js?v=14"; mountChrome({ current: ${JSON.stringify(current)} });</script>
+<script type="module">import { mountChrome } from "/assets/js/partials.js?v=15"; mountChrome({ current: ${JSON.stringify(current)} });</script>
 </body></html>`;
 }

@@ -522,6 +522,10 @@ mark { background: linear-gradient(transparent 55%, var(--c-marker) 55%); color:
 .form__row input:focus, .form__row textarea:focus { outline: 3px solid var(--c-main-light); border-color: var(--c-main-dark); }
 .req { font-size: 13px; font-weight: 700; color: #fff; background: var(--c-sub2); border-radius: 4px; padding: 1px 6px; }
 .form__error { color: #B42318; font-weight: 700; margin: 0 0 12px; }
+.form__row select { width: 100%; min-height: 56px; padding: 12px 14px; font: inherit; font-size: 18px; color: var(--c-text); background: #fff; border: 1px solid var(--c-neutral); border-radius: var(--radius-s); }
+.form__row select:focus { outline: 3px solid var(--c-main-light); border-color: var(--c-main-dark); }
+.form__reply { margin: 0 0 20px; padding: 12px 14px; background: var(--c-main-tint); border-left: 4px solid var(--c-main-dark); border-radius: 4px; }
+.form__reply[hidden] { display: none; }
 .confirm { background: #fff; border: 1px solid var(--c-line); border-radius: 16px; padding: 24px 20px; }
 .confirm h2 { margin: 0 0 12px; }
 .confirm__demo { background: var(--c-accent-light); border-radius: var(--radius-s); padding: 12px 14px; margin: 16px 0; }

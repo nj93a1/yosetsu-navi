@@ -96,3 +96,26 @@ html { scroll-padding-top: 0; }
 .subsidybox__title { font-weight: 700; font-size: 20px; margin: 0 0 4px; }
 .subsidybox p { margin: 0 0 12px; }
 .subsidybox .btn { width: auto; display: inline-flex; padding: 10px 24px; }
+
+/* 他社機のページ: 運営元の取り扱い機と並べる（2列。横スクロールなし） */
+.vs { margin-top: 36px; padding: 20px 16px; border-radius: 16px; background: var(--c-main-tint); border: 1px solid var(--c-main-light); }
+.vs h2 { margin-top: 0; }
+.vs__note { margin: 0 0 16px; }
+.vs__names { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 0 0 8px; }
+.vs__names > div { display: flex; flex-direction: column; gap: 4px; padding: 12px; background: #fff; border: 1px solid var(--c-line); border-radius: 12px; min-width: 0; }
+.vs__names .ph-img, .vs__names .ph { width: 100%; height: 96px; object-fit: contain; }
+.vs__names b { font-size: 18px; line-height: 1.4; overflow-wrap: anywhere; }
+.vs__names small { color: var(--c-sub); font-size: 16px; }
+.vs__tag { align-self: flex-start; white-space: nowrap; font-size: 14px; font-weight: 700; padding: 2px 8px; border-radius: 999px; background: var(--c-gray); color: var(--c-sub); }
+.vs__tag--op { background: var(--c-accent); color: #111; }
+.vs__rows { margin: 0; }
+.vs__row { display: grid; grid-template-columns: 1fr 1fr; gap: 2px 12px; padding: 10px 0; border-top: 1px solid var(--c-main-light); }
+.vs__row dt { grid-column: 1 / -1; color: var(--c-sub); font-size: 16px; }
+.vs__row dd { margin: 0; font-weight: 700; min-width: 0; overflow-wrap: anywhere; }
+.vs__row dd.is-na { color: var(--c-sub); font-weight: 400; }
+.vs__cta { display: grid; gap: 12px; margin-top: 16px; }
+.spec__more { margin: 12px 0 0; }
+.spec__more a { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; font-weight: 700; color: var(--c-main-ink); }
+.spec__more .ico { width: 22px; height: 22px; flex: none; }
+.spec__src { margin-left: 6px; font-size: 15px; font-weight: 400; color: var(--c-main-ink); white-space: nowrap; }
+.spec__basis { display: block; margin-top: 4px; font-size: 16px; font-weight: 400; color: var(--c-sub); }

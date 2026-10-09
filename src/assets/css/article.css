@@ -1,0 +1,23 @@
+/* 記事ページ */
+.art__crumbs { margin: 0 0 8px; }
+.art__crumbs a { font-weight: 700; color: var(--c-main-ink); }
+.art__lead { margin: 8px 0 16px; }
+.art__note { background: var(--c-gray); border-radius: 12px; padding: 14px 16px; margin: 0 0 20px; }
+.art__note p { margin: 0; }
+.art__toc { background: #fff; border: 1px solid var(--c-line); border-radius: 16px; padding: 18px 20px; margin: 0 0 8px; }
+.art__toc-t { font-weight: 700; margin: 0 0 6px; }
+.art__toc ol { margin: 0; padding-left: 1.4em; }
+.art__toc li { margin: 4px 0; }
+.art__toc a { color: var(--c-main-ink); font-weight: 700; }
+.art__sec { margin: 32px 0 0; scroll-margin-top: 90px; }
+.art__sec h2 { display: flex; align-items: center; gap: 12px; font-size: 24px; margin: 0 0 10px; }
+.art__n { flex: none; display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: var(--c-main-dark); color: #fff; font-size: 20px; }
+.art__sec ul { padding-left: 1.2em; }
+.art__sec li { margin: 6px 0; }
+.art__sec a { color: var(--c-main-ink); font-weight: 700; }
+.art__check { margin: 40px 0 0; background: var(--c-main-tint); border: 1px solid var(--c-main-light); border-radius: 16px; padding: 20px; }
+.art__check h2 { margin: 0 0 10px; }
+.art__check ul { padding-left: 1.2em; margin: 0 0 16px; }
+.art__check li { margin: 6px 0; }
+.art__cta { display: grid; gap: 12px; }
+.art__by { font-size: 16px; color: var(--c-sub); margin: 12px 0 0; }

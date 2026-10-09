@@ -24,7 +24,8 @@ CREATE TABLE IF NOT EXISTS products (
   image_source    TEXT,                           -- 画像の掲載元ページURL
   features        TEXT NOT NULL DEFAULT '[]',     -- 機能・特長（JSON配列。メーカー・クライアント提供資料に基づく）
   support         TEXT NOT NULL DEFAULT '[]',     -- 運営元が提供する導入サポート（JSON配列。運営元取り扱い機のみ）
-  spec_rows       TEXT NOT NULL DEFAULT '[]',     -- 追加の仕様行（JSON配列 [[項目, 値], ...]）                           -- メーカー公表の板厚・溶け込みの数値（表示用。診断の板厚区分は product_tags）。無ければ NULL
+  spec_rows       TEXT NOT NULL DEFAULT '[]',     -- 追加の仕様行（JSON配列 [[項目, 値], ...]）
+  origin          TEXT NOT NULL DEFAULT '{}',     -- 本社所在地・製造国・国内サポート（JSON {hq, hq_url, made, made_basis, made_url, service, service_url}。公式に書かれた事実だけ）                           -- メーカー公表の板厚・溶け込みの数値（表示用。診断の板厚区分は product_tags）。無ければ NULL
   price_band      TEXT,                           -- 価格帯タグ（実売価格は掲載しない。未確定なら NULL・非公開）
   skill_level     TEXT,                           -- 習得難易度タグ（非公開なら NULL）
   comment         TEXT NOT NULL,                  -- 運営者による選定コメント（必須・1文以上）
@@ -75,3 +76,16 @@ CREATE TABLE IF NOT EXISTS diagnosis_logs (
 CREATE INDEX IF NOT EXISTS idx_logs_created ON diagnosis_logs(created_at);
 CREATE INDEX IF NOT EXISTS idx_logs_conditions
   ON diagnosis_logs(q1_material, q2_thickness, q3_skill, q4_environment, q5_budget);
+
+-- 相談の種類 × 見ていた機種 × 来たページ（個人情報は持たない）。月ごとの集計例:
+--   SELECT substr(created_at,1,7) AS month, type, handled, count(*) FROM inquiry_logs GROUP BY 1,2,3 ORDER BY 1,2,3;
+CREATE TABLE IF NOT EXISTS inquiry_logs (
+  id          INTEGER PRIMARY KEY AUTOINCREMENT,
+  created_at  TEXT NOT NULL DEFAULT (datetime('now')),
+  type        TEXT NOT NULL,
+  product_id  TEXT,
+  handled     INTEGER,
+  compare_id  TEXT,
+  from_path   TEXT
+);
+CREATE INDEX IF NOT EXISTS idx_inquiry_created ON inquiry_logs(created_at);

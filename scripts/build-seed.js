@@ -22,7 +22,7 @@ const REQUIRED = ["id", "maker_slug", "model_slug", "name", "maker_name", "metho
 const PUBLIC_FIELDS = [
   "id", "maker_slug", "model_slug", "name", "maker_name", "method", "wavelength", "output_w", "output_note", "portability",
   "thickness_note", "tags", "comment", "suitable_for", "not_suitable_for", "handled_by_operator", "image",
-  "official_url", "source_url", "source", "image_credit", "image_source", "features", "support", "spec_rows",
+  "official_url", "source_url", "source", "image_credit", "image_source", "features", "support", "spec_rows", "origin",
 ];
 const OPTIONAL_TEXT = ["wavelength", "output_note", "thickness_note", "source", "official_url", "source_url", "image", "image_credit", "image_source"];
 
@@ -86,11 +86,11 @@ const lines = ["-- 自動生成: scripts/build-seed.js（手で編集しない�
 for (const p of products) {
   const slug = `${p.maker_slug}-${p.model_slug}`;
   lines.push(
-    `INSERT INTO products (id, maker_slug, model_slug, slug, name, maker_name, method, wavelength, output_w, output_note, portability, thickness_note, price_band, skill_level, comment, suitable_for, not_suitable_for, handled_by_operator, image, source, official_url, source_url, image_credit, image_source, features, support, spec_rows, is_published) VALUES (` +
+    `INSERT INTO products (id, maker_slug, model_slug, slug, name, maker_name, method, wavelength, output_w, output_note, portability, thickness_note, price_band, skill_level, comment, suitable_for, not_suitable_for, handled_by_operator, image, source, official_url, source_url, image_credit, image_source, features, support, spec_rows, origin, is_published) VALUES (` +
       [p.id, p.maker_slug, p.model_slug, slug, p.name, p.maker_name, p.method, p.wavelength, p.output_w, p.output_note ?? null, p.portability, p.thickness_note ?? null,
         p.tags.price[0] ?? null, p.tags.skill[0] ?? null, p.comment, JSON.stringify(p.suitable_for || []), JSON.stringify(p.not_suitable_for || []),
         p.handled_by_operator ? 1 : 0, p.image, p.source, p.official_url ?? null, p.source_url ?? null, p.image_credit ?? null, p.image_source ?? null,
-        JSON.stringify(p.features || []), JSON.stringify(p.support || []), JSON.stringify(p.spec_rows || []), p.is_published === false ? 0 : 1]
+        JSON.stringify(p.features || []), JSON.stringify(p.support || []), JSON.stringify(p.spec_rows || []), JSON.stringify(p.origin || {}), p.is_published === false ? 0 : 1]
         .map((v) => (typeof v === "number" ? v : q(v))).join(", ") + ");"
   );
   for (const a of AXES) for (const t of p.tags[a]) lines.push(`INSERT INTO product_tags (product_id, axis, tag) VALUES (${q(p.id)}, ${q(a)}, ${q(t)});`);

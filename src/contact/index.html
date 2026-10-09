@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/assets/css/style.css?v=14">
+  <link rel="stylesheet" href="/assets/css/style.css?v=15">
   <title>相談・問い合わせ｜レーザー溶接機 比較・選定</title>
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="レーザー溶接機 比較・選定">
@@ -47,6 +47,14 @@
         <label><input type="radio" name="type" value="subsidy"><span>補助金・助成金の活用</span></label>
         <label><input type="radio" name="type" value="other"><span>その他</span></label>
       </fieldset>
+      <p class="form__reply" id="formReply" aria-live="polite"></p>
+      <div class="form__extra" data-for="quote" hidden>
+        <div class="form__row"><label for="qty">導入予定の台数</label><select id="qty" name="qty"><option value="">選んでください</option><option>1台</option><option>2〜3台</option><option>4台以上</option><option>未定</option></select></div>
+        <div class="form__row"><label for="when">導入の希望時期</label><select id="when" name="when"><option value="">選んでください</option><option>3か月以内</option><option>半年以内</option><option>1年以内</option><option>未定</option></select></div>
+      </div>
+      <div class="form__extra" data-for="test" hidden>
+        <div class="form__row"><label for="work">試したい材料・板厚</label><input id="work" name="work" type="text" placeholder="例：SUS304 1.5mm の突合せ、アルミ 3mm"></div>
+      </div>
       <div class="form__row"><label for="company">会社名</label><input id="company" name="company" type="text" autocomplete="organization"></div>
       <div class="form__row"><label for="name">お名前<span class="req">必須</span></label><input id="name" name="name" type="text" autocomplete="name" required></div>
       <div class="form__row"><label for="email">メールアドレス<span class="req">必須</span></label><input id="email" name="email" type="email" autocomplete="email" inputmode="email" required></div>
@@ -65,6 +73,6 @@
   </div>
 </main>
 <div id="siteFooter"></div>
-<script type="module" src="/assets/js/contact.js?v=14"></script>
+<script type="module" src="/assets/js/contact.js?v=15"></script>
 </body>
 </html>

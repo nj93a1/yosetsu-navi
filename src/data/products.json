@@ -106,7 +106,16 @@
         "外形寸法",
         "W570 × D1050 × H1060mm"
       ]
-    ]
+    ],
+    "origin": {
+      "hq": "日本（東京都江東区）",
+      "hq_url": "https://uw-j.co.jp/company/",
+      "made": "中国",
+      "made_basis": "UW JAPANの会社概要に「日本品質の中国製」。会社全体の記載で、機種ごとの記載はなし",
+      "made_url": "https://uw-j.co.jp/company/",
+      "service": "UW JAPAN が国内で修理・メンテナンスに対応（連絡の当日か翌日に全国対応、保証2年）",
+      "service_url": "https://uw-j.co.jp/support/"
+    }
   },
   {
     "id": "p102",
@@ -215,7 +224,16 @@
         "外形寸法",
         "W570 × D1050 × H1060mm"
       ]
-    ]
+    ],
+    "origin": {
+      "hq": "日本（東京都江東区）",
+      "hq_url": "https://uw-j.co.jp/company/",
+      "made": "中国",
+      "made_basis": "UW JAPANの会社概要に「日本品質の中国製」。会社全体の記載で、機種ごとの記載はなし",
+      "made_url": "https://uw-j.co.jp/company/",
+      "service": "UW JAPAN が国内で修理・メンテナンスに対応（連絡の当日か翌日に全国対応、保証2年）",
+      "service_url": "https://uw-j.co.jp/support/"
+    }
   },
   {
     "id": "p103",
@@ -327,7 +345,16 @@
         "外形寸法",
         "W570 × D1050 × H1060mm"
       ]
-    ]
+    ],
+    "origin": {
+      "hq": "日本（東京都江東区）",
+      "hq_url": "https://uw-j.co.jp/company/",
+      "made": "中国",
+      "made_basis": "UW JAPANの会社概要に「日本品質の中国製」。会社全体の記載で、機種ごとの記載はなし",
+      "made_url": "https://uw-j.co.jp/company/",
+      "service": "UW JAPAN が国内で修理・メンテナンスに対応（連絡の当日か翌日に全国対応、保証2年）",
+      "service_url": "https://uw-j.co.jp/support/"
+    }
   },
   {
     "id": "p201",
@@ -376,7 +403,16 @@
     "source_url": "https://laser-navi.com/products/opticelfh/",
     "source": "レーザックス公式サイトの製品ページ",
     "image_credit": "株式会社レーザックス 公式サイト（2機種の写真から切り出し）",
-    "image_source": "https://laser-navi.com/media/opticel/a142"
+    "image_source": "https://laser-navi.com/media/opticel/a142",
+    "origin": {
+      "hq": "日本（愛知県知立市）",
+      "hq_url": "https://www.laserx.co.jp/company/about/",
+      "made": "日本",
+      "made_basis": "「国内生産。当社で全数組付け＋出荷検査」",
+      "made_url": "https://laser-navi.com/products/opticelfh/",
+      "service": "本社（愛知県知立市）をサービス拠点に修理・年次点検。修理中は代替デモ機を貸出",
+      "service_url": "https://laser-navi.com/products/opticelfh/"
+    }
   },
   {
     "id": "p202",
@@ -424,7 +460,16 @@
     "source_url": "https://laser-navi.com/products/opticelfh/",
     "source": "レーザックス公式サイトの製品ページと仕様表（PDF）",
     "image_credit": "株式会社レーザックス 公式サイト（2機種の写真から切り出し）",
-    "image_source": "https://laser-navi.com/media/opticel/a142"
+    "image_source": "https://laser-navi.com/media/opticel/a142",
+    "origin": {
+      "hq": "日本（愛知県知立市）",
+      "hq_url": "https://www.laserx.co.jp/company/about/",
+      "made": "日本",
+      "made_basis": "「国内生産。当社で全数組付け＋出荷検査」",
+      "made_url": "https://laser-navi.com/products/opticelfh/",
+      "service": "本社（愛知県知立市）をサービス拠点に修理・年次点検。修理中は代替デモ機を貸出",
+      "service_url": "https://laser-navi.com/products/opticelfh/"
+    }
   },
   {
     "id": "p203",
@@ -477,7 +522,13 @@
     "source_url": "https://www.sheetmetal.amada.co.jp/lineup/weld/flw-mts/flw-1500mts.html",
     "source": "アマダ公式サイトの製品・仕様ページ",
     "image_credit": "株式会社アマダ 公式サイト",
-    "image_source": "https://www.sheetmetal.amada.co.jp/lineup/weld/flw-mts/flw-1500mts.html"
+    "image_source": "https://www.sheetmetal.amada.co.jp/lineup/weld/flw-mts/flw-1500mts.html",
+    "origin": {
+      "hq": "日本（神奈川県伊勢原市）",
+      "hq_url": "https://www.amada.co.jp/ja/corporate/profile/",
+      "service": "直販・直サービス体制で保守点検・修理を自社対応",
+      "service_url": "https://www.amada.co.jp/ja/innovation/sales_service/"
+    }
   },
   {
     "id": "p204",
@@ -515,7 +566,11 @@
     "source_url": "https://thm-co.jp/fiber/thm-30r-f-2",
     "source": "THM公式サイトの製品ページ（仕様表画像を含む）",
     "image_credit": "THM株式会社 公式サイト",
-    "image_source": "https://thm-co.jp/fiber/thm-30r-f-2"
+    "image_source": "https://thm-co.jp/fiber/thm-30r-f-2",
+    "origin": {
+      "hq": "日本（神奈川県横浜市金沢区）",
+      "hq_url": "https://thm-co.jp/company/corporate_profile"
+    }
   },
   {
     "id": "p205",
@@ -559,7 +614,16 @@
     "source_url": "https://www.wel-ken.co.jp/v-hp1000/",
     "source": "WEL-KEN公式サイトの製品ページ",
     "image_credit": "株式会社WEL-KEN 公式サイト",
-    "image_source": "https://www.wel-ken.co.jp/v-hp1000/"
+    "image_source": "https://www.wel-ken.co.jp/v-hp1000/",
+    "origin": {
+      "hq": "日本（東京都世田谷区）",
+      "hq_url": "https://www.wel-ken.co.jp/company/",
+      "made": "日本",
+      "made_basis": "製品ページの題名が「国産」",
+      "made_url": "https://www.wel-ken.co.jp/v-hf2000/",
+      "service": "国内拠点のサポート窓口で修理・代替機の相談に対応",
+      "service_url": "https://www.wel-ken.co.jp/"
+    }
   },
   {
     "id": "p206",
@@ -601,7 +665,16 @@
     "source_url": "https://www.wel-ken.co.jp/v-hf2000/",
     "source": "WEL-KEN公式サイトの製品ページ（施工例の一部は同社の溶接動画ページ）",
     "image_credit": "株式会社WEL-KEN 公式サイト",
-    "image_source": "https://www.wel-ken.co.jp/v-hf2000/"
+    "image_source": "https://www.wel-ken.co.jp/v-hf2000/",
+    "origin": {
+      "hq": "日本（東京都世田谷区）",
+      "hq_url": "https://www.wel-ken.co.jp/company/",
+      "made": "日本",
+      "made_basis": "製品ページの題名が「国産」",
+      "made_url": "https://www.wel-ken.co.jp/v-hf2000/",
+      "service": "国内拠点のサポート窓口で修理・代替機の相談に対応",
+      "service_url": "https://www.wel-ken.co.jp/"
+    }
   },
   {
     "id": "p207",
@@ -644,7 +717,16 @@
     "source_url": "https://www.wel-ken.co.jp/v-hp3000/",
     "source": "WEL-KEN公式サイトの製品ページ",
     "image_credit": "株式会社WEL-KEN 公式サイト",
-    "image_source": "https://www.wel-ken.co.jp/v-hp3000/"
+    "image_source": "https://www.wel-ken.co.jp/v-hp3000/",
+    "origin": {
+      "hq": "日本（東京都世田谷区）",
+      "hq_url": "https://www.wel-ken.co.jp/company/",
+      "made": "日本",
+      "made_basis": "製品ページの題名が「国産」",
+      "made_url": "https://www.wel-ken.co.jp/v-hf2000/",
+      "service": "国内拠点のサポート窓口で修理・代替機の相談に対応",
+      "service_url": "https://www.wel-ken.co.jp/"
+    }
   },
   {
     "id": "p208",
@@ -677,7 +759,13 @@
     "image": "/assets/images/products/placeholder.svg",
     "official_url": "https://www.wel-ken.co.jp/lineup/",
     "source_url": "https://www.wel-ken.co.jp/lineup/",
-    "source": "WEL-KEN公式サイトの製品ラインナップ比較・オプションページ"
+    "source": "WEL-KEN公式サイトの製品ラインナップ比較・オプションページ",
+    "origin": {
+      "hq": "日本（東京都世田谷区）",
+      "hq_url": "https://www.wel-ken.co.jp/company/",
+      "service": "国内拠点のサポート窓口で修理・代替機の相談に対応",
+      "service_url": "https://www.wel-ken.co.jp/"
+    }
   },
   {
     "id": "p209",
@@ -724,7 +812,13 @@
     "source_url": "https://www.ikuratools.com/w_FL.html",
     "source": "育良精機公式サイトの製品ページ（仕様表）",
     "image_credit": "育良精機株式会社 公式サイト（2機種共通の写真）",
-    "image_source": "https://www.ikuratools.com/w_FL.html"
+    "image_source": "https://www.ikuratools.com/w_FL.html",
+    "origin": {
+      "hq": "日本（茨城県つくば市）",
+      "hq_url": "https://www.ikuratools.com/company.html",
+      "service": "自社ブランド品は製造・販売・メンテナンスまで自社一貫と説明",
+      "service_url": "https://www.ikuratools.com/company.html"
+    }
   },
   {
     "id": "p210",
@@ -771,7 +865,13 @@
     "source_url": "https://www.ikuratools.com/w_FL.html",
     "source": "育良精機公式サイトの製品ページ（仕様表）",
     "image_credit": "育良精機株式会社 公式サイト（2機種共通の写真）",
-    "image_source": "https://www.ikuratools.com/w_FL.html"
+    "image_source": "https://www.ikuratools.com/w_FL.html",
+    "origin": {
+      "hq": "日本（茨城県つくば市）",
+      "hq_url": "https://www.ikuratools.com/company.html",
+      "service": "自社ブランド品は製造・販売・メンテナンスまで自社一貫と説明",
+      "service_url": "https://www.ikuratools.com/company.html"
+    }
   },
   {
     "id": "p211",
@@ -815,7 +915,11 @@
     "source_url": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
     "source": "富士機工公式サイトの仕様表",
     "image_credit": "富士機工株式会社 公式サイト（シリーズ共通の写真）",
-    "image_source": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/"
+    "image_source": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
+    "origin": {
+      "hq": "日本（東京都武蔵村山市）",
+      "hq_url": "https://www.fuji-kiko.co.jp/company/about"
+    }
   },
   {
     "id": "p212",
@@ -859,7 +963,11 @@
     "source_url": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
     "source": "富士機工公式サイトの仕様表",
     "image_credit": "富士機工株式会社 公式サイト",
-    "image_source": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/"
+    "image_source": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
+    "origin": {
+      "hq": "日本（東京都武蔵村山市）",
+      "hq_url": "https://www.fuji-kiko.co.jp/company/about"
+    }
   },
   {
     "id": "p213",
@@ -905,7 +1013,11 @@
     "source_url": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
     "source": "富士機工公式サイトの仕様表",
     "image_credit": "富士機工株式会社 公式サイト",
-    "image_source": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/"
+    "image_source": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
+    "origin": {
+      "hq": "日本（東京都武蔵村山市）",
+      "hq_url": "https://www.fuji-kiko.co.jp/company/about"
+    }
   },
   {
     "id": "p214",
@@ -951,7 +1063,11 @@
     "source_url": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
     "source": "富士機工公式サイトの仕様表",
     "image_credit": "富士機工株式会社 公式サイト",
-    "image_source": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/"
+    "image_source": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
+    "origin": {
+      "hq": "日本（東京都武蔵村山市）",
+      "hq_url": "https://www.fuji-kiko.co.jp/company/about"
+    }
   },
   {
     "id": "p215",
@@ -999,7 +1115,13 @@
     "source_url": "https://www.hsglaser.com/product/laser-welding-machine-fmw.html",
     "source": "HSG公式サイトのFMW製品ページ・製品シート（PDF）。一部仕様は国内代理店ヨコハマシステムズ",
     "image_credit": "株式会社ヨコハマシステムズ（HSG LASER 国内代理店）公式サイト",
-    "image_source": "https://yokohamalaser.com/products/hsg-welding-cleaner/fmw-v2/"
+    "image_source": "https://yokohamalaser.com/products/hsg-welding-cleaner/fmw-v2/",
+    "origin": {
+      "hq": "中国（広東省仏山市順徳区）",
+      "hq_url": "https://www.hsglaser.com/pages/about",
+      "service": "国内販売元ヨコハマシステムズのエンジニアが国内サポート（保守受付・保証1年）",
+      "service_url": "https://yokohamalaser.com/guide/support/"
+    }
   },
   {
     "id": "p216",
@@ -1041,7 +1163,16 @@
     "source_url": "https://dynalaserstech.com/product/dynalasers-d50-integrated-al-portable-3-in-1-smart-laser-welding-machine/",
     "source": "Dynalasers 公式サイト（国内で YDL D シリーズとして販売されている製品と同じ仕様の製品ページ）",
     "image_credit": "株式会社ヨコハマシステムズ（YDL 販売元）公式サイト（D シリーズ共通の写真）",
-    "image_source": "https://yokohamalaser.com/products/ydl-welding-cleaner/d/"
+    "image_source": "https://yokohamalaser.com/products/ydl-welding-cleaner/d/",
+    "origin": {
+      "hq": "中国（広東省深圳市）",
+      "hq_url": "https://dynalaserstech.com/about-us/",
+      "made": "中国",
+      "made_basis": "メーカーの会社紹介に恵州の生産拠点。会社全体の記載で、機種ごとの記載はなし",
+      "made_url": "https://dynalaserstech.com/about-us/",
+      "service": "国内販売元ヨコハマシステムズのエンジニアが国内サポート（保守受付・保証1年）",
+      "service_url": "https://yokohamalaser.com/guide/support/"
+    }
   },
   {
     "id": "p217",
@@ -1082,7 +1213,16 @@
     "source_url": "https://yokohamalaser.com/products/ydl-welding-cleaner/d/",
     "source": "国内販売元ヨコハマシステムズのYDL Dシリーズ製品ページ（製造元 Dynalasers 公式はシリーズ情報のみ）",
     "image_credit": "株式会社ヨコハマシステムズ（YDL 販売元）公式サイト（D シリーズ共通の写真）",
-    "image_source": "https://yokohamalaser.com/products/ydl-welding-cleaner/d/"
+    "image_source": "https://yokohamalaser.com/products/ydl-welding-cleaner/d/",
+    "origin": {
+      "hq": "中国（広東省深圳市）",
+      "hq_url": "https://dynalaserstech.com/about-us/",
+      "made": "中国",
+      "made_basis": "メーカーの会社紹介に恵州の生産拠点。会社全体の記載で、機種ごとの記載はなし",
+      "made_url": "https://dynalaserstech.com/about-us/",
+      "service": "国内販売元ヨコハマシステムズのエンジニアが国内サポート（保守受付・保証1年）",
+      "service_url": "https://yokohamalaser.com/guide/support/"
+    }
   },
   {
     "id": "p218",
@@ -1123,7 +1263,16 @@
     "source_url": "https://dynalaserstech.com/product/integrated-smart-laser-handheld-welding-d70/",
     "source": "Dynalasers 公式サイト（国内で YDL D シリーズとして販売されている製品と同じ仕様の製品ページ）",
     "image_credit": "株式会社ヨコハマシステムズ（YDL 販売元）公式サイト（D シリーズ共通の写真）",
-    "image_source": "https://yokohamalaser.com/products/ydl-welding-cleaner/d/"
+    "image_source": "https://yokohamalaser.com/products/ydl-welding-cleaner/d/",
+    "origin": {
+      "hq": "中国（広東省深圳市）",
+      "hq_url": "https://dynalaserstech.com/about-us/",
+      "made": "中国",
+      "made_basis": "メーカーの会社紹介に恵州の生産拠点。会社全体の記載で、機種ごとの記載はなし",
+      "made_url": "https://dynalaserstech.com/about-us/",
+      "service": "国内販売元ヨコハマシステムズのエンジニアが国内サポート（保守受付・保証1年）",
+      "service_url": "https://yokohamalaser.com/guide/support/"
+    }
   },
   {
     "id": "p219",
@@ -1174,7 +1323,16 @@
     "source_url": "https://www.smartdiys.com/slw700/",
     "source": "smartDIYs公式サイトのSLW700製品ページ",
     "image_credit": "株式会社smartDIYs 公式サイト",
-    "image_source": "https://www.smartdiys.com/slw700/"
+    "image_source": "https://www.smartdiys.com/slw700/",
+    "origin": {
+      "hq": "日本（山梨県南アルプス市）",
+      "hq_url": "https://www.smartdiys.com/about/",
+      "made": "中国（日本で再検査）",
+      "made_basis": "中国工場で組立、日本の整備工場で出荷前に再検査",
+      "made_url": "https://www.smartdiys.com/slw1500/",
+      "service": "本社（山梨）の整備工場へ返送して修理。修理中は代替機を貸出（訪問修理なし）",
+      "service_url": "https://www.smartdiys.com/support/"
+    }
   },
   {
     "id": "p220",
@@ -1223,7 +1381,16 @@
     "source_url": "https://www.smartdiys.com/slw1500/",
     "source": "smartDIYs公式サイトのSLW1500A製品ページ",
     "image_credit": "株式会社smartDIYs 公式サイト",
-    "image_source": "https://www.smartdiys.com/laser-welding/"
+    "image_source": "https://www.smartdiys.com/laser-welding/",
+    "origin": {
+      "hq": "日本（山梨県南アルプス市）",
+      "hq_url": "https://www.smartdiys.com/about/",
+      "made": "中国（日本で再検査）",
+      "made_basis": "中国工場で組立、日本の整備工場で出荷前に再検査",
+      "made_url": "https://www.smartdiys.com/slw1500/",
+      "service": "本社（山梨）の整備工場へ返送して修理。修理中は代替機を貸出（訪問修理なし）",
+      "service_url": "https://www.smartdiys.com/support/"
+    }
   },
   {
     "id": "p221",
@@ -1273,7 +1440,16 @@
     "source_url": "https://www.smartdiys.com/slw2000/",
     "source": "smartDIYs公式サイトのSLW2000製品ページ",
     "image_credit": "株式会社smartDIYs 公式サイト",
-    "image_source": "https://www.smartdiys.com/laser-welding/"
+    "image_source": "https://www.smartdiys.com/laser-welding/",
+    "origin": {
+      "hq": "日本（山梨県南アルプス市）",
+      "hq_url": "https://www.smartdiys.com/about/",
+      "made": "中国（日本で再検査）",
+      "made_basis": "中国工場で組立、日本の整備工場で出荷前に再検査",
+      "made_url": "https://www.smartdiys.com/slw1500/",
+      "service": "本社（山梨）の整備工場へ返送して修理。修理中は代替機を貸出（訪問修理なし）",
+      "service_url": "https://www.smartdiys.com/support/"
+    }
   },
   {
     "id": "p104",
@@ -1310,7 +1486,16 @@
       "テスト溶接による仕上がりの確認と、現場でのデモを相談できます",
       "見積もり・導入の相談に対応します",
       "補助金・助成金の活用支援チームが導入を支援します"
-    ]
+    ],
+    "origin": {
+      "hq": "日本（東京都江東区）",
+      "hq_url": "https://uw-j.co.jp/company/",
+      "made": "中国",
+      "made_basis": "UW JAPANの会社概要に「日本品質の中国製」。会社全体の記載で、機種ごとの記載はなし",
+      "made_url": "https://uw-j.co.jp/company/",
+      "service": "UW JAPAN が国内で修理・メンテナンスに対応（連絡の当日か翌日に全国対応、保証2年）",
+      "service_url": "https://uw-j.co.jp/support/"
+    }
   },
   {
     "id": "p105",
@@ -1360,7 +1545,16 @@
       "テスト溶接による仕上がりの確認と、現場でのデモを相談できます",
       "見積もり・導入の相談に対応します",
       "補助金・助成金の活用支援チームが導入を支援します"
-    ]
+    ],
+    "origin": {
+      "hq": "日本（大阪府東大阪市）",
+      "hq_url": "https://kss-kr.com/guidance/",
+      "made": "中国",
+      "made_basis": "会社案内に「中国生産工場」の写真。会社全体の記載で、機種ごとの記載はなし",
+      "made_url": "https://kss-kr.com/guidance/",
+      "service": "自社でメンテナンス・アフターフォローに対応",
+      "service_url": "https://kss-kr.com/brand/"
+    }
   },
   {
     "id": "p106",
@@ -1412,7 +1606,16 @@
       "テスト溶接による仕上がりの確認と、現場でのデモを相談できます",
       "見積もり・導入の相談に対応します",
       "補助金・助成金の活用支援チームが導入を支援します"
-    ]
+    ],
+    "origin": {
+      "hq": "日本（大阪府東大阪市）",
+      "hq_url": "https://kss-kr.com/guidance/",
+      "made": "中国",
+      "made_basis": "会社案内に「中国生産工場」の写真。会社全体の記載で、機種ごとの記載はなし",
+      "made_url": "https://kss-kr.com/guidance/",
+      "service": "自社でメンテナンス・アフターフォローに対応",
+      "service_url": "https://kss-kr.com/brand/"
+    }
   },
   {
     "id": "p107",
@@ -1458,7 +1661,16 @@
       "テスト溶接による仕上がりの確認と、現場でのデモを相談できます",
       "見積もり・導入の相談に対応します",
       "補助金・助成金の活用支援チームが導入を支援します"
-    ]
+    ],
+    "origin": {
+      "hq": "日本（大阪府東大阪市）",
+      "hq_url": "https://kss-kr.com/guidance/",
+      "made": "中国",
+      "made_basis": "会社案内に「中国生産工場」の写真。会社全体の記載で、機種ごとの記載はなし",
+      "made_url": "https://kss-kr.com/guidance/",
+      "service": "自社でメンテナンス・アフターフォローに対応",
+      "service_url": "https://kss-kr.com/brand/"
+    }
   },
   {
     "id": "p108",
@@ -1507,7 +1719,11 @@
       "テスト溶接による仕上がりの確認と、現場でのデモを相談できます",
       "見積もり・導入の相談に対応します",
       "補助金・助成金の活用支援チームが導入を支援します"
-    ]
+    ],
+    "origin": {
+      "hq": "中国（広東省深圳市）",
+      "hq_url": "https://www.maxlasers.com/about-us"
+    }
   },
   {
     "id": "p109",
@@ -1558,7 +1774,11 @@
       "テスト溶接による仕上がりの確認と、現場でのデモを相談できます",
       "見積もり・導入の相談に対応します",
       "補助金・助成金の活用支援チームが導入を支援します"
-    ]
+    ],
+    "origin": {
+      "hq": "中国（広東省深圳市）",
+      "hq_url": "https://www.maxlasers.com/about-us"
+    }
   },
   {
     "id": "p110",
@@ -1608,7 +1828,11 @@
       "テスト溶接による仕上がりの確認と、現場でのデモを相談できます",
       "見積もり・導入の相談に対応します",
       "補助金・助成金の活用支援チームが導入を支援します"
-    ]
+    ],
+    "origin": {
+      "hq": "中国（広東省深圳市）",
+      "hq_url": "https://www.maxlasers.com/about-us"
+    }
   },
   {
     "id": "p111",
@@ -1656,7 +1880,14 @@
       "テスト溶接による仕上がりの確認と、現場でのデモを相談できます",
       "見積もり・導入の相談に対応します",
       "補助金・助成金の活用支援チームが導入を支援します"
-    ]
+    ],
+    "origin": {
+      "hq": "中国（広東省東莞市）",
+      "hq_url": "https://www.qilinlaser.cn/about-us/",
+      "made": "中国",
+      "made_basis": "東莞の自社工場で研究開発・生産と記載。会社全体の記載で、機種ごとの記載はなし",
+      "made_url": "https://www.qilinlaser.cn/about-us/"
+    }
   },
   {
     "id": "p112",
@@ -1706,7 +1937,14 @@
       "テスト溶接による仕上がりの確認と、現場でのデモを相談できます",
       "見積もり・導入の相談に対応します",
       "補助金・助成金の活用支援チームが導入を支援します"
-    ]
+    ],
+    "origin": {
+      "hq": "中国（広東省東莞市）",
+      "hq_url": "https://www.qilinlaser.cn/about-us/",
+      "made": "中国",
+      "made_basis": "東莞の自社工場で研究開発・生産と記載。会社全体の記載で、機種ごとの記載はなし",
+      "made_url": "https://www.qilinlaser.cn/about-us/"
+    }
   },
   {
     "id": "p113",
@@ -1753,7 +1991,14 @@
       "テスト溶接による仕上がりの確認と、現場でのデモを相談できます",
       "見積もり・導入の相談に対応します",
       "補助金・助成金の活用支援チームが導入を支援します"
-    ]
+    ],
+    "origin": {
+      "hq": "中国（広東省東莞市）",
+      "hq_url": "https://www.qilinlaser.cn/about-us/",
+      "made": "中国",
+      "made_basis": "東莞の自社工場で研究開発・生産と記載。会社全体の記載で、機種ごとの記載はなし",
+      "made_url": "https://www.qilinlaser.cn/about-us/"
+    }
   },
   {
     "id": "p222",
@@ -1806,7 +2051,13 @@
       "ガルバノモーター内蔵のウォブリング機能（幅0〜4mm、周波数0〜300Hz）",
       "レーザー条件設定数32種類、スロープアップ／ダウン機能",
       "トーチ先端とアース端子が通電した時のみ出射するインターロック回路"
-    ]
+    ],
+    "origin": {
+      "hq": "日本（京都府京都市伏見区）",
+      "hq_url": "https://www.symphotony.com/company/company-profile",
+      "service": "光響が修理または代替機の納入で対応（サブスク契約中の故障）",
+      "service_url": "https://www.symphotony.com/welder/flaw1500/"
+    }
   },
   {
     "id": "p223",
@@ -1863,7 +2114,13 @@
       "パルスモード（ショート／ロング）と CW モード、最大32条件を設定可能",
       "ハンドトーチを材料に接触させたまま溶接する方式で、メーカーは初心者でも簡単と案内",
       "修理部品を在庫し、修理に時間を要する場合は代替機を手配"
-    ]
+    ],
+    "origin": {
+      "hq": "日本（群馬県高崎市）",
+      "hq_url": "https://www.gunkyo.co.jp/company/",
+      "service": "群協製作所が保守・修理（部品在庫、サービスマン訪問、必要時は代替機）",
+      "service_url": "https://www.gunkyo.co.jp/gunyu_weld/"
+    }
   },
   {
     "id": "p224",
@@ -1908,7 +2165,13 @@
       "連続波＆変調パルスの発振モード",
       "ワイヤ送り装置をオプションで用意（アルミ・SUSワイヤに対応）",
       "松戸事業所に1500Wのデモ機があり、サンプル作成などのデモが可能"
-    ]
+    ],
+    "origin": {
+      "hq": "日本（千葉県松戸市）",
+      "hq_url": "https://www.physicalphoton.com/company/companyoutline",
+      "service": "自社で保守サービス・メンテナンス（会社概要の事業内容）",
+      "service_url": "https://www.physicalphoton.com/company/companyoutline"
+    }
   },
   {
     "id": "p225",
@@ -1962,7 +2225,13 @@
       "スポット径20μm のレーザーで局所的に加熱し、溶接歪を軽減",
       "溶接条件のメモリ34件",
       "空冷で立ち上げ時間が短い"
-    ]
+    ],
+    "origin": {
+      "hq": "日本（東京都青梅市）",
+      "hq_url": "https://aimcorp.co.jp/kaisyaannnai/",
+      "service": "担当営業の訪問サポート。不具合時は訪問対応（サービスパック加入で最優先）",
+      "service_url": "https://aimcorp.co.jp/yag/"
+    }
   },
   {
     "id": "p226",
@@ -2004,7 +2273,13 @@
       "センターとリングのレーザー出力を個別に設定でき、材質や板厚に応じた設定が可能",
       "スパッタが上がりにくく、ポロシティーなどの発生を抑える",
       "センターコア径22μm・リング170μm で、ビード幅を広げられる"
-    ]
+    ],
+    "origin": {
+      "hq": "日本（東京都青梅市）",
+      "hq_url": "https://aimcorp.co.jp/kaisyaannnai/",
+      "service": "担当営業の訪問サポート。不具合時は訪問対応（サービスパック加入で最優先）",
+      "service_url": "https://aimcorp.co.jp/yag/"
+    }
   },
   {
     "id": "p227",
@@ -2062,7 +2337,11 @@
       "ウォブル溶接を内蔵（最大0.2インチ≒5mm、最大300Hz）",
       "空冷で最大2000Wまでデューティサイクル100%",
       "オプションのワイヤー送給パッケージ（ワイヤー径0.8〜1.6mm）"
-    ]
+    ],
+    "origin": {
+      "hq": "米国（マサチューセッツ州マールボロ）",
+      "hq_url": "https://www.ipgphotonics.com/ja/company/locations"
+    }
   },
   {
     "id": "p228",
@@ -2121,7 +2400,11 @@
       "ウォブル溶接を内蔵（最大0.2インチ≒5mm、最大300Hz）",
       "空冷で最大2000Wまでデューティサイクル100%",
       "オプションのワイヤー送給パッケージ（ワイヤー径0.8〜1.6mm）"
-    ]
+    ],
+    "origin": {
+      "hq": "米国（マサチューセッツ州マールボロ）",
+      "hq_url": "https://www.ipgphotonics.com/ja/company/locations"
+    }
   },
   {
     "id": "p229",
@@ -2184,7 +2467,13 @@
       "自動ワイヤフィーダを標準装備（ワイヤ径0.8〜1.6mm）、ダブルワイヤフィーダはオプション",
       "200通りの溶接条件を登録可能。材種・板厚別の推奨条件を用意",
       "アルゴンではなく窒素ガスで溶接可能"
-    ]
+    ],
+    "origin": {
+      "hq": "ポーランド（グダニスク）",
+      "hq_url": "https://fanuci-falcon.com/en",
+      "service": "国内のサービスセンター（京都・横浜・小田原）で全国対応。2年保証・代替機貸出",
+      "service_url": "https://kyowa-ctc.co.jp/technical_info/%e3%83%95%e3%82%a1%e3%82%a4%e3%83%90%e3%83%bc%e3%83%ac%e3%83%bc%e3%82%b6%e3%83%bc%e6%ba%b6%e6%8e%a5%e6%a9%9f%e3%83%8f%e3%83%b3%e3%83%89%e3%83%88%e3%83%bc%e3%83%81%e5%9e%8b/"
+    }
   },
   {
     "id": "p230",
@@ -2240,7 +2529,13 @@
       "自動ワイヤ送給（ワイヤ径0.8〜1.6mm）",
       "FANATEC×ABB協働ロボットの組み合わせを用意（空冷2000W）",
       "パトライト・安全ロック・安全クランプなどの安全機構"
-    ]
+    ],
+    "origin": {
+      "hq": "ポーランド（グダニスク）",
+      "hq_url": "https://fanuci-falcon.com/en",
+      "service": "国内のサービスセンター（京都・横浜・小田原）で全国対応。2年保証・代替機貸出",
+      "service_url": "https://kyowa-ctc.co.jp/technical_info/%e3%83%95%e3%82%a1%e3%82%a4%e3%83%90%e3%83%bc%e3%83%ac%e3%83%bc%e3%82%b6%e3%83%bc%e6%ba%b6%e6%8e%a5%e6%a9%9f%e3%83%8f%e3%83%b3%e3%83%89%e3%83%88%e3%83%bc%e3%83%81%e5%9e%8b/"
+    }
   },
   {
     "id": "p231",
@@ -2297,7 +2592,16 @@
       "ワイヤーフィーダー付属（ワイヤー径0.8〜1.6mm）、ダブルワイヤーフィーダーはオプション",
       "ハンディ先のノズル外径φ12",
       "インターロック付きクランプを採用し、OD8 保護メガネと牛革手袋が付属"
-    ]
+    ],
+    "origin": {
+      "hq": "中国（浙江省温州市）",
+      "hq_url": "https://www.pentalaser.com/about",
+      "made": "中国（日本で出荷前試験）",
+      "made_basis": "中国の工場で製造、国内工場で出荷前試験（国内総代理店の説明）",
+      "made_url": "https://laserts.com/aboutus",
+      "service": "日本総代理店レーザ技術サービスが訪問修理・交換、予備部品を常備し代替機も用意",
+      "service_url": "https://laserts.com/hw1000"
+    }
   },
   {
     "id": "p232",
@@ -2352,7 +2656,16 @@
       "オプションでレーザークリーナーモードを使用可能",
       "ワイヤーフィーダー付属（ワイヤー径0.8〜1.6mm）、ダブルワイヤーフィーダーはオプション",
       "インターロック付きクランプを採用し、OD8 保護メガネと牛革手袋が付属"
-    ]
+    ],
+    "origin": {
+      "hq": "中国（浙江省温州市）",
+      "hq_url": "https://www.pentalaser.com/about",
+      "made": "中国（日本で出荷前試験）",
+      "made_basis": "中国の工場で製造、国内工場で出荷前試験（国内総代理店の説明）",
+      "made_url": "https://laserts.com/aboutus",
+      "service": "日本総代理店レーザ技術サービスが訪問修理・交換、予備部品を常備し代替機も用意",
+      "service_url": "https://laserts.com/hw1000"
+    }
   },
   {
     "id": "p233",
@@ -2408,7 +2721,11 @@
       "ウェビング機能を標準搭載",
       "溶接のほかクリーニング・レーザー追い加工にも対応",
       "ロボットの後付けが可能"
-    ]
+    ],
+    "origin": {
+      "hq": "日本（大阪府大阪市淀川区）　※販売元。製造元は公式に記載なし",
+      "hq_url": "https://www.globalgloria.com/%E3%83%9B%E3%83%BC%E3%83%A0/%E4%BC%9A%E7%A4%BE%E7%B4%B9%E4%BB%8B"
+    }
   },
   {
     "id": "p234",
@@ -2464,7 +2781,11 @@
       "ウェビング機能を標準搭載",
       "溶接のほかクリーニング・レーザー追い加工にも対応",
       "ロボットの後付けが可能"
-    ]
+    ],
+    "origin": {
+      "hq": "日本（大阪府大阪市淀川区）　※販売元。製造元は公式に記載なし",
+      "hq_url": "https://www.globalgloria.com/%E3%83%9B%E3%83%BC%E3%83%A0/%E4%BC%9A%E7%A4%BE%E7%B4%B9%E4%BB%8B"
+    }
   },
   {
     "id": "p235",
@@ -2516,7 +2837,11 @@
       "5種類のノズル（溶接＋切断）",
       "安全クランプ（インターロック機能）を標準装備",
       "オートワイヤーフィーダーを標準装備（ワイヤー径0.8〜1.6mm、ワイヤー別売り）"
-    ]
+    ],
+    "origin": {
+      "hq": "日本（愛知県豊橋市）　※販売元。製造元は公式に記載なし",
+      "hq_url": "https://www.youbon.co.jp/corporate/"
+    }
   },
   {
     "id": "p236",
@@ -2568,7 +2893,11 @@
       "5種類のノズル（溶接＋切断）",
       "安全クランプ（インターロック機能）を標準装備",
       "オートワイヤーフィーダーを標準装備（ワイヤー径0.8〜1.6mm、ワイヤー別売り）"
-    ]
+    ],
+    "origin": {
+      "hq": "日本（愛知県豊橋市）　※販売元。製造元は公式に記載なし",
+      "hq_url": "https://www.youbon.co.jp/corporate/"
+    }
   },
   {
     "id": "p237",
@@ -2610,7 +2939,13 @@
       "溶接ワイヤーを供給しながらの溶接に対応",
       "水冷装置を筐体内に内蔵し、キャスター付きで移動できる",
       "光ファイバーコア径50μm、変調周波数20kHz"
-    ]
+    ],
+    "origin": {
+      "hq": "日本（兵庫県西宮市）",
+      "hq_url": "http://www.jp-union.com/about/index.html",
+      "service": "日本本社（西宮市）の事業内容にアフターメンテナンスを明記",
+      "service_url": "http://www.jp-union.com/about/index.html"
+    }
   },
   {
     "id": "p238",
@@ -2652,7 +2987,13 @@
       "溶接ワイヤーを供給しながらの溶接に対応",
       "水冷装置を筐体内に内蔵し、キャスター付きで移動できる",
       "光ファイバーコア径50μm、変調周波数20kHz"
-    ]
+    ],
+    "origin": {
+      "hq": "日本（兵庫県西宮市）",
+      "hq_url": "http://www.jp-union.com/about/index.html",
+      "service": "日本本社（西宮市）の事業内容にアフターメンテナンスを明記",
+      "service_url": "http://www.jp-union.com/about/index.html"
+    }
   },
   {
     "id": "p239",
@@ -2708,7 +3049,16 @@
       "ビーム品質 M²=1.1（YAGレーザー比で微細・精密な溶接向き）",
       "チラー不要の構造で、ワークのそばに移動して使える",
       "ハンディトーチ（板金用・肉盛用）とマイクロスコープ付き加工ヘッドを用途で選べる"
-    ]
+    ],
+    "origin": {
+      "hq": "日本（静岡県藤枝市）",
+      "hq_url": "https://www.technocoat.co.jp/about",
+      "made": "日本",
+      "made_basis": "主要製品は自社製造、本社・工場は静岡県藤枝市。会社全体の記載で、機種ごとの記載はなし",
+      "made_url": "https://www.technocoat.co.jp/about",
+      "service": "専任スタッフが導入後のメンテナンス・アフターサービスに対応",
+      "service_url": "https://www.technocoat.co.jp/support"
+    }
   },
   {
     "id": "p240",
@@ -2762,7 +3112,16 @@
       "トーチ重量0.9kg",
       "シングル／ダブルワイヤー送給装置を選べる（ダブルは厚い肉盛溶接向けのオプション）",
       "中国工場での組立・出荷前検査に加え、日本の工場でエージングなどの最終検査を実施"
-    ]
+    ],
+    "origin": {
+      "hq": "日本（愛知県春日井市）",
+      "hq_url": "https://www.chu-cra.co.jp/company/profile/",
+      "made": "中国（日本で最終検査）",
+      "made_basis": "中国の工場で組立、日本の工場で出荷前最終検査",
+      "made_url": "https://www.chu-cra.co.jp/welding/",
+      "service": "修理・メンテナンスを自社工場（クリーンルーム）で対応、出張修理・代替機貸出あり",
+      "service_url": "https://www.chu-cra-facility.com/support/"
+    }
   },
   {
     "id": "p241",
@@ -2813,7 +3172,13 @@
       "ヘッド重量0.6kg、本体45kg",
       "スポット／連続スポット／パルス／連続の4溶接モード、ワイヤー径0.8/1/1.2/1.6mmに対応",
       "ガス圧監視・保護ガラス監視・ヘッド温度監視など8重の保護機能"
-    ]
+    ],
+    "origin": {
+      "hq": "日本（愛知県春日井市）",
+      "hq_url": "https://www.chu-cra.co.jp/company/profile/",
+      "service": "修理・メンテナンスを自社工場（クリーンルーム）で対応、出張修理・代替機貸出あり",
+      "service_url": "https://www.chu-cra-facility.com/support/"
+    }
   },
   {
     "id": "p242",
@@ -2868,7 +3233,13 @@
       "日本企業（曙産業）のオリジナルブランドで2年保証、24時間電話対応",
       "工場板金技能士（1級以上）による搬入・設置・試運転と使用方法のレクチャー",
       "日本溶接協会の『生産性向上要件証明書』の発行が可能（メーカー説明）"
-    ]
+    ],
+    "origin": {
+      "hq": "日本（京都府京都市伏見区）　※販売元。製造元は公式に記載なし",
+      "hq_url": "https://www.akebono-c.co.jp/",
+      "service": "故障時は電話サポートまたは出張修理、必要に応じ代替機貸出（2年保証）",
+      "service_url": "https://www.akebono-c.com/"
+    }
   },
   {
     "id": "p243",
@@ -2924,7 +3295,13 @@
       "日本企業（曙産業）のオリジナルブランドで2年保証、24時間電話対応",
       "工場板金技能士（1級以上）による搬入・設置・試運転と使用方法のレクチャー",
       "日本溶接協会の『生産性向上要件証明書』の発行が可能（メーカー説明）"
-    ]
+    ],
+    "origin": {
+      "hq": "日本（京都府京都市伏見区）　※販売元。製造元は公式に記載なし",
+      "hq_url": "https://www.akebono-c.co.jp/",
+      "service": "故障時は電話サポートまたは出張修理、必要に応じ代替機貸出（2年保証）",
+      "service_url": "https://www.akebono-c.com/"
+    }
   },
   {
     "id": "p244",
@@ -2973,7 +3350,11 @@
       "部品交換で切断・レーザークリーナー・溶接焼け取り機としても使える1台4役",
       "出力調整ができ、薄い素材の溶接にも対応",
       "アーク溶接やTIG溶接と比べ熱影響範囲が狭く、焼け・歪みを抑えられる（メーカー説明）"
-    ]
+    ],
+    "origin": {
+      "hq": "日本（大阪府大阪市東淀川区）　※販売元。製造元は公式に記載なし",
+      "hq_url": "https://nbceng.com/company/"
+    }
   },
   {
     "id": "p245",
@@ -3010,7 +3391,11 @@
       "照射点を左右に高速で動かすスイング機能を搭載",
       "本体とチラーが一体型",
       "オプションでダブルフィーダー（肉盛溶接）、2次元ウォブリング、ロボット取付接続口"
-    ]
+    ],
+    "origin": {
+      "hq": "日本（大阪府大阪市東淀川区）　※販売元。製造元は公式に記載なし",
+      "hq_url": "https://nbceng.com/company/"
+    }
   },
   {
     "id": "p246",
@@ -3060,7 +3445,11 @@
       "レーザービームを左右に振ることで隙間（2mm以内）がある溶接への対応力が向上",
       "簡易切断と光クリーニングにも対応",
       "熟練いらずで操作が簡単、軽量ヘッド（メーカー説明）"
-    ]
+    ],
+    "origin": {
+      "hq": "日本（石川県金沢市）　※販売元。製造元は公式に記載なし",
+      "hq_url": "https://rapyuta.jp/company/"
+    }
   },
   {
     "id": "p247",
@@ -3102,7 +3491,13 @@
       "ガルバノスキャナによるウォブリング（スポット高速走査）",
       "使用温度 -20〜+40℃",
       "保証は納入後1年（有償で2年まで延長可、光学部品は対象外）。国内配送・設置・取扱説明あり"
-    ]
+    ],
+    "origin": {
+      "hq": "日本（埼玉県さいたま市浦和区）　※販売元。製造元は公式に記載なし",
+      "hq_url": "https://www.profitet.com/companyinfo/gaiyou.html",
+      "service": "「国内メンテナンス」として故障時対応の専門スタッフを用意。保証期間内は自社で無償修理",
+      "service_url": "https://www.profitet.com/products/materialprocessing/handyweld.html"
+    }
   },
   {
     "id": "p248",
@@ -3144,7 +3539,13 @@
       "ガルバノスキャナによるウォブリング（スポット高速走査）",
       "使用温度 -20〜+40℃",
       "保証は納入後1年（有償で2年まで延長可、光学部品は対象外）。国内配送・設置・取扱説明あり"
-    ]
+    ],
+    "origin": {
+      "hq": "日本（埼玉県さいたま市浦和区）　※販売元。製造元は公式に記載なし",
+      "hq_url": "https://www.profitet.com/companyinfo/gaiyou.html",
+      "service": "「国内メンテナンス」として故障時対応の専門スタッフを用意。保証期間内は自社で無償修理",
+      "service_url": "https://www.profitet.com/products/materialprocessing/handyweld.html"
+    }
   },
   {
     "id": "p249",
@@ -3195,7 +3596,14 @@
       "出力・ビード幅・周波数などを1つのノブで調整し、溶接条件を保存できる",
       "Bodor 溶接データベースのプリセット条件を選べる",
       "溶接・切断用の専用ノズルを用意"
-    ]
+    ],
+    "origin": {
+      "hq": "中国（山東省済南市）",
+      "hq_url": "https://www.bodor.com/en/news/official_announcement.html",
+      "made": "中国",
+      "made_basis": "済南の本社工場でレーザー溶接機を生産と記載。会社全体の記載で、機種ごとの記載はなし",
+      "made_url": "https://www.bodor.com/en/news/company/Bodor-Laser-Dream-Park-Smart-Factory-Begins-Production.html"
+    }
   },
   {
     "id": "p250",
@@ -3246,7 +3654,14 @@
       "100〜240V のマルチ電源に対応（国内販売店の仕様表は200〜240V）",
       "Bodor の溶接プロセスデータベースで初心者でも条件を選びやすい（メーカー説明）",
       "出力・ビード幅・周波数などを1つのノブで調整・保存"
-    ]
+    ],
+    "origin": {
+      "hq": "中国（山東省済南市）",
+      "hq_url": "https://www.bodor.com/en/news/official_announcement.html",
+      "made": "中国",
+      "made_basis": "済南の本社工場でレーザー溶接機を生産と記載。会社全体の記載で、機種ごとの記載はなし",
+      "made_url": "https://www.bodor.com/en/news/company/Bodor-Laser-Dream-Park-Smart-Factory-Begins-Production.html"
+    }
   },
   {
     "id": "p251",
@@ -3303,7 +3718,16 @@
       "独自開発のスイング溶接で白斑の抑制と溶接幅の拡大をうたう",
       "レーザーガンはピストル型・ペン型などから選べる（要問い合わせ）",
       "特別な研修なしで溶接できるとメーカーが記載"
-    ]
+    ],
+    "origin": {
+      "hq": "日本（兵庫県明石市）",
+      "hq_url": "https://ggblaser.com/about-us",
+      "made": "日本",
+      "made_basis": "業務内容にレーザー溶接機の製造、拠点は明石工場。会社全体の記載で、機種ごとの記載はなし",
+      "made_url": "https://ggblaser.com/about-us",
+      "service": "自社で導入後の修理・メンテナンスに対応（2年間のメーカー保証）",
+      "service_url": "https://ggblaser.com/about-us"
+    }
   },
   {
     "id": "p252",
@@ -3359,7 +3783,16 @@
       "連続モード",
       "独自開発のスイング溶接で白斑の抑制と溶接幅の拡大をうたう",
       "レーザーガンはピストル型・ペン型などから選べる（要問い合わせ）"
-    ]
+    ],
+    "origin": {
+      "hq": "日本（兵庫県明石市）",
+      "hq_url": "https://ggblaser.com/about-us",
+      "made": "日本",
+      "made_basis": "業務内容にレーザー溶接機の製造、拠点は明石工場。会社全体の記載で、機種ごとの記載はなし",
+      "made_url": "https://ggblaser.com/about-us",
+      "service": "自社で導入後の修理・メンテナンスに対応（2年間のメーカー保証）",
+      "service_url": "https://ggblaser.com/about-us"
+    }
   },
   {
     "id": "p253",
@@ -3414,7 +3847,13 @@
       "レーザー幅0.01〜5.00mmを調整可能",
       "タッチパネル操作・多言語対応",
       "ワイヤー径0.8／1.0／1.2／1.6mmに対応（ワイヤー供給装置）"
-    ]
+    ],
+    "origin": {
+      "hq": "中国（山東省済南市）",
+      "hq_url": "https://www.gwklaser.com/contact/",
+      "service": "日本正規代理店・遠誠が保証修理・保守契約・現地訪問対応",
+      "service_url": "https://ensei-m.jp/support/"
+    }
   },
   {
     "id": "p254",
@@ -3469,7 +3908,13 @@
       "レーザー幅0.01〜5.00mmを調整可能",
       "タッチパネル操作・多言語対応",
       "付属品: ワイヤー供給装置、前端ノズル4種類、保護レンズ、交換用レンズ"
-    ]
+    ],
+    "origin": {
+      "hq": "中国（山東省済南市）",
+      "hq_url": "https://www.gwklaser.com/contact/",
+      "service": "日本正規代理店・遠誠が保証修理・保守契約・現地訪問対応",
+      "service_url": "https://ensei-m.jp/support/"
+    }
   },
   {
     "id": "p255",
@@ -3525,7 +3970,16 @@
       "2つのつまみでレーザー出力とスポット幅を調整",
       "作業環境 温度-10〜40℃・湿度70%以下",
       "I/Oインターフェースで溶接ロボットと接続可能"
-    ]
+    ],
+    "origin": {
+      "hq": "中国（山東省済南市）",
+      "hq_url": "https://jp.senfenglaser.com/about/",
+      "made": "中国",
+      "made_basis": "済南市の製造拠点（会社沿革）。会社全体の記載で、機種ごとの記載はなし",
+      "made_url": "https://jp.senfenglaser.com/about/",
+      "service": "国内のSENFENG認定パートナー（アグサメタル）が全国保守ネットワークで修理・メンテナンス",
+      "service_url": "https://agusa.co.jp/service/fiber_laser-support/"
+    }
   },
   {
     "id": "p256",
@@ -3586,7 +4040,16 @@
       "溶接条件をリアルタイムで保存・呼び出し",
       "温感警報・ガス警報・相順保護などの安全警報",
       "I/Oインターフェースで溶接ロボットと接続可能"
-    ]
+    ],
+    "origin": {
+      "hq": "中国（山東省済南市）",
+      "hq_url": "https://jp.senfenglaser.com/about/",
+      "made": "中国",
+      "made_basis": "済南市の製造拠点（会社沿革）。会社全体の記載で、機種ごとの記載はなし",
+      "made_url": "https://jp.senfenglaser.com/about/",
+      "service": "国内のSENFENG認定パートナー（アグサメタル）が全国保守ネットワークで修理・メンテナンス",
+      "service_url": "https://agusa.co.jp/service/fiber_laser-support/"
+    }
   },
   {
     "id": "p257",
@@ -3640,7 +4103,14 @@
       "ハンドルまたはキャスター付きのポータブル構造",
       "安全インターロックと異常アラームを搭載",
       "オプションでダブルウォブル溶接ヘッド、ヒューム集塵機、窒素発生器、ポジショナー"
-    ]
+    ],
+    "origin": {
+      "hq": "中国（山東省済南市）",
+      "hq_url": "https://www.accteklaser.com/about/",
+      "made": "中国",
+      "made_basis": "工場所在地は山東省徳州市。会社全体の記載で、機種ごとの記載はなし",
+      "made_url": "https://www.accteklaser.com/about/"
+    }
   },
   {
     "id": "p258",
@@ -3701,7 +4171,16 @@
       "スイング（ウォブリング）機能、溶接モードは連続／パルス／鱗",
       "レーザーガン約0.7kg、トーチ内温度センサー（3か所）とガス圧検知センサーを搭載",
       "日本語タッチパネル。ダブル／トリプルワイヤー、協働ロボットCRXの自動化システムをオプションで用意"
-    ]
+    ],
+    "origin": {
+      "hq": "日本（岐阜県岐阜市）　※販売元。製造元は公式に記載なし",
+      "hq_url": "https://www.laser-machine.com/company.shtml",
+      "made": "輸入品（製造国の記載なし）",
+      "made_basis": "海外から輸入し、日本国内で動作確認と品質検査",
+      "made_url": "https://www.laser-machine.com/company.shtml",
+      "service": "出張修理・センドバック修理・保守契約（6年プラン）、修理7営業日超は貸出機",
+      "service_url": "https://www.laser-machine.com/FL/lcw_gray.shtml"
+    }
   },
   {
     "id": "p259",
@@ -3763,7 +4242,16 @@
       "スイング（ウォブリング）機能、溶接モードは連続／パルス／鱗",
       "レーザーガン約0.7kg、トーチ内温度センサー（3か所）とガス圧検知センサーを搭載",
       "日本語タッチパネル。ダブル／トリプルワイヤー、協働ロボットCRXの自動化システムをオプションで用意"
-    ]
+    ],
+    "origin": {
+      "hq": "日本（岐阜県岐阜市）　※販売元。製造元は公式に記載なし",
+      "hq_url": "https://www.laser-machine.com/company.shtml",
+      "made": "輸入品（製造国の記載なし）",
+      "made_basis": "海外から輸入し、日本国内で動作確認と品質検査",
+      "made_url": "https://www.laser-machine.com/company.shtml",
+      "service": "出張修理・センドバック修理・保守契約（6年プラン）、修理7営業日超は貸出機",
+      "service_url": "https://www.laser-machine.com/FL/lcw_gray.shtml"
+    }
   },
   {
     "id": "p260",
@@ -3821,7 +4309,11 @@
       "溶接と切断に対応",
       "4.3型タッチスクリーンの有線コントローラー、条件登録120件",
       "単相200V入力"
-    ]
+    ],
+    "origin": {
+      "hq": "日本（東京都大田区）",
+      "hq_url": "https://www.nihonwelding.co.jp/profile.html"
+    }
   },
   {
     "id": "p261",
@@ -3876,7 +4368,11 @@
       "ビームスイング幅0〜5mm（0.2mm単位）、スイング速度0〜200Hz",
       "ワイヤー送給装置（φ0.8〜1.6mm）",
       "単相200V入力"
-    ]
+    ],
+    "origin": {
+      "hq": "日本（東京都大田区）",
+      "hq_url": "https://www.nihonwelding.co.jp/profile.html"
+    }
   },
   {
     "id": "p262",
@@ -3921,7 +4417,11 @@
       "消費電力が少なくランニングコストを抑えるとメーカーが記載",
       "消耗品が少なくメンテナンスが容易",
       "省スペース・コンパクト設計"
-    ]
+    ],
+    "origin": {
+      "hq": "日本（石川県金沢市）",
+      "hq_url": "https://www.shibuya.co.jp/corporate/company-profile/"
+    }
   },
   {
     "id": "p263",
@@ -3976,7 +4476,13 @@
       "材料・板厚・ワイヤ径を選ぶとレーザ出力などの条件が自動で出る設定画面、条件メモリー10件",
       "トーチ重量約700g。ワイヤ送給装置側でも操作でき、本体と連動",
       "国内修理対応（断線修理・トーチ／ケーブル交換修理）、インターロック・非常停止ボタン標準装備"
-    ]
+    ],
+    "origin": {
+      "hq": "日本（大阪府大阪市平野区）",
+      "hq_url": "https://www.might-jp.com/company/",
+      "service": "国内修理対応（断線修理・トーチ交換・ケーブル交換修理）",
+      "service_url": "https://www.might-jp.com/products/mfl-w1500mfl-w2000/"
+    }
   },
   {
     "id": "p264",
@@ -4032,7 +4538,13 @@
       "材料・板厚・ワイヤ径を選ぶとレーザ出力などの条件が自動で出る設定画面、条件メモリー10件",
       "トーチ重量約700g。ワイヤ送給装置側でも操作でき、本体と連動",
       "国内修理対応（断線修理・トーチ／ケーブル交換修理）、インターロック・非常停止ボタン標準装備"
-    ]
+    ],
+    "origin": {
+      "hq": "日本（大阪府大阪市平野区）",
+      "hq_url": "https://www.might-jp.com/company/",
+      "service": "国内修理対応（断線修理・トーチ交換・ケーブル交換修理）",
+      "service_url": "https://www.might-jp.com/products/mfl-w1500mfl-w2000/"
+    }
   },
   {
     "id": "p265",
@@ -4081,7 +4593,16 @@
       "ワイヤー装置はワイヤーの出し・戻しボタンと曲がり矯正機構付き。ダブルワイヤー（オプション）でステンレス用とアルミ用などを装填したまま切替",
       "手元で数値設定できるリモート画面（オプション）、パーテーション（オプション）",
       "FANUC協働ロボットと接続して自動溶接が可能"
-    ]
+    ],
+    "origin": {
+      "hq": "中国（江蘇省常州市）",
+      "hq_url": "https://www.trm-welding.com/contact.html",
+      "made": "中国",
+      "made_basis": "常州で設計・製造（国内販売店の説明）。会社全体の記載で、機種ごとの記載はなし",
+      "made_url": "https://ensei-m.jp/product/d/35",
+      "service": "国内販売店・遠誠が保証修理・保守契約・現地訪問対応",
+      "service_url": "https://ensei-m.jp/support/"
+    }
   },
   {
     "id": "p266",
@@ -4134,7 +4655,16 @@
       "ワイヤー装置はワイヤーの出し・戻しボタンと曲がり矯正機構付き。ダブルワイヤー（オプション）でステンレス用とアルミ用などを装填したまま切替",
       "手元で数値設定できるリモート画面（オプション）、パーテーション（オプション）",
       "FANUC協働ロボットと接続して自動溶接が可能"
-    ]
+    ],
+    "origin": {
+      "hq": "中国（江蘇省常州市）",
+      "hq_url": "https://www.trm-welding.com/contact.html",
+      "made": "中国",
+      "made_basis": "常州で設計・製造（国内販売店の説明）。会社全体の記載で、機種ごとの記載はなし",
+      "made_url": "https://ensei-m.jp/product/d/35",
+      "service": "国内販売店・遠誠が保証修理・保守契約・現地訪問対応",
+      "service_url": "https://ensei-m.jp/support/"
+    }
   },
   {
     "id": "p267",
@@ -4175,7 +4705,16 @@
       "キャタピラによる自走式で、2つの走行スイッチで位置決め",
       "ライカ双眼顕微鏡（10倍、オプション16倍）で溶接部を観察",
       "タッチスクリーン操作、WINLaser ソフトウェアとティーチインでプログラム可能"
-    ]
+    ],
+    "origin": {
+      "hq": "ドイツ（バイエルン州プッフハイム）",
+      "hq_url": "https://alphalaser.eu/rechtliches/impressum.html",
+      "made": "ドイツ",
+      "made_basis": "プッフハイムの拠点でレーザーシステムを製造。会社全体の記載で、機種ごとの記載はなし",
+      "made_url": "https://alphalaser.eu/unternehmen/daten-fakten.html",
+      "service": "国内正規代理店ALPHA LASER ENGINEERING（愛知県一宮市）が販売・メンテナンス",
+      "service_url": "https://alphalaser-eng.com/services/laser-machine/"
+    }
   },
   {
     "id": "p268",
@@ -4228,7 +4767,16 @@
       "金属・板厚ごとのプリセットパラメータからワンクリックで溶接",
       "溶接時間・出力・速度を記録する溶接ログ機能",
       "DENALIWELD ROBOX で協働ロボット／ロボット自動化に切り替え可能"
-    ]
+    ],
+    "origin": {
+      "hq": "米国（イリノイ州エルジン）",
+      "hq_url": "https://denaliweld.com/ja/about-us/",
+      "made": "米国",
+      "made_basis": "シカゴの工場で製造と記載（日本向けの組立地は記載なし）",
+      "made_url": "https://denaliweld.com/ja/about-us/",
+      "service": "日本支社（神奈川県小田原市）を含む各支社がスペアパーツ・サービスを提供",
+      "service_url": "https://denaliweld.com/ja/products/air-cooled-laser-welding-machine/"
+    }
   },
   {
     "id": "p269",
@@ -4281,7 +4829,16 @@
       "金属・板厚ごとのプリセットパラメータからワンクリックで溶接",
       "溶接時間・出力・速度を記録する溶接ログ機能",
       "DENALIWELD ROBOX で協働ロボット／ロボット自動化に切り替え可能"
-    ]
+    ],
+    "origin": {
+      "hq": "米国（イリノイ州エルジン）",
+      "hq_url": "https://denaliweld.com/ja/about-us/",
+      "made": "米国",
+      "made_basis": "シカゴの工場で製造と記載（日本向けの組立地は記載なし）",
+      "made_url": "https://denaliweld.com/ja/about-us/",
+      "service": "日本支社（神奈川県小田原市）を含む各支社がスペアパーツ・サービスを提供",
+      "service_url": "https://denaliweld.com/ja/products/air-cooled-laser-welding-machine/"
+    }
   },
   {
     "id": "p270",
@@ -4336,7 +4893,16 @@
       "アタッチメント交換とモード切替で切断・クリーニング（サビ取り・焼け取り）にも使える",
       "トーチ・母材・クランプの接触時のみ照射する導通式安全機構",
       "メーカー直販、標準2年無償保証"
-    ]
+    ],
+    "origin": {
+      "hq": "日本（埼玉県川口市）　※販売元。製造元は公式に記載なし",
+      "hq_url": "https://ls-tool.com/company/",
+      "made": "中国（日本で検査）",
+      "made_basis": "中国工場で組立、日本工場で出荷前検査",
+      "made_url": "https://ls-tool.com/",
+      "service": "国内から保証期間内の部品無償発送・代替機貸出（訪問修理・現地メンテナンスは行わない）",
+      "service_url": "https://ls-tool.com/"
+    }
   },
   {
     "id": "p271",
@@ -4391,7 +4957,16 @@
       "アタッチメント交換とモード切替で切断・クリーニング（サビ取り・焼け取り）にも使える",
       "トーチ・母材・クランプの接触時のみ照射する導通式安全機構",
       "メーカー直販、標準2年無償保証"
-    ]
+    ],
+    "origin": {
+      "hq": "日本（埼玉県川口市）　※販売元。製造元は公式に記載なし",
+      "hq_url": "https://ls-tool.com/company/",
+      "made": "中国（日本で検査）",
+      "made_basis": "中国工場で組立、日本工場で出荷前検査",
+      "made_url": "https://ls-tool.com/",
+      "service": "国内から保証期間内の部品無償発送・代替機貸出（訪問修理・現地メンテナンスは行わない）",
+      "service_url": "https://ls-tool.com/"
+    }
   },
   {
     "id": "p272",
@@ -4440,7 +5015,14 @@
       "溶接・切断・クリーニング（サビ取り）・スポット溶接に対応、Turboモードで溶け込みを向上",
       "7インチIPSタッチパネル。150の簡易モードと128のカスタムモード",
       "強制空冷で外部チラー不要、-15〜40℃で稼働"
-    ]
+    ],
+    "origin": {
+      "hq": "中国（広東省深圳市）",
+      "hq_url": "https://dynalasers.jp/%e7%a7%81%e3%81%9f%e3%81%a1%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6/",
+      "made": "中国",
+      "made_basis": "恵州市の生産拠点で製造。会社全体の記載で、機種ごとの記載はなし",
+      "made_url": "https://dynalasers.jp/%e7%a7%81%e3%81%9f%e3%81%a1%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6/"
+    }
   },
   {
     "id": "p273",
@@ -4488,7 +5070,14 @@
       "溶接・切断・クリーニング（サビ取り）・スポット溶接に対応",
       "7インチIPSタッチパネル。150の簡易モードと128のカスタムモード",
       "強制空冷で外部チラー不要、-15〜40℃で稼働"
-    ]
+    ],
+    "origin": {
+      "hq": "中国（広東省深圳市）",
+      "hq_url": "https://dynalasers.jp/%e7%a7%81%e3%81%9f%e3%81%a1%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6/",
+      "made": "中国",
+      "made_basis": "恵州市の生産拠点で製造。会社全体の記載で、機種ごとの記載はなし",
+      "made_url": "https://dynalasers.jp/%e7%a7%81%e3%81%9f%e3%81%a1%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6/"
+    }
   },
   {
     "id": "p274",
@@ -4529,6 +5118,15 @@
       "温度自動検知・風量調整・稼働状態のリアルタイム監視",
       "トーチ重量0.4kg、ダブルスイングによるウロコ溶接で溶接幅は最大8mm",
       "使用環境温度 -40℃〜45℃"
-    ]
+    ],
+    "origin": {
+      "hq": "日本（静岡県磐田市）　※販売元。製造元は公式に記載なし",
+      "hq_url": "https://fiberlaser.co.jp/?page_id=140",
+      "made": "中国",
+      "made_basis": "「中国製レーザー機器の専門商社」。会社全体の記載で、機種ごとの記載はなし",
+      "made_url": "https://fiberlaser.co.jp/?page_id=140",
+      "service": "日本国内常駐エンジニアによる設置・メンテナンス体制",
+      "service_url": "https://fiberlaser.co.jp/?page_id=140"
+    }
   }
 ]

@@ -639,6 +639,15 @@
       "tags.skill": "https://nhillz-laser.com/",
       "suitable_for": "https://nhillz-laser.com/",
       "not_suitable_for": "https://nhillz-laser.com/"
+    },
+    "origin": {
+      "hq": "日本（東京都江東区）",
+      "hq_url": "https://uw-j.co.jp/company/",
+      "made": "中国",
+      "made_basis": "UW JAPANの会社概要に「日本品質の中国製」。会社全体の記載で、機種ごとの記載はなし",
+      "made_url": "https://uw-j.co.jp/company/",
+      "service": "UW JAPAN が国内で修理・メンテナンスに対応（連絡の当日か翌日に全国対応、保証2年）",
+      "service_url": "https://uw-j.co.jp/support/"
     }
   },
   {
@@ -779,6 +788,15 @@
       "tags.skill": "https://nhillz-laser.com/",
       "suitable_for": "https://nhillz-laser.com/",
       "not_suitable_for": "https://nhillz-laser.com/"
+    },
+    "origin": {
+      "hq": "日本（東京都江東区）",
+      "hq_url": "https://uw-j.co.jp/company/",
+      "made": "中国",
+      "made_basis": "UW JAPANの会社概要に「日本品質の中国製」。会社全体の記載で、機種ごとの記載はなし",
+      "made_url": "https://uw-j.co.jp/company/",
+      "service": "UW JAPAN が国内で修理・メンテナンスに対応（連絡の当日か翌日に全国対応、保証2年）",
+      "service_url": "https://uw-j.co.jp/support/"
     }
   },
   {
@@ -922,6 +940,15 @@
       "tags.skill": "https://nhillz-laser.com/",
       "suitable_for": "https://nhillz-laser.com/",
       "not_suitable_for": "https://nhillz-laser.com/"
+    },
+    "origin": {
+      "hq": "日本（東京都江東区）",
+      "hq_url": "https://uw-j.co.jp/company/",
+      "made": "中国",
+      "made_basis": "UW JAPANの会社概要に「日本品質の中国製」。会社全体の記載で、機種ごとの記載はなし",
+      "made_url": "https://uw-j.co.jp/company/",
+      "service": "UW JAPAN が国内で修理・メンテナンスに対応（連絡の当日か翌日に全国対応、保証2年）",
+      "service_url": "https://uw-j.co.jp/support/"
     }
   },
   {
@@ -984,6 +1011,15 @@
       "tags.skill": "https://laser-navi.com/products/opticelfh/",
       "suitable_for": "https://laser-navi.com/products/opticelfh/",
       "not_suitable_for": "https://laser-navi.com/products/opticelfh/"
+    },
+    "origin": {
+      "hq": "日本（愛知県知立市）",
+      "hq_url": "https://www.laserx.co.jp/company/about/",
+      "made": "日本",
+      "made_basis": "「国内生産。当社で全数組付け＋出荷検査」",
+      "made_url": "https://laser-navi.com/products/opticelfh/",
+      "service": "本社（愛知県知立市）をサービス拠点に修理・年次点検。修理中は代替デモ機を貸出",
+      "service_url": "https://laser-navi.com/products/opticelfh/"
     }
   },
   {
@@ -1052,7 +1088,16 @@
     "conflicts": [
       "出力の表記：製品ページは「最大ピーク出力 1.5kW」、仕様表PDFは「CW（連続発振）／シングルモード 1500W」。output_note「連続発振」はPDFが根拠",
       "溶込み量：製品ページは SUS304「1〜5mm」・アルミ「1〜3mm」、PDFは SUS304「5mm」のみ（矛盾ではなく表記の幅の違い）"
-    ]
+    ],
+    "origin": {
+      "hq": "日本（愛知県知立市）",
+      "hq_url": "https://www.laserx.co.jp/company/about/",
+      "made": "日本",
+      "made_basis": "「国内生産。当社で全数組付け＋出荷検査」",
+      "made_url": "https://laser-navi.com/products/opticelfh/",
+      "service": "本社（愛知県知立市）をサービス拠点に修理・年次点検。修理中は代替デモ機を貸出",
+      "service_url": "https://laser-navi.com/products/opticelfh/"
+    }
   },
   {
     "id": "p203",
@@ -1118,6 +1163,12 @@
       "tags.material": "https://www.sheetmetal.amada.co.jp/lineup/weld/flw-mts/flw-1500mts.html",
       "tags.environment": "https://www.sheetmetal.amada.co.jp/lineup/weld/flw-mts/flw-1500mts.html",
       "suitable_for": "https://www.sheetmetal.amada.co.jp/lineup/weld/flw-mts/flw-1500mts.html"
+    },
+    "origin": {
+      "hq": "日本（神奈川県伊勢原市）",
+      "hq_url": "https://www.amada.co.jp/ja/corporate/profile/",
+      "service": "直販・直サービス体制で保守点検・修理を自社対応",
+      "service_url": "https://www.amada.co.jp/ja/innovation/sales_service/"
     }
   },
   {
@@ -1163,6 +1214,10 @@
       "portability": "https://thm-co.jp/fiber/thm-30r-f-2",
       "tags.use": "https://thm-co.jp/fiber/thm-30r-f-2",
       "suitable_for": "https://thm-co.jp/fiber/thm-30r-f-2"
+    },
+    "origin": {
+      "hq": "日本（神奈川県横浜市金沢区）",
+      "hq_url": "https://thm-co.jp/company/corporate_profile"
     }
   },
   {
@@ -1225,7 +1280,16 @@
       "本体重量：製品ページ「約180Kg」／製品ラインナップ比較 https://www.wel-ken.co.jp/lineup/ 「160㎏」（どちらもWEL-KEN公式）",
       "電源：製品ページ「3相200V」／ラインナップ比較「単相200V」",
       "外形寸法：製品ページ 500×800×800mm／ラインナップ比較 510×800×810mm"
-    ]
+    ],
+    "origin": {
+      "hq": "日本（東京都世田谷区）",
+      "hq_url": "https://www.wel-ken.co.jp/company/",
+      "made": "日本",
+      "made_basis": "製品ページの題名が「国産」",
+      "made_url": "https://www.wel-ken.co.jp/v-hf2000/",
+      "service": "国内拠点のサポート窓口で修理・代替機の相談に対応",
+      "service_url": "https://www.wel-ken.co.jp/"
+    }
   },
   {
     "id": "p206",
@@ -1288,7 +1352,16 @@
     },
     "conflicts": [
       "本体重量：製品ページ「約230Kg」／ラインナップ比較 https://www.wel-ken.co.jp/lineup/ 「210kg」（どちらもWEL-KEN公式）"
-    ]
+    ],
+    "origin": {
+      "hq": "日本（東京都世田谷区）",
+      "hq_url": "https://www.wel-ken.co.jp/company/",
+      "made": "日本",
+      "made_basis": "製品ページの題名が「国産」",
+      "made_url": "https://www.wel-ken.co.jp/v-hf2000/",
+      "service": "国内拠点のサポート窓口で修理・代替機の相談に対応",
+      "service_url": "https://www.wel-ken.co.jp/"
+    }
   },
   {
     "id": "p207",
@@ -1344,6 +1417,15 @@
       "tags.thickness": "https://www.wel-ken.co.jp/v-hp3000/",
       "tags.skill": "https://www.wel-ken.co.jp/v-hp3000/",
       "suitable_for": "https://www.wel-ken.co.jp/v-hp3000/"
+    },
+    "origin": {
+      "hq": "日本（東京都世田谷区）",
+      "hq_url": "https://www.wel-ken.co.jp/company/",
+      "made": "日本",
+      "made_basis": "製品ページの題名が「国産」",
+      "made_url": "https://www.wel-ken.co.jp/v-hf2000/",
+      "service": "国内拠点のサポート窓口で修理・代替機の相談に対応",
+      "service_url": "https://www.wel-ken.co.jp/"
     }
   },
   {
@@ -1388,6 +1470,12 @@
         "https://www.wel-ken.co.jp/option/",
         "https://www.wel-ken.co.jp/wf-700/"
       ]
+    },
+    "origin": {
+      "hq": "日本（東京都世田谷区）",
+      "hq_url": "https://www.wel-ken.co.jp/company/",
+      "service": "国内拠点のサポート窓口で修理・代替機の相談に対応",
+      "service_url": "https://www.wel-ken.co.jp/"
     }
   },
   {
@@ -1452,7 +1540,13 @@
     },
     "dealer_only_fields": [
       "tags.price（価格帯 200〜400万円。根拠はウエダ金物の販売価格 税込2,763,200円。メーカーはオープン価格で価格を公開していない）"
-    ]
+    ],
+    "origin": {
+      "hq": "日本（茨城県つくば市）",
+      "hq_url": "https://www.ikuratools.com/company.html",
+      "service": "自社ブランド品は製造・販売・メンテナンスまで自社一貫と説明",
+      "service_url": "https://www.ikuratools.com/company.html"
+    }
   },
   {
     "id": "p210",
@@ -1516,7 +1610,13 @@
     },
     "dealer_only_fields": [
       "tags.price（価格帯 200〜400万円。根拠はウエダ金物の販売価格 税込3,593,700円。メーカーはオープン価格で価格を公開していない）"
-    ]
+    ],
+    "origin": {
+      "hq": "日本（茨城県つくば市）",
+      "hq_url": "https://www.ikuratools.com/company.html",
+      "service": "自社ブランド品は製造・販売・メンテナンスまで自社一貫と説明",
+      "service_url": "https://www.ikuratools.com/company.html"
+    }
   },
   {
     "id": "p211",
@@ -1573,6 +1673,10 @@
       "tags.thickness": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
       "suitable_for": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
       "not_suitable_for": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/"
+    },
+    "origin": {
+      "hq": "日本（東京都武蔵村山市）",
+      "hq_url": "https://www.fuji-kiko.co.jp/company/about"
     }
   },
   {
@@ -1630,6 +1734,10 @@
       "tags.thickness": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
       "suitable_for": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
       "not_suitable_for": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/"
+    },
+    "origin": {
+      "hq": "日本（東京都武蔵村山市）",
+      "hq_url": "https://www.fuji-kiko.co.jp/company/about"
     }
   },
   {
@@ -1689,6 +1797,10 @@
       "tags.thickness": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
       "suitable_for": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
       "not_suitable_for": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/"
+    },
+    "origin": {
+      "hq": "日本（東京都武蔵村山市）",
+      "hq_url": "https://www.fuji-kiko.co.jp/company/about"
     }
   },
   {
@@ -1748,6 +1860,10 @@
       "tags.thickness": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
       "suitable_for": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
       "not_suitable_for": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/"
+    },
+    "origin": {
+      "hq": "日本（東京都武蔵村山市）",
+      "hq_url": "https://www.fuji-kiko.co.jp/company/about"
     }
   },
   {
@@ -1830,7 +1946,13 @@
     "conflicts": [
       "溶接可能板厚：HSG公式（製品シートPDF）はステンレス・炭素鋼 0.5〜7mm、アルミ・亜鉛めっき板 0.5〜5mm／ヨコハマシステムズは鉄・ステンレス 0.5〜5mm（品質推奨厚）。not_suitable_for「5mm超は範囲外」はメーカー公表値と食い違う",
       "出力ラインナップ：HSG公式は 1.5〜2kW／3kW（1.5〜3kW）／ヨコハマシステムズは 1,000／1,500／2,000／3,000W（1,000Wあり）"
-    ]
+    ],
+    "origin": {
+      "hq": "中国（広東省仏山市順徳区）",
+      "hq_url": "https://www.hsglaser.com/pages/about",
+      "service": "国内販売元ヨコハマシステムズのエンジニアが国内サポート（保守受付・保証1年）",
+      "service_url": "https://yokohamalaser.com/guide/support/"
+    }
   },
   {
     "id": "p216",
@@ -1885,7 +2007,16 @@
     },
     "conflicts": [
       "入力電圧：Dynalasers 180–264VAC／ヨコハマシステムズ 200〜240VAC（掲載項目外）"
-    ]
+    ],
+    "origin": {
+      "hq": "中国（広東省深圳市）",
+      "hq_url": "https://dynalaserstech.com/about-us/",
+      "made": "中国",
+      "made_basis": "メーカーの会社紹介に恵州の生産拠点。会社全体の記載で、機種ごとの記載はなし",
+      "made_url": "https://dynalaserstech.com/about-us/",
+      "service": "国内販売元ヨコハマシステムズのエンジニアが国内サポート（保守受付・保証1年）",
+      "service_url": "https://yokohamalaser.com/guide/support/"
+    }
   },
   {
     "id": "p217",
@@ -1947,7 +2078,16 @@
       "output_w（1500W）",
       "portability の本体重量（42kg未満）",
       "thickness_note（溶け込み深さ SUS・炭素鋼6mm／アルミ4.5mm／純銅1.5mm）"
-    ]
+    ],
+    "origin": {
+      "hq": "中国（広東省深圳市）",
+      "hq_url": "https://dynalaserstech.com/about-us/",
+      "made": "中国",
+      "made_basis": "メーカーの会社紹介に恵州の生産拠点。会社全体の記載で、機種ごとの記載はなし",
+      "made_url": "https://dynalaserstech.com/about-us/",
+      "service": "国内販売元ヨコハマシステムズのエンジニアが国内サポート（保守受付・保証1年）",
+      "service_url": "https://yokohamalaser.com/guide/support/"
+    }
   },
   {
     "id": "p218",
@@ -2001,7 +2141,16 @@
     },
     "conflicts": [
       "入力電圧：Dynalasers 180–264VAC／ヨコハマシステムズ 200〜240VAC（掲載項目外）"
-    ]
+    ],
+    "origin": {
+      "hq": "中国（広東省深圳市）",
+      "hq_url": "https://dynalaserstech.com/about-us/",
+      "made": "中国",
+      "made_basis": "メーカーの会社紹介に恵州の生産拠点。会社全体の記載で、機種ごとの記載はなし",
+      "made_url": "https://dynalaserstech.com/about-us/",
+      "service": "国内販売元ヨコハマシステムズのエンジニアが国内サポート（保守受付・保証1年）",
+      "service_url": "https://yokohamalaser.com/guide/support/"
+    }
   },
   {
     "id": "p219",
@@ -2067,6 +2216,15 @@
       "tags.skill": "https://www.smartdiys.com/slw700/",
       "suitable_for": "https://www.smartdiys.com/laser-welding/",
       "not_suitable_for": "https://www.smartdiys.com/slw700/"
+    },
+    "origin": {
+      "hq": "日本（山梨県南アルプス市）",
+      "hq_url": "https://www.smartdiys.com/about/",
+      "made": "中国（日本で再検査）",
+      "made_basis": "中国工場で組立、日本の整備工場で出荷前に再検査",
+      "made_url": "https://www.smartdiys.com/slw1500/",
+      "service": "本社（山梨）の整備工場へ返送して修理。修理中は代替機を貸出（訪問修理なし）",
+      "service_url": "https://www.smartdiys.com/support/"
     }
   },
   {
@@ -2131,6 +2289,15 @@
         "https://www.smartdiys.com/laser-welding/"
       ],
       "not_suitable_for": "https://www.smartdiys.com/slw1500/"
+    },
+    "origin": {
+      "hq": "日本（山梨県南アルプス市）",
+      "hq_url": "https://www.smartdiys.com/about/",
+      "made": "中国（日本で再検査）",
+      "made_basis": "中国工場で組立、日本の整備工場で出荷前に再検査",
+      "made_url": "https://www.smartdiys.com/slw1500/",
+      "service": "本社（山梨）の整備工場へ返送して修理。修理中は代替機を貸出（訪問修理なし）",
+      "service_url": "https://www.smartdiys.com/support/"
     }
   },
   {
@@ -2201,7 +2368,16 @@
     },
     "conflicts": [
       "本体重量：ラインナップ https://www.smartdiys.com/laser-welding/ は「100kg」「約100kg」／SLW2000製品ページは「本体115kg、フィーダー15kg、その他5kg、合計135kg」（どちらもsmartDIYs公式）。現データ portability「本体約100kg」は製品ページの値と合わない"
-    ]
+    ],
+    "origin": {
+      "hq": "日本（山梨県南アルプス市）",
+      "hq_url": "https://www.smartdiys.com/about/",
+      "made": "中国（日本で再検査）",
+      "made_basis": "中国工場で組立、日本の整備工場で出荷前に再検査",
+      "made_url": "https://www.smartdiys.com/slw1500/",
+      "service": "本社（山梨）の整備工場へ返送して修理。修理中は代替機を貸出（訪問修理なし）",
+      "service_url": "https://www.smartdiys.com/support/"
+    }
   },
   {
     "id": "p104",
@@ -2248,7 +2424,16 @@
       "テスト溶接による仕上がりの確認と、現場でのデモを相談できます",
       "見積もり・導入の相談に対応します",
       "補助金・助成金の活用支援チームが導入を支援します"
-    ]
+    ],
+    "origin": {
+      "hq": "日本（東京都江東区）",
+      "hq_url": "https://uw-j.co.jp/company/",
+      "made": "中国",
+      "made_basis": "UW JAPANの会社概要に「日本品質の中国製」。会社全体の記載で、機種ごとの記載はなし",
+      "made_url": "https://uw-j.co.jp/company/",
+      "service": "UW JAPAN が国内で修理・メンテナンスに対応（連絡の当日か翌日に全国対応、保証2年）",
+      "service_url": "https://uw-j.co.jp/support/"
+    }
   },
   {
     "id": "p105",
@@ -2314,7 +2499,16 @@
       "テスト溶接による仕上がりの確認と、現場でのデモを相談できます",
       "見積もり・導入の相談に対応します",
       "補助金・助成金の活用支援チームが導入を支援します"
-    ]
+    ],
+    "origin": {
+      "hq": "日本（大阪府東大阪市）",
+      "hq_url": "https://kss-kr.com/guidance/",
+      "made": "中国",
+      "made_basis": "会社案内に「中国生産工場」の写真。会社全体の記載で、機種ごとの記載はなし",
+      "made_url": "https://kss-kr.com/guidance/",
+      "service": "自社でメンテナンス・アフターフォローに対応",
+      "service_url": "https://kss-kr.com/brand/"
+    }
   },
   {
     "id": "p106",
@@ -2382,7 +2576,16 @@
       "テスト溶接による仕上がりの確認と、現場でのデモを相談できます",
       "見積もり・導入の相談に対応します",
       "補助金・助成金の活用支援チームが導入を支援します"
-    ]
+    ],
+    "origin": {
+      "hq": "日本（大阪府東大阪市）",
+      "hq_url": "https://kss-kr.com/guidance/",
+      "made": "中国",
+      "made_basis": "会社案内に「中国生産工場」の写真。会社全体の記載で、機種ごとの記載はなし",
+      "made_url": "https://kss-kr.com/guidance/",
+      "service": "自社でメンテナンス・アフターフォローに対応",
+      "service_url": "https://kss-kr.com/brand/"
+    }
   },
   {
     "id": "p107",
@@ -2444,7 +2647,16 @@
       "テスト溶接による仕上がりの確認と、現場でのデモを相談できます",
       "見積もり・導入の相談に対応します",
       "補助金・助成金の活用支援チームが導入を支援します"
-    ]
+    ],
+    "origin": {
+      "hq": "日本（大阪府東大阪市）",
+      "hq_url": "https://kss-kr.com/guidance/",
+      "made": "中国",
+      "made_basis": "会社案内に「中国生産工場」の写真。会社全体の記載で、機種ごとの記載はなし",
+      "made_url": "https://kss-kr.com/guidance/",
+      "service": "自社でメンテナンス・アフターフォローに対応",
+      "service_url": "https://kss-kr.com/brand/"
+    }
   },
   {
     "id": "p108",
@@ -2509,7 +2721,11 @@
       "テスト溶接による仕上がりの確認と、現場でのデモを相談できます",
       "見積もり・導入の相談に対応します",
       "補助金・助成金の活用支援チームが導入を支援します"
-    ]
+    ],
+    "origin": {
+      "hq": "中国（広東省深圳市）",
+      "hq_url": "https://www.maxlasers.com/about-us"
+    }
   },
   {
     "id": "p109",
@@ -2576,7 +2792,11 @@
       "テスト溶接による仕上がりの確認と、現場でのデモを相談できます",
       "見積もり・導入の相談に対応します",
       "補助金・助成金の活用支援チームが導入を支援します"
-    ]
+    ],
+    "origin": {
+      "hq": "中国（広東省深圳市）",
+      "hq_url": "https://www.maxlasers.com/about-us"
+    }
   },
   {
     "id": "p110",
@@ -2642,7 +2862,11 @@
       "テスト溶接による仕上がりの確認と、現場でのデモを相談できます",
       "見積もり・導入の相談に対応します",
       "補助金・助成金の活用支援チームが導入を支援します"
-    ]
+    ],
+    "origin": {
+      "hq": "中国（広東省深圳市）",
+      "hq_url": "https://www.maxlasers.com/about-us"
+    }
   },
   {
     "id": "p111",
@@ -2705,7 +2929,14 @@
       "テスト溶接による仕上がりの確認と、現場でのデモを相談できます",
       "見積もり・導入の相談に対応します",
       "補助金・助成金の活用支援チームが導入を支援します"
-    ]
+    ],
+    "origin": {
+      "hq": "中国（広東省東莞市）",
+      "hq_url": "https://www.qilinlaser.cn/about-us/",
+      "made": "中国",
+      "made_basis": "東莞の自社工場で研究開発・生産と記載。会社全体の記載で、機種ごとの記載はなし",
+      "made_url": "https://www.qilinlaser.cn/about-us/"
+    }
   },
   {
     "id": "p112",
@@ -2770,7 +3001,14 @@
       "テスト溶接による仕上がりの確認と、現場でのデモを相談できます",
       "見積もり・導入の相談に対応します",
       "補助金・助成金の活用支援チームが導入を支援します"
-    ]
+    ],
+    "origin": {
+      "hq": "中国（広東省東莞市）",
+      "hq_url": "https://www.qilinlaser.cn/about-us/",
+      "made": "中国",
+      "made_basis": "東莞の自社工場で研究開発・生産と記載。会社全体の記載で、機種ごとの記載はなし",
+      "made_url": "https://www.qilinlaser.cn/about-us/"
+    }
   },
   {
     "id": "p113",
@@ -2831,7 +3069,14 @@
       "テスト溶接による仕上がりの確認と、現場でのデモを相談できます",
       "見積もり・導入の相談に対応します",
       "補助金・助成金の活用支援チームが導入を支援します"
-    ]
+    ],
+    "origin": {
+      "hq": "中国（広東省東莞市）",
+      "hq_url": "https://www.qilinlaser.cn/about-us/",
+      "made": "中国",
+      "made_basis": "東莞の自社工場で研究開発・生産と記載。会社全体の記載で、機種ごとの記載はなし",
+      "made_url": "https://www.qilinlaser.cn/about-us/"
+    }
   },
   {
     "id": "p222",
@@ -2899,7 +3144,13 @@
       "power_supply": "https://www.symphotony.com/welder/"
     },
     "is_published": true,
-    "notes": "波長は公式に記載なし。製品ページに「価格 198万円（先着2台限定価格）」の表示あり（https://www.symphotony.com/welder/flaw1500/）。通常価格はプレスリリースで「お問い合わせください」のため price タグは空にした（限定価格を採るなら 100〜200万円）。サブスク月額20万円（税抜）、レンタル2週間から。電源 単相200〜220V、消費電力6kW（レーザー溶接機ホームの表）。溶接用窒素ガスが必要。同社の FL-HP3-1500 は中古1台限りの販売のため対象外。「業界最軽量」は同社調べ（2022年8月時点、空冷1500W機の比較）"
+    "notes": "波長は公式に記載なし。製品ページに「価格 198万円（先着2台限定価格）」の表示あり（https://www.symphotony.com/welder/flaw1500/）。通常価格はプレスリリースで「お問い合わせください」のため price タグは空にした（限定価格を採るなら 100〜200万円）。サブスク月額20万円（税抜）、レンタル2週間から。電源 単相200〜220V、消費電力6kW（レーザー溶接機ホームの表）。溶接用窒素ガスが必要。同社の FL-HP3-1500 は中古1台限りの販売のため対象外。「業界最軽量」は同社調べ（2022年8月時点、空冷1500W機の比較）",
+    "origin": {
+      "hq": "日本（京都府京都市伏見区）",
+      "hq_url": "https://www.symphotony.com/company/company-profile",
+      "service": "光響が修理または代替機の納入で対応（サブスク契約中の故障）",
+      "service_url": "https://www.symphotony.com/welder/flaw1500/"
+    }
   },
   {
     "id": "p223",
@@ -2970,7 +3221,13 @@
       "features": "https://www.gunkyo.co.jp/gunyu_weld/"
     },
     "is_published": true,
-    "notes": "価格は非公開。本体単独の写真が無く、公式の本体写真は文字入りバナーのみ（https://www.gunkyo.co.jp/wp/wp-content/uploads/2023/09/gunyuweld-banner2.png、型式 G-500/1000/1500-GU の表記あり）のため image_url は null。電源 単相AC200V±10%、最大皮相電力3.3kVA/4.94kVA、使用環境 外気温5〜30℃。Metoree の掲載文は「最大加工板厚：SUS3mm、アルミ2mm、鉄3mm」と古い値で、公式ページ（1500Wで SUS・鉄6mm、アルミ3mm）を採用。冷却方式は公式に「水冷」の明記はないが、質量が「冷却水含まず」と表記され、空冷タイプのページで「従来の水冷タイプ」と記載。会社は群馬県高崎市"
+    "notes": "価格は非公開。本体単独の写真が無く、公式の本体写真は文字入りバナーのみ（https://www.gunkyo.co.jp/wp/wp-content/uploads/2023/09/gunyuweld-banner2.png、型式 G-500/1000/1500-GU の表記あり）のため image_url は null。電源 単相AC200V±10%、最大皮相電力3.3kVA/4.94kVA、使用環境 外気温5〜30℃。Metoree の掲載文は「最大加工板厚：SUS3mm、アルミ2mm、鉄3mm」と古い値で、公式ページ（1500Wで SUS・鉄6mm、アルミ3mm）を採用。冷却方式は公式に「水冷」の明記はないが、質量が「冷却水含まず」と表記され、空冷タイプのページで「従来の水冷タイプ」と記載。会社は群馬県高崎市",
+    "origin": {
+      "hq": "日本（群馬県高崎市）",
+      "hq_url": "https://www.gunkyo.co.jp/company/",
+      "service": "群協製作所が保守・修理（部品在庫、サービスマン訪問、必要時は代替機）",
+      "service_url": "https://www.gunkyo.co.jp/gunyu_weld/"
+    }
   },
   {
     "id": "p224",
@@ -3027,7 +3284,13 @@
       "features": "https://www.physicalphoton.com/products/choosefromlasertypes/fiber_laser/handytorchfiberlaserwelder"
     },
     "is_published": true,
-    "notes": "価格・対応板厚は非公開。電源 単相200V（PPL-1000H〜2000H）、三相380V（PPL-3000H）、消費電力 PPL-1500H 6400W。PPL-3000H は本体200kg（520×950×1107mm）。2022年の資料PDF（https://www.physicalphoton.com/wp/wp-content/uploads/2022/01/%E3%83%8F%E3%83%B3%E3%83%87%E3%82%A3%E3%83%88%E3%83%BC%E3%83%81%E4%BB%95%E6%A7%981.5kW%E3%83%95%E3%82%A1%E3%82%A4%E3%83%90%E3%83%BC%E3%83%AC%E3%83%BC%E3%82%B6%E8%B3%87%E6%96%992.pdf）は 1000W／1500W 機について本体220kg・630×880×1160mm、転送ファイバ7m、冷却「ラック内蔵式空冷チラー」、消費電力 1.5kW機 <6000W と現行ページと異なる値のため、現行の製品ページの値を採用。画像は製品ページの本体・トーチ写真（説明の引き出し線入り）。製造国は不明のため country は本社所在国（千葉県松戸市）"
+    "notes": "価格・対応板厚は非公開。電源 単相200V（PPL-1000H〜2000H）、三相380V（PPL-3000H）、消費電力 PPL-1500H 6400W。PPL-3000H は本体200kg（520×950×1107mm）。2022年の資料PDF（https://www.physicalphoton.com/wp/wp-content/uploads/2022/01/%E3%83%8F%E3%83%B3%E3%83%87%E3%82%A3%E3%83%88%E3%83%BC%E3%83%81%E4%BB%95%E6%A7%981.5kW%E3%83%95%E3%82%A1%E3%82%A4%E3%83%90%E3%83%BC%E3%83%AC%E3%83%BC%E3%82%B6%E8%B3%87%E6%96%992.pdf）は 1000W／1500W 機について本体220kg・630×880×1160mm、転送ファイバ7m、冷却「ラック内蔵式空冷チラー」、消費電力 1.5kW機 <6000W と現行ページと異なる値のため、現行の製品ページの値を採用。画像は製品ページの本体・トーチ写真（説明の引き出し線入り）。製造国は不明のため country は本社所在国（千葉県松戸市）",
+    "origin": {
+      "hq": "日本（千葉県松戸市）",
+      "hq_url": "https://www.physicalphoton.com/company/companyoutline",
+      "service": "自社で保守サービス・メンテナンス（会社概要の事業内容）",
+      "service_url": "https://www.physicalphoton.com/company/companyoutline"
+    }
   },
   {
     "id": "p225",
@@ -3093,7 +3356,13 @@
       "features": "https://aimcorp.co.jp/yag/"
     },
     "is_published": true,
-    "notes": "価格・波長・重量・電源は非公開（公式ページの仕様表は AFL-800／1000／1500／4000R のみで、AFL-1500mini の仕様表は無い）。空冷はページ内の動画紹介文「空冷なので立ち上げ時間もスピーディー」による。溶加棒不要で「熟練の溶接工でなくても簡単に溶接できます」との記載はあるが、初心者・未経験者向けの明記ではないため skill は空。同社には水冷の AFL-1500（平均最大出力1500W、384kg、AC200V三相、5kWチラー内蔵）もある。会社は東京都青梅市"
+    "notes": "価格・波長・重量・電源は非公開（公式ページの仕様表は AFL-800／1000／1500／4000R のみで、AFL-1500mini の仕様表は無い）。空冷はページ内の動画紹介文「空冷なので立ち上げ時間もスピーディー」による。溶加棒不要で「熟練の溶接工でなくても簡単に溶接できます」との記載はあるが、初心者・未経験者向けの明記ではないため skill は空。同社には水冷の AFL-1500（平均最大出力1500W、384kg、AC200V三相、5kWチラー内蔵）もある。会社は東京都青梅市",
+    "origin": {
+      "hq": "日本（東京都青梅市）",
+      "hq_url": "https://aimcorp.co.jp/kaisyaannnai/",
+      "service": "担当営業の訪問サポート。不具合時は訪問対応（サービスパック加入で最優先）",
+      "service_url": "https://aimcorp.co.jp/yag/"
+    }
   },
   {
     "id": "p226",
@@ -3146,7 +3415,13 @@
       "features": "https://aimcorp.co.jp/yag/"
     },
     "is_published": true,
-    "notes": "価格・波長・対応板厚は非公開。電源 AC200V三相・電源容量13kVA、CW／パルス（10〜200Hz）、トーチ φ32×170mm。発振器のセンター／リング出力はカスタマイズ可能（例: センター1kW＋リング1.5kW、センター1.5kW＋リング2kW）で、output_w は仕様表の合計値。トップページで「新製品 リングモードファイバーレーザー溶接機 販売開始」と案内。画像は本体と外付けチラーが並んだ写真"
+    "notes": "価格・波長・対応板厚は非公開。電源 AC200V三相・電源容量13kVA、CW／パルス（10〜200Hz）、トーチ φ32×170mm。発振器のセンター／リング出力はカスタマイズ可能（例: センター1kW＋リング1.5kW、センター1.5kW＋リング2kW）で、output_w は仕様表の合計値。トップページで「新製品 リングモードファイバーレーザー溶接機 販売開始」と案内。画像は本体と外付けチラーが並んだ写真",
+    "origin": {
+      "hq": "日本（東京都青梅市）",
+      "hq_url": "https://aimcorp.co.jp/kaisyaannnai/",
+      "service": "担当営業の訪問サポート。不具合時は訪問対応（サービスパック加入で最優先）",
+      "service_url": "https://aimcorp.co.jp/yag/"
+    }
   },
   {
     "id": "p227",
@@ -3218,7 +3493,11 @@
       "features": "https://www.ipgphotonics.com/ja/products/lightweld/lightweld-handheld-laser-welding-and-cleaning/capabilities"
     },
     "is_published": true,
-    "notes": "価格は非公開（日本語ページは見積もり依頼）。波長は公式ページの仕様欄に記載がなく、IPG の LightWELD サイトの安全ガイド（https://www.lightweld.com/handheld-laser-welder/）にある「1070 nm の波長に対応した保護具」の記載による。本体重量・寸法・電源などの詳細仕様は LightWELD ガイド（フォーム登録でダウンロード）にあり、公開ページでは確認できなかった。板厚は公式のインチ表記をミリに換算（1インチ=25.4mm、小数第1位）。FAQ に「初めてのユーザーでもわずか数時間で高品質の溶接」とある。シリーズには LightWELD 1000（1000Wまで、鋼0.156インチまで）もある。1500 XR の板厚は概要ページの「LightWELD製品の比較」表による（能力ページは 2000 XR と 1000 のみ掲載）。"
+    "notes": "価格は非公開（日本語ページは見積もり依頼）。波長は公式ページの仕様欄に記載がなく、IPG の LightWELD サイトの安全ガイド（https://www.lightweld.com/handheld-laser-welder/）にある「1070 nm の波長に対応した保護具」の記載による。本体重量・寸法・電源などの詳細仕様は LightWELD ガイド（フォーム登録でダウンロード）にあり、公開ページでは確認できなかった。板厚は公式のインチ表記をミリに換算（1インチ=25.4mm、小数第1位）。FAQ に「初めてのユーザーでもわずか数時間で高品質の溶接」とある。シリーズには LightWELD 1000（1000Wまで、鋼0.156インチまで）もある。1500 XR の板厚は概要ページの「LightWELD製品の比較」表による（能力ページは 2000 XR と 1000 のみ掲載）。",
+    "origin": {
+      "hq": "米国（マサチューセッツ州マールボロ）",
+      "hq_url": "https://www.ipgphotonics.com/ja/company/locations"
+    }
   },
   {
     "id": "p228",
@@ -3291,7 +3570,11 @@
       "features": "https://www.ipgphotonics.com/ja/products/lightweld/lightweld-handheld-laser-welding-and-cleaning/capabilities"
     },
     "is_published": true,
-    "notes": "価格は非公開（日本語ページは見積もり依頼）。波長は公式ページの仕様欄に記載がなく、IPG の LightWELD サイトの安全ガイド（https://www.lightweld.com/handheld-laser-welder/）にある「1070 nm の波長に対応した保護具」の記載による。本体重量・寸法・電源などの詳細仕様は LightWELD ガイド（フォーム登録でダウンロード）にあり、公開ページでは確認できなかった。板厚は公式のインチ表記をミリに換算（1インチ=25.4mm、小数第1位）。FAQ に「初めてのユーザーでもわずか数時間で高品質の溶接」とある。シリーズには LightWELD 1000（1000Wまで、鋼0.156インチまで）もある。"
+    "notes": "価格は非公開（日本語ページは見積もり依頼）。波長は公式ページの仕様欄に記載がなく、IPG の LightWELD サイトの安全ガイド（https://www.lightweld.com/handheld-laser-welder/）にある「1070 nm の波長に対応した保護具」の記載による。本体重量・寸法・電源などの詳細仕様は LightWELD ガイド（フォーム登録でダウンロード）にあり、公開ページでは確認できなかった。板厚は公式のインチ表記をミリに換算（1インチ=25.4mm、小数第1位）。FAQ に「初めてのユーザーでもわずか数時間で高品質の溶接」とある。シリーズには LightWELD 1000（1000Wまで、鋼0.156インチまで）もある。",
+    "origin": {
+      "hq": "米国（マサチューセッツ州マールボロ）",
+      "hq_url": "https://www.ipgphotonics.com/ja/company/locations"
+    }
   },
   {
     "id": "p229",
@@ -3368,7 +3651,13 @@
       "maker": "https://fanuci-falcon.com/en/fanuci-pro-genx-laser-welding-machine"
     },
     "is_published": true,
-    "notes": "電源 単相220V（1000〜2000W）、3000Wは三相380V（別置き昇圧トランス付属、三相200V電源）。消費電力 1500W機7kW。skill は「未経験者でもすぐに慣れます」「初心者でも簡単です」の記載による。thickness タグはシリーズ全体（3000Wで8mm）で当てはめた。株式会社共和（京都）が FANATEC ブランドの国内正規代理店として販売。製造元は公式ページに明記されていないが、同ページに FANUCI のロゴと「小田原サービスセンター(FANUCI日本株式会社)」の記載があり、Metoree の共和の掲載文に「FANUCI社製レーザー発振器を搭載」とある。FANUCI のメーカーサイト（Fanuci & Falcon Sp. z o.o.、ポーランド・グダニスク、https://fanuci-falcon.com/en ）は日本向け名称（FANATEC 4.0 Pro GenX／Jet）と型番体系が異なるため、仕様は共和の日本語ページを採用。country はメーカー本社所在国（ポーランド）とした。公式の本体写真は4シリーズを並べたラインナップ画像（https://kyowa-ctc.co.jp/wp/wp-content/uploads/2022/03/cf9568982ead9e5084d8e1ba09edc586-scaled.png）のみで、単体の本体写真が無いため image_url は null。価格は非公開（見積もり）。2年保証・代替機貸出制度、全国3か所のサービスセンター。中小企業経営強化税制の対象設備（日本溶接協会の生産性向上要件証明書を発行可能）。"
+    "notes": "電源 単相220V（1000〜2000W）、3000Wは三相380V（別置き昇圧トランス付属、三相200V電源）。消費電力 1500W機7kW。skill は「未経験者でもすぐに慣れます」「初心者でも簡単です」の記載による。thickness タグはシリーズ全体（3000Wで8mm）で当てはめた。株式会社共和（京都）が FANATEC ブランドの国内正規代理店として販売。製造元は公式ページに明記されていないが、同ページに FANUCI のロゴと「小田原サービスセンター(FANUCI日本株式会社)」の記載があり、Metoree の共和の掲載文に「FANUCI社製レーザー発振器を搭載」とある。FANUCI のメーカーサイト（Fanuci & Falcon Sp. z o.o.、ポーランド・グダニスク、https://fanuci-falcon.com/en ）は日本向け名称（FANATEC 4.0 Pro GenX／Jet）と型番体系が異なるため、仕様は共和の日本語ページを採用。country はメーカー本社所在国（ポーランド）とした。公式の本体写真は4シリーズを並べたラインナップ画像（https://kyowa-ctc.co.jp/wp/wp-content/uploads/2022/03/cf9568982ead9e5084d8e1ba09edc586-scaled.png）のみで、単体の本体写真が無いため image_url は null。価格は非公開（見積もり）。2年保証・代替機貸出制度、全国3か所のサービスセンター。中小企業経営強化税制の対象設備（日本溶接協会の生産性向上要件証明書を発行可能）。",
+    "origin": {
+      "hq": "ポーランド（グダニスク）",
+      "hq_url": "https://fanuci-falcon.com/en",
+      "service": "国内のサービスセンター（京都・横浜・小田原）で全国対応。2年保証・代替機貸出",
+      "service_url": "https://kyowa-ctc.co.jp/technical_info/%e3%83%95%e3%82%a1%e3%82%a4%e3%83%90%e3%83%bc%e3%83%ac%e3%83%bc%e3%82%b6%e3%83%bc%e6%ba%b6%e6%8e%a5%e6%a9%9f%e3%83%8f%e3%83%b3%e3%83%89%e3%83%88%e3%83%bc%e3%83%81%e5%9e%8b/"
+    }
   },
   {
     "id": "p230",
@@ -3438,7 +3727,13 @@
       "maker": "https://fanuci-falcon.com/en/fanuci-pro-portable-laser-welding-machine"
     },
     "is_published": true,
-    "notes": "電源 単相230V、消費電力 JET1500W 7kW／JET2000W 8kW。Jet 専用の対応板厚は公開されていない（ページの溶接推奨条件表は「Fanatec-2000W：炭素鋼・SUS 1.0〜5.0mm、アルミ2.0〜4.0mm」など出力別で、シリーズの区別がない）ため thickness は空。candidates.md の「FANATEC PORTABLE 4.0 Pro」は現行ページでは空冷の Jet シリーズに当たると判断。同ページには溶接専用の空冷 FANATEC Lite（1200W／1700W、約74kg、波長1070nm）もある。株式会社共和（京都）が FANATEC ブランドの国内正規代理店として販売。製造元は公式ページに明記されていないが、同ページに FANUCI のロゴと「小田原サービスセンター(FANUCI日本株式会社)」の記載があり、Metoree の共和の掲載文に「FANUCI社製レーザー発振器を搭載」とある。FANUCI のメーカーサイト（Fanuci & Falcon Sp. z o.o.、ポーランド・グダニスク、https://fanuci-falcon.com/en ）は日本向け名称（FANATEC 4.0 Pro GenX／Jet）と型番体系が異なるため、仕様は共和の日本語ページを採用。country はメーカー本社所在国（ポーランド）とした。公式の本体写真は4シリーズを並べたラインナップ画像（https://kyowa-ctc.co.jp/wp/wp-content/uploads/2022/03/cf9568982ead9e5084d8e1ba09edc586-scaled.png）のみで、単体の本体写真が無いため image_url は null。価格は非公開（見積もり）。2年保証・代替機貸出制度、全国3か所のサービスセンター。中小企業経営強化税制の対象設備（日本溶接協会の生産性向上要件証明書を発行可能）。"
+    "notes": "電源 単相230V、消費電力 JET1500W 7kW／JET2000W 8kW。Jet 専用の対応板厚は公開されていない（ページの溶接推奨条件表は「Fanatec-2000W：炭素鋼・SUS 1.0〜5.0mm、アルミ2.0〜4.0mm」など出力別で、シリーズの区別がない）ため thickness は空。candidates.md の「FANATEC PORTABLE 4.0 Pro」は現行ページでは空冷の Jet シリーズに当たると判断。同ページには溶接専用の空冷 FANATEC Lite（1200W／1700W、約74kg、波長1070nm）もある。株式会社共和（京都）が FANATEC ブランドの国内正規代理店として販売。製造元は公式ページに明記されていないが、同ページに FANUCI のロゴと「小田原サービスセンター(FANUCI日本株式会社)」の記載があり、Metoree の共和の掲載文に「FANUCI社製レーザー発振器を搭載」とある。FANUCI のメーカーサイト（Fanuci & Falcon Sp. z o.o.、ポーランド・グダニスク、https://fanuci-falcon.com/en ）は日本向け名称（FANATEC 4.0 Pro GenX／Jet）と型番体系が異なるため、仕様は共和の日本語ページを採用。country はメーカー本社所在国（ポーランド）とした。公式の本体写真は4シリーズを並べたラインナップ画像（https://kyowa-ctc.co.jp/wp/wp-content/uploads/2022/03/cf9568982ead9e5084d8e1ba09edc586-scaled.png）のみで、単体の本体写真が無いため image_url は null。価格は非公開（見積もり）。2年保証・代替機貸出制度、全国3か所のサービスセンター。中小企業経営強化税制の対象設備（日本溶接協会の生産性向上要件証明書を発行可能）。",
+    "origin": {
+      "hq": "ポーランド（グダニスク）",
+      "hq_url": "https://fanuci-falcon.com/en",
+      "service": "国内のサービスセンター（京都・横浜・小田原）で全国対応。2年保証・代替機貸出",
+      "service_url": "https://kyowa-ctc.co.jp/technical_info/%e3%83%95%e3%82%a1%e3%82%a4%e3%83%90%e3%83%bc%e3%83%ac%e3%83%bc%e3%82%b6%e3%83%bc%e6%ba%b6%e6%8e%a5%e6%a9%9f%e3%83%8f%e3%83%b3%e3%83%89%e3%83%88%e3%83%bc%e3%83%81%e5%9e%8b/"
+    }
   },
   {
     "id": "p231",
@@ -3508,7 +3803,16 @@
       "maker": "https://www.pentalaser.com/products/detail/Handheld-Laser-Welder"
     },
     "is_published": true,
-    "notes": "電源 50A 200V単相、電気容量 1500W:7.5kVA、使用ガス アルゴンまたは窒素、作業環境温度10〜40℃。「溶接最大深度」は溶け込み深さのため板厚タグには使わず、thickness タグはシリーズの「厚さ0.3〜8mm」から当てはめた。同社のダブルワイヤー特化型 HS-2000（2000W、ウィービング幅最大8mm、溶接最大深度 鉄・ステンレス6mm／アルミ3mm、230kg）は対象外とした。PENTA LASER（中国・温州）製で、レーザ技術サービス株式会社（神奈川県相模原市）が日本総代理店。メーカーサイトでは同シリーズを「SWAN HW1000 / 1500 / 2000 / 3000 / 3000PRO」（水冷、ファイバーコア径50μm、ケーブル長9m超、本体1088×727×1013mm）として掲載（https://www.pentalaser.com/products/detail/Handheld-Laser-Welder）しており、寸法・ケーブル長が日本の代理店ページ（880×510×950mm、7m）と異なる。価格・波長は非公開。納入時にセットアップと使い方の説明、ハンディやレーザ発振器の予備を常備し代替機も用意。"
+    "notes": "電源 50A 200V単相、電気容量 1500W:7.5kVA、使用ガス アルゴンまたは窒素、作業環境温度10〜40℃。「溶接最大深度」は溶け込み深さのため板厚タグには使わず、thickness タグはシリーズの「厚さ0.3〜8mm」から当てはめた。同社のダブルワイヤー特化型 HS-2000（2000W、ウィービング幅最大8mm、溶接最大深度 鉄・ステンレス6mm／アルミ3mm、230kg）は対象外とした。PENTA LASER（中国・温州）製で、レーザ技術サービス株式会社（神奈川県相模原市）が日本総代理店。メーカーサイトでは同シリーズを「SWAN HW1000 / 1500 / 2000 / 3000 / 3000PRO」（水冷、ファイバーコア径50μm、ケーブル長9m超、本体1088×727×1013mm）として掲載（https://www.pentalaser.com/products/detail/Handheld-Laser-Welder）しており、寸法・ケーブル長が日本の代理店ページ（880×510×950mm、7m）と異なる。価格・波長は非公開。納入時にセットアップと使い方の説明、ハンディやレーザ発振器の予備を常備し代替機も用意。",
+    "origin": {
+      "hq": "中国（浙江省温州市）",
+      "hq_url": "https://www.pentalaser.com/about",
+      "made": "中国（日本で出荷前試験）",
+      "made_basis": "中国の工場で製造、国内工場で出荷前試験（国内総代理店の説明）",
+      "made_url": "https://laserts.com/aboutus",
+      "service": "日本総代理店レーザ技術サービスが訪問修理・交換、予備部品を常備し代替機も用意",
+      "service_url": "https://laserts.com/hw1000"
+    }
   },
   {
     "id": "p232",
@@ -3575,7 +3879,16 @@
       "features": "https://laserts.com/hs1000-1500"
     },
     "is_published": true,
-    "notes": "電源 50A 200V単相、電気容量 1500W:7.5kVA、使用ガス アルゴンまたは窒素、作業環境温度10〜40℃。thickness タグは「厚さ0.3〜4mm」から当てはめ、溶接最大深度（溶け込み深さ）は使っていない。本体写真は HW シリーズと同じ画像。メーカーサイトに HS 型番の掲載は確認できなかった。PENTA LASER（中国・温州）製で、レーザ技術サービス株式会社（神奈川県相模原市）が日本総代理店。メーカーサイトでは同シリーズを「SWAN HW1000 / 1500 / 2000 / 3000 / 3000PRO」（水冷、ファイバーコア径50μm、ケーブル長9m超、本体1088×727×1013mm）として掲載（https://www.pentalaser.com/products/detail/Handheld-Laser-Welder）しており、寸法・ケーブル長が日本の代理店ページ（880×510×950mm、7m）と異なる。価格・波長は非公開。納入時にセットアップと使い方の説明、ハンディやレーザ発振器の予備を常備し代替機も用意。"
+    "notes": "電源 50A 200V単相、電気容量 1500W:7.5kVA、使用ガス アルゴンまたは窒素、作業環境温度10〜40℃。thickness タグは「厚さ0.3〜4mm」から当てはめ、溶接最大深度（溶け込み深さ）は使っていない。本体写真は HW シリーズと同じ画像。メーカーサイトに HS 型番の掲載は確認できなかった。PENTA LASER（中国・温州）製で、レーザ技術サービス株式会社（神奈川県相模原市）が日本総代理店。メーカーサイトでは同シリーズを「SWAN HW1000 / 1500 / 2000 / 3000 / 3000PRO」（水冷、ファイバーコア径50μm、ケーブル長9m超、本体1088×727×1013mm）として掲載（https://www.pentalaser.com/products/detail/Handheld-Laser-Welder）しており、寸法・ケーブル長が日本の代理店ページ（880×510×950mm、7m）と異なる。価格・波長は非公開。納入時にセットアップと使い方の説明、ハンディやレーザ発振器の予備を常備し代替機も用意。",
+    "origin": {
+      "hq": "中国（浙江省温州市）",
+      "hq_url": "https://www.pentalaser.com/about",
+      "made": "中国（日本で出荷前試験）",
+      "made_basis": "中国の工場で製造、国内工場で出荷前試験（国内総代理店の説明）",
+      "made_url": "https://laserts.com/aboutus",
+      "service": "日本総代理店レーザ技術サービスが訪問修理・交換、予備部品を常備し代替機も用意",
+      "service_url": "https://laserts.com/hw1000"
+    }
   },
   {
     "id": "p233",
@@ -3645,7 +3958,11 @@
       "features": "https://www.globalgloria.com/%E3%83%AC%E3%83%BC%E3%82%B6%E3%83%BC%E6%BA%B6%E6%8E%A5%E6%A9%9F"
     },
     "is_published": true,
-    "notes": "公式ページに「150万円（本体税抜き）から導入可能！」とあり、最下位機種の TLSC-15 に当たると判断して price タグを 100〜200万円 とした（型番の明記はない）。電源容量 8.5kW、最大溶接速度0〜120mm/s、環境温度5〜35℃・湿度70%未満。skill は「簡単操作で、専門技術者不要」の記載による。仕様は公式ページの仕様表（画像、https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72s62VTHgC-8wFpjN7t60B0247-BA47_DnJUnupYvWZ3Fen5WVdSVSrKjBxGjxpRcU1aLxd-djDh0k6z3ifhX58MGPQJ4ngZAePaYsr5fo70wyeEKozjoIlnDR0mpbyUfH1j0O-R9k73RSAgcshQ98q5Qosq7DN8ya_zt7sSJwsLFeSWN_I0I3QGgxdoJp-8eKPIU1PETL-p8cT0wuEjm2SbgrGe3GUsoCQk8BQYD6k=w1280）から読み取り。株式会社Gloria（大阪市淀川区、加工機械の総合商社）の自社ブランド機。製造国は公式に記載がないため country は本社所在国。発振器メーカーは 創鑫／鋭科（公式表記）。重量・冷却方式（チラー内蔵とのみ記載）・電源電圧は非公開。画像は Google サイトの画像URL（googleusercontent）で長期の到達性が保証されないため、掲載時はダウンロードして使うことを推奨。Metoree の候補名「HLGW」は公式ページでは確認できず、公式の型番は TLSC-15／TLSC-20／TLSC-30。"
+    "notes": "公式ページに「150万円（本体税抜き）から導入可能！」とあり、最下位機種の TLSC-15 に当たると判断して price タグを 100〜200万円 とした（型番の明記はない）。電源容量 8.5kW、最大溶接速度0〜120mm/s、環境温度5〜35℃・湿度70%未満。skill は「簡単操作で、専門技術者不要」の記載による。仕様は公式ページの仕様表（画像、https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72s62VTHgC-8wFpjN7t60B0247-BA47_DnJUnupYvWZ3Fen5WVdSVSrKjBxGjxpRcU1aLxd-djDh0k6z3ifhX58MGPQJ4ngZAePaYsr5fo70wyeEKozjoIlnDR0mpbyUfH1j0O-R9k73RSAgcshQ98q5Qosq7DN8ya_zt7sSJwsLFeSWN_I0I3QGgxdoJp-8eKPIU1PETL-p8cT0wuEjm2SbgrGe3GUsoCQk8BQYD6k=w1280）から読み取り。株式会社Gloria（大阪市淀川区、加工機械の総合商社）の自社ブランド機。製造国は公式に記載がないため country は本社所在国。発振器メーカーは 創鑫／鋭科（公式表記）。重量・冷却方式（チラー内蔵とのみ記載）・電源電圧は非公開。画像は Google サイトの画像URL（googleusercontent）で長期の到達性が保証されないため、掲載時はダウンロードして使うことを推奨。Metoree の候補名「HLGW」は公式ページでは確認できず、公式の型番は TLSC-15／TLSC-20／TLSC-30。",
+    "origin": {
+      "hq": "日本（大阪府大阪市淀川区）　※販売元。製造元は公式に記載なし",
+      "hq_url": "https://www.globalgloria.com/%E3%83%9B%E3%83%BC%E3%83%A0/%E4%BC%9A%E7%A4%BE%E7%B4%B9%E4%BB%8B"
+    }
   },
   {
     "id": "p234",
@@ -3715,7 +4032,11 @@
       "features": "https://www.globalgloria.com/%E3%83%AC%E3%83%BC%E3%82%B6%E3%83%BC%E6%BA%B6%E6%8E%A5%E6%A9%9F"
     },
     "is_published": true,
-    "notes": "価格は非公開（公式の「150万円（本体税抜き）から」は最低価格の表示）。電源容量 16.5kW、最大溶接速度0〜120mm/s、環境温度5〜35℃・湿度70%未満。skill は「簡単操作で、専門技術者不要」の記載による。仕様は公式ページの仕様表（画像、https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72s62VTHgC-8wFpjN7t60B0247-BA47_DnJUnupYvWZ3Fen5WVdSVSrKjBxGjxpRcU1aLxd-djDh0k6z3ifhX58MGPQJ4ngZAePaYsr5fo70wyeEKozjoIlnDR0mpbyUfH1j0O-R9k73RSAgcshQ98q5Qosq7DN8ya_zt7sSJwsLFeSWN_I0I3QGgxdoJp-8eKPIU1PETL-p8cT0wuEjm2SbgrGe3GUsoCQk8BQYD6k=w1280）から読み取り。株式会社Gloria（大阪市淀川区、加工機械の総合商社）の自社ブランド機。製造国は公式に記載がないため country は本社所在国。発振器メーカーは 創鑫／鋭科（公式表記）。重量・冷却方式（チラー内蔵とのみ記載）・電源電圧は非公開。画像は Google サイトの画像URL（googleusercontent）で長期の到達性が保証されないため、掲載時はダウンロードして使うことを推奨。Metoree の候補名「HLGW」は公式ページでは確認できず、公式の型番は TLSC-15／TLSC-20／TLSC-30。 中間機種の TLSC-20（2000W、溶接厚さ0.5〜6mm、電源容量11kW）もある。"
+    "notes": "価格は非公開（公式の「150万円（本体税抜き）から」は最低価格の表示）。電源容量 16.5kW、最大溶接速度0〜120mm/s、環境温度5〜35℃・湿度70%未満。skill は「簡単操作で、専門技術者不要」の記載による。仕様は公式ページの仕様表（画像、https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72s62VTHgC-8wFpjN7t60B0247-BA47_DnJUnupYvWZ3Fen5WVdSVSrKjBxGjxpRcU1aLxd-djDh0k6z3ifhX58MGPQJ4ngZAePaYsr5fo70wyeEKozjoIlnDR0mpbyUfH1j0O-R9k73RSAgcshQ98q5Qosq7DN8ya_zt7sSJwsLFeSWN_I0I3QGgxdoJp-8eKPIU1PETL-p8cT0wuEjm2SbgrGe3GUsoCQk8BQYD6k=w1280）から読み取り。株式会社Gloria（大阪市淀川区、加工機械の総合商社）の自社ブランド機。製造国は公式に記載がないため country は本社所在国。発振器メーカーは 創鑫／鋭科（公式表記）。重量・冷却方式（チラー内蔵とのみ記載）・電源電圧は非公開。画像は Google サイトの画像URL（googleusercontent）で長期の到達性が保証されないため、掲載時はダウンロードして使うことを推奨。Metoree の候補名「HLGW」は公式ページでは確認できず、公式の型番は TLSC-15／TLSC-20／TLSC-30。 中間機種の TLSC-20（2000W、溶接厚さ0.5〜6mm、電源容量11kW）もある。",
+    "origin": {
+      "hq": "日本（大阪府大阪市淀川区）　※販売元。製造元は公式に記載なし",
+      "hq_url": "https://www.globalgloria.com/%E3%83%9B%E3%83%BC%E3%83%A0/%E4%BC%9A%E7%A4%BE%E7%B4%B9%E4%BB%8B"
+    }
   },
   {
     "id": "p235",
@@ -3781,7 +4102,11 @@
       "features": "https://www.youbon.co.jp/kizai/05ipg1500w.html"
     },
     "is_published": true,
-    "notes": "標準価格 ￥7,700,000（税別、本体、https://www.youbon.co.jp/kizai/05ipg1500w.html）。電源 単相200V、消費電力7kW、可動温度10〜40℃。溶接目安は「溶接の深さ」（溶け込み深さ）のため thickness タグは空。skill は「溶接経験のない初心者の方でも簡単に操作可能」の記載による。株式会社ユーボン（愛知県豊橋市、看板機材・資材の商社）が販売。製造元・製造国は公式ページに記載がないため country は null。CY-F1500I と CY-F1500C は発振器（IPG製／中国製）と価格のみ異なり、本体仕様・画像は共通。"
+    "notes": "標準価格 ￥7,700,000（税別、本体、https://www.youbon.co.jp/kizai/05ipg1500w.html）。電源 単相200V、消費電力7kW、可動温度10〜40℃。溶接目安は「溶接の深さ」（溶け込み深さ）のため thickness タグは空。skill は「溶接経験のない初心者の方でも簡単に操作可能」の記載による。株式会社ユーボン（愛知県豊橋市、看板機材・資材の商社）が販売。製造元・製造国は公式ページに記載がないため country は null。CY-F1500I と CY-F1500C は発振器（IPG製／中国製）と価格のみ異なり、本体仕様・画像は共通。",
+    "origin": {
+      "hq": "日本（愛知県豊橋市）　※販売元。製造元は公式に記載なし",
+      "hq_url": "https://www.youbon.co.jp/corporate/"
+    }
   },
   {
     "id": "p236",
@@ -3847,7 +4172,11 @@
       "features": "https://www.youbon.co.jp/kizai/05ipg1500w.html"
     },
     "is_published": true,
-    "notes": "標準価格 ￥3,300,000（税別、本体、https://www.youbon.co.jp/kizai/05ipg1500w.html）。電源 単相200V、消費電力7kW、可動温度10〜40℃。溶接目安は「溶接の深さ」（溶け込み深さ）のため thickness タグは空。skill は「溶接経験のない初心者の方でも簡単に操作可能」の記載による。株式会社ユーボン（愛知県豊橋市、看板機材・資材の商社）が販売。製造元・製造国は公式ページに記載がないため country は null。CY-F1500I と CY-F1500C は発振器（IPG製／中国製）と価格のみ異なり、本体仕様・画像は共通。"
+    "notes": "標準価格 ￥3,300,000（税別、本体、https://www.youbon.co.jp/kizai/05ipg1500w.html）。電源 単相200V、消費電力7kW、可動温度10〜40℃。溶接目安は「溶接の深さ」（溶け込み深さ）のため thickness タグは空。skill は「溶接経験のない初心者の方でも簡単に操作可能」の記載による。株式会社ユーボン（愛知県豊橋市、看板機材・資材の商社）が販売。製造元・製造国は公式ページに記載がないため country は null。CY-F1500I と CY-F1500C は発振器（IPG製／中国製）と価格のみ異なり、本体仕様・画像は共通。",
+    "origin": {
+      "hq": "日本（愛知県豊橋市）　※販売元。製造元は公式に記載なし",
+      "hq_url": "https://www.youbon.co.jp/corporate/"
+    }
   },
   {
     "id": "p237",
@@ -3901,7 +4230,13 @@
       "suitable_for": "http://www.jp-union.com/product/detail/proId/452.html"
     },
     "is_published": true,
-    "notes": "公式サイトは http のみ（https は接続不可）。対応材料・板厚・重量・価格は公式ページに記載なし。掲載画像はシリーズ共通の1枚で、写真の本体表記は USF-1500C。同社は兵庫県西宮市本社、中国（大連）に工場あり。本機の製造国は公式に記載なし（country は本社国）。用途例として公式に「キッチンやバスルーム用品、家電や建材部品、広告、金型、ステンレスドアや窓部材、家具や自動車部品の組立等」とある。"
+    "notes": "公式サイトは http のみ（https は接続不可）。対応材料・板厚・重量・価格は公式ページに記載なし。掲載画像はシリーズ共通の1枚で、写真の本体表記は USF-1500C。同社は兵庫県西宮市本社、中国（大連）に工場あり。本機の製造国は公式に記載なし（country は本社国）。用途例として公式に「キッチンやバスルーム用品、家電や建材部品、広告、金型、ステンレスドアや窓部材、家具や自動車部品の組立等」とある。",
+    "origin": {
+      "hq": "日本（兵庫県西宮市）",
+      "hq_url": "http://www.jp-union.com/about/index.html",
+      "service": "日本本社（西宮市）の事業内容にアフターメンテナンスを明記",
+      "service_url": "http://www.jp-union.com/about/index.html"
+    }
   },
   {
     "id": "p238",
@@ -3955,7 +4290,13 @@
       "suitable_for": "http://www.jp-union.com/product/detail/proId/452.html"
     },
     "is_published": true,
-    "notes": "公式サイトは http のみ（https は接続不可）。対応材料・板厚・重量・価格は公式ページに記載なし。掲載画像の本体表記は USF-1500C。同社は兵庫県西宮市本社、中国（大連）に工場あり。本機の製造国は公式に記載なし（country は本社国）。用途例として公式に「キッチンやバスルーム用品、家電や建材部品、広告、金型、ステンレスドアや窓部材、家具や自動車部品の組立等」とある。"
+    "notes": "公式サイトは http のみ（https は接続不可）。対応材料・板厚・重量・価格は公式ページに記載なし。掲載画像の本体表記は USF-1500C。同社は兵庫県西宮市本社、中国（大連）に工場あり。本機の製造国は公式に記載なし（country は本社国）。用途例として公式に「キッチンやバスルーム用品、家電や建材部品、広告、金型、ステンレスドアや窓部材、家具や自動車部品の組立等」とある。",
+    "origin": {
+      "hq": "日本（兵庫県西宮市）",
+      "hq_url": "http://www.jp-union.com/about/index.html",
+      "service": "日本本社（西宮市）の事業内容にアフターメンテナンスを明記",
+      "service_url": "http://www.jp-union.com/about/index.html"
+    }
   },
   {
     "id": "p239",
@@ -4025,7 +4366,16 @@
       "features": "https://www.technocoat.co.jp/products/smartlaser/"
     },
     "is_published": true,
-    "notes": "肉盛補修と精密溶接が主用途の低出力ファイバーレーザー装置で、1〜2kW級のハンドヘルド溶接機とは用途が異なる。厚板向けの公表値なし。板厚タグは公式事例の数値（t0.05〜0.5mm）から当てはめた。Al t0.5mm は境界値のため 0.5〜3mm も付けた。価格は非公開（カタログはフォームからのダウンロード）。重量・寸法は公式仕様表の表記（「寸法（電源本体）」欄に 2 つの値があり、括弧内が電源本体）。何を含む値かは公式に明記なし。"
+    "notes": "肉盛補修と精密溶接が主用途の低出力ファイバーレーザー装置で、1〜2kW級のハンドヘルド溶接機とは用途が異なる。厚板向けの公表値なし。板厚タグは公式事例の数値（t0.05〜0.5mm）から当てはめた。Al t0.5mm は境界値のため 0.5〜3mm も付けた。価格は非公開（カタログはフォームからのダウンロード）。重量・寸法は公式仕様表の表記（「寸法（電源本体）」欄に 2 つの値があり、括弧内が電源本体）。何を含む値かは公式に明記なし。",
+    "origin": {
+      "hq": "日本（静岡県藤枝市）",
+      "hq_url": "https://www.technocoat.co.jp/about",
+      "made": "日本",
+      "made_basis": "主要製品は自社製造、本社・工場は静岡県藤枝市。会社全体の記載で、機種ごとの記載はなし",
+      "made_url": "https://www.technocoat.co.jp/about",
+      "service": "専任スタッフが導入後のメンテナンス・アフターサービスに対応",
+      "service_url": "https://www.technocoat.co.jp/support"
+    }
   },
   {
     "id": "p240",
@@ -4094,7 +4444,16 @@
       "country": "https://www.chu-cra.co.jp/welding/"
     },
     "is_published": true,
-    "notes": "Metoree の型番表記は CHU-LW1500/2000、公式の現行表記は CHU-LW1500N/2000N。country は公式の「中国の工場では組み立てから…出荷前検査」の記載による（日本の工場で最終検査）。切断可能条件（1500W）: SUS 4.0mm・鉄 8.0mm・亜鉛メッキ鋼板 8.0mm・アルミ 3.0mmまで。価格は非公開（「低価格」とのみ記載）。画像はページ見出しの背景画像（本体とワイヤー送給装置の写真）。ページ内容は2025年10月時点と記載。"
+    "notes": "Metoree の型番表記は CHU-LW1500/2000、公式の現行表記は CHU-LW1500N/2000N。country は公式の「中国の工場では組み立てから…出荷前検査」の記載による（日本の工場で最終検査）。切断可能条件（1500W）: SUS 4.0mm・鉄 8.0mm・亜鉛メッキ鋼板 8.0mm・アルミ 3.0mmまで。価格は非公開（「低価格」とのみ記載）。画像はページ見出しの背景画像（本体とワイヤー送給装置の写真）。ページ内容は2025年10月時点と記載。",
+    "origin": {
+      "hq": "日本（愛知県春日井市）",
+      "hq_url": "https://www.chu-cra.co.jp/company/profile/",
+      "made": "中国（日本で最終検査）",
+      "made_basis": "中国の工場で組立、日本の工場で出荷前最終検査",
+      "made_url": "https://www.chu-cra.co.jp/welding/",
+      "service": "修理・メンテナンスを自社工場（クリーンルーム）で対応、出張修理・代替機貸出あり",
+      "service_url": "https://www.chu-cra-facility.com/support/"
+    }
   },
   {
     "id": "p241",
@@ -4158,7 +4517,13 @@
       "features": "https://www.chu-cra.co.jp/welding/aircooling/"
     },
     "is_published": true,
-    "notes": "Metoree の候補は CHU-LW シリーズで、同社のもう一つのハンドヘルド主力として採用。公式ページに「10月よりモデルチェンジいたします」「写真は準備中」とあり、仕様・画像が変わる可能性がある（ページ内にコメントアウトされた HW1500/2000/2500 の表あり）。画像は公式の構造化データで HW シリーズの商品画像に指定されているもの。製造国は公式に記載なし（country はメーカー本社国）。価格は非公開。同社は協働ロボット対応の CHU-AW シリーズ（AW450/AW550）も掲載。"
+    "notes": "Metoree の候補は CHU-LW シリーズで、同社のもう一つのハンドヘルド主力として採用。公式ページに「10月よりモデルチェンジいたします」「写真は準備中」とあり、仕様・画像が変わる可能性がある（ページ内にコメントアウトされた HW1500/2000/2500 の表あり）。画像は公式の構造化データで HW シリーズの商品画像に指定されているもの。製造国は公式に記載なし（country はメーカー本社国）。価格は非公開。同社は協働ロボット対応の CHU-AW シリーズ（AW450/AW550）も掲載。",
+    "origin": {
+      "hq": "日本（愛知県春日井市）",
+      "hq_url": "https://www.chu-cra.co.jp/company/profile/",
+      "service": "修理・メンテナンスを自社工場（クリーンルーム）で対応、出張修理・代替機貸出あり",
+      "service_url": "https://www.chu-cra-facility.com/support/"
+    }
   },
   {
     "id": "p242",
@@ -4227,7 +4592,13 @@
       "features": "https://www.akebono-c.com/"
     },
     "is_published": true,
-    "notes": "公式価格 ¥9,000,000（税込9,900,000円）（出典: https://www.akebono-c.com/）。外寸・重量は公式仕様表で両機種共通の1欄表記。使用空圧0.4〜0.6MPa（窒素・アルゴン・圧縮空気）。設置時は約2×2mのスペースと200V単相電源、荷下ろし用フォークリフトが必要（公式FAQ）。対応板厚の公表値なし。製造国は公式に記載なし（「日本企業のオリジナルブランド製品」と記載、country はブランド所有企業の国）。曙産業は京都の機械工具商社。画像はラインナップ欄の本体写真（2機種共通の1枚）。Metoree の型番表記は「iS 2000r」、公式ラインナップ欄は「iS-r 2000」。"
+    "notes": "公式価格 ¥9,000,000（税込9,900,000円）（出典: https://www.akebono-c.com/）。外寸・重量は公式仕様表で両機種共通の1欄表記。使用空圧0.4〜0.6MPa（窒素・アルゴン・圧縮空気）。設置時は約2×2mのスペースと200V単相電源、荷下ろし用フォークリフトが必要（公式FAQ）。対応板厚の公表値なし。製造国は公式に記載なし（「日本企業のオリジナルブランド製品」と記載、country はブランド所有企業の国）。曙産業は京都の機械工具商社。画像はラインナップ欄の本体写真（2機種共通の1枚）。Metoree の型番表記は「iS 2000r」、公式ラインナップ欄は「iS-r 2000」。",
+    "origin": {
+      "hq": "日本（京都府京都市伏見区）　※販売元。製造元は公式に記載なし",
+      "hq_url": "https://www.akebono-c.co.jp/",
+      "service": "故障時は電話サポートまたは出張修理、必要に応じ代替機貸出（2年保証）",
+      "service_url": "https://www.akebono-c.com/"
+    }
   },
   {
     "id": "p243",
@@ -4297,7 +4668,13 @@
       "features": "https://www.akebono-c.com/"
     },
     "is_published": true,
-    "notes": "公式価格 ¥7,000,000（税込7,700,000円）。補助金1/2適用時の実質約350万円という試算も掲載（出典: https://www.akebono-c.com/）。外寸・重量は公式仕様表で両機種共通の1欄表記。使用空圧0.4〜0.6MPa（窒素・アルゴン・圧縮空気）。設置時は約2×2mのスペースと200V単相電源、荷下ろし用フォークリフトが必要（公式FAQ）。対応板厚の公表値なし。製造国は公式に記載なし（「日本企業のオリジナルブランド製品」と記載、country はブランド所有企業の国）。曙産業は京都の機械工具商社。画像はラインナップ欄の本体写真（2機種共通の1枚）。公式ラインナップ欄の表記は「iS-r 1500」、仕様表は「iS 1500r」。"
+    "notes": "公式価格 ¥7,000,000（税込7,700,000円）。補助金1/2適用時の実質約350万円という試算も掲載（出典: https://www.akebono-c.com/）。外寸・重量は公式仕様表で両機種共通の1欄表記。使用空圧0.4〜0.6MPa（窒素・アルゴン・圧縮空気）。設置時は約2×2mのスペースと200V単相電源、荷下ろし用フォークリフトが必要（公式FAQ）。対応板厚の公表値なし。製造国は公式に記載なし（「日本企業のオリジナルブランド製品」と記載、country はブランド所有企業の国）。曙産業は京都の機械工具商社。画像はラインナップ欄の本体写真（2機種共通の1枚）。公式ラインナップ欄の表記は「iS-r 1500」、仕様表は「iS 1500r」。",
+    "origin": {
+      "hq": "日本（京都府京都市伏見区）　※販売元。製造元は公式に記載なし",
+      "hq_url": "https://www.akebono-c.co.jp/",
+      "service": "故障時は電話サポートまたは出張修理、必要に応じ代替機貸出（2年保証）",
+      "service_url": "https://www.akebono-c.com/"
+    }
   },
   {
     "id": "p244",
@@ -4359,7 +4736,11 @@
       "features": "https://nbceng.biz/nbclaser"
     },
     "is_published": true,
-    "notes": "Metoree の掲載は同社の LWM シリーズ。公式ページで空冷式の主力（おすすめ表示）が AW-1500W のため採用。波長・重量・対応板厚・価格は公式ページに記載なし（詳細カタログはフォーム送信でのダウンロードのため未確認）。「初心者でも簡単に扱うことが可能」は公式ページの AW-1500W テスト動画の説明文による。同ページに AW-800W（最大800W）も掲載。製造国は公式に記載なし。"
+    "notes": "Metoree の掲載は同社の LWM シリーズ。公式ページで空冷式の主力（おすすめ表示）が AW-1500W のため採用。波長・重量・対応板厚・価格は公式ページに記載なし（詳細カタログはフォーム送信でのダウンロードのため未確認）。「初心者でも簡単に扱うことが可能」は公式ページの AW-1500W テスト動画の説明文による。同ページに AW-800W（最大800W）も掲載。製造国は公式に記載なし。",
+    "origin": {
+      "hq": "日本（大阪府大阪市東淀川区）　※販売元。製造元は公式に記載なし",
+      "hq_url": "https://nbceng.com/company/"
+    }
   },
   {
     "id": "p245",
@@ -4406,7 +4787,11 @@
       "features": "https://nbceng.biz/nbclaser"
     },
     "is_published": true,
-    "notes": "Metoree では LWM-1000W/1500W/2000W の3型番だが、公式ページの掲載は LWM-1500W/2000W のみ。対応材料・板厚・波長・重量・価格は公式ページに記載なし。外形寸法は公式ページの図面（LWM 欄の画像）から読み取った値。製造国は公式に記載なし。"
+    "notes": "Metoree では LWM-1000W/1500W/2000W の3型番だが、公式ページの掲載は LWM-1500W/2000W のみ。対応材料・板厚・波長・重量・価格は公式ページに記載なし。外形寸法は公式ページの図面（LWM 欄の画像）から読み取った値。製造国は公式に記載なし。",
+    "origin": {
+      "hq": "日本（大阪府大阪市東淀川区）　※販売元。製造元は公式に記載なし",
+      "hq_url": "https://nbceng.com/company/"
+    }
   },
   {
     "id": "p246",
@@ -4470,7 +4855,11 @@
       "page": "https://rapyuta.jp/item/machine/fiberlazer1500/"
     },
     "is_published": true,
-    "notes": "公式ページは本文がなく、仕様・特長はページ内の画像（仕様表・特長一覧）で掲載。重量は仕様表150kg、特長欄160kgで不一致。仕様表の機種名表記は「La Lucc Dio ハンディ」（Luce の誤記とみられるが原文ママ）。加工サンプル欄に「※溶接形状は直線のみ可能です」との注記あり（サンプルに対する注記か機械の制約かは不明）。製造国・価格は公式に記載なし。同社は SENFENG 製の 4in1 レーザー溶接機 SF-HWM（1.5/2/3kW）の総販売元としてカタログも掲載（https://rapyuta.jp/item/machine/4in1laserwelding/）しているが、候補一覧の #23 SENFENG と重複するためレコード化していない。"
+    "notes": "公式ページは本文がなく、仕様・特長はページ内の画像（仕様表・特長一覧）で掲載。重量は仕様表150kg、特長欄160kgで不一致。仕様表の機種名表記は「La Lucc Dio ハンディ」（Luce の誤記とみられるが原文ママ）。加工サンプル欄に「※溶接形状は直線のみ可能です」との注記あり（サンプルに対する注記か機械の制約かは不明）。製造国・価格は公式に記載なし。同社は SENFENG 製の 4in1 レーザー溶接機 SF-HWM（1.5/2/3kW）の総販売元としてカタログも掲載（https://rapyuta.jp/item/machine/4in1laserwelding/）しているが、候補一覧の #23 SENFENG と重複するためレコード化していない。",
+    "origin": {
+      "hq": "日本（石川県金沢市）　※販売元。製造元は公式に記載なし",
+      "hq_url": "https://rapyuta.jp/company/"
+    }
   },
   {
     "id": "p247",
@@ -4523,7 +4912,13 @@
       "features": "https://www.profitet.com/products/materialprocessing/handyweld.html"
     },
     "is_published": true,
-    "notes": "公式は「業界最安値」「超低価格」とするが価格は非公開。対応材料・板厚の公表値なし（加工例は写真のみ）。製造元は公式本文に記載なし（本体写真に「reci」のロゴと中国語の社名表記あり）。Metoree では製品名 PROWELD、550W〜2000Wの4タイプ・重量12〜58kgと紹介されているが、公式ページの現行掲載は A80/A120/A150 の3機種。カタログDLは準備中。"
+    "notes": "公式は「業界最安値」「超低価格」とするが価格は非公開。対応材料・板厚の公表値なし（加工例は写真のみ）。製造元は公式本文に記載なし（本体写真に「reci」のロゴと中国語の社名表記あり）。Metoree では製品名 PROWELD、550W〜2000Wの4タイプ・重量12〜58kgと紹介されているが、公式ページの現行掲載は A80/A120/A150 の3機種。カタログDLは準備中。",
+    "origin": {
+      "hq": "日本（埼玉県さいたま市浦和区）　※販売元。製造元は公式に記載なし",
+      "hq_url": "https://www.profitet.com/companyinfo/gaiyou.html",
+      "service": "「国内メンテナンス」として故障時対応の専門スタッフを用意。保証期間内は自社で無償修理",
+      "service_url": "https://www.profitet.com/products/materialprocessing/handyweld.html"
+    }
   },
   {
     "id": "p248",
@@ -4576,7 +4971,13 @@
       "features": "https://www.profitet.com/products/materialprocessing/handyweld.html"
     },
     "is_published": true,
-    "notes": "公式は「業界最安値」「超低価格」とするが価格は非公開。対応材料・板厚の公表値なし（加工例は写真のみ）。製造元は公式本文に記載なし（本体写真に「reci」のロゴと中国語の社名表記あり）。Metoree では製品名 PROWELD、550W〜2000Wの4タイプ・重量12〜58kgと紹介されているが、公式ページの現行掲載は A80/A120/A150 の3機種。カタログDLは準備中。 公式画像右側の本体に A80 の表記あり。"
+    "notes": "公式は「業界最安値」「超低価格」とするが価格は非公開。対応材料・板厚の公表値なし（加工例は写真のみ）。製造元は公式本文に記載なし（本体写真に「reci」のロゴと中国語の社名表記あり）。Metoree では製品名 PROWELD、550W〜2000Wの4タイプ・重量12〜58kgと紹介されているが、公式ページの現行掲載は A80/A120/A150 の3機種。カタログDLは準備中。 公式画像右側の本体に A80 の表記あり。",
+    "origin": {
+      "hq": "日本（埼玉県さいたま市浦和区）　※販売元。製造元は公式に記載なし",
+      "hq_url": "https://www.profitet.com/companyinfo/gaiyou.html",
+      "service": "「国内メンテナンス」として故障時対応の専門スタッフを用意。保証期間内は自社で無償修理",
+      "service_url": "https://www.profitet.com/products/materialprocessing/handyweld.html"
+    }
   },
   {
     "id": "p249",
@@ -4640,7 +5041,14 @@
       "country": "https://www.bodor.com/en/contact/"
     },
     "is_published": true,
-    "notes": "名称はメーカー公式ページで「Pro 1500」、製品写真の表記は「BodorWelder 1500 Pro」、Metoree は「Welder 1500 Pro」。重量はメーカー82kg・国内販売店65kgで不一致。波長は公式に記載なし。country は Bodor 公式の問い合わせ先電話番号が +86（中国、0531 は済南の市外局番）であることによる（本社所在地の明記は公式ページで確認できず）。価格は国内販売店・メーカーとも非公開（日本向け）。溶接厚は国内販売店の仕様表の値（メーカーの英語ページ・データでは材料別の厚さ欄に同値、Air シリーズは本文で「4mm penetration」とも表現）で、板厚タグは最大値までの範囲を当てはめた。"
+    "notes": "名称はメーカー公式ページで「Pro 1500」、製品写真の表記は「BodorWelder 1500 Pro」、Metoree は「Welder 1500 Pro」。重量はメーカー82kg・国内販売店65kgで不一致。波長は公式に記載なし。country は Bodor 公式の問い合わせ先電話番号が +86（中国、0531 は済南の市外局番）であることによる（本社所在地の明記は公式ページで確認できず）。価格は国内販売店・メーカーとも非公開（日本向け）。溶接厚は国内販売店の仕様表の値（メーカーの英語ページ・データでは材料別の厚さ欄に同値、Air シリーズは本文で「4mm penetration」とも表現）で、板厚タグは最大値までの範囲を当てはめた。",
+    "origin": {
+      "hq": "中国（山東省済南市）",
+      "hq_url": "https://www.bodor.com/en/news/official_announcement.html",
+      "made": "中国",
+      "made_basis": "済南の本社工場でレーザー溶接機を生産と記載。会社全体の記載で、機種ごとの記載はなし",
+      "made_url": "https://www.bodor.com/en/news/company/Bodor-Laser-Dream-Park-Smart-Factory-Begins-Production.html"
+    }
   },
   {
     "id": "p250",
@@ -4704,7 +5112,14 @@
       "country": "https://www.bodor.com/en/contact/"
     },
     "is_published": true,
-    "notes": "Metoree の候補は Welder 1500 Pro。同じ国内販売店が掲載する空冷の主力として採用。重量はメーカー43kg・国内販売店42kgで不一致。電源はメーカー100〜240V、国内販売店200〜240V。波長は公式に記載なし。画像は webp 形式。country は Bodor 公式の問い合わせ先電話番号が +86（中国、0531 は済南の市外局番）であることによる（本社所在地の明記は公式ページで確認できず）。価格は国内販売店・メーカーとも非公開（日本向け）。溶接厚は国内販売店の仕様表の値（メーカーの英語ページ・データでは材料別の厚さ欄に同値、Air シリーズは本文で「4mm penetration」とも表現）で、板厚タグは最大値までの範囲を当てはめた。"
+    "notes": "Metoree の候補は Welder 1500 Pro。同じ国内販売店が掲載する空冷の主力として採用。重量はメーカー43kg・国内販売店42kgで不一致。電源はメーカー100〜240V、国内販売店200〜240V。波長は公式に記載なし。画像は webp 形式。country は Bodor 公式の問い合わせ先電話番号が +86（中国、0531 は済南の市外局番）であることによる（本社所在地の明記は公式ページで確認できず）。価格は国内販売店・メーカーとも非公開（日本向け）。溶接厚は国内販売店の仕様表の値（メーカーの英語ページ・データでは材料別の厚さ欄に同値、Air シリーズは本文で「4mm penetration」とも表現）で、板厚タグは最大値までの範囲を当てはめた。",
+    "origin": {
+      "hq": "中国（山東省済南市）",
+      "hq_url": "https://www.bodor.com/en/news/official_announcement.html",
+      "made": "中国",
+      "made_basis": "済南の本社工場でレーザー溶接機を生産と記載。会社全体の記載で、機種ごとの記載はなし",
+      "made_url": "https://www.bodor.com/en/news/company/Bodor-Laser-Dream-Park-Smart-Factory-Begins-Production.html"
+    }
   },
   {
     "id": "p251",
@@ -4775,7 +5190,16 @@
       "country": "https://ggblaser.com/about-us"
     },
     "is_published": true,
-    "notes": "価格は公式サイト・公式オンラインショップ（ggb.base.ec）とも非公開。会社概要に「レーザー溶接機の製造、販売、修理、メンテナンス」とあり、本社は兵庫県明石市（製造国の明記はないため country は本社国）。比較表の溶接速度範囲は「0〜120mm/m」と表記（単位の誤記の可能性があるため記載しない）。電源は単相200V±10%、作業環境温度5〜38℃。母材別の厚み表はページ共通で機種別ではない。出力のCW/定格の区別は記載なし"
+    "notes": "価格は公式サイト・公式オンラインショップ（ggb.base.ec）とも非公開。会社概要に「レーザー溶接機の製造、販売、修理、メンテナンス」とあり、本社は兵庫県明石市（製造国の明記はないため country は本社国）。比較表の溶接速度範囲は「0〜120mm/m」と表記（単位の誤記の可能性があるため記載しない）。電源は単相200V±10%、作業環境温度5〜38℃。母材別の厚み表はページ共通で機種別ではない。出力のCW/定格の区別は記載なし",
+    "origin": {
+      "hq": "日本（兵庫県明石市）",
+      "hq_url": "https://ggblaser.com/about-us",
+      "made": "日本",
+      "made_basis": "業務内容にレーザー溶接機の製造、拠点は明石工場。会社全体の記載で、機種ごとの記載はなし",
+      "made_url": "https://ggblaser.com/about-us",
+      "service": "自社で導入後の修理・メンテナンスに対応（2年間のメーカー保証）",
+      "service_url": "https://ggblaser.com/about-us"
+    }
   },
   {
     "id": "p252",
@@ -4845,7 +5269,16 @@
       "country": "https://ggblaser.com/about-us"
     },
     "is_published": true,
-    "notes": "候補一覧の機種は GGB-LW1200WS。同社の空冷ハンドヘルドのもう1機種として追加。価格は非公開。公式の型番表記は「GGB-LW2000WR雷神」（model_slug は英字部分のみ）。商品画像はワイヤ供給装置と並んだ写真（背景にキャラクターのイラストあり）。use の「補修」は公式の「肉盛り溶接時」の記載にもとづく。電源は単相200V±10%、作業環境温度5〜35℃。同社には水冷式の GGB-LW2000W（約180kg、推奨溶接厚み0.5〜8mm）もある"
+    "notes": "候補一覧の機種は GGB-LW1200WS。同社の空冷ハンドヘルドのもう1機種として追加。価格は非公開。公式の型番表記は「GGB-LW2000WR雷神」（model_slug は英字部分のみ）。商品画像はワイヤ供給装置と並んだ写真（背景にキャラクターのイラストあり）。use の「補修」は公式の「肉盛り溶接時」の記載にもとづく。電源は単相200V±10%、作業環境温度5〜35℃。同社には水冷式の GGB-LW2000W（約180kg、推奨溶接厚み0.5〜8mm）もある",
+    "origin": {
+      "hq": "日本（兵庫県明石市）",
+      "hq_url": "https://ggblaser.com/about-us",
+      "made": "日本",
+      "made_basis": "業務内容にレーザー溶接機の製造、拠点は明石工場。会社全体の記載で、機種ごとの記載はなし",
+      "made_url": "https://ggblaser.com/about-us",
+      "service": "自社で導入後の修理・メンテナンスに対応（2年間のメーカー保証）",
+      "service_url": "https://ggblaser.com/about-us"
+    }
   },
   {
     "id": "p253",
@@ -4916,7 +5349,13 @@
       "domestic_agent_ensei": "https://ensei-m.jp/product/d/14"
     },
     "is_published": true,
-    "notes": "BESTUS は日中貿易の商社で、公式サイトの文面には製造元の記載がない。同ページ掲載の紹介動画（溶接機.mp4）の全カットに GWEIKE のロゴがあり、GWEIKE 公式サイトに同じ型番（LCW1500/2000/3000）の LCW SERIES があるため製造元を GWEIKE（中国・済南）とした。BESTUS が正規代理店かどうかは未確認。寸法・重量は BESTUS と GWEIKE で値が異なる（両方を併記）。価格は非公開。使用に際しアルゴンガスまたは窒素ガスとチラー用の精製水が必要（BESTUS FAQ）。使用環境15〜35℃。電源は GWEIKE の表で単相220V／三相380Vの記載があるが機種との対応が表から読み取りにくいため未記載。出力のCW/定格の区別は記載なし。波長は GWEIKE 公式の値。遠誠株式会社（ENSEI）マシン事業部サイトが「G-WEIKE日本正規代理店」を名乗り、LCW-1500（出力1000/1500/2000/3000W、水冷、溶接/カット/クリーニング、FANUC協働ロボットと接続可）を掲載。遠誠の表記では波長1064nm・総電力12kW・使用環境15〜35℃で、GWEIKE 公式（1080nm）と波長が食い違う"
+    "notes": "BESTUS は日中貿易の商社で、公式サイトの文面には製造元の記載がない。同ページ掲載の紹介動画（溶接機.mp4）の全カットに GWEIKE のロゴがあり、GWEIKE 公式サイトに同じ型番（LCW1500/2000/3000）の LCW SERIES があるため製造元を GWEIKE（中国・済南）とした。BESTUS が正規代理店かどうかは未確認。寸法・重量は BESTUS と GWEIKE で値が異なる（両方を併記）。価格は非公開。使用に際しアルゴンガスまたは窒素ガスとチラー用の精製水が必要（BESTUS FAQ）。使用環境15〜35℃。電源は GWEIKE の表で単相220V／三相380Vの記載があるが機種との対応が表から読み取りにくいため未記載。出力のCW/定格の区別は記載なし。波長は GWEIKE 公式の値。遠誠株式会社（ENSEI）マシン事業部サイトが「G-WEIKE日本正規代理店」を名乗り、LCW-1500（出力1000/1500/2000/3000W、水冷、溶接/カット/クリーニング、FANUC協働ロボットと接続可）を掲載。遠誠の表記では波長1064nm・総電力12kW・使用環境15〜35℃で、GWEIKE 公式（1080nm）と波長が食い違う",
+    "origin": {
+      "hq": "中国（山東省済南市）",
+      "hq_url": "https://www.gwklaser.com/contact/",
+      "service": "日本正規代理店・遠誠が保証修理・保守契約・現地訪問対応",
+      "service_url": "https://ensei-m.jp/support/"
+    }
   },
   {
     "id": "p254",
@@ -4987,7 +5426,13 @@
       "domestic_agent_ensei": "https://ensei-m.jp/product/d/14"
     },
     "is_published": true,
-    "notes": "候補一覧の機種は LCW3000。同シリーズの最小出力機として追加。製造元の特定根拠は LCW3000 と同じ（BESTUS 掲載動画の GWEIKE ロゴと GWEIKE 公式の同型番シリーズ）。寸法・重量は BESTUS と GWEIKE で値が異なる（両方を併記。GWEIKE の 910×540×1100mm は LCW1500/2000 共通と読める）。価格は非公開。アルゴンガスまたは窒素ガスとチラー用の精製水が必要。使用環境15〜35℃。出力のCW/定格の区別は記載なし。遠誠株式会社（ENSEI）マシン事業部サイトが「G-WEIKE日本正規代理店」を名乗り、LCW-1500（出力1000/1500/2000/3000W、水冷、溶接/カット/クリーニング、FANUC協働ロボットと接続可）を掲載。遠誠の表記では波長1064nm・総電力12kW・使用環境15〜35℃で、GWEIKE 公式（1080nm）と波長が食い違う"
+    "notes": "候補一覧の機種は LCW3000。同シリーズの最小出力機として追加。製造元の特定根拠は LCW3000 と同じ（BESTUS 掲載動画の GWEIKE ロゴと GWEIKE 公式の同型番シリーズ）。寸法・重量は BESTUS と GWEIKE で値が異なる（両方を併記。GWEIKE の 910×540×1100mm は LCW1500/2000 共通と読める）。価格は非公開。アルゴンガスまたは窒素ガスとチラー用の精製水が必要。使用環境15〜35℃。出力のCW/定格の区別は記載なし。遠誠株式会社（ENSEI）マシン事業部サイトが「G-WEIKE日本正規代理店」を名乗り、LCW-1500（出力1000/1500/2000/3000W、水冷、溶接/カット/クリーニング、FANUC協働ロボットと接続可）を掲載。遠誠の表記では波長1064nm・総電力12kW・使用環境15〜35℃で、GWEIKE 公式（1080nm）と波長が食い違う",
+    "origin": {
+      "hq": "中国（山東省済南市）",
+      "hq_url": "https://www.gwklaser.com/contact/",
+      "service": "日本正規代理店・遠誠が保証修理・保守契約・現地訪問対応",
+      "service_url": "https://ensei-m.jp/support/"
+    }
   },
   {
     "id": "p255",
@@ -5061,7 +5506,16 @@
       "domestic_seller_agusa": "https://agusa.co.jp/service/fiber_laser-support/"
     },
     "is_published": true,
-    "notes": "候補一覧の掲載は「SENFENG ハンドヘルド」（metree では ヴェルテックスエンジニアリングが水冷式 SF3000HWM を登録）。ヴェルテックスエンジニアリング（広島県廿日市市）は公式サイトで「SENFENG製(空冷式)ファイバー溶接機」を写真のみで掲載（型番・仕様の記載なし）。アグサメタル株式会社（広島県福山市）は「SENFENG SF-Sシリーズ ポータブル空冷式ハンドヘルドレーザー溶接機」を掲載し、BOCHU & SENFENG 認定パートナー・SENFENG溶接機ヘッド修理認証保有と記載。正規代理店契約の有無は未確認。電源は日本語ページが「3相380V」、英語ページが「Single-phase 220V」と食い違う（要確認）。価格は非公開。保証は機械全体1年（メーカーFAQ）。use の「自動化」はロボット接続用I/Oインターフェースの記載にもとづく"
+    "notes": "候補一覧の掲載は「SENFENG ハンドヘルド」（metree では ヴェルテックスエンジニアリングが水冷式 SF3000HWM を登録）。ヴェルテックスエンジニアリング（広島県廿日市市）は公式サイトで「SENFENG製(空冷式)ファイバー溶接機」を写真のみで掲載（型番・仕様の記載なし）。アグサメタル株式会社（広島県福山市）は「SENFENG SF-Sシリーズ ポータブル空冷式ハンドヘルドレーザー溶接機」を掲載し、BOCHU & SENFENG 認定パートナー・SENFENG溶接機ヘッド修理認証保有と記載。正規代理店契約の有無は未確認。電源は日本語ページが「3相380V」、英語ページが「Single-phase 220V」と食い違う（要確認）。価格は非公開。保証は機械全体1年（メーカーFAQ）。use の「自動化」はロボット接続用I/Oインターフェースの記載にもとづく",
+    "origin": {
+      "hq": "中国（山東省済南市）",
+      "hq_url": "https://jp.senfenglaser.com/about/",
+      "made": "中国",
+      "made_basis": "済南市の製造拠点（会社沿革）。会社全体の記載で、機種ごとの記載はなし",
+      "made_url": "https://jp.senfenglaser.com/about/",
+      "service": "国内のSENFENG認定パートナー（アグサメタル）が全国保守ネットワークで修理・メンテナンス",
+      "service_url": "https://agusa.co.jp/service/fiber_laser-support/"
+    }
   },
   {
     "id": "p256",
@@ -5139,7 +5593,16 @@
       "domestic_seller_vertex": "https://metoree.com/products/301283/"
     },
     "is_published": true,
-    "notes": "metree でヴェルテックスエンジニアリングが「SENFENG製 (水冷式) ハンドファイバーレーザー溶接機」として SF3000HWM（3kW、2kW仕様あり）を登録（metree の記載では最大6〜8mm）。ヴェルテックスの公式サイトには型番・仕様の記載がない。日本語公式ページの表は本体重量の行が「溶接ガン線の長さ」と誤記されており、英語版公式の「Net Weight of Machine 265kg」を採用。電源は3相380V（英語版は custom-made 併記）。environment の「屋外」は公式の「押しやすく屋外溶接が可能」の記載にもとづく。skill は「労働者に溶接経験の要求がなければ」という公式の記載にもとづく。価格は非公開。正規代理店契約の有無は未確認"
+    "notes": "metree でヴェルテックスエンジニアリングが「SENFENG製 (水冷式) ハンドファイバーレーザー溶接機」として SF3000HWM（3kW、2kW仕様あり）を登録（metree の記載では最大6〜8mm）。ヴェルテックスの公式サイトには型番・仕様の記載がない。日本語公式ページの表は本体重量の行が「溶接ガン線の長さ」と誤記されており、英語版公式の「Net Weight of Machine 265kg」を採用。電源は3相380V（英語版は custom-made 併記）。environment の「屋外」は公式の「押しやすく屋外溶接が可能」の記載にもとづく。skill は「労働者に溶接経験の要求がなければ」という公式の記載にもとづく。価格は非公開。正規代理店契約の有無は未確認",
+    "origin": {
+      "hq": "中国（山東省済南市）",
+      "hq_url": "https://jp.senfenglaser.com/about/",
+      "made": "中国",
+      "made_basis": "済南市の製造拠点（会社沿革）。会社全体の記載で、機種ごとの記載はなし",
+      "made_url": "https://jp.senfenglaser.com/about/",
+      "service": "国内のSENFENG認定パートナー（アグサメタル）が全国保守ネットワークで修理・メンテナンス",
+      "service_url": "https://agusa.co.jp/service/fiber_laser-support/"
+    }
   },
   {
     "id": "p257",
@@ -5208,7 +5671,14 @@
       "metree_listing": "https://metoree.com/products/236391/"
     },
     "is_published": true,
-    "notes": "国内代理店は確認できず（metree には済南 AccTek 機械有限公司が自社で登録）。公式サイトの表示価格は US$4,200〜6,500（AKH-1500/2000 の幅。送料・関税・国内での保守は含まれない）。円換算は為替次第のため価格帯タグは付けない。型番の AKH-1500 は同社の水冷式ハンドヘルド（AKH-1500/2000/3000/6000）でも使われているため、model_slug を akh-1500-air とした（name は公式表記の AKH-1500 のまま。表示時は「ポータブル空冷式」と添えると区別しやすい）。ページ上部の概要では溶接ヘッドを Au3tech、仕様表では Qilin と記載（食い違い）。発振器は Max / Rlaser、電源 380V/220V 50/60Hz、作業環境10〜40℃・湿度5〜95%。初心者向けの明記はない（FAQ・レビューに習得が早い旨の記述はあるが skill タグは付けない）"
+    "notes": "国内代理店は確認できず（metree には済南 AccTek 機械有限公司が自社で登録）。公式サイトの表示価格は US$4,200〜6,500（AKH-1500/2000 の幅。送料・関税・国内での保守は含まれない）。円換算は為替次第のため価格帯タグは付けない。型番の AKH-1500 は同社の水冷式ハンドヘルド（AKH-1500/2000/3000/6000）でも使われているため、model_slug を akh-1500-air とした（name は公式表記の AKH-1500 のまま。表示時は「ポータブル空冷式」と添えると区別しやすい）。ページ上部の概要では溶接ヘッドを Au3tech、仕様表では Qilin と記載（食い違い）。発振器は Max / Rlaser、電源 380V/220V 50/60Hz、作業環境10〜40℃・湿度5〜95%。初心者向けの明記はない（FAQ・レビューに習得が早い旨の記述はあるが skill タグは付けない）",
+    "origin": {
+      "hq": "中国（山東省済南市）",
+      "hq_url": "https://www.accteklaser.com/about/",
+      "made": "中国",
+      "made_basis": "工場所在地は山東省徳州市。会社全体の記載で、機種ごとの記載はなし",
+      "made_url": "https://www.accteklaser.com/about/"
+    }
   },
   {
     "id": "p258",
@@ -5284,7 +5754,16 @@
       "country": "https://www.laser-machine.com/company.shtml"
     },
     "is_published": true,
-    "notes": "型式表記は公式ページ内で「RSD-SUNMAX-FL-LCW-PRO Sタイプ」「RSD-SUNMAX-FL-LCW Sタイプ」の両方があり、metree では「RSD-SUNMAX-FL-LCW-GRAY」。出力は1500/2000/3000Wから選ぶ構成で、本記録は1500W構成。価格は公式に「最安値168万円（税別）〜本体価格228万円」とあり（出力別の内訳は非公開、同じ欄に「オープン価格（構成に合わせて個別お見積り）」とも記載。税別・搬入設置費別途）。電源は単相または三相200V・30A単独ブレーカー。アシストガス（窒素／アルゴン）・冷却水11L・溶接ワイヤー（φ0.8〜1.6）は購入者側で用意。推奨稼働温度0〜35℃。保証は本体1年・発振器2年。発振器は IPG／Raycus／MAX 製。会社案内では本社は岐阜市、海外拠点として日新激光科技有限公司（山東省済南市）を掲載。製造国の明記はないため country は本社国。日本溶接協会の生産性向上要件証明書の取得に対応。use の「補修」は「最大約5mm前後の肉盛り溶接が可能」、「自動化」は協働ロボットCRXの自動化システム（オプション）の記載にもとづく。価格帯が出力別に分からないため price タグは空（公表: 最安値168万円（税別）〜本体価格228万円）"
+    "notes": "型式表記は公式ページ内で「RSD-SUNMAX-FL-LCW-PRO Sタイプ」「RSD-SUNMAX-FL-LCW Sタイプ」の両方があり、metree では「RSD-SUNMAX-FL-LCW-GRAY」。出力は1500/2000/3000Wから選ぶ構成で、本記録は1500W構成。価格は公式に「最安値168万円（税別）〜本体価格228万円」とあり（出力別の内訳は非公開、同じ欄に「オープン価格（構成に合わせて個別お見積り）」とも記載。税別・搬入設置費別途）。電源は単相または三相200V・30A単独ブレーカー。アシストガス（窒素／アルゴン）・冷却水11L・溶接ワイヤー（φ0.8〜1.6）は購入者側で用意。推奨稼働温度0〜35℃。保証は本体1年・発振器2年。発振器は IPG／Raycus／MAX 製。会社案内では本社は岐阜市、海外拠点として日新激光科技有限公司（山東省済南市）を掲載。製造国の明記はないため country は本社国。日本溶接協会の生産性向上要件証明書の取得に対応。use の「補修」は「最大約5mm前後の肉盛り溶接が可能」、「自動化」は協働ロボットCRXの自動化システム（オプション）の記載にもとづく。価格帯が出力別に分からないため price タグは空（公表: 最安値168万円（税別）〜本体価格228万円）",
+    "origin": {
+      "hq": "日本（岐阜県岐阜市）　※販売元。製造元は公式に記載なし",
+      "hq_url": "https://www.laser-machine.com/company.shtml",
+      "made": "輸入品（製造国の記載なし）",
+      "made_basis": "海外から輸入し、日本国内で動作確認と品質検査",
+      "made_url": "https://www.laser-machine.com/company.shtml",
+      "service": "出張修理・センドバック修理・保守契約（6年プラン）、修理7営業日超は貸出機",
+      "service_url": "https://www.laser-machine.com/FL/lcw_gray.shtml"
+    }
   },
   {
     "id": "p259",
@@ -5361,7 +5840,16 @@
       "country": "https://www.laser-machine.com/company.shtml"
     },
     "is_published": true,
-    "notes": "RSD-SUNMAX-FL-LCW-PRO Sタイプの3000W構成。価格は公式に「最安値168万円（税別）〜本体価格228万円」（出力別の内訳は非公開。税別・搬入設置費別途）。電源は三相200V・60A単独ブレーカー（380V出力の電圧レギュレータ付属）。トリプルワイヤーは2kW以上で推奨。アシストガス・冷却水・溶接ワイヤーは購入者側で用意。推奨稼働温度0〜35℃。保証は本体1年・発振器2年。外寸はページ内で2通りの表記あり（両方記載）。country は本社国（製造国の明記なし。海外拠点は山東省済南市）。価格帯が出力別に分からないため price タグは空（公表: 最安値168万円（税別）〜本体価格228万円）"
+    "notes": "RSD-SUNMAX-FL-LCW-PRO Sタイプの3000W構成。価格は公式に「最安値168万円（税別）〜本体価格228万円」（出力別の内訳は非公開。税別・搬入設置費別途）。電源は三相200V・60A単独ブレーカー（380V出力の電圧レギュレータ付属）。トリプルワイヤーは2kW以上で推奨。アシストガス・冷却水・溶接ワイヤーは購入者側で用意。推奨稼働温度0〜35℃。保証は本体1年・発振器2年。外寸はページ内で2通りの表記あり（両方記載）。country は本社国（製造国の明記なし。海外拠点は山東省済南市）。価格帯が出力別に分からないため price タグは空（公表: 最安値168万円（税別）〜本体価格228万円）",
+    "origin": {
+      "hq": "日本（岐阜県岐阜市）　※販売元。製造元は公式に記載なし",
+      "hq_url": "https://www.laser-machine.com/company.shtml",
+      "made": "輸入品（製造国の記載なし）",
+      "made_basis": "海外から輸入し、日本国内で動作確認と品質検査",
+      "made_url": "https://www.laser-machine.com/company.shtml",
+      "service": "出張修理・センドバック修理・保守契約（6年プラン）、修理7営業日超は貸出機",
+      "service_url": "https://www.laser-machine.com/FL/lcw_gray.shtml"
+    }
   },
   {
     "id": "p260",
@@ -5434,7 +5922,11 @@
       "country": "https://www.nihonwelding.co.jp/profile.html"
     },
     "is_published": true,
-    "notes": "候補一覧の「CW発振ファイバーレーザー溶接機」に当たる機種。価格は非公開。画像は公式の製品紹介画像（本体写真に機種名・説明文が入った画像で、CMYKのJPEG）。最大消費電力約3.5kW、チラー定格消費電力1.7/2.2kVA。使用環境温度10〜40℃。低電力契約で3相200Vを使っている場合は電灯契約の変更や配線工事が必要になる場合があると記載。会社概要の主な事業内容は「YAGレーザー溶接・切断機の製造及び販売」（本社：東京都大田区）。製造国の明記はないため country は本社国（協会記事では製造国 日本）"
+    "notes": "候補一覧の「CW発振ファイバーレーザー溶接機」に当たる機種。価格は非公開。画像は公式の製品紹介画像（本体写真に機種名・説明文が入った画像で、CMYKのJPEG）。最大消費電力約3.5kW、チラー定格消費電力1.7/2.2kVA。使用環境温度10〜40℃。低電力契約で3相200Vを使っている場合は電灯契約の変更や配線工事が必要になる場合があると記載。会社概要の主な事業内容は「YAGレーザー溶接・切断機の製造及び販売」（本社：東京都大田区）。製造国の明記はないため country は本社国（協会記事では製造国 日本）",
+    "origin": {
+      "hq": "日本（東京都大田区）",
+      "hq_url": "https://www.nihonwelding.co.jp/profile.html"
+    }
   },
   {
     "id": "p261",
@@ -5503,7 +5995,11 @@
       "country": "https://www.nihonwelding.co.jp/profile.html"
     },
     "is_published": true,
-    "notes": "同社のファイバー機は FBL-1000CW と FBL-1200X の2機種（製品一覧 2026年版）。価格は非公開。画像は公式の製品紹介画像（本体写真に機種名・説明文が入った画像で、CMYKのJPEG）。最大消費電力約3.8kW。ワイヤースプールは付属しない。skill の「未経験可」はウエルペンレーザーシリーズ全体の説明（TIG溶接のような熟練を必要としません）にもとづく。製造国の明記はないため country は本社国（東京都大田区）"
+    "notes": "同社のファイバー機は FBL-1000CW と FBL-1200X の2機種（製品一覧 2026年版）。価格は非公開。画像は公式の製品紹介画像（本体写真に機種名・説明文が入った画像で、CMYKのJPEG）。最大消費電力約3.8kW。ワイヤースプールは付属しない。skill の「未経験可」はウエルペンレーザーシリーズ全体の説明（TIG溶接のような熟練を必要としません）にもとづく。製造国の明記はないため country は本社国（東京都大田区）",
+    "origin": {
+      "hq": "日本（東京都大田区）",
+      "hq_url": "https://www.nihonwelding.co.jp/profile.html"
+    }
   },
   {
     "id": "p262",
@@ -5562,7 +6058,11 @@
       "handheld_reference": "https://laserwelder.jp/"
     },
     "is_published": true,
-    "notes": "現行の公式製品ページ（2026年のサイト改装後）には手持ち（ハンディ）である旨の記載がない。改装前の公式ページ（旧パス /cutting/las_fiber_1500SH.html は現在404。sources.method の Wayback Machine 2026-05-11 保存版）には同ページ内に「ハンディトーチ（オプション）：板金溶接用手持ち型レーザ溶接機…薄板でも熱影響の少ない加工が可能…アルミも加工できます」「時間差分岐に対応しており、1台でハンディトーチ、もう1台で切断用加工ヘッド」とあり、method・material・use はこの記載にもとづく（ハンディトーチは標準ではなくオプション）。協会記事では澁谷工業のファイバーハンドのラインナップを500W/1000W/1500W（スイング）と記載しているが、公式で現在確認できる機種は FWL1500SH のみ（旧 FWL500型のページは404）。対応板厚・対応材質の一覧・価格は非公開。本社は石川県金沢市"
+    "notes": "現行の公式製品ページ（2026年のサイト改装後）には手持ち（ハンディ）である旨の記載がない。改装前の公式ページ（旧パス /cutting/las_fiber_1500SH.html は現在404。sources.method の Wayback Machine 2026-05-11 保存版）には同ページ内に「ハンディトーチ（オプション）：板金溶接用手持ち型レーザ溶接機…薄板でも熱影響の少ない加工が可能…アルミも加工できます」「時間差分岐に対応しており、1台でハンディトーチ、もう1台で切断用加工ヘッド」とあり、method・material・use はこの記載にもとづく（ハンディトーチは標準ではなくオプション）。協会記事では澁谷工業のファイバーハンドのラインナップを500W/1000W/1500W（スイング）と記載しているが、公式で現在確認できる機種は FWL1500SH のみ（旧 FWL500型のページは404）。対応板厚・対応材質の一覧・価格は非公開。本社は石川県金沢市",
+    "origin": {
+      "hq": "日本（石川県金沢市）",
+      "hq_url": "https://www.shibuya.co.jp/corporate/company-profile/"
+    }
   },
   {
     "id": "p263",
@@ -5631,7 +6131,13 @@
       "country": "https://www.might-jp.com/products/mfl-w1500mfl-w2000/"
     },
     "is_published": true,
-    "notes": "価格は非公開。単相200/220V、定格入力電流36.9/33.5A（60Hz）。冷却水タンク16L（使用前にクーラント／精製水等16Lの準備が必要）。溶接用ワイヤー、アルゴンガスまたは窒素ガスは別途準備。リーフレットに「使用率100%で使用が可能」「初心者の方でも簡単に溶接が出来ます」「特別な技術も不要」と記載。送給装置とのセット型式は MFL-W1500SW（シングル）／MFL-W1500DW（ダブル）。本社は大阪市平野区（製造国の明記なし。country は本社国）。製品ページの URL スラッグは「mfl-w1500mfl-w2000」だが MFL-W1500 のページ"
+    "notes": "価格は非公開。単相200/220V、定格入力電流36.9/33.5A（60Hz）。冷却水タンク16L（使用前にクーラント／精製水等16Lの準備が必要）。溶接用ワイヤー、アルゴンガスまたは窒素ガスは別途準備。リーフレットに「使用率100%で使用が可能」「初心者の方でも簡単に溶接が出来ます」「特別な技術も不要」と記載。送給装置とのセット型式は MFL-W1500SW（シングル）／MFL-W1500DW（ダブル）。本社は大阪市平野区（製造国の明記なし。country は本社国）。製品ページの URL スラッグは「mfl-w1500mfl-w2000」だが MFL-W1500 のページ",
+    "origin": {
+      "hq": "日本（大阪府大阪市平野区）",
+      "hq_url": "https://www.might-jp.com/company/",
+      "service": "国内修理対応（断線修理・トーチ交換・ケーブル交換修理）",
+      "service_url": "https://www.might-jp.com/products/mfl-w1500mfl-w2000/"
+    }
   },
   {
     "id": "p264",
@@ -5701,7 +6207,13 @@
       "country": "https://www.might-jp.com/products/mfl-w2000/"
     },
     "is_published": true,
-    "notes": "価格は非公開。単相200/220V、定格入力電流53.9/49A（60Hz）。冷却水タンク16L（使用前にクーラント／精製水等16Lの準備が必要）。溶接用ワイヤー、アルゴンガスまたは窒素ガスは別途準備。ダブル送給装置とパーティションのセット（MFL-W2000DW-YLSP-11Fiber/21Fiber）あり。use の「厚物」は鉄・ステンレス最大推奨6mmとダブルワイヤーで「厚みのある溶接が可能」の記載にもとづく。本社は大阪市平野区（製造国の明記なし。country は本社国）。商品画像は MFL-W1500 と共通（本体と送給装置2種の写真）"
+    "notes": "価格は非公開。単相200/220V、定格入力電流53.9/49A（60Hz）。冷却水タンク16L（使用前にクーラント／精製水等16Lの準備が必要）。溶接用ワイヤー、アルゴンガスまたは窒素ガスは別途準備。ダブル送給装置とパーティションのセット（MFL-W2000DW-YLSP-11Fiber/21Fiber）あり。use の「厚物」は鉄・ステンレス最大推奨6mmとダブルワイヤーで「厚みのある溶接が可能」の記載にもとづく。本社は大阪市平野区（製造国の明記なし。country は本社国）。商品画像は MFL-W1500 と共通（本体と送給装置2種の写真）",
+    "origin": {
+      "hq": "日本（大阪府大阪市平野区）",
+      "hq_url": "https://www.might-jp.com/company/",
+      "service": "国内修理対応（断線修理・トーチ交換・ケーブル交換修理）",
+      "service_url": "https://www.might-jp.com/products/mfl-w1500mfl-w2000/"
+    }
   },
   {
     "id": "p265",
@@ -5764,7 +6276,16 @@
       "exhibition": "https://ensei-m.jp/news/d/mrhUAWJBqCnTsK7D"
     },
     "is_published": true,
-    "notes": "遠誠株式会社（G-WEIKE日本正規代理店）が TRM ファイバーレーザー溶接機（LWH-1500/2000/3000）を取り扱い、2026国際ウエルディングショーで展示（候補一覧の「新型レーザー溶接機」に当たる）。国内納品事例は「TRM製 LWH-2000P ファイバーレーザー溶接機 2000W」（2026年6月、茨城県）。遠誠の説明では TRM は中国常州を拠点に2001年設立の溶接専門メーカー。メーカー公式の仕様: 電源 230V〜45A 50/60Hz、装置全体の電力11kW、シールドガス アルゴン／窒素、使用環境10〜40℃、ワイヤー径0.8〜2.0mm、水冷。波長はメーカー公式ページに記載なし。対応材質の一覧・価格は非公開（遠誠のページに溶接・切断・クリーニング対応と記載）。メーカー公式の画像は配信元（yun300.cn）が直接取得できないため、遠誠の製品ページの本体写真を使用"
+    "notes": "遠誠株式会社（G-WEIKE日本正規代理店）が TRM ファイバーレーザー溶接機（LWH-1500/2000/3000）を取り扱い、2026国際ウエルディングショーで展示（候補一覧の「新型レーザー溶接機」に当たる）。国内納品事例は「TRM製 LWH-2000P ファイバーレーザー溶接機 2000W」（2026年6月、茨城県）。遠誠の説明では TRM は中国常州を拠点に2001年設立の溶接専門メーカー。メーカー公式の仕様: 電源 230V〜45A 50/60Hz、装置全体の電力11kW、シールドガス アルゴン／窒素、使用環境10〜40℃、ワイヤー径0.8〜2.0mm、水冷。波長はメーカー公式ページに記載なし。対応材質の一覧・価格は非公開（遠誠のページに溶接・切断・クリーニング対応と記載）。メーカー公式の画像は配信元（yun300.cn）が直接取得できないため、遠誠の製品ページの本体写真を使用",
+    "origin": {
+      "hq": "中国（江蘇省常州市）",
+      "hq_url": "https://www.trm-welding.com/contact.html",
+      "made": "中国",
+      "made_basis": "常州で設計・製造（国内販売店の説明）。会社全体の記載で、機種ごとの記載はなし",
+      "made_url": "https://ensei-m.jp/product/d/35",
+      "service": "国内販売店・遠誠が保証修理・保守契約・現地訪問対応",
+      "service_url": "https://ensei-m.jp/support/"
+    }
   },
   {
     "id": "p266",
@@ -5830,7 +6351,16 @@
       "exhibition": "https://ensei-m.jp/news/d/mrhUAWJBqCnTsK7D"
     },
     "is_published": true,
-    "notes": "遠誠株式会社が LWH-1500/2000/3000 として掲載する TRM の3kW機。メーカー公式の仕様: 電源 380V〜40A 50/60Hz、定格電力15kW、シールドガス アルゴン／窒素、使用環境10〜40℃、ワイヤー径0.8〜2.0mm、水冷。日本向けの電源仕様（200V系での対応）は未確認。波長はメーカー公式ページに記載なし。対応材質の一覧・価格は非公開。G3世代の LWH3000-S（三相380V、定格11kW、推奨0.4〜8mm）もメーカー公式に掲載されているが、遠誠が扱う世代は納品事例の LWH-2000P から G2（-P）と判断（遠誠の製品ページには世代の明記なし）。画像は遠誠の製品ページの本体写真"
+    "notes": "遠誠株式会社が LWH-1500/2000/3000 として掲載する TRM の3kW機。メーカー公式の仕様: 電源 380V〜40A 50/60Hz、定格電力15kW、シールドガス アルゴン／窒素、使用環境10〜40℃、ワイヤー径0.8〜2.0mm、水冷。日本向けの電源仕様（200V系での対応）は未確認。波長はメーカー公式ページに記載なし。対応材質の一覧・価格は非公開。G3世代の LWH3000-S（三相380V、定格11kW、推奨0.4〜8mm）もメーカー公式に掲載されているが、遠誠が扱う世代は納品事例の LWH-2000P から G2（-P）と判断（遠誠の製品ページには世代の明記なし）。画像は遠誠の製品ページの本体写真",
+    "origin": {
+      "hq": "中国（江蘇省常州市）",
+      "hq_url": "https://www.trm-welding.com/contact.html",
+      "made": "中国",
+      "made_basis": "常州で設計・製造（国内販売店の説明）。会社全体の記載で、機種ごとの記載はなし",
+      "made_url": "https://ensei-m.jp/product/d/35",
+      "service": "国内販売店・遠誠が保証修理・保守契約・現地訪問対応",
+      "service_url": "https://ensei-m.jp/support/"
+    }
   },
   {
     "id": "p267",
@@ -5886,7 +6416,16 @@
       "image_url": "https://alphalaser.co.jp/seihin/alflak/"
     },
     "is_published": true,
-    "notes": "ハンドヘルドではなく、双眼顕微鏡付きの長いアームを持つ自走式（キャタピラ）の移動式レーザー溶接システム（金型など向け）。対応材質・板厚・溶け込みの公表値なし。価格非公開。連続溶接長はメーカー本社サイトでは340mm、国内代理店のチラシ・製品ページでは500mmと記載が食い違う。移動範囲（X,Y,Z）は本社サイト340×330×370mm、国内代理店チラシ320×330×370mm、国内代理店製品ページ340×320×420mm。シリーズのファイバー版は300/450/600/900W（300W・450Wは後から出力倍増の改造が可能）。国内代理店 ALPHA LASER JAPAN株式会社（佐賀県鳥栖市、2018年1月から正規代理店）。 2026国際ウエルディングショーでは GALAXYホールディングス株式会社ブースに ALPHA LASER JAPAN㈱ が共同出展。"
+    "notes": "ハンドヘルドではなく、双眼顕微鏡付きの長いアームを持つ自走式（キャタピラ）の移動式レーザー溶接システム（金型など向け）。対応材質・板厚・溶け込みの公表値なし。価格非公開。連続溶接長はメーカー本社サイトでは340mm、国内代理店のチラシ・製品ページでは500mmと記載が食い違う。移動範囲（X,Y,Z）は本社サイト340×330×370mm、国内代理店チラシ320×330×370mm、国内代理店製品ページ340×320×420mm。シリーズのファイバー版は300/450/600/900W（300W・450Wは後から出力倍増の改造が可能）。国内代理店 ALPHA LASER JAPAN株式会社（佐賀県鳥栖市、2018年1月から正規代理店）。 2026国際ウエルディングショーでは GALAXYホールディングス株式会社ブースに ALPHA LASER JAPAN㈱ が共同出展。",
+    "origin": {
+      "hq": "ドイツ（バイエルン州プッフハイム）",
+      "hq_url": "https://alphalaser.eu/rechtliches/impressum.html",
+      "made": "ドイツ",
+      "made_basis": "プッフハイムの拠点でレーザーシステムを製造。会社全体の記載で、機種ごとの記載はなし",
+      "made_url": "https://alphalaser.eu/unternehmen/daten-fakten.html",
+      "service": "国内正規代理店ALPHA LASER ENGINEERING（愛知県一宮市）が販売・メンテナンス",
+      "service_url": "https://alphalaser-eng.com/services/laser-machine/"
+    }
   },
   {
     "id": "p268",
@@ -5955,7 +6494,16 @@
       "image_url": "https://denaliweld.com/products/air-cooled-laser-welding-machine/"
     },
     "is_published": true,
-    "notes": "メーカー直販サイトの価格 US$34,999（米国向け・税送料別。日本国内価格は非公開のため価格帯タグは空）。電源 AC480V・消費電力9.2kW、溶接速度 0-105cm/min。銅はメーカーの溶接パラメータ表（機種別ではない）に設定例あり。公式サイトに日本拠点（神奈川県小田原市中町3-10-11）の記載あり、日本語ページあり。2027年1月1日から新デザイン（側面ハンドル、新型ヘッド・ワイヤ送給装置）に切り替わる旨の記載あり。製造について公式サイトは「米国で組み立て」と記載。"
+    "notes": "メーカー直販サイトの価格 US$34,999（米国向け・税送料別。日本国内価格は非公開のため価格帯タグは空）。電源 AC480V・消費電力9.2kW、溶接速度 0-105cm/min。銅はメーカーの溶接パラメータ表（機種別ではない）に設定例あり。公式サイトに日本拠点（神奈川県小田原市中町3-10-11）の記載あり、日本語ページあり。2027年1月1日から新デザイン（側面ハンドル、新型ヘッド・ワイヤ送給装置）に切り替わる旨の記載あり。製造について公式サイトは「米国で組み立て」と記載。",
+    "origin": {
+      "hq": "米国（イリノイ州エルジン）",
+      "hq_url": "https://denaliweld.com/ja/about-us/",
+      "made": "米国",
+      "made_basis": "シカゴの工場で製造と記載（日本向けの組立地は記載なし）",
+      "made_url": "https://denaliweld.com/ja/about-us/",
+      "service": "日本支社（神奈川県小田原市）を含む各支社がスペアパーツ・サービスを提供",
+      "service_url": "https://denaliweld.com/ja/products/air-cooled-laser-welding-machine/"
+    }
   },
   {
     "id": "p269",
@@ -6024,7 +6572,16 @@
       "image_url": "https://denaliweld.com/products/air-cooled-laser-welding-machine/"
     },
     "is_published": true,
-    "notes": "メーカー直販サイトの価格 US$24,999（米国向け・税送料別。日本国内価格は非公開のため価格帯タグは空）。電源 AC208V・消費電力7.7kW、溶接速度 0-90cm/min。銅はメーカーの溶接パラメータ表（機種別ではない）に設定例あり。公式サイトに日本拠点（神奈川県小田原市中町3-10-11）の記載あり、日本語ページあり。2027年1月1日から新デザイン（側面ハンドル、新型ヘッド・ワイヤ送給装置）に切り替わる旨の記載あり。製造について公式サイトは「米国で組み立て」と記載。"
+    "notes": "メーカー直販サイトの価格 US$24,999（米国向け・税送料別。日本国内価格は非公開のため価格帯タグは空）。電源 AC208V・消費電力7.7kW、溶接速度 0-90cm/min。銅はメーカーの溶接パラメータ表（機種別ではない）に設定例あり。公式サイトに日本拠点（神奈川県小田原市中町3-10-11）の記載あり、日本語ページあり。2027年1月1日から新デザイン（側面ハンドル、新型ヘッド・ワイヤ送給装置）に切り替わる旨の記載あり。製造について公式サイトは「米国で組み立て」と記載。",
+    "origin": {
+      "hq": "米国（イリノイ州エルジン）",
+      "hq_url": "https://denaliweld.com/ja/about-us/",
+      "made": "米国",
+      "made_basis": "シカゴの工場で製造と記載（日本向けの組立地は記載なし）",
+      "made_url": "https://denaliweld.com/ja/about-us/",
+      "service": "日本支社（神奈川県小田原市）を含む各支社がスペアパーツ・サービスを提供",
+      "service_url": "https://denaliweld.com/ja/products/air-cooled-laser-welding-machine/"
+    }
   },
   {
     "id": "p270",
@@ -6094,7 +6651,16 @@
       "maker_name": "https://ls-tool.com/company/"
     },
     "is_published": true,
-    "notes": "公式サイトの表示価格 1,198,000円（税別、本体標準セット。窒素ガス発生装置またはアルゴンガス、冷却水、電源工事等は別）。入力電源 単相200V 35A、消費電力6kW、使用温度範囲10〜40℃。製造国の明記なし（「出荷前に中国・日本の二重検査」との記載あり）。「初心者でも数時間で習得可能」と記載。対応板厚の上限は非公表。"
+    "notes": "公式サイトの表示価格 1,198,000円（税別、本体標準セット。窒素ガス発生装置またはアルゴンガス、冷却水、電源工事等は別）。入力電源 単相200V 35A、消費電力6kW、使用温度範囲10〜40℃。製造国の明記なし（「出荷前に中国・日本の二重検査」との記載あり）。「初心者でも数時間で習得可能」と記載。対応板厚の上限は非公表。",
+    "origin": {
+      "hq": "日本（埼玉県川口市）　※販売元。製造元は公式に記載なし",
+      "hq_url": "https://ls-tool.com/company/",
+      "made": "中国（日本で検査）",
+      "made_basis": "中国工場で組立、日本工場で出荷前検査",
+      "made_url": "https://ls-tool.com/",
+      "service": "国内から保証期間内の部品無償発送・代替機貸出（訪問修理・現地メンテナンスは行わない）",
+      "service_url": "https://ls-tool.com/"
+    }
   },
   {
     "id": "p271",
@@ -6164,7 +6730,16 @@
       "maker_name": "https://ls-tool.com/company/"
     },
     "is_published": true,
-    "notes": "公式サイトの表示価格 1,598,000円（税別、本体標準セット。窒素ガス発生装置またはアルゴンガス、冷却水、電源工事等は別）。入力電源 単相200V 42A、消費電力10kW、使用温度範囲10〜40℃。製造国の明記なし（「出荷前に中国・日本の二重検査」との記載あり）。「初心者でも数時間で習得可能」と記載。対応板厚の上限は非公表。"
+    "notes": "公式サイトの表示価格 1,598,000円（税別、本体標準セット。窒素ガス発生装置またはアルゴンガス、冷却水、電源工事等は別）。入力電源 単相200V 42A、消費電力10kW、使用温度範囲10〜40℃。製造国の明記なし（「出荷前に中国・日本の二重検査」との記載あり）。「初心者でも数時間で習得可能」と記載。対応板厚の上限は非公表。",
+    "origin": {
+      "hq": "日本（埼玉県川口市）　※販売元。製造元は公式に記載なし",
+      "hq_url": "https://ls-tool.com/company/",
+      "made": "中国（日本で検査）",
+      "made_basis": "中国工場で組立、日本工場で出荷前検査",
+      "made_url": "https://ls-tool.com/",
+      "service": "国内から保証期間内の部品無償発送・代替機貸出（訪問修理・現地メンテナンスは行わない）",
+      "service_url": "https://ls-tool.com/"
+    }
   },
   {
     "id": "p272",
@@ -6228,7 +6803,14 @@
       "japanese_page": "https://dynalasers.jp/products/m-series/"
     },
     "is_published": true,
-    "notes": "動作モード 連続／スポット／パルス／Turbo。入力電源180–264VAC。価格は非公開（見積り）。波長は公式ページに記載なし。メーカーの日本語サイト dynalasers.jp（日本の電話・FAX番号あり）は M シリーズを「主力シリーズ」と記載。M シリーズの国内販売店は確認できず（サンクス製作所は S30/S40/D50/D60/D70 を扱う）。同社の D シリーズ（D50P/D70P）は掲載中の YDL D50P/D70P と仕様が一致するため対象外としたが、M シリーズは筐体寸法（654×286×574mm、D は637×274×574mm）・重量が異なる別シリーズ。「初心者でもすぐ使える」旨の記載（150の簡易モード）あり。 本体重量は英語サイトと日本語サイトで食い違う（日本語サイトは50kg未満、冷却方式を「相変化冷却」、作業モードを全機種 Continuous/Pulse/Spot/Turbo と記載）。日本語サイトFAQに「初心者でも使用できる（安全教育・保護具は必要）」との記載。"
+    "notes": "動作モード 連続／スポット／パルス／Turbo。入力電源180–264VAC。価格は非公開（見積り）。波長は公式ページに記載なし。メーカーの日本語サイト dynalasers.jp（日本の電話・FAX番号あり）は M シリーズを「主力シリーズ」と記載。M シリーズの国内販売店は確認できず（サンクス製作所は S30/S40/D50/D60/D70 を扱う）。同社の D シリーズ（D50P/D70P）は掲載中の YDL D50P/D70P と仕様が一致するため対象外としたが、M シリーズは筐体寸法（654×286×574mm、D は637×274×574mm）・重量が異なる別シリーズ。「初心者でもすぐ使える」旨の記載（150の簡易モード）あり。 本体重量は英語サイトと日本語サイトで食い違う（日本語サイトは50kg未満、冷却方式を「相変化冷却」、作業モードを全機種 Continuous/Pulse/Spot/Turbo と記載）。日本語サイトFAQに「初心者でも使用できる（安全教育・保護具は必要）」との記載。",
+    "origin": {
+      "hq": "中国（広東省深圳市）",
+      "hq_url": "https://dynalasers.jp/%e7%a7%81%e3%81%9f%e3%81%a1%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6/",
+      "made": "中国",
+      "made_basis": "恵州市の生産拠点で製造。会社全体の記載で、機種ごとの記載はなし",
+      "made_url": "https://dynalasers.jp/%e7%a7%81%e3%81%9f%e3%81%a1%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6/"
+    }
   },
   {
     "id": "p273",
@@ -6291,7 +6873,14 @@
       "japanese_page": "https://dynalasers.jp/products/m-series/"
     },
     "is_published": true,
-    "notes": "動作モード 連続／スポット／パルス。入力電源180–264VAC。価格は非公開（見積り）。波長は公式ページに記載なし。メーカーの日本語サイト dynalasers.jp（日本の電話・FAX番号あり）は M シリーズを「主力シリーズ」と記載。M シリーズの国内販売店は確認できず（サンクス製作所は S30/S40/D50/D60/D70 を扱う）。同社の D シリーズ（D50P/D70P）は掲載中の YDL D50P/D70P と仕様が一致するため対象外としたが、M シリーズは筐体寸法（654×286×574mm、D は637×274×574mm）・重量が異なる別シリーズ。「初心者でもすぐ使える」旨の記載（150の簡易モード）あり。 本体重量は英語サイトと日本語サイトで食い違う（日本語サイトは46kg未満、冷却方式を「相変化冷却」、作業モードを全機種 Continuous/Pulse/Spot/Turbo と記載）。日本語サイトFAQに「初心者でも使用できる（安全教育・保護具は必要）」との記載。"
+    "notes": "動作モード 連続／スポット／パルス。入力電源180–264VAC。価格は非公開（見積り）。波長は公式ページに記載なし。メーカーの日本語サイト dynalasers.jp（日本の電話・FAX番号あり）は M シリーズを「主力シリーズ」と記載。M シリーズの国内販売店は確認できず（サンクス製作所は S30/S40/D50/D60/D70 を扱う）。同社の D シリーズ（D50P/D70P）は掲載中の YDL D50P/D70P と仕様が一致するため対象外としたが、M シリーズは筐体寸法（654×286×574mm、D は637×274×574mm）・重量が異なる別シリーズ。「初心者でもすぐ使える」旨の記載（150の簡易モード）あり。 本体重量は英語サイトと日本語サイトで食い違う（日本語サイトは46kg未満、冷却方式を「相変化冷却」、作業モードを全機種 Continuous/Pulse/Spot/Turbo と記載）。日本語サイトFAQに「初心者でも使用できる（安全教育・保護具は必要）」との記載。",
+    "origin": {
+      "hq": "中国（広東省深圳市）",
+      "hq_url": "https://dynalasers.jp/%e7%a7%81%e3%81%9f%e3%81%a1%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6/",
+      "made": "中国",
+      "made_basis": "恵州市の生産拠点で製造。会社全体の記載で、機種ごとの記載はなし",
+      "made_url": "https://dynalasers.jp/%e7%a7%81%e3%81%9f%e3%81%a1%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6/"
+    }
   },
   {
     "id": "p274",
@@ -6346,6 +6935,15 @@
       "country": "https://fiberlaser.co.jp/"
     },
     "is_published": true,
-    "notes": "日本酸素G＆W株式会社の公式サイトには本機の掲載がなく（同社サイトの溶接機ページはYAGレーザ溶接機 PLS-P30 のみ）、メーカーである八木産機の公式サイトに掲載のカタログPDFを正本とした。Metoree では日本酸素G＆Wが取扱企業として登録（価格は要見積もり）。country は八木産機公式サイトの「確かな中国製品を、信頼できるサポートで」「中国製レーザー機器を日本のお客様へ」の記載による（OEM元メーカー名は非記載。カタログ写真の本体に KIRIN LASER WELDER の表記）。単独の本体写真がWeb上に無くカタログPDF内のみのため image_url は null。対応材質・対応板厚・価格は非公表。代表値は上位機F4の1600W。"
+    "notes": "日本酸素G＆W株式会社の公式サイトには本機の掲載がなく（同社サイトの溶接機ページはYAGレーザ溶接機 PLS-P30 のみ）、メーカーである八木産機の公式サイトに掲載のカタログPDFを正本とした。Metoree では日本酸素G＆Wが取扱企業として登録（価格は要見積もり）。country は八木産機公式サイトの「確かな中国製品を、信頼できるサポートで」「中国製レーザー機器を日本のお客様へ」の記載による（OEM元メーカー名は非記載。カタログ写真の本体に KIRIN LASER WELDER の表記）。単独の本体写真がWeb上に無くカタログPDF内のみのため image_url は null。対応材質・対応板厚・価格は非公表。代表値は上位機F4の1600W。",
+    "origin": {
+      "hq": "日本（静岡県磐田市）　※販売元。製造元は公式に記載なし",
+      "hq_url": "https://fiberlaser.co.jp/?page_id=140",
+      "made": "中国",
+      "made_basis": "「中国製レーザー機器の専門商社」。会社全体の記載で、機種ごとの記載はなし",
+      "made_url": "https://fiberlaser.co.jp/?page_id=140",
+      "service": "日本国内常駐エンジニアによる設置・メンテナンス体制",
+      "service_url": "https://fiberlaser.co.jp/?page_id=140"
+    }
   }
 ]
