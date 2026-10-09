@@ -2202,5 +2202,635 @@
     "conflicts": [
       "本体重量：ラインナップ https://www.smartdiys.com/laser-welding/ は「100kg」「約100kg」／SLW2000製品ページは「本体115kg、フィーダー15kg、その他5kg、合計135kg」（どちらもsmartDIYs公式）。現データ portability「本体約100kg」は製品ページの値と合わない"
     ]
+  },
+  {
+    "id": "p104",
+    "maker_slug": "uwjapan",
+    "model_slug": "uw-s1500f",
+    "name": "UW-S1500F",
+    "maker_name": "UW JAPAN",
+    "method": "ハンドヘルド（ハンドトーチ型）",
+    "wavelength": null,
+    "output_w": null,
+    "output_note": null,
+    "portability": "非公開",
+    "thickness_note": null,
+    "official_url": null,
+    "source_url": "https://uw-j.co.jp/product-release-information/",
+    "source": "UW JAPAN株式会社 公式サイト（製品リリース情報）",
+    "tags": {
+      "use": [],
+      "material": [],
+      "thickness": [],
+      "environment": [],
+      "price": [],
+      "skill": []
+    },
+    "comment": "2026年4月に販売が始まった、ハンドトーチ型のファイバーレーザ溶接機です。出力・対応板厚などの仕様は、まだ公式サイトに掲載されていません。",
+    "suitable_for": [],
+    "not_suitable_for": [],
+    "features": [],
+    "handled_by_operator": true,
+    "image": "/assets/images/products/placeholder.svg",
+    "image_credit": null,
+    "image_source": null,
+    "country": "日本",
+    "found_via": "UW JAPAN 公式「製品リリース情報」（依頼時の手がかり：ノースヒルズ取扱い機種）",
+    "field_sources": {
+      "name": "https://uw-j.co.jp/product-release-information/",
+      "method": "https://uw-j.co.jp/product-release-information/",
+      "country": "https://uw-j.co.jp/company/",
+      "handled_by_operator": "https://nhillz.jp/blogs/yag%e3%83%ac%e3%83%bc%e3%82%b6%e3%80%81%e3%83%95%e3%82%a1%e3%82%a4%e3%83%90%e3%83%bc%e3%83%ac%e3%83%bc%e3%82%b6%e6%ba%b6%e6%8e%a5%e6%a9%9f%e3%83%a1%e3%83%bc%e3%82%ab%e3%83%bcuwjapan%e7%a4%be%ef%bc%89/"
+    },
+    "is_published": true,
+    "notes": "公式に確認できたのは製品リリース情報の1行「2026.4 ハンドトーチ型 ファイバレーザ溶接機UW-S1500Fを販売開始」のみ。UW JAPAN 公式サイト（製品一覧・各製品ページ・WordPress のページ一覧）、イプロスの UW JAPAN 掲載（UW-S シリーズ・UW-SH シリーズ）、ノースヒルズの特設サイト nhillz-laser.com と本体サイト nhillz.jp のいずれにも UW-S1500F の製品ページ・仕様は無い（2026-10-10 確認）。出力は型番から 1500W 級と読めるが公式の数値記載が無いため output_w は null。UW-SH シリーズ（ノースヒルズとの国内共同開発）との関係・共同開発かどうかは資料で確認できず未確認。country は UW JAPAN の本社国（東京都江東区）。同社の会社概要は自社装置を「日本品質の中国製」と説明しており、親会社は United Winners Laser Co.,Ltd.。ノースヒルズは 2020年1月から UW JAPAN と協業し代理店として販売するとブログで告知（sources.handled_by_operator）。仕様・画像・価格はノースヒルズまたは UW JAPAN の資料入手後に補う必要あり。",
+    "support": [
+      "テスト溶接による仕上がりの確認と、現場でのデモを相談できます",
+      "見積もり・導入の相談に対応します",
+      "補助金・助成金の活用支援チームが導入を支援します"
+    ]
+  },
+  {
+    "id": "p105",
+    "maker_slug": "kss",
+    "model_slug": "kr-1500m",
+    "name": "KR-1500M",
+    "maker_name": "株式会社KS・S",
+    "method": "ハンドヘルド（ピストル型トーチ）",
+    "wavelength": "1064nm",
+    "output_w": 1500,
+    "output_note": "最大出力（CW／パルス）",
+    "portability": "本体 190kg、水冷（純水使用）、本体サイズ 1100×680×1200H、ファイバーケーブル 10m",
+    "thickness_note": "加工板厚 3.0t（公表値）",
+    "official_url": "https://kss-kr.com/kr-detail/517/",
+    "source_url": "https://kss-kr.com/kr-detail/517/",
+    "source": "株式会社KS・S 公式サイト",
+    "tags": {
+      "use": [
+        "異材接合"
+      ],
+      "material": [
+        "ステンレス"
+      ],
+      "thickness": [
+        "0.5〜3mm"
+      ],
+      "environment": [],
+      "price": [],
+      "skill": [
+        "未経験可"
+      ]
+    },
+    "comment": "本体190kg・水冷の1,500W機です。加工板厚は3.0mmと公表され、ステンレスと真鍮などの異種金属の溶接にも対応します。",
+    "suitable_for": [],
+    "not_suitable_for": [],
+    "features": [
+      "系列の板金工場（建洲テクノス株式会社）で実機を使いながら改良し、設計・開発・組み立てまで自社で行ったと公表",
+      "ステンレス＋真鍮など異種金属の溶接が可能（公式記載）",
+      "タッチパネル操作で、登録した溶接条件をボタンひとつで呼び出せる",
+      "ピストル型トーチ（700g）"
+    ],
+    "handled_by_operator": true,
+    "image": "/assets/images/products/kss-kr-1500m.png",
+    "image_credit": "株式会社KS・S 公式サイト",
+    "image_source": "https://kss-kr.com/kr-detail/517/",
+    "country": "日本",
+    "found_via": "Web検索（依頼の手がかり「八尾市の KSS」から特定。表記は「KS・S」）",
+    "field_sources": {
+      "output_w": "https://kss-kr.com/kr-detail/517/",
+      "wavelength": "https://kss-kr.com/kr-detail/517/",
+      "thickness_note": "https://kss-kr.com/kr-detail/517/",
+      "portability": "https://kss-kr.com/kr-detail/517/",
+      "features": "https://kss-kr.com/fiber-laser-welding-machine/48/",
+      "tags.use": "https://kss-kr.com/fiber-laser-welding-machine/48/",
+      "tags.material": "https://kss-kr.com/fiber-laser-welding-machine/48/",
+      "tags.skill": "https://kss-kr.com/fiber-laser-welding-machine/48/",
+      "country": "https://kss-kr.com/guidance/",
+      "support": "https://kss-kr.com/brand/"
+    },
+    "is_published": true,
+    "notes": "定格電圧 単相200V 30A（50/60Hz）、消費電力量 5.0kVA、使用ガス アルゴン・窒素、使用環境温度 10〜40°C。メンテナンス・アフターフォローとオーダーメイド（筐体サイズ変更など）に対応（ブランドページ）。東大阪の本社にデモ・持ち込みテストができるショールームあり（会社案内）。価格は公式サイトに掲載なし。会社所在地は大阪府東大阪市大蓮東4-12-34（公式の会社案内）で、八尾市ではない（グループの建洲テクノス株式会社が八尾工場を持つ）。依頼の「八尾市の KSS」はこの会社と判断したが、住所が一致しない点は要確認。会社案内に「中国生産工場」の写真があり、country は本社国。公式の詳細ページ表記は「KR-1500M（250VS）」、一覧では「KR-1500M（1500W）」。特長・異材接合・「初心者や女性でも簡単に熟練工並みの溶接が可能」は KR シリーズ（M）の紹介ページの記載。画像はワイヤ送給装置などを含むセット写真。",
+    "support": [
+      "テスト溶接による仕上がりの確認と、現場でのデモを相談できます",
+      "見積もり・導入の相談に対応します",
+      "補助金・助成金の活用支援チームが導入を支援します"
+    ]
+  },
+  {
+    "id": "p106",
+    "maker_slug": "kss",
+    "model_slug": "kr-2000m",
+    "name": "KR-2000M",
+    "maker_name": "株式会社KS・S",
+    "method": "ハンドヘルド（ピストル型トーチ）",
+    "wavelength": "1064nm",
+    "output_w": 2000,
+    "output_note": "最大出力（CW／パルス）",
+    "portability": "本体 190kg、水冷（純水使用）、本体サイズ 1100×680×1200H、ファイバーケーブル 15m",
+    "thickness_note": "加工板厚 最大9.0t（公表値）",
+    "official_url": "https://kss-kr.com/kr-detail/514/",
+    "source_url": "https://kss-kr.com/kr-detail/514/",
+    "source": "株式会社KS・S 公式サイト",
+    "tags": {
+      "use": [
+        "異材接合"
+      ],
+      "material": [
+        "ステンレス"
+      ],
+      "thickness": [
+        "0.5〜3mm",
+        "3〜6mm",
+        "6mm以上"
+      ],
+      "environment": [],
+      "price": [],
+      "skill": [
+        "未経験可"
+      ]
+    },
+    "comment": "本体190kg・水冷の2,000W機です。加工板厚は最大9.0mmと公表されています。登録した溶接条件をタッチパネルからボタンひとつで呼び出せます。",
+    "suitable_for": [],
+    "not_suitable_for": [],
+    "features": [
+      "系列の板金工場（建洲テクノス株式会社）で実機を使いながら改良し、設計・開発・組み立てまで自社で行ったと公表",
+      "ステンレス＋真鍮など異種金属の溶接が可能（公式記載）",
+      "タッチパネル操作で、登録した溶接条件をボタンひとつで呼び出せる",
+      "ピストル型トーチ（700g）"
+    ],
+    "handled_by_operator": true,
+    "image": "/assets/images/products/kss-kr-2000m.png",
+    "image_credit": "株式会社KS・S 公式サイト",
+    "image_source": "https://kss-kr.com/kr-detail/514/",
+    "country": "日本",
+    "found_via": "Web検索（依頼の手がかり「八尾市の KSS」から特定。表記は「KS・S」）",
+    "field_sources": {
+      "output_w": "https://kss-kr.com/kr-detail/514/",
+      "wavelength": "https://kss-kr.com/kr-detail/514/",
+      "thickness_note": "https://kss-kr.com/kr-detail/514/",
+      "portability": "https://kss-kr.com/kr-detail/514/",
+      "features": "https://kss-kr.com/fiber-laser-welding-machine/48/",
+      "tags.use": "https://kss-kr.com/fiber-laser-welding-machine/48/",
+      "tags.material": "https://kss-kr.com/fiber-laser-welding-machine/48/",
+      "tags.skill": "https://kss-kr.com/fiber-laser-welding-machine/48/",
+      "country": "https://kss-kr.com/guidance/",
+      "support": "https://kss-kr.com/brand/"
+    },
+    "is_published": true,
+    "notes": "定格電圧 単相200V 40A（50/60Hz）、消費電力量 6.0kVA、使用ガス アルゴン・窒素、使用環境温度 10〜40°C。メンテナンス・アフターフォローとオーダーメイド（筐体サイズ変更など）に対応（ブランドページ）。東大阪の本社にデモ・持ち込みテストができるショールームあり（会社案内）。価格は公式サイトに掲載なし。会社所在地は大阪府東大阪市大蓮東4-12-34（公式の会社案内）で、八尾市ではない（グループの建洲テクノス株式会社が八尾工場を持つ）。依頼の「八尾市の KSS」はこの会社と判断したが、住所が一致しない点は要確認。会社案内に「中国生産工場」の写真があり、country は本社国。公式の詳細ページ見出しは「KR-2000M（350VS）」、仕様表の機種欄は「KR-2000（350VS）」と表記ゆれあり。KR-3000M（3000W・最大12.0t）と KR-6000M（近日発売）も同シリーズにある。画像はワイヤ送給装置などを含むセット写真。",
+    "support": [
+      "テスト溶接による仕上がりの確認と、現場でのデモを相談できます",
+      "見積もり・導入の相談に対応します",
+      "補助金・助成金の活用支援チームが導入を支援します"
+    ]
+  },
+  {
+    "id": "p107",
+    "maker_slug": "kss",
+    "model_slug": "kr-1500ac",
+    "name": "KR-1500AC",
+    "maker_name": "株式会社KS・S",
+    "method": "ハンドヘルド（ピストル型トーチ）",
+    "wavelength": "1064nm",
+    "output_w": 1500,
+    "output_note": "最大出力（CW／パルス）",
+    "portability": "本体 50kg、空冷（コンパクトタイプ）、本体サイズ 400×600×550H、ファイバーケーブル 10m",
+    "thickness_note": "加工板厚 3.0t（公表値）",
+    "official_url": "https://kss-kr.com/kr-detail/218/",
+    "source_url": "https://kss-kr.com/kr-detail/218/",
+    "source": "株式会社KS・S 公式サイト",
+    "tags": {
+      "use": [],
+      "material": [],
+      "thickness": [
+        "0.5〜3mm"
+      ],
+      "environment": [],
+      "price": [],
+      "skill": [
+        "未経験可"
+      ]
+    },
+    "comment": "本体50kg・空冷のコンパクトな1,500W機です。加工板厚は3.0mmと公表され、現場作業や置き場所の狭い工場向けとされています。",
+    "suitable_for": [],
+    "not_suitable_for": [],
+    "features": [
+      "空冷のコンパクトタイプで、現場作業や置き場の狭い場所向け（公式記載）",
+      "空冷だが長時間使用しても問題ないと公表",
+      "ピストル型トーチ（700g）",
+      "シリーズとして「初めての方でも扱いやすい設計」と記載"
+    ],
+    "handled_by_operator": true,
+    "image": "/assets/images/products/kss-kr-1500ac.png",
+    "image_credit": "株式会社KS・S 公式サイト",
+    "image_source": "https://kss-kr.com/kr-detail/218/",
+    "country": "日本",
+    "found_via": "Web検索（依頼の手がかり「八尾市の KSS」から特定。表記は「KS・S」）",
+    "field_sources": {
+      "output_w": "https://kss-kr.com/kr-detail/218/",
+      "wavelength": "https://kss-kr.com/kr-detail/218/",
+      "thickness_note": "https://kss-kr.com/kr-detail/218/",
+      "portability": "https://kss-kr.com/kr-detail/218/",
+      "features": "https://kss-kr.com/fiber-laser-welding-machine/474/",
+      "tags.use": "https://kss-kr.com/fiber-laser-welding-machine/474/",
+      "tags.material": "https://kss-kr.com/fiber-laser-welding-machine/474/",
+      "tags.skill": "https://kss-kr.com/fiber-laser-welding-machine/474/",
+      "country": "https://kss-kr.com/guidance/",
+      "support": "https://kss-kr.com/brand/"
+    },
+    "is_published": true,
+    "notes": "定格電圧 単相200V 30A（50/60Hz）、消費電力量 5.0kVA、使用ガス アルゴン・窒素、使用環境温度 10〜40°C。メンテナンス・アフターフォローとオーダーメイド（筐体サイズ変更など）に対応（ブランドページ）。東大阪の本社にデモ・持ち込みテストができるショールームあり（会社案内）。価格は公式サイトに掲載なし。会社所在地は大阪府東大阪市大蓮東4-12-34（公式の会社案内）で、八尾市ではない（グループの建洲テクノス株式会社が八尾工場を持つ）。依頼の「八尾市の KSS」はこの会社と判断したが、住所が一致しない点は要確認。会社案内に「中国生産工場」の写真があり、country は本社国。空冷シリーズには KR-1500AC新型（1500W・単体ワイヤー供給装置内蔵、本体 500×1000×650H・100kg）と KR-2000AC（2000W）もある。2ガン同時溶接の KR-WG シリーズ（KR-1500ACWG／KR-2000WG）あり。導入事例ページは KR-1500AC の納入例（社名伏せ）。画像はワイヤ送給装置などを含むセット写真。",
+    "support": [
+      "テスト溶接による仕上がりの確認と、現場でのデモを相談できます",
+      "見積もり・導入の相談に対応します",
+      "補助金・助成金の活用支援チームが導入を支援します"
+    ]
+  },
+  {
+    "id": "p108",
+    "maker_slug": "maxphotonics",
+    "model_slug": "theo-ma1-35",
+    "name": "THEO MA1-35",
+    "maker_name": "Maxphotonics（ブランド：THEO／日本法人：Maxphotonics Japan株式会社）",
+    "method": "ハンドヘルド",
+    "wavelength": null,
+    "output_w": 800,
+    "output_note": "Typical Laser Output（公式表記）",
+    "portability": "本体 28kg、576×265×425mm、空冷（外部チラー不要）、キャスター付き。トーチ 680g",
+    "thickness_note": "溶け込み深さ（公式表記 Weld Penetration）ステンレス最大3.5mm。日本語カタログの表は「溶接厚さ」表記でステンレス・炭素鋼・亜鉛めっき鋼板3.5mm／アルミ3mm／銅は記載なし（注記は「溶接深さ」）。対応板厚ではない",
+    "official_url": "https://theo.inc/theo-ma1-laser-welding-machine/",
+    "source_url": "https://theo.inc/theo-ma1-laser-welding-machine/",
+    "source": "THEO（Maxphotonics のハンドヘルド溶接ブランド）公式サイト",
+    "tags": {
+      "use": [],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ"
+      ],
+      "thickness": [],
+      "environment": [],
+      "price": [],
+      "skill": [
+        "未経験可"
+      ]
+    },
+    "comment": "本体28kg・空冷の800W機です。公表されている溶け込み深さはステンレス3.5mmで、ワイヤ送給とウォブル溶接を標準で備えます。",
+    "suitable_for": [],
+    "not_suitable_for": [],
+    "features": [
+      "空冷のファイバーレーザーで外部チラー不要",
+      "トーチ重量 680g。ウォブル（揺動）機能で溶接幅は最大4.0mm",
+      "ワイヤーフィーダーユニット（ワイヤ径0.8/1.0/1.2/1.6mm）とウォブル溶接機能を標準装備（日本語カタログ）",
+      "7インチ LED タッチスクリーン、多言語の操作システム、32セットのプリセット条件（日本語カタログ）",
+      "トーチがワークに接触しトリガーを握っている間だけ照射する二重の安全接触センサー"
+    ],
+    "handled_by_operator": true,
+    "image": "/assets/images/products/placeholder.svg",
+    "image_credit": null,
+    "image_source": null,
+    "country": "中国",
+    "found_via": "Maxphotonics 公式サイト（maxlasers.com）フッターの「Handheld Laser Tools (THEO)」リンク、エル・ビー・ウエルド株式会社の販売開始告知",
+    "field_sources": {
+      "output_w": "https://theo.inc/theo-ma1-laser-welding-machine/",
+      "thickness_note": "https://theo.inc/theo-ma1-laser-welding-machine/",
+      "portability": "https://theo.inc/theo-ma1-laser-welding-machine/",
+      "features": "https://theo.inc/theo-ma1-laser-welding-machine/",
+      "tags.material": "https://lb-weld.com/wp/wp-content/uploads/2025/01/THEO-MA1-Brochure-JP-v13.pdf",
+      "tags.skill": "https://lb-weld.com/wp/wp-content/uploads/2025/01/THEO-MA1-Brochure-JP-v13.pdf",
+      "maker_name": "https://maxlasers.com/",
+      "country": "https://maxlasers.com/about-us",
+      "domestic_distributor": "https://lb-weld.com/2025/01/15/post-333/",
+      "japanese_catalog": "https://lb-weld.com/wp/wp-content/uploads/2025/01/THEO-MA1-Brochure-JP-v13.pdf"
+    },
+    "is_published": true,
+    "notes": "米国公式サイトの表示価格 $7,480（税別、theo.inc）。国内価格は非公開。波長は公式に記載なし。theo.inc は Cloudflare のボット対策で curl -sIL が 403 を返すが、ブラウザ相当の取得（WebFetch）で本文・画像の表示を確認済み（2026-10-10）。日本法人 Maxphotonics Japan株式会社（2025年10月31日法人番号指定、神奈川県横浜市都筑区）の公式サイトは見つからず。日本語カタログ（THEO MA1 Brochure JP v13）はエル・ビー・ウエルド株式会社（愛知県、岩倉工場にデモ機）が掲載。theo.inc/ja/ は機械翻訳の日本語ページ。タッチスクリーンは上面配置（他機種は前面）。",
+    "support": [
+      "テスト溶接による仕上がりの確認と、現場でのデモを相談できます",
+      "見積もり・導入の相談に対応します",
+      "補助金・助成金の活用支援チームが導入を支援します"
+    ]
+  },
+  {
+    "id": "p109",
+    "maker_slug": "maxphotonics",
+    "model_slug": "theo-ma1-65",
+    "name": "THEO MA1-65",
+    "maker_name": "Maxphotonics（ブランド：THEO／日本法人：Maxphotonics Japan株式会社）",
+    "method": "ハンドヘルド",
+    "wavelength": null,
+    "output_w": 1500,
+    "output_note": "Typical Laser Output（公式表記）",
+    "portability": "本体 39kg、667×276×542mm、空冷（外部チラー不要）、キャスター付き。トーチ 680g",
+    "thickness_note": "溶け込み深さ（公式表記 Weld Penetration）ステンレス最大6.5mm。日本語カタログの表は「溶接厚さ」表記でステンレス・炭素鋼・亜鉛めっき鋼板6.5mm／アルミ5.5mm／銅3mm（注記は「溶接深さ」）。対応板厚ではない",
+    "official_url": "https://theo.inc/theo-ma1-laser-welding-machine/",
+    "source_url": "https://theo.inc/theo-ma1-laser-welding-machine/",
+    "source": "THEO（Maxphotonics のハンドヘルド溶接ブランド）公式サイト",
+    "tags": {
+      "use": [],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ",
+        "銅",
+        "チタン"
+      ],
+      "thickness": [],
+      "environment": [],
+      "price": [],
+      "skill": [
+        "未経験可"
+      ]
+    },
+    "comment": "本体39kg・空冷の1,500W機です。公表されている溶け込み深さは、ステンレス6.5mm、アルミ5.5mm、銅3mmです。",
+    "suitable_for": [],
+    "not_suitable_for": [],
+    "features": [
+      "空冷のファイバーレーザーで外部チラー不要",
+      "トーチ重量 680g。ウォブル（揺動）機能で溶接幅は最大4.0mm",
+      "ワイヤーフィーダーユニット（ワイヤ径0.8/1.0/1.2/1.6mm）とウォブル溶接機能を標準装備（日本語カタログ）",
+      "7インチ LED タッチスクリーン、多言語の操作システム、32セットのプリセット条件（日本語カタログ）",
+      "トーチがワークに接触しトリガーを握っている間だけ照射する二重の安全接触センサー"
+    ],
+    "handled_by_operator": true,
+    "image": "/assets/images/products/placeholder.svg",
+    "image_credit": null,
+    "image_source": null,
+    "country": "中国",
+    "found_via": "Maxphotonics 公式サイト（maxlasers.com）フッターの「Handheld Laser Tools (THEO)」リンク、エル・ビー・ウエルド株式会社の販売開始告知",
+    "field_sources": {
+      "output_w": "https://theo.inc/theo-ma1-laser-welding-machine/",
+      "thickness_note": "https://theo.inc/theo-ma1-laser-welding-machine/",
+      "portability": "https://theo.inc/theo-ma1-laser-welding-machine/",
+      "features": "https://theo.inc/theo-ma1-laser-welding-machine/",
+      "tags.material": "https://lb-weld.com/wp/wp-content/uploads/2025/01/THEO-MA1-Brochure-JP-v13.pdf",
+      "tags.skill": "https://lb-weld.com/wp/wp-content/uploads/2025/01/THEO-MA1-Brochure-JP-v13.pdf",
+      "maker_name": "https://maxlasers.com/",
+      "country": "https://maxlasers.com/about-us",
+      "domestic_distributor": "https://lb-weld.com/2025/01/15/post-333/",
+      "japanese_catalog": "https://lb-weld.com/wp/wp-content/uploads/2025/01/THEO-MA1-Brochure-JP-v13.pdf"
+    },
+    "is_published": true,
+    "notes": "米国公式サイトの表示価格 $19,980（税別、theo.inc）。国内価格は非公開。波長は公式に記載なし。theo.inc は Cloudflare のボット対策で curl -sIL が 403 を返すが、ブラウザ相当の取得（WebFetch）で本文・画像の表示を確認済み（2026-10-10）。日本法人 Maxphotonics Japan株式会社（2025年10月31日法人番号指定、神奈川県横浜市都筑区）の公式サイトは見つからず。日本語カタログ（THEO MA1 Brochure JP v13）はエル・ビー・ウエルド株式会社（愛知県、岩倉工場にデモ機）が掲載。theo.inc/ja/ は機械翻訳の日本語ページ。中間機種 MA1-45（1200W・38kg〜39kg、ステンレス4.5mm）もある。材料のチタンは英語版公式ページの対応材料一覧（Nickel Alloys, Titanium 含む）による。",
+    "support": [
+      "テスト溶接による仕上がりの確認と、現場でのデモを相談できます",
+      "見積もり・導入の相談に対応します",
+      "補助金・助成金の活用支援チームが導入を支援します"
+    ]
+  },
+  {
+    "id": "p110",
+    "maker_slug": "maxphotonics",
+    "model_slug": "theo-ma1-ultra",
+    "name": "THEO MA1 ULTRA",
+    "maker_name": "Maxphotonics（ブランド：THEO／日本法人：Maxphotonics Japan株式会社）",
+    "method": "ハンドヘルド",
+    "wavelength": null,
+    "output_w": 2000,
+    "output_note": "Typical Laser Output（公式表記）",
+    "portability": "本体 39kg、667×276×542mm、空冷（外部チラー不要）、キャスター付き。トーチ 680g",
+    "thickness_note": "溶け込み深さ（公式表記 Weld Penetration）ステンレス最大8.5mm。対応板厚ではない",
+    "official_url": "https://theo.inc/theo-ma1-laser-welding-machine/",
+    "source_url": "https://theo.inc/theo-ma1-laser-welding-machine/",
+    "source": "THEO（Maxphotonics のハンドヘルド溶接ブランド）公式サイト",
+    "tags": {
+      "use": [],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ",
+        "チタン"
+      ],
+      "thickness": [],
+      "environment": [],
+      "price": [],
+      "skill": [
+        "未経験可"
+      ]
+    },
+    "comment": "本体39kg・空冷の2,000W機で、MA1シリーズの最新機種です。公表されている溶け込み深さはステンレス8.5mmです。",
+    "suitable_for": [],
+    "not_suitable_for": [],
+    "features": [
+      "空冷のファイバーレーザーで外部チラー不要",
+      "トーチ重量 680g。ウォブル（揺動）機能で溶接幅は最大4.0mm",
+      "ワイヤーフィーダーユニット（ワイヤ径0.8/1.0/1.2/1.6mm）とウォブル溶接機能を標準装備（日本語カタログ）",
+      "7インチ LED タッチスクリーン、多言語の操作システム、32セットのプリセット条件（日本語カタログ）",
+      "トーチがワークに接触しトリガーを握っている間だけ照射する二重の安全接触センサー"
+    ],
+    "handled_by_operator": true,
+    "image": "/assets/images/products/placeholder.svg",
+    "image_credit": null,
+    "image_source": null,
+    "country": "中国",
+    "found_via": "Maxphotonics 公式サイト（maxlasers.com）フッターの「Handheld Laser Tools (THEO)」リンク、エル・ビー・ウエルド株式会社の販売開始告知",
+    "field_sources": {
+      "output_w": "https://theo.inc/theo-ma1-laser-welding-machine/",
+      "thickness_note": "https://theo.inc/theo-ma1-laser-welding-machine/",
+      "portability": "https://theo.inc/theo-ma1-laser-welding-machine/",
+      "features": "https://theo.inc/theo-ma1-laser-welding-machine/",
+      "tags.material": "https://lb-weld.com/wp/wp-content/uploads/2025/01/THEO-MA1-Brochure-JP-v13.pdf",
+      "tags.skill": "https://lb-weld.com/wp/wp-content/uploads/2025/01/THEO-MA1-Brochure-JP-v13.pdf",
+      "maker_name": "https://maxlasers.com/",
+      "country": "https://maxlasers.com/about-us",
+      "domestic_distributor": "https://lb-weld.com/2025/01/15/post-333/",
+      "japanese_catalog": "https://lb-weld.com/wp/wp-content/uploads/2025/01/THEO-MA1-Brochure-JP-v13.pdf"
+    },
+    "is_published": true,
+    "notes": "公式サイトに価格表示なし。波長は公式に記載なし。theo.inc は Cloudflare のボット対策で curl -sIL が 403 を返すが、ブラウザ相当の取得（WebFetch）で本文・画像の表示を確認済み（2026-10-10）。日本法人 Maxphotonics Japan株式会社（2025年10月31日法人番号指定、神奈川県横浜市都筑区）の公式サイトは見つからず。日本語カタログ（THEO MA1 Brochure JP v13）はエル・ビー・ウエルド株式会社（愛知県、岩倉工場にデモ機）が掲載。theo.inc/ja/ は機械翻訳の日本語ページ。MA1 シリーズの最新機種。日本語カタログ（v13）には未掲載で、仕様は英語版公式ページのみ。材料タグは英語版のシリーズ共通の対応材料一覧（Stainless Steel, Galvanized Steel, Mild Steel, Aluminum, Nickel Alloys, Titanium）から当てはめ。ワイヤーフィーダー・プリセット数などの特長は MA1 シリーズ共通の記載。",
+    "support": [
+      "テスト溶接による仕上がりの確認と、現場でのデモを相談できます",
+      "見積もり・導入の相談に対応します",
+      "補助金・助成金の活用支援チームが導入を支援します"
+    ]
+  },
+  {
+    "id": "p111",
+    "maker_slug": "qilin",
+    "model_slug": "f4",
+    "name": "F4",
+    "maker_name": "Qilin Laser（广东骐麟激光科技有限公司）",
+    "method": "ハンドヘルド（空冷）",
+    "wavelength": "1080±10nm",
+    "output_w": 1600,
+    "output_note": "定格出力（Rated Power）",
+    "portability": "本体 55kg以下、強制空冷、本体サイズ 547×319×640mm、ファイバーケーブル 5m",
+    "thickness_note": "溶け込み深さ（公式表記 Weld Depth／焊接深度）4mm。対応板厚ではない",
+    "official_url": "https://www.qilinlaser.cn/products_60/281.html",
+    "source_url": "https://www.qilinlaser.cn/products_60/281.html",
+    "source": "Qilin Laser（广东骐麟激光科技）公式サイト",
+    "tags": {
+      "use": [],
+      "material": [
+        "鉄",
+        "アルミ",
+        "銅",
+        "ステンレス"
+      ],
+      "thickness": [],
+      "environment": [],
+      "price": [],
+      "skill": []
+    },
+    "comment": "本体55kg以下・強制空冷の1,600W機です。公表されている溶け込み深さは4mmで、鋼・アルミ・銅・ステンレスに対応します。",
+    "suitable_for": [],
+    "not_suitable_for": [],
+    "features": [
+      "本体内蔵の制御システムで操作が簡単（公式記載）",
+      "小型・軽量で持ち運び・移動がしやすい（公式記載）",
+      "自社開発の手持ち溶接ヘッド",
+      "連続72時間の稼働に対応（中国語版の製品特点）",
+      "温度の自動検出と風速調整による設備状態の監視（中国語版の製品特点）"
+    ],
+    "handled_by_operator": true,
+    "image": "/assets/images/products/qilin-f4.png",
+    "image_credit": "Qilin Laser 公式サイト",
+    "image_source": "https://www.qilinlaser.cn/products_60/281.html",
+    "country": "中国",
+    "found_via": "Web検索（Qilin Laser＝广东骐麟激光科技、東莞市）",
+    "field_sources": {
+      "output_w": "https://www.qilinlaser.cn/static/upload/image/20260204/1770166327133544.png",
+      "wavelength": "https://www.qilinlaser.cn/static/upload/image/20260204/1770166327133544.png",
+      "portability": "https://www.qilinlaser.cn/static/upload/image/20260204/1770166327133544.png",
+      "thickness_note": "https://www.qilinlaser.cn/static/upload/image/20260204/1770166327133544.png",
+      "features": "https://www.qilinlaser.cn/static/upload/image/20260204/1770166327133544.png",
+      "tags.material": "https://www.qilinlaser.cn/cn/products_21/389.html",
+      "method": "https://www.qilinlaser.cn/cn/products_21/389.html",
+      "country": "https://www.qilinlaser.cn/about-us/",
+      "features_cn": "https://www.qilinlaser.cn/static/upload/image/20251211/1765413532108072.png"
+    },
+    "is_published": true,
+    "notes": "仕様は公式製品ページの画像（Technical Parameter 表）から転記。電源 AC220V 50/60Hz、使用環境温度 -40〜45°C、ファイバーコア径 20µm、miniQBH。価格は公式サイトに掲載なし。国内代理店は確認できず（ノースヒルズが直接調達という依頼情報による）。ノースヒルズのサイトに Qilin の記載は無い。整機消費電力 4800W以下（中国語版仕様表）。中国語版の説明では「風冷手持激光焊接機」、材料は鋼・アルミ・銅・ステンレス、用途は配管・厨房・金物・手すり装飾・車両・航空宇宙など。「5〜10倍速い」は公式の主張。",
+    "support": [
+      "テスト溶接による仕上がりの確認と、現場でのデモを相談できます",
+      "見積もり・導入の相談に対応します",
+      "補助金・助成金の活用支援チームが導入を支援します"
+    ]
+  },
+  {
+    "id": "p112",
+    "maker_slug": "qilin",
+    "model_slug": "k4",
+    "name": "K4",
+    "maker_name": "Qilin Laser（广东骐麟激光科技有限公司）",
+    "method": "ハンドヘルド（空冷）",
+    "wavelength": "1080±10nm",
+    "output_w": 1600,
+    "output_note": "定格出力（Rated Power、製品ページ）",
+    "portability": "本体 55kg以下、強制空冷、本体サイズ 516×318×550mm、ファイバーケーブル 5m",
+    "thickness_note": "Weld Depth 4mm（製品ページ）／Welding Thickness ≤4mm（取扱説明書）。プリセットはステンレス・炭素鋼・亜鉛めっき鋼板・アルミの 1.0〜3.5mm",
+    "official_url": "https://www.qilinlaser.cn/products_60/472.html",
+    "source_url": "https://www.qilinlaser.cn/products_60/472.html",
+    "source": "Qilin Laser（广东骐麟激光科技）公式サイト",
+    "tags": {
+      "use": [],
+      "material": [
+        "鉄",
+        "アルミ",
+        "銅",
+        "ステンレス"
+      ],
+      "thickness": [
+        "0.5〜3mm",
+        "3〜6mm"
+      ],
+      "environment": [],
+      "price": [],
+      "skill": []
+    },
+    "comment": "本体55kg以下・強制空冷の1,600W機です。ステンレス・炭素鋼・亜鉛めっき鋼板・アルミの1.0〜3.5mmの溶接条件をあらかじめ登録しています。",
+    "suitable_for": [],
+    "not_suitable_for": [],
+    "features": [
+      "本体内蔵の制御システムで操作が簡単（公式記載）",
+      "小型・軽量で持ち運び・移動がしやすい（公式記載）",
+      "自社開発の手持ち溶接ヘッド（取扱説明書ではトーチ BWF20、シングル揺動）",
+      "ステンレス・炭素鋼・亜鉛めっき鋼板・アルミの材料別プリセット（1.0〜3.5mm）とカスタム条件を搭載（取扱説明書）"
+    ],
+    "handled_by_operator": true,
+    "image": "/assets/images/products/qilin-k4.png",
+    "image_credit": "Qilin Laser 公式サイト",
+    "image_source": "https://www.qilinlaser.cn/products_60/472.html",
+    "country": "中国",
+    "found_via": "Web検索（Qilin Laser＝广东骐麟激光科技、東莞市）",
+    "field_sources": {
+      "output_w": "https://www.qilinlaser.cn/static/upload/image/20260204/1770167139676182.png",
+      "wavelength": "https://www.qilinlaser.cn/static/upload/image/20260204/1770167139676182.png",
+      "portability": "https://www.qilinlaser.cn/static/upload/image/20260204/1770167139676182.png",
+      "thickness_note": "https://www.qilinlaser.cn/static/upload/file/20260605/1780625700188711.pdf",
+      "features": "https://www.qilinlaser.cn/static/upload/image/20260204/1770167139676182.png",
+      "tags.material": "https://www.qilinlaser.cn/static/upload/file/20260605/1780625700188711.pdf",
+      "method": "https://www.qilinlaser.cn/static/upload/file/20260605/1780625700188711.pdf",
+      "country": "https://www.qilinlaser.cn/about-us/",
+      "manual": "https://www.qilinlaser.cn/static/upload/file/20260605/1780625700188711.pdf"
+    },
+    "is_published": true,
+    "notes": "仕様は公式製品ページの画像（Technical Parameter 表）から転記。電源 AC220V 50/60Hz、使用環境温度 -20〜45°C、ファイバーコア径 20µm、miniQBH。価格は公式サイトに掲載なし。国内代理店は確認できず（ノースヒルズが直接調達という依頼情報による）。ノースヒルズのサイトに Qilin の記載は無い。取扱説明書（K4 Series User Manual V1.0）では出力 1500W（100%連続）、最大消費電力 4500W以下、作動ガス 窒素またはアルゴン 0.25〜0.6MPa、湿度 85%RH以下と記載され、製品ページの 1600W と食い違う。板厚タグは取扱説明書の「Welding Thickness ≤4mm」とプリセット板厚から当てはめ（製品ページは Weld Depth 表記なので、溶け込み深さとみなす場合はタグを外す）。材料は取扱説明書の用途欄（steel, aluminum, copper, stainless steel）。",
+    "support": [
+      "テスト溶接による仕上がりの確認と、現場でのデモを相談できます",
+      "見積もり・導入の相談に対応します",
+      "補助金・助成金の活用支援チームが導入を支援します"
+    ]
+  },
+  {
+    "id": "p113",
+    "maker_slug": "qilin",
+    "model_slug": "m4",
+    "name": "M4",
+    "maker_name": "Qilin Laser（广东骐麟激光科技有限公司）",
+    "method": "ハンドヘルド（空冷・ダブル揺動）",
+    "wavelength": "1080±10nm",
+    "output_w": 1600,
+    "output_note": "定格出力（Rated Power）",
+    "portability": "本体 55kg以下、強制空冷、本体サイズ 516×318×550mm、ファイバーケーブル 5m",
+    "thickness_note": "溶け込み深さ（公式表記 Weld Depth）4mm。対応板厚ではない",
+    "official_url": "https://www.qilinlaser.cn/products_60/476.html",
+    "source_url": "https://www.qilinlaser.cn/products_60/476.html",
+    "source": "Qilin Laser（广东骐麟激光科技）公式サイト",
+    "tags": {
+      "use": [],
+      "material": [
+        "鉄",
+        "アルミ",
+        "銅",
+        "ステンレス"
+      ],
+      "thickness": [],
+      "environment": [],
+      "price": [],
+      "skill": []
+    },
+    "comment": "ダブル揺動の溶接ヘッドを備えた、強制空冷の1,600W機です。パルス・連続・鱗状などの溶接モードを切り替えられます。",
+    "suitable_for": [],
+    "not_suitable_for": [],
+    "features": [
+      "ダブル揺動（双摆）の手持ち溶接ヘッドを搭載（中国語版の製品名「風冷双摆手持焊」）",
+      "パルス・連続・鱗状（フィッシュスケール）・線分・かしめなど複数の溶接モード（中国語版の説明）",
+      "補強リブの跡を残さない溶接に強みがあると公表（中国語版の説明）",
+      "小型・軽量で持ち運び・移動がしやすい（公式記載）"
+    ],
+    "handled_by_operator": true,
+    "image": "/assets/images/products/qilin-m4.png",
+    "image_credit": "Qilin Laser 公式サイト",
+    "image_source": "https://www.qilinlaser.cn/products_60/476.html",
+    "country": "中国",
+    "found_via": "Web検索（Qilin Laser＝广东骐麟激光科技、東莞市）",
+    "field_sources": {
+      "output_w": "https://www.qilinlaser.cn/static/upload/image/20260204/1770166973136570.png",
+      "wavelength": "https://www.qilinlaser.cn/static/upload/image/20260204/1770166973136570.png",
+      "portability": "https://www.qilinlaser.cn/static/upload/image/20260204/1770166973136570.png",
+      "thickness_note": "https://www.qilinlaser.cn/static/upload/image/20260204/1770166973136570.png",
+      "features": "https://www.qilinlaser.cn/cn/products_21/457.html",
+      "tags.material": "https://www.qilinlaser.cn/cn/products_21/457.html",
+      "method": "https://www.qilinlaser.cn/cn/products_21/457.html",
+      "country": "https://www.qilinlaser.cn/about-us/"
+    },
+    "is_published": true,
+    "notes": "仕様は公式製品ページの画像（Technical Parameter 表）から転記。電源 AC220V 50/60Hz、使用環境温度 -20〜45°C、ファイバーコア径 20µm、miniQBH。価格は公式サイトに掲載なし。国内代理店は確認できず（ノースヒルズが直接調達という依頼情報による）。ノースヒルズのサイトに Qilin の記載は無い。中国語版の説明では材料は鋼・アルミ・銅・ステンレス、用途は配管・厨房・金物・手すり装飾・車両・航空宇宙など。仕様表の数値は K4 と同じ。",
+    "support": [
+      "テスト溶接による仕上がりの確認と、現場でのデモを相談できます",
+      "見積もり・導入の相談に対応します",
+      "補助金・助成金の活用支援チームが導入を支援します"
+    ]
   }
 ]

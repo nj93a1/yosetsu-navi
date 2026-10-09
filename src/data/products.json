@@ -1274,5 +1274,485 @@
     "source": "smartDIYs公式サイトのSLW2000製品ページ",
     "image_credit": "株式会社smartDIYs 公式サイト",
     "image_source": "https://www.smartdiys.com/laser-welding/"
+  },
+  {
+    "id": "p104",
+    "maker_slug": "uwjapan",
+    "model_slug": "uw-s1500f",
+    "name": "UW-S1500F",
+    "maker_name": "UW JAPAN",
+    "method": "ハンドヘルド（ハンドトーチ型）",
+    "wavelength": null,
+    "output_w": null,
+    "output_note": null,
+    "portability": "非公開",
+    "thickness_note": null,
+    "tags": {
+      "use": [],
+      "material": [],
+      "thickness": [],
+      "environment": [],
+      "price": [],
+      "skill": []
+    },
+    "comment": "2026年4月に販売が始まった、ハンドトーチ型のファイバーレーザ溶接機です。出力・対応板厚などの仕様は、まだ公式サイトに掲載されていません。",
+    "suitable_for": [],
+    "not_suitable_for": [],
+    "handled_by_operator": true,
+    "image": "/assets/images/products/placeholder.svg",
+    "official_url": null,
+    "source_url": "https://uw-j.co.jp/product-release-information/",
+    "source": "UW JAPAN株式会社 公式サイト（製品リリース情報）",
+    "image_credit": null,
+    "image_source": null,
+    "features": [],
+    "support": [
+      "テスト溶接による仕上がりの確認と、現場でのデモを相談できます",
+      "見積もり・導入の相談に対応します",
+      "補助金・助成金の活用支援チームが導入を支援します"
+    ]
+  },
+  {
+    "id": "p105",
+    "maker_slug": "kss",
+    "model_slug": "kr-1500m",
+    "name": "KR-1500M",
+    "maker_name": "株式会社KS・S",
+    "method": "ハンドヘルド（ピストル型トーチ）",
+    "wavelength": "1064nm",
+    "output_w": 1500,
+    "output_note": "最大出力（CW／パルス）",
+    "portability": "本体 190kg、水冷（純水使用）、本体サイズ 1100×680×1200H、ファイバーケーブル 10m",
+    "thickness_note": "加工板厚 3.0t（公表値）",
+    "tags": {
+      "use": [
+        "異材接合"
+      ],
+      "material": [
+        "ステンレス"
+      ],
+      "thickness": [
+        "0.5〜3mm"
+      ],
+      "environment": [],
+      "price": [],
+      "skill": [
+        "未経験可"
+      ]
+    },
+    "comment": "本体190kg・水冷の1,500W機です。加工板厚は3.0mmと公表され、ステンレスと真鍮などの異種金属の溶接にも対応します。",
+    "suitable_for": [],
+    "not_suitable_for": [],
+    "handled_by_operator": true,
+    "image": "/assets/images/products/kss-kr-1500m.png",
+    "official_url": "https://kss-kr.com/kr-detail/517/",
+    "source_url": "https://kss-kr.com/kr-detail/517/",
+    "source": "株式会社KS・S 公式サイト",
+    "image_credit": "株式会社KS・S 公式サイト",
+    "image_source": "https://kss-kr.com/kr-detail/517/",
+    "features": [
+      "系列の板金工場（建洲テクノス株式会社）で実機を使いながら改良し、設計・開発・組み立てまで自社で行ったと公表",
+      "ステンレス＋真鍮など異種金属の溶接が可能（公式記載）",
+      "タッチパネル操作で、登録した溶接条件をボタンひとつで呼び出せる",
+      "ピストル型トーチ（700g）"
+    ],
+    "support": [
+      "テスト溶接による仕上がりの確認と、現場でのデモを相談できます",
+      "見積もり・導入の相談に対応します",
+      "補助金・助成金の活用支援チームが導入を支援します"
+    ]
+  },
+  {
+    "id": "p106",
+    "maker_slug": "kss",
+    "model_slug": "kr-2000m",
+    "name": "KR-2000M",
+    "maker_name": "株式会社KS・S",
+    "method": "ハンドヘルド（ピストル型トーチ）",
+    "wavelength": "1064nm",
+    "output_w": 2000,
+    "output_note": "最大出力（CW／パルス）",
+    "portability": "本体 190kg、水冷（純水使用）、本体サイズ 1100×680×1200H、ファイバーケーブル 15m",
+    "thickness_note": "加工板厚 最大9.0t（公表値）",
+    "tags": {
+      "use": [
+        "異材接合"
+      ],
+      "material": [
+        "ステンレス"
+      ],
+      "thickness": [
+        "0.5〜3mm",
+        "3〜6mm",
+        "6mm以上"
+      ],
+      "environment": [],
+      "price": [],
+      "skill": [
+        "未経験可"
+      ]
+    },
+    "comment": "本体190kg・水冷の2,000W機です。加工板厚は最大9.0mmと公表されています。登録した溶接条件をタッチパネルからボタンひとつで呼び出せます。",
+    "suitable_for": [],
+    "not_suitable_for": [],
+    "handled_by_operator": true,
+    "image": "/assets/images/products/kss-kr-2000m.png",
+    "official_url": "https://kss-kr.com/kr-detail/514/",
+    "source_url": "https://kss-kr.com/kr-detail/514/",
+    "source": "株式会社KS・S 公式サイト",
+    "image_credit": "株式会社KS・S 公式サイト",
+    "image_source": "https://kss-kr.com/kr-detail/514/",
+    "features": [
+      "系列の板金工場（建洲テクノス株式会社）で実機を使いながら改良し、設計・開発・組み立てまで自社で行ったと公表",
+      "ステンレス＋真鍮など異種金属の溶接が可能（公式記載）",
+      "タッチパネル操作で、登録した溶接条件をボタンひとつで呼び出せる",
+      "ピストル型トーチ（700g）"
+    ],
+    "support": [
+      "テスト溶接による仕上がりの確認と、現場でのデモを相談できます",
+      "見積もり・導入の相談に対応します",
+      "補助金・助成金の活用支援チームが導入を支援します"
+    ]
+  },
+  {
+    "id": "p107",
+    "maker_slug": "kss",
+    "model_slug": "kr-1500ac",
+    "name": "KR-1500AC",
+    "maker_name": "株式会社KS・S",
+    "method": "ハンドヘルド（ピストル型トーチ）",
+    "wavelength": "1064nm",
+    "output_w": 1500,
+    "output_note": "最大出力（CW／パルス）",
+    "portability": "本体 50kg、空冷（コンパクトタイプ）、本体サイズ 400×600×550H、ファイバーケーブル 10m",
+    "thickness_note": "加工板厚 3.0t（公表値）",
+    "tags": {
+      "use": [],
+      "material": [],
+      "thickness": [
+        "0.5〜3mm"
+      ],
+      "environment": [],
+      "price": [],
+      "skill": [
+        "未経験可"
+      ]
+    },
+    "comment": "本体50kg・空冷のコンパクトな1,500W機です。加工板厚は3.0mmと公表され、現場作業や置き場所の狭い工場向けとされています。",
+    "suitable_for": [],
+    "not_suitable_for": [],
+    "handled_by_operator": true,
+    "image": "/assets/images/products/kss-kr-1500ac.png",
+    "official_url": "https://kss-kr.com/kr-detail/218/",
+    "source_url": "https://kss-kr.com/kr-detail/218/",
+    "source": "株式会社KS・S 公式サイト",
+    "image_credit": "株式会社KS・S 公式サイト",
+    "image_source": "https://kss-kr.com/kr-detail/218/",
+    "features": [
+      "空冷のコンパクトタイプで、現場作業や置き場の狭い場所向け（公式記載）",
+      "空冷だが長時間使用しても問題ないと公表",
+      "ピストル型トーチ（700g）",
+      "シリーズとして「初めての方でも扱いやすい設計」と記載"
+    ],
+    "support": [
+      "テスト溶接による仕上がりの確認と、現場でのデモを相談できます",
+      "見積もり・導入の相談に対応します",
+      "補助金・助成金の活用支援チームが導入を支援します"
+    ]
+  },
+  {
+    "id": "p108",
+    "maker_slug": "maxphotonics",
+    "model_slug": "theo-ma1-35",
+    "name": "THEO MA1-35",
+    "maker_name": "Maxphotonics（ブランド：THEO／日本法人：Maxphotonics Japan株式会社）",
+    "method": "ハンドヘルド",
+    "wavelength": null,
+    "output_w": 800,
+    "output_note": "Typical Laser Output（公式表記）",
+    "portability": "本体 28kg、576×265×425mm、空冷（外部チラー不要）、キャスター付き。トーチ 680g",
+    "thickness_note": "溶け込み深さ（公式表記 Weld Penetration）ステンレス最大3.5mm。日本語カタログの表は「溶接厚さ」表記でステンレス・炭素鋼・亜鉛めっき鋼板3.5mm／アルミ3mm／銅は記載なし（注記は「溶接深さ」）。対応板厚ではない",
+    "tags": {
+      "use": [],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ"
+      ],
+      "thickness": [],
+      "environment": [],
+      "price": [],
+      "skill": [
+        "未経験可"
+      ]
+    },
+    "comment": "本体28kg・空冷の800W機です。公表されている溶け込み深さはステンレス3.5mmで、ワイヤ送給とウォブル溶接を標準で備えます。",
+    "suitable_for": [],
+    "not_suitable_for": [],
+    "handled_by_operator": true,
+    "image": "/assets/images/products/placeholder.svg",
+    "official_url": "https://theo.inc/theo-ma1-laser-welding-machine/",
+    "source_url": "https://theo.inc/theo-ma1-laser-welding-machine/",
+    "source": "THEO（Maxphotonics のハンドヘルド溶接ブランド）公式サイト",
+    "image_credit": null,
+    "image_source": null,
+    "features": [
+      "空冷のファイバーレーザーで外部チラー不要",
+      "トーチ重量 680g。ウォブル（揺動）機能で溶接幅は最大4.0mm",
+      "ワイヤーフィーダーユニット（ワイヤ径0.8/1.0/1.2/1.6mm）とウォブル溶接機能を標準装備（日本語カタログ）",
+      "7インチ LED タッチスクリーン、多言語の操作システム、32セットのプリセット条件（日本語カタログ）",
+      "トーチがワークに接触しトリガーを握っている間だけ照射する二重の安全接触センサー"
+    ],
+    "support": [
+      "テスト溶接による仕上がりの確認と、現場でのデモを相談できます",
+      "見積もり・導入の相談に対応します",
+      "補助金・助成金の活用支援チームが導入を支援します"
+    ]
+  },
+  {
+    "id": "p109",
+    "maker_slug": "maxphotonics",
+    "model_slug": "theo-ma1-65",
+    "name": "THEO MA1-65",
+    "maker_name": "Maxphotonics（ブランド：THEO／日本法人：Maxphotonics Japan株式会社）",
+    "method": "ハンドヘルド",
+    "wavelength": null,
+    "output_w": 1500,
+    "output_note": "Typical Laser Output（公式表記）",
+    "portability": "本体 39kg、667×276×542mm、空冷（外部チラー不要）、キャスター付き。トーチ 680g",
+    "thickness_note": "溶け込み深さ（公式表記 Weld Penetration）ステンレス最大6.5mm。日本語カタログの表は「溶接厚さ」表記でステンレス・炭素鋼・亜鉛めっき鋼板6.5mm／アルミ5.5mm／銅3mm（注記は「溶接深さ」）。対応板厚ではない",
+    "tags": {
+      "use": [],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ",
+        "銅",
+        "チタン"
+      ],
+      "thickness": [],
+      "environment": [],
+      "price": [],
+      "skill": [
+        "未経験可"
+      ]
+    },
+    "comment": "本体39kg・空冷の1,500W機です。公表されている溶け込み深さは、ステンレス6.5mm、アルミ5.5mm、銅3mmです。",
+    "suitable_for": [],
+    "not_suitable_for": [],
+    "handled_by_operator": true,
+    "image": "/assets/images/products/placeholder.svg",
+    "official_url": "https://theo.inc/theo-ma1-laser-welding-machine/",
+    "source_url": "https://theo.inc/theo-ma1-laser-welding-machine/",
+    "source": "THEO（Maxphotonics のハンドヘルド溶接ブランド）公式サイト",
+    "image_credit": null,
+    "image_source": null,
+    "features": [
+      "空冷のファイバーレーザーで外部チラー不要",
+      "トーチ重量 680g。ウォブル（揺動）機能で溶接幅は最大4.0mm",
+      "ワイヤーフィーダーユニット（ワイヤ径0.8/1.0/1.2/1.6mm）とウォブル溶接機能を標準装備（日本語カタログ）",
+      "7インチ LED タッチスクリーン、多言語の操作システム、32セットのプリセット条件（日本語カタログ）",
+      "トーチがワークに接触しトリガーを握っている間だけ照射する二重の安全接触センサー"
+    ],
+    "support": [
+      "テスト溶接による仕上がりの確認と、現場でのデモを相談できます",
+      "見積もり・導入の相談に対応します",
+      "補助金・助成金の活用支援チームが導入を支援します"
+    ]
+  },
+  {
+    "id": "p110",
+    "maker_slug": "maxphotonics",
+    "model_slug": "theo-ma1-ultra",
+    "name": "THEO MA1 ULTRA",
+    "maker_name": "Maxphotonics（ブランド：THEO／日本法人：Maxphotonics Japan株式会社）",
+    "method": "ハンドヘルド",
+    "wavelength": null,
+    "output_w": 2000,
+    "output_note": "Typical Laser Output（公式表記）",
+    "portability": "本体 39kg、667×276×542mm、空冷（外部チラー不要）、キャスター付き。トーチ 680g",
+    "thickness_note": "溶け込み深さ（公式表記 Weld Penetration）ステンレス最大8.5mm。対応板厚ではない",
+    "tags": {
+      "use": [],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ",
+        "チタン"
+      ],
+      "thickness": [],
+      "environment": [],
+      "price": [],
+      "skill": [
+        "未経験可"
+      ]
+    },
+    "comment": "本体39kg・空冷の2,000W機で、MA1シリーズの最新機種です。公表されている溶け込み深さはステンレス8.5mmです。",
+    "suitable_for": [],
+    "not_suitable_for": [],
+    "handled_by_operator": true,
+    "image": "/assets/images/products/placeholder.svg",
+    "official_url": "https://theo.inc/theo-ma1-laser-welding-machine/",
+    "source_url": "https://theo.inc/theo-ma1-laser-welding-machine/",
+    "source": "THEO（Maxphotonics のハンドヘルド溶接ブランド）公式サイト",
+    "image_credit": null,
+    "image_source": null,
+    "features": [
+      "空冷のファイバーレーザーで外部チラー不要",
+      "トーチ重量 680g。ウォブル（揺動）機能で溶接幅は最大4.0mm",
+      "ワイヤーフィーダーユニット（ワイヤ径0.8/1.0/1.2/1.6mm）とウォブル溶接機能を標準装備（日本語カタログ）",
+      "7インチ LED タッチスクリーン、多言語の操作システム、32セットのプリセット条件（日本語カタログ）",
+      "トーチがワークに接触しトリガーを握っている間だけ照射する二重の安全接触センサー"
+    ],
+    "support": [
+      "テスト溶接による仕上がりの確認と、現場でのデモを相談できます",
+      "見積もり・導入の相談に対応します",
+      "補助金・助成金の活用支援チームが導入を支援します"
+    ]
+  },
+  {
+    "id": "p111",
+    "maker_slug": "qilin",
+    "model_slug": "f4",
+    "name": "F4",
+    "maker_name": "Qilin Laser（广东骐麟激光科技有限公司）",
+    "method": "ハンドヘルド（空冷）",
+    "wavelength": "1080±10nm",
+    "output_w": 1600,
+    "output_note": "定格出力（Rated Power）",
+    "portability": "本体 55kg以下、強制空冷、本体サイズ 547×319×640mm、ファイバーケーブル 5m",
+    "thickness_note": "溶け込み深さ（公式表記 Weld Depth／焊接深度）4mm。対応板厚ではない",
+    "tags": {
+      "use": [],
+      "material": [
+        "鉄",
+        "アルミ",
+        "銅",
+        "ステンレス"
+      ],
+      "thickness": [],
+      "environment": [],
+      "price": [],
+      "skill": []
+    },
+    "comment": "本体55kg以下・強制空冷の1,600W機です。公表されている溶け込み深さは4mmで、鋼・アルミ・銅・ステンレスに対応します。",
+    "suitable_for": [],
+    "not_suitable_for": [],
+    "handled_by_operator": true,
+    "image": "/assets/images/products/qilin-f4.png",
+    "official_url": "https://www.qilinlaser.cn/products_60/281.html",
+    "source_url": "https://www.qilinlaser.cn/products_60/281.html",
+    "source": "Qilin Laser（广东骐麟激光科技）公式サイト",
+    "image_credit": "Qilin Laser 公式サイト",
+    "image_source": "https://www.qilinlaser.cn/products_60/281.html",
+    "features": [
+      "本体内蔵の制御システムで操作が簡単（公式記載）",
+      "小型・軽量で持ち運び・移動がしやすい（公式記載）",
+      "自社開発の手持ち溶接ヘッド",
+      "連続72時間の稼働に対応（中国語版の製品特点）",
+      "温度の自動検出と風速調整による設備状態の監視（中国語版の製品特点）"
+    ],
+    "support": [
+      "テスト溶接による仕上がりの確認と、現場でのデモを相談できます",
+      "見積もり・導入の相談に対応します",
+      "補助金・助成金の活用支援チームが導入を支援します"
+    ]
+  },
+  {
+    "id": "p112",
+    "maker_slug": "qilin",
+    "model_slug": "k4",
+    "name": "K4",
+    "maker_name": "Qilin Laser（广东骐麟激光科技有限公司）",
+    "method": "ハンドヘルド（空冷）",
+    "wavelength": "1080±10nm",
+    "output_w": 1600,
+    "output_note": "定格出力（Rated Power、製品ページ）",
+    "portability": "本体 55kg以下、強制空冷、本体サイズ 516×318×550mm、ファイバーケーブル 5m",
+    "thickness_note": "Weld Depth 4mm（製品ページ）／Welding Thickness ≤4mm（取扱説明書）。プリセットはステンレス・炭素鋼・亜鉛めっき鋼板・アルミの 1.0〜3.5mm",
+    "tags": {
+      "use": [],
+      "material": [
+        "鉄",
+        "アルミ",
+        "銅",
+        "ステンレス"
+      ],
+      "thickness": [
+        "0.5〜3mm",
+        "3〜6mm"
+      ],
+      "environment": [],
+      "price": [],
+      "skill": []
+    },
+    "comment": "本体55kg以下・強制空冷の1,600W機です。ステンレス・炭素鋼・亜鉛めっき鋼板・アルミの1.0〜3.5mmの溶接条件をあらかじめ登録しています。",
+    "suitable_for": [],
+    "not_suitable_for": [],
+    "handled_by_operator": true,
+    "image": "/assets/images/products/qilin-k4.png",
+    "official_url": "https://www.qilinlaser.cn/products_60/472.html",
+    "source_url": "https://www.qilinlaser.cn/products_60/472.html",
+    "source": "Qilin Laser（广东骐麟激光科技）公式サイト",
+    "image_credit": "Qilin Laser 公式サイト",
+    "image_source": "https://www.qilinlaser.cn/products_60/472.html",
+    "features": [
+      "本体内蔵の制御システムで操作が簡単（公式記載）",
+      "小型・軽量で持ち運び・移動がしやすい（公式記載）",
+      "自社開発の手持ち溶接ヘッド（取扱説明書ではトーチ BWF20、シングル揺動）",
+      "ステンレス・炭素鋼・亜鉛めっき鋼板・アルミの材料別プリセット（1.0〜3.5mm）とカスタム条件を搭載（取扱説明書）"
+    ],
+    "support": [
+      "テスト溶接による仕上がりの確認と、現場でのデモを相談できます",
+      "見積もり・導入の相談に対応します",
+      "補助金・助成金の活用支援チームが導入を支援します"
+    ]
+  },
+  {
+    "id": "p113",
+    "maker_slug": "qilin",
+    "model_slug": "m4",
+    "name": "M4",
+    "maker_name": "Qilin Laser（广东骐麟激光科技有限公司）",
+    "method": "ハンドヘルド（空冷・ダブル揺動）",
+    "wavelength": "1080±10nm",
+    "output_w": 1600,
+    "output_note": "定格出力（Rated Power）",
+    "portability": "本体 55kg以下、強制空冷、本体サイズ 516×318×550mm、ファイバーケーブル 5m",
+    "thickness_note": "溶け込み深さ（公式表記 Weld Depth）4mm。対応板厚ではない",
+    "tags": {
+      "use": [],
+      "material": [
+        "鉄",
+        "アルミ",
+        "銅",
+        "ステンレス"
+      ],
+      "thickness": [],
+      "environment": [],
+      "price": [],
+      "skill": []
+    },
+    "comment": "ダブル揺動の溶接ヘッドを備えた、強制空冷の1,600W機です。パルス・連続・鱗状などの溶接モードを切り替えられます。",
+    "suitable_for": [],
+    "not_suitable_for": [],
+    "handled_by_operator": true,
+    "image": "/assets/images/products/qilin-m4.png",
+    "official_url": "https://www.qilinlaser.cn/products_60/476.html",
+    "source_url": "https://www.qilinlaser.cn/products_60/476.html",
+    "source": "Qilin Laser（广东骐麟激光科技）公式サイト",
+    "image_credit": "Qilin Laser 公式サイト",
+    "image_source": "https://www.qilinlaser.cn/products_60/476.html",
+    "features": [
+      "ダブル揺動（双摆）の手持ち溶接ヘッドを搭載（中国語版の製品名「風冷双摆手持焊」）",
+      "パルス・連続・鱗状（フィッシュスケール）・線分・かしめなど複数の溶接モード（中国語版の説明）",
+      "補強リブの跡を残さない溶接に強みがあると公表（中国語版の説明）",
+      "小型・軽量で持ち運び・移動がしやすい（公式記載）"
+    ],
+    "support": [
+      "テスト溶接による仕上がりの確認と、現場でのデモを相談できます",
+      "見積もり・導入の相談に対応します",
+      "補助金・助成金の活用支援チームが導入を支援します"
+    ]
   }
 ]

@@ -255,7 +255,7 @@ async function productPage(env, slug) {
   ${(p.features || []).length ? `<section class="subsec" id="features"><h2>特長</h2><ul class="features">${p.features.map((f) => `<li>${icon("check")}<span>${kw(f)}</span></li>`).join("")}</ul></section>` : ""}
   ${p.handled_by_operator && (p.support || []).length ? `<section class="subsec opsupport" id="support">
     <h2>${kw("運営元のサポート")}</h2>
-    <p class="opsupport__lead">${kw("この機種は本サイトの運営元が取り扱っています。導入前の確認から導入後の修理まで、運営元が対応します。")}</p>
+    <p class="opsupport__lead">${kw(p.support.some((x) => x.includes("修理")) ? "この機種は本サイトの運営元が取り扱っています。導入前の確認から導入後の修理まで、運営元が対応します。" : "この機種は本サイトの運営元が取り扱っています。テスト溶接・見積もり・補助金の活用を運営元に相談できます。")}</p>
     <ul class="opsupport__list">${p.support.map((x) => `<li>${icon("check")}<span>${kw(x)}</span></li>`).join("")}</ul>
     <div class="opsupport__cta">
       <a class="btn btn--accent" href="/contact/?type=test&amp;product=${esc(p.slug)}">${kw("テスト溶接・デモを相談する")}</a>

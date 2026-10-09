@@ -256,7 +256,10 @@ export function runDiagnosis(config, products, answers) {
   //    件数は「公開情報で合う機種」を先に比べる。rankAboveUnknown の軸（厚物・混在の板厚）を非公開のまま通っただけの機種は、
   //    公開情報で合う機種が同数のときにだけ数える（例: チタン×厚物で「素材」を外し、板厚が非公開の機種だけが残る、を避ける）
   //  relax.pick = "first"       : relax.order の順で、1件でも一致が出た最初の軸を外す
-  if (matched.length === 0 && resolved.length > 0) {
+  //  合う機種があっても、すべて rankAboveUnknown の軸（厚物・混在の板厚）を非公開のまま通っただけなら、
+  //  条件を1つ外して公開情報で合う機種が出るときに限り、そちらを採る（例: チタン×厚物で、板厚非公開のチタン対応機が1位になるのを避ける）
+  const onlyUnknown = matched.length > 0 && matched.every((s) => s.unknownLast);
+  if ((matched.length === 0 || onlyUnknown) && resolved.length > 0) {
     const trials = [];
     for (const axis of config.relax.order) {
       if (!resolved.some((r) => r.axis === axis)) continue;
@@ -267,7 +270,7 @@ export function runDiagnosis(config, products, answers) {
       if (config.relax.pick !== "most_matched" && m2.length > 0) break;
     }
     const better = (t, b) => t.known > b.known || (t.known === b.known && t.m2.length > b.m2.length);
-    const best = trials.filter((t) => t.m2.length > 0).reduce((b, t) => (!b || better(t, b) ? t : b), null);
+    const best = trials.filter((t) => (onlyUnknown ? t.known > 0 : t.m2.length > 0)).reduce((b, t) => (!b || better(t, b) ? t : b), null);
     if (best) {
       relaxedAxis = best.axis;
       relaxedOption = resolved.find((r) => r.axis === best.axis).option;
