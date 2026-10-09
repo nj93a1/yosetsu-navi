@@ -509,7 +509,7 @@
     "portability": "本体 220kg（冷却水含まず）。チラー内蔵で移動しやすい",
     "handled_by_operator": true,
     "image": "/assets/images/products/uwjapan-uw-sh.png",
-    "source": "ノースヒルズ溶接工業 公式サイト・提供資料",
+    "source": "ノースヒルズ溶接工業 公式サイト・提供資料（仕様はUW JAPAN公式「チラー一体型ファイバレーザ」ページにも同型番で掲載）",
     "is_published": true,
     "id": "p101",
     "model_slug": "uw-sh500c",
@@ -623,7 +623,23 @@
     "image_credit": "ノースヒルズ溶接工業 公式サイト（UW-SH シリーズ共通の写真）",
     "image_source": "https://nhillz-laser.com/",
     "official_url": "https://nhillz-laser.com/",
-    "source_url": "https://nhillz-laser.com/"
+    "source_url": "https://nhillz-laser.com/",
+    "field_sources": {
+      "wavelength": "https://uw-j.co.jp/chiller_fiber_laser_series/",
+      "output_w": "https://uw-j.co.jp/chiller_fiber_laser_series/",
+      "output_note": "https://uw-j.co.jp/chiller_fiber_laser_series/",
+      "portability": [
+        "https://uw-j.co.jp/chiller_fiber_laser_series/",
+        "https://nhillz-laser.com/"
+      ],
+      "tags.use": "https://nhillz-laser.com/",
+      "tags.material": "https://nhillz-laser.com/",
+      "tags.thickness": "https://nhillz-laser.com/",
+      "tags.environment": "https://nhillz-laser.com/",
+      "tags.skill": "https://nhillz-laser.com/",
+      "suitable_for": "https://nhillz-laser.com/",
+      "not_suitable_for": "https://nhillz-laser.com/"
+    }
   },
   {
     "maker_slug": "uwjapan",
@@ -633,7 +649,7 @@
     "portability": "本体 230kg（冷却水含まず）。チラー内蔵で移動しやすい",
     "handled_by_operator": true,
     "image": "/assets/images/products/uwjapan-uw-sh.png",
-    "source": "ノースヒルズ溶接工業 公式サイト・提供資料",
+    "source": "ノースヒルズ溶接工業 公式サイト・提供資料（仕様はUW JAPAN公式「チラー一体型ファイバレーザ」ページにも同型番で掲載）",
     "is_published": true,
     "id": "p102",
     "model_slug": "uw-sh1000c",
@@ -747,7 +763,23 @@
     "image_credit": "ノースヒルズ溶接工業 公式サイト（UW-SH シリーズ共通の写真）",
     "image_source": "https://nhillz-laser.com/",
     "official_url": "https://nhillz-laser.com/",
-    "source_url": "https://nhillz-laser.com/"
+    "source_url": "https://nhillz-laser.com/",
+    "field_sources": {
+      "wavelength": "https://uw-j.co.jp/chiller_fiber_laser_series/",
+      "output_w": "https://uw-j.co.jp/chiller_fiber_laser_series/",
+      "output_note": "https://uw-j.co.jp/chiller_fiber_laser_series/",
+      "portability": [
+        "https://uw-j.co.jp/chiller_fiber_laser_series/",
+        "https://nhillz-laser.com/"
+      ],
+      "tags.use": "https://nhillz-laser.com/",
+      "tags.material": "https://nhillz-laser.com/",
+      "tags.thickness": "https://nhillz-laser.com/",
+      "tags.environment": "https://nhillz-laser.com/",
+      "tags.skill": "https://nhillz-laser.com/",
+      "suitable_for": "https://nhillz-laser.com/",
+      "not_suitable_for": "https://nhillz-laser.com/"
+    }
   },
   {
     "maker_slug": "uwjapan",
@@ -757,7 +789,7 @@
     "portability": "本体 240kg（冷却水含まず）。チラー内蔵で移動しやすい",
     "handled_by_operator": true,
     "image": "/assets/images/products/uwjapan-uw-sh.png",
-    "source": "ノースヒルズ溶接工業 公式サイト・提供資料",
+    "source": "ノースヒルズ溶接工業 公式サイト・提供資料（仕様はUW JAPAN公式「チラー一体型ファイバレーザ」ページにも同型番で掲載）",
     "is_published": true,
     "id": "p103",
     "model_slug": "uw-sh1500c",
@@ -874,7 +906,23 @@
     "image_credit": "ノースヒルズ溶接工業 公式サイト（UW-SH シリーズ共通の写真）",
     "image_source": "https://nhillz-laser.com/",
     "official_url": "https://nhillz-laser.com/",
-    "source_url": "https://nhillz-laser.com/"
+    "source_url": "https://nhillz-laser.com/",
+    "field_sources": {
+      "wavelength": "https://uw-j.co.jp/chiller_fiber_laser_series/",
+      "output_w": "https://uw-j.co.jp/chiller_fiber_laser_series/",
+      "output_note": "https://uw-j.co.jp/chiller_fiber_laser_series/",
+      "portability": [
+        "https://uw-j.co.jp/chiller_fiber_laser_series/",
+        "https://nhillz-laser.com/"
+      ],
+      "tags.use": "https://nhillz-laser.com/",
+      "tags.material": "https://nhillz-laser.com/",
+      "tags.thickness": "https://nhillz-laser.com/",
+      "tags.environment": "https://nhillz-laser.com/",
+      "tags.skill": "https://nhillz-laser.com/",
+      "suitable_for": "https://nhillz-laser.com/",
+      "not_suitable_for": "https://nhillz-laser.com/"
+    }
   },
   {
     "id": "p201",
@@ -925,7 +973,18 @@
     "is_published": true,
     "notes": "出力は最大ピーク出力。波長・環境・価格は非公開",
     "image_credit": "株式会社レーザックス 公式サイト（2機種の写真から切り出し）",
-    "image_source": "https://laser-navi.com/media/opticel/a142"
+    "image_source": "https://laser-navi.com/media/opticel/a142",
+    "field_sources": {
+      "output_w": "https://laser-navi.com/products/opticelfh/",
+      "output_note": "https://laser-navi.com/products/opticelfh/",
+      "portability": "https://laser-navi.com/products/opticelfh/",
+      "thickness_note": "https://laser-navi.com/products/opticelfh/",
+      "tags.use": "https://laser-navi.com/products/opticelfh/",
+      "tags.material": "https://laser-navi.com/products/opticelfh/",
+      "tags.skill": "https://laser-navi.com/products/opticelfh/",
+      "suitable_for": "https://laser-navi.com/products/opticelfh/",
+      "not_suitable_for": "https://laser-navi.com/products/opticelfh/"
+    }
   },
   {
     "id": "p202",
@@ -940,8 +999,8 @@
     "thickness_note": "SUS304の最大溶け込み量 1〜5mm（対応板厚ではない）。アルミ1.5mm・銅1.0mmの溶接実例あり",
     "portability": "コピー機1台程度のサイズ。チラー内蔵で移動可能",
     "official_url": "https://laser-navi.com/products/opticelfh/",
-    "source_url": "https://laser-navi.com/dcms_media/other/fhsiyou.pdf",
-    "source": "レーザックス公式の仕様表（PDF）",
+    "source_url": "https://laser-navi.com/products/opticelfh/",
+    "source": "レーザックス公式サイトの製品ページと仕様表（PDF）",
     "tags": {
       "use": [
         "薄板接合"
@@ -975,7 +1034,25 @@
     "is_published": true,
     "notes": "CW・シングルモード。環境・価格は非公開",
     "image_credit": "株式会社レーザックス 公式サイト（2機種の写真から切り出し）",
-    "image_source": "https://laser-navi.com/media/opticel/a142"
+    "image_source": "https://laser-navi.com/media/opticel/a142",
+    "field_sources": {
+      "wavelength": "https://laser-navi.com/dcms_media/other/fhsiyou.pdf",
+      "output_w": "https://laser-navi.com/products/opticelfh/",
+      "output_note": "https://laser-navi.com/dcms_media/other/fhsiyou.pdf",
+      "portability": "https://laser-navi.com/products/opticelfh/",
+      "thickness_note": "https://laser-navi.com/products/opticelfh/",
+      "tags.use": "https://laser-navi.com/products/opticelfh/",
+      "tags.material": [
+        "https://laser-navi.com/products/opticelfh/",
+        "https://laser-navi.com/dcms_media/other/fhsiyou.pdf"
+      ],
+      "tags.skill": "https://laser-navi.com/products/opticelfh/",
+      "suitable_for": "https://laser-navi.com/products/opticelfh/"
+    },
+    "conflicts": [
+      "出力の表記：製品ページは「最大ピーク出力 1.5kW」、仕様表PDFは「CW（連続発振）／シングルモード 1500W」。output_note「連続発振」はPDFが根拠",
+      "溶込み量：製品ページは SUS304「1〜5mm」・アルミ「1〜3mm」、PDFは SUS304「5mm」のみ（矛盾ではなく表記の幅の違い）"
+    ]
   },
   {
     "id": "p203",
@@ -1030,7 +1107,18 @@
     "is_published": true,
     "notes": "定格1,500W／最大2,500W。価格は非公開",
     "image_credit": "株式会社アマダ 公式サイト",
-    "image_source": "https://www.sheetmetal.amada.co.jp/lineup/weld/flw-mts/flw-1500mts.html"
+    "image_source": "https://www.sheetmetal.amada.co.jp/lineup/weld/flw-mts/flw-1500mts.html",
+    "field_sources": {
+      "wavelength": "https://www.sheetmetal.amada.co.jp/lineup/weld/flw-mts/flw-1500mts.html",
+      "output_w": "https://www.sheetmetal.amada.co.jp/lineup/weld/flw-mts/flw-1500mts.html",
+      "output_note": "https://www.sheetmetal.amada.co.jp/lineup/weld/flw-mts/flw-1500mts.html",
+      "portability": "https://www.sheetmetal.amada.co.jp/lineup/weld/flw-mts/flw-1500mts.html",
+      "thickness_note": "https://www.sheetmetal.amada.co.jp/lineup/weld/flw-mts/flw-1500mts.html",
+      "tags.use": "https://www.sheetmetal.amada.co.jp/lineup/weld/flw-mts/flw-1500mts.html",
+      "tags.material": "https://www.sheetmetal.amada.co.jp/lineup/weld/flw-mts/flw-1500mts.html",
+      "tags.environment": "https://www.sheetmetal.amada.co.jp/lineup/weld/flw-mts/flw-1500mts.html",
+      "suitable_for": "https://www.sheetmetal.amada.co.jp/lineup/weld/flw-mts/flw-1500mts.html"
+    }
   },
   {
     "id": "p204",
@@ -1039,14 +1127,14 @@
     "name": "THFI-1500H",
     "maker_name": "THM株式会社",
     "method": "ハンドヘルド",
-    "wavelength": null,
-    "output_w": null,
-    "output_note": null,
+    "wavelength": "1080nm",
+    "output_w": 1500,
+    "output_note": "平均出力",
     "thickness_note": null,
-    "portability": "空冷式でチラー不要。メーカーは「取り回し性に優れる」としている",
+    "portability": "本体75kg、ヘッド0.65kg。空冷式でチラー不要",
     "official_url": "https://thm-co.jp/fiber/thm-30r-f-2",
     "source_url": "https://thm-co.jp/fiber/thm-30r-f-2",
-    "source": "THM公式サイトの製品ページ",
+    "source": "THM公式サイトの製品ページ（仕様表画像を含む）",
     "tags": {
       "use": [
         "薄板接合"
@@ -1070,7 +1158,12 @@
     "is_published": true,
     "notes": "波長・出力・素材・板厚・環境・価格・難易度は非公開",
     "image_credit": "THM株式会社 公式サイト",
-    "image_source": "https://thm-co.jp/fiber/thm-30r-f-2"
+    "image_source": "https://thm-co.jp/fiber/thm-30r-f-2",
+    "field_sources": {
+      "portability": "https://thm-co.jp/fiber/thm-30r-f-2",
+      "tags.use": "https://thm-co.jp/fiber/thm-30r-f-2",
+      "suitable_for": "https://thm-co.jp/fiber/thm-30r-f-2"
+    }
   },
   {
     "id": "p205",
@@ -1085,8 +1178,8 @@
     "thickness_note": "1mm以下の極薄材向け",
     "portability": "本体約180kg。筐体は小型だが、手で持ち運ぶ機種ではない。トーチは手持ち式",
     "official_url": "https://www.wel-ken.co.jp/v-hp1000/",
-    "source_url": "https://www.wel-ken.co.jp/video/",
-    "source": "WEL-KEN公式サイトの製品ページと溶接動画",
+    "source_url": "https://www.wel-ken.co.jp/v-hp1000/",
+    "source": "WEL-KEN公式サイトの製品ページ",
     "tags": {
       "use": [
         "薄板接合"
@@ -1116,7 +1209,23 @@
     "is_published": true,
     "notes": "環境・価格は非公開。2026-10-08確認: 製品ラインナップ比較 /lineup/ では重量160kg（商品ページは約180kg）。商品ページの値を掲載",
     "image_credit": "株式会社WEL-KEN 公式サイト",
-    "image_source": "https://www.wel-ken.co.jp/v-hp1000/"
+    "image_source": "https://www.wel-ken.co.jp/v-hp1000/",
+    "field_sources": {
+      "wavelength": "https://www.wel-ken.co.jp/v-hp1000/",
+      "output_w": "https://www.wel-ken.co.jp/v-hp1000/",
+      "portability": "https://www.wel-ken.co.jp/v-hp1000/",
+      "thickness_note": "https://www.wel-ken.co.jp/v-hp1000/",
+      "tags.use": "https://www.wel-ken.co.jp/v-hp1000/",
+      "tags.material": "https://www.wel-ken.co.jp/v-hp1000/",
+      "tags.thickness": "https://www.wel-ken.co.jp/v-hp1000/",
+      "tags.skill": "https://www.wel-ken.co.jp/v-hp1000/",
+      "suitable_for": "https://www.wel-ken.co.jp/v-hp1000/"
+    },
+    "conflicts": [
+      "本体重量：製品ページ「約180Kg」／製品ラインナップ比較 https://www.wel-ken.co.jp/lineup/ 「160㎏」（どちらもWEL-KEN公式）",
+      "電源：製品ページ「3相200V」／ラインナップ比較「単相200V」",
+      "外形寸法：製品ページ 500×800×800mm／ラインナップ比較 510×800×810mm"
+    ]
   },
   {
     "id": "p206",
@@ -1131,8 +1240,8 @@
     "thickness_note": "SUS304・AL5052 1.5mmの溶接実例あり",
     "portability": "本体約230kg。トーチは約500gまたは約690g",
     "official_url": "https://www.wel-ken.co.jp/v-hf2000/",
-    "source_url": "https://www.wel-ken.co.jp/video/",
-    "source": "WEL-KEN公式サイトの製品ページと溶接動画",
+    "source_url": "https://www.wel-ken.co.jp/v-hf2000/",
+    "source": "WEL-KEN公式サイトの製品ページ（施工例の一部は同社の溶接動画ページ）",
     "tags": {
       "use": [
         "薄板接合"
@@ -1160,7 +1269,26 @@
     "is_published": true,
     "notes": "環境・価格・難易度は非公開。2026-10-08確認: 製品ラインナップ比較 /lineup/ では重量210kg（商品ページは約230kg）。商品ページの値を掲載",
     "image_credit": "株式会社WEL-KEN 公式サイト",
-    "image_source": "https://www.wel-ken.co.jp/v-hf2000/"
+    "image_source": "https://www.wel-ken.co.jp/v-hf2000/",
+    "field_sources": {
+      "wavelength": "https://www.wel-ken.co.jp/v-hf2000/",
+      "output_w": "https://www.wel-ken.co.jp/v-hf2000/",
+      "portability": "https://www.wel-ken.co.jp/v-hf2000/",
+      "thickness_note": [
+        "https://www.wel-ken.co.jp/v-hf2000/",
+        "https://www.wel-ken.co.jp/video/"
+      ],
+      "tags.use": "https://www.wel-ken.co.jp/v-hf2000/",
+      "tags.material": "https://www.wel-ken.co.jp/v-hf2000/",
+      "tags.thickness": "https://www.wel-ken.co.jp/v-hf2000/",
+      "suitable_for": [
+        "https://www.wel-ken.co.jp/v-hf2000/",
+        "https://www.wel-ken.co.jp/video/"
+      ]
+    },
+    "conflicts": [
+      "本体重量：製品ページ「約230Kg」／ラインナップ比較 https://www.wel-ken.co.jp/lineup/ 「210kg」（どちらもWEL-KEN公式）"
+    ]
   },
   {
     "id": "p207",
@@ -1175,8 +1303,8 @@
     "thickness_note": "AL5052 3mm＋1.5mm、SUS304 3mmの継手の溶接実例あり",
     "portability": "本体約270kg。トーチは約500gまたは約690g",
     "official_url": "https://www.wel-ken.co.jp/v-hp3000/",
-    "source_url": "https://www.wel-ken.co.jp/video/",
-    "source": "WEL-KEN公式サイトの製品ページと溶接動画",
+    "source_url": "https://www.wel-ken.co.jp/v-hp3000/",
+    "source": "WEL-KEN公式サイトの製品ページ",
     "tags": {
       "use": [
         "薄板接合"
@@ -1205,7 +1333,18 @@
     "is_published": true,
     "notes": "環境・価格は非公開",
     "image_credit": "株式会社WEL-KEN 公式サイト",
-    "image_source": "https://www.wel-ken.co.jp/v-hp3000/"
+    "image_source": "https://www.wel-ken.co.jp/v-hp3000/",
+    "field_sources": {
+      "wavelength": "https://www.wel-ken.co.jp/v-hp3000/",
+      "output_w": "https://www.wel-ken.co.jp/v-hp3000/",
+      "portability": "https://www.wel-ken.co.jp/v-hp3000/",
+      "thickness_note": "https://www.wel-ken.co.jp/v-hp3000/",
+      "tags.use": "https://www.wel-ken.co.jp/v-hp3000/",
+      "tags.material": "https://www.wel-ken.co.jp/v-hp3000/",
+      "tags.thickness": "https://www.wel-ken.co.jp/v-hp3000/",
+      "tags.skill": "https://www.wel-ken.co.jp/v-hp3000/",
+      "suitable_for": "https://www.wel-ken.co.jp/v-hp3000/"
+    }
   },
   {
     "id": "p208",
@@ -1214,14 +1353,14 @@
     "name": "V-HP1500",
     "maker_name": "株式会社WEL-KEN",
     "method": "ハンドヘルド",
-    "wavelength": "1080nm（マルチモード）",
+    "wavelength": null,
     "output_w": 1500,
     "output_note": "最大出力",
-    "thickness_note": null,
-    "portability": "トーチはT型約75g、ストレート型約70g",
-    "official_url": null,
+    "thickness_note": "溶け込み深さ ステンレス5.0mm／アルミ3.0mm（メーカーの製品ラインナップ比較の公表値。対応板厚ではない）",
+    "portability": "本体110kg、水冷",
+    "official_url": "https://www.wel-ken.co.jp/lineup/",
     "source_url": "https://www.wel-ken.co.jp/lineup/",
-    "source": "WEL-KEN公式サイトの製品ラインナップ比較",
+    "source": "WEL-KEN公式サイトの製品ラインナップ比較・オプションページ",
     "tags": {
       "use": [],
       "material": [],
@@ -1240,7 +1379,16 @@
     "handled_by_operator": false,
     "image": "/assets/images/products/placeholder.svg",
     "is_published": true,
-    "notes": "用途・素材・板厚・環境・価格・難易度は非公開。2026-10-08確認: 旧商品ページ https://www.wel-ken.co.jp/v-hp1500/ は404。公式トップの V-HP1500 の枠は /tig-pro/（トップへ302転送）を指し、商品ページは見つからない。製品ラインナップ比較 /lineup/ には掲載あり（最大出力1500W・マルチモード・重量110kg・溶け込みSUS5.0mm/AL3.0mm）。重量と溶け込みは受領データに無いため未反映（確認後に反映）。商品ページは確認中（クライアント確認事項）。2026-10-09確認: オプションと機能拡張 /option/ に、V-HP1500 のスイングヘッド機能、T型トーチとペンシル型トーチヘッドの標準付属、自動ワイヤ送給装置 WF-700 の接続可の記載あり。トーチ重量（T型約75g・ストレート型約70g）は現行サイトのどのページにも無い（旧商品ページ由来の受領データ）"
+    "notes": "用途・素材・板厚・環境・価格・難易度は非公開。2026-10-08確認: 旧商品ページ https://www.wel-ken.co.jp/v-hp1500/ は404。公式トップの V-HP1500 の枠は /tig-pro/（トップへ302転送）を指し、商品ページは見つからない。製品ラインナップ比較 /lineup/ には掲載あり（最大出力1500W・マルチモード・重量110kg・溶け込みSUS5.0mm/AL3.0mm）。重量と溶け込みは受領データに無いため未反映（確認後に反映）。商品ページは確認中（クライアント確認事項）。2026-10-09確認: オプションと機能拡張 /option/ に、V-HP1500 のスイングヘッド機能、T型トーチとペンシル型トーチヘッドの標準付属、自動ワイヤ送給装置 WF-700 の接続可の記載あり。トーチ重量（T型約75g・ストレート型約70g）は現行サイトのどのページにも無い（旧商品ページ由来の受領データ）",
+    "field_sources": {
+      "output_w": "https://www.wel-ken.co.jp/lineup/",
+      "output_note": "https://www.wel-ken.co.jp/lineup/",
+      "wavelength": "https://www.wel-ken.co.jp/lineup/",
+      "suitable_for": [
+        "https://www.wel-ken.co.jp/option/",
+        "https://www.wel-ken.co.jp/wf-700/"
+      ]
+    }
   },
   {
     "id": "p209",
@@ -1255,8 +1403,8 @@
     "thickness_note": "最大3mm",
     "portability": "本体約130kg、10mトーチ、トーチヘッド0.8kg",
     "official_url": "https://www.ikuratools.com/w_FL.html",
-    "source_url": "https://www.uedakanamono.co.jp/ISK-FL1500W",
-    "source": "販売店（ウエダ金物）の商品ページ",
+    "source_url": "https://www.ikuratools.com/w_FL.html",
+    "source": "育良精機公式サイトの製品ページ（仕様表）",
     "tags": {
       "use": [
         "薄板接合",
@@ -1289,7 +1437,22 @@
     "is_published": true,
     "notes": "価格根拠: 販売店公開価格 税込2,763,200円",
     "image_credit": "育良精機株式会社 公式サイト（2機種共通の写真）",
-    "image_source": "https://www.ikuratools.com/w_FL.html"
+    "image_source": "https://www.ikuratools.com/w_FL.html",
+    "field_sources": {
+      "wavelength": "https://www.ikuratools.com/w_FL.html",
+      "output_w": "https://www.ikuratools.com/w_FL.html",
+      "portability": "https://www.ikuratools.com/w_FL.html",
+      "thickness_note": "https://www.ikuratools.com/w_FL.html",
+      "tags.use": "https://www.ikuratools.com/w_FL.html",
+      "tags.thickness": "https://www.ikuratools.com/w_FL.html",
+      "tags.environment": "https://www.ikuratools.com/w_FL.html",
+      "tags.price": "https://www.uedakanamono.co.jp/ISK-FL1500W",
+      "suitable_for": "https://www.ikuratools.com/w_FL.html",
+      "not_suitable_for": "https://www.ikuratools.com/w_FL.html"
+    },
+    "dealer_only_fields": [
+      "tags.price（価格帯 200〜400万円。根拠はウエダ金物の販売価格 税込2,763,200円。メーカーはオープン価格で価格を公開していない）"
+    ]
   },
   {
     "id": "p210",
@@ -1304,8 +1467,8 @@
     "thickness_note": "最大6mm",
     "portability": "本体約130kg、10mトーチ、トーチヘッド0.8kg",
     "official_url": "https://www.ikuratools.com/w_FL.html",
-    "source_url": "https://www.uedakanamono.co.jp/ISK-FL2000W",
-    "source": "販売店（ウエダ金物）の商品ページ",
+    "source_url": "https://www.ikuratools.com/w_FL.html",
+    "source": "育良精機公式サイトの製品ページ（仕様表）",
     "tags": {
       "use": [
         "厚物",
@@ -1338,7 +1501,22 @@
     "is_published": true,
     "notes": "価格根拠: ウエダ金物 税込3,593,700円。別販売店では税込4,332,706円の掲載あり。板厚タグは受領データ（板厚：3〜6）のとおり「3〜6mm」だけにしている。公表値は「最大6mm」で、同程度の上限の機種（HW450・HW550・SLW2000・FLW-1500MTS・FMW-V2.0）は「0.5〜3mm」も持つため、薄板も可と扱うか要クライアント確認（足すと診断で薄板を選んだ人にも一致機種として出る）",
     "image_credit": "育良精機株式会社 公式サイト（2機種共通の写真）",
-    "image_source": "https://www.ikuratools.com/w_FL.html"
+    "image_source": "https://www.ikuratools.com/w_FL.html",
+    "field_sources": {
+      "wavelength": "https://www.ikuratools.com/w_FL.html",
+      "output_w": "https://www.ikuratools.com/w_FL.html",
+      "portability": "https://www.ikuratools.com/w_FL.html",
+      "thickness_note": "https://www.ikuratools.com/w_FL.html",
+      "tags.use": "https://www.ikuratools.com/w_FL.html",
+      "tags.thickness": "https://www.ikuratools.com/w_FL.html",
+      "tags.environment": "https://www.ikuratools.com/w_FL.html",
+      "tags.price": "https://www.uedakanamono.co.jp/ISK-FL2000W",
+      "suitable_for": "https://www.ikuratools.com/w_FL.html",
+      "not_suitable_for": "https://www.ikuratools.com/w_FL.html"
+    },
+    "dealer_only_fields": [
+      "tags.price（価格帯 200〜400万円。根拠はウエダ金物の販売価格 税込3,593,700円。メーカーはオープン価格で価格を公開していない）"
+    ]
   },
   {
     "id": "p211",
@@ -1384,7 +1562,18 @@
     "is_published": true,
     "notes": "出力はレーザーピーク出力相当。波長の単位は公式表記のまま。環境・価格・難易度は非公開",
     "image_credit": "富士機工株式会社 公式サイト（シリーズ共通の写真）",
-    "image_source": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/"
+    "image_source": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
+    "field_sources": {
+      "wavelength": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
+      "output_w": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
+      "output_note": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
+      "portability": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
+      "thickness_note": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
+      "tags.material": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
+      "tags.thickness": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
+      "suitable_for": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
+      "not_suitable_for": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/"
+    }
   },
   {
     "id": "p212",
@@ -1430,7 +1619,18 @@
     "is_published": true,
     "notes": "出力はレーザーピーク出力相当。波長の単位は公式表記のまま。環境・価格・難易度は非公開",
     "image_credit": "富士機工株式会社 公式サイト",
-    "image_source": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/"
+    "image_source": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
+    "field_sources": {
+      "wavelength": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
+      "output_w": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
+      "output_note": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
+      "portability": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
+      "thickness_note": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
+      "tags.material": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
+      "tags.thickness": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
+      "suitable_for": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
+      "not_suitable_for": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/"
+    }
   },
   {
     "id": "p213",
@@ -1478,7 +1678,18 @@
     "is_published": true,
     "notes": "出力はレーザーピーク出力相当。波長の単位は公式表記のまま。環境・価格・難易度は非公開",
     "image_credit": "富士機工株式会社 公式サイト",
-    "image_source": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/"
+    "image_source": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
+    "field_sources": {
+      "wavelength": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
+      "output_w": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
+      "output_note": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
+      "portability": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
+      "thickness_note": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
+      "tags.material": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
+      "tags.thickness": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
+      "suitable_for": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
+      "not_suitable_for": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/"
+    }
   },
   {
     "id": "p214",
@@ -1526,7 +1737,18 @@
     "is_published": true,
     "notes": "出力はレーザーピーク出力相当。波長の単位は公式表記のまま。環境・価格・難易度は非公開",
     "image_credit": "富士機工株式会社 公式サイト",
-    "image_source": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/"
+    "image_source": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
+    "field_sources": {
+      "wavelength": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
+      "output_w": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
+      "output_note": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
+      "portability": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
+      "thickness_note": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
+      "tags.material": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
+      "tags.thickness": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
+      "suitable_for": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
+      "not_suitable_for": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/"
+    }
   },
   {
     "id": "p215",
@@ -1537,12 +1759,12 @@
     "method": "ハンドヘルド",
     "wavelength": "1080nm ±5nm（シングルモード）",
     "output_w": 3000,
-    "output_note": "1,000／1,500／2,000／3,000Wから選択。表示は最大",
-    "thickness_note": "鉄・ステンレス 0.5〜5mm（品質推奨厚）",
+    "output_note": "1,500〜3,000W（国内代理店は1,000Wも掲載）。表示は最大",
+    "thickness_note": "ステンレス・炭素鋼 0.5〜7mm、アルミ 0.5〜5mm（メーカー公表値）。国内代理店は品質推奨厚を0.5〜5mmとしている",
     "portability": "本体150kg（1,000〜2,000W）、250kg（3,000W）。チラー内蔵、キャスター付き",
     "official_url": "https://www.hsglaser.com/product/laser-welding-machine-fmw.html",
-    "source_url": "https://yokohamalaser.com/products/hsg-welding-cleaner/fmw-v2/",
-    "source": "国内代理店ヨコハマシステムズのFMW-V2.0製品ページ",
+    "source_url": "https://www.hsglaser.com/product/laser-welding-machine-fmw.html",
+    "source": "HSG公式サイトのFMW製品ページ・製品シート（PDF）。一部仕様は国内代理店ヨコハマシステムズ",
     "tags": {
       "use": [
         "薄板接合",
@@ -1570,15 +1792,45 @@
       "突合せ・内角・外角・重ね・肉盛り",
       "クリーニング・簡易切断"
     ],
-    "not_suitable_for": [
-      "鉄・ステンレス5mm超（公表されている品質推奨厚 0.5〜5mmの範囲外）"
-    ],
+    "not_suitable_for": [],
     "handled_by_operator": false,
     "image": "/assets/images/products/hsg-fmw-v2.jpg",
     "is_published": true,
     "notes": "出力は 1,000／1,500／2,000／3,000W。価格は非公開",
     "image_credit": "株式会社ヨコハマシステムズ（HSG LASER 国内代理店）公式サイト",
-    "image_source": "https://yokohamalaser.com/products/hsg-welding-cleaner/fmw-v2/"
+    "image_source": "https://yokohamalaser.com/products/hsg-welding-cleaner/fmw-v2/",
+    "field_sources": {
+      "output_w": "https://www.hsglaser.com/d/pdf/FMW%20Series_%20Handheld%20Laser%20Welding%20Machine.pdf",
+      "output_note": "https://yokohamalaser.com/products/hsg-welding-cleaner/fmw-v2/",
+      "wavelength": "https://yokohamalaser.com/products/hsg-welding-cleaner/fmw-v2/",
+      "portability": [
+        "https://yokohamalaser.com/products/hsg-welding-cleaner/fmw-v2/",
+        "https://www.hsglaser.com/product/laser-welding-machine-fmw.html"
+      ],
+      "thickness_note": "https://yokohamalaser.com/products/hsg-welding-cleaner/fmw-v2/",
+      "tags.use": "https://www.hsglaser.com/d/pdf/FMW%20Series_%20Handheld%20Laser%20Welding%20Machine.pdf",
+      "tags.material": "https://www.hsglaser.com/d/pdf/FMW%20Series_%20Handheld%20Laser%20Welding%20Machine.pdf",
+      "tags.thickness": "https://www.hsglaser.com/d/pdf/FMW%20Series_%20Handheld%20Laser%20Welding%20Machine.pdf",
+      "tags.skill": "https://www.hsglaser.com/product/laser-welding-machine-fmw.html",
+      "suitable_for": [
+        "https://yokohamalaser.com/products/hsg-welding-cleaner/fmw-v2/",
+        "https://www.hsglaser.com/product/laser-welding-machine-fmw.html"
+      ],
+      "not_suitable_for": "https://yokohamalaser.com/products/hsg-welding-cleaner/fmw-v2/"
+    },
+    "dealer_only_fields": [
+      "wavelength（1080nm ±5nm、シングルモード）",
+      "output_note の1,000Wモデル（HSG公式は1.5〜3kWのみ）",
+      "portability の本体重量 150kg／250kg とキャスター（HSG公式は寸法のみ）",
+      "thickness_note（鉄・ステンレス 0.5〜5mm 品質推奨厚）",
+      "suitable_for の「突合せ・内角・外角・重ね・肉盛り」「ステンレス・アルミの薄板」「0.5〜5mm」",
+      "not_suitable_for（5mm超は範囲外）",
+      "型番の「V2.0」表記（HSG公式は「FMW」）"
+    ],
+    "conflicts": [
+      "溶接可能板厚：HSG公式（製品シートPDF）はステンレス・炭素鋼 0.5〜7mm、アルミ・亜鉛めっき板 0.5〜5mm／ヨコハマシステムズは鉄・ステンレス 0.5〜5mm（品質推奨厚）。not_suitable_for「5mm超は範囲外」はメーカー公表値と食い違う",
+      "出力ラインナップ：HSG公式は 1.5〜2kW／3kW（1.5〜3kW）／ヨコハマシステムズは 1,000／1,500／2,000／3,000W（1,000Wあり）"
+    ]
   },
   {
     "id": "p216",
@@ -1587,14 +1839,14 @@
     "name": "YDL D50P",
     "maker_name": "YDL（国内販売：株式会社ヨコハマシステムズ）",
     "method": "ハンドヘルド",
-    "wavelength": null,
+    "wavelength": "1080nm（中心波長）",
     "output_w": 1200,
     "output_note": null,
     "thickness_note": "溶け込み深さ SUS・炭素鋼5mm／アルミ3.5mm／純銅1mm（対応板厚ではない）",
     "portability": "本体41kg未満、空冷。トーチ480g",
-    "official_url": null,
-    "source_url": "https://yokohamalaser.com/products/ydl-welding-cleaner/d/",
-    "source": "国内販売元ヨコハマシステムズのYDL Dシリーズ製品ページ",
+    "official_url": "https://dynalaserstech.com/product/dynalasers-d50-integrated-al-portable-3-in-1-smart-laser-welding-machine/",
+    "source_url": "https://dynalaserstech.com/product/dynalasers-d50-integrated-al-portable-3-in-1-smart-laser-welding-machine/",
+    "source": "Dynalasers 公式サイト（国内で YDL D シリーズとして販売されている製品と同じ仕様の製品ページ）",
     "tags": {
       "use": [],
       "material": [
@@ -1622,7 +1874,18 @@
     "is_published": true,
     "notes": "公表の数値は対応板厚ではなく溶け込み深さのため板厚タグには転用していない。メーカー公式ページは不明（国内販売元ページを掲載）。用途・板厚・環境・価格は非公開",
     "image_credit": "株式会社ヨコハマシステムズ（YDL 販売元）公式サイト（D シリーズ共通の写真）",
-    "image_source": "https://yokohamalaser.com/products/ydl-welding-cleaner/d/"
+    "image_source": "https://yokohamalaser.com/products/ydl-welding-cleaner/d/",
+    "field_sources": {
+      "output_w": "https://dynalaserstech.com/product/dynalasers-d50-integrated-al-portable-3-in-1-smart-laser-welding-machine/",
+      "portability": "https://dynalaserstech.com/product/dynalasers-d50-integrated-al-portable-3-in-1-smart-laser-welding-machine/",
+      "thickness_note": "https://dynalaserstech.com/product/dynalasers-d50-integrated-al-portable-3-in-1-smart-laser-welding-machine/",
+      "tags.material": "https://dynalaserstech.com/product/dynalasers-d50-integrated-al-portable-3-in-1-smart-laser-welding-machine/",
+      "tags.skill": "https://dynalaserstech.com/products/d-series/",
+      "suitable_for": "https://dynalaserstech.com/product/dynalasers-d50-integrated-al-portable-3-in-1-smart-laser-welding-machine/"
+    },
+    "conflicts": [
+      "入力電圧：Dynalasers 180–264VAC／ヨコハマシステムズ 200〜240VAC（掲載項目外）"
+    ]
   },
   {
     "id": "p217",
@@ -1631,14 +1894,14 @@
     "name": "YDL D60P",
     "maker_name": "YDL（国内販売：株式会社ヨコハマシステムズ）",
     "method": "ハンドヘルド",
-    "wavelength": null,
+    "wavelength": "1080nm（中心波長）",
     "output_w": 1500,
     "output_note": null,
     "thickness_note": "溶け込み深さ SUS・炭素鋼6mm／アルミ4.5mm／純銅1.5mm（対応板厚ではない）",
     "portability": "本体42kg未満、空冷。トーチ480g",
-    "official_url": null,
+    "official_url": "https://dynalaserstech.com/products/d-series/",
     "source_url": "https://yokohamalaser.com/products/ydl-welding-cleaner/d/",
-    "source": "国内販売元ヨコハマシステムズのYDL Dシリーズ製品ページ",
+    "source": "国内販売元ヨコハマシステムズのYDL Dシリーズ製品ページ（製造元 Dynalasers 公式はシリーズ情報のみ）",
     "tags": {
       "use": [],
       "material": [
@@ -1665,7 +1928,26 @@
     "is_published": true,
     "notes": "公表の数値は対応板厚ではなく溶け込み深さのため板厚タグには転用していない。メーカー公式ページは不明（国内販売元ページを掲載）。用途・板厚・環境・価格は非公開",
     "image_credit": "株式会社ヨコハマシステムズ（YDL 販売元）公式サイト（D シリーズ共通の写真）",
-    "image_source": "https://yokohamalaser.com/products/ydl-welding-cleaner/d/"
+    "image_source": "https://yokohamalaser.com/products/ydl-welding-cleaner/d/",
+    "field_sources": {
+      "output_w": "https://yokohamalaser.com/products/ydl-welding-cleaner/d/",
+      "portability": [
+        "https://yokohamalaser.com/products/ydl-welding-cleaner/d/",
+        "https://dynalaserstech.com/products/d-series/"
+      ],
+      "thickness_note": "https://yokohamalaser.com/products/ydl-welding-cleaner/d/",
+      "tags.material": "https://dynalaserstech.com/products/d-series/",
+      "tags.skill": "https://dynalaserstech.com/products/d-series/",
+      "suitable_for": [
+        "https://yokohamalaser.com/products/ydl-welding-cleaner/d/",
+        "https://dynalaserstech.com/products/d-series/"
+      ]
+    },
+    "dealer_only_fields": [
+      "output_w（1500W）",
+      "portability の本体重量（42kg未満）",
+      "thickness_note（溶け込み深さ SUS・炭素鋼6mm／アルミ4.5mm／純銅1.5mm）"
+    ]
   },
   {
     "id": "p218",
@@ -1674,14 +1956,14 @@
     "name": "YDL D70P",
     "maker_name": "YDL（国内販売：株式会社ヨコハマシステムズ）",
     "method": "ハンドヘルド",
-    "wavelength": null,
+    "wavelength": "1080nm（中心波長）",
     "output_w": 1800,
     "output_note": null,
     "thickness_note": "溶け込み深さ SUS・炭素鋼7mm／アルミ5.5mm／純銅2.5mm（対応板厚ではない）",
     "portability": "本体43kg未満、空冷。トーチ480g",
-    "official_url": null,
-    "source_url": "https://yokohamalaser.com/products/ydl-welding-cleaner/d/",
-    "source": "国内販売元ヨコハマシステムズのYDL Dシリーズ製品ページ",
+    "official_url": "https://dynalaserstech.com/product/integrated-smart-laser-handheld-welding-d70/",
+    "source_url": "https://dynalaserstech.com/product/integrated-smart-laser-handheld-welding-d70/",
+    "source": "Dynalasers 公式サイト（国内で YDL D シリーズとして販売されている製品と同じ仕様の製品ページ）",
     "tags": {
       "use": [],
       "material": [
@@ -1708,7 +1990,18 @@
     "is_published": true,
     "notes": "公表の数値は対応板厚ではなく溶け込み深さのため板厚タグには転用していない。メーカー公式ページは不明（国内販売元ページを掲載）。用途・板厚・環境・価格は非公開",
     "image_credit": "株式会社ヨコハマシステムズ（YDL 販売元）公式サイト（D シリーズ共通の写真）",
-    "image_source": "https://yokohamalaser.com/products/ydl-welding-cleaner/d/"
+    "image_source": "https://yokohamalaser.com/products/ydl-welding-cleaner/d/",
+    "field_sources": {
+      "output_w": "https://dynalaserstech.com/product/integrated-smart-laser-handheld-welding-d70/",
+      "portability": "https://dynalaserstech.com/product/integrated-smart-laser-handheld-welding-d70/",
+      "thickness_note": "https://dynalaserstech.com/product/integrated-smart-laser-handheld-welding-d70/",
+      "tags.material": "https://dynalaserstech.com/product/integrated-smart-laser-handheld-welding-d70/",
+      "tags.skill": "https://dynalaserstech.com/products/d-series/",
+      "suitable_for": "https://dynalaserstech.com/product/integrated-smart-laser-handheld-welding-d70/"
+    },
+    "conflicts": [
+      "入力電圧：Dynalasers 180–264VAC／ヨコハマシステムズ 200〜240VAC（掲載項目外）"
+    ]
   },
   {
     "id": "p219",
@@ -1723,8 +2016,8 @@
     "thickness_note": "鉄・ステンレス・アルミ 約0.5〜1.5mm（アルミ0.3mmの加工例あり）",
     "portability": "本体約32kg、空冷。メーカーは「持ち運びが簡単」としている",
     "official_url": "https://www.smartdiys.com/slw700/",
-    "source_url": "https://www.smartdiys.com/laser-welding/",
-    "source": "smartDIYs公式サイトのレーザー溶接機ラインナップ",
+    "source_url": "https://www.smartdiys.com/slw700/",
+    "source": "smartDIYs公式サイトのSLW700製品ページ",
     "tags": {
       "use": [
         "薄板接合"
@@ -1761,7 +2054,20 @@
     "is_published": true,
     "notes": "価格: 税込1,199,000円（税別109万円）",
     "image_credit": "株式会社smartDIYs 公式サイト",
-    "image_source": "https://www.smartdiys.com/slw700/"
+    "image_source": "https://www.smartdiys.com/slw700/",
+    "field_sources": {
+      "wavelength": "https://www.smartdiys.com/slw700/",
+      "output_w": "https://www.smartdiys.com/slw700/",
+      "portability": "https://www.smartdiys.com/slw700/",
+      "thickness_note": [
+        "https://www.smartdiys.com/slw700/",
+        "https://www.smartdiys.com/laser-welding/"
+      ],
+      "tags.price": "https://www.smartdiys.com/slw700/",
+      "tags.skill": "https://www.smartdiys.com/slw700/",
+      "suitable_for": "https://www.smartdiys.com/laser-welding/",
+      "not_suitable_for": "https://www.smartdiys.com/slw700/"
+    }
   },
   {
     "id": "p220",
@@ -1775,9 +2081,9 @@
     "output_note": null,
     "thickness_note": "鉄・ステンレス・アルミ 約0.5〜3mm",
     "portability": "本体約60kg、空冷。移動しながらの溶接作業に対応",
-    "official_url": "https://www.smartdiys.com/laser-welding/",
-    "source_url": "https://www.smartdiys.com/support/qa-product/slw1500/slw1500-2000/",
-    "source": "smartDIYs公式サイトのSLWシリーズ比較",
+    "official_url": "https://www.smartdiys.com/slw1500/",
+    "source_url": "https://www.smartdiys.com/slw1500/",
+    "source": "smartDIYs公式サイトのSLW1500A製品ページ",
     "tags": {
       "use": [
         "薄板接合",
@@ -1812,7 +2118,20 @@
     "is_published": true,
     "notes": "価格: 税込1,815,000円（税別165万円）。難易度は非公開",
     "image_credit": "株式会社smartDIYs 公式サイト",
-    "image_source": "https://www.smartdiys.com/laser-welding/"
+    "image_source": "https://www.smartdiys.com/laser-welding/",
+    "field_sources": {
+      "wavelength": "https://www.smartdiys.com/slw1500/",
+      "output_w": "https://www.smartdiys.com/slw1500/",
+      "portability": "https://www.smartdiys.com/slw1500/",
+      "thickness_note": "https://www.smartdiys.com/slw1500/",
+      "tags.use": "https://www.smartdiys.com/slw1500/",
+      "tags.price": "https://www.smartdiys.com/slw1500/",
+      "suitable_for": [
+        "https://www.smartdiys.com/slw1500/",
+        "https://www.smartdiys.com/laser-welding/"
+      ],
+      "not_suitable_for": "https://www.smartdiys.com/slw1500/"
+    }
   },
   {
     "id": "p221",
@@ -1825,10 +2144,10 @@
     "output_w": 2000,
     "output_note": null,
     "thickness_note": "鉄・ステンレス・アルミ 約0.5〜4.5mm（デュアルワイヤ使用時に鉄5mmの施工例あり）",
-    "portability": "本体約100kg、水冷",
-    "official_url": "https://www.smartdiys.com/laser-welding/",
-    "source_url": "https://www.smartdiys.com/support/qa-product/slw1500/slw1500-2000/",
-    "source": "smartDIYs公式サイトのSLWシリーズ比較",
+    "portability": "本体約115kg（総重量約135kg）、水冷",
+    "official_url": "https://www.smartdiys.com/slw2000/",
+    "source_url": "https://www.smartdiys.com/slw2000/",
+    "source": "smartDIYs公式サイトのSLW2000製品ページ",
     "tags": {
       "use": [
         "薄板接合",
@@ -1864,6 +2183,24 @@
     "is_published": true,
     "notes": "価格: 税込2,475,000円（税別225万円）。難易度は非公開",
     "image_credit": "株式会社smartDIYs 公式サイト",
-    "image_source": "https://www.smartdiys.com/laser-welding/"
+    "image_source": "https://www.smartdiys.com/laser-welding/",
+    "field_sources": {
+      "wavelength": "https://www.smartdiys.com/slw2000/",
+      "output_w": "https://www.smartdiys.com/slw2000/",
+      "portability": "https://www.smartdiys.com/slw2000/",
+      "thickness_note": [
+        "https://www.smartdiys.com/slw2000/",
+        "https://www.smartdiys.com/laser-welding/"
+      ],
+      "tags.use": "https://www.smartdiys.com/slw2000/",
+      "tags.price": "https://www.smartdiys.com/slw2000/",
+      "suitable_for": [
+        "https://www.smartdiys.com/slw2000/",
+        "https://www.smartdiys.com/laser-welding/"
+      ]
+    },
+    "conflicts": [
+      "本体重量：ラインナップ https://www.smartdiys.com/laser-welding/ は「100kg」「約100kg」／SLW2000製品ページは「本体115kg、フィーダー15kg、その他5kg、合計135kg」（どちらもsmartDIYs公式）。現データ portability「本体約100kg」は製品ページの値と合わない"
+    ]
   }
 ]

@@ -66,6 +66,7 @@ export function footer() {
       <li><a href="/diagnosis/">5つの質問で選ぶ${icon("chevron")}</a></li>
       <li><a href="/lineup/">機種一覧${icon("chevron")}</a></li>
       <li><a href="/articles/">選び方ガイド${icon("chevron")}</a></li>
+      <li><a href="/subsidy/">補助金・税制${icon("chevron")}</a></li>
       <li><a href="/contact/">相談・問い合わせ${icon("chevron")}</a></li>
       <li><a href="/about/">運営者情報・評価基準${icon("chevron")}</a></li>
     </ul>

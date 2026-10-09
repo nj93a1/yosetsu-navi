@@ -83,3 +83,4 @@
 @media (min-width: 600px) { .opband__cta { grid-template-columns: 1fr 1fr; } .opband__cta .btn + .btn { margin-top: 0; } }
 .opband__note { text-align: center; margin: 14px 0 0; font-size: 14px; color: #C2CAD0; }
 .home .footer { margin-top: 0; }
+.opband__list a { color: #fff; text-underline-offset: 3px; }

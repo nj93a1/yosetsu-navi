@@ -89,3 +89,10 @@ html { scroll-padding-top: 0; }
 .trybox__title { font-weight: 700; font-size: 20px; margin: 0 0 4px; }
 .trybox p { margin: 0 0 12px; }
 .trybox .btn { width: auto; display: inline-flex; padding: 10px 24px; }
+
+/* 補助金・税制ページへの入口 */
+.subsidybox { display: grid; grid-template-columns: 56px 1fr; gap: 14px; margin: 16px 0 0; padding: 20px; border-radius: 16px; background: var(--c-accent-light); }
+.subsidybox__ico { width: 56px; height: 56px; padding: 10px; border-radius: 12px; background: var(--c-accent); color: var(--c-accent-text); }
+.subsidybox__title { font-weight: 700; font-size: 20px; margin: 0 0 4px; }
+.subsidybox p { margin: 0 0 12px; }
+.subsidybox .btn { width: auto; display: inline-flex; padding: 10px 24px; }

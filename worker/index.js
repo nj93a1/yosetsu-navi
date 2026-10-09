@@ -267,6 +267,7 @@ async function productPage(env, slug) {
   <section class="subsec" id="fit"><h2>${kw("向いている用途・向いていない用途")}</h2>
     <div class="fit"><div class="ok"><h3>${kw("向いている")}</h3><ul>${li(p.suitable_for)}</ul></div><div class="ng"><h3>${kw("向いていない")}</h3><ul>${li(p.not_suitable_for)}</ul></div></div></section>
   ${p.handled_by_operator ? "" : `<aside class="trybox">${icon("handheld", "ico trybox__ico")}<div><p class="trybox__title">${kw("実機で確かめたいとき")}</p><p>${kw("運営元が取り扱う機種で、テスト溶接やデモを相談できます。仕上がりを比べる参考にお使いください。")}</p><a class="btn" href="/contact/?type=test&amp;product=${esc(p.slug)}">${kw("テスト溶接・デモを相談する")}</a></div></aside>`}
+  <aside class="subsidybox">${icon("yen", "ico subsidybox__ico")}<div><p class="subsidybox__title">${kw("補助金・税制で導入費を抑える")}</p><p>${kw("設備投資に使われることの多い補助金・助成金と、即時償却などの税制をまとめています。")}</p><a class="btn" href="/subsidy/">${kw("補助金・税制の一覧を見る")}</a></div></aside>
   ${altsSection}
   <section class="subsec" id="links"><h2>${kw("メーカー公式・情報源")}</h2>
     ${links ? `<ul class="pnav">${links}</ul>` : ""}
