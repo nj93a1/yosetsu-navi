@@ -1,7 +1,7 @@
 // 相談・問い合わせ。診断結果や商品ページから来たときは、その内容を「一緒に送られる内容」として表示する。
 // 送信先は未確定のため、デモでは確認画面までで止める（送信したように見せない）。
-import { mountChrome } from "./partials.js?v=13";
-import { productSlug } from "./scoring.js?v=13";
+import { mountChrome } from "./partials.js?v=14";
+import { productSlug } from "./scoring.js?v=14";
 
 mountChrome({ current: "/contact/" });
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));

@@ -26,7 +26,8 @@ function allAnswers() {
 const ALL = allAnswers();
 const RESULTS = ALL.map((ans) => ({ ans, r: runDiagnosis(config, published, ans) }));
 const has36 = (p) => (p.tags.thickness || []).includes("3〜6mm");
-const others = published.filter((p) => !p.handled_by_operator); // 他社機だけ（条件の置き換えなど、該当機種が無いときの動きの確認用）
+// 条件の置き換え・緩和の動きを確かめるための固定セット（最初に掲載した他社21機種。厚物・混在・チタン×厚物を公開している機種が無い）
+const base = published.filter((p) => p.id >= "p201" && p.id <= "p221");
 
 test("厚物（6mm以上）を公開している機種があれば、置き換えずにそのまま一致として出す", () => {
   const r = runDiagnosis(config, published, { q2_thickness: "thick" });
@@ -34,9 +35,10 @@ test("厚物（6mm以上）を公開している機種があれば、置き換�
   assert.ok(r.results[0].matched && (r.results[0].product.tags.thickness || []).includes("6mm以上"));
 });
 
-test("公開商品は24点（他社21＋運営元の取り扱い3）・スラッグ重複なし・公式か情報源のURLあり", () => {
-  assert.equal(published.length, 24);
-  assert.equal(published.filter((p) => p.handled_by_operator).length, 3);
+test("公開商品は87点（他社74＋運営元の取り扱い13）・スラッグ重複なし・公式か情報源のURLあり", () => {
+  assert.equal(published.length, 87);
+  assert.equal(published.filter((p) => p.handled_by_operator).length, 13);
+  assert.equal(base.length, 21);
   assert.equal(new Set(published.map(productSlug)).size, published.length);
   assert.ok(published.every((p) => p.official_url || p.source_url));
 });
@@ -93,7 +95,7 @@ test("ほぼ全項目が非公開の機種は「条件に合う」と数えな�
 });
 
 test("完全一致ゼロ → 条件を1つ緩めて、緩めた条件を明示（チタン×厚物 → 板厚を緩める）", () => {
-  const r = runDiagnosis(config, published, {
+  const r = runDiagnosis(config, base, {
     q1_material: "ti", q2_thickness: "thick", q3_skill: "beginner", q4_environment: "outdoor", q5_budget: "b100_200",
   });
   assert.equal(r.relaxedAxis, "thickness");
@@ -126,8 +128,8 @@ test("緩和する条件は、外したときに公開情報で合う機種が�
 test("厚物・混在に合う機種が無いとき、条件を外す前に「近い条件」（3〜6mm 等）に置き換えて探し、その旨を出す", () => {
   assert.equal(config.relax.preferBeforeDrop, true);
   for (const q2 of ["thick", "mixed"]) {
-    // 「近い条件」の置き換えは、厚物・混在を公開している機種が無いときの動き。運営元の取り扱い機（6mm以上・3区分を公開）を除いた他社機で確かめる
-    const r = runDiagnosis(config, others, {
+    // 「近い条件」の置き換えは、厚物・混在を公開している機種が無いときの動き。固定セット base で確かめる
+    const r = runDiagnosis(config, base, {
       q1_material: "steel", q2_thickness: q2, q3_skill: "beginner", q4_environment: "indoor", q5_budget: "b200_400",
     });
     assert.equal(r.relaxedAxis, null, q2);
@@ -236,7 +238,7 @@ test("複数素材・混在板厚 は min_count で判定（混在は板厚3区�
   const mixed = config.questions.find((q) => q.id === "q2_thickness").options.find((o) => o.id === "mixed");
   const p203 = published.find((p) => p.id === "p203"); // 板厚2区分（0.5〜3mm・3〜6mm）のアマダ
   assert.equal(optionMatches({ ...mixed, axis: "thickness" }, p203), false);
-  const r = runDiagnosis(config, others, { q1_material: "multi", q2_thickness: "mixed" });
+  const r = runDiagnosis(config, base, { q1_material: "multi", q2_thickness: "mixed" });
   assert.equal(r.preferredAxis, "thickness");
   assert.ok(r.results[0].matched);
   assert.match(r.results[0].reason, /幅広い素材に対応、薄板と3〜6mm に対応/);

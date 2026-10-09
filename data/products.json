@@ -2832,5 +2832,3520 @@
       "見積もり・導入の相談に対応します",
       "補助金・助成金の活用支援チームが導入を支援します"
     ]
+  },
+  {
+    "id": "p222",
+    "maker_slug": "kokyo",
+    "model_slug": "fl-aw-1500",
+    "name": "FL-AW-1500",
+    "maker_name": "株式会社光響",
+    "method": "ハンドヘルド",
+    "wavelength": null,
+    "output_w": 1500,
+    "output_note": "定格レーザ出力（CW）・レーザー平均出力。最大レーザ出力（パルスピーク）2500W",
+    "portability": "本体39kg（276×667×542mm）、空冷（チラー不要）、キャスター付き、ハンドトーチ680g",
+    "thickness_note": "溶接能力テーブル例（1500W）: ステンレス／鋼板 厚さ0.6〜5mm（溶接深度0.2〜1.5mm）、純アルミニウム 厚さ0.5〜2mm（溶接深度0.3〜0.8mm）。製品ページの比較表では「アルミニウムで4.0mmまで可能」",
+    "official_url": "https://www.symphotony.com/welder/flaw1500/",
+    "source_url": "https://www.symphotony.com/welder/flaw1500/",
+    "source": "株式会社光響 公式サイト",
+    "tags": {
+      "use": [
+        "薄板接合",
+        "補修"
+      ],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ"
+      ],
+      "thickness": [
+        "0.5〜3mm",
+        "3〜6mm"
+      ],
+      "environment": [],
+      "price": [],
+      "skill": []
+    },
+    "comment": "本体39kg・空冷の1,500W機で、パルスピーク出力は2,500Wです。ガルバノモーター内蔵のウォブリング機能（幅0〜4mm）を備えています。",
+    "suitable_for": [
+      "板金溶接・薄板溶接・パイプ溶接",
+      "溶接修理・金型補修",
+      "ステンレス鋼板・鉄板・アルミニウム板の溶接",
+      "突き合わせ・コーナー・T・重ね溶接、スポット・シーム・ステッチ・テイラー溶接"
+    ],
+    "not_suitable_for": [],
+    "features": [
+      "1500W機で空冷式を採用し、本体重量39kg・容積0.1㎥（チラー不要）",
+      "冷却水チューブ不要のハンドトーチは重量680g",
+      "ガルバノモーター内蔵のウォブリング機能（幅0〜4mm、周波数0〜300Hz）",
+      "レーザー条件設定数32種類、スロープアップ／ダウン機能",
+      "トーチ先端とアース端子が通電した時のみ出射するインターロック回路"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/kokyo-fl-aw-1500.png",
+    "image_credit": "株式会社光響 公式サイト",
+    "image_source": "https://www.symphotony.com/welder/flaw1500/",
+    "country": "日本",
+    "found_via": "metree / 日本ハンドレーザ溶接協会",
+    "field_sources": {
+      "output_w": "https://www.symphotony.com/welder/flaw1500/",
+      "output_note": "https://www.symphotony.com/welder/flaw1500/",
+      "portability": "https://www.symphotony.com/press-release/fl-aw-1500/",
+      "thickness_note": "https://www.symphotony.com/wp-content/uploads/FL-AW-1500_0702.pdf",
+      "material": "https://www.symphotony.com/welder/flaw1500/",
+      "use": "https://www.symphotony.com/welder/flaw1500/",
+      "features": "https://www.symphotony.com/press-release/fl-aw-1500/",
+      "price": "https://www.symphotony.com/welder/flaw1500/",
+      "power_supply": "https://www.symphotony.com/welder/"
+    },
+    "is_published": true,
+    "notes": "波長は公式に記載なし。製品ページに「価格 198万円（先着2台限定価格）」の表示あり（https://www.symphotony.com/welder/flaw1500/）。通常価格はプレスリリースで「お問い合わせください」のため price タグは空にした（限定価格を採るなら 100〜200万円）。サブスク月額20万円（税抜）、レンタル2週間から。電源 単相200〜220V、消費電力6kW（レーザー溶接機ホームの表）。溶接用窒素ガスが必要。同社の FL-HP3-1500 は中古1台限りの販売のため対象外。「業界最軽量」は同社調べ（2022年8月時点、空冷1500W機の比較）"
+  },
+  {
+    "id": "p223",
+    "maker_slug": "gunkyo",
+    "model_slug": "gunyu-weld",
+    "name": "グンユーウェルド",
+    "maker_name": "株式会社群協製作所",
+    "method": "ハンドヘルド",
+    "wavelength": "1075nm ±10nm",
+    "output_w": 1500,
+    "output_note": "定格出力（CW）。500W／1000W／1500W のラインナップ（型式表記 G-500/1000/1500-GU）",
+    "portability": "質量210kg（冷却水含まず）、W555×D1049×H1060mm、水冷タイプ",
+    "thickness_note": "最大加工板厚：アルミ3mm、SUS6mm、鉄6mm（1500W）。スイング機能で最大0.3mmの隙間まで溶接可",
+    "official_url": "https://www.gunkyo.co.jp/gunyu_weld/",
+    "source_url": "https://www.gunkyo.co.jp/gunyu_weld/",
+    "source": "株式会社群協製作所 公式サイト",
+    "tags": {
+      "use": [
+        "薄板接合",
+        "厚物",
+        "異材接合"
+      ],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ",
+        "チタン"
+      ],
+      "thickness": [
+        "0.5〜3mm",
+        "3〜6mm"
+      ],
+      "environment": [],
+      "price": [],
+      "skill": [
+        "未経験可"
+      ]
+    },
+    "comment": "質量210kg（冷却水含まず）・水冷の1,500W機です。最大加工板厚はSUS・鉄6mm、アルミ3mmで、トーチを材料に接触させたまま溶接します。",
+    "suitable_for": [
+      "アルミ・鉄（ボンデ含む）・SUS・チタンの溶接",
+      "網の溶接",
+      "厚み違い・異素材の溶接（組み合わせによる）",
+      "薄板の焼け・歪みを抑えた溶接"
+    ],
+    "not_suitable_for": [],
+    "features": [
+      "シングルモードのファイバーレーザ（波長1075nm±10nm）",
+      "スイング機能でレーザ光線を左右に振り、最大0.3mmの隙間を溶接可能（振り幅・周波数は任意設定）",
+      "パルスモード（ショート／ロング）と CW モード、最大32条件を設定可能",
+      "ハンドトーチを材料に接触させたまま溶接する方式で、メーカーは初心者でも簡単と案内",
+      "修理部品を在庫し、修理に時間を要する場合は代替機を手配"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/placeholder.svg",
+    "image_credit": null,
+    "image_source": null,
+    "country": "日本",
+    "found_via": "metree / 日本ハンドレーザ溶接協会",
+    "field_sources": {
+      "output_w": "https://www.gunkyo.co.jp/gunyu_weld/",
+      "output_note": "https://www.gunkyo.co.jp/gunyu_weld/",
+      "wavelength": "https://www.gunkyo.co.jp/gunyu_weld/",
+      "portability": "https://www.gunkyo.co.jp/gunyu_weld/",
+      "thickness_note": "https://www.gunkyo.co.jp/gunyu_weld/",
+      "material": "https://www.gunkyo.co.jp/gunyu_weld/",
+      "skill": "https://www.gunkyo.co.jp/gunyu_weld/",
+      "features": "https://www.gunkyo.co.jp/gunyu_weld/"
+    },
+    "is_published": true,
+    "notes": "価格は非公開。本体単独の写真が無く、公式の本体写真は文字入りバナーのみ（https://www.gunkyo.co.jp/wp/wp-content/uploads/2023/09/gunyuweld-banner2.png、型式 G-500/1000/1500-GU の表記あり）のため image_url は null。電源 単相AC200V±10%、最大皮相電力3.3kVA/4.94kVA、使用環境 外気温5〜30℃。Metoree の掲載文は「最大加工板厚：SUS3mm、アルミ2mm、鉄3mm」と古い値で、公式ページ（1500Wで SUS・鉄6mm、アルミ3mm）を採用。冷却方式は公式に「水冷」の明記はないが、質量が「冷却水含まず」と表記され、空冷タイプのページで「従来の水冷タイプ」と記載。会社は群馬県高崎市"
+  },
+  {
+    "id": "p224",
+    "maker_slug": "physical-photon",
+    "model_slug": "ppl-1500h",
+    "name": "PPL-1500H",
+    "maker_name": "Physical Photon 株式会社",
+    "method": "ハンドヘルド",
+    "wavelength": "1064nm",
+    "output_w": 1500,
+    "output_note": "最大パワー。ハンディトーチ式は PPL-1000H（1000W）／PPL-1500H（1500W）／PPL-2000H（2000W）／PPL-3000H（3000W）のラインナップ",
+    "portability": "本体150kg（520×850×962mm、PPL-1000H〜2000H）、ラック内蔵式水冷チラー、ヘッド重量約1.2kg、転送ファイバ長 最大10m",
+    "thickness_note": null,
+    "official_url": "https://www.physicalphoton.com/products/choosefromlasertypes/fiber_laser/handytorchfiberlaserwelder",
+    "source_url": "https://www.physicalphoton.com/products/choosefromlasertypes/fiber_laser/handytorchfiberlaserwelder",
+    "source": "Physical Photon 株式会社 公式サイト",
+    "tags": {
+      "use": [],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ"
+      ],
+      "thickness": [],
+      "environment": [],
+      "price": [],
+      "skill": []
+    },
+    "comment": "本体150kg・水冷チラー内蔵の1,500W機です。ワブリングは径最大5mmまで可変で、ワイヤ送り装置をオプションで用意しています。",
+    "suitable_for": [
+      "TIG等のアーク系手動溶接の置き換え",
+      "SUS・鉄の溶接、アルミ溶接（なめ付け・フィラ）"
+    ],
+    "not_suitable_for": [],
+    "features": [
+      "ハンディトーチ式専用のファイバーレーザ溶接機（1000〜3000W）",
+      "ワブリング（ビーム振らし機構）は径可変（最大5mm）・速度可変",
+      "連続波＆変調パルスの発振モード",
+      "ワイヤ送り装置をオプションで用意（アルミ・SUSワイヤに対応）",
+      "松戸事業所に1500Wのデモ機があり、サンプル作成などのデモが可能"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/physical-photon-ppl-1500h.jpg",
+    "image_credit": "Physical Photon 株式会社 公式サイト",
+    "image_source": "https://www.physicalphoton.com/products/choosefromlasertypes/fiber_laser/handytorchfiberlaserwelder",
+    "country": "日本",
+    "found_via": "metree / 日本ハンドレーザ溶接協会 / ウエルディングショー",
+    "field_sources": {
+      "output_w": "https://www.physicalphoton.com/products/choosefromlasertypes/fiber_laser/handytorchfiberlaserwelder",
+      "output_note": "https://www.physicalphoton.com/products/choosefromlasertypes/fiber_laser/handytorchfiberlaserwelder",
+      "wavelength": "https://www.physicalphoton.com/products/choosefromlasertypes/fiber_laser/handytorchfiberlaserwelder",
+      "portability": "https://www.physicalphoton.com/products/choosefromlasertypes/fiber_laser/handytorchfiberlaserwelder",
+      "material": "https://www.physicalphoton.com/wp/wp-content/uploads/2022/01/%E3%83%8F%E3%83%B3%E3%83%87%E3%82%A3%E3%83%88%E3%83%BC%E3%83%81%E4%BB%95%E6%A7%981.5kW%E3%83%95%E3%82%A1%E3%82%A4%E3%83%90%E3%83%BC%E3%83%AC%E3%83%BC%E3%82%B6%E8%B3%87%E6%96%992.pdf",
+      "features": "https://www.physicalphoton.com/products/choosefromlasertypes/fiber_laser/handytorchfiberlaserwelder"
+    },
+    "is_published": true,
+    "notes": "価格・対応板厚は非公開。電源 単相200V（PPL-1000H〜2000H）、三相380V（PPL-3000H）、消費電力 PPL-1500H 6400W。PPL-3000H は本体200kg（520×950×1107mm）。2022年の資料PDF（https://www.physicalphoton.com/wp/wp-content/uploads/2022/01/%E3%83%8F%E3%83%B3%E3%83%87%E3%82%A3%E3%83%88%E3%83%BC%E3%83%81%E4%BB%95%E6%A7%981.5kW%E3%83%95%E3%82%A1%E3%82%A4%E3%83%90%E3%83%BC%E3%83%AC%E3%83%BC%E3%82%B6%E8%B3%87%E6%96%992.pdf）は 1000W／1500W 機について本体220kg・630×880×1160mm、転送ファイバ7m、冷却「ラック内蔵式空冷チラー」、消費電力 1.5kW機 <6000W と現行ページと異なる値のため、現行の製品ページの値を採用。画像は製品ページの本体・トーチ写真（説明の引き出し線入り）。製造国は不明のため country は本社所在国（千葉県松戸市）"
+  },
+  {
+    "id": "p225",
+    "maker_slug": "aim",
+    "model_slug": "afl-1500mini",
+    "name": "AFL-1500mini",
+    "maker_name": "株式会社エイム",
+    "method": "ハンドヘルド",
+    "wavelength": null,
+    "output_w": 1500,
+    "output_note": null,
+    "portability": "空冷（重量は非公開。公式は「軽量小さいながらも1.5KW」と記載）、キャスター付き",
+    "thickness_note": "SUS t0.1〜t4.0、アルミ t3.0 までの溶接に対応（公表値）。溶接速度例: SUS t4.0 140mm/min、SPC t3.2 300mm/min、AL t3.0 200mm/min（いずれも突合せ溶接・裏波あり）",
+    "official_url": "https://aimcorp.co.jp/yag/",
+    "source_url": "https://aimcorp.co.jp/yag/",
+    "source": "株式会社エイム 公式サイト",
+    "tags": {
+      "use": [
+        "薄板接合",
+        "自動化"
+      ],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ"
+      ],
+      "thickness": [
+        "0.5mm未満",
+        "0.5〜3mm",
+        "3〜6mm"
+      ],
+      "environment": [],
+      "price": [],
+      "skill": []
+    },
+    "comment": "空冷の1,500W機で、薄物溶接向けのシングルモード機です。SUSはt0.1〜4.0mm、アルミはt3.0mmまでの溶接に対応しています。",
+    "suitable_for": [
+      "SUS材・鉄材の薄物溶接",
+      "多品種・少量の製品",
+      "アルミ（t3.0まで）の溶接",
+      "ロボットとの連動（治具設計製作も対応）"
+    ],
+    "not_suitable_for": [],
+    "features": [
+      "薄物溶接に特化した 1500W シングルモードのハンディトーチタイプ",
+      "ガルバノスキャナー搭載トーチでビーム幅を0〜4mmまで可変（横一文字）。低出力でクリーナーのようにも使える",
+      "スポット径20μm のレーザーで局所的に加熱し、溶接歪を軽減",
+      "溶接条件のメモリ34件",
+      "空冷で立ち上げ時間が短い"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/aim-afl-1500mini.jpg",
+    "image_credit": "株式会社エイム 公式サイト",
+    "image_source": "https://aimcorp.co.jp/yag/",
+    "country": "日本",
+    "found_via": "metree / 日本ハンドレーザ溶接協会",
+    "field_sources": {
+      "output_w": "https://aimcorp.co.jp/yag/",
+      "portability": "https://aimcorp.co.jp/yag/",
+      "thickness_note": "https://aimcorp.co.jp/yag/",
+      "material": "https://aimcorp.co.jp/yag/",
+      "use": "https://aimcorp.co.jp/yag/",
+      "features": "https://aimcorp.co.jp/yag/"
+    },
+    "is_published": true,
+    "notes": "価格・波長・重量・電源は非公開（公式ページの仕様表は AFL-800／1000／1500／4000R のみで、AFL-1500mini の仕様表は無い）。空冷はページ内の動画紹介文「空冷なので立ち上げ時間もスピーディー」による。溶加棒不要で「熟練の溶接工でなくても簡単に溶接できます」との記載はあるが、初心者・未経験者向けの明記ではないため skill は空。同社には水冷の AFL-1500（平均最大出力1500W、384kg、AC200V三相、5kWチラー内蔵）もある。会社は東京都青梅市"
+  },
+  {
+    "id": "p226",
+    "maker_slug": "aim",
+    "model_slug": "afl-4000r",
+    "name": "AFL-4000R",
+    "maker_name": "株式会社エイム",
+    "method": "ハンドヘルド",
+    "wavelength": null,
+    "output_w": 4000,
+    "output_note": "平均最大出力 センター1.5kW＋リング2.5kW（リングモード。センター・リングの出力を個別に設定可能）",
+    "portability": "本体380kg（700W×1,000D×1,700Hmm）、水冷（チラー12.2kW）、ファイバー長10m",
+    "thickness_note": null,
+    "official_url": "https://aimcorp.co.jp/yag/",
+    "source_url": "https://aimcorp.co.jp/yag/",
+    "source": "株式会社エイム 公式サイト",
+    "tags": {
+      "use": [],
+      "material": [
+        "鉄"
+      ],
+      "thickness": [],
+      "environment": [],
+      "price": [],
+      "skill": []
+    },
+    "comment": "本体380kg・水冷の4,000Wリングモード機です。センターとリングの出力を個別に設定でき、亜鉛メッキ鋼板などブローしやすい材質に使えます。",
+    "suitable_for": [
+      "亜鉛メッキ鋼板などブローしやすい材質の溶接",
+      "ビード幅を広げたい溶接"
+    ],
+    "not_suitable_for": [],
+    "features": [
+      "4000W ハンディトーチタイプのリングモードファイバーレーザー溶接機",
+      "センターとリングのレーザー出力を個別に設定でき、材質や板厚に応じた設定が可能",
+      "スパッタが上がりにくく、ポロシティーなどの発生を抑える",
+      "センターコア径22μm・リング170μm で、ビード幅を広げられる"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/aim-afl-4000r.jpg",
+    "image_credit": "株式会社エイム 公式サイト",
+    "image_source": "https://aimcorp.co.jp/yag/",
+    "country": "日本",
+    "found_via": "metree / 日本ハンドレーザ溶接協会",
+    "field_sources": {
+      "output_w": "https://aimcorp.co.jp/yag/",
+      "output_note": "https://aimcorp.co.jp/yag/",
+      "portability": "https://aimcorp.co.jp/yag/",
+      "material": "https://aimcorp.co.jp/yag/",
+      "features": "https://aimcorp.co.jp/yag/"
+    },
+    "is_published": true,
+    "notes": "価格・波長・対応板厚は非公開。電源 AC200V三相・電源容量13kVA、CW／パルス（10〜200Hz）、トーチ φ32×170mm。発振器のセンター／リング出力はカスタマイズ可能（例: センター1kW＋リング1.5kW、センター1.5kW＋リング2kW）で、output_w は仕様表の合計値。トップページで「新製品 リングモードファイバーレーザー溶接機 販売開始」と案内。画像は本体と外付けチラーが並んだ写真"
+  },
+  {
+    "id": "p227",
+    "maker_slug": "ipg",
+    "model_slug": "lightweld-1500-xr",
+    "name": "LightWELD 1500 XR",
+    "maker_name": "IPG Photonics（国内：IPGフォトニクスジャパン株式会社）",
+    "method": "ハンドヘルド",
+    "wavelength": "1070nm",
+    "output_w": 1500,
+    "output_note": "レーザ出力（最大）",
+    "portability": "空冷（本体重量・寸法は公式ページに記載なし）",
+    "thickness_note": "溶接能力（公表値）：鋼 4ゲージ（0.234インチ≒5.9mm）まで、アルミ3・5系 3ゲージ（0.229インチ≒5.8mm）まで、アルミ6系 4ゲージ（0.204インチ≒5.2mm）まで、ニッケル合金・チタン 6ゲージ（0.203インチ≒5.2mm）まで、銅 12ゲージ（0.081インチ≒2.1mm）まで",
+    "official_url": "https://www.ipgphotonics.com/ja/products/lightweld/lightweld-handheld-laser-welding-and-cleaning",
+    "source_url": "https://www.ipgphotonics.com/ja/products/lightweld/lightweld-handheld-laser-welding-and-cleaning",
+    "source": "IPG Photonics 公式サイト（日本語）",
+    "tags": {
+      "use": [
+        "薄板接合",
+        "厚物",
+        "異材接合"
+      ],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ",
+        "チタン",
+        "銅"
+      ],
+      "thickness": [
+        "0.5〜3mm",
+        "3〜6mm"
+      ],
+      "environment": [],
+      "price": [],
+      "skill": [
+        "未経験可"
+      ]
+    },
+    "comment": "空冷の1,500W機で、溶接前後のレーザークリーニング機能を備えています。公表の溶接能力は鋼約5.9mm、銅約2.1mmまでです。",
+    "suitable_for": [
+      "ステンレス・亜鉛メッキ鋼・軟鋼・アルミ・ニッケル合金・チタン・銅の溶接",
+      "銅とステンレスやアルミなどの異種金属、厚みの異なる部品の溶接",
+      "垂直・逆さなどの姿勢溶接",
+      "溶接前の酸化物・錆・塗料・油脂の除去、溶接後の焼け除去"
+    ],
+    "not_suitable_for": [],
+    "features": [
+      "溶接前後のレーザークリーニング機能（最大ピーク出力2500Wのパルス洗浄、1パスで最大0.6インチ幅）",
+      "100を超える溶接・クリーニングのプリセットと25のユーザープリセット",
+      "ウォブル溶接を内蔵（最大0.2インチ≒5mm、最大300Hz）",
+      "空冷で最大2000Wまでデューティサイクル100%",
+      "オプションのワイヤー送給パッケージ（ワイヤー径0.8〜1.6mm）"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/ipg-lightweld-1500-xr.png",
+    "image_credit": "IPG Photonics 公式サイト",
+    "image_source": "https://www.ipgphotonics.com/ja/products/lightweld/lightweld-handheld-laser-welding-and-cleaning",
+    "country": "米国",
+    "found_via": "metree / ウエルディングショー / Photonix",
+    "field_sources": {
+      "output_w": "https://www.ipgphotonics.com/ja/products/lightweld/lightweld-handheld-laser-welding-and-cleaning",
+      "thickness_note": "https://www.ipgphotonics.com/ja/products/lightweld/lightweld-handheld-laser-welding-and-cleaning",
+      "wavelength": "https://www.lightweld.com/handheld-laser-welder/",
+      "portability": "https://www.ipgphotonics.com/ja/products/lightweld/lightweld-handheld-laser-welding-and-cleaning",
+      "material": "https://www.ipgphotonics.com/ja/products/lightweld/lightweld-handheld-laser-welding-and-cleaning/capabilities",
+      "use": "https://www.ipgphotonics.com/ja/products/lightweld/lightweld-handheld-laser-welding-and-cleaning/faq",
+      "skill": "https://www.ipgphotonics.com/ja/products/lightweld/lightweld-handheld-laser-welding-and-cleaning/faq",
+      "features": "https://www.ipgphotonics.com/ja/products/lightweld/lightweld-handheld-laser-welding-and-cleaning/capabilities"
+    },
+    "is_published": true,
+    "notes": "価格は非公開（日本語ページは見積もり依頼）。波長は公式ページの仕様欄に記載がなく、IPG の LightWELD サイトの安全ガイド（https://www.lightweld.com/handheld-laser-welder/）にある「1070 nm の波長に対応した保護具」の記載による。本体重量・寸法・電源などの詳細仕様は LightWELD ガイド（フォーム登録でダウンロード）にあり、公開ページでは確認できなかった。板厚は公式のインチ表記をミリに換算（1インチ=25.4mm、小数第1位）。FAQ に「初めてのユーザーでもわずか数時間で高品質の溶接」とある。シリーズには LightWELD 1000（1000Wまで、鋼0.156インチまで）もある。1500 XR の板厚は概要ページの「LightWELD製品の比較」表による（能力ページは 2000 XR と 1000 のみ掲載）。"
+  },
+  {
+    "id": "p228",
+    "maker_slug": "ipg",
+    "model_slug": "lightweld-2000-xr",
+    "name": "LightWELD 2000 XR",
+    "maker_name": "IPG Photonics（国内：IPGフォトニクスジャパン株式会社）",
+    "method": "ハンドヘルド",
+    "wavelength": "1070nm",
+    "output_w": 2000,
+    "output_note": "レーザ出力（最大）",
+    "portability": "空冷（本体重量・寸法は公式ページに記載なし）",
+    "thickness_note": "溶接能力（公表値）：ステンレス・亜鉛メッキ鋼・軟鋼 0.313インチ（≒7.9mm）まで、アルミ3・5系 0.325インチ（≒8.3mm）まで、アルミ6系 0.229インチ（≒5.8mm）まで、ニッケル合金 0.281インチ（≒7.1mm）まで、チタン 0.234インチ（≒5.9mm）まで、銅 0.129インチ（≒3.3mm）まで",
+    "official_url": "https://www.ipgphotonics.com/ja/products/lightweld/lightweld-handheld-laser-welding-and-cleaning",
+    "source_url": "https://www.ipgphotonics.com/ja/products/lightweld/lightweld-handheld-laser-welding-and-cleaning",
+    "source": "IPG Photonics 公式サイト（日本語）",
+    "tags": {
+      "use": [
+        "薄板接合",
+        "厚物",
+        "異材接合"
+      ],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ",
+        "チタン",
+        "銅"
+      ],
+      "thickness": [
+        "0.5〜3mm",
+        "3〜6mm",
+        "6mm以上"
+      ],
+      "environment": [],
+      "price": [],
+      "skill": [
+        "未経験可"
+      ]
+    },
+    "comment": "空冷の2,000W機で、溶接前後のレーザークリーニング機能を備えています。公表の溶接能力はステンレス・軟鋼約7.9mm、銅約3.3mmまでです。",
+    "suitable_for": [
+      "ステンレス・亜鉛メッキ鋼・軟鋼・アルミ・ニッケル合金・チタン・銅の溶接",
+      "銅とステンレスやアルミなどの異種金属、厚みの異なる部品の溶接",
+      "垂直・逆さなどの姿勢溶接",
+      "溶接前の酸化物・錆・塗料・油脂の除去、溶接後の焼け除去"
+    ],
+    "not_suitable_for": [],
+    "features": [
+      "溶接前後のレーザークリーニング機能（最大ピーク出力2500Wのパルス洗浄、1パスで最大0.6インチ幅）",
+      "100を超える溶接・クリーニングのプリセットと25のユーザープリセット",
+      "ウォブル溶接を内蔵（最大0.2インチ≒5mm、最大300Hz）",
+      "空冷で最大2000Wまでデューティサイクル100%",
+      "オプションのワイヤー送給パッケージ（ワイヤー径0.8〜1.6mm）"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/ipg-lightweld-2000-xr.png",
+    "image_credit": "IPG Photonics 公式サイト",
+    "image_source": "https://www.ipgphotonics.com/ja/products/lightweld/lightweld-handheld-laser-welding-and-cleaning",
+    "country": "米国",
+    "found_via": "metree / ウエルディングショー / Photonix",
+    "field_sources": {
+      "output_w": "https://www.ipgphotonics.com/ja/products/lightweld/lightweld-handheld-laser-welding-and-cleaning",
+      "thickness_note": "https://www.ipgphotonics.com/ja/products/lightweld/lightweld-handheld-laser-welding-and-cleaning/capabilities",
+      "wavelength": "https://www.lightweld.com/handheld-laser-welder/",
+      "portability": "https://www.ipgphotonics.com/ja/products/lightweld/lightweld-handheld-laser-welding-and-cleaning",
+      "material": "https://www.ipgphotonics.com/ja/products/lightweld/lightweld-handheld-laser-welding-and-cleaning/capabilities",
+      "use": "https://www.ipgphotonics.com/ja/products/lightweld/lightweld-handheld-laser-welding-and-cleaning/faq",
+      "skill": "https://www.ipgphotonics.com/ja/products/lightweld/lightweld-handheld-laser-welding-and-cleaning/faq",
+      "features": "https://www.ipgphotonics.com/ja/products/lightweld/lightweld-handheld-laser-welding-and-cleaning/capabilities"
+    },
+    "is_published": true,
+    "notes": "価格は非公開（日本語ページは見積もり依頼）。波長は公式ページの仕様欄に記載がなく、IPG の LightWELD サイトの安全ガイド（https://www.lightweld.com/handheld-laser-welder/）にある「1070 nm の波長に対応した保護具」の記載による。本体重量・寸法・電源などの詳細仕様は LightWELD ガイド（フォーム登録でダウンロード）にあり、公開ページでは確認できなかった。板厚は公式のインチ表記をミリに換算（1インチ=25.4mm、小数第1位）。FAQ に「初めてのユーザーでもわずか数時間で高品質の溶接」とある。シリーズには LightWELD 1000（1000Wまで、鋼0.156インチまで）もある。"
+  },
+  {
+    "id": "p229",
+    "maker_slug": "fanatec",
+    "model_slug": "4-0-pro-genx",
+    "name": "FANATEC 4.0 Pro GenX",
+    "maker_name": "FANUCI（国内正規代理店：株式会社共和）",
+    "method": "ハンドヘルド",
+    "wavelength": "1080nm ±10nm",
+    "output_w": 1500,
+    "output_note": "レーザー出力。FANATEC-1000W／1500W／2000W／3000W のラインナップ（代表値1500W）",
+    "portability": "本体270kg（W805×D1183×H1042mm）、3000Wタイプは330kg（W880×D1290×H1185mm）、水冷（内蔵ラジエター）、トーチヘッド約1000g、ケーブル7m（特注で15m、1000W除く）",
+    "thickness_note": "最大加工板厚：SUS8mm、アルミ6mm、鉄8mm（3000W）。溶接推奨条件表の板厚範囲：1000W は炭素鋼・SUS 0.5〜2.0mm／アルミ1.0〜1.5mm、1500W は炭素鋼・SUS 1.0〜4.0mm／アルミ2.0〜3.5mm、2000W は炭素鋼・SUS 1.0〜5.0mm／アルミ2.0〜4.0mm、3000W は炭素鋼・SUS 1.0〜8.0mm／アルミ1.0〜6.0mm",
+    "official_url": "https://kyowa-ctc.co.jp/technical_info/%e3%83%95%e3%82%a1%e3%82%a4%e3%83%90%e3%83%bc%e3%83%ac%e3%83%bc%e3%82%b6%e3%83%bc%e6%ba%b6%e6%8e%a5%e6%a9%9f%e3%83%8f%e3%83%b3%e3%83%89%e3%83%88%e3%83%bc%e3%83%81%e5%9e%8b/",
+    "source_url": "https://kyowa-ctc.co.jp/technical_info/%e3%83%95%e3%82%a1%e3%82%a4%e3%83%90%e3%83%bc%e3%83%ac%e3%83%bc%e3%82%b6%e3%83%bc%e6%ba%b6%e6%8e%a5%e6%a9%9f%e3%83%8f%e3%83%b3%e3%83%89%e3%83%88%e3%83%bc%e3%83%81%e5%9e%8b/",
+    "source": "株式会社共和 公式サイト（FANATEC 国内正規代理店）",
+    "tags": {
+      "use": [
+        "薄板接合",
+        "厚物",
+        "異材接合"
+      ],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ",
+        "チタン",
+        "銅"
+      ],
+      "thickness": [
+        "0.5〜3mm",
+        "3〜6mm",
+        "6mm以上"
+      ],
+      "environment": [],
+      "price": [],
+      "skill": [
+        "未経験可"
+      ]
+    },
+    "comment": "本体270kg・水冷の1,500W機です。溶接・焼け取り・切断・クリーナーの4in1で、1,500Wの推奨板厚は炭素鋼・SUSが1.0〜4.0mmです。",
+    "suitable_for": [
+      "ステンレス・鉄・アルミ・チタン・銅・異種金属の溶接（TIG・アーク溶接の代替）",
+      "亜鉛メッキ鋼板の溶接",
+      "1mm以内の銅薄板",
+      "薄板のギャップ溶接（スイングビーム＋ワイヤで0.5mmまで、ダブルワイヤで最大3mm程度）",
+      "金網の溶接",
+      "溶接焼け取り・2mmまでの薄板切断・錆や塗料の除去（4in1）"
+    ],
+    "not_suitable_for": [
+      "1mmを超える銅材（溶接は可能だが高反射への安全対策が難しく、メーカーは非推奨）"
+    ],
+    "features": [
+      "1台で溶接・溶接焼け取り・切断・クリーナーの4in1。ダブルウォブル（8種類のビーム形状）を選択可能",
+      "スイングビームシステム（スイング幅0〜5mm）で0.5mmの隙間も溶接可能",
+      "自動ワイヤフィーダを標準装備（ワイヤ径0.8〜1.6mm）、ダブルワイヤフィーダはオプション",
+      "200通りの溶接条件を登録可能。材種・板厚別の推奨条件を用意",
+      "アルゴンではなく窒素ガスで溶接可能"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/placeholder.svg",
+    "image_credit": null,
+    "image_source": null,
+    "country": "ポーランド",
+    "found_via": "metree",
+    "field_sources": {
+      "output_w": "https://kyowa-ctc.co.jp/technical_info/%e3%83%95%e3%82%a1%e3%82%a4%e3%83%90%e3%83%bc%e3%83%ac%e3%83%bc%e3%82%b6%e3%83%bc%e6%ba%b6%e6%8e%a5%e6%a9%9f%e3%83%8f%e3%83%b3%e3%83%89%e3%83%88%e3%83%bc%e3%83%81%e5%9e%8b/",
+      "wavelength": "https://kyowa-ctc.co.jp/technical_info/%e3%83%95%e3%82%a1%e3%82%a4%e3%83%90%e3%83%bc%e3%83%ac%e3%83%bc%e3%82%b6%e3%83%bc%e6%ba%b6%e6%8e%a5%e6%a9%9f%e3%83%8f%e3%83%b3%e3%83%89%e3%83%88%e3%83%bc%e3%83%81%e5%9e%8b/",
+      "portability": "https://kyowa-ctc.co.jp/technical_info/%e3%83%95%e3%82%a1%e3%82%a4%e3%83%90%e3%83%bc%e3%83%ac%e3%83%bc%e3%82%b6%e3%83%bc%e6%ba%b6%e6%8e%a5%e6%a9%9f%e3%83%8f%e3%83%b3%e3%83%89%e3%83%88%e3%83%bc%e3%83%81%e5%9e%8b/",
+      "thickness_note": "https://kyowa-ctc.co.jp/technical_info/%e3%83%95%e3%82%a1%e3%82%a4%e3%83%90%e3%83%bc%e3%83%ac%e3%83%bc%e3%82%b6%e3%83%bc%e6%ba%b6%e6%8e%a5%e6%a9%9f%e3%83%8f%e3%83%b3%e3%83%89%e3%83%88%e3%83%bc%e3%83%81%e5%9e%8b/",
+      "material": "https://kyowa-ctc.co.jp/technical_info/%e3%83%95%e3%82%a1%e3%82%a4%e3%83%90%e3%83%bc%e3%83%ac%e3%83%bc%e3%82%b6%e3%83%bc%e6%ba%b6%e6%8e%a5%e6%a9%9f%e3%83%8f%e3%83%b3%e3%83%89%e3%83%88%e3%83%bc%e3%83%81%e5%9e%8b/",
+      "skill": "https://kyowa-ctc.co.jp/technical_info/%e3%83%95%e3%82%a1%e3%82%a4%e3%83%90%e3%83%bc%e3%83%ac%e3%83%bc%e3%82%b6%e3%83%bc%e6%ba%b6%e6%8e%a5%e6%a9%9f%e3%83%8f%e3%83%b3%e3%83%89%e3%83%88%e3%83%bc%e3%83%81%e5%9e%8b/",
+      "features": "https://kyowa-ctc.co.jp/technical_info/%e3%83%95%e3%82%a1%e3%82%a4%e3%83%90%e3%83%bc%e3%83%ac%e3%83%bc%e3%82%b6%e3%83%bc%e6%ba%b6%e6%8e%a5%e6%a9%9f%e3%83%8f%e3%83%b3%e3%83%89%e3%83%88%e3%83%bc%e3%83%81%e5%9e%8b/",
+      "maker": "https://fanuci-falcon.com/en/fanuci-pro-genx-laser-welding-machine"
+    },
+    "is_published": true,
+    "notes": "電源 単相220V（1000〜2000W）、3000Wは三相380V（別置き昇圧トランス付属、三相200V電源）。消費電力 1500W機7kW。skill は「未経験者でもすぐに慣れます」「初心者でも簡単です」の記載による。thickness タグはシリーズ全体（3000Wで8mm）で当てはめた。株式会社共和（京都）が FANATEC ブランドの国内正規代理店として販売。製造元は公式ページに明記されていないが、同ページに FANUCI のロゴと「小田原サービスセンター(FANUCI日本株式会社)」の記載があり、Metoree の共和の掲載文に「FANUCI社製レーザー発振器を搭載」とある。FANUCI のメーカーサイト（Fanuci & Falcon Sp. z o.o.、ポーランド・グダニスク、https://fanuci-falcon.com/en ）は日本向け名称（FANATEC 4.0 Pro GenX／Jet）と型番体系が異なるため、仕様は共和の日本語ページを採用。country はメーカー本社所在国（ポーランド）とした。公式の本体写真は4シリーズを並べたラインナップ画像（https://kyowa-ctc.co.jp/wp/wp-content/uploads/2022/03/cf9568982ead9e5084d8e1ba09edc586-scaled.png）のみで、単体の本体写真が無いため image_url は null。価格は非公開（見積もり）。2年保証・代替機貸出制度、全国3か所のサービスセンター。中小企業経営強化税制の対象設備（日本溶接協会の生産性向上要件証明書を発行可能）。"
+  },
+  {
+    "id": "p230",
+    "maker_slug": "fanatec",
+    "model_slug": "jet",
+    "name": "FANATEC Jet",
+    "maker_name": "FANUCI（国内正規代理店：株式会社共和）",
+    "method": "ハンドヘルド",
+    "wavelength": "1070nm",
+    "output_w": 2000,
+    "output_note": "レーザー出力。FANATEC-JET1500W／JET2000W（JET3000W は開発中）",
+    "portability": "本体約74kg（W433×D883×H736mm）、空冷、トーチ約900g、ケーブル約10m",
+    "thickness_note": null,
+    "official_url": "https://kyowa-ctc.co.jp/technical_info/%e3%83%95%e3%82%a1%e3%82%a4%e3%83%90%e3%83%bc%e3%83%ac%e3%83%bc%e3%82%b6%e3%83%bc%e6%ba%b6%e6%8e%a5%e6%a9%9f%e3%83%8f%e3%83%b3%e3%83%89%e3%83%88%e3%83%bc%e3%83%81%e5%9e%8b/",
+    "source_url": "https://kyowa-ctc.co.jp/technical_info/%e3%83%95%e3%82%a1%e3%82%a4%e3%83%90%e3%83%bc%e3%83%ac%e3%83%bc%e3%82%b6%e3%83%bc%e6%ba%b6%e6%8e%a5%e6%a9%9f%e3%83%8f%e3%83%b3%e3%83%89%e3%83%88%e3%83%bc%e3%83%81%e5%9e%8b/",
+    "source": "株式会社共和 公式サイト（FANATEC 国内正規代理店）",
+    "tags": {
+      "use": [
+        "薄板接合",
+        "異材接合",
+        "自動化"
+      ],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ",
+        "チタン",
+        "銅"
+      ],
+      "thickness": [],
+      "environment": [],
+      "price": [],
+      "skill": [
+        "未経験可"
+      ]
+    },
+    "comment": "本体約74kg・空冷の2,000W機です。3in1の構成で自動ワイヤ送給を備え、ABB協働ロボットとの組み合わせも用意されています。",
+    "suitable_for": [
+      "ステンレス・鉄・アルミ・チタン・銅・異種金属の溶接（TIG・アーク溶接の代替）",
+      "亜鉛メッキ鋼板の溶接",
+      "ABB協働ロボットとの組み合わせによる自動溶接"
+    ],
+    "not_suitable_for": [
+      "1mmを超える銅材（溶接は可能だが高反射への安全対策が難しく、メーカーは非推奨）"
+    ],
+    "features": [
+      "空冷3in1（コンパクトな空冷ポータブル仕様、2000Wまで）",
+      "スイングビームシステムで溶接幅・溶け込み形状を調整",
+      "自動ワイヤ送給（ワイヤ径0.8〜1.6mm）",
+      "FANATEC×ABB協働ロボットの組み合わせを用意（空冷2000W）",
+      "パトライト・安全ロック・安全クランプなどの安全機構"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/placeholder.svg",
+    "image_credit": null,
+    "image_source": null,
+    "country": "ポーランド",
+    "found_via": "metree",
+    "field_sources": {
+      "output_w": "https://kyowa-ctc.co.jp/technical_info/%e3%83%95%e3%82%a1%e3%82%a4%e3%83%90%e3%83%bc%e3%83%ac%e3%83%bc%e3%82%b6%e3%83%bc%e6%ba%b6%e6%8e%a5%e6%a9%9f%e3%83%8f%e3%83%b3%e3%83%89%e3%83%88%e3%83%bc%e3%83%81%e5%9e%8b/",
+      "wavelength": "https://kyowa-ctc.co.jp/technical_info/%e3%83%95%e3%82%a1%e3%82%a4%e3%83%90%e3%83%bc%e3%83%ac%e3%83%bc%e3%82%b6%e3%83%bc%e6%ba%b6%e6%8e%a5%e6%a9%9f%e3%83%8f%e3%83%b3%e3%83%89%e3%83%88%e3%83%bc%e3%83%81%e5%9e%8b/",
+      "portability": "https://kyowa-ctc.co.jp/technical_info/%e3%83%95%e3%82%a1%e3%82%a4%e3%83%90%e3%83%bc%e3%83%ac%e3%83%bc%e3%82%b6%e3%83%bc%e6%ba%b6%e6%8e%a5%e6%a9%9f%e3%83%8f%e3%83%b3%e3%83%89%e3%83%88%e3%83%bc%e3%83%81%e5%9e%8b/",
+      "material": "https://kyowa-ctc.co.jp/technical_info/%e3%83%95%e3%82%a1%e3%82%a4%e3%83%90%e3%83%bc%e3%83%ac%e3%83%bc%e3%82%b6%e3%83%bc%e6%ba%b6%e6%8e%a5%e6%a9%9f%e3%83%8f%e3%83%b3%e3%83%89%e3%83%88%e3%83%bc%e3%83%81%e5%9e%8b/",
+      "use": "https://kyowa-ctc.co.jp/technical_info/%e3%83%95%e3%82%a1%e3%82%a4%e3%83%90%e3%83%bc%e3%83%ac%e3%83%bc%e3%82%b6%e3%83%bc%e6%ba%b6%e6%8e%a5%e6%a9%9f%e3%83%8f%e3%83%b3%e3%83%89%e3%83%88%e3%83%bc%e3%83%81%e5%9e%8b/",
+      "skill": "https://kyowa-ctc.co.jp/technical_info/%e3%83%95%e3%82%a1%e3%82%a4%e3%83%90%e3%83%bc%e3%83%ac%e3%83%bc%e3%82%b6%e3%83%bc%e6%ba%b6%e6%8e%a5%e6%a9%9f%e3%83%8f%e3%83%b3%e3%83%89%e3%83%88%e3%83%bc%e3%83%81%e5%9e%8b/",
+      "features": "https://kyowa-ctc.co.jp/technical_info/%e3%83%95%e3%82%a1%e3%82%a4%e3%83%90%e3%83%bc%e3%83%ac%e3%83%bc%e3%82%b6%e3%83%bc%e6%ba%b6%e6%8e%a5%e6%a9%9f%e3%83%8f%e3%83%b3%e3%83%89%e3%83%88%e3%83%bc%e3%83%81%e5%9e%8b/",
+      "maker": "https://fanuci-falcon.com/en/fanuci-pro-portable-laser-welding-machine"
+    },
+    "is_published": true,
+    "notes": "電源 単相230V、消費電力 JET1500W 7kW／JET2000W 8kW。Jet 専用の対応板厚は公開されていない（ページの溶接推奨条件表は「Fanatec-2000W：炭素鋼・SUS 1.0〜5.0mm、アルミ2.0〜4.0mm」など出力別で、シリーズの区別がない）ため thickness は空。candidates.md の「FANATEC PORTABLE 4.0 Pro」は現行ページでは空冷の Jet シリーズに当たると判断。同ページには溶接専用の空冷 FANATEC Lite（1200W／1700W、約74kg、波長1070nm）もある。株式会社共和（京都）が FANATEC ブランドの国内正規代理店として販売。製造元は公式ページに明記されていないが、同ページに FANUCI のロゴと「小田原サービスセンター(FANUCI日本株式会社)」の記載があり、Metoree の共和の掲載文に「FANUCI社製レーザー発振器を搭載」とある。FANUCI のメーカーサイト（Fanuci & Falcon Sp. z o.o.、ポーランド・グダニスク、https://fanuci-falcon.com/en ）は日本向け名称（FANATEC 4.0 Pro GenX／Jet）と型番体系が異なるため、仕様は共和の日本語ページを採用。country はメーカー本社所在国（ポーランド）とした。公式の本体写真は4シリーズを並べたラインナップ画像（https://kyowa-ctc.co.jp/wp/wp-content/uploads/2022/03/cf9568982ead9e5084d8e1ba09edc586-scaled.png）のみで、単体の本体写真が無いため image_url は null。価格は非公開（見積もり）。2年保証・代替機貸出制度、全国3か所のサービスセンター。中小企業経営強化税制の対象設備（日本溶接協会の生産性向上要件証明書を発行可能）。"
+  },
+  {
+    "id": "p231",
+    "maker_slug": "penta-laser",
+    "model_slug": "hw1500",
+    "name": "HW1500",
+    "maker_name": "PENTA LASER（日本総代理店：レーザ技術サービス株式会社）",
+    "method": "ハンドヘルド",
+    "wavelength": null,
+    "output_w": 1500,
+    "output_note": "レーザ発振器出力。HWシリーズは 1000W／1500W／2000W／3000W（代表値1500W）",
+    "portability": "本体230kg（長さ880×幅510×高さ950mm）、水冷型（タイプ違いで空冷型もあり）、ハンディ重量850g、ハンディケーブル7m",
+    "thickness_note": "ステンレス・鉄の厚さ0.3〜8mmの溶接が可能（HWシリーズ全体、3000Wまで）。溶接最大深度（溶け込み深さ、安全考慮値）：1000W 鉄・ステンレス3.5mm〜／アルミ1mm〜、1500W 鉄・ステンレス4.5mm〜／アルミ2mm〜、2000W 鉄・ステンレス5.5mm〜／アルミ3mm〜",
+    "official_url": "https://laserts.com/hw1000",
+    "source_url": "https://laserts.com/hw1000",
+    "source": "レーザ技術サービス株式会社 公式サイト（PENTA LASER 日本総代理店）",
+    "tags": {
+      "use": [
+        "薄板接合",
+        "厚物",
+        "自動化"
+      ],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ",
+        "チタン"
+      ],
+      "thickness": [
+        "0.5mm未満",
+        "0.5〜3mm",
+        "3〜6mm",
+        "6mm以上"
+      ],
+      "environment": [],
+      "price": [],
+      "skill": []
+    },
+    "comment": "本体230kg・水冷の1,500W機です。最大5mm幅のウィービングを備え、公表の溶け込み深さ（安全考慮値）は鉄・ステンレス4.5mm、アルミ2mmです。",
+    "suitable_for": [
+      "ステンレス・鉄の厚さ0.3〜8mmの溶接（シリーズ全体）",
+      "アルミ・メッキ鋼板・チタンの溶接、薄い黒皮がある材料",
+      "ワイヤーフィーダーによる肉盛り溶接（Wワイヤーも対応）",
+      "FANUC製協働ロボット（CRXシリーズなど）による自動化"
+    ],
+    "not_suitable_for": [],
+    "features": [
+      "2軸ガルバノミラー搭載型。径0.2mmのレーザを最大5mm幅でライン・三角・八の字・丸・楕円・半円などにウィービング",
+      "厚さ0.5〜3.5mmのステンレス・鉄などの溶接条件データを36個搭載し、ハンディのミニコントローラーから呼び出し・変更可能",
+      "ワイヤーフィーダー付属（ワイヤー径0.8〜1.6mm）、ダブルワイヤーフィーダーはオプション",
+      "ハンディ先のノズル外径φ12",
+      "インターロック付きクランプを採用し、OD8 保護メガネと牛革手袋が付属"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/placeholder.svg",
+    "image_credit": null,
+    "image_source": null,
+    "country": "中国",
+    "found_via": "metree / 日本ハンドレーザ溶接協会",
+    "field_sources": {
+      "output_w": "https://laserts.com/hw1000",
+      "portability": "https://laserts.com/hw1000",
+      "thickness_note": "https://laserts.com/hw1000",
+      "material": "https://laserts.com/hw1000",
+      "use": "https://laserts.com/hw1000",
+      "features": "https://laserts.com/hw1000",
+      "maker": "https://www.pentalaser.com/products/detail/Handheld-Laser-Welder"
+    },
+    "is_published": true,
+    "notes": "電源 50A 200V単相、電気容量 1500W:7.5kVA、使用ガス アルゴンまたは窒素、作業環境温度10〜40℃。「溶接最大深度」は溶け込み深さのため板厚タグには使わず、thickness タグはシリーズの「厚さ0.3〜8mm」から当てはめた。同社のダブルワイヤー特化型 HS-2000（2000W、ウィービング幅最大8mm、溶接最大深度 鉄・ステンレス6mm／アルミ3mm、230kg）は対象外とした。PENTA LASER（中国・温州）製で、レーザ技術サービス株式会社（神奈川県相模原市）が日本総代理店。メーカーサイトでは同シリーズを「SWAN HW1000 / 1500 / 2000 / 3000 / 3000PRO」（水冷、ファイバーコア径50μm、ケーブル長9m超、本体1088×727×1013mm）として掲載（https://www.pentalaser.com/products/detail/Handheld-Laser-Welder）しており、寸法・ケーブル長が日本の代理店ページ（880×510×950mm、7m）と異なる。価格・波長は非公開。納入時にセットアップと使い方の説明、ハンディやレーザ発振器の予備を常備し代替機も用意。"
+  },
+  {
+    "id": "p232",
+    "maker_slug": "penta-laser",
+    "model_slug": "hs-1500",
+    "name": "HS-1500",
+    "maker_name": "PENTA LASER（日本総代理店：レーザ技術サービス株式会社）",
+    "method": "ハンドヘルド",
+    "wavelength": null,
+    "output_w": 1500,
+    "output_note": "レーザ発振器出力。ライトモデル HS-1000（1000W）／HS-1500（1500W）",
+    "portability": "本体220kg（長さ880×幅510×高さ950mm）、水冷型（タイプ違いで空冷型もあり）、ハンディ重量700g、ハンディケーブル7m",
+    "thickness_note": "ステンレス・鉄の厚さ0.3〜4mmの溶接が可能（HSシリーズ）。溶接最大深度（溶け込み深さ、安全考慮値）：1000W 鉄・ステンレス3mm〜／アルミ2mm〜、1500W 鉄・ステンレス4mm〜／アルミ2.5mm〜",
+    "official_url": "https://laserts.com/hs1000-1500",
+    "source_url": "https://laserts.com/hs1000-1500",
+    "source": "レーザ技術サービス株式会社 公式サイト（PENTA LASER 日本総代理店）",
+    "tags": {
+      "use": [
+        "薄板接合",
+        "自動化"
+      ],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ",
+        "チタン"
+      ],
+      "thickness": [
+        "0.5mm未満",
+        "0.5〜3mm",
+        "3〜6mm"
+      ],
+      "environment": [],
+      "price": [],
+      "skill": []
+    },
+    "comment": "本体220kg・水冷の1,500W機で、ハンディ重量700gのライトモデルです。ステンレス・鉄の厚さ0.3〜4mmの溶接に対応しています。",
+    "suitable_for": [
+      "ステンレス・鉄の厚さ0.3〜4mmの溶接",
+      "アルミ・メッキ鋼板・チタンの溶接、薄い黒皮がある材料",
+      "ワイヤーフィーダーによる肉盛り溶接（Wワイヤーも対応）",
+      "FANUC製協働ロボットなどによる自動化"
+    ],
+    "not_suitable_for": [],
+    "features": [
+      "HWシリーズより軽いハンディ（700g）のライトモデル",
+      "ドット・ラインのウィービング（幅0.2〜5mm）で多少のズレや隙間があっても溶接可能",
+      "オプションでレーザークリーナーモードを使用可能",
+      "ワイヤーフィーダー付属（ワイヤー径0.8〜1.6mm）、ダブルワイヤーフィーダーはオプション",
+      "インターロック付きクランプを採用し、OD8 保護メガネと牛革手袋が付属"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/placeholder.svg",
+    "image_credit": null,
+    "image_source": null,
+    "country": "中国",
+    "found_via": "metree / 日本ハンドレーザ溶接協会",
+    "field_sources": {
+      "output_w": "https://laserts.com/hs1000-1500",
+      "portability": "https://laserts.com/hs1000-1500",
+      "thickness_note": "https://laserts.com/hs1000-1500",
+      "material": "https://laserts.com/hs1000-1500",
+      "use": "https://laserts.com/hs1000-1500",
+      "features": "https://laserts.com/hs1000-1500"
+    },
+    "is_published": true,
+    "notes": "電源 50A 200V単相、電気容量 1500W:7.5kVA、使用ガス アルゴンまたは窒素、作業環境温度10〜40℃。thickness タグは「厚さ0.3〜4mm」から当てはめ、溶接最大深度（溶け込み深さ）は使っていない。本体写真は HW シリーズと同じ画像。メーカーサイトに HS 型番の掲載は確認できなかった。PENTA LASER（中国・温州）製で、レーザ技術サービス株式会社（神奈川県相模原市）が日本総代理店。メーカーサイトでは同シリーズを「SWAN HW1000 / 1500 / 2000 / 3000 / 3000PRO」（水冷、ファイバーコア径50μm、ケーブル長9m超、本体1088×727×1013mm）として掲載（https://www.pentalaser.com/products/detail/Handheld-Laser-Welder）しており、寸法・ケーブル長が日本の代理店ページ（880×510×950mm、7m）と異なる。価格・波長は非公開。納入時にセットアップと使い方の説明、ハンディやレーザ発振器の予備を常備し代替機も用意。"
+  },
+  {
+    "id": "p233",
+    "maker_slug": "gloria",
+    "model_slug": "tlsc-15",
+    "name": "TLSC-15",
+    "maker_name": "株式会社Gloria",
+    "method": "ハンドヘルド",
+    "wavelength": "1064nm ±10nm",
+    "output_w": 1500,
+    "output_note": "ファイバーレーザー出力（連続波／パルス）",
+    "portability": "本体サイズ（最大）幅580×奥行1100×高さ900mm、チラー内蔵、トーチ0.75kg（本体重量は非公開）",
+    "thickness_note": "溶接厚さ 0.5〜5mm（公表値）",
+    "official_url": "https://www.globalgloria.com/%E3%83%AC%E3%83%BC%E3%82%B6%E3%83%BC%E6%BA%B6%E6%8E%A5%E6%A9%9F",
+    "source_url": "https://www.globalgloria.com/%E3%83%AC%E3%83%BC%E3%82%B6%E3%83%BC%E6%BA%B6%E6%8E%A5%E6%A9%9F",
+    "source": "株式会社Gloria 公式サイト",
+    "tags": {
+      "use": [
+        "自動化"
+      ],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ",
+        "銅"
+      ],
+      "thickness": [
+        "0.5〜3mm",
+        "3〜6mm"
+      ],
+      "environment": [],
+      "price": [
+        "100〜200万円"
+      ],
+      "skill": [
+        "未経験可"
+      ]
+    },
+    "comment": "チラー内蔵の1,500W機で、溶接厚さは0.5〜5mmです。最大3種類のフィラーを設置でき、ロボットの後付けにも対応しています。",
+    "suitable_for": [
+      "鉄・SUS・アルミ・銅の溶接",
+      "クリーニング・レーザー追い加工",
+      "ロボットを後付けした自動化"
+    ],
+    "not_suitable_for": [],
+    "features": [
+      "発振器を1500W〜3000Wまで搭載（創鑫／鋭科）",
+      "最大3種類のフィラーを設置可能（フィラーユニット別置き）",
+      "ウェビング機能を標準搭載",
+      "溶接のほかクリーニング・レーザー追い加工にも対応",
+      "ロボットの後付けが可能"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/placeholder.svg",
+    "image_credit": null,
+    "image_source": null,
+    "country": "日本",
+    "found_via": "metree",
+    "field_sources": {
+      "output_w": "https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72s62VTHgC-8wFpjN7t60B0247-BA47_DnJUnupYvWZ3Fen5WVdSVSrKjBxGjxpRcU1aLxd-djDh0k6z3ifhX58MGPQJ4ngZAePaYsr5fo70wyeEKozjoIlnDR0mpbyUfH1j0O-R9k73RSAgcshQ98q5Qosq7DN8ya_zt7sSJwsLFeSWN_I0I3QGgxdoJp-8eKPIU1PETL-p8cT0wuEjm2SbgrGe3GUsoCQk8BQYD6k=w1280",
+      "wavelength": "https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72s62VTHgC-8wFpjN7t60B0247-BA47_DnJUnupYvWZ3Fen5WVdSVSrKjBxGjxpRcU1aLxd-djDh0k6z3ifhX58MGPQJ4ngZAePaYsr5fo70wyeEKozjoIlnDR0mpbyUfH1j0O-R9k73RSAgcshQ98q5Qosq7DN8ya_zt7sSJwsLFeSWN_I0I3QGgxdoJp-8eKPIU1PETL-p8cT0wuEjm2SbgrGe3GUsoCQk8BQYD6k=w1280",
+      "thickness_note": "https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72s62VTHgC-8wFpjN7t60B0247-BA47_DnJUnupYvWZ3Fen5WVdSVSrKjBxGjxpRcU1aLxd-djDh0k6z3ifhX58MGPQJ4ngZAePaYsr5fo70wyeEKozjoIlnDR0mpbyUfH1j0O-R9k73RSAgcshQ98q5Qosq7DN8ya_zt7sSJwsLFeSWN_I0I3QGgxdoJp-8eKPIU1PETL-p8cT0wuEjm2SbgrGe3GUsoCQk8BQYD6k=w1280",
+      "portability": "https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72s62VTHgC-8wFpjN7t60B0247-BA47_DnJUnupYvWZ3Fen5WVdSVSrKjBxGjxpRcU1aLxd-djDh0k6z3ifhX58MGPQJ4ngZAePaYsr5fo70wyeEKozjoIlnDR0mpbyUfH1j0O-R9k73RSAgcshQ98q5Qosq7DN8ya_zt7sSJwsLFeSWN_I0I3QGgxdoJp-8eKPIU1PETL-p8cT0wuEjm2SbgrGe3GUsoCQk8BQYD6k=w1280",
+      "material": "https://www.globalgloria.com/%E3%83%AC%E3%83%BC%E3%82%B6%E3%83%BC%E6%BA%B6%E6%8E%A5%E6%A9%9F",
+      "price": "https://www.globalgloria.com/%E3%83%AC%E3%83%BC%E3%82%B6%E3%83%BC%E6%BA%B6%E6%8E%A5%E6%A9%9F",
+      "skill": "https://www.globalgloria.com/%E3%83%AC%E3%83%BC%E3%82%B6%E3%83%BC%E6%BA%B6%E6%8E%A5%E6%A9%9F",
+      "features": "https://www.globalgloria.com/%E3%83%AC%E3%83%BC%E3%82%B6%E3%83%BC%E6%BA%B6%E6%8E%A5%E6%A9%9F"
+    },
+    "is_published": true,
+    "notes": "公式ページに「150万円（本体税抜き）から導入可能！」とあり、最下位機種の TLSC-15 に当たると判断して price タグを 100〜200万円 とした（型番の明記はない）。電源容量 8.5kW、最大溶接速度0〜120mm/s、環境温度5〜35℃・湿度70%未満。skill は「簡単操作で、専門技術者不要」の記載による。仕様は公式ページの仕様表（画像、https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72s62VTHgC-8wFpjN7t60B0247-BA47_DnJUnupYvWZ3Fen5WVdSVSrKjBxGjxpRcU1aLxd-djDh0k6z3ifhX58MGPQJ4ngZAePaYsr5fo70wyeEKozjoIlnDR0mpbyUfH1j0O-R9k73RSAgcshQ98q5Qosq7DN8ya_zt7sSJwsLFeSWN_I0I3QGgxdoJp-8eKPIU1PETL-p8cT0wuEjm2SbgrGe3GUsoCQk8BQYD6k=w1280）から読み取り。株式会社Gloria（大阪市淀川区、加工機械の総合商社）の自社ブランド機。製造国は公式に記載がないため country は本社所在国。発振器メーカーは 創鑫／鋭科（公式表記）。重量・冷却方式（チラー内蔵とのみ記載）・電源電圧は非公開。画像は Google サイトの画像URL（googleusercontent）で長期の到達性が保証されないため、掲載時はダウンロードして使うことを推奨。Metoree の候補名「HLGW」は公式ページでは確認できず、公式の型番は TLSC-15／TLSC-20／TLSC-30。"
+  },
+  {
+    "id": "p234",
+    "maker_slug": "gloria",
+    "model_slug": "tlsc-30",
+    "name": "TLSC-30",
+    "maker_name": "株式会社Gloria",
+    "method": "ハンドヘルド",
+    "wavelength": "1064nm ±10nm",
+    "output_w": 3000,
+    "output_note": "ファイバーレーザー出力（連続波／パルス）",
+    "portability": "本体サイズ（最大）幅580×奥行1100×高さ900mm、チラー内蔵、トーチ0.75kg（本体重量は非公開）",
+    "thickness_note": "溶接厚さ 0.5〜8mm（公表値）",
+    "official_url": "https://www.globalgloria.com/%E3%83%AC%E3%83%BC%E3%82%B6%E3%83%BC%E6%BA%B6%E6%8E%A5%E6%A9%9F",
+    "source_url": "https://www.globalgloria.com/%E3%83%AC%E3%83%BC%E3%82%B6%E3%83%BC%E6%BA%B6%E6%8E%A5%E6%A9%9F",
+    "source": "株式会社Gloria 公式サイト",
+    "tags": {
+      "use": [
+        "厚物",
+        "自動化"
+      ],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ",
+        "銅"
+      ],
+      "thickness": [
+        "0.5〜3mm",
+        "3〜6mm",
+        "6mm以上"
+      ],
+      "environment": [],
+      "price": [],
+      "skill": [
+        "未経験可"
+      ]
+    },
+    "comment": "チラー内蔵の3,000W機で、溶接厚さは0.5〜8mmです。最大3種類のフィラーを設置でき、ロボットの後付けにも対応しています。",
+    "suitable_for": [
+      "鉄・SUS・アルミ・銅の溶接",
+      "クリーニング・レーザー追い加工",
+      "ロボットを後付けした自動化"
+    ],
+    "not_suitable_for": [],
+    "features": [
+      "発振器を1500W〜3000Wまで搭載（創鑫／鋭科）",
+      "最大3種類のフィラーを設置可能（フィラーユニット別置き）",
+      "ウェビング機能を標準搭載",
+      "溶接のほかクリーニング・レーザー追い加工にも対応",
+      "ロボットの後付けが可能"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/placeholder.svg",
+    "image_credit": null,
+    "image_source": null,
+    "country": "日本",
+    "found_via": "metree",
+    "field_sources": {
+      "output_w": "https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72s62VTHgC-8wFpjN7t60B0247-BA47_DnJUnupYvWZ3Fen5WVdSVSrKjBxGjxpRcU1aLxd-djDh0k6z3ifhX58MGPQJ4ngZAePaYsr5fo70wyeEKozjoIlnDR0mpbyUfH1j0O-R9k73RSAgcshQ98q5Qosq7DN8ya_zt7sSJwsLFeSWN_I0I3QGgxdoJp-8eKPIU1PETL-p8cT0wuEjm2SbgrGe3GUsoCQk8BQYD6k=w1280",
+      "wavelength": "https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72s62VTHgC-8wFpjN7t60B0247-BA47_DnJUnupYvWZ3Fen5WVdSVSrKjBxGjxpRcU1aLxd-djDh0k6z3ifhX58MGPQJ4ngZAePaYsr5fo70wyeEKozjoIlnDR0mpbyUfH1j0O-R9k73RSAgcshQ98q5Qosq7DN8ya_zt7sSJwsLFeSWN_I0I3QGgxdoJp-8eKPIU1PETL-p8cT0wuEjm2SbgrGe3GUsoCQk8BQYD6k=w1280",
+      "thickness_note": "https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72s62VTHgC-8wFpjN7t60B0247-BA47_DnJUnupYvWZ3Fen5WVdSVSrKjBxGjxpRcU1aLxd-djDh0k6z3ifhX58MGPQJ4ngZAePaYsr5fo70wyeEKozjoIlnDR0mpbyUfH1j0O-R9k73RSAgcshQ98q5Qosq7DN8ya_zt7sSJwsLFeSWN_I0I3QGgxdoJp-8eKPIU1PETL-p8cT0wuEjm2SbgrGe3GUsoCQk8BQYD6k=w1280",
+      "portability": "https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72s62VTHgC-8wFpjN7t60B0247-BA47_DnJUnupYvWZ3Fen5WVdSVSrKjBxGjxpRcU1aLxd-djDh0k6z3ifhX58MGPQJ4ngZAePaYsr5fo70wyeEKozjoIlnDR0mpbyUfH1j0O-R9k73RSAgcshQ98q5Qosq7DN8ya_zt7sSJwsLFeSWN_I0I3QGgxdoJp-8eKPIU1PETL-p8cT0wuEjm2SbgrGe3GUsoCQk8BQYD6k=w1280",
+      "material": "https://www.globalgloria.com/%E3%83%AC%E3%83%BC%E3%82%B6%E3%83%BC%E6%BA%B6%E6%8E%A5%E6%A9%9F",
+      "price": "https://www.globalgloria.com/%E3%83%AC%E3%83%BC%E3%82%B6%E3%83%BC%E6%BA%B6%E6%8E%A5%E6%A9%9F",
+      "skill": "https://www.globalgloria.com/%E3%83%AC%E3%83%BC%E3%82%B6%E3%83%BC%E6%BA%B6%E6%8E%A5%E6%A9%9F",
+      "features": "https://www.globalgloria.com/%E3%83%AC%E3%83%BC%E3%82%B6%E3%83%BC%E6%BA%B6%E6%8E%A5%E6%A9%9F"
+    },
+    "is_published": true,
+    "notes": "価格は非公開（公式の「150万円（本体税抜き）から」は最低価格の表示）。電源容量 16.5kW、最大溶接速度0〜120mm/s、環境温度5〜35℃・湿度70%未満。skill は「簡単操作で、専門技術者不要」の記載による。仕様は公式ページの仕様表（画像、https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72s62VTHgC-8wFpjN7t60B0247-BA47_DnJUnupYvWZ3Fen5WVdSVSrKjBxGjxpRcU1aLxd-djDh0k6z3ifhX58MGPQJ4ngZAePaYsr5fo70wyeEKozjoIlnDR0mpbyUfH1j0O-R9k73RSAgcshQ98q5Qosq7DN8ya_zt7sSJwsLFeSWN_I0I3QGgxdoJp-8eKPIU1PETL-p8cT0wuEjm2SbgrGe3GUsoCQk8BQYD6k=w1280）から読み取り。株式会社Gloria（大阪市淀川区、加工機械の総合商社）の自社ブランド機。製造国は公式に記載がないため country は本社所在国。発振器メーカーは 創鑫／鋭科（公式表記）。重量・冷却方式（チラー内蔵とのみ記載）・電源電圧は非公開。画像は Google サイトの画像URL（googleusercontent）で長期の到達性が保証されないため、掲載時はダウンロードして使うことを推奨。Metoree の候補名「HLGW」は公式ページでは確認できず、公式の型番は TLSC-15／TLSC-20／TLSC-30。 中間機種の TLSC-20（2000W、溶接厚さ0.5〜6mm、電源容量11kW）もある。"
+  },
+  {
+    "id": "p235",
+    "maker_slug": "youbon",
+    "model_slug": "cy-f1500i",
+    "name": "CY-F1500I",
+    "maker_name": "株式会社ユーボン",
+    "method": "ハンドヘルド",
+    "wavelength": "1064〜1080nm",
+    "output_w": 1500,
+    "output_note": "レーザー出力（IPG製）、連続",
+    "portability": "総重量255kg（1080×600×1300mm）、水冷一体型、ハンドトーチ1.2kg",
+    "thickness_note": "溶接目安（溶け込み深さ、IPG1500W）：ステンレス3mm（アルゴン）、炭素鋼3mm（二酸化炭素）、亜鉛メッキ鋼板2mm（アルゴン）、アルミニウム2mm（窒素）、真鍮2mm（アルゴン）",
+    "official_url": "https://www.youbon.co.jp/kizai/05ipg1500w.html",
+    "source_url": "https://www.youbon.co.jp/kizai/05ipg1500w.html",
+    "source": "株式会社ユーボン 公式サイト",
+    "tags": {
+      "use": [
+        "薄板接合"
+      ],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ"
+      ],
+      "thickness": [],
+      "environment": [],
+      "price": [
+        "600万円以上"
+      ],
+      "skill": [
+        "未経験可"
+      ]
+    },
+    "comment": "総重量255kg・水冷一体型の1,500W機で、IPG製の発振器を搭載しています。溶け込み深さの目安はステンレス・炭素鋼3mm、アルミ2mmです。",
+    "suitable_for": [
+      "テーラード溶接（異なる板厚の溶接）・垂直溶接・箱形状の溶接",
+      "アルミ溶接",
+      "切断ノズルによる1mmの薄板金属の切断（材質や厚みによる）"
+    ],
+    "not_suitable_for": [],
+    "features": [
+      "IPG製の1.5kW発振器を搭載",
+      "ウォブルガン（スイング機能、6つの溶接パターン）を標準装備し、最大0.5mmの隙間まで溶接可能",
+      "5種類のノズル（溶接＋切断）",
+      "安全クランプ（インターロック機能）を標準装備",
+      "オートワイヤーフィーダーを標準装備（ワイヤー径0.8〜1.6mm、ワイヤー別売り）"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/youbon-cy-f1500i.jpg",
+    "image_credit": "株式会社ユーボン 公式サイト",
+    "image_source": "https://www.youbon.co.jp/kizai/05ipg1500w.html",
+    "country": null,
+    "found_via": "metree",
+    "field_sources": {
+      "output_w": "https://www.youbon.co.jp/kizai/05ipg1500w.html",
+      "wavelength": "https://www.youbon.co.jp/kizai/05ipg1500w.html",
+      "portability": "https://www.youbon.co.jp/kizai/05ipg1500w.html",
+      "thickness_note": "https://www.youbon.co.jp/kizai/05ipg1500w.html",
+      "material": "https://www.youbon.co.jp/kizai/05ipg1500w.html",
+      "price": "https://www.youbon.co.jp/kizai/05ipg1500w.html",
+      "skill": "https://www.youbon.co.jp/kizai/05ipg1500w.html",
+      "features": "https://www.youbon.co.jp/kizai/05ipg1500w.html"
+    },
+    "is_published": true,
+    "notes": "標準価格 ￥7,700,000（税別、本体、https://www.youbon.co.jp/kizai/05ipg1500w.html）。電源 単相200V、消費電力7kW、可動温度10〜40℃。溶接目安は「溶接の深さ」（溶け込み深さ）のため thickness タグは空。skill は「溶接経験のない初心者の方でも簡単に操作可能」の記載による。株式会社ユーボン（愛知県豊橋市、看板機材・資材の商社）が販売。製造元・製造国は公式ページに記載がないため country は null。CY-F1500I と CY-F1500C は発振器（IPG製／中国製）と価格のみ異なり、本体仕様・画像は共通。"
+  },
+  {
+    "id": "p236",
+    "maker_slug": "youbon",
+    "model_slug": "cy-f1500c",
+    "name": "CY-F1500C",
+    "maker_name": "株式会社ユーボン",
+    "method": "ハンドヘルド",
+    "wavelength": "1064〜1080nm",
+    "output_w": 1500,
+    "output_note": "レーザー出力（中国製）、連続",
+    "portability": "総重量255kg（1080×600×1300mm）、水冷一体型、ハンドトーチ1.2kg",
+    "thickness_note": "溶接目安（溶け込み深さ、IPG1500W）：ステンレス3mm（アルゴン）、炭素鋼3mm（二酸化炭素）、亜鉛メッキ鋼板2mm（アルゴン）、アルミニウム2mm（窒素）、真鍮2mm（アルゴン）",
+    "official_url": "https://www.youbon.co.jp/kizai/05ipg1500w.html",
+    "source_url": "https://www.youbon.co.jp/kizai/05ipg1500w.html",
+    "source": "株式会社ユーボン 公式サイト",
+    "tags": {
+      "use": [
+        "薄板接合"
+      ],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ"
+      ],
+      "thickness": [],
+      "environment": [],
+      "price": [
+        "200〜400万円"
+      ],
+      "skill": [
+        "未経験可"
+      ]
+    },
+    "comment": "総重量255kg・水冷一体型の1,500W機で、中国製の発振器を搭載しています。ウォブルガンとオートワイヤーフィーダーを標準装備しています。",
+    "suitable_for": [
+      "テーラード溶接（異なる板厚の溶接）・垂直溶接・箱形状の溶接",
+      "アルミ溶接",
+      "切断ノズルによる1mmの薄板金属の切断（材質や厚みによる）"
+    ],
+    "not_suitable_for": [],
+    "features": [
+      "中国製の1.5kW発振器を搭載",
+      "ウォブルガン（スイング機能、6つの溶接パターン）を標準装備し、最大0.5mmの隙間まで溶接可能",
+      "5種類のノズル（溶接＋切断）",
+      "安全クランプ（インターロック機能）を標準装備",
+      "オートワイヤーフィーダーを標準装備（ワイヤー径0.8〜1.6mm、ワイヤー別売り）"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/youbon-cy-f1500c.jpg",
+    "image_credit": "株式会社ユーボン 公式サイト",
+    "image_source": "https://www.youbon.co.jp/kizai/05ipg1500w.html",
+    "country": null,
+    "found_via": "metree",
+    "field_sources": {
+      "output_w": "https://www.youbon.co.jp/kizai/05ipg1500w.html",
+      "wavelength": "https://www.youbon.co.jp/kizai/05ipg1500w.html",
+      "portability": "https://www.youbon.co.jp/kizai/05ipg1500w.html",
+      "thickness_note": "https://www.youbon.co.jp/kizai/05ipg1500w.html",
+      "material": "https://www.youbon.co.jp/kizai/05ipg1500w.html",
+      "price": "https://www.youbon.co.jp/kizai/05ipg1500w.html",
+      "skill": "https://www.youbon.co.jp/kizai/05ipg1500w.html",
+      "features": "https://www.youbon.co.jp/kizai/05ipg1500w.html"
+    },
+    "is_published": true,
+    "notes": "標準価格 ￥3,300,000（税別、本体、https://www.youbon.co.jp/kizai/05ipg1500w.html）。電源 単相200V、消費電力7kW、可動温度10〜40℃。溶接目安は「溶接の深さ」（溶け込み深さ）のため thickness タグは空。skill は「溶接経験のない初心者の方でも簡単に操作可能」の記載による。株式会社ユーボン（愛知県豊橋市、看板機材・資材の商社）が販売。製造元・製造国は公式ページに記載がないため country は null。CY-F1500I と CY-F1500C は発振器（IPG製／中国製）と価格のみ異なり、本体仕様・画像は共通。"
+  },
+  {
+    "id": "p237",
+    "maker_slug": "union-electric",
+    "model_slug": "usf-2000c",
+    "name": "USF-2000C",
+    "maker_name": "ユニオン電機株式会社",
+    "method": "ハンドヘルド",
+    "wavelength": "1063nm",
+    "output_w": 2000,
+    "output_note": "出力（連続動作、出力範囲10〜100%）。シリーズに USF-1000C/1500C/2000C（1000/1500/2000W）",
+    "portability": "水冷装置を筐体内に内蔵、キャスター付き。入力電源 380V（50/60Hz）、消費電力 7.5kW以下。重量は非公開",
+    "thickness_note": null,
+    "official_url": "http://www.jp-union.com/product/detail/proId/452.html",
+    "source_url": "http://www.jp-union.com/product/detail/proId/452.html",
+    "source": "ユニオン電機株式会社 公式サイト",
+    "tags": {
+      "use": [],
+      "material": [],
+      "thickness": [],
+      "environment": [],
+      "price": [],
+      "skill": []
+    },
+    "comment": "水冷装置を筐体内に内蔵した2,000W機で、入力電源は380Vです。溶接シーム幅を1〜5mmで自動スイング調整し、ワイヤーを供給しながらの溶接に対応します。",
+    "suitable_for": [
+      "隅肉・突き合わせ・角継ぎ溶接（公式の溶接サンプル）",
+      "溶接ワイヤーを供給しながらの溶接",
+      "母材に隙間がある継手（スイング幅1〜5mm）"
+    ],
+    "not_suitable_for": [],
+    "features": [
+      "溶接シーム幅を1〜5mmの範囲で自動スイング調整",
+      "トーチ・母材・クランプが接触しているときだけレーザーが照射される安全対策",
+      "溶接ワイヤーを供給しながらの溶接に対応",
+      "水冷装置を筐体内に内蔵し、キャスター付きで移動できる",
+      "光ファイバーコア径50μm、変調周波数20kHz"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/union-electric-usf-2000c.jpg",
+    "image_credit": "ユニオン電機株式会社 公式サイト",
+    "image_source": "http://www.jp-union.com/product/detail/proId/452.html",
+    "country": "日本",
+    "found_via": "metree",
+    "field_sources": {
+      "output_w": "http://www.jp-union.com/product/detail/proId/452.html",
+      "wavelength": "http://www.jp-union.com/product/detail/proId/452.html",
+      "method": "http://www.jp-union.com/product/detail/proId/452.html",
+      "portability": "http://www.jp-union.com/product/detail/proId/452.html",
+      "features": "http://www.jp-union.com/product/detail/proId/452.html",
+      "suitable_for": "http://www.jp-union.com/product/detail/proId/452.html"
+    },
+    "is_published": true,
+    "notes": "公式サイトは http のみ（https は接続不可）。対応材料・板厚・重量・価格は公式ページに記載なし。掲載画像はシリーズ共通の1枚で、写真の本体表記は USF-1500C。同社は兵庫県西宮市本社、中国（大連）に工場あり。本機の製造国は公式に記載なし（country は本社国）。用途例として公式に「キッチンやバスルーム用品、家電や建材部品、広告、金型、ステンレスドアや窓部材、家具や自動車部品の組立等」とある。"
+  },
+  {
+    "id": "p238",
+    "maker_slug": "union-electric",
+    "model_slug": "usf-1500c",
+    "name": "USF-1500C",
+    "maker_name": "ユニオン電機株式会社",
+    "method": "ハンドヘルド",
+    "wavelength": "1063nm",
+    "output_w": 1500,
+    "output_note": "出力（連続動作、出力範囲10〜100%）。シリーズに USF-1000C/1500C/2000C（1000/1500/2000W）",
+    "portability": "水冷装置を筐体内に内蔵、キャスター付き。入力電源 220V（50/60Hz）、消費電力 6.5kW以下。重量は非公開",
+    "thickness_note": null,
+    "official_url": "http://www.jp-union.com/product/detail/proId/452.html",
+    "source_url": "http://www.jp-union.com/product/detail/proId/452.html",
+    "source": "ユニオン電機株式会社 公式サイト",
+    "tags": {
+      "use": [],
+      "material": [],
+      "thickness": [],
+      "environment": [],
+      "price": [],
+      "skill": []
+    },
+    "comment": "水冷装置を筐体内に内蔵した1,500W機で、入力電源は220Vです。溶接シーム幅を1〜5mmで自動スイング調整し、ワイヤーを供給しながらの溶接に対応します。",
+    "suitable_for": [
+      "隅肉・突き合わせ・角継ぎ溶接（公式の溶接サンプル）",
+      "溶接ワイヤーを供給しながらの溶接",
+      "母材に隙間がある継手（スイング幅1〜5mm）"
+    ],
+    "not_suitable_for": [],
+    "features": [
+      "溶接シーム幅を1〜5mmの範囲で自動スイング調整",
+      "トーチ・母材・クランプが接触しているときだけレーザーが照射される安全対策",
+      "溶接ワイヤーを供給しながらの溶接に対応",
+      "水冷装置を筐体内に内蔵し、キャスター付きで移動できる",
+      "光ファイバーコア径50μm、変調周波数20kHz"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/union-electric-usf-1500c.jpg",
+    "image_credit": "ユニオン電機株式会社 公式サイト",
+    "image_source": "http://www.jp-union.com/product/detail/proId/452.html",
+    "country": "日本",
+    "found_via": "metree",
+    "field_sources": {
+      "output_w": "http://www.jp-union.com/product/detail/proId/452.html",
+      "wavelength": "http://www.jp-union.com/product/detail/proId/452.html",
+      "method": "http://www.jp-union.com/product/detail/proId/452.html",
+      "portability": "http://www.jp-union.com/product/detail/proId/452.html",
+      "features": "http://www.jp-union.com/product/detail/proId/452.html",
+      "suitable_for": "http://www.jp-union.com/product/detail/proId/452.html"
+    },
+    "is_published": true,
+    "notes": "公式サイトは http のみ（https は接続不可）。対応材料・板厚・重量・価格は公式ページに記載なし。掲載画像の本体表記は USF-1500C。同社は兵庫県西宮市本社、中国（大連）に工場あり。本機の製造国は公式に記載なし（country は本社国）。用途例として公式に「キッチンやバスルーム用品、家電や建材部品、広告、金型、ステンレスドアや窓部材、家具や自動車部品の組立等」とある。"
+  },
+  {
+    "id": "p239",
+    "maker_slug": "technocoat",
+    "model_slug": "tl-150lda",
+    "name": "スマートレーザー TL-150LDA",
+    "maker_name": "テクノコート株式会社",
+    "method": "ポータブル（ハンディトーチ・肉盛ヘッド／マイクロスコープ架台を組み合わせ）",
+    "wavelength": "1070nm",
+    "output_w": 150,
+    "output_note": "平均出力（パルス発振時）。ピークパワー1.5kW、CW発振時の平均出力250W。シリーズに TL-300LDA（300W）・TL-450LDA（450W）",
+    "portability": "チラー不要（メーカー説明）。85kg・W450×L830×H860mm（括弧書きの電源本体は 65kg・W340×L680×H660mm）、単相AC200V。ハンディトーチ HT10（板金用）約0.7kg",
+    "thickness_note": "公式事例: 板厚t0.05mm〜の超薄板溶接（超微細溶接向けの専用機による）。溶接事例 SUS t0.1mm・t0.4mm、Al t0.5mm",
+    "official_url": "https://www.technocoat.co.jp/products/smartlaser/",
+    "source_url": "https://www.technocoat.co.jp/products/smartlaser/spec/",
+    "source": "テクノコート株式会社 公式サイト",
+    "tags": {
+      "use": [
+        "薄板接合",
+        "異材接合",
+        "補修"
+      ],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ",
+        "銅",
+        "チタン"
+      ],
+      "thickness": [
+        "0.5mm未満",
+        "0.5〜3mm"
+      ],
+      "environment": [],
+      "price": [],
+      "skill": []
+    },
+    "comment": "平均出力150W（ピーク1,500W）・チラー不要の、肉盛補修と精密溶接向けの装置です。パルスと連続波を切り替えられ、小物・薄物のスポット・シーム溶接に使えます。",
+    "suitable_for": [
+      "金型・機械部品の肉盛補修",
+      "小物・薄物のスポット・シーム溶接",
+      "異種金属の肉盛・溶接",
+      "分解・運搬できない大型ワークや設備の現場補修"
+    ],
+    "not_suitable_for": [],
+    "features": [
+      "パルス（QCW）と連続波（CW）を切り替えて使える",
+      "波形制御機能で、高硬度材の肉盛時のクラック防止やアルミ・銅合金の溶接性を向上（メーカー説明）",
+      "ビーム品質 M²=1.1（YAGレーザー比で微細・精密な溶接向き）",
+      "チラー不要の構造で、ワークのそばに移動して使える",
+      "ハンディトーチ（板金用・肉盛用）とマイクロスコープ付き加工ヘッドを用途で選べる"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/technocoat-tl-150lda.jpg",
+    "image_credit": "テクノコート株式会社 公式サイト",
+    "image_source": "https://www.technocoat.co.jp/products/smartlaser/spec/",
+    "country": "日本",
+    "found_via": "metree",
+    "field_sources": {
+      "output_w": "https://www.technocoat.co.jp/products/smartlaser/spec/",
+      "wavelength": "https://www.technocoat.co.jp/products/smartlaser/spec/",
+      "portability": "https://www.technocoat.co.jp/products/smartlaser/spec/",
+      "method": "https://www.technocoat.co.jp/products/smartlaser/",
+      "thickness_note": "https://www.technocoat.co.jp/applications/331/",
+      "material": "https://www.technocoat.co.jp/applications/331/",
+      "use": "https://www.technocoat.co.jp/products/smartlaser/",
+      "features": "https://www.technocoat.co.jp/products/smartlaser/"
+    },
+    "is_published": true,
+    "notes": "肉盛補修と精密溶接が主用途の低出力ファイバーレーザー装置で、1〜2kW級のハンドヘルド溶接機とは用途が異なる。厚板向けの公表値なし。板厚タグは公式事例の数値（t0.05〜0.5mm）から当てはめた。Al t0.5mm は境界値のため 0.5〜3mm も付けた。価格は非公開（カタログはフォームからのダウンロード）。重量・寸法は公式仕様表の表記（「寸法（電源本体）」欄に 2 つの値があり、括弧内が電源本体）。何を含む値かは公式に明記なし。"
+  },
+  {
+    "id": "p240",
+    "maker_slug": "chunichi-craft",
+    "model_slug": "chu-lw1500n",
+    "name": "CHU-LW1500N",
+    "maker_name": "中日クラフト株式会社",
+    "method": "ハンドヘルド",
+    "wavelength": "1080nm±10nm",
+    "output_w": 1500,
+    "output_note": "定格出力（CW/連続波）。シリーズに CHU-LW2000N（2000W）",
+    "portability": "水冷、本体165kg、高さ1050×奥行950×幅700mm、単相220V・消費電力8kW、ケーブル長8m、トーチ0.9kg",
+    "thickness_note": "溶接可能条件（公表値）: SUS 0.5〜2.0mm、鉄 0.5〜3.0mm、亜鉛メッキ鋼板 0.5〜3.0mm、アルミ 0.5〜2.5mm",
+    "official_url": "https://www.chu-cra.co.jp/welding/",
+    "source_url": "https://www.chu-cra.co.jp/welding/",
+    "source": "中日クラフト株式会社 公式サイト",
+    "tags": {
+      "use": [
+        "異材接合"
+      ],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ"
+      ],
+      "thickness": [
+        "0.5〜3mm"
+      ],
+      "environment": [],
+      "price": [],
+      "skill": [
+        "未経験可"
+      ]
+    },
+    "comment": "本体165kg・水冷の1,500W機です。溶接・切断・焼け取り・クリーナーの4機能を持ち、溶接可能条件は鉄0.5〜3.0mm、SUS 0.5〜2.0mmです。",
+    "suitable_for": [
+      "ステンレス・鉄・亜鉛メッキ鋼板・アルミの0.5〜3mm程度の溶接",
+      "異種金属の溶接",
+      "溶接に加え切断・焼け取り・クリーニングも1台で行いたい現場"
+    ],
+    "not_suitable_for": [
+      "使用温度範囲10〜40℃の外の環境（公表の使用温度範囲）"
+    ],
+    "features": [
+      "溶接・切断・焼け取り・クリーナーの4機能を1台で使える",
+      "スイング機能で溶接幅・溶け込み形状を調整できる",
+      "トーチ重量0.9kg",
+      "シングル／ダブルワイヤー送給装置を選べる（ダブルは厚い肉盛溶接向けのオプション）",
+      "中国工場での組立・出荷前検査に加え、日本の工場でエージングなどの最終検査を実施"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/chunichi-craft-chu-lw1500n.jpg",
+    "image_credit": "中日クラフト株式会社 公式サイト",
+    "image_source": "https://www.chu-cra.co.jp/welding/",
+    "country": "中国",
+    "found_via": "metree",
+    "field_sources": {
+      "output_w": "https://www.chu-cra.co.jp/welding/",
+      "wavelength": "https://www.chu-cra.co.jp/welding/",
+      "portability": "https://www.chu-cra.co.jp/welding/",
+      "thickness_note": "https://www.chu-cra.co.jp/welding/",
+      "material": "https://www.chu-cra.co.jp/welding/",
+      "use": "https://www.chu-cra.co.jp/welding/",
+      "skill": "https://www.chu-cra.co.jp/welding/",
+      "features": "https://www.chu-cra.co.jp/welding/",
+      "country": "https://www.chu-cra.co.jp/welding/"
+    },
+    "is_published": true,
+    "notes": "Metoree の型番表記は CHU-LW1500/2000、公式の現行表記は CHU-LW1500N/2000N。country は公式の「中国の工場では組み立てから…出荷前検査」の記載による（日本の工場で最終検査）。切断可能条件（1500W）: SUS 4.0mm・鉄 8.0mm・亜鉛メッキ鋼板 8.0mm・アルミ 3.0mmまで。価格は非公開（「低価格」とのみ記載）。画像はページ見出しの背景画像（本体とワイヤー送給装置の写真）。ページ内容は2025年10月時点と記載。"
+  },
+  {
+    "id": "p241",
+    "maker_slug": "chunichi-craft",
+    "model_slug": "hw550",
+    "name": "ヒートポンプ式ファイバーレーザー溶接機 HW550",
+    "maker_name": "中日クラフト株式会社",
+    "method": "ハンドヘルド",
+    "wavelength": "1064nm±10%",
+    "output_w": 1500,
+    "output_note": "定格出力。シリーズに HW350（900W）・HW450（1200W）",
+    "portability": "ヒートポンプ式強制空冷（2重回路冷媒ダイレクト冷却、水冷不要）、本体45kg、670×505×310mm、単相220V・消費電力5400W、ケーブル長5m（最大10m）、ヘッド0.6kg",
+    "thickness_note": "溶接可能条件（公表値）: 鉄・SUS・アルミ 0.5〜5.0mm",
+    "official_url": "https://www.chu-cra.co.jp/welding/aircooling/",
+    "source_url": "https://www.chu-cra.co.jp/welding/aircooling/",
+    "source": "中日クラフト株式会社 公式サイト",
+    "tags": {
+      "use": [],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ"
+      ],
+      "thickness": [
+        "0.5〜3mm",
+        "3〜6mm"
+      ],
+      "environment": [],
+      "price": [],
+      "skill": [
+        "未経験可"
+      ]
+    },
+    "comment": "本体45kg・ヒートポンプ式強制空冷の1,500W機です。動作温度は-20〜60℃で、鉄・SUS・アルミの0.5〜5.0mmの溶接に対応しています。",
+    "suitable_for": [
+      "鉄・SUS・アルミの0.5〜5.0mmの溶接",
+      "気温の幅が大きい作業場（動作温度-20〜60℃）",
+      "長時間の連続作業（ヘッドが熱くなりにくい）"
+    ],
+    "not_suitable_for": [],
+    "features": [
+      "圧縮式ヒートポンプでレーザーを冷却し、水冷不要。長期間使ってもパワー減衰がないとメーカーが説明",
+      "動作温度-20〜60℃",
+      "ヘッド重量0.6kg、本体45kg",
+      "スポット／連続スポット／パルス／連続の4溶接モード、ワイヤー径0.8/1/1.2/1.6mmに対応",
+      "ガス圧監視・保護ガラス監視・ヘッド温度監視など8重の保護機能"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/chunichi-craft-hw550.jpg",
+    "image_credit": "中日クラフト株式会社 公式サイト",
+    "image_source": "https://www.chu-cra.co.jp/welding/aircooling/",
+    "country": "日本",
+    "found_via": "metree",
+    "field_sources": {
+      "output_w": "https://www.chu-cra.co.jp/welding/aircooling/",
+      "wavelength": "https://www.chu-cra.co.jp/welding/aircooling/",
+      "portability": "https://www.chu-cra.co.jp/welding/aircooling/",
+      "thickness_note": "https://www.chu-cra.co.jp/welding/aircooling/",
+      "material": "https://www.chu-cra.co.jp/welding/aircooling/",
+      "skill": "https://www.chu-cra.co.jp/welding/aircooling/",
+      "features": "https://www.chu-cra.co.jp/welding/aircooling/"
+    },
+    "is_published": true,
+    "notes": "Metoree の候補は CHU-LW シリーズで、同社のもう一つのハンドヘルド主力として採用。公式ページに「10月よりモデルチェンジいたします」「写真は準備中」とあり、仕様・画像が変わる可能性がある（ページ内にコメントアウトされた HW1500/2000/2500 の表あり）。画像は公式の構造化データで HW シリーズの商品画像に指定されているもの。製造国は公式に記載なし（country はメーカー本社国）。価格は非公開。同社は協働ロボット対応の CHU-AW シリーズ（AW450/AW550）も掲載。"
+  },
+  {
+    "id": "p242",
+    "maker_slug": "akebono-sangyo",
+    "model_slug": "is-2000r",
+    "name": "iSHIN iS 2000r",
+    "maker_name": "曙産業株式会社",
+    "method": "ハンドヘルド",
+    "wavelength": "1080±5nm",
+    "output_w": 2000,
+    "output_note": "出力（出力範囲10〜100%）。ラインナップは iS 1500r（1.5kW）と iS 2000r（2kW）",
+    "portability": "水冷式、215kg、600（幅）×1100（奥行）×1010（高さ）mm、単相220V・消費電力6.0kW、ガンケーブル8m（オプション15m）",
+    "thickness_note": null,
+    "official_url": "https://www.akebono-c.com/",
+    "source_url": "https://www.akebono-c.com/",
+    "source": "曙産業株式会社 iSHIN 公式サイト",
+    "tags": {
+      "use": [
+        "異材接合"
+      ],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ",
+        "銅",
+        "チタン"
+      ],
+      "thickness": [],
+      "environment": [],
+      "price": [
+        "600万円以上"
+      ],
+      "skill": [
+        "未経験可"
+      ]
+    },
+    "comment": "本体215kg・水冷式の2,000W機です。トーチとワイヤーフィーダーが一体のウォブルレーザーガンで、片手で作業できます。",
+    "suitable_for": [
+      "鉄・ステンレス・アルミの溶接",
+      "銅・チタン合金などの難溶接材の溶接",
+      "異種金属の溶接",
+      "高融点の難溶接材の溶接（公式: 高融点の難溶接材でも活躍できる2000W）"
+    ],
+    "not_suitable_for": [],
+    "features": [
+      "トーチとワイヤーフィーダーが一体のウォブルレーザーガン（片手で作業可能、5パターンのウォブル）",
+      "Raycus 製のファイバーレーザー発振器を搭載",
+      "日本企業（曙産業）のオリジナルブランドで2年保証、24時間電話対応",
+      "工場板金技能士（1級以上）による搬入・設置・試運転と使用方法のレクチャー",
+      "日本溶接協会の『生産性向上要件証明書』の発行が可能（メーカー説明）"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/akebono-sangyo-is-2000r.png",
+    "image_credit": "曙産業株式会社 iSHIN 公式サイト",
+    "image_source": "https://www.akebono-c.com/",
+    "country": "日本",
+    "found_via": "metree",
+    "field_sources": {
+      "output_w": "https://www.akebono-c.com/",
+      "wavelength": "https://www.akebono-c.com/",
+      "portability": "https://www.akebono-c.com/",
+      "material": "https://www.akebono-c.com/",
+      "use": "https://www.akebono-c.com/",
+      "price": "https://www.akebono-c.com/",
+      "skill": "https://www.akebono-c.com/",
+      "features": "https://www.akebono-c.com/"
+    },
+    "is_published": true,
+    "notes": "公式価格 ¥9,000,000（税込9,900,000円）（出典: https://www.akebono-c.com/）。外寸・重量は公式仕様表で両機種共通の1欄表記。使用空圧0.4〜0.6MPa（窒素・アルゴン・圧縮空気）。設置時は約2×2mのスペースと200V単相電源、荷下ろし用フォークリフトが必要（公式FAQ）。対応板厚の公表値なし。製造国は公式に記載なし（「日本企業のオリジナルブランド製品」と記載、country はブランド所有企業の国）。曙産業は京都の機械工具商社。画像はラインナップ欄の本体写真（2機種共通の1枚）。Metoree の型番表記は「iS 2000r」、公式ラインナップ欄は「iS-r 2000」。"
+  },
+  {
+    "id": "p243",
+    "maker_slug": "akebono-sangyo",
+    "model_slug": "is-1500r",
+    "name": "iSHIN iS 1500r",
+    "maker_name": "曙産業株式会社",
+    "method": "ハンドヘルド",
+    "wavelength": "1080±5nm",
+    "output_w": 1500,
+    "output_note": "出力（出力範囲10〜100%）。ラインナップは iS 1500r（1.5kW）と iS 2000r（2kW）",
+    "portability": "水冷式、215kg、600（幅）×1100（奥行）×1010（高さ）mm、単相220V・消費電力5.5kW、ガンケーブル8m（オプション15m）",
+    "thickness_note": null,
+    "official_url": "https://www.akebono-c.com/",
+    "source_url": "https://www.akebono-c.com/",
+    "source": "曙産業株式会社 iSHIN 公式サイト",
+    "tags": {
+      "use": [
+        "薄板接合",
+        "異材接合"
+      ],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ",
+        "銅",
+        "チタン"
+      ],
+      "thickness": [],
+      "environment": [],
+      "price": [
+        "600万円以上"
+      ],
+      "skill": [
+        "未経験可"
+      ]
+    },
+    "comment": "本体215kg・水冷式の1,500W機です。トーチとワイヤーフィーダーが一体のウォブルレーザーガンで、片手で作業できます。",
+    "suitable_for": [
+      "鉄・ステンレス・アルミの溶接",
+      "銅・チタン合金などの難溶接材の溶接",
+      "異種金属の溶接",
+      "薄板の溶接（公式: 薄板に最適な1500W出力）"
+    ],
+    "not_suitable_for": [],
+    "features": [
+      "トーチとワイヤーフィーダーが一体のウォブルレーザーガン（片手で作業可能、5パターンのウォブル）",
+      "Raycus 製のファイバーレーザー発振器を搭載",
+      "日本企業（曙産業）のオリジナルブランドで2年保証、24時間電話対応",
+      "工場板金技能士（1級以上）による搬入・設置・試運転と使用方法のレクチャー",
+      "日本溶接協会の『生産性向上要件証明書』の発行が可能（メーカー説明）"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/akebono-sangyo-is-1500r.png",
+    "image_credit": "曙産業株式会社 iSHIN 公式サイト",
+    "image_source": "https://www.akebono-c.com/",
+    "country": "日本",
+    "found_via": "metree",
+    "field_sources": {
+      "output_w": "https://www.akebono-c.com/",
+      "wavelength": "https://www.akebono-c.com/",
+      "portability": "https://www.akebono-c.com/",
+      "material": "https://www.akebono-c.com/",
+      "use": "https://www.akebono-c.com/",
+      "price": "https://www.akebono-c.com/",
+      "skill": "https://www.akebono-c.com/",
+      "features": "https://www.akebono-c.com/"
+    },
+    "is_published": true,
+    "notes": "公式価格 ¥7,000,000（税込7,700,000円）。補助金1/2適用時の実質約350万円という試算も掲載（出典: https://www.akebono-c.com/）。外寸・重量は公式仕様表で両機種共通の1欄表記。使用空圧0.4〜0.6MPa（窒素・アルゴン・圧縮空気）。設置時は約2×2mのスペースと200V単相電源、荷下ろし用フォークリフトが必要（公式FAQ）。対応板厚の公表値なし。製造国は公式に記載なし（「日本企業のオリジナルブランド製品」と記載、country はブランド所有企業の国）。曙産業は京都の機械工具商社。画像はラインナップ欄の本体写真（2機種共通の1枚）。公式ラインナップ欄の表記は「iS-r 1500」、仕様表は「iS 1500r」。"
+  },
+  {
+    "id": "p244",
+    "maker_slug": "nbc-engineer",
+    "model_slug": "aw-1500w",
+    "name": "AW-1500W",
+    "maker_name": "NBCエンジニア株式会社",
+    "method": "ハンドヘルド",
+    "wavelength": null,
+    "output_w": 1500,
+    "output_note": "最大レーザー出力",
+    "portability": "空冷式ポータブル（公式表記）。重量は非公開",
+    "thickness_note": null,
+    "official_url": "https://nbceng.biz/nbclaser",
+    "source_url": "https://nbceng.biz/nbclaser",
+    "source": "NBCエンジニア株式会社 公式サイト（NBCレーザー）",
+    "tags": {
+      "use": [
+        "異材接合"
+      ],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ"
+      ],
+      "thickness": [],
+      "environment": [],
+      "price": [],
+      "skill": [
+        "未経験可"
+      ]
+    },
+    "comment": "空冷式ポータブルの1,500W機です。部品交換で切断・レーザークリーナー・溶接焼け取りにも使える1台4役の構成です。",
+    "suitable_for": [
+      "鉄・ステンレス・アルミの溶接",
+      "異材溶接",
+      "溶接に加え切断・レーザークリーニング・焼け取りも1台で行いたい現場"
+    ],
+    "not_suitable_for": [],
+    "features": [
+      "空冷式のポータブルなファイバーレーザー溶接機",
+      "部品交換で切断・レーザークリーナー・溶接焼け取り機としても使える1台4役",
+      "出力調整ができ、薄い素材の溶接にも対応",
+      "アーク溶接やTIG溶接と比べ熱影響範囲が狭く、焼け・歪みを抑えられる（メーカー説明）"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/nbc-engineer-aw-1500w.png",
+    "image_credit": "NBCエンジニア株式会社 公式サイト",
+    "image_source": "https://nbceng.biz/nbclaser",
+    "country": null,
+    "found_via": "metree",
+    "field_sources": {
+      "output_w": "https://nbceng.biz/nbclaser",
+      "method": "https://nbceng.biz/nbclaser",
+      "portability": "https://nbceng.biz/nbclaser",
+      "material": "https://nbceng.biz/nbclaser",
+      "use": "https://nbceng.biz/nbclaser",
+      "skill": "https://nbceng.biz/nbclaser",
+      "features": "https://nbceng.biz/nbclaser"
+    },
+    "is_published": true,
+    "notes": "Metoree の掲載は同社の LWM シリーズ。公式ページで空冷式の主力（おすすめ表示）が AW-1500W のため採用。波長・重量・対応板厚・価格は公式ページに記載なし（詳細カタログはフォーム送信でのダウンロードのため未確認）。「初心者でも簡単に扱うことが可能」は公式ページの AW-1500W テスト動画の説明文による。同ページに AW-800W（最大800W）も掲載。製造国は公式に記載なし。"
+  },
+  {
+    "id": "p245",
+    "maker_slug": "nbc-engineer",
+    "model_slug": "lwm-1500w",
+    "name": "LWM-1500W",
+    "maker_name": "NBCエンジニア株式会社",
+    "method": "ハンドヘルド",
+    "wavelength": null,
+    "output_w": 1500,
+    "output_note": "型番の数値（公式ページに出力の区分の記載なし）。シリーズに LWM-2000W あり",
+    "portability": "水冷式、本体とチラー一体型（取り外し不可）。公式図面の外形寸法 約436×958.5×803.2mm。重量は非公開",
+    "thickness_note": null,
+    "official_url": "https://nbceng.biz/nbclaser",
+    "source_url": "https://nbceng.biz/nbclaser",
+    "source": "NBCエンジニア株式会社 公式サイト（NBCレーザー）",
+    "tags": {
+      "use": [],
+      "material": [],
+      "thickness": [],
+      "environment": [],
+      "price": [],
+      "skill": []
+    },
+    "comment": "本体とチラーが一体の水冷式機で、型番の数値は1,500Wです。スイング機能を搭載し、オプションでダブルフィーダーやロボット取付接続口があります。",
+    "suitable_for": [],
+    "not_suitable_for": [],
+    "features": [
+      "安価で小型サイズの水冷式ファイバーレーザー溶接機（メーカー説明）",
+      "照射点を左右に高速で動かすスイング機能を搭載",
+      "本体とチラーが一体型",
+      "オプションでダブルフィーダー（肉盛溶接）、2次元ウォブリング、ロボット取付接続口"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/nbc-engineer-lwm-1500w.png",
+    "image_credit": "NBCエンジニア株式会社 公式サイト",
+    "image_source": "https://nbceng.biz/nbclaser",
+    "country": null,
+    "found_via": "metree",
+    "field_sources": {
+      "output_w": "https://nbceng.biz/nbclaser",
+      "method": "https://nbceng.biz/nbclaser",
+      "portability": "https://nbceng.biz/nbclaser",
+      "features": "https://nbceng.biz/nbclaser"
+    },
+    "is_published": true,
+    "notes": "Metoree では LWM-1000W/1500W/2000W の3型番だが、公式ページの掲載は LWM-1500W/2000W のみ。対応材料・板厚・波長・重量・価格は公式ページに記載なし。外形寸法は公式ページの図面（LWM 欄の画像）から読み取った値。製造国は公式に記載なし。"
+  },
+  {
+    "id": "p246",
+    "maker_slug": "rapyuta",
+    "model_slug": "la-luce-dio-handy",
+    "name": "La Luce Dio ハンディ",
+    "maker_name": "株式会社ラピュタインターナショナル",
+    "method": "ハンドヘルド",
+    "wavelength": "1080nm",
+    "output_w": 1500,
+    "output_note": "最大レーザー出力（CW、パルス不可）",
+    "portability": "チラーあり（水冷）、本体150kg（仕様表。特長欄は160kg）、884×436×662mm（L×W×H）、220V単相、総設備容量8kW以上",
+    "thickness_note": "加工可能材料・板厚（公表値）: アルミ2mm、ステンレス304 3mm、鉄3mm、炭素鋼3mm",
+    "official_url": "https://rapyuta.jp/item/machine/fiberlazer1500/",
+    "source_url": "https://rapyuta.jp/item/machine/fiberlazer1500/",
+    "source": "株式会社ラピュタインターナショナル 公式サイト",
+    "tags": {
+      "use": [],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ"
+      ],
+      "thickness": [
+        "0.5〜3mm"
+      ],
+      "environment": [],
+      "price": [],
+      "skill": [
+        "未経験可"
+      ]
+    },
+    "comment": "本体150kg・水冷の1,500W機です。ワイヤーフィーダー付きで、ビームを左右に振ることで2mm以内の隙間がある溶接に対応します。",
+    "suitable_for": [
+      "アルミ2mm・ステンレス/鉄3mm程度までの溶接",
+      "隙間（2mm以内）がある継手の溶接（ビームの左右振り）"
+    ],
+    "not_suitable_for": [
+      "パルス発振が必要な加工（CWのみ、パルス不可）"
+    ],
+    "features": [
+      "ワイヤーフィーダー付きで φ1.6mm まで対応",
+      "レーザービームを左右に振ることで隙間（2mm以内）がある溶接への対応力が向上",
+      "簡易切断と光クリーニングにも対応",
+      "熟練いらずで操作が簡単、軽量ヘッド（メーカー説明）"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/rapyuta-la-luce-dio-handy.png",
+    "image_credit": "株式会社ラピュタインターナショナル 公式サイト",
+    "image_source": "https://rapyuta.jp/item/machine/fiberlazer1500/",
+    "country": null,
+    "found_via": "metree / Photonix",
+    "field_sources": {
+      "output_w": "https://rapyuta.jp/common22/wp-content/uploads/2022/11/WeChat-Image_20221108105232.png",
+      "wavelength": "https://rapyuta.jp/common22/wp-content/uploads/2022/11/WeChat-Image_20221108105232.png",
+      "portability": "https://rapyuta.jp/common22/wp-content/uploads/2022/11/WeChat-Image_20221108105232.png",
+      "thickness_note": "https://rapyuta.jp/common22/wp-content/uploads/2022/11/WeChat-Image_20221108105232.png",
+      "material": "https://rapyuta.jp/common22/wp-content/uploads/2022/11/WeChat-Image_20221108105232.png",
+      "features": "https://rapyuta.jp/common22/wp-content/uploads/2022/11/image-2.png",
+      "skill": "https://rapyuta.jp/common22/wp-content/uploads/2022/11/image-2.png",
+      "page": "https://rapyuta.jp/item/machine/fiberlazer1500/"
+    },
+    "is_published": true,
+    "notes": "公式ページは本文がなく、仕様・特長はページ内の画像（仕様表・特長一覧）で掲載。重量は仕様表150kg、特長欄160kgで不一致。仕様表の機種名表記は「La Lucc Dio ハンディ」（Luce の誤記とみられるが原文ママ）。加工サンプル欄に「※溶接形状は直線のみ可能です」との注記あり（サンプルに対する注記か機械の制約かは不明）。製造国・価格は公式に記載なし。同社は SENFENG 製の 4in1 レーザー溶接機 SF-HWM（1.5/2/3kW）の総販売元としてカタログも掲載（https://rapyuta.jp/item/machine/4in1laserwelding/）しているが、候補一覧の #23 SENFENG と重複するためレコード化していない。"
+  },
+  {
+    "id": "p247",
+    "maker_slug": "profitet",
+    "model_slug": "a150",
+    "name": "超格安ハンディ溶接機 A150",
+    "maker_name": "株式会社プロフィテット",
+    "method": "ハンドヘルド",
+    "wavelength": "1080±3nm",
+    "output_w": 1500,
+    "output_note": "最大出力（電流22.5A時）。電流19A時は1300W。ラインナップは A80（800W）・A120（1200W）・A150（1500W）",
+    "portability": "空冷（水冷不要）、43kg未満、273×634.9×527.7mm（幅×高×奥）、AC220V・消費電力4000W未満、伝送ファイバ長5m（カスタム可）",
+    "thickness_note": null,
+    "official_url": "https://www.profitet.com/products/materialprocessing/handyweld.html",
+    "source_url": "https://www.profitet.com/products/materialprocessing/handyweld.html",
+    "source": "株式会社プロフィテット 公式サイト",
+    "tags": {
+      "use": [],
+      "material": [],
+      "thickness": [],
+      "environment": [],
+      "price": [],
+      "skill": [
+        "未経験可"
+      ]
+    },
+    "comment": "本体43kg未満・空冷の1,500W機です。アタッチメント交換で溶接・切断・錆取りの1台3役になり、使用温度は-20〜+40℃です。",
+    "suitable_for": [
+      "溶接に加え切断・錆取りも1台で行いたい現場（アタッチメント交換）"
+    ],
+    "not_suitable_for": [],
+    "features": [
+      "空冷式で水冷不要、コンパクトな設計",
+      "アタッチメント交換で溶接・切断・錆取りの1台3役",
+      "ガルバノスキャナによるウォブリング（スポット高速走査）",
+      "使用温度 -20〜+40℃",
+      "保証は納入後1年（有償で2年まで延長可、光学部品は対象外）。国内配送・設置・取扱説明あり"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/profitet-a150.jpg",
+    "image_credit": "株式会社プロフィテット 公式サイト",
+    "image_source": "https://www.profitet.com/products/materialprocessing/handyweld.html",
+    "country": null,
+    "found_via": "metree / Photonix",
+    "field_sources": {
+      "output_w": "https://www.profitet.com/products/materialprocessing/handyweld.html",
+      "wavelength": "https://www.profitet.com/products/materialprocessing/handyweld.html",
+      "portability": "https://www.profitet.com/products/materialprocessing/handyweld.html",
+      "skill": "https://www.profitet.com/products/materialprocessing/handyweld.html",
+      "features": "https://www.profitet.com/products/materialprocessing/handyweld.html"
+    },
+    "is_published": true,
+    "notes": "公式は「業界最安値」「超低価格」とするが価格は非公開。対応材料・板厚の公表値なし（加工例は写真のみ）。製造元は公式本文に記載なし（本体写真に「reci」のロゴと中国語の社名表記あり）。Metoree では製品名 PROWELD、550W〜2000Wの4タイプ・重量12〜58kgと紹介されているが、公式ページの現行掲載は A80/A120/A150 の3機種。カタログDLは準備中。"
+  },
+  {
+    "id": "p248",
+    "maker_slug": "profitet",
+    "model_slug": "a80",
+    "name": "超格安ハンディ溶接機 A80",
+    "maker_name": "株式会社プロフィテット",
+    "method": "ハンドヘルド",
+    "wavelength": "1080±3nm",
+    "output_w": 800,
+    "output_note": "最大出力（電流22.5A時）。電流19A時は700W。ラインナップは A80（800W）・A120（1200W）・A150（1500W）",
+    "portability": "空冷（水冷不要）、34kg未満、273×614.9×396.3mm（幅×高×奥）、AC220V・消費電力2500W未満、伝送ファイバ長5m（カスタム可）",
+    "thickness_note": null,
+    "official_url": "https://www.profitet.com/products/materialprocessing/handyweld.html",
+    "source_url": "https://www.profitet.com/products/materialprocessing/handyweld.html",
+    "source": "株式会社プロフィテット 公式サイト",
+    "tags": {
+      "use": [],
+      "material": [],
+      "thickness": [],
+      "environment": [],
+      "price": [],
+      "skill": [
+        "未経験可"
+      ]
+    },
+    "comment": "本体34kg未満・空冷の800W機です。アタッチメント交換で溶接・切断・錆取りの1台3役になり、使用温度は-20〜+40℃です。",
+    "suitable_for": [
+      "溶接に加え切断・錆取りも1台で行いたい現場（アタッチメント交換）"
+    ],
+    "not_suitable_for": [],
+    "features": [
+      "空冷式で水冷不要、コンパクトな設計",
+      "アタッチメント交換で溶接・切断・錆取りの1台3役",
+      "ガルバノスキャナによるウォブリング（スポット高速走査）",
+      "使用温度 -20〜+40℃",
+      "保証は納入後1年（有償で2年まで延長可、光学部品は対象外）。国内配送・設置・取扱説明あり"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/profitet-a80.jpg",
+    "image_credit": "株式会社プロフィテット 公式サイト",
+    "image_source": "https://www.profitet.com/products/materialprocessing/handyweld.html",
+    "country": null,
+    "found_via": "metree / Photonix",
+    "field_sources": {
+      "output_w": "https://www.profitet.com/products/materialprocessing/handyweld.html",
+      "wavelength": "https://www.profitet.com/products/materialprocessing/handyweld.html",
+      "portability": "https://www.profitet.com/products/materialprocessing/handyweld.html",
+      "skill": "https://www.profitet.com/products/materialprocessing/handyweld.html",
+      "features": "https://www.profitet.com/products/materialprocessing/handyweld.html"
+    },
+    "is_published": true,
+    "notes": "公式は「業界最安値」「超低価格」とするが価格は非公開。対応材料・板厚の公表値なし（加工例は写真のみ）。製造元は公式本文に記載なし（本体写真に「reci」のロゴと中国語の社名表記あり）。Metoree では製品名 PROWELD、550W〜2000Wの4タイプ・重量12〜58kgと紹介されているが、公式ページの現行掲載は A80/A120/A150 の3機種。カタログDLは準備中。 公式画像右側の本体に A80 の表記あり。"
+  },
+  {
+    "id": "p249",
+    "maker_slug": "bodor",
+    "model_slug": "pro-1500",
+    "name": "Pro 1500",
+    "maker_name": "Bodor（国内代理店：株式会社アイムSSK）",
+    "method": "ハンドヘルド",
+    "wavelength": null,
+    "output_w": 1500,
+    "output_note": "出力（連続出力）",
+    "portability": "冷媒冷却（自己冷却、水タンク不要）、850×420×570mm（占有面積0.24㎡）、重量82kg（メーカー公式）／65kg（国内販売店）、ファイバーケーブル10m±0.5m、220〜240V/21.1A",
+    "thickness_note": "溶接厚（国内販売店の公表値）: 炭素鋼5mm、ステンレス5mm、アルミ4mm、真鍮2mm",
+    "official_url": "https://bodor.com/en/laser-welding-machine/handheld-laser-welding-machine/bodorwelder-1500.html",
+    "source_url": "https://ssk-net.jp/brandnew/pro_series.html",
+    "source": "Bodor 公式サイト／株式会社アイムSSK 公式サイト",
+    "tags": {
+      "use": [],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ"
+      ],
+      "thickness": [
+        "0.5〜3mm",
+        "3〜6mm"
+      ],
+      "environment": [],
+      "price": [],
+      "skill": [
+        "未経験可"
+      ]
+    },
+    "comment": "冷媒による自己冷却の1,500W機で、水の交換・補充が不要です。溶接厚は炭素鋼・ステンレス5mm、アルミ4mm（国内販売店の公表値）です。",
+    "suitable_for": [
+      "炭素鋼・ステンレス5mm、アルミ4mm程度までの溶接",
+      "寒暖差の大きい作業場（-20〜60℃で連続出力とメーカーが公表）",
+      "長時間の連続溶接"
+    ],
+    "not_suitable_for": [],
+    "features": [
+      "コンプレッサーと冷媒による自己冷却方式で、水の交換・補充が不要",
+      "-20〜60℃、湿度90%までで連続出力できるとメーカーが公表",
+      "出力・ビード幅・周波数などを1つのノブで調整し、溶接条件を保存できる",
+      "Bodor 溶接データベースのプリセット条件を選べる",
+      "溶接・切断用の専用ノズルを用意"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/bodor-pro-1500.jpg",
+    "image_credit": "株式会社アイムSSK 公式サイト（Bodor 製品画像）",
+    "image_source": "https://ssk-net.jp/brandnew/pro_series.html",
+    "country": "中国",
+    "found_via": "metree",
+    "field_sources": {
+      "output_w": "https://ssk-net.jp/brandnew/pro_series.html",
+      "portability": "https://ssk-net.jp/brandnew/pro_series.html / https://bodor.com/en/laser-welding-machine/handheld-laser-welding-machine/bodorwelder-1500.html（重量82kg・寸法はメーカーのページデータ）",
+      "thickness_note": "https://ssk-net.jp/brandnew/pro_series.html",
+      "material": "https://ssk-net.jp/brandnew/pro_series.html",
+      "features": "https://bodor.com/en/laser-welding-machine/handheld-laser-welding-machine/bodorwelder-1500.html",
+      "skill": "https://ssk-net.jp/brandnew/fiberlaserwelder.html",
+      "country": "https://www.bodor.com/en/contact/"
+    },
+    "is_published": true,
+    "notes": "名称はメーカー公式ページで「Pro 1500」、製品写真の表記は「BodorWelder 1500 Pro」、Metoree は「Welder 1500 Pro」。重量はメーカー82kg・国内販売店65kgで不一致。波長は公式に記載なし。country は Bodor 公式の問い合わせ先電話番号が +86（中国、0531 は済南の市外局番）であることによる（本社所在地の明記は公式ページで確認できず）。価格は国内販売店・メーカーとも非公開（日本向け）。溶接厚は国内販売店の仕様表の値（メーカーの英語ページ・データでは材料別の厚さ欄に同値、Air シリーズは本文で「4mm penetration」とも表現）で、板厚タグは最大値までの範囲を当てはめた。"
+  },
+  {
+    "id": "p250",
+    "maker_slug": "bodor",
+    "model_slug": "air-1200",
+    "name": "Air 1200",
+    "maker_name": "Bodor（国内代理店：株式会社アイムSSK）",
+    "method": "ハンドヘルド",
+    "wavelength": null,
+    "output_w": 1200,
+    "output_note": "出力（連続出力）。Air シリーズに 900W・600W もあり（国内販売店掲載）",
+    "portability": "空冷（自己冷却）、530×380×590mm（設置面積0.11㎡）、重量43kg（メーカー公式）／42kg（国内販売店）、ファイバー5m、100〜240V（国内販売店表記は200〜240V）/15A、3.3kW",
+    "thickness_note": "溶接厚（公表値）: 炭素鋼4mm、ステンレス4mm、アルミ3.5mm、真鍮1.5mm",
+    "official_url": "https://bodor.com/en/laser-welding-machine/handheld-laser-welding-machine/Air1200.html",
+    "source_url": "https://ssk-net.jp/brandnew/air_series.html",
+    "source": "Bodor 公式サイト／株式会社アイムSSK 公式サイト",
+    "tags": {
+      "use": [],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ"
+      ],
+      "thickness": [
+        "0.5〜3mm",
+        "3〜6mm"
+      ],
+      "environment": [],
+      "price": [],
+      "skill": [
+        "未経験可"
+      ]
+    },
+    "comment": "本体約43kg・空冷の1,200W機で、設置面積は0.11㎡です。溶接厚は炭素鋼・ステンレス4mm、アルミ3.5mmと公表されています。",
+    "suitable_for": [
+      "炭素鋼・ステンレス4mm、アルミ3.5mm程度までの溶接",
+      "持ち運び・狭い場所での作業（43kg、設置面積0.11㎡）"
+    ],
+    "not_suitable_for": [
+      "使用温度 -20〜40℃ を超える高温環境（公表の使用温度範囲）"
+    ],
+    "features": [
+      "空冷の自己冷却方式で、-20〜40℃で連続出力できるとメーカーが公表",
+      "100〜240V のマルチ電源に対応（国内販売店の仕様表は200〜240V）",
+      "Bodor の溶接プロセスデータベースで初心者でも条件を選びやすい（メーカー説明）",
+      "出力・ビード幅・周波数などを1つのノブで調整・保存"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/bodor-air-1200.png",
+    "image_credit": "Bodor 公式サイト",
+    "image_source": "https://bodor.com/en/laser-welding-machine/handheld-laser-welding-machine/Air1200.html",
+    "country": "中国",
+    "found_via": "metree",
+    "field_sources": {
+      "output_w": "https://bodor.com/en/laser-welding-machine/handheld-laser-welding-machine/Air1200.html（ページの機種データ）",
+      "portability": "https://bodor.com/en/laser-welding-machine/handheld-laser-welding-machine/Air1200.html（ページの機種データ） / https://ssk-net.jp/brandnew/air_series.html",
+      "thickness_note": "https://bodor.com/en/laser-welding-machine/handheld-laser-welding-machine/Air1200.html（ページの機種データ） / https://ssk-net.jp/brandnew/air_series.html",
+      "material": "https://ssk-net.jp/brandnew/air_series.html",
+      "features": "https://bodor.com/en/laser-welding-machine/handheld-laser-welding-machine/Air1200.html",
+      "skill": "https://bodor.com/en/laser-welding-machine/handheld-laser-welding-machine/Air1200.html",
+      "country": "https://www.bodor.com/en/contact/"
+    },
+    "is_published": true,
+    "notes": "Metoree の候補は Welder 1500 Pro。同じ国内販売店が掲載する空冷の主力として採用。重量はメーカー43kg・国内販売店42kgで不一致。電源はメーカー100〜240V、国内販売店200〜240V。波長は公式に記載なし。画像は webp 形式。country は Bodor 公式の問い合わせ先電話番号が +86（中国、0531 は済南の市外局番）であることによる（本社所在地の明記は公式ページで確認できず）。価格は国内販売店・メーカーとも非公開（日本向け）。溶接厚は国内販売店の仕様表の値（メーカーの英語ページ・データでは材料別の厚さ欄に同値、Air シリーズは本文で「4mm penetration」とも表現）で、板厚タグは最大値までの範囲を当てはめた。"
+  },
+  {
+    "id": "p251",
+    "maker_slug": "ggb",
+    "model_slug": "ggb-lw1200ws",
+    "name": "GGB-LW1200WS",
+    "maker_name": "合同会社ジージービー（GGB）",
+    "method": "ハンドヘルド",
+    "wavelength": "1080nm",
+    "output_w": 1200,
+    "output_note": null,
+    "portability": "本体約48kg、W350×L650×H600mm、空冷式。ファイバーケーブル10m",
+    "thickness_note": "推奨溶接厚み0.5〜8mm、溶接ギャップ条件≦2mm（公表値）。母材別の参考厚み（全機種共通の表）: ステンレス鋼・炭素鋼0.5〜3.0mm、アルミ1.0〜2.5mm、亜鉛メッキ鋼0.5〜2.5mm",
+    "official_url": "https://ggblaser.com/laser-welding",
+    "source_url": "https://ggblaser.com/laser-welding",
+    "source": "合同会社ジージービー（GGB）公式サイト レーザー溶接・切断機",
+    "tags": {
+      "use": [
+        "薄板接合",
+        "厚物"
+      ],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ"
+      ],
+      "thickness": [
+        "0.5〜3mm",
+        "3〜6mm",
+        "6mm以上"
+      ],
+      "environment": [],
+      "price": [],
+      "skill": [
+        "未経験可"
+      ]
+    },
+    "comment": "本体約48kg・空冷式の1,200W機です。推奨溶接厚みは0.5〜8mm、溶接ギャップ条件は2mm以下と公表されています。",
+    "suitable_for": [
+      "ステンレス鋼・炭素鋼・アルミ・亜鉛メッキ鋼の溶接",
+      "推奨溶接厚み0.5〜8mmの範囲",
+      "空冷式・約48kgのコンパクト機を置きたい現場"
+    ],
+    "not_suitable_for": [
+      "溶接ギャップ2mm超の継手（公表の溶接ギャップ条件は≦2mm）"
+    ],
+    "features": [
+      "出力1200W・空冷式のコンパクトタイプ（本体約48kg）",
+      "連続／変調の2モード",
+      "独自開発のスイング溶接で白斑の抑制と溶接幅の拡大をうたう",
+      "レーザーガンはピストル型・ペン型などから選べる（要問い合わせ）",
+      "特別な研修なしで溶接できるとメーカーが記載"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/ggb-ggb-lw1200ws.png",
+    "image_credit": "合同会社ジージービー（GGB）公式サイト",
+    "image_source": "https://ggblaser.com/laser-welding",
+    "country": "日本",
+    "found_via": "metree",
+    "field_sources": {
+      "output_w": "https://ggblaser.com/laser-welding",
+      "wavelength": "https://ggblaser.com/laser-welding",
+      "portability": "https://ggblaser.com/laser-welding",
+      "thickness_note": "https://ggblaser.com/laser-welding",
+      "material": "https://ggblaser.com/laser-welding",
+      "skill": "https://ggblaser.com/laser-welding",
+      "features": "https://ggblaser.com/laser-welding",
+      "country": "https://ggblaser.com/about-us"
+    },
+    "is_published": true,
+    "notes": "価格は公式サイト・公式オンラインショップ（ggb.base.ec）とも非公開。会社概要に「レーザー溶接機の製造、販売、修理、メンテナンス」とあり、本社は兵庫県明石市（製造国の明記はないため country は本社国）。比較表の溶接速度範囲は「0〜120mm/m」と表記（単位の誤記の可能性があるため記載しない）。電源は単相200V±10%、作業環境温度5〜38℃。母材別の厚み表はページ共通で機種別ではない。出力のCW/定格の区別は記載なし"
+  },
+  {
+    "id": "p252",
+    "maker_slug": "ggb",
+    "model_slug": "ggb-lw2000wr",
+    "name": "GGB-LW2000WR雷神",
+    "maker_name": "合同会社ジージービー（GGB）",
+    "method": "ハンドヘルド",
+    "wavelength": "1064nm",
+    "output_w": 2000,
+    "output_note": null,
+    "portability": "本体約40kg、W295×L570×H730mm、空冷式。ファイバーケーブル5m",
+    "thickness_note": "推奨溶接厚み0.5〜5mm、溶接ギャップ条件≦5mm（公表値）。母材別の参考厚み（全機種共通の表）: ステンレス鋼・炭素鋼0.5〜3.0mm、アルミ1.0〜2.5mm、亜鉛メッキ鋼0.5〜2.5mm",
+    "official_url": "https://ggblaser.com/laser-welding",
+    "source_url": "https://ggblaser.com/laser-welding",
+    "source": "合同会社ジージービー（GGB）公式サイト レーザー溶接・切断機",
+    "tags": {
+      "use": [
+        "薄板接合",
+        "補修"
+      ],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ"
+      ],
+      "thickness": [
+        "0.5〜3mm",
+        "3〜6mm"
+      ],
+      "environment": [],
+      "price": [],
+      "skill": [
+        "未経験可"
+      ]
+    },
+    "comment": "本体約40kg・空冷式の2,000W機です。推奨溶接厚みは0.5〜5mmで、ワイヤー供給装置と併用して5mm以下の溶接ギャップに対応します。",
+    "suitable_for": [
+      "ステンレス鋼・炭素鋼・アルミ・亜鉛メッキ鋼の溶接",
+      "隙間の大きい継手（溶接ギャップ条件≦5mm、ワイヤ供給装置の併用）",
+      "ワイヤを使う肉盛り溶接"
+    ],
+    "not_suitable_for": [
+      "推奨溶接厚み5mmを超える厚板"
+    ],
+    "features": [
+      "出力2000W・空冷式で本体約40kgの軽量設計",
+      "肉盛り溶接向けに複数のワイヤーに対応する供給装置を用意",
+      "連続モード",
+      "独自開発のスイング溶接で白斑の抑制と溶接幅の拡大をうたう",
+      "レーザーガンはピストル型・ペン型などから選べる（要問い合わせ）"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/ggb-ggb-lw2000wr.jpg",
+    "image_credit": "合同会社ジージービー（GGB）公式サイト",
+    "image_source": "https://ggblaser.com/laser-welding",
+    "country": "日本",
+    "found_via": "metree",
+    "field_sources": {
+      "output_w": "https://ggblaser.com/laser-welding",
+      "wavelength": "https://ggblaser.com/laser-welding",
+      "portability": "https://ggblaser.com/laser-welding",
+      "thickness_note": "https://ggblaser.com/laser-welding",
+      "material": "https://ggblaser.com/laser-welding",
+      "skill": "https://ggblaser.com/laser-welding",
+      "features": "https://ggblaser.com/laser-welding",
+      "country": "https://ggblaser.com/about-us"
+    },
+    "is_published": true,
+    "notes": "候補一覧の機種は GGB-LW1200WS。同社の空冷ハンドヘルドのもう1機種として追加。価格は非公開。公式の型番表記は「GGB-LW2000WR雷神」（model_slug は英字部分のみ）。商品画像はワイヤ供給装置と並んだ写真（背景にキャラクターのイラストあり）。use の「補修」は公式の「肉盛り溶接時」の記載にもとづく。電源は単相200V±10%、作業環境温度5〜35℃。同社には水冷式の GGB-LW2000W（約180kg、推奨溶接厚み0.5〜8mm）もある"
+  },
+  {
+    "id": "p253",
+    "maker_slug": "gweike",
+    "model_slug": "lcw3000",
+    "name": "LCW3000",
+    "maker_name": "GWEIKE（日本正規代理店：遠誠株式会社／国内販売：株式会社BESTUS）",
+    "method": "ハンドヘルド",
+    "wavelength": "1080nm",
+    "output_w": 3000,
+    "output_note": null,
+    "portability": "BESTUS掲載: 本体 巾640×奥行1050×高1190mm・250kg、水冷却式。GWEIKE掲載: 外形1210×650×1200mm、レーザーヘッド0.8kg、ファイバー長10〜20m（カスタム対応）。遠誠掲載（3000W）: 巾637×奥行1195×高1515mm・250kg",
+    "thickness_note": "溶接厚の推奨 0.5mm〜10mm（BESTUS公表値）。遠誠の LCW-1500 シリーズ表記では溶接厚の推奨 0.5mm〜3mm（出力別の記載なし）",
+    "official_url": "https://www.gwklaser.com/welding/LCW.html",
+    "source_url": "https://bestus.co.jp/home/%e8%a3%bd%e5%93%81%e4%b8%80%e8%a6%a7/%e6%a9%9f%e6%a2%b0%e8%a8%ad%e5%82%99/",
+    "source": "株式会社BESTUS 公式サイト（機械設備・LCWシリーズ）／GWEIKE 公式サイト（LCW SERIES）／遠誠株式会社（G-WEIKE日本正規代理店）マシン事業部サイト",
+    "tags": {
+      "use": [
+        "薄板接合",
+        "厚物"
+      ],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ"
+      ],
+      "thickness": [
+        "0.5〜3mm",
+        "3〜6mm",
+        "6mm以上"
+      ],
+      "environment": [],
+      "price": [],
+      "skill": [
+        "未経験可"
+      ]
+    },
+    "comment": "本体250kg・水冷式の3,000W機です。ノズル交換で溶接・切断・クリーニングを切り替え、推奨溶接厚は0.5〜10mmです。",
+    "suitable_for": [
+      "SUS・炭素鋼・アルミ等の溶接（推奨0.5〜10mm）",
+      "溶接に加えて切断・錆取り／塗装はがし（クリーニング）も1台で行いたい現場",
+      "メッキ材の溶接（メッキ材をそのまま溶接可能と記載）"
+    ],
+    "not_suitable_for": [],
+    "features": [
+      "溶接・切断・クリーニングの3機能を前端ノズルの交換で切り替え",
+      "スポット溶接・うろこ溶接・連続溶接に対応",
+      "レーザー幅0.01〜5.00mmを調整可能",
+      "タッチパネル操作・多言語対応",
+      "ワイヤー径0.8／1.0／1.2／1.6mmに対応（ワイヤー供給装置）"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/gweike-lcw3000.png",
+    "image_credit": "GWEIKE 公式サイト",
+    "image_source": "https://www.gwklaser.com/welding/LCW.html",
+    "country": "中国",
+    "found_via": "metree",
+    "field_sources": {
+      "output_w": "https://bestus.co.jp/home/%e8%a3%bd%e5%93%81%e4%b8%80%e8%a6%a7/%e6%a9%9f%e6%a2%b0%e8%a8%ad%e5%82%99/ / https://www.gwklaser.com/welding/LCW.html",
+      "wavelength": "https://www.gwklaser.com/welding/LCW.html",
+      "portability": "https://bestus.co.jp/home/%e8%a3%bd%e5%93%81%e4%b8%80%e8%a6%a7/%e6%a9%9f%e6%a2%b0%e8%a8%ad%e5%82%99/ / https://www.gwklaser.com/welding/LCW.html",
+      "thickness_note": "https://bestus.co.jp/home/%e8%a3%bd%e5%93%81%e4%b8%80%e8%a6%a7/%e6%a9%9f%e6%a2%b0%e8%a8%ad%e5%82%99/",
+      "material": "https://bestus.co.jp/home/%e8%a3%bd%e5%93%81%e4%b8%80%e8%a6%a7/%e6%a9%9f%e6%a2%b0%e8%a8%ad%e5%82%99/",
+      "skill": "https://bestus.co.jp/home/%e8%a3%bd%e5%93%81%e4%b8%80%e8%a6%a7/%e6%a9%9f%e6%a2%b0%e8%a8%ad%e5%82%99/",
+      "features": "https://bestus.co.jp/home/%e8%a3%bd%e5%93%81%e4%b8%80%e8%a6%a7/%e6%a9%9f%e6%a2%b0%e8%a8%ad%e5%82%99/",
+      "country": "https://www.gwklaser.com/about/",
+      "maker": "https://bestus.co.jp/wp-content/uploads/2024/09/%E6%BA%B6%E6%8E%A5%E6%A9%9F.mp4",
+      "domestic_agent_ensei": "https://ensei-m.jp/product/d/14"
+    },
+    "is_published": true,
+    "notes": "BESTUS は日中貿易の商社で、公式サイトの文面には製造元の記載がない。同ページ掲載の紹介動画（溶接機.mp4）の全カットに GWEIKE のロゴがあり、GWEIKE 公式サイトに同じ型番（LCW1500/2000/3000）の LCW SERIES があるため製造元を GWEIKE（中国・済南）とした。BESTUS が正規代理店かどうかは未確認。寸法・重量は BESTUS と GWEIKE で値が異なる（両方を併記）。価格は非公開。使用に際しアルゴンガスまたは窒素ガスとチラー用の精製水が必要（BESTUS FAQ）。使用環境15〜35℃。電源は GWEIKE の表で単相220V／三相380Vの記載があるが機種との対応が表から読み取りにくいため未記載。出力のCW/定格の区別は記載なし。波長は GWEIKE 公式の値。遠誠株式会社（ENSEI）マシン事業部サイトが「G-WEIKE日本正規代理店」を名乗り、LCW-1500（出力1000/1500/2000/3000W、水冷、溶接/カット/クリーニング、FANUC協働ロボットと接続可）を掲載。遠誠の表記では波長1064nm・総電力12kW・使用環境15〜35℃で、GWEIKE 公式（1080nm）と波長が食い違う"
+  },
+  {
+    "id": "p254",
+    "maker_slug": "gweike",
+    "model_slug": "lcw1500",
+    "name": "LCW1500",
+    "maker_name": "GWEIKE（日本正規代理店：遠誠株式会社／国内販売：株式会社BESTUS）",
+    "method": "ハンドヘルド",
+    "wavelength": "1080nm",
+    "output_w": 1500,
+    "output_note": null,
+    "portability": "BESTUS掲載: 本体 巾540×奥行990×高900mm・160kg、水冷却式。GWEIKE掲載: 外形910×540×1100mm、レーザーヘッド0.8kg、ファイバー長10〜20m（カスタム対応）。遠誠掲載（1500W）: 巾540×奥行985×高1455mm・160kg",
+    "thickness_note": "溶接厚の推奨 0.5mm〜4mm（BESTUS公表値）。遠誠掲載: 溶接厚の推奨 0.5mm〜3mm（LCW-1500）",
+    "official_url": "https://www.gwklaser.com/welding/LCW.html",
+    "source_url": "https://bestus.co.jp/home/%e8%a3%bd%e5%93%81%e4%b8%80%e8%a6%a7/%e6%a9%9f%e6%a2%b0%e8%a8%ad%e5%82%99/",
+    "source": "株式会社BESTUS 公式サイト（機械設備・LCWシリーズ）／GWEIKE 公式サイト（LCW SERIES）／遠誠株式会社（G-WEIKE日本正規代理店）マシン事業部サイト",
+    "tags": {
+      "use": [
+        "薄板接合"
+      ],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ"
+      ],
+      "thickness": [
+        "0.5〜3mm",
+        "3〜6mm"
+      ],
+      "environment": [],
+      "price": [],
+      "skill": [
+        "未経験可"
+      ]
+    },
+    "comment": "本体160kg・水冷式の1,500W機です。ノズル交換で溶接・切断・クリーニングを切り替え、推奨溶接厚は0.5〜4mm（販売店により0.5〜3mm）です。",
+    "suitable_for": [
+      "SUS・炭素鋼・アルミ等の溶接（推奨0.5〜4mm）",
+      "溶接に加えて切断・錆取り／塗装はがし（クリーニング）も1台で行いたい現場",
+      "ワイヤーなしでの薄物溶接"
+    ],
+    "not_suitable_for": [
+      "推奨溶接厚4mmを超える厚板"
+    ],
+    "features": [
+      "溶接・切断・クリーニングの3機能を前端ノズルの交換で切り替え",
+      "スポット溶接・うろこ溶接・連続溶接に対応",
+      "レーザー幅0.01〜5.00mmを調整可能",
+      "タッチパネル操作・多言語対応",
+      "付属品: ワイヤー供給装置、前端ノズル4種類、保護レンズ、交換用レンズ"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/gweike-lcw1500.png",
+    "image_credit": "GWEIKE 公式サイト",
+    "image_source": "https://www.gwklaser.com/welding/LCW.html",
+    "country": "中国",
+    "found_via": "metree",
+    "field_sources": {
+      "output_w": "https://bestus.co.jp/home/%e8%a3%bd%e5%93%81%e4%b8%80%e8%a6%a7/%e6%a9%9f%e6%a2%b0%e8%a8%ad%e5%82%99/ / https://www.gwklaser.com/welding/LCW.html",
+      "wavelength": "https://www.gwklaser.com/welding/LCW.html",
+      "portability": "https://bestus.co.jp/home/%e8%a3%bd%e5%93%81%e4%b8%80%e8%a6%a7/%e6%a9%9f%e6%a2%b0%e8%a8%ad%e5%82%99/ / https://www.gwklaser.com/welding/LCW.html",
+      "thickness_note": "https://bestus.co.jp/home/%e8%a3%bd%e5%93%81%e4%b8%80%e8%a6%a7/%e6%a9%9f%e6%a2%b0%e8%a8%ad%e5%82%99/",
+      "material": "https://bestus.co.jp/home/%e8%a3%bd%e5%93%81%e4%b8%80%e8%a6%a7/%e6%a9%9f%e6%a2%b0%e8%a8%ad%e5%82%99/",
+      "skill": "https://bestus.co.jp/home/%e8%a3%bd%e5%93%81%e4%b8%80%e8%a6%a7/%e6%a9%9f%e6%a2%b0%e8%a8%ad%e5%82%99/",
+      "features": "https://bestus.co.jp/home/%e8%a3%bd%e5%93%81%e4%b8%80%e8%a6%a7/%e6%a9%9f%e6%a2%b0%e8%a8%ad%e5%82%99/",
+      "country": "https://www.gwklaser.com/about/",
+      "maker": "https://bestus.co.jp/wp-content/uploads/2024/09/%E6%BA%B6%E6%8E%A5%E6%A9%9F.mp4",
+      "domestic_agent_ensei": "https://ensei-m.jp/product/d/14"
+    },
+    "is_published": true,
+    "notes": "候補一覧の機種は LCW3000。同シリーズの最小出力機として追加。製造元の特定根拠は LCW3000 と同じ（BESTUS 掲載動画の GWEIKE ロゴと GWEIKE 公式の同型番シリーズ）。寸法・重量は BESTUS と GWEIKE で値が異なる（両方を併記。GWEIKE の 910×540×1100mm は LCW1500/2000 共通と読める）。価格は非公開。アルゴンガスまたは窒素ガスとチラー用の精製水が必要。使用環境15〜35℃。出力のCW/定格の区別は記載なし。遠誠株式会社（ENSEI）マシン事業部サイトが「G-WEIKE日本正規代理店」を名乗り、LCW-1500（出力1000/1500/2000/3000W、水冷、溶接/カット/クリーニング、FANUC協働ロボットと接続可）を掲載。遠誠の表記では波長1064nm・総電力12kW・使用環境15〜35℃で、GWEIKE 公式（1080nm）と波長が食い違う"
+  },
+  {
+    "id": "p255",
+    "maker_slug": "senfeng",
+    "model_slug": "sf5s",
+    "name": "SF5S",
+    "maker_name": "SENFENG（済南森峰）（国内販売：株式会社ヴェルテックスエンジニアリング／アグサメタル株式会社）",
+    "method": "ハンドヘルド",
+    "wavelength": "1080±10nm",
+    "output_w": 1500,
+    "output_note": "Sシリーズ（SF3S 0.8kW / SF4S 1.2kW / SF5S 1.5kW）の最上位",
+    "portability": "本体正味55kg、670×335×590mm（占有面積0.23m²未満）、空冷式。底面にキャスター。溶接ガン0.7kg以下、ガンケーブル7m",
+    "thickness_note": "溶接シートの厚さ ≤5mm（公表値）",
+    "official_url": "https://jp.senfenglaser.com/product/portable-fiber-laser-welding-machine-s-series/",
+    "source_url": "https://jp.senfenglaser.com/product/portable-fiber-laser-welding-machine-s-series/",
+    "source": "SENFENG（済南森峰）日本語公式サイト ポータブルファイバーレーザー溶接機 Sシリーズ",
+    "tags": {
+      "use": [
+        "薄板接合",
+        "自動化"
+      ],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ"
+      ],
+      "thickness": [
+        "0.5〜3mm",
+        "3〜6mm"
+      ],
+      "environment": [],
+      "price": [],
+      "skill": [
+        "未経験可"
+      ]
+    },
+    "comment": "本体正味55kg・空冷式の1,500W機です。溶接・洗浄・溶接洗浄・切断の4機能を切り替えられ、溶接シートの厚さは5mm以下です。",
+    "suitable_for": [
+      "炭素鋼・ステンレス鋼・アルミ合金の溶接（5mm以下）",
+      "作業場所を移動しながらの溶接（空冷・正味55kg）",
+      "溶接・錆取り・切断・溶接ビード洗浄を1台で行いたい現場"
+    ],
+    "not_suitable_for": [
+      "5mmを超える板厚の溶接"
+    ],
+    "features": [
+      "空冷式で精製水などの冷却水の管理が不要、従来の水冷機より約75%軽量とメーカーが記載",
+      "溶接・洗浄・溶接洗浄・切断の4機能を切り替え",
+      "2つのつまみでレーザー出力とスポット幅を調整",
+      "作業環境 温度-10〜40℃・湿度70%以下",
+      "I/Oインターフェースで溶接ロボットと接続可能"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/senfeng-sf5s.jpg",
+    "image_credit": "SENFENG（済南森峰）公式サイト",
+    "image_source": "https://jp.senfenglaser.com/product-category/laser-welder-and-cleaner/",
+    "country": "中国",
+    "found_via": "metree",
+    "field_sources": {
+      "output_w": "https://jp.senfenglaser.com/product/portable-fiber-laser-welding-machine-s-series/",
+      "wavelength": "https://jp.senfenglaser.com/product/portable-fiber-laser-welding-machine-s-series/",
+      "portability": "https://jp.senfenglaser.com/product/portable-fiber-laser-welding-machine-s-series/",
+      "thickness_note": "https://jp.senfenglaser.com/product/portable-fiber-laser-welding-machine-s-series/",
+      "material": "https://jp.senfenglaser.com/product/portable-fiber-laser-welding-machine-s-series/",
+      "skill": "https://jp.senfenglaser.com/product/portable-fiber-laser-welding-machine-s-series/",
+      "features": "https://jp.senfenglaser.com/product/portable-fiber-laser-welding-machine-s-series/",
+      "environment_temp": "https://jp.senfenglaser.com/product/portable-fiber-laser-welding-machine-s-series/",
+      "power_supply_en": "https://www.senfenglaser.com/product/portable-fiber-laser-welding-machine-s-series/",
+      "country": "https://jp.senfenglaser.com/product/portable-fiber-laser-welding-machine-s-series/",
+      "domestic_seller_vertex": "https://vertex-eg.net/new-machine/senfeng%e8%a3%bd%e7%a9%ba%e5%86%b7%e5%bc%8f%e3%83%95%e3%82%a1%e3%82%a4%e3%83%90%e3%83%bc%e6%ba%b6%e6%8e%a5%e6%a9%9f/",
+      "domestic_seller_agusa": "https://agusa.co.jp/service/fiber_laser-support/"
+    },
+    "is_published": true,
+    "notes": "候補一覧の掲載は「SENFENG ハンドヘルド」（metree では ヴェルテックスエンジニアリングが水冷式 SF3000HWM を登録）。ヴェルテックスエンジニアリング（広島県廿日市市）は公式サイトで「SENFENG製(空冷式)ファイバー溶接機」を写真のみで掲載（型番・仕様の記載なし）。アグサメタル株式会社（広島県福山市）は「SENFENG SF-Sシリーズ ポータブル空冷式ハンドヘルドレーザー溶接機」を掲載し、BOCHU & SENFENG 認定パートナー・SENFENG溶接機ヘッド修理認証保有と記載。正規代理店契約の有無は未確認。電源は日本語ページが「3相380V」、英語ページが「Single-phase 220V」と食い違う（要確認）。価格は非公開。保証は機械全体1年（メーカーFAQ）。use の「自動化」はロボット接続用I/Oインターフェースの記載にもとづく"
+  },
+  {
+    "id": "p256",
+    "maker_slug": "senfeng",
+    "model_slug": "sf3000hwm",
+    "name": "SF3000HWM",
+    "maker_name": "SENFENG（済南森峰）（国内販売：株式会社ヴェルテックスエンジニアリング／アグサメタル株式会社）",
+    "method": "ハンドヘルド",
+    "wavelength": "1080±10nm",
+    "output_w": 3000,
+    "output_note": "HWMシリーズ（SF1500HWM 1.5kW / SF2000HWM 2kW / SF3000HWM 3kW）の最上位",
+    "portability": "本体正味265kg（英語版公式の値）、1210×715×1080mm、水冷式。本体と自動ワイヤ送給機に各4個のキャスター。溶接ガン0.7kg以下（英語版は0.75kg以下）、ガンケーブル10m",
+    "thickness_note": "溶接シートの厚さ ≤7mm（公表値）",
+    "official_url": "https://jp.senfenglaser.com/product/handheld-fiber-laser-welding-machine-hwm-series/",
+    "source_url": "https://jp.senfenglaser.com/product/handheld-fiber-laser-welding-machine-hwm-series/",
+    "source": "SENFENG（済南森峰）日本語公式サイト ハンドヘルドファイバレーザー溶接機 HWMシリーズ",
+    "tags": {
+      "use": [
+        "薄板接合",
+        "厚物",
+        "自動化"
+      ],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ"
+      ],
+      "thickness": [
+        "0.5〜3mm",
+        "3〜6mm",
+        "6mm以上"
+      ],
+      "environment": [
+        "屋外"
+      ],
+      "price": [],
+      "skill": [
+        "未経験可"
+      ]
+    },
+    "comment": "本体正味265kg・水冷式の3,000W機です。溶接シートの厚さは7mm以下で、I/Oインターフェースで溶接ロボットと接続できます。",
+    "suitable_for": [
+      "炭素鋼・ステンレス鋼・アルミ合金の溶接（7mm以下）",
+      "長時間・高負荷の連続溶接（水冷式）",
+      "フィラーワイヤ（0.8〜2mm）を使う溶接"
+    ],
+    "not_suitable_for": [
+      "持ち運びを重視する現場（本体265kg）",
+      "三相電源のない現場（電源は3相380V）"
+    ],
+    "features": [
+      "水冷式で長時間の安定溶接をうたう",
+      "連続溶接・スポット溶接・魚鱗（うろこ）溶接・切断の機能を一体化",
+      "溶接条件をリアルタイムで保存・呼び出し",
+      "温感警報・ガス警報・相順保護などの安全警報",
+      "I/Oインターフェースで溶接ロボットと接続可能"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/senfeng-sf3000hwm.jpg",
+    "image_credit": "SENFENG（済南森峰）公式サイト",
+    "image_source": "https://jp.senfenglaser.com/product-category/laser-welder-and-cleaner/",
+    "country": "中国",
+    "found_via": "metree",
+    "field_sources": {
+      "output_w": "https://jp.senfenglaser.com/product/handheld-fiber-laser-welding-machine-hwm-series/",
+      "wavelength": "https://jp.senfenglaser.com/product/handheld-fiber-laser-welding-machine-hwm-series/",
+      "portability": "https://www.senfenglaser.com/product/handheld-fiber-laser-welding-machine-hwm-series/ / https://jp.senfenglaser.com/product/handheld-fiber-laser-welding-machine-hwm-series/",
+      "thickness_note": "https://jp.senfenglaser.com/product/handheld-fiber-laser-welding-machine-hwm-series/",
+      "material": "https://jp.senfenglaser.com/product/handheld-fiber-laser-welding-machine-hwm-series/",
+      "skill": "https://jp.senfenglaser.com/product/handheld-fiber-laser-welding-machine-hwm-series/",
+      "environment": "https://jp.senfenglaser.com/product/handheld-fiber-laser-welding-machine-hwm-series/",
+      "features": "https://jp.senfenglaser.com/product/handheld-fiber-laser-welding-machine-hwm-series/",
+      "power_supply": "https://jp.senfenglaser.com/product/handheld-fiber-laser-welding-machine-hwm-series/",
+      "country": "https://jp.senfenglaser.com/product/handheld-fiber-laser-welding-machine-hwm-series/",
+      "domestic_seller_vertex": "https://metoree.com/products/301283/"
+    },
+    "is_published": true,
+    "notes": "metree でヴェルテックスエンジニアリングが「SENFENG製 (水冷式) ハンドファイバーレーザー溶接機」として SF3000HWM（3kW、2kW仕様あり）を登録（metree の記載では最大6〜8mm）。ヴェルテックスの公式サイトには型番・仕様の記載がない。日本語公式ページの表は本体重量の行が「溶接ガン線の長さ」と誤記されており、英語版公式の「Net Weight of Machine 265kg」を採用。電源は3相380V（英語版は custom-made 併記）。environment の「屋外」は公式の「押しやすく屋外溶接が可能」の記載にもとづく。skill は「労働者に溶接経験の要求がなければ」という公式の記載にもとづく。価格は非公開。正規代理店契約の有無は未確認"
+  },
+  {
+    "id": "p257",
+    "maker_slug": "acctek",
+    "model_slug": "akh-1500-air",
+    "name": "AKH-1500",
+    "maker_name": "済南 AccTek 機械有限公司（Jinan AccTek Machinery Co., Ltd. / AccTek Laser）",
+    "method": "ハンドヘルド",
+    "wavelength": "1080±10nm",
+    "output_w": 1500,
+    "output_note": "連続波（CW）。同シリーズに AKH-2000（2000W）あり",
+    "portability": "空冷式。持ち運び用のハンドルまたはキャスター付きのポータブル設計（重量・寸法は非公開）。ファイバーケーブル5m",
+    "thickness_note": "推奨溶接厚 1〜4mm（AKH-1500/2000 共通の公表値）",
+    "official_url": "https://www.accteklaser.com/product/portable-air-cooled-laser-welding-machine/",
+    "source_url": "https://www.accteklaser.com/product/portable-air-cooled-laser-welding-machine/",
+    "source": "AccTek Laser（Jinan AccTek Machinery）公式サイト Portable Air-Cooled Laser Welding Machine",
+    "tags": {
+      "use": [
+        "薄板接合"
+      ],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ",
+        "銅"
+      ],
+      "thickness": [
+        "0.5〜3mm",
+        "3〜6mm"
+      ],
+      "environment": [],
+      "price": [],
+      "skill": []
+    },
+    "comment": "空冷式の1,500W機で、ハンドルまたはキャスター付きのポータブル設計です。推奨溶接厚は1〜4mmで、炭素鋼・ステンレス・アルミ・銅に対応します。",
+    "suitable_for": [
+      "炭素鋼・ステンレス鋼・アルミ・銅の溶接（推奨1〜4mm）",
+      "工場内での移設や現場での保守・建設工事など、機械を移動させて使う溶接",
+      "ステンレス加工・板金・金物・金属家具・厨房機器の製作"
+    ],
+    "not_suitable_for": [
+      "推奨溶接厚4mmを超える厚板"
+    ],
+    "features": [
+      "空冷式で冷却水の管理が不要な低メンテナンス設計",
+      "連続波（CW）レーザー、出力10〜100%で調整",
+      "ハンドルまたはキャスター付きのポータブル構造",
+      "安全インターロックと異常アラームを搭載",
+      "オプションでダブルウォブル溶接ヘッド、ヒューム集塵機、窒素発生器、ポジショナー"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/acctek-akh-1500-air.jpg",
+    "image_credit": "AccTek Laser 公式サイト",
+    "image_source": "https://www.accteklaser.com/product/portable-air-cooled-laser-welding-machine/",
+    "country": "中国",
+    "found_via": "metree",
+    "field_sources": {
+      "output_w": "https://www.accteklaser.com/product/portable-air-cooled-laser-welding-machine/",
+      "wavelength": "https://www.accteklaser.com/product/portable-air-cooled-laser-welding-machine/",
+      "portability": "https://www.accteklaser.com/product/portable-air-cooled-laser-welding-machine/",
+      "thickness_note": "https://www.accteklaser.com/product/portable-air-cooled-laser-welding-machine/",
+      "material": "https://www.accteklaser.com/product/portable-air-cooled-laser-welding-machine/",
+      "features": "https://www.accteklaser.com/product/portable-air-cooled-laser-welding-machine/",
+      "price_usd": "https://www.accteklaser.com/product/portable-air-cooled-laser-welding-machine/",
+      "country": "https://www.accteklaser.com/about/",
+      "metree_listing": "https://metoree.com/products/236391/"
+    },
+    "is_published": true,
+    "notes": "国内代理店は確認できず（metree には済南 AccTek 機械有限公司が自社で登録）。公式サイトの表示価格は US$4,200〜6,500（AKH-1500/2000 の幅。送料・関税・国内での保守は含まれない）。円換算は為替次第のため価格帯タグは付けない。型番の AKH-1500 は同社の水冷式ハンドヘルド（AKH-1500/2000/3000/6000）でも使われているため、model_slug を akh-1500-air とした（name は公式表記の AKH-1500 のまま。表示時は「ポータブル空冷式」と添えると区別しやすい）。ページ上部の概要では溶接ヘッドを Au3tech、仕様表では Qilin と記載（食い違い）。発振器は Max / Rlaser、電源 380V/220V 50/60Hz、作業環境10〜40℃・湿度5〜95%。初心者向けの明記はない（FAQ・レビューに習得が早い旨の記述はあるが skill タグは付けない）"
+  },
+  {
+    "id": "p258",
+    "maker_slug": "sunmax",
+    "model_slug": "rsd-sunmax-fl-lcw-pro-s-1500",
+    "name": "RSD-SUNMAX-FL-LCW-PRO Sタイプ（1500W）",
+    "maker_name": "株式会社リンシュンドウ（サンマックスレーザー）",
+    "method": "ハンドヘルド",
+    "wavelength": "1080±10nm",
+    "output_w": 1500,
+    "output_note": "CW（連続）。同型で2000W／3000Wも選択可",
+    "portability": "本体130kg（1500/2000W）、600×1050×755mm、水冷式。トーチケーブル約9m（最長20mまでオプション）、レーザーガン0.7kg",
+    "thickness_note": "溶接推奨板厚 1500W: 0.3〜4.5mm程度（公表値）。裏波能力（溶け込み深さ。隙間・開先なしのテスト値）1500W機: 4.5mm",
+    "official_url": "https://www.laser-machine.com/FL/lcw_gray.shtml",
+    "source_url": "https://www.laser-machine.com/FL/lcw_gray.shtml",
+    "source": "株式会社リンシュンドウ（サンマックスレーザー）公式サイト ファイバーレーザー溶接機 SUNMAX-FL-LCW",
+    "tags": {
+      "use": [
+        "薄板接合",
+        "補修",
+        "自動化"
+      ],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ",
+        "銅",
+        "チタン"
+      ],
+      "thickness": [
+        "0.5mm未満",
+        "0.5〜3mm",
+        "3〜6mm"
+      ],
+      "environment": [],
+      "price": [],
+      "skill": [
+        "未経験可"
+      ]
+    },
+    "comment": "本体130kg・水冷式の1,500W機です。ガンとレンズの交換で溶接・切断・洗浄に使え、溶接推奨板厚は0.3〜4.5mm程度です。",
+    "suitable_for": [
+      "軟鋼・SS材・ZAM材・ステンレス・アルミ・銅・チタン・耐摩耗鋼板の溶接",
+      "0.3mm程度の薄板から4.5mm程度まで",
+      "溶接に加えて切断・サビ取り・塗料剥離も1台で行いたい現場"
+    ],
+    "not_suitable_for": [
+      "フラックス入りワイヤーの使用（使用禁止と記載）",
+      "単相200V・30Aの単独ブレーカーを用意できない現場"
+    ],
+    "features": [
+      "レーザーガン・焦点レンズの交換で溶接・切断・洗浄（サビ落とし・塗料剥離・焼け取り）を1台で行う",
+      "水冷式（クーラー・ヒーター内蔵）で定格使用時間の制限なく連続稼働",
+      "スイング（ウォブリング）機能、溶接モードは連続／パルス／鱗",
+      "レーザーガン約0.7kg、トーチ内温度センサー（3か所）とガス圧検知センサーを搭載",
+      "日本語タッチパネル。ダブル／トリプルワイヤー、協働ロボットCRXの自動化システムをオプションで用意"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/sunmax-rsd-sunmax-fl-lcw-pro-s-1500.jpg",
+    "image_credit": "株式会社リンシュンドウ（サンマックスレーザー）公式サイト",
+    "image_source": "https://www.laser-machine.com/FL/lcw_gray.shtml",
+    "country": "日本",
+    "found_via": "metree",
+    "field_sources": {
+      "output_w": "https://www.laser-machine.com/FL/lcw_gray.shtml",
+      "wavelength": "https://www.laser-machine.com/FL/lcw_gray.shtml",
+      "portability": "https://www.laser-machine.com/FL/lcw_gray.shtml",
+      "thickness_note": "https://www.laser-machine.com/FL/lcw_gray.shtml",
+      "material": "https://www.laser-machine.com/FL/lcw_gray.shtml",
+      "skill": "https://www.laser-machine.com/FL/lcw_gray.shtml",
+      "price": "https://www.laser-machine.com/FL/lcw_gray.shtml",
+      "features": "https://www.laser-machine.com/FL/lcw_gray.shtml",
+      "country": "https://www.laser-machine.com/company.shtml"
+    },
+    "is_published": true,
+    "notes": "型式表記は公式ページ内で「RSD-SUNMAX-FL-LCW-PRO Sタイプ」「RSD-SUNMAX-FL-LCW Sタイプ」の両方があり、metree では「RSD-SUNMAX-FL-LCW-GRAY」。出力は1500/2000/3000Wから選ぶ構成で、本記録は1500W構成。価格は公式に「最安値168万円（税別）〜本体価格228万円」とあり（出力別の内訳は非公開、同じ欄に「オープン価格（構成に合わせて個別お見積り）」とも記載。税別・搬入設置費別途）。電源は単相または三相200V・30A単独ブレーカー。アシストガス（窒素／アルゴン）・冷却水11L・溶接ワイヤー（φ0.8〜1.6）は購入者側で用意。推奨稼働温度0〜35℃。保証は本体1年・発振器2年。発振器は IPG／Raycus／MAX 製。会社案内では本社は岐阜市、海外拠点として日新激光科技有限公司（山東省済南市）を掲載。製造国の明記はないため country は本社国。日本溶接協会の生産性向上要件証明書の取得に対応。use の「補修」は「最大約5mm前後の肉盛り溶接が可能」、「自動化」は協働ロボットCRXの自動化システム（オプション）の記載にもとづく。価格帯が出力別に分からないため price タグは空（公表: 最安値168万円（税別）〜本体価格228万円）"
+  },
+  {
+    "id": "p259",
+    "maker_slug": "sunmax",
+    "model_slug": "rsd-sunmax-fl-lcw-pro-s-3000",
+    "name": "RSD-SUNMAX-FL-LCW-PRO Sタイプ（3000W）",
+    "maker_name": "株式会社リンシュンドウ（サンマックスレーザー）",
+    "method": "ハンドヘルド",
+    "wavelength": "1080±10nm",
+    "output_w": 3000,
+    "output_note": "CW（連続）。同型で1500W／2000Wも選択可",
+    "portability": "本体190kg、730×1120×855mm（別ページ表記では突起部含め640×1220×1510mm）、水冷式。3kW機は変圧器（550×450×1150mm）が別に付く。トーチケーブル約9m、レーザーガン0.7kg",
+    "thickness_note": "溶接推奨板厚 3000W: 1〜9mm程度（公表値）。裏波能力（溶け込み深さ。隙間・開先なしのテスト値）3000W機: 9mm",
+    "official_url": "https://www.laser-machine.com/FL/lcw_gray.shtml",
+    "source_url": "https://www.laser-machine.com/FL/lcw_gray.shtml",
+    "source": "株式会社リンシュンドウ（サンマックスレーザー）公式サイト ファイバーレーザー溶接機 SUNMAX-FL-LCW",
+    "tags": {
+      "use": [
+        "薄板接合",
+        "厚物",
+        "補修",
+        "自動化"
+      ],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ",
+        "銅",
+        "チタン"
+      ],
+      "thickness": [
+        "0.5〜3mm",
+        "3〜6mm",
+        "6mm以上"
+      ],
+      "environment": [],
+      "price": [],
+      "skill": [
+        "未経験可"
+      ]
+    },
+    "comment": "本体190kg・水冷式の3,000W機で、変圧器が別に付きます。溶接推奨板厚は1〜9mm程度で、ダブル／トリプルワイヤーをオプションで用意しています。",
+    "suitable_for": [
+      "軟鋼・SS材・ZAM材・ステンレス・アルミ・銅・チタン・耐摩耗鋼板の溶接",
+      "1mm程度から9mm程度までの中厚板",
+      "ダブル／トリプルワイヤーで脚長や隙間（最大約4.5mm）を確保したい溶接"
+    ],
+    "not_suitable_for": [
+      "三相200V・60Aの単独ブレーカーを用意できない現場",
+      "1mm未満の薄板（3000W機の推奨下限は1mm程度）"
+    ],
+    "features": [
+      "レーザーガン・焦点レンズの交換で溶接・切断・洗浄（サビ落とし・塗料剥離・焼け取り）を1台で行う",
+      "水冷式（クーラー・ヒーター内蔵）で定格使用時間の制限なく連続稼働",
+      "スイング（ウォブリング）機能、溶接モードは連続／パルス／鱗",
+      "レーザーガン約0.7kg、トーチ内温度センサー（3か所）とガス圧検知センサーを搭載",
+      "日本語タッチパネル。ダブル／トリプルワイヤー、協働ロボットCRXの自動化システムをオプションで用意"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/sunmax-rsd-sunmax-fl-lcw-pro-s-3000.jpg",
+    "image_credit": "株式会社リンシュンドウ（サンマックスレーザー）公式サイト",
+    "image_source": "https://www.laser-machine.com/FL/lcw_gray.shtml",
+    "country": "日本",
+    "found_via": "metree",
+    "field_sources": {
+      "output_w": "https://www.laser-machine.com/FL/lcw_gray.shtml",
+      "wavelength": "https://www.laser-machine.com/FL/lcw_gray.shtml",
+      "portability": "https://www.laser-machine.com/FL/lcw_gray.shtml",
+      "thickness_note": "https://www.laser-machine.com/FL/lcw_gray.shtml",
+      "material": "https://www.laser-machine.com/FL/lcw_gray.shtml",
+      "skill": "https://www.laser-machine.com/FL/lcw_gray.shtml",
+      "price": "https://www.laser-machine.com/FL/lcw_gray.shtml",
+      "features": "https://www.laser-machine.com/FL/lcw_gray.shtml",
+      "country": "https://www.laser-machine.com/company.shtml"
+    },
+    "is_published": true,
+    "notes": "RSD-SUNMAX-FL-LCW-PRO Sタイプの3000W構成。価格は公式に「最安値168万円（税別）〜本体価格228万円」（出力別の内訳は非公開。税別・搬入設置費別途）。電源は三相200V・60A単独ブレーカー（380V出力の電圧レギュレータ付属）。トリプルワイヤーは2kW以上で推奨。アシストガス・冷却水・溶接ワイヤーは購入者側で用意。推奨稼働温度0〜35℃。保証は本体1年・発振器2年。外寸はページ内で2通りの表記あり（両方記載）。country は本社国（製造国の明記なし。海外拠点は山東省済南市）。価格帯が出力別に分からないため price タグは空（公表: 最安値168万円（税別）〜本体価格228万円）"
+  },
+  {
+    "id": "p260",
+    "maker_slug": "nihon-welding",
+    "model_slug": "fbl-1000cw",
+    "name": "FBL-1000CW",
+    "maker_name": "日本ウエルディング株式会社",
+    "method": "ハンドヘルド",
+    "wavelength": "1080nm",
+    "output_w": 1000,
+    "output_note": "最大レーザー出力（CW）1000W±2%。CW（連続発振）／変調（パルス）",
+    "portability": "レーザー電源 約85kg（H615×W423×D810mm）＋チラー装置 69kg（H976×W337×D592mm、室内使用）。水冷。トーチ約387g（ストレートヘッド）、伝送ファイバー約9.5m",
+    "thickness_note": "推奨適用板厚 溶接: ステンレス・鉄（軟鋼）4mm以下、アルミ3mm以下。切断: 2mm以下（公表値）",
+    "official_url": "https://www.nihonwelding.co.jp/1000cw.html",
+    "source_url": "https://www.nihonwelding.co.jp/1000cw.html",
+    "source": "日本ウエルディング株式会社 公式サイト ウエルペンレーザー・ファイバー FBL-1000CW",
+    "tags": {
+      "use": [
+        "薄板接合"
+      ],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ"
+      ],
+      "thickness": [
+        "0.5〜3mm",
+        "3〜6mm"
+      ],
+      "environment": [
+        "屋内"
+      ],
+      "price": [],
+      "skill": [
+        "未経験可"
+      ]
+    },
+    "comment": "レーザー電源約85kgとチラー69kgからなる水冷の1,000W機です。トーチ先端をワークに接触させて動かす方式で、ステンレス・鉄4mm以下に対応します。",
+    "suitable_for": [
+      "ステンレス・鉄（軟鋼）4mm以下、アルミ3mm以下の溶接",
+      "2mm以下の切断",
+      "トーチ先端を当てて描くように動かす接触式の手作業溶接"
+    ],
+    "not_suitable_for": [
+      "屋外での使用（チラー装置は室内使用）",
+      "4mmを超える板厚（推奨適用板厚外）"
+    ],
+    "features": [
+      "トーチ先端のチップをワークに接触させて移動させる「ウエルペン」方式で、TIG溶接のような熟練を必要としないとメーカーが記載",
+      "CW発振モードと変調（パルス）モードを備える",
+      "溶接と切断に対応",
+      "4.3型タッチスクリーンの有線コントローラー、条件登録120件",
+      "単相200V入力"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/nihon-welding-fbl-1000cw.jpg",
+    "image_credit": "日本ウエルディング株式会社 公式サイト",
+    "image_source": "https://www.nihonwelding.co.jp/1000cw.html",
+    "country": "日本",
+    "found_via": "日本ハンドレーザ溶接協会 / 2026国際ウエルディングショー",
+    "field_sources": {
+      "output_w": "https://www.nihonwelding.co.jp/1000cw.html",
+      "wavelength": "https://www.nihonwelding.co.jp/1000cw.html",
+      "portability": "https://www.nihonwelding.co.jp/1000cw.html",
+      "thickness_note": "https://www.nihonwelding.co.jp/1000cw.html",
+      "material": "https://www.nihonwelding.co.jp/1000cw.html",
+      "environment": "https://www.nihonwelding.co.jp/1000cw.html",
+      "skill": "https://www.nihonwelding.co.jp/products-x.html",
+      "features": "https://www.nihonwelding.co.jp/1000cw.html / https://www.nihonwelding.co.jp/products-x.html",
+      "country": "https://www.nihonwelding.co.jp/profile.html"
+    },
+    "is_published": true,
+    "notes": "候補一覧の「CW発振ファイバーレーザー溶接機」に当たる機種。価格は非公開。画像は公式の製品紹介画像（本体写真に機種名・説明文が入った画像で、CMYKのJPEG）。最大消費電力約3.5kW、チラー定格消費電力1.7/2.2kVA。使用環境温度10〜40℃。低電力契約で3相200Vを使っている場合は電灯契約の変更や配線工事が必要になる場合があると記載。会社概要の主な事業内容は「YAGレーザー溶接・切断機の製造及び販売」（本社：東京都大田区）。製造国の明記はないため country は本社国（協会記事では製造国 日本）"
+  },
+  {
+    "id": "p261",
+    "maker_slug": "nihon-welding",
+    "model_slug": "fbl-1200x",
+    "name": "FBL-1200X",
+    "maker_name": "日本ウエルディング株式会社",
+    "method": "ハンドヘルド",
+    "wavelength": "1080±10nm",
+    "output_w": 1200,
+    "output_note": "最大レーザー出力（CW）1200W±2%。CW（連続発振）／変調（パルス）",
+    "portability": "本体約45kg（H620×W256×D525mm、SGステーションは含まず）、空冷（チラー不要）。ハンディガン約680g、伝送ファイバー5m（10mも製作可）。ワイヤー送給装置12kg",
+    "thickness_note": "推奨適用溶接板厚 ステンレス・鉄（軟鋼）4mm程度、アルミニウム3mm程度（公表値）",
+    "official_url": "https://www.nihonwelding.co.jp/1200x.html",
+    "source_url": "https://www.nihonwelding.co.jp/1200x.html",
+    "source": "日本ウエルディング株式会社 公式サイト ウエルペンレーザー・ファイバー FBL-1200X",
+    "tags": {
+      "use": [
+        "薄板接合"
+      ],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ"
+      ],
+      "thickness": [
+        "0.5〜3mm",
+        "3〜6mm"
+      ],
+      "environment": [],
+      "price": [],
+      "skill": [
+        "未経験可"
+      ]
+    },
+    "comment": "本体約45kg・空冷の1,200W機で、チラー装置が不要です。推奨溶接板厚はステンレス・鉄4mm程度、アルミ3mm程度です。",
+    "suitable_for": [
+      "ステンレス・鉄（軟鋼）4mm程度、アルミ3mm程度までの溶接",
+      "冬季・夏季など温度変化の大きい環境（使用環境温度-20〜40℃、空冷）",
+      "電源を入れてすぐ作業を始めたい現場（ウォームアップ不要と記載）"
+    ],
+    "not_suitable_for": [
+      "4mm程度を超える板厚（推奨適用板厚外）"
+    ],
+    "features": [
+      "空冷式でチラー装置が不要、凍結防止や結露対策も不要とメーカーが記載",
+      "電源ONからウォームアップなしで作業開始",
+      "ビームスイング幅0〜5mm（0.2mm単位）、スイング速度0〜200Hz",
+      "ワイヤー送給装置（φ0.8〜1.6mm）",
+      "単相200V入力"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/nihon-welding-fbl-1200x.jpg",
+    "image_credit": "日本ウエルディング株式会社 公式サイト",
+    "image_source": "https://www.nihonwelding.co.jp/1200x.html",
+    "country": "日本",
+    "found_via": "日本ハンドレーザ溶接協会 / 2026国際ウエルディングショー",
+    "field_sources": {
+      "output_w": "https://www.nihonwelding.co.jp/1200x.html",
+      "wavelength": "https://www.nihonwelding.co.jp/1200x.html",
+      "portability": "https://www.nihonwelding.co.jp/1200x.html",
+      "thickness_note": "https://www.nihonwelding.co.jp/1200x.html",
+      "material": "https://www.nihonwelding.co.jp/1200x.html",
+      "skill": "https://www.nihonwelding.co.jp/products-x.html",
+      "features": "https://www.nihonwelding.co.jp/1200x.html",
+      "country": "https://www.nihonwelding.co.jp/profile.html"
+    },
+    "is_published": true,
+    "notes": "同社のファイバー機は FBL-1000CW と FBL-1200X の2機種（製品一覧 2026年版）。価格は非公開。画像は公式の製品紹介画像（本体写真に機種名・説明文が入った画像で、CMYKのJPEG）。最大消費電力約3.8kW。ワイヤースプールは付属しない。skill の「未経験可」はウエルペンレーザーシリーズ全体の説明（TIG溶接のような熟練を必要としません）にもとづく。製造国の明記はないため country は本社国（東京都大田区）"
+  },
+  {
+    "id": "p262",
+    "maker_slug": "shibuya",
+    "model_slug": "fwl1500sh",
+    "name": "FWL1500SH",
+    "maker_name": "澁谷工業株式会社",
+    "method": "ハンドヘルド",
+    "wavelength": "1070nm",
+    "output_w": 1500,
+    "output_note": "定格出力。制御モードは波形モード／CWモード",
+    "portability": "本体260kg、D908×W800×H1232mm、水冷（チラー）。キャスター付き筐体（写真）",
+    "thickness_note": null,
+    "official_url": "https://www.shibuya.co.jp/articles/product/ma_lwm_02.html",
+    "source_url": "https://www.shibuya.co.jp/articles/product/ma_lwm_02.html",
+    "source": "澁谷工業株式会社 公式サイト ファイバレーザ溶接機“FWL1500SH型”",
+    "tags": {
+      "use": [
+        "薄板接合"
+      ],
+      "material": [
+        "アルミ"
+      ],
+      "thickness": [],
+      "environment": [],
+      "price": [],
+      "skill": []
+    },
+    "comment": "本体260kg・水冷の1,500W機です。スイングヘッドで隙間がある材料を溶接でき、ハンディトーチはオプションです。",
+    "suitable_for": [
+      "隙間がある材料の溶接（スイングヘッド搭載）",
+      "板金の薄板溶接（ハンディトーチ使用時）"
+    ],
+    "not_suitable_for": [],
+    "features": [
+      "スイングヘッドの搭載により隙間がある材料の溶接が可能",
+      "連続発振（CWモード）と波形モードを切り替え",
+      "消費電力が少なくランニングコストを抑えるとメーカーが記載",
+      "消耗品が少なくメンテナンスが容易",
+      "省スペース・コンパクト設計"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/shibuya-fwl1500sh.jpg",
+    "image_credit": "澁谷工業株式会社 公式サイト",
+    "image_source": "https://www.shibuya.co.jp/articles/product/ma_lwm_02.html",
+    "country": "日本",
+    "found_via": "日本ハンドレーザ溶接協会 / 2026国際ウエルディングショー",
+    "field_sources": {
+      "output_w": "https://www.shibuya.co.jp/articles/product/ma_lwm_02.html",
+      "wavelength": "https://www.shibuya.co.jp/articles/product/ma_lwm_02.html",
+      "portability": "https://www.shibuya.co.jp/articles/product/ma_lwm_02.html",
+      "features": "https://www.shibuya.co.jp/articles/product/ma_lwm_02.html",
+      "method": "https://web.archive.org/web/20260511062406/https://www.shibuya.co.jp/cutting/las_fiber_1500SH.html",
+      "material": "https://web.archive.org/web/20260511062406/https://www.shibuya.co.jp/cutting/las_fiber_1500SH.html",
+      "use": "https://web.archive.org/web/20260511062406/https://www.shibuya.co.jp/cutting/las_fiber_1500SH.html",
+      "handheld_reference": "https://laserwelder.jp/"
+    },
+    "is_published": true,
+    "notes": "現行の公式製品ページ（2026年のサイト改装後）には手持ち（ハンディ）である旨の記載がない。改装前の公式ページ（旧パス /cutting/las_fiber_1500SH.html は現在404。sources.method の Wayback Machine 2026-05-11 保存版）には同ページ内に「ハンディトーチ（オプション）：板金溶接用手持ち型レーザ溶接機…薄板でも熱影響の少ない加工が可能…アルミも加工できます」「時間差分岐に対応しており、1台でハンディトーチ、もう1台で切断用加工ヘッド」とあり、method・material・use はこの記載にもとづく（ハンディトーチは標準ではなくオプション）。協会記事では澁谷工業のファイバーハンドのラインナップを500W/1000W/1500W（スイング）と記載しているが、公式で現在確認できる機種は FWL1500SH のみ（旧 FWL500型のページは404）。対応板厚・対応材質の一覧・価格は非公開。本社は石川県金沢市"
+  },
+  {
+    "id": "p263",
+    "maker_slug": "might",
+    "model_slug": "mfl-w1500",
+    "name": "MFL-W1500",
+    "maker_name": "マイト工業株式会社",
+    "method": "ハンドヘルド",
+    "wavelength": "1080±10nm",
+    "output_w": 1500,
+    "output_note": "発振方式は連続／パルス／自己設定パルス",
+    "portability": "本体120kg（60Hz）／122kg（50Hz）、L850×W600×H1000mm、水冷（タンク容量16L、冷媒R32）、キャスター付き。ワイヤ送給装置 MFL-50WF（シングル）13.5kg／MFL-100WF（ダブル）36.5kg",
+    "thickness_note": "溶接可能板厚（最大推奨板厚）: 鉄・ステンレス t4.0mm、アルミ t3.0mm。切断可能板厚（最大推奨板厚）: 最大t1.5mm程度（公表値。材質や条件により前後）",
+    "official_url": "https://www.might-jp.com/products/mfl-w1500mfl-w2000/",
+    "source_url": "https://www.might-jp.com/products/mfl-w1500mfl-w2000/",
+    "source": "マイト工業株式会社 公式サイト MFL-W1500／ファイバーレーザ溶接機リーフレット",
+    "tags": {
+      "use": [
+        "薄板接合"
+      ],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ"
+      ],
+      "thickness": [
+        "0.5〜3mm",
+        "3〜6mm"
+      ],
+      "environment": [],
+      "price": [],
+      "skill": [
+        "未経験可"
+      ]
+    },
+    "comment": "本体120〜122kg・水冷の1,500W機です。溶接・カット・クリーナーの1台3役で、最大推奨板厚は鉄・ステンレス4.0mm、アルミ3.0mmです。",
+    "suitable_for": [
+      "軟鋼・ステンレス・アルミの溶接（鉄・ステンレス4mm、アルミ3mmまで）",
+      "黒皮取り・錆取り・塗装剥がしなどのクリーニングも1台で行いたい現場",
+      "単相200/220V電源の現場"
+    ],
+    "not_suitable_for": [
+      "推奨板厚を超える厚板（鉄・ステンレス4mm超、アルミ3mm超）"
+    ],
+    "features": [
+      "溶接・カット・クリーナーの1台3役（ノズルとレンズの交換で切り替え）",
+      "ウォブル機能（ウォブル幅0〜5mm）",
+      "材料・板厚・ワイヤ径を選ぶとレーザ出力などの条件が自動で出る設定画面、条件メモリー10件",
+      "トーチ重量約700g。ワイヤ送給装置側でも操作でき、本体と連動",
+      "国内修理対応（断線修理・トーチ／ケーブル交換修理）、インターロック・非常停止ボタン標準装備"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/might-mfl-w1500.jpg",
+    "image_credit": "マイト工業株式会社 公式サイト",
+    "image_source": "https://www.might-jp.com/products/mfl-w1500mfl-w2000/",
+    "country": "日本",
+    "found_via": "2026国際ウエルディングショー",
+    "field_sources": {
+      "output_w": "https://www.might-jp.com/products/mfl-w1500mfl-w2000/",
+      "wavelength": "https://www.might-jp.com/products/mfl-w1500mfl-w2000/",
+      "portability": "https://www.might-jp.com/products/mfl-w1500mfl-w2000/ / https://www.might-jp.com/wp-content/uploads/2026/02/FiberLaserWeldingMachine_leaflet.pdf",
+      "thickness_note": "https://www.might-jp.com/wp-content/uploads/2026/02/FiberLaserWeldingMachine_leaflet.pdf",
+      "material": "https://www.might-jp.com/products/mfl-w1500mfl-w2000/",
+      "skill": "https://www.might-jp.com/wp-content/uploads/2026/02/FiberLaserWeldingMachine_leaflet.pdf",
+      "features": "https://www.might-jp.com/products/mfl-w1500mfl-w2000/ / https://www.might-jp.com/wp-content/uploads/2026/02/FiberLaserWeldingMachine_leaflet.pdf",
+      "country": "https://www.might-jp.com/products/mfl-w1500mfl-w2000/"
+    },
+    "is_published": true,
+    "notes": "価格は非公開。単相200/220V、定格入力電流36.9/33.5A（60Hz）。冷却水タンク16L（使用前にクーラント／精製水等16Lの準備が必要）。溶接用ワイヤー、アルゴンガスまたは窒素ガスは別途準備。リーフレットに「使用率100%で使用が可能」「初心者の方でも簡単に溶接が出来ます」「特別な技術も不要」と記載。送給装置とのセット型式は MFL-W1500SW（シングル）／MFL-W1500DW（ダブル）。本社は大阪市平野区（製造国の明記なし。country は本社国）。製品ページの URL スラッグは「mfl-w1500mfl-w2000」だが MFL-W1500 のページ"
+  },
+  {
+    "id": "p264",
+    "maker_slug": "might",
+    "model_slug": "mfl-w2000",
+    "name": "MFL-W2000",
+    "maker_name": "マイト工業株式会社",
+    "method": "ハンドヘルド",
+    "wavelength": "1080±10nm",
+    "output_w": 2000,
+    "output_note": "発振方式は連続／パルス／自己設定パルス",
+    "portability": "本体133kg（60Hz）／126kg（50Hz）、L850×W600×H1000mm、水冷（タンク容量16L、冷媒R32）、キャスター付き。ワイヤ送給装置 MFL-50WF（シングル）13.5kg／MFL-100WF（ダブル）36.5kg",
+    "thickness_note": "溶接可能板厚（最大推奨板厚）: 鉄・ステンレス t6.0mm、アルミ t5.0mm。切断可能板厚（最大推奨板厚）: 最大t2.0mm程度（公表値。材質や条件により前後）",
+    "official_url": "https://www.might-jp.com/products/mfl-w2000/",
+    "source_url": "https://www.might-jp.com/products/mfl-w2000/",
+    "source": "マイト工業株式会社 公式サイト MFL-W2000／ファイバーレーザ溶接機リーフレット",
+    "tags": {
+      "use": [
+        "薄板接合",
+        "厚物"
+      ],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ"
+      ],
+      "thickness": [
+        "0.5〜3mm",
+        "3〜6mm"
+      ],
+      "environment": [],
+      "price": [],
+      "skill": [
+        "未経験可"
+      ]
+    },
+    "comment": "本体126〜133kg・水冷の2,000W機です。溶接・カット・クリーナーの1台3役で、最大推奨板厚は鉄・ステンレス6.0mm、アルミ5.0mmです。",
+    "suitable_for": [
+      "軟鋼・ステンレス・アルミの溶接（鉄・ステンレス6mm、アルミ5mmまで）",
+      "ダブルワイヤー（MFL-100WF）で隙間を埋める溶接や厚みのある溶接",
+      "黒皮取り・錆取り・塗装剥がしなどのクリーニングも1台で行いたい現場"
+    ],
+    "not_suitable_for": [
+      "推奨板厚を超える厚板（鉄・ステンレス6mm超、アルミ5mm超）"
+    ],
+    "features": [
+      "溶接・カット・クリーナーの1台3役（ノズルとレンズの交換で切り替え）",
+      "ウォブル機能（ウォブル幅0〜5mm）",
+      "材料・板厚・ワイヤ径を選ぶとレーザ出力などの条件が自動で出る設定画面、条件メモリー10件",
+      "トーチ重量約700g。ワイヤ送給装置側でも操作でき、本体と連動",
+      "国内修理対応（断線修理・トーチ／ケーブル交換修理）、インターロック・非常停止ボタン標準装備"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/might-mfl-w2000.jpg",
+    "image_credit": "マイト工業株式会社 公式サイト",
+    "image_source": "https://www.might-jp.com/products/mfl-w2000/",
+    "country": "日本",
+    "found_via": "2026国際ウエルディングショー",
+    "field_sources": {
+      "output_w": "https://www.might-jp.com/products/mfl-w2000/",
+      "wavelength": "https://www.might-jp.com/products/mfl-w2000/",
+      "portability": "https://www.might-jp.com/products/mfl-w2000/ / https://www.might-jp.com/wp-content/uploads/2026/02/FiberLaserWeldingMachine_leaflet.pdf",
+      "thickness_note": "https://www.might-jp.com/wp-content/uploads/2026/02/FiberLaserWeldingMachine_leaflet.pdf",
+      "material": "https://www.might-jp.com/products/mfl-w2000/",
+      "skill": "https://www.might-jp.com/wp-content/uploads/2026/02/FiberLaserWeldingMachine_leaflet.pdf",
+      "features": "https://www.might-jp.com/products/mfl-w2000/ / https://www.might-jp.com/wp-content/uploads/2026/02/FiberLaserWeldingMachine_leaflet.pdf",
+      "country": "https://www.might-jp.com/products/mfl-w2000/"
+    },
+    "is_published": true,
+    "notes": "価格は非公開。単相200/220V、定格入力電流53.9/49A（60Hz）。冷却水タンク16L（使用前にクーラント／精製水等16Lの準備が必要）。溶接用ワイヤー、アルゴンガスまたは窒素ガスは別途準備。ダブル送給装置とパーティションのセット（MFL-W2000DW-YLSP-11Fiber/21Fiber）あり。use の「厚物」は鉄・ステンレス最大推奨6mmとダブルワイヤーで「厚みのある溶接が可能」の記載にもとづく。本社は大阪市平野区（製造国の明記なし。country は本社国）。商品画像は MFL-W1500 と共通（本体と送給装置2種の写真）"
+  },
+  {
+    "id": "p265",
+    "maker_slug": "trm",
+    "model_slug": "lwh2000-p",
+    "name": "LWH2000-P",
+    "maker_name": "TRM Technology, Inc.（国内販売：遠誠株式会社）",
+    "method": "ハンドヘルド",
+    "wavelength": null,
+    "output_w": 2000,
+    "output_note": null,
+    "portability": "水冷。ファイバー長5mまたは10m。本体寸法1130×690×1040mm（遠誠掲載、LWH-1500/2000/3000共通）。重量は非公開",
+    "thickness_note": "Welding thickness (suggestion) 0.4〜6mm（メーカー公表値）",
+    "official_url": "https://www.trm-welding.com/product/75.html",
+    "source_url": "https://www.trm-welding.com/product/75.html",
+    "source": "TRM Technology, Inc. 公式サイト Laser Welding Systems G2／遠誠株式会社 マシン事業部サイト",
+    "tags": {
+      "use": [
+        "薄板接合",
+        "自動化"
+      ],
+      "material": [],
+      "thickness": [
+        "0.5mm未満",
+        "0.5〜3mm",
+        "3〜6mm"
+      ],
+      "environment": [],
+      "price": [],
+      "skill": []
+    },
+    "comment": "水冷の2,000W機で、推奨溶接厚は0.4〜6mmです。オプションのダブルワイヤーで2種類のワイヤーを装填したまま切り替えられ、FANUC協働ロボットと接続できます。",
+    "suitable_for": [
+      "0.4〜6mm程度の板の溶接",
+      "隙間のある継手でダブルワイヤーを使う溶接（オプション）",
+      "協働ロボットと組み合わせた溶接の自動化"
+    ],
+    "not_suitable_for": [],
+    "features": [
+      "TIG溶接の最大4倍の速度、プリセットで操作を簡単にしたとメーカーが記載",
+      "SGS発行のCE認証取得、電気的安全性PLe。Fnボタンを長押ししない限りレーザーが出ない誤作動防止、ガス圧低下で自動停止",
+      "ワイヤー装置はワイヤーの出し・戻しボタンと曲がり矯正機構付き。ダブルワイヤー（オプション）でステンレス用とアルミ用などを装填したまま切替",
+      "手元で数値設定できるリモート画面（オプション）、パーテーション（オプション）",
+      "FANUC協働ロボットと接続して自動溶接が可能"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/trm-lwh2000-p.jpg",
+    "image_credit": "遠誠株式会社 公式サイト（TRM製品ページ）",
+    "image_source": "https://ensei-m.jp/product/d/35",
+    "country": "中国",
+    "found_via": "2026国際ウエルディングショー",
+    "field_sources": {
+      "output_w": "https://www.trm-welding.com/product/75.html",
+      "portability": "https://www.trm-welding.com/product/75.html / https://ensei-m.jp/product/d/35",
+      "thickness_note": "https://www.trm-welding.com/product/75.html",
+      "features": "https://www.trm-welding.com/product/75.html / https://ensei-m.jp/product/d/35",
+      "country": "https://ensei-m.jp/product/d/35",
+      "maker_about": "https://www.trm-welding.com/About.html",
+      "japan_delivery": "https://ensei-m.jp/works/d/As3jNxYaOo7wbTlR",
+      "exhibition": "https://ensei-m.jp/news/d/mrhUAWJBqCnTsK7D"
+    },
+    "is_published": true,
+    "notes": "遠誠株式会社（G-WEIKE日本正規代理店）が TRM ファイバーレーザー溶接機（LWH-1500/2000/3000）を取り扱い、2026国際ウエルディングショーで展示（候補一覧の「新型レーザー溶接機」に当たる）。国内納品事例は「TRM製 LWH-2000P ファイバーレーザー溶接機 2000W」（2026年6月、茨城県）。遠誠の説明では TRM は中国常州を拠点に2001年設立の溶接専門メーカー。メーカー公式の仕様: 電源 230V〜45A 50/60Hz、装置全体の電力11kW、シールドガス アルゴン／窒素、使用環境10〜40℃、ワイヤー径0.8〜2.0mm、水冷。波長はメーカー公式ページに記載なし。対応材質の一覧・価格は非公開（遠誠のページに溶接・切断・クリーニング対応と記載）。メーカー公式の画像は配信元（yun300.cn）が直接取得できないため、遠誠の製品ページの本体写真を使用"
+  },
+  {
+    "id": "p266",
+    "maker_slug": "trm",
+    "model_slug": "lwh3000-p",
+    "name": "LWH3000-P",
+    "maker_name": "TRM Technology, Inc.（国内販売：遠誠株式会社）",
+    "method": "ハンドヘルド",
+    "wavelength": null,
+    "output_w": 3000,
+    "output_note": null,
+    "portability": "水冷。ファイバー長5mまたは10m。本体寸法1130×690×1040mm（遠誠掲載、LWH-1500/2000/3000共通）。重量は非公開",
+    "thickness_note": "Welding thickness (suggestion) 0.4〜8mm（メーカー公表値）",
+    "official_url": "https://www.trm-welding.com/product/75.html",
+    "source_url": "https://www.trm-welding.com/product/75.html",
+    "source": "TRM Technology, Inc. 公式サイト Laser Welding Systems G2／遠誠株式会社 マシン事業部サイト",
+    "tags": {
+      "use": [
+        "薄板接合",
+        "厚物",
+        "自動化"
+      ],
+      "material": [],
+      "thickness": [
+        "0.5mm未満",
+        "0.5〜3mm",
+        "3〜6mm",
+        "6mm以上"
+      ],
+      "environment": [],
+      "price": [],
+      "skill": []
+    },
+    "comment": "水冷の3,000W機で、推奨溶接厚は0.4〜8mmです。オプションのダブルワイヤーで2種類のワイヤーを装填したまま切り替えられ、FANUC協働ロボットと接続できます。",
+    "suitable_for": [
+      "0.4〜8mm程度の板の溶接",
+      "隙間のある継手でダブルワイヤーを使う溶接（オプション）",
+      "協働ロボットと組み合わせた溶接の自動化"
+    ],
+    "not_suitable_for": [
+      "三相380V電源を用意できない現場（メーカー公表の電源は380V〜40A）"
+    ],
+    "features": [
+      "TIG溶接の最大4倍の速度、プリセットで操作を簡単にしたとメーカーが記載",
+      "SGS発行のCE認証取得、電気的安全性PLe。Fnボタンを長押ししない限りレーザーが出ない誤作動防止、ガス圧低下で自動停止",
+      "ワイヤー装置はワイヤーの出し・戻しボタンと曲がり矯正機構付き。ダブルワイヤー（オプション）でステンレス用とアルミ用などを装填したまま切替",
+      "手元で数値設定できるリモート画面（オプション）、パーテーション（オプション）",
+      "FANUC協働ロボットと接続して自動溶接が可能"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/trm-lwh3000-p.jpg",
+    "image_credit": "遠誠株式会社 公式サイト（TRM製品ページ）",
+    "image_source": "https://ensei-m.jp/product/d/35",
+    "country": "中国",
+    "found_via": "2026国際ウエルディングショー",
+    "field_sources": {
+      "output_w": "https://www.trm-welding.com/product/75.html",
+      "portability": "https://www.trm-welding.com/product/75.html / https://ensei-m.jp/product/d/35",
+      "thickness_note": "https://www.trm-welding.com/product/75.html",
+      "features": "https://www.trm-welding.com/product/75.html / https://ensei-m.jp/product/d/35",
+      "country": "https://ensei-m.jp/product/d/35",
+      "maker_about": "https://www.trm-welding.com/About.html",
+      "exhibition": "https://ensei-m.jp/news/d/mrhUAWJBqCnTsK7D"
+    },
+    "is_published": true,
+    "notes": "遠誠株式会社が LWH-1500/2000/3000 として掲載する TRM の3kW機。メーカー公式の仕様: 電源 380V〜40A 50/60Hz、定格電力15kW、シールドガス アルゴン／窒素、使用環境10〜40℃、ワイヤー径0.8〜2.0mm、水冷。日本向けの電源仕様（200V系での対応）は未確認。波長はメーカー公式ページに記載なし。対応材質の一覧・価格は非公開。G3世代の LWH3000-S（三相380V、定格11kW、推奨0.4〜8mm）もメーカー公式に掲載されているが、遠誠が扱う世代は納品事例の LWH-2000P から G2（-P）と判断（遠誠の製品ページには世代の明記なし）。画像は遠誠の製品ページの本体写真"
+  },
+  {
+    "id": "p267",
+    "maker_slug": "alpha-laser",
+    "model_slug": "alflak-900-f",
+    "name": "ALFlak 900 F",
+    "maker_name": "ALPHA LASER GmbH（国内代理店：ALPHA LASER JAPAN株式会社）",
+    "method": "移動式（自走式キャタピラ／手動移動）",
+    "wavelength": "1070nm",
+    "output_w": 900,
+    "output_note": "平均出力（CW出力900W、ピークパルス出力9kW、パルスエネルギー90J）",
+    "portability": "キャタピラ付き約910kg／キャタピラ無し約610kg。外形1200×1030×1150mm。自走式キャタピラ付きモデルと手動移動モデルあり。レンズ水冷搭載。電源3×400V",
+    "thickness_note": null,
+    "official_url": "https://alphalaser.eu/lasersystemeprodukte/mobile-offene-systeme/alflak.html",
+    "source_url": "https://alphalaser.eu/lasersystemeprodukte/mobile-offene-systeme/alflak.html",
+    "source": "ALPHA LASER GmbH 公式サイト（ALFlak 製品ページ）",
+    "tags": {
+      "use": [],
+      "material": [],
+      "thickness": [],
+      "environment": [],
+      "price": [],
+      "skill": []
+    },
+    "comment": "ハンドヘルドではなく、長いアームと双眼顕微鏡を持つ自走式（キャタピラ）の溶接システムです。平均出力900Wで、深く複雑な形状の金型の溶接に使います。",
+    "suitable_for": [
+      "深い・複雑な形状の金型の溶接（長いレーザーアームで溶接位置に到達）",
+      "大型部品の溶接（手動またはプログラム）"
+    ],
+    "not_suitable_for": [],
+    "features": [
+      "ファイバーレーザー1070nm、パルス／CW の両モードに対応",
+      "長いレーザーアームで位置を変えずにシーム溶接が可能（最大340mm：メーカー本社サイト／最大500mm：国内代理店チラシ）",
+      "キャタピラによる自走式で、2つの走行スイッチで位置決め",
+      "ライカ双眼顕微鏡（10倍、オプション16倍）で溶接部を観察",
+      "タッチスクリーン操作、WINLaser ソフトウェアとティーチインでプログラム可能"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/alpha-laser-alflak-900-f.jpg",
+    "image_credit": "ALPHA LASER JAPAN株式会社 公式サイト",
+    "image_source": "https://alphalaser.co.jp/seihin/alflak/",
+    "country": "ドイツ",
+    "found_via": "ウエルディングショー",
+    "field_sources": {
+      "output_w": "https://alphalaser.eu/lasersystemeprodukte/mobile-offene-systeme/alflak.html",
+      "output_note": "https://alphalaser.eu/lasersystemeprodukte/mobile-offene-systeme/alflak.html",
+      "wavelength": "https://alphalaser.eu/lasersystemeprodukte/mobile-offene-systeme/alflak.html",
+      "portability": "https://alphalaser.eu/lasersystemeprodukte/mobile-offene-systeme/alflak.html",
+      "method": "https://alphalaser.eu/lasersystemeprodukte/mobile-offene-systeme/alflak.html",
+      "suitable_for": "https://alphalaser.co.jp/wp-content/uploads/2021/11/ALFlak%E3%83%BBALFlak%E3%83%95%E3%82%A1%E3%82%A4%E3%83%90%E3%83%BC%E3%83%81%E3%83%A9%E3%82%B7-%E5%9C%A7%E7%B8%AE.pdf",
+      "features": "https://alphalaser.eu/lasersystemeprodukte/mobile-offene-systeme/alflak.html",
+      "japan_distributor": "https://alphalaser.co.jp/seihin/alflak/",
+      "image_url": "https://alphalaser.co.jp/seihin/alflak/"
+    },
+    "is_published": true,
+    "notes": "ハンドヘルドではなく、双眼顕微鏡付きの長いアームを持つ自走式（キャタピラ）の移動式レーザー溶接システム（金型など向け）。対応材質・板厚・溶け込みの公表値なし。価格非公開。連続溶接長はメーカー本社サイトでは340mm、国内代理店のチラシ・製品ページでは500mmと記載が食い違う。移動範囲（X,Y,Z）は本社サイト340×330×370mm、国内代理店チラシ320×330×370mm、国内代理店製品ページ340×320×420mm。シリーズのファイバー版は300/450/600/900W（300W・450Wは後から出力倍増の改造が可能）。国内代理店 ALPHA LASER JAPAN株式会社（佐賀県鳥栖市、2018年1月から正規代理店）。 2026国際ウエルディングショーでは GALAXYホールディングス株式会社ブースに ALPHA LASER JAPAN㈱ が共同出展。"
+  },
+  {
+    "id": "p268",
+    "maker_slug": "denaliweld",
+    "model_slug": "jet3000",
+    "name": "JET3000",
+    "maker_name": "DENALIWELD（DENALI WELD INC.）",
+    "method": "ハンドヘルド",
+    "wavelength": "1060-1100nm",
+    "output_w": 3000,
+    "output_note": "レーザー出力（連続／変調）",
+    "portability": "本体約83kg（H696×W493×L936mm）、空冷。3-in-1ヘッド約900g、ファイバー長約10m。ワイヤ送給装置は別体",
+    "thickness_note": "ステンレス・アルミ 最大3/8インチ（約9.5mm）まで溶接（メーカー公表値）",
+    "official_url": "https://denaliweld.com/products/air-cooled-laser-welding-machine/",
+    "source_url": "https://denaliweld.com/products/air-cooled-laser-welding-machine/",
+    "source": "DENALIWELD 公式サイト（Air-Cooled Handheld Laser Welding Machine 製品ページ）",
+    "tags": {
+      "use": [
+        "薄板接合",
+        "厚物"
+      ],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ",
+        "銅"
+      ],
+      "thickness": [
+        "0.5〜3mm",
+        "3〜6mm",
+        "6mm以上"
+      ],
+      "environment": [],
+      "price": [],
+      "skill": []
+    },
+    "comment": "本体約83kg・空冷の3,000W機です。溶接・クリーニング・シームクリーニングの3-in-1で、ステンレス・アルミは最大約9.5mmまで溶接できます。",
+    "suitable_for": [
+      "ステンレス・アルミ・軟鋼の溶接",
+      "溶接・クリーニング・溶接部クリーニングを1台で行う作業"
+    ],
+    "not_suitable_for": [],
+    "features": [
+      "空冷式（特許の CUAL モザイクレーザー光源）、-10〜40℃で連続稼働",
+      "溶接・クリーニング・シームクリーニングの3-in-1",
+      "金属・板厚ごとのプリセットパラメータからワンクリックで溶接",
+      "溶接時間・出力・速度を記録する溶接ログ機能",
+      "DENALIWELD ROBOX で協働ロボット／ロボット自動化に切り替え可能"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/denaliweld-jet3000.png",
+    "image_credit": "DENALIWELD 公式サイト（JETシリーズの写真。写っているのは JET2000）",
+    "image_source": "https://denaliweld.com/products/air-cooled-laser-welding-machine/",
+    "country": "アメリカ",
+    "found_via": "ウエルディングショー",
+    "field_sources": {
+      "output_w": "https://denaliweld.com/products/air-cooled-laser-welding-machine/",
+      "wavelength": "https://denaliweld.com/products/air-cooled-laser-welding-machine/",
+      "portability": "https://denaliweld.com/products/air-cooled-laser-welding-machine/",
+      "thickness_note": "https://shop.denaliweld.com/product/jet-3000w-air-cooled-laser-welding-machine/",
+      "material": "https://denaliweld.com/products/air-cooled-laser-welding-machine/",
+      "material_copper": "https://denaliweld.com/support/welding-parameters/",
+      "features": "https://denaliweld.com/products/air-cooled-laser-welding-machine/",
+      "price_usd": "https://shop.denaliweld.com/product/jet-3000w-air-cooled-laser-welding-machine/",
+      "japanese_page": "https://denaliweld.com/ja/products/air-cooled-laser-welding-machine/",
+      "image_url": "https://denaliweld.com/products/air-cooled-laser-welding-machine/"
+    },
+    "is_published": true,
+    "notes": "メーカー直販サイトの価格 US$34,999（米国向け・税送料別。日本国内価格は非公開のため価格帯タグは空）。電源 AC480V・消費電力9.2kW、溶接速度 0-105cm/min。銅はメーカーの溶接パラメータ表（機種別ではない）に設定例あり。公式サイトに日本拠点（神奈川県小田原市中町3-10-11）の記載あり、日本語ページあり。2027年1月1日から新デザイン（側面ハンドル、新型ヘッド・ワイヤ送給装置）に切り替わる旨の記載あり。製造について公式サイトは「米国で組み立て」と記載。"
+  },
+  {
+    "id": "p269",
+    "maker_slug": "denaliweld",
+    "model_slug": "jet2000",
+    "name": "JET2000",
+    "maker_name": "DENALIWELD（DENALI WELD INC.）",
+    "method": "ハンドヘルド",
+    "wavelength": "1060-1100nm",
+    "output_w": 2000,
+    "output_note": "レーザー出力（連続／変調）",
+    "portability": "本体約74kg（H736×W433×L883mm）、空冷。3-in-1ヘッド約900g、ファイバー長約10m。ワイヤ送給装置は別体",
+    "thickness_note": "ステンレス・アルミ 最大1/4インチ（約6.35mm）まで溶接（メーカー公表値）",
+    "official_url": "https://denaliweld.com/products/air-cooled-laser-welding-machine/",
+    "source_url": "https://denaliweld.com/products/air-cooled-laser-welding-machine/",
+    "source": "DENALIWELD 公式サイト（Air-Cooled Handheld Laser Welding Machine 製品ページ）",
+    "tags": {
+      "use": [
+        "薄板接合",
+        "厚物"
+      ],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ",
+        "銅"
+      ],
+      "thickness": [
+        "0.5〜3mm",
+        "3〜6mm",
+        "6mm以上"
+      ],
+      "environment": [],
+      "price": [],
+      "skill": []
+    },
+    "comment": "本体約74kg・空冷の2,000W機です。溶接・クリーニング・シームクリーニングの3-in-1で、ステンレス・アルミは最大約6.35mmまで溶接できます。",
+    "suitable_for": [
+      "ステンレス・アルミ・軟鋼の溶接",
+      "溶接・クリーニング・溶接部クリーニングを1台で行う作業"
+    ],
+    "not_suitable_for": [],
+    "features": [
+      "空冷式（特許の CUAL モザイクレーザー光源）、-10〜40℃で連続稼働",
+      "溶接・クリーニング・シームクリーニングの3-in-1",
+      "金属・板厚ごとのプリセットパラメータからワンクリックで溶接",
+      "溶接時間・出力・速度を記録する溶接ログ機能",
+      "DENALIWELD ROBOX で協働ロボット／ロボット自動化に切り替え可能"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/denaliweld-jet2000.png",
+    "image_credit": "DENALIWELD 公式サイト",
+    "image_source": "https://denaliweld.com/products/air-cooled-laser-welding-machine/",
+    "country": "アメリカ",
+    "found_via": "ウエルディングショー",
+    "field_sources": {
+      "output_w": "https://denaliweld.com/products/air-cooled-laser-welding-machine/",
+      "wavelength": "https://denaliweld.com/products/air-cooled-laser-welding-machine/",
+      "portability": "https://denaliweld.com/products/air-cooled-laser-welding-machine/",
+      "thickness_note": "https://shop.denaliweld.com/product/jet-2000w-air-cooled-laser-welding-machine/",
+      "material": "https://denaliweld.com/products/air-cooled-laser-welding-machine/",
+      "material_copper": "https://denaliweld.com/support/welding-parameters/",
+      "features": "https://denaliweld.com/products/air-cooled-laser-welding-machine/",
+      "price_usd": "https://shop.denaliweld.com/product/jet-2000w-air-cooled-laser-welding-machine/",
+      "japanese_page": "https://denaliweld.com/ja/products/air-cooled-laser-welding-machine/",
+      "image_url": "https://denaliweld.com/products/air-cooled-laser-welding-machine/"
+    },
+    "is_published": true,
+    "notes": "メーカー直販サイトの価格 US$24,999（米国向け・税送料別。日本国内価格は非公開のため価格帯タグは空）。電源 AC208V・消費電力7.7kW、溶接速度 0-90cm/min。銅はメーカーの溶接パラメータ表（機種別ではない）に設定例あり。公式サイトに日本拠点（神奈川県小田原市中町3-10-11）の記載あり、日本語ページあり。2027年1月1日から新デザイン（側面ハンドル、新型ヘッド・ワイヤ送給装置）に切り替わる旨の記載あり。製造について公式サイトは「米国で組み立て」と記載。"
+  },
+  {
+    "id": "p270",
+    "maker_slug": "ls-tool",
+    "model_slug": "yt-1500",
+    "name": "YT-1500",
+    "maker_name": "株式会社トクベン（LS-TOOL ファイバーレーザー事業部）",
+    "method": "ハンドヘルド",
+    "wavelength": "1080nm±10nm",
+    "output_w": 1500,
+    "output_note": "定格出力（CW／連続波）",
+    "portability": "本体100kg（奥行810×幅400×高さ765mm、キャスター含む）、水冷（容量10L）。ヘッド650g、ケーブル長7m",
+    "thickness_note": "0.5mmからの薄板に対応（メーカー記載。上限の公表値なし）",
+    "official_url": "https://ls-tool.com/",
+    "source_url": "https://ls-tool.com/",
+    "source": "LS-TOOL（株式会社トクベン）公式サイト",
+    "tags": {
+      "use": [
+        "薄板接合"
+      ],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ",
+        "銅"
+      ],
+      "thickness": [
+        "0.5〜3mm"
+      ],
+      "environment": [],
+      "price": [
+        "100〜200万円"
+      ],
+      "skill": [
+        "未経験可"
+      ]
+    },
+    "comment": "本体100kg・水冷の1,500W機です。ワイヤ送給装置を標準装備し、幅1〜8mmのスイングで最大1mmの隙間に対応します。",
+    "suitable_for": [
+      "薄板の溶接（0.5mmから）",
+      "鉄・ステンレス・アルミ・銅の溶接",
+      "切断・サビ取り・焼け取り"
+    ],
+    "not_suitable_for": [],
+    "features": [
+      "レーザーを左右にスイング（幅1〜8mm）させ、最大1mmの隙間にも対応",
+      "ワイヤ送給装置を標準装備（ワイヤ径0.8〜1.6mm）、オプションでダブルワイヤ",
+      "アタッチメント交換とモード切替で切断・クリーニング（サビ取り・焼け取り）にも使える",
+      "トーチ・母材・クランプの接触時のみ照射する導通式安全機構",
+      "メーカー直販、標準2年無償保証"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/ls-tool-yt-1500.png",
+    "image_credit": "LS-TOOL（株式会社トクベン）公式サイト",
+    "image_source": "https://ls-tool.com/",
+    "country": null,
+    "found_via": "ウエルディングショー",
+    "field_sources": {
+      "output_w": "https://ls-tool.com/",
+      "wavelength": "https://ls-tool.com/",
+      "portability": "https://ls-tool.com/",
+      "thickness_note": "https://ls-tool.com/",
+      "material": "https://ls-tool.com/",
+      "price": "https://ls-tool.com/",
+      "skill": "https://ls-tool.com/",
+      "features": "https://ls-tool.com/",
+      "maker_name": "https://ls-tool.com/company/"
+    },
+    "is_published": true,
+    "notes": "公式サイトの表示価格 1,198,000円（税別、本体標準セット。窒素ガス発生装置またはアルゴンガス、冷却水、電源工事等は別）。入力電源 単相200V 35A、消費電力6kW、使用温度範囲10〜40℃。製造国の明記なし（「出荷前に中国・日本の二重検査」との記載あり）。「初心者でも数時間で習得可能」と記載。対応板厚の上限は非公表。"
+  },
+  {
+    "id": "p271",
+    "maker_slug": "ls-tool",
+    "model_slug": "fh-2000",
+    "name": "FH-2000",
+    "maker_name": "株式会社トクベン（LS-TOOL ファイバーレーザー事業部）",
+    "method": "ハンドヘルド",
+    "wavelength": "1080nm±10nm",
+    "output_w": 2000,
+    "output_note": "定格出力（CW／連続波）",
+    "portability": "本体150kg（奥行850×幅525×高さ933mm、キャスター含む）、水冷（容量16L）。ヘッド650g、ケーブル長10m",
+    "thickness_note": "0.5mmからの薄板に対応（メーカー記載。上限の公表値なし）",
+    "official_url": "https://ls-tool.com/",
+    "source_url": "https://ls-tool.com/",
+    "source": "LS-TOOL（株式会社トクベン）公式サイト",
+    "tags": {
+      "use": [
+        "薄板接合"
+      ],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ",
+        "銅"
+      ],
+      "thickness": [
+        "0.5〜3mm"
+      ],
+      "environment": [],
+      "price": [
+        "100〜200万円"
+      ],
+      "skill": [
+        "未経験可"
+      ]
+    },
+    "comment": "本体150kg・水冷の2,000W機です。ダブルワイヤ送給装置を備え、幅1〜8mmのスイングで最大1mmの隙間に対応します。",
+    "suitable_for": [
+      "厚板や高強度材の加工（メーカーの位置付け）",
+      "鉄・ステンレス・アルミ・銅の溶接",
+      "切断・サビ取り・焼け取り"
+    ],
+    "not_suitable_for": [],
+    "features": [
+      "レーザーを左右にスイング（幅1〜8mm）させ、最大1mmの隙間にも対応",
+      "ダブルワイヤ送給装置（ワイヤ径0.8〜1.6mm）",
+      "アタッチメント交換とモード切替で切断・クリーニング（サビ取り・焼け取り）にも使える",
+      "トーチ・母材・クランプの接触時のみ照射する導通式安全機構",
+      "メーカー直販、標準2年無償保証"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/ls-tool-fh-2000.png",
+    "image_credit": "LS-TOOL（株式会社トクベン）公式サイト",
+    "image_source": "https://ls-tool.com/",
+    "country": null,
+    "found_via": "ウエルディングショー",
+    "field_sources": {
+      "output_w": "https://ls-tool.com/",
+      "wavelength": "https://ls-tool.com/",
+      "portability": "https://ls-tool.com/",
+      "thickness_note": "https://ls-tool.com/",
+      "material": "https://ls-tool.com/",
+      "price": "https://ls-tool.com/",
+      "skill": "https://ls-tool.com/",
+      "features": "https://ls-tool.com/",
+      "maker_name": "https://ls-tool.com/company/"
+    },
+    "is_published": true,
+    "notes": "公式サイトの表示価格 1,598,000円（税別、本体標準セット。窒素ガス発生装置またはアルゴンガス、冷却水、電源工事等は別）。入力電源 単相200V 42A、消費電力10kW、使用温度範囲10〜40℃。製造国の明記なし（「出荷前に中国・日本の二重検査」との記載あり）。「初心者でも数時間で習得可能」と記載。対応板厚の上限は非公表。"
+  },
+  {
+    "id": "p272",
+    "maker_slug": "dynalasers",
+    "model_slug": "m70",
+    "name": "Dynalasers M70",
+    "maker_name": "Shenzhen Dynalasers Technology Co., Ltd.",
+    "method": "ハンドヘルド",
+    "wavelength": null,
+    "output_w": 1800,
+    "output_note": "レーザー出力",
+    "portability": "本体45kg未満（654×286×574mm）、強制空冷（外部チラー不要）。溶接ガン0.48kg未満",
+    "thickness_note": "溶け込み深さ（最大溶接深さ） ステンレス・炭素鋼・亜鉛めっき鋼7mm／アルミ5.5mm／真鍮6mm／銅2.5mm（対応板厚ではない）",
+    "official_url": "https://dynalaserstech.com/product/dynalaser-m70-smart-handheld-laser-welding-machine/",
+    "source_url": "https://dynalaserstech.com/product/dynalaser-m70-smart-handheld-laser-welding-machine/",
+    "source": "Shenzhen Dynalasers Technology 公式サイト（製品ページ）",
+    "tags": {
+      "use": [],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ",
+        "銅"
+      ],
+      "thickness": [],
+      "environment": [],
+      "price": [],
+      "skill": [
+        "未経験可"
+      ]
+    },
+    "comment": "本体45kg未満・強制空冷の1,800W機です。公表されている溶け込み深さは、ステンレス・炭素鋼7mm、アルミ5.5mm、銅2.5mmです。",
+    "suitable_for": [
+      "自動車部品・厨房機器・エレベーターパネル・家具・金物の溶接（メーカー記載の用途）",
+      "機械部品の溶接・補修と表面のサビ取り",
+      "厚物・深い溶け込みが必要な溶接（Turboモード）"
+    ],
+    "not_suitable_for": [],
+    "features": [
+      "レーザー光源・溶接ガン・ワイヤ送給装置・ガス系統を一体化した設計",
+      "特許の軽量溶接ガン（0.48kg未満）",
+      "溶接・切断・クリーニング（サビ取り）・スポット溶接に対応、Turboモードで溶け込みを向上",
+      "7インチIPSタッチパネル。150の簡易モードと128のカスタムモード",
+      "強制空冷で外部チラー不要、-15〜40℃で稼働"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/dynalasers-m70.jpg",
+    "image_credit": "Shenzhen Dynalasers Technology 公式サイト（M シリーズ共通の写真）",
+    "image_source": "https://dynalaserstech.com/products/m-series/",
+    "country": "中国",
+    "found_via": "ウエルディングショー",
+    "field_sources": {
+      "output_w": "https://dynalaserstech.com/product/dynalaser-m70-smart-handheld-laser-welding-machine/",
+      "portability": "https://dynalaserstech.com/product/dynalaser-m70-smart-handheld-laser-welding-machine/",
+      "thickness_note": "https://dynalaserstech.com/product/dynalaser-m70-smart-handheld-laser-welding-machine/",
+      "material": "https://dynalaserstech.com/product/dynalaser-m70-smart-handheld-laser-welding-machine/",
+      "skill": "https://dynalasers.jp/products/m-series/",
+      "features": "https://dynalaserstech.com/product/dynalaser-m70-smart-handheld-laser-welding-machine/",
+      "suitable_for": "https://dynalaserstech.com/products/m-series/",
+      "image_url": "https://dynalaserstech.com/products/m-series/",
+      "japanese_page": "https://dynalasers.jp/products/m-series/"
+    },
+    "is_published": true,
+    "notes": "動作モード 連続／スポット／パルス／Turbo。入力電源180–264VAC。価格は非公開（見積り）。波長は公式ページに記載なし。メーカーの日本語サイト dynalasers.jp（日本の電話・FAX番号あり）は M シリーズを「主力シリーズ」と記載。M シリーズの国内販売店は確認できず（サンクス製作所は S30/S40/D50/D60/D70 を扱う）。同社の D シリーズ（D50P/D70P）は掲載中の YDL D50P/D70P と仕様が一致するため対象外としたが、M シリーズは筐体寸法（654×286×574mm、D は637×274×574mm）・重量が異なる別シリーズ。「初心者でもすぐ使える」旨の記載（150の簡易モード）あり。 本体重量は英語サイトと日本語サイトで食い違う（日本語サイトは50kg未満、冷却方式を「相変化冷却」、作業モードを全機種 Continuous/Pulse/Spot/Turbo と記載）。日本語サイトFAQに「初心者でも使用できる（安全教育・保護具は必要）」との記載。"
+  },
+  {
+    "id": "p273",
+    "maker_slug": "dynalasers",
+    "model_slug": "m50",
+    "name": "Dynalasers M50",
+    "maker_name": "Shenzhen Dynalasers Technology Co., Ltd.",
+    "method": "ハンドヘルド",
+    "wavelength": null,
+    "output_w": 1200,
+    "output_note": "レーザー出力",
+    "portability": "本体42kg未満（654×286×574mm）、強制空冷（外部チラー不要）。溶接ガン0.48kg未満",
+    "thickness_note": "溶け込み深さ（最大溶接深さ） ステンレス・炭素鋼・亜鉛めっき鋼5mm／アルミ3.5mm／真鍮4mm／銅1mm（対応板厚ではない）",
+    "official_url": "https://dynalaserstech.com/product/dynalasers-m50-portable-4-in-1-smart-handheld-laser-welder/",
+    "source_url": "https://dynalaserstech.com/product/dynalasers-m50-portable-4-in-1-smart-handheld-laser-welder/",
+    "source": "Shenzhen Dynalasers Technology 公式サイト（製品ページ）",
+    "tags": {
+      "use": [],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ",
+        "銅"
+      ],
+      "thickness": [],
+      "environment": [],
+      "price": [],
+      "skill": [
+        "未経験可"
+      ]
+    },
+    "comment": "本体42kg未満・強制空冷の1,200W機です。公表されている溶け込み深さは、ステンレス・炭素鋼5mm、アルミ3.5mm、銅1mmです。",
+    "suitable_for": [
+      "自動車部品・厨房機器・エレベーターパネル・家具・金物の溶接（メーカー記載の用途）",
+      "機械部品の溶接・補修と表面のサビ取り"
+    ],
+    "not_suitable_for": [],
+    "features": [
+      "レーザー光源・溶接ガン・ワイヤ送給装置・ガス系統を一体化した設計",
+      "特許の軽量溶接ガン（0.48kg未満）",
+      "溶接・切断・クリーニング（サビ取り）・スポット溶接に対応",
+      "7インチIPSタッチパネル。150の簡易モードと128のカスタムモード",
+      "強制空冷で外部チラー不要、-15〜40℃で稼働"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/dynalasers-m50.jpg",
+    "image_credit": "Shenzhen Dynalasers Technology 公式サイト（M シリーズ共通の写真）",
+    "image_source": "https://dynalaserstech.com/products/m-series/",
+    "country": "中国",
+    "found_via": "ウエルディングショー",
+    "field_sources": {
+      "output_w": "https://dynalaserstech.com/product/dynalasers-m50-portable-4-in-1-smart-handheld-laser-welder/",
+      "portability": "https://dynalaserstech.com/product/dynalasers-m50-portable-4-in-1-smart-handheld-laser-welder/",
+      "thickness_note": "https://dynalaserstech.com/product/dynalasers-m50-portable-4-in-1-smart-handheld-laser-welder/",
+      "material": "https://dynalaserstech.com/product/dynalasers-m50-portable-4-in-1-smart-handheld-laser-welder/",
+      "skill": "https://dynalasers.jp/products/m-series/",
+      "features": "https://dynalaserstech.com/product/dynalasers-m50-portable-4-in-1-smart-handheld-laser-welder/",
+      "suitable_for": "https://dynalaserstech.com/products/m-series/",
+      "image_url": "https://dynalaserstech.com/products/m-series/",
+      "japanese_page": "https://dynalasers.jp/products/m-series/"
+    },
+    "is_published": true,
+    "notes": "動作モード 連続／スポット／パルス。入力電源180–264VAC。価格は非公開（見積り）。波長は公式ページに記載なし。メーカーの日本語サイト dynalasers.jp（日本の電話・FAX番号あり）は M シリーズを「主力シリーズ」と記載。M シリーズの国内販売店は確認できず（サンクス製作所は S30/S40/D50/D60/D70 を扱う）。同社の D シリーズ（D50P/D70P）は掲載中の YDL D50P/D70P と仕様が一致するため対象外としたが、M シリーズは筐体寸法（654×286×574mm、D は637×274×574mm）・重量が異なる別シリーズ。「初心者でもすぐ使える」旨の記載（150の簡易モード）あり。 本体重量は英語サイトと日本語サイトで食い違う（日本語サイトは46kg未満、冷却方式を「相変化冷却」、作業モードを全機種 Continuous/Pulse/Spot/Turbo と記載）。日本語サイトFAQに「初心者でも使用できる（安全教育・保護具は必要）」との記載。"
+  },
+  {
+    "id": "p274",
+    "maker_slug": "yagisanki",
+    "model_slug": "f-series",
+    "name": "空冷ダブルスイングハンディレーザー溶接機 Fシリーズ（F3 / F4）",
+    "maker_name": "株式会社八木産機（販売：日本酸素G＆W株式会社）",
+    "method": "ハンドヘルド（空冷ダブルスイング式）",
+    "wavelength": "1080±10nm",
+    "output_w": 1600,
+    "output_note": "定格出力 F3：800W、F4：1600W",
+    "portability": "本体重量 F3：35kg以下、F4：55kg以下。本体寸法 F3：498×319×530mm、F4：547×319×640mm。空冷、キャスター付き。トーチ重量0.4kg。出力ファイバー長5m。AC220V",
+    "thickness_note": "溶け込み深さ F3：＞3mm、F4：＞4mm（カタログの技術パラメーター。対応板厚ではない）。発振器の説明として「溶け込み溶接深さは最大7〜8mm」との記載もある",
+    "official_url": "https://fiberlaser.co.jp/?page_id=388",
+    "source_url": "https://fiberlaser.co.jp/wp-content/uploads/2026/08/%E7%A9%BA%E5%86%B7%E3%83%80%E3%83%96%E3%83%AB%E3%82%B9%E3%82%A4%E3%83%B3%E3%82%B0%E3%83%8F%E3%83%B3%E3%83%87%E3%82%A3%E3%83%AC%E3%83%BC%E3%82%B6%E3%83%BC%E6%BA%B6%E6%8E%A5%E6%A9%9FF%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA.pdf",
+    "source": "株式会社八木産機 公式サイト（製品カタログPDF「空冷ダブルスイングハンディレーザー溶接機 Fシリーズ」）",
+    "tags": {
+      "use": [],
+      "material": [],
+      "thickness": [],
+      "environment": [],
+      "price": [],
+      "skill": []
+    },
+    "comment": "空冷・キャスター付きで、F3（800W・35kg以下）とF4（1,600W・55kg以下）の2機種があります。トーチ重量は0.4kgです。",
+    "suitable_for": [
+      "狭小部や細部への溶接（超軽量トーチ）",
+      "ウロコ模様のビードを出したい溶接（ダブルスイング・ワイヤ送給）"
+    ],
+    "not_suitable_for": [],
+    "features": [
+      "空冷ダブルスイング式で消費電力を削減（総消費電力 F3：2700W以下、F4：4800W以下）",
+      "最長72時間の連続運転が可能（メーカー記載）",
+      "温度自動検知・風量調整・稼働状態のリアルタイム監視",
+      "トーチ重量0.4kg、ダブルスイングによるウロコ溶接で溶接幅は最大8mm",
+      "使用環境温度 -40℃〜45℃"
+    ],
+    "handled_by_operator": false,
+    "image": "/assets/images/products/placeholder.svg",
+    "image_credit": null,
+    "image_source": null,
+    "country": "中国",
+    "found_via": "metree（Metoree：日本酸素G＆W株式会社 登録「ファイバーレーザ溶接機／空冷ダブルスイング Fシリーズ」）/ 2026国際ウエルディングショー 出展者",
+    "field_sources": {
+      "name": "https://fiberlaser.co.jp/wp-content/uploads/2026/08/%E7%A9%BA%E5%86%B7%E3%83%80%E3%83%96%E3%83%AB%E3%82%B9%E3%82%A4%E3%83%B3%E3%82%B0%E3%83%8F%E3%83%B3%E3%83%87%E3%82%A3%E3%83%AC%E3%83%BC%E3%82%B6%E3%83%BC%E6%BA%B6%E6%8E%A5%E6%A9%9FF%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA.pdf",
+      "output_w": "https://fiberlaser.co.jp/wp-content/uploads/2026/08/%E7%A9%BA%E5%86%B7%E3%83%80%E3%83%96%E3%83%AB%E3%82%B9%E3%82%A4%E3%83%B3%E3%82%B0%E3%83%8F%E3%83%B3%E3%83%87%E3%82%A3%E3%83%AC%E3%83%BC%E3%82%B6%E3%83%BC%E6%BA%B6%E6%8E%A5%E6%A9%9FF%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA.pdf",
+      "wavelength": "https://fiberlaser.co.jp/wp-content/uploads/2026/08/%E7%A9%BA%E5%86%B7%E3%83%80%E3%83%96%E3%83%AB%E3%82%B9%E3%82%A4%E3%83%B3%E3%82%B0%E3%83%8F%E3%83%B3%E3%83%87%E3%82%A3%E3%83%AC%E3%83%BC%E3%82%B6%E3%83%BC%E6%BA%B6%E6%8E%A5%E6%A9%9FF%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA.pdf",
+      "portability": "https://fiberlaser.co.jp/wp-content/uploads/2026/08/%E7%A9%BA%E5%86%B7%E3%83%80%E3%83%96%E3%83%AB%E3%82%B9%E3%82%A4%E3%83%B3%E3%82%B0%E3%83%8F%E3%83%B3%E3%83%87%E3%82%A3%E3%83%AC%E3%83%BC%E3%82%B6%E3%83%BC%E6%BA%B6%E6%8E%A5%E6%A9%9FF%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA.pdf",
+      "thickness_note": "https://fiberlaser.co.jp/wp-content/uploads/2026/08/%E7%A9%BA%E5%86%B7%E3%83%80%E3%83%96%E3%83%AB%E3%82%B9%E3%82%A4%E3%83%B3%E3%82%B0%E3%83%8F%E3%83%B3%E3%83%87%E3%82%A3%E3%83%AC%E3%83%BC%E3%82%B6%E3%83%BC%E6%BA%B6%E6%8E%A5%E6%A9%9FF%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA.pdf",
+      "features": "https://fiberlaser.co.jp/wp-content/uploads/2026/08/%E7%A9%BA%E5%86%B7%E3%83%80%E3%83%96%E3%83%AB%E3%82%B9%E3%82%A4%E3%83%B3%E3%82%B0%E3%83%8F%E3%83%B3%E3%83%87%E3%82%A3%E3%83%AC%E3%83%BC%E3%82%B6%E3%83%BC%E6%BA%B6%E6%8E%A5%E6%A9%9FF%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA.pdf",
+      "official_url": "https://fiberlaser.co.jp/?page_id=388",
+      "country": "https://fiberlaser.co.jp/"
+    },
+    "is_published": true,
+    "notes": "日本酸素G＆W株式会社の公式サイトには本機の掲載がなく（同社サイトの溶接機ページはYAGレーザ溶接機 PLS-P30 のみ）、メーカーである八木産機の公式サイトに掲載のカタログPDFを正本とした。Metoree では日本酸素G＆Wが取扱企業として登録（価格は要見積もり）。country は八木産機公式サイトの「確かな中国製品を、信頼できるサポートで」「中国製レーザー機器を日本のお客様へ」の記載による（OEM元メーカー名は非記載。カタログ写真の本体に KIRIN LASER WELDER の表記）。単独の本体写真がWeb上に無くカタログPDF内のみのため image_url は null。対応材質・対応板厚・価格は非公表。代表値は上位機F4の1600W。"
   }
 ]

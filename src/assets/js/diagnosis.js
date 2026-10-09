@@ -1,6 +1,6 @@
 // 選定診断の画面制御。スコアリングは scoring.js、設問・商品は /data/*.json。
-import { runDiagnosis, productSlug } from "./scoring.js?v=13";
-import { mountChrome, icon, productPhoto } from "./partials.js?v=13";
+import { runDiagnosis, productSlug } from "./scoring.js?v=14";
+import { mountChrome, icon, productPhoto } from "./partials.js?v=14";
 
 const app = document.getElementById("app");
 const foot = document.getElementById("foot");
