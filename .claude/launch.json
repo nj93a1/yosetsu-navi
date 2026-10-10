@@ -4,8 +4,28 @@
     {
       "name": "site",
       "runtimeExecutable": "npx",
-      "runtimeArgs": ["wrangler", "dev", "--port", "8766", "--local"],
+      "runtimeArgs": [
+        "wrangler",
+        "dev",
+        "--port",
+        "8766",
+        "--local"
+      ],
       "port": 8766
+    },
+    {
+      "name": "parts",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8767",
+        "--bind",
+        "127.0.0.1",
+        "--directory",
+        "/Users/yu-ki/Developer"
+      ],
+      "port": 8767
     }
   ]
 }

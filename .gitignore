@@ -30,3 +30,4 @@ seed.sql
 .wrangler/
 .dev.vars
 .claude/worktrees/
+redesign/tmp/

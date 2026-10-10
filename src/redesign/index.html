@@ -1,0 +1,2110 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>レーザー溶接機 比較・選定｜デザイン刷新版（確認用）</title>
+<!-- 本番公開時に削除：検索エンジンのインデックスを許可する -->
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Montserrat:wght@500;700&display=swap">
+<!-- 組み立て: SEC-077 → SEC-121 → SEC-163 → SEC-082 → SEC-044 → SEC-090 → SEC-116 → SEC-142 → SEC-097 → SEC-009 → SEC-135 → SEC-161 -->
+<style>
+html{-webkit-text-size-adjust:100%}
+body{margin:0}
+/* ===== SEC-077 ===== */
+/* ここから下がパーツ本体。組み立て時はこの <style> と <div> をそのまま貼る */
+.sec077 {
+  --bg:#0E7F82; --panel:#ffffff; --ink:#313131; --accent:#6A4FA8; --accent-dark:#56408A; --accent-ink:#ffffff;
+  --yellow:#D2DF1E; --deco:#0B6A6C; --stripe:#14A3A6; --mark:#D2DF1E;
+  --top:0px;
+}
+.sec077, .sec077 * { box-sizing:border-box; margin:0; padding:0; }
+.sec077 {
+  position:sticky; top:var(--top); z-index:200; overflow:hidden; height:48px; background:var(--bg);
+  font-family: "BIZ UDPGothic", sans-serif; font-weight:700; line-height:1; color:var(--ink); -webkit-font-smoothing:antialiased;
+  transition:height .3s ease;
+}
+.sec077.is-closed { height:0; }
+.sec077__close {
+  position:absolute; left:0; top:0; z-index:2; width:48px; height:48px; border:0; background:var(--bg); cursor:pointer;
+  display:flex; align-items:center; justify-content:center; color:var(--ink);
+}
+.sec077__close svg { width:24px; height:24px; fill:none; stroke:currentColor; stroke-width:2.4; stroke-linecap:round; }
+.sec077__br { display:none; }
+.sec077__link { display:flex; justify-content:center; align-items:center; height:48px; color:inherit; text-decoration:none; }
+
+/* バナー本体（PC 1144×48。幅が足りないときは --u で比率を保って縮む） */
+.sec077__art {
+  --u:calc(min(1144px, 100vw - 136px) / 1144);
+  position:relative; flex-shrink:0; overflow:hidden; width:calc(1144 * var(--u)); height:calc(48 * var(--u));
+  background:var(--bg);
+}
+.sec077__art > * { position:absolute; }
+.sec077__panel { left:calc(30 * var(--u)); right:calc(112 * var(--u)); top:0; bottom:0; background:var(--panel);
+  clip-path:polygon(calc(10 * var(--u)) 0, 100% 0, calc(100% - 12 * var(--u)) 100%, 0 100%); }
+.sec077__dot { border-radius:50%; background:var(--deco); }
+.sec077__dot--l { left:calc(-8 * var(--u)); top:calc(12 * var(--u)); width:calc(18 * var(--u)); height:calc(24 * var(--u)); }
+.sec077__dot--r { right:calc(42 * var(--u)); top:calc(20 * var(--u)); width:calc(20 * var(--u)); height:calc(20 * var(--u)); }
+.sec077__bar { width:calc(9 * var(--u)); height:calc(70 * var(--u)); border-radius:calc(5 * var(--u)); transform:rotate(32deg); }
+.sec077__bar--l { left:calc(27 * var(--u)); top:calc(-12 * var(--u)); background:var(--stripe); }
+.sec077__bar--r { right:calc(92 * var(--u)); top:calc(8 * var(--u)); background:var(--yellow); transform:rotate(58deg); }
+
+/* 吹き出しバッジ */
+.sec077__badge { left:calc(38 * var(--u)); top:calc(-30 * var(--u)); width:calc(114 * var(--u)); height:calc(114 * var(--u));
+  border-radius:50%; background:var(--accent-dark); color:var(--accent-ink); text-align:center; }
+.sec077__badge::after { content:""; position:absolute; right:calc(-6 * var(--u)); top:calc(52 * var(--u)); border:calc(6 * var(--u)) solid transparent; border-left-color:var(--accent-dark); border-right:0; }
+.sec077__badge-s { display:inline-block; margin-top:calc(33 * var(--u)); padding-bottom:calc(1 * var(--u)); font-size:calc(12 * var(--u)); background:linear-gradient(transparent 70%, var(--mark) 70%); }
+.sec077__badge-l { display:block; margin-top:calc(4 * var(--u)); font-size:calc(16 * var(--u)); letter-spacing:-.02em; }
+.sec077__lead { left:calc(164 * var(--u)); top:calc(16 * var(--u)); font-size:calc(14 * var(--u)); letter-spacing:.02em; white-space:nowrap; }
+.sec077__lead i { font-style:normal; display:inline-block; margin:0 calc(5 * var(--u)); font-weight:400; letter-spacing:-.1em; }
+
+/* ラベル（青＋黄） */
+.sec077__label { left:calc(266 * var(--u)); top:calc(9 * var(--u)); display:flex; height:calc(31 * var(--u)); border-radius:calc(2 * var(--u)); overflow:hidden; white-space:nowrap; }
+.sec077__label-a { display:flex; align-items:center; padding:0 calc(9 * var(--u)) 0 calc(10 * var(--u)); background:var(--accent-dark); color:var(--accent-ink); font-size:calc(15 * var(--u)); }
+.sec077__label-b { display:flex; align-items:center; padding:0 calc(10 * var(--u)) 0 calc(11 * var(--u)); background:var(--yellow); color:var(--accent-dark); font-size:calc(15 * var(--u)); }
+.sec077__label-b b { margin:0 calc(2 * var(--u)); font-size:calc(21 * var(--u)); font-weight:900; }
+
+/* キャンペーン名と補足 */
+.sec077__title { left:calc(489 * var(--u)); top:calc(3 * var(--u)); font-size:calc(36 * var(--u)); line-height:calc(42 * var(--u)); font-weight:900; color:var(--accent); white-space:nowrap; letter-spacing:-.01em; }
+.sec077__title span { letter-spacing:.12em; }
+.sec077__title b { font-size:calc(40 * var(--u)); font-weight:900; }
+.sec077__note { left:calc(862 * var(--u)); top:calc(11 * var(--u)); font-size:calc(11 * var(--u)); line-height:calc(14 * var(--u)); color:var(--accent); white-space:nowrap; }
+
+@media (max-width:767px) {
+  .sec077 { height:56px; }
+  .sec077__close { display:none; }
+  .sec077__link { height:56px; }
+  .sec077__art { --u:calc(100vw / 375); width:100%; height:calc(56 * var(--u)); }
+  .sec077__panel { left:calc(40 * var(--u)); right:calc(20 * var(--u)); clip-path:polygon(0 0, 100% 0, calc(100% - 20 * var(--u)) 100%, 0 100%); }
+  .sec077__dot--l, .sec077__dot--r { display:none; }
+  .sec077__bar--l { left:calc(40 * var(--u)); top:calc(-30 * var(--u)); height:calc(50 * var(--u)); background:var(--yellow); transform:rotate(40deg); }
+  .sec077__bar--r { right:calc(4 * var(--u)); top:calc(-10 * var(--u)); width:calc(8 * var(--u)); height:calc(80 * var(--u)); transform:rotate(-38deg); }
+  .sec077__badge { left:0; top:0; width:calc(56 * var(--u)); height:calc(56 * var(--u)); border-radius:0 calc(6 * var(--u)) calc(6 * var(--u)) 0; }
+  .sec077__badge::after { right:calc(-5 * var(--u)); top:calc(23 * var(--u)); border-width:calc(5 * var(--u)); border-right:0; }
+  .sec077__badge-s { margin-top:calc(7 * var(--u)); font-size:calc(12 * var(--u)); }
+  .sec077__badge-l { margin-top:calc(2 * var(--u)); font-size:calc(13 * var(--u)); line-height:calc(15 * var(--u)); }
+  .sec077__lead { left:calc(250 * var(--u)); top:calc(7 * var(--u)); font-size:calc(13 * var(--u)); }
+  .sec077__lead i { margin:0 calc(2 * var(--u)); }
+  .sec077__label { left:calc(66 * var(--u)); top:calc(9 * var(--u)); flex-direction:column; height:auto; }
+  .sec077__label-a, .sec077__label-b { justify-content:center; width:calc(72 * var(--u)); height:calc(19 * var(--u)); padding:0; font-size:calc(12 * var(--u)); }
+  .sec077__label-b b { font-size:calc(15 * var(--u)); }
+  .sec077__title { left:calc(147 * var(--u)); top:calc(5 * var(--u)); font-size:calc(38 * var(--u)); line-height:calc(46 * var(--u)); }
+  .sec077__title span { letter-spacing:.02em; }
+  .sec077__title b { font-size:calc(44 * var(--u)); }
+  .sec077__title em { position:absolute; left:calc(103 * var(--u)); top:calc(24 * var(--u)); font-style:normal; font-size:calc(13.5 * var(--u)); letter-spacing:.02em; line-height:1; font-weight:700; }
+  .sec077__note { display:none; }
+  .sec077__br { display:inline; }
+}
+@media (prefers-reduced-motion:reduce) {
+  .sec077 { transition:none; }
+}
+
+/* ===== SEC-121 ===== */
+/* ここから下がパーツ本体。組み立て時はこの <style> と <header> をそのまま貼る */
+.sec121 {
+  --bg:#ffffff; --text:#313131; --accent:#0E7F82; --accent-ink:#ffffff; --line:rgba(0,0,0,.11); --soft:rgba(0,0,0,.05);
+  --rule:#F1FAFA; --shadow:rgba(33,51,67,.12); --dark:#313131; --muted:#5F6874;
+}
+.sec121, .sec121 * { box-sizing:border-box; margin:0; padding:0; }
+.sec121 {
+  position:sticky; top:0; z-index:95; background:var(--bg); color:var(--text); box-shadow:0 2px 4px var(--shadow);
+  font-family: "BIZ UDPGothic", sans-serif; font-size:16px; font-weight:400; line-height:28px; -webkit-font-smoothing:antialiased;
+}
+.sec121 a { color:inherit; text-decoration:none; }
+.sec121 ul { list-style:none; }
+.sec121 button { font:inherit; color:inherit; background:none; border:0; cursor:pointer; }
+.sec121 svg { display:block; flex-shrink:0; fill:none; stroke:currentColor; stroke-width:1.6; stroke-linecap:round; stroke-linejoin:round; }
+.sec121__logo-ph {
+  display:flex; align-items:center; justify-content:center; width:30px; height:30px;
+  border:1px dashed var(--accent); color:var(--accent); font-size:9px; font-weight:500; line-height:1; letter-spacing:.02em;
+}
+
+/* バー */
+.sec121__inner { display:flex; align-items:center; justify-content:space-between; max-width:1080px; height:76px; margin:0 auto; }
+.sec121__logo { display:flex; align-items:center; height:30px; }
+.sec121__menu { display:flex; flex:1; align-items:center; justify-content:space-between; height:76px; margin-left:17px; }
+.sec121__tabs { display:flex; height:76px; }
+.sec121 .sec121__tab { display:flex; align-items:center; gap:6px; height:76px; padding:24px 14px; font-weight:500; white-space:nowrap; }
+.sec121__tab-label { line-height:28px; text-underline-offset:auto; }
+.sec121__tab svg { width:18px; height:18px; position:relative; top:1px; transition:transform .3s; }
+.sec121__tab:hover .sec121__tab-label, .sec121__tab[aria-expanded="true"] .sec121__tab-label { text-decoration:underline; }
+.sec121__tab[aria-expanded="true"] svg { transform:rotate(180deg); }
+.sec121__ctas { display:flex; gap:16px; }
+.sec121__btn {
+  display:block; padding:8px 16px; border:2px solid var(--accent); border-radius:8px; background:var(--accent); color:var(--accent-ink) !important;
+  font-size:14px; font-weight:500; line-height:22px; text-align:center; white-space:nowrap; transition:background-color .15s linear, color .15s linear;
+}
+.sec121__btn:hover { background:#c93700; border-color:#c93700; }
+.sec121__btn--sub { background:var(--bg); color:var(--accent) !important; }
+.sec121__btn--sub:hover { background:#fff1eb; border-color:var(--accent); }
+
+/* メガメニュー */
+.sec121__drop {
+  position:absolute; left:10px; right:10px; top:76px; visibility:hidden; opacity:0;
+  transition:opacity .2s ease-in .1s, visibility 0s .3s;
+}
+.sec121__drop.is-open { visibility:visible; opacity:1; transition:opacity .2s ease-in .1s, visibility 0s; }
+.sec121__drop-box { display:flex; background:var(--bg); border:1px solid var(--line); border-radius:0 0 3px 3px; box-shadow:0 1px 24px var(--shadow); }
+.sec121__side { flex-shrink:0; width:225px; padding:24px 8px; }
+.sec121__side ul { display:flex; flex-direction:column; gap:4px; }
+.sec121__side button {
+  display:flex; align-items:center; justify-content:space-between; width:100%; padding:8px; border-radius:16px;
+  font-size:14px; font-weight:500; line-height:22px; text-align:left;
+}
+.sec121__side button:hover { background:var(--soft); }
+.sec121__side button[aria-selected="true"] { background:var(--soft); }
+.sec121__side svg { width:18px; height:18px; }
+.sec121__body { flex:1; padding:24px; border-left:4px solid var(--rule); }
+.sec121__drop--plain .sec121__body { border-left:0; }
+.sec121__panel[hidden] { display:none; }
+.sec121__grid { display:grid; grid-template-columns:repeat(3, 1fr); column-gap:20px; }
+.sec121__divider { grid-column:1 / -1; margin:24px 0; border-bottom:1px solid var(--line); }
+.sec121__col-title { padding:0 0 16px 8px; font-size:16px; font-weight:500; line-height:28px; }
+.sec121__card + .sec121__card { margin-top:8px; }
+.sec121__card { display:block; padding:12px; border-radius:16px; transition:background-color .15s; }
+.sec121__card:hover { background:var(--soft); }
+.sec121__card-title { display:block; padding-right:24px; font-size:16px; font-weight:500; line-height:28px; }
+.sec121__card-text { display:block; margin-top:4px; padding-right:24px; font-size:14px; font-weight:400; line-height:22px; }
+
+/* SPだけで出すもの */
+.sec121__search, .sec121__btn--dark { display:none; }
+
+/* ハンバーガー（SP） */
+.sec121__burger { display:none; position:relative; width:40px; height:40px; }
+.sec121__burger span, .sec121__burger span::before, .sec121__burger span::after {
+  position:absolute; left:50%; height:3.19px; border-radius:16px; background:var(--dark); transition:transform .3s, background-color .3s;
+}
+.sec121__burger span { top:18px; width:40px; margin-left:-20px; }
+.sec121__burger span::before, .sec121__burger span::after { content:""; left:4px; width:32px; }
+.sec121__burger span::before { transform:translateY(-8px); }
+.sec121__burger span::after { transform:translateY(8px); }
+.sec121.is-sp-open .sec121__burger span { background:transparent; }
+.sec121.is-sp-open .sec121__burger span::before { transform:rotate(-45deg); }
+.sec121.is-sp-open .sec121__burger span::after { transform:rotate(45deg); }
+
+@media (max-width:1079px) {
+  .sec121__inner { height:56px; padding:8px 16px; }
+  .sec121__logo-ph { width:100px; height:28px; font-size:10px; }
+  .sec121__burger { display:block; }
+  .sec121__menu {
+    position:fixed; left:0; right:0; top:56px; bottom:0; display:block; height:auto; margin:0; padding:16px 16px 40px; overflow-y:auto;
+    background:var(--bg); visibility:hidden; opacity:0; transform:translateY(-8px); transition:opacity .3s, transform .3s, visibility 0s .3s;
+  }
+  .sec121.is-sp-open .sec121__menu { visibility:visible; opacity:1; transform:none; transition:opacity .3s, transform .3s, visibility 0s; }
+  .sec121__tabs { display:block; height:auto; padding-bottom:16px; border-bottom:1px solid var(--line); }
+  .sec121__tabs > li { position:relative; }
+  .sec121 .sec121__tab { justify-content:space-between; width:100%; height:50px; padding:11px 8px; font-size:14px; font-weight:400; letter-spacing:.1em; }
+  .sec121__tab svg { transform:rotate(-90deg); }
+  .sec121__tab[aria-expanded="true"] svg { transform:rotate(0); }
+  .sec121__tab:hover .sec121__tab-label, .sec121__tab[aria-expanded="true"] .sec121__tab-label { text-decoration:none; }
+  .sec121__drop { position:static; display:none; opacity:1; visibility:visible; transition:none; }
+  .sec121__drop.is-open { display:block; }
+  .sec121__drop-box { display:block; border:0; box-shadow:none; }
+  .sec121__side { display:none; }
+  .sec121__body { padding:0 0 8px 8px; border-left:0; }
+  .sec121__panel[data-sp-hidden] { display:none; }
+  .sec121__grid { display:block; }
+  .sec121__divider { margin:8px 0; }
+  .sec121__col-title { padding:8px 0 0 8px; font-size:14px; }
+  .sec121__card { padding:6px 8px; }
+  .sec121__card + .sec121__card { margin-top:0; }
+  .sec121__card-text { display:none; }
+  .sec121__card-title { font-size:14px; font-weight:400; line-height:24px; }
+  .sec121__ctas { flex-direction:column; gap:16px; padding:16px 0; }
+  .sec121__btn { padding:8px 16px; }
+  .sec121__ctas { border-bottom:1px solid var(--line); }
+  .sec121 .sec121__btn--dark { display:block; margin-top:16px; border-color:var(--dark); background:var(--dark); }
+  .sec121__search { display:flex; align-items:center; gap:8px; height:46px; margin-bottom:28px; padding:0 15px; border:1px solid var(--muted); border-radius:4px; }
+  .sec121__search svg { width:16px; height:16px; }
+  .sec121__search input { flex:1; min-width:0; border:0; outline:0; background:none; font:inherit; font-size:16px; color:var(--text); }
+  .sec121__search input::placeholder { color:#999; }
+}
+@media (prefers-reduced-motion:reduce) {
+  .sec121 *, .sec121 *::before, .sec121 *::after { transition:none !important; }
+}
+
+/* ===== SEC-163 ===== */
+/* ここから下がパーツ本体。組み立て時はこの <style> と <section> をそのまま貼る */
+.sec163 {
+  --bg-a: #0E7F82;
+  --bg-b: #14A3A6;
+  --bg-c: #2BB8BB;
+  --text: #fff;
+  --ink: #313131;
+  --label-bg: #0B6A6C;
+  --btn: #fff;
+  --btn-dark: #0B6A6C;
+  --icon: #14A3A6;
+  --tag-bg: #D2DF1E;
+  --tag-ink: #313131;
+  --shadow: rgba(82, 101, 102, .5);
+  --suit: #1f2b4d;
+}
+.sec163, .sec163 * { box-sizing: border-box; margin: 0; padding: 0; }
+.sec163 {
+  position: relative; isolation: isolate;
+  display: flex; justify-content: center;
+  min-height: 536px;
+  padding: 0 32px;
+  overflow: hidden;
+  background: linear-gradient(229deg, var(--bg-a) 3.72%, var(--bg-b) 25.4%, var(--bg-c) 45.5%, var(--bg-a) 85.7%);
+  color: var(--ink);
+  font-family: "BIZ UDPGothic", sans-serif;
+  font-size: 16px; line-height: 1.5;
+}
+.sec163__inner { position: relative; display: grid; align-items: center; width: 100%; max-width: 1240px; }
+.sec163__content { display: flex; }
+.sec163__contentInner { display: grid; gap: 48px; width: 632px; max-width: 632px; margin-bottom: 3px; }
+.sec163__title { display: grid; gap: 21px; align-items: center; }
+
+/* 肩コピー：白い文字＋濃いティールの帯 */
+.sec163__shoulder {
+  display: flex; align-items: center;
+  height: 42px; margin-left: 2px;
+  font-family: "BIZ UDPGothic", sans-serif; font-weight: 700;
+  font-size: 27px; line-height: 1; letter-spacing: -.02em;
+  color: var(--text); white-space: nowrap;
+  font-feature-settings: "palt";
+}
+.sec163__shoulder small { font-size: 19px; margin-right: 4px; }
+.sec163__shoulder mark {
+  display: inline-flex; align-items: center;
+  height: 42px; padding: 0 10px;
+  background: var(--label-bg); color: var(--text);
+}
+
+/* 大見出し：太いゴシックを横に詰めて、つなぎの字だけ小さく */
+.sec163__copy {
+  display: grid; gap: 18px;
+  font-family: "BIZ UDPGothic", sans-serif; font-weight: 900;
+  color: var(--text); white-space: nowrap;
+  font-feature-settings: "palt";
+}
+.sec163__line {
+  display: block;
+  height: 92px;
+  font-size: 92px; line-height: 92px; letter-spacing: -.06em;
+  transform: scaleX(.76); transform-origin: 0 50%;
+}
+.sec163__line--2 { height: 99px; line-height: 99px; font-size: 98px; transform: scaleX(.786); }
+.sec163__line small { font-size: .62em; letter-spacing: -.02em; margin-left: .06em; }
+
+/* ボタン */
+.sec163__buttons { display: grid; grid-template-columns: 300px 300px; gap: 32px; list-style: none; }
+.sec163__btnWrap { position: relative; }
+.sec163__tag {
+  position: absolute; top: 0; left: 50%; z-index: 2;
+  width: 150px; padding: 2px 12px 1px;
+  border-radius: 64px;
+  background: var(--tag-bg); color: var(--tag-ink);
+  font-size: 14px; line-height: 1.4; font-weight: 700; text-align: center; white-space: nowrap;
+  transform: translate(-50%, -55%);
+}
+.sec163__btn {
+  position: relative;
+  display: flex; align-items: center; justify-content: center; column-gap: 12px;
+  height: 72px; padding: 15px 21px 15px 28px;
+  border-radius: 64px;
+  background: var(--btn); color: var(--ink);
+  box-shadow: 0 4px 8px 0 var(--shadow);
+  font-size: 16px; line-height: 1.4; font-weight: 700; text-decoration: none;
+  transition: background-color .1s ease-out;
+}
+.sec163__btn::after {
+  content: ""; position: absolute; inset: 0; border-radius: inherit;
+  background: rgba(18, 171, 177, .08); opacity: 0;
+  transition: opacity .2s ease;
+}
+.sec163__btn:hover::after, .sec163__btn:focus-visible::after { opacity: 1; }
+.sec163__btn--dark { padding-right: 22px; column-gap: 22px; background: var(--btn-dark); color: var(--text); }
+.sec163__btn--dark::after { background: rgba(255, 255, 255, .1); }
+.sec163__btnText { margin: 2px 8px 0 0; }
+.sec163__btn--dark .sec163__btnText { margin-right: 0; }
+.sec163__icon { flex: none; width: 20px; height: 20px; color: var(--icon); transition: transform .2s ease; }
+.sec163__btn--dark .sec163__icon { margin-left: 4px; color: var(--text); }
+.sec163__btn:hover .sec163__icon--down { transform: translateY(2px); }
+.sec163__btn:hover .sec163__icon--right { transform: translateX(2px); }
+
+/* ボタン横のサムネイル（プレースホルダー） */
+.sec163__thumb { position: relative; flex: none; width: 70px; height: 72px; }
+.sec163__thumb--doc::before {
+  content: ""; position: absolute; left: 3px; top: 22px; width: 64px; height: 36px;
+  border-radius: 2px; background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .25);
+}
+.sec163__thumb--doc::after {
+  content: ""; position: absolute; left: 40px; top: 22px; width: 27px; height: 36px;
+  background: linear-gradient(135deg, transparent 30%, #3ec6cc 30% 55%, transparent 55% 65%, #12abb1 65%);
+}
+.sec163__thumb--screen::before {
+  content: ""; position: absolute; left: 6px; top: 22px; width: 50px; height: 32px;
+  border: 2px solid #cfd8dc; border-bottom-width: 4px; border-radius: 2px; background: #fff;
+}
+.sec163__thumb--screen::after {
+  content: ""; position: absolute; left: 50px; top: 30px; width: 15px; height: 27px;
+  border: 2px solid #cfd8dc; border-radius: 3px; background: #fff;
+}
+
+/* 人物写真（1枚のプレースホルダー。元サイトと同じくPC用・SP用を出し分け） */
+.sec163__kv--sp { display: none; }
+.sec163__kv {
+  position: absolute; top: 0; left: 640px; right: -103px; z-index: -1;
+  height: 536px;
+  transform: translateX(-23.5px);
+}
+.sec163__kvImg {
+  position: relative; display: block;
+  width: 743px; height: 616px;
+}
+.sec163__person {
+  position: absolute; bottom: 0;
+  border-radius: 48% 48% 0 0 / 30% 30% 0 0;
+  background: linear-gradient(180deg, #2e3a5e, var(--suit));
+}
+.sec163__person::before {
+  content: ""; position: absolute; left: 50%; top: -34%;
+  width: 46%; aspect-ratio: 4 / 5; border-radius: 50%;
+  background: linear-gradient(180deg, #2a2a2e 0 22%, #d9b8a3 22%);
+  transform: translateX(-50%);
+}
+.sec163__person--l { left: 40px; width: 250px; height: 440px; }
+.sec163__person--r { right: 90px; width: 220px; height: 400px; background: linear-gradient(180deg, #6f747d, #4d525b); }
+.sec163__person--c { left: 215px; width: 300px; height: 360px; z-index: 1; background: linear-gradient(180deg, #3a4160, #262d47); }
+.sec163__person--c::before { width: 52%; top: -62%; background: linear-gradient(180deg, #2a2224 0 30%, #e3c3b2 30%); }
+.sec163__kvLabel {
+  position: absolute; left: 18px; top: 16px;
+  font-size: 12px; line-height: 1; color: rgba(255, 255, 255, .75); font-weight: 700;
+}
+
+@media (max-width: 767px) {
+  .sec163 {
+    min-height: 0;
+    padding: 32px 16px 28px;
+    background: linear-gradient(202deg, var(--bg-a) 9.14%, var(--bg-b) 28.43%, var(--bg-c) 52.08%, var(--bg-a) 63.06%);
+  }
+  .sec163__content { justify-content: center; }
+  .sec163__contentInner { gap: 13px; width: 100%; max-width: none; margin: 0; }
+  .sec163__shoulder {
+    justify-content: center; height: 27px; margin: 0;
+    font-size: 17.5px;
+  }
+  .sec163__shoulder small { font-size: 12.5px; margin-right: 3px; }
+  .sec163__shoulder mark { height: 27px; padding: 0 6px; }
+  .sec163__title { display: flex; flex-direction: column; align-items: center; gap: 24px; }
+  .sec163__shoulder { margin-bottom: -11px; }
+  .sec163__copy { display: flex; flex-direction: column; align-items: center; gap: 9px; width: 320px; }
+  .sec163__line { width: max-content; height: 50px; font-size: 50px; line-height: 50px; transform-origin: 50% 50%; }
+  .sec163__line--2 { height: 53.5px; font-size: 53px; line-height: 53.5px; }
+  .sec163__kv--pc { display: none; }
+  .sec163__kv--sp { display: block; }
+  .sec163__kv {
+    position: relative; top: auto; left: auto; right: auto;
+    width: 320px; height: 246px;
+    transform: none;
+  }
+  .sec163__kvImg {
+    position: absolute; left: -50px; top: -23px; width: 420px; height: 348px;
+    -webkit-mask: linear-gradient(#000 72%, transparent 92%); mask: linear-gradient(#000 72%, transparent 92%);
+  }
+  .sec163__person--l { left: 15px; width: 140px; height: 210px; }
+  .sec163__person--r { right: 12px; width: 125px; height: 185px; }
+  .sec163__person--c { left: 115px; width: 170px; height: 170px; }
+  .sec163__kvLabel { left: 70px; top: 40px; font-size: 10px; }
+  .sec163__buttons { grid-template-columns: 300px; gap: 24px; max-width: 300px; margin: 12px 10px 0; justify-self: center; }
+  .sec163__btn,
+  .sec163__btn--dark {
+    display: grid; grid-template-columns: 20px 1fr 20px; justify-content: space-between; column-gap: 8px;
+    height: 60px; padding: 7px 22px;
+  }
+  .sec163__btn::before { content: ""; }
+  .sec163__thumb { display: none; }
+  .sec163__btnText { margin: 0; text-align: center; }
+  .sec163__btn--dark .sec163__icon { margin-left: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sec163__btn, .sec163__btn::after, .sec163__icon { transition: none; }
+}
+
+/* ===== SEC-082 ===== */
+/* ここから下がパーツ本体。組み立て時はこの <style> と <section> をそのまま貼る */
+.sec082 {
+  --bg:#ffffff; --text:#313131; --accent:#0E7F82; --accent-ink:#0B6A6C; --bar:#14A3A6;
+  --ill-line:#0E7F82; --ill-fill:#E3F4F4; --ill-sub:#D2DF1E;
+}
+.sec082, .sec082 * { box-sizing:border-box; margin:0; padding:0; }
+.sec082 {
+  padding:75px 0 120px; background:var(--bg); color:var(--text);
+  font-family: "BIZ UDPGothic", sans-serif; font-size:16px; font-weight:400; line-height:24px;
+  -webkit-font-smoothing:antialiased;
+}
+.sec082__inner { max-width:1068px; margin:0 auto; }
+.sec082__title { font-size:24px; line-height:36px; font-weight:500; text-align:center; color:var(--accent); }
+.sec082__md { display:none; }
+.sec082__list { display:flex; flex-wrap:wrap; justify-content:center; gap:58px 65px; margin-top:47px; }
+.sec082__item { display:flex; flex-direction:column; width:218.25px; color:var(--accent); text-decoration:none; }
+.sec082__image { display:flex; justify-content:center; align-items:flex-end; min-height:138px; }
+.sec082__image svg { display:block; height:auto; }
+.sec082__item:nth-child(1) svg { width:138px; }
+.sec082__item:nth-child(2) svg { width:119px; }
+.sec082__item:nth-child(3) svg { width:120px; }
+.sec082__item:nth-child(4) svg { width:138px; }
+.sec082__name {
+  position:relative; display:flex; align-items:center; margin-top:20px; padding-left:16px;
+  font-size:24px; line-height:24px; font-weight:500; color:var(--accent-ink);
+}
+.sec082__name::before { content:""; position:absolute; top:12px; left:-2px; margin-top:-6px; width:4px; height:16px; background:var(--bar); }
+.sec082__text { margin-top:13px; }
+
+@media (max-width: 767px) {
+  .sec082 { padding:40px 0 60px; }
+  .sec082__title { font-size:18px; line-height:27px; }
+  .sec082__md { display:block; }
+  .sec082__list { gap:16px 0; margin:20px 27.5px 0; align-items:center; }
+  .sec082__item { width:160px; }
+  .sec082__image { min-height:0; height:100px; }
+  .sec082__item:nth-child(2) .sec082__image { height:104px; }
+  .sec082__item .sec082__image svg { width:90px; }
+  .sec082__wrap { display:flex; justify-content:center; }
+  .sec082__name { font-size:18px; line-height:18px; }
+  .sec082__text { display:none; }
+}
+
+/* ===== SEC-044 ===== */
+/* ここから下がパーツ本体。組み立て時はこの <style> と <section> をそのまま貼る */
+.sec044 {
+  --frame:#ffffff; --bg:#F1FAFA; --surface:#ffffff; --text:#313131; --accent:#0E7F82; --accent-hover:#0B6A6C; --accent-ink:#ffffff;
+  --shadow:rgba(0,20,50,.08); --accent-tint:rgba(0,155,170,.2); --pattern:rgba(255,255,255,.85);
+  --ph-a:#E3F4F4; --ph-b:#BFE4E5; --ph-ink:#0B6A6C;
+}
+.sec044, .sec044 * { box-sizing:border-box; margin:0; padding:0; }
+.sec044 {
+  padding:20px; background:var(--frame); color:var(--text);
+  font-family: "BIZ UDPGothic", sans-serif; font-size:16px; font-weight:400; line-height:24px;
+  -webkit-font-smoothing:antialiased;
+}
+.sec044 a { color:inherit; text-decoration:none; }
+.sec044__inner {
+  position:relative; overflow:hidden; padding:120px 0;
+  background-color:var(--bg);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='390' height='450' viewBox='0 0 390 450'%3E%3Cg fill='none' stroke='%23fff' stroke-width='2' opacity='.6'%3E%3Cpath d='M97.5 0v112.5L0 168.75M97.5 112.5l97.5 56.25v112.5L97.5 337.5 0 281.25M195 168.75l97.5-56.25V0M292.5 112.5L390 168.75M97.5 337.5V450M195 281.25l97.5 56.25V450M292.5 337.5L390 281.25'/%3E%3C/g%3E%3Cg fill='%23fff' opacity='.55'%3E%3Ccircle cx='97.5' cy='112.5' r='8'/%3E%3Ccircle cx='195' cy='281.25' r='6'/%3E%3Ccircle cx='292.5' cy='112.5' r='10'/%3E%3Ccircle cx='292.5' cy='337.5' r='5'/%3E%3Ccircle cx='0' cy='168.75' r='6'/%3E%3C/g%3E%3C/svg%3E");
+  background-size:390px 450px; background-position:50% 50%;
+}
+.sec044__wrap { max-width:1250px; margin:0 auto; padding:0 25px; }
+
+/* 見出し */
+.sec044__heading { position:relative; padding-bottom:20px; text-align:center; }
+.sec044__heading::after { content:""; position:absolute; left:50%; top:94.4px; width:60px; height:2px; margin-left:-30px; background:var(--accent); }
+.sec044__en { font-family: "BIZ UDPGothic", sans-serif; font-size:48px; line-height:48px; letter-spacing:1.92px; }
+.sec044__ja { margin-top:6px; font-size:16px; font-weight:700; line-height:22.4px; letter-spacing:.64px; }
+.sec044__text { margin-top:21px; font-size:14px; font-weight:500; line-height:30.8px; letter-spacing:.56px; text-align:center; }
+
+/* カード */
+.sec044__cards { display:grid; grid-template-columns:repeat(5, 1fr); gap:18px; margin-top:43px; list-style:none; }
+.sec044__card { background:var(--surface); box-shadow:0 0 8px 0 var(--shadow); }
+.sec044__link { position:relative; display:grid; grid-template-columns:100%; transition:background-color .3s; }
+.sec044__link:hover { background-color:var(--accent-tint); }
+.sec044__img { position:relative; overflow:hidden; aspect-ratio:450/320; }
+.sec044__ph { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; background:linear-gradient(150deg, var(--ph-a), var(--ph-b)); transition:transform .3s; }
+.sec044__card:nth-child(2) .sec044__ph { background:linear-gradient(150deg, #F4F7D0, #E2EA8C); }
+.sec044__card:nth-child(3) .sec044__ph { background:linear-gradient(150deg, #EFEAF7, #D3C8EA); }
+.sec044__card:nth-child(4) .sec044__ph { background:linear-gradient(150deg, #F1F3F5, #D5DADF); }
+.sec044__link:hover .sec044__ph { transform:scale(1.05); }
+.sec044__ph span { font-size:11px; letter-spacing:.04em; color:var(--ph-ink); white-space:nowrap; }
+.sec044__name { display:flex; justify-content:space-between; align-items:center; padding:15px 25px 18px 15px; font-size:18px; font-weight:500; line-height:18px; letter-spacing:1px; color:var(--accent); }
+.sec044__arrow { display:block; flex:none; width:26px; height:6px; transition:transform .3s; }
+.sec044__link:hover .sec044__arrow { transform:translateX(5px); }
+
+/* ボタン */
+.sec044__btns { margin-top:50px; text-align:center; }
+.sec044 .sec044__btn {
+  display:inline-flex; justify-content:space-between; align-items:center; gap:10px; width:280px; height:60px; padding:21px 18px 24px 30px;
+  border-radius:0 8px 0 0; background:var(--accent); color:var(--accent-ink);
+  font-size:15px; font-weight:500; line-height:15px; letter-spacing:1.2px; transition:background-color .3s;
+}
+.sec044__btn:hover { background:var(--accent-hover); }
+.sec044__btn .sec044__arrow { margin-top:3px; }
+
+@media (max-width: 767px) {
+  .sec044 { padding:10px 10px 0; }
+  .sec044__inner { padding:50px 0; background-size:260px 300px; }
+  .sec044__wrap { padding:0 20px; }
+  .sec044__heading { padding-bottom:18px; }
+  .sec044__heading::after { top:76.6px; }
+  .sec044__en { font-size:34px; line-height:34px; letter-spacing:.68px; }
+  .sec044__ja { font-size:14px; line-height:19.6px; }
+  .sec044__text { line-height:25.2px; }
+  .sec044__cards { grid-template-columns:100%; gap:10px; margin-top:23px; }
+  .sec044__link { grid-template-columns:130px 185px; grid-template-columns:130px 1fr; }
+  .sec044__img { aspect-ratio:auto; height:80px; }
+  .sec044__name { padding:15px 15px 15px 20px; line-height:25.2px; letter-spacing:0; }
+  .sec044__btns { margin-top:30px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sec044__link, .sec044__ph, .sec044__arrow, .sec044__btn { transition:none; }
+}
+
+/* ===== SEC-090 ===== */
+/* ここから下がパーツ本体。組み立て時はこの <style> と <section> をそのまま貼る */
+.sec090 {
+  --bg:#ffffff; --text:#313131; --ink:#313131; --tile:#fafafa; --price:#0E7F82; --link:#0E7F82; --line:#E6E9EC;
+  --label:#313131; --label-ink:#ffffff; --new:#6A4FA8; --pink:#6A4FA8; --strike:#79828c;
+  --ph:rgba(34,48,60,.07); --ph-ink:rgba(34,34,34,.4);
+}
+.sec090, .sec090 * { box-sizing:border-box; margin:0; padding:0; }
+.sec090 {
+  background:var(--bg); color:var(--text);
+  font-family: "BIZ UDPGothic", sans-serif; font-size:14px; line-height:1.5; font-weight:400;
+  -webkit-font-smoothing:antialiased;
+}
+.sec090 a { text-decoration:none; color:inherit; }
+.sec090__inner { max-width:880px; margin:0 auto; }
+.sec090__title { margin:0 0 15px; font-size:20px; font-weight:600; line-height:1.333; }
+.sec090__title a { display:block; color:var(--text); transition:.1s linear; }
+.sec090__title a:hover { opacity:.7; }
+.sec090__wrap { container-type:inline-size; }
+.sec090__list { list-style:none; display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:1cqw 1%; }
+.sec090__item { min-width:0; min-height:0; }
+.sec090__link {
+  position:relative; display:block; height:100%; padding:9px; background:var(--tile); color:var(--ink) !important;
+  line-height:1.2; transition:.1s linear;
+}
+.sec090__link:hover { opacity:.7; }
+.sec090__label {
+  display:inline-block; margin-right:5px; padding:4px 8px 3px; border:1px solid var(--label); border-radius:2px;
+  font-size:10px; font-weight:600; line-height:1; letter-spacing:.05em; color:var(--label);
+}
+.sec090__label--fill { background:var(--label); color:var(--label-ink); }
+.sec090__label--red { color:var(--new); }
+.sec090__label--pink { color:var(--pink); }
+.sec090__label--alert { padding:3px 10px; border-color:var(--new); color:var(--new); background:#fff; }
+.sec090__label--dm { padding:3px 8px; }
+.sec090__name { position:relative; z-index:50; padding-top:10px; font-size:18px; font-weight:600; }
+.sec090__price { font-size:12px; color:var(--price); }
+.sec090__sub { padding-right:3px; font-size:20px; font-weight:600; }
+.sec090__val { display:inline-block; padding:0 3px; font-size:42px; font-weight:600; }
+.sec090__old { color:var(--strike); font-size:14px; font-weight:600; }
+.sec090__old s { text-decoration-line:line-through; text-decoration-style:double; }
+.sec090__now { margin-left:10px; white-space:nowrap; }
+.sec090__now--red { color:var(--new); }
+.sec090__now .sec090__n { font-size:20px; font-weight:600; }
+.sec090__text { position:relative; z-index:11; font-size:10px; }
+.sec090__text--sm { font-size:9.6px; }
+.sec090__img {
+  position:absolute; top:0; right:0; bottom:0; z-index:10; width:110px; height:110px; margin:auto;
+  display:grid; place-items:center; background:var(--ph); border-radius:4px;
+  font-size:10px; line-height:1.3; text-align:center; color:var(--ph-ink);
+}
+.sec090__more { margin-top:30px; text-align:right; font-weight:600; }
+.sec090__more a { color:var(--link); }
+
+@media (max-width:480px) {
+  .sec090 { padding:0 8px; }
+  .sec090__list { grid-template-columns:1fr; gap:10px; }
+  .sec090__item { border-bottom:1px solid var(--line); }
+  .sec090__price { display:inline-block; }
+  .sec090__val { font-size:30px; }
+  .sec090__sub { font-size:18px; }
+  .sec090__text { display:inline-block; margin-left:5px; }
+  .sec090__img { width:70px; height:70px; font-size:8px; }
+}
+@media (prefers-reduced-motion:reduce) {
+  .sec090__link, .sec090__title a { transition:none; }
+}
+
+/* ===== SEC-116 ===== */
+/* ここから下がパーツ本体。組み立て時はこの <style> と <section> をそのまま貼る */
+.sec116 {
+  --bg:#ffffff; --text:#313131; --heading:#313131; --sub-heading:#313131; --accent:#0E7F82;
+  --link:#0E7F82; --link-hover:#0B6A6C; --btn:#0E7F82; --btn-hover:#0B6A6C; --btn-ink:#ffffff;
+  --card-line:#E6E9EC; --toggle-bg:#E3F4F4; --ph:#F1FAFA; --ph-ink:#0B6A6C; --badge:#D2DF1E;
+}
+.sec116, .sec116 * { box-sizing:border-box; margin:0; padding:0; }
+.sec116 {
+  background:var(--bg); color:var(--text); text-align:center;
+  font-family: "BIZ UDPGothic", sans-serif; font-size:14px; line-height:1.75; font-weight:400;
+  -webkit-font-smoothing:antialiased;
+}
+.sec116 a { color:var(--link); text-decoration:none; transition:color .2s cubic-bezier(.25,0,.45,1); }
+.sec116 ul, .sec116 ol { list-style:none; }
+
+/* ---- 上段: No.1訴求 ---- */
+.sec116__head { padding-top:40px; }
+.sec116__label { display:flex; justify-content:center; align-items:flex-end; font-size:20px; font-weight:700; line-height:1.5; color:var(--accent); }
+.sec116__badge {
+  flex-shrink:0; display:block; width:80px; height:77.33px; margin-right:16px; padding-top:26px; text-align:center;
+  border-radius:50%; background:radial-gradient(circle at 50% 45%, #fff 0 52%, var(--badge) 53% 100%); font-size:9px; font-weight:400; line-height:1.3; color:var(--ph-ink);
+}
+.sec116__claim { display:inline-block; font-size:24px; line-height:36px; }
+.sec116__claim-note { display:block; font-size:12px; font-weight:400; line-height:18px; text-align:right; color:var(--text); }
+.sec116__what { margin:32px 0 16px; font-size:20px; font-weight:600; line-height:30px; color:var(--sub-heading); }
+.sec116__container { padding:0 16px; }
+.sec116__btn-p { margin-bottom:10px; }
+.sec116 .sec116__btn {
+  display:flex; justify-content:center; align-items:center; max-width:400px; height:40px; margin:0 auto; padding:8px 16px;
+  border-radius:40px; background:var(--btn); color:var(--btn-ink); font-size:16px; line-height:24px; transition:color .2s, background .2s;
+}
+.sec116__more { margin:24px 0 64px; }
+.sec116__more a { font-size:13px; font-weight:500; line-height:1.75; }
+
+/* ---- 下段: 選ばれる理由 ---- */
+.sec116__body { padding:0 16px 24px; }
+.sec116__title { margin-bottom:40px; font-size:30px; font-weight:600; line-height:1.5; color:var(--heading); }
+.sec116__reason { margin-top:20px; }
+.sec116__panels { display:inline-block; }
+.sec116__row { display:flex; flex-wrap:wrap; width:1140px; margin:0 auto 10px; }
+.sec116__col { width:16.6667%; margin-bottom:16px; padding:0 15px; }
+.sec116 .sec116__item {
+  display:block; margin-bottom:10px; padding:8px 4px 16px; background:var(--bg); border:2px solid var(--card-line); border-radius:10px; text-align:center;
+}
+.sec116 .sec116__item:hover { color:var(--link-hover); text-decoration:underline; }
+.sec116__text { display:block; font-size:15px; font-weight:700; color:var(--accent); }
+.sec116__text > span { display:inline-block; vertical-align:middle; line-height:1.5; }
+.sec116__text::after { content:""; display:inline-block; height:60px; vertical-align:middle; }
+.sec116__note { display:inline-block; margin-left:5px; font-size:8px; }
+.sec116__note--sp { display:none; }
+.sec116__icon {
+  display:block; height:120px; margin:0 auto; padding-top:46px; text-align:center;
+  background:var(--ph); border-radius:6px; font-size:10px; font-style:normal; font-weight:400; line-height:1.3; color:var(--ph-ink);
+}
+.sec116__link { display:block; font-size:14px; font-weight:500; }
+.sec116__toggle { max-width:1140px; width:100%; margin:0 auto; background:var(--toggle-bg); border-radius:10px; text-align:left; }
+.sec116__toggle-btn {
+  position:relative; display:block; width:100%; padding:15px 50px 15px 20px; border:0; border-radius:10px; background:var(--toggle-bg);
+  font:inherit; font-size:14px; line-height:1.75; color:var(--text); text-align:left; cursor:pointer;
+}
+.sec116__chev { position:absolute; top:0; bottom:0; right:25px; width:20px; height:20px; margin:auto; transform:rotate(90deg); }
+.sec116__toggle-btn[aria-expanded="true"] .sec116__chev { transform:rotate(-90deg); }
+.sec116__toggle-body { margin-bottom:10px; padding:0 20px 15px; }
+.sec116__toggle-body[hidden] { display:none; }
+.sec116__toggle-body li { position:relative; margin:0 0 16px 36px; padding-left:6px; font-size:12px; line-height:1.75; }
+.sec116__toggle-body li::before { content:"※"; position:absolute; left:-36px; }
+
+@media (max-width:1199px) {
+  .sec116__panels { display:block; }
+  .sec116__row { width:auto; }
+  .sec116__col { width:33.3333%; }
+}
+@media (max-width:767px) {
+  .sec116__head { padding-top:20px; }
+  .sec116__label { font-size:16px; }
+  .sec116__badge { margin-right:8px; }
+  .sec116__what { margin:32px 0 8px; font-size:16px; line-height:24px; }
+  .sec116__more { margin:12px 0 32px; }
+  .sec116__title { margin-bottom:20px; font-size:24px; }
+  .sec116__row { margin:0 0 10px; }
+  .sec116__col { width:50%; padding:0 5px; }
+  .sec116__text { font-size:14px; }
+  .sec116__note--sp { display:inline-block; }
+  .sec116__icon { margin-bottom:6.5px; }
+  .sec116__link { font-size:10px; }
+}
+@media (prefers-reduced-motion:reduce) {
+  .sec116 a, .sec116 .sec116__btn { transition:none; }
+}
+@media (min-width:768px) {
+  .sec116 .sec116__btn:hover { background:var(--btn-hover); color:var(--btn-ink); }
+  .sec116__more a:hover { color:var(--link-hover); text-decoration:underline; }
+}
+
+/* ===== SEC-142 ===== */
+/* ここから下がパーツ本体。組み立て時はこの <style> と <section> をそのまま貼る */
+.sec142 {
+  --bg: #ffffff;
+  --panel: #F1FAFA;
+  --text: #313131;
+  --accent: #0E7F82;
+  --accent-soft: #E3F4F4;
+  --navy: #0B6A6C;
+  --dot: #D2DF1E;
+  --btn-line: #d8dedb;
+  --btn-shadow: rgba(101, 141, 124, .15);
+  --on-accent: #ffffff;
+  --ph: #eef0ef;
+  --ph-fig: rgba(154, 162, 158, .16);
+  --ph-line: #dfe3e1;
+  --ph-ink: #9aa29e;
+  --arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25.239 9.978'%3E%3Crect fill='%231aae6e' y='4.011' width='13.793' height='1.859'/%3E%3Cpolygon fill='%231aae6e' points='25.239 4.793 12.13 9.978 12.13 0 25.239 4.793'/%3E%3C/svg%3E");
+}
+.sec142, .sec142 * { box-sizing: border-box; margin: 0; padding: 0; }
+.sec142 {
+  position: relative; overflow: hidden;
+  padding: 65px 0 90px;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "BIZ UDPGothic", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+.sec142 ul { list-style: none; }
+/* 出てくる動き（JSで .is-shown を付ける） */
+.sec142.is-anim { opacity: 0; transform: translate(0, 50px); transition: 1s ease-out; }
+.sec142.is-anim.is-shown { opacity: 1; transform: translate(0, 0); }
+
+/* 背景の街並み線画（プレースホルダー）とベージュのパネル */
+.sec142__bg {
+  position: absolute; left: -335px; bottom: 20px; width: 1440px; height: 487px;
+  background:
+    linear-gradient(var(--ph-line), var(--ph-line)) 175px 100% / 1265px 2px no-repeat,
+    linear-gradient(var(--ph), var(--ph)) 205px 100% / 80px 160px no-repeat,
+    linear-gradient(var(--ph), var(--ph)) 308px 100% / 58px 92px no-repeat,
+    linear-gradient(var(--ph), var(--ph)) 374px 100% / 30px 110px no-repeat,
+    linear-gradient(var(--ph), var(--ph)) 486px 100% / 12px 240px no-repeat;
+}
+.sec142__bg-label { position: absolute; left: 340px; bottom: 6px; font-size: 11px; line-height: 1.4; color: var(--ph-ink); white-space: nowrap; }
+.sec142::before {
+  content: ""; position: absolute; z-index: 1; top: 0; right: 0; width: 72%; height: 100%;
+  border-radius: 10px 0 0 10px; background: var(--panel);
+}
+.sec142__inner { position: relative; z-index: 2; display: flex; width: 90%; max-width: 1080px; margin: 0 auto; }
+
+/* ステップ */
+.sec142__steps { width: 50%; padding-right: 80px; }
+.sec142__step {
+  position: relative; display: flex; padding: 30px 140px 30px 20px;
+  border: 2px solid var(--accent); border-radius: 15px; background: var(--bg);
+}
+.sec142__step + .sec142__step { margin-top: 34px; }
+.sec142__step + .sec142__step::before {
+  content: ""; position: absolute; top: -61px; left: 38px; display: inline-block; width: 5px; height: 85px;
+  background: radial-gradient(circle at 50% 2.5px, var(--dot) 2.4px, transparent 2.7px) 0 0 / 5px 10px repeat-y;
+}
+.sec142__num {
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0; width: 40px; height: 40px;
+  border-radius: 50%; background: var(--accent); color: var(--on-accent);
+  font-family: Montserrat, "BIZ UDPGothic", sans-serif; font-size: 22px; font-weight: 500;
+}
+.sec142__step-title { width: calc(100% - 55px); margin-left: 15px; font-size: 26px; font-weight: 700; line-height: 1.3; }
+.sec142__fig {
+  position: absolute; right: 15px; bottom: -1px; display: flex; align-items: center; justify-content: center;
+  border-radius: 8px; background: var(--ph-fig); color: var(--ph-ink); font-size: 11px; line-height: 1.3; text-align: center;
+}
+.sec142__step:nth-child(1) .sec142__fig { width: 125px; height: 116px; }
+.sec142__step:nth-child(2) .sec142__fig { width: 116px; height: 119px; }
+.sec142__step:nth-child(3) .sec142__fig,
+.sec142__step:nth-child(4) .sec142__fig { width: 117px; height: 110px; }
+
+/* 右の説明 */
+.sec142__body { width: 50%; padding-top: 20px; }
+.sec142__title { font-size: 28px; font-weight: 700; line-height: 1.3; }
+.sec142__en { margin-top: 5px; color: var(--accent); font-family: Montserrat, "BIZ UDPGothic", sans-serif; font-size: 12px; font-weight: 700; letter-spacing: .1em; }
+.sec142__text { margin-top: 40px; }
+.sec142__box { position: relative; margin: 60px 25px 0; padding: 50px 25px 30px; background: var(--bg); }
+.sec142__box-title {
+  position: absolute; top: -20px; left: -25px; display: inline-block; padding: 12px 20px;
+  border-radius: 21px; background: var(--navy); color: var(--on-accent);
+  font-size: 18px; font-weight: 500; line-height: 1;
+}
+.sec142__box-title::after {
+  content: ""; position: absolute; left: 32px; bottom: -20px; width: 0; height: 0;
+  border-style: solid; border-width: 20px 0 0 20px; border-color: var(--navy) transparent transparent;
+}
+.sec142__check { position: relative; padding-left: 25px; line-height: 1.3; }
+.sec142__check + .sec142__check { margin-top: 15px; }
+.sec142__check::before {
+  content: ""; position: absolute; top: 7px; left: 0; display: inline-block; width: 8px; height: 8px;
+  border-radius: 50%; background: var(--accent);
+}
+.sec142__btns { display: flex; justify-content: space-between; margin-top: 34px; }
+.sec142__btn {
+  position: relative; display: inline-block; width: calc(50% - 15px); padding: 20px 60px 20px 30px;
+  border: 1px solid var(--btn-line); border-radius: 30px; background: var(--bg); box-shadow: 0 4px 0 var(--btn-shadow);
+  color: inherit; font-size: 18px; line-height: 1.3; text-decoration: none;
+  transition: .3s;
+}
+.sec142__btn::before {
+  content: ""; position: absolute; top: calc(50% - 22px); right: 13px; z-index: 1; display: inline-block; width: 44px; height: 44px;
+  border-radius: 50%; background: var(--accent-soft); transform: scale(0); transition: .3s;
+}
+.sec142__btn::after {
+  content: ""; position: absolute; top: calc(50% - 5px); right: 20px; z-index: 2; display: inline-block; width: 26px; height: 10px;
+  background: var(--arrow) 0 0 / 25.239px 9.978px no-repeat;
+}
+.sec142__btn:hover { border-color: var(--accent); box-shadow: 0 4px 0 var(--accent); }
+.sec142__btn:hover::before { transform: scale(1); }
+
+@media (max-width: 900px) {
+  .sec142 { padding: 0 20px 30px; font-size: 14px; }
+  .sec142__bg { left: 0; right: 0; bottom: 0; width: auto; height: auto; aspect-ratio: 750 / 243;
+    background:
+      linear-gradient(var(--ph-line), var(--ph-line)) 0 100% / 100% 1px no-repeat,
+      linear-gradient(var(--ph), var(--ph)) 6% 100% / 9% 60% no-repeat,
+      linear-gradient(var(--ph), var(--ph)) 18% 100% / 7% 35% no-repeat,
+      linear-gradient(var(--ph), var(--ph)) 33% 100% / 2% 85% no-repeat,
+      linear-gradient(var(--ph), var(--ph)) 90% 100% / 3% 95% no-repeat; }
+  .sec142__bg-label { left: 8px; bottom: 4px; font-size: 10px; }
+  .sec142::before { top: 20px; left: 20px; right: auto; width: calc(100% - 40px); height: calc(100% - 50px); border-radius: 5px 0 0 5px; }
+  .sec142__inner { display: block; width: auto; max-width: none; padding: 0 20px 30px; }
+  .sec142__steps { width: auto; padding-right: 0; }
+  .sec142__step { padding: 20px 80px 20px 10px; border-radius: 10px; }
+  .sec142__step + .sec142__step { margin-top: 30px; }
+  .sec142__step + .sec142__step::before { top: -45px; left: 20px; height: 60px;
+    background: radial-gradient(circle at 50% 2.4px, var(--dot) 2.3px, transparent 2.6px) 0 0 / 5px 8.9px repeat-y; }
+  .sec142__num { width: 25px; height: 25px; font-size: 14px; }
+  .sec142__step-title { width: calc(100% - 30px); margin-left: 5px; font-size: 18px; }
+  .sec142__fig { right: 5px; font-size: 9px; }
+  .sec142__step:nth-child(1) .sec142__fig,
+  .sec142__step:nth-child(3) .sec142__fig,
+  .sec142__step:nth-child(4) .sec142__fig { width: 80px; height: 75px; }
+  .sec142__step:nth-child(2) .sec142__fig { width: 80px; height: 82px; }
+  .sec142__body { width: auto; margin-top: 35px; padding-top: 0; }
+  .sec142__head { text-align: center; }
+  .sec142__title { font-size: 19px; }
+  .sec142__en { font-size: 10px; }
+  .sec142__text { margin-top: 20px; }
+  .sec142__box { margin: 40px 10px 0; padding: 40px 20px 25px; }
+  .sec142__box-title { top: -10px; left: -10px; padding: 10px 15px; border-radius: 16px; font-size: 14px; }
+  .sec142__box-title::after { left: 20px; bottom: -13px; border-width: 13px 0 0 14px; }
+  .sec142__check { padding-left: 15px; }
+  .sec142__check::before { width: 6px; height: 6px; }
+  .sec142__btns { display: block; margin-top: 25px; text-align: center; }
+  .sec142__btn { width: calc(100% - 20px); padding: 15px 45px; font-size: 14px; text-align: center; box-shadow: 0 3px 0 var(--btn-shadow); transition: none; }
+  .sec142__btn + .sec142__btn { margin-top: 20px; }
+  .sec142__btn::before { top: calc(50% - 17px); width: 34px; height: 34px; transform: none; transition: none; }
+  .sec142__btn::after { top: calc(50% - 4px); width: 20px; height: 8px; background-size: cover; }
+  .sec142__btn:hover { border-color: var(--btn-line); box-shadow: 0 3px 0 var(--btn-shadow); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sec142.is-anim { opacity: 1; transform: none; transition: none; }
+  .sec142__btn, .sec142__btn::before { transition: none; }
+}
+
+/* ===== SEC-097 ===== */
+/* ここから下がパーツ本体。組み立て時はこの <style> と <section> をそのまま貼る */
+.sec097 {
+  --bg:#F1FAFA; --surface:#ffffff; --title:#313131; --text:#313131; --accent:#0E7F82; --link:#0E7F82; --q:#313131; --badge-ink:#ffffff;
+}
+.sec097, .sec097 *, .sec097 *::before, .sec097 *::after { box-sizing:border-box; margin:0; padding:0; }
+.sec097 {
+  padding:100px 0 50px; background:var(--bg); color:var(--text);
+  font-family: "BIZ UDPGothic", sans-serif; font-size:16px; font-weight:400; line-height:1.6; -webkit-font-smoothing:antialiased;
+}
+.sec097__inner { max-width:980px; margin:0 auto; padding:0 10px; }
+.sec097__title { position:relative; margin-bottom:32px; font-weight:700; font-size:32px; line-height:1.3; color:var(--title); }
+.sec097__title::before { content:""; display:block; width:75px; height:7px; margin-bottom:30px; border-radius:10px; background:var(--accent); }
+
+.sec097__q, .sec097__a { display:flex; align-items:center; }
+.sec097__q::before, .sec097__a::before {
+  display:block; flex-shrink:0; width:2em; height:2em; margin-right:15px; border-radius:100vh;
+  color:var(--badge-ink); font-family: "BIZ UDPGothic", sans-serif; font-size:16px; font-weight:700; line-height:2em; text-align:center;
+}
+.sec097__q {
+  position:relative; margin-bottom:10px; padding:20px; background:var(--surface); border-radius:20px;
+  font-weight:700; cursor:pointer;
+}
+.sec097__q::before { content:"Q"; background:var(--q); }
+.sec097__q::after {
+  content:""; position:absolute; top:50%; right:20px; width:18px; height:18px; transform:translateY(-50%);
+  background:
+    linear-gradient(var(--q), var(--q)) center / 18px 2px no-repeat,
+    linear-gradient(var(--q), var(--q)) center / 2px 18px no-repeat;
+  transition:.2s ease-out;
+}
+.sec097__q.is-open::after { background:linear-gradient(var(--q), var(--q)) center / 18px 2px no-repeat; }
+.sec097__q:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+.sec097__q-text { width:calc(100% - 2em - 47px); }
+
+.sec097__a { display:none; padding:10px 20px 20px; margin-bottom:10px; }
+.sec097__a::before { content:"A"; background:var(--accent); }
+.sec097__a.is-open { display:block; }
+.sec097__a-text { width:calc(100% - 2em - 15px); margin:-2em 0 0 auto; }
+.sec097__a-text p + p { margin-top:1.5em; }
+.sec097__a-text a { color:var(--link); text-decoration:underline; }
+
+@media (max-width:768px) {
+  .sec097__inner { max-width:none; padding:0 13px; }
+  .sec097__title { margin-bottom:0; padding-bottom:30px; font-size:22px; }
+  .sec097__title::before { width:60px; height:5px; margin-bottom:15px; }
+  .sec097__q, .sec097__a { align-items:flex-start; }
+}
+
+/* ===== SEC-009 ===== */
+/* ここから下がパーツ本体。組み立て時はこの <style> と <section> をそのまま貼る */
+.sec009 {
+  --bg:#ffffff; --text:#313131; --icon:#313131; --accent:#0E7F82; --thumb:#f9f8f6;
+  --btn:#F1FAFA; --btn-hover:#E3F4F4; --dark:#313131; --dark-ink:#ffffff;
+  --ph-a:#E3F4F4; --ph-b:#BFE4E5; --ph-ink:#0B6A6C;
+}
+.sec009, .sec009 * { box-sizing:border-box; margin:0; padding:0; }
+.sec009 {
+  display:flex; justify-content:center; padding:120px 0; background:var(--bg); color:var(--text);
+  font-family: "BIZ UDPGothic", sans-serif; font-weight:500; font-size:16px; line-height:1;
+  -webkit-font-smoothing:antialiased;
+}
+.sec009 a { color:inherit; text-decoration:none; }
+.sec009__inner { width:1200px; max-width:calc(100% - 48px); display:flex; flex-direction:column; align-items:center; gap:80px; }
+.sec009__head { width:100%; display:flex; flex-direction:column; gap:16px; }
+.sec009__titles { display:flex; flex-direction:column; gap:8px; }
+.sec009__en { font-family: Montserrat, "BIZ UDPGothic", sans-serif; font-weight:700; font-size:16px; line-height:22.4px; letter-spacing:.8px; color:var(--accent); }
+.sec009__title { font-weight:700; font-size:40px; line-height:68px; letter-spacing:2px; }
+.sec009__lead { font-size:16px; line-height:32px; letter-spacing:.8px; }
+
+.sec009__list { list-style:none; width:100%; display:flex; gap:40px 32px; }
+.sec009__item { flex:1 1 0; min-width:0; display:flex; flex-direction:column; align-items:flex-start; gap:24px; }
+.sec009__thumb { position:relative; display:block; width:100%; background:var(--thumb); }
+.sec009__ph {
+  display:flex; align-items:center; justify-content:center; width:100%; aspect-ratio:1840/1014; border-radius:8px;
+  background:linear-gradient(135deg, var(--ph-a) 0%, var(--ph-b) 100%);
+  font-size:12px; letter-spacing:.04em; color:var(--ph-ink);
+}
+.sec009__item:nth-child(2) .sec009__ph { aspect-ratio:1839/1014; }
+.sec009__item:nth-child(3) .sec009__ph { aspect-ratio:1825/1013; }
+.sec009__veil {
+  position:absolute; inset:0; background:var(--dark); opacity:0;
+  transition:opacity .3s cubic-bezier(.4,.4,0,1);
+}
+.sec009__thumb:hover .sec009__veil { opacity:.4; transition:opacity .6s cubic-bezier(.19,1,.22,1); }
+.sec009__body { flex:1; width:100%; display:flex; flex-direction:column; justify-content:space-between; align-items:center; gap:24px; }
+.sec009__text { width:100%; display:flex; flex-direction:column; gap:16px; }
+.sec009__name { font-weight:700; font-size:18px; line-height:32.4px; letter-spacing:.9px; }
+.sec009__desc { font-size:14px; line-height:28px; letter-spacing:.7px; }
+.sec009__dl {
+  display:flex; align-items:center; justify-content:center; gap:8px; padding:16px 24px;
+  background:var(--btn); border-radius:8px; transition:background-color .3s cubic-bezier(.4,.4,0,1);
+}
+.sec009__dl:hover { background:var(--btn-hover); }
+.sec009__dl-icon { width:16px; height:16px; color:var(--icon); flex:none; }
+.sec009__dl-label { font-weight:700; font-size:14px; line-height:25.2px; letter-spacing:.7px; white-space:nowrap; }
+.sec009__dl-label--sp { display:none; }
+
+.sec009__more {
+  position:relative; overflow:hidden; display:flex; align-items:flex-end; justify-content:center;
+  padding:24px 40px; background:var(--dark); border-radius:10px;
+}
+.sec009__more::before {
+  content:""; position:absolute; left:0; top:0; bottom:0; width:0; background:var(--dark-ink); opacity:.15;
+  transition:width .3s cubic-bezier(.4,.4,0,1);
+}
+.sec009__more:hover::before { width:100%; }
+.sec009__more-in { position:relative; display:flex; align-items:center; justify-content:center; gap:16px; }
+.sec009__more-label { font-weight:700; font-size:16px; line-height:28.8px; letter-spacing:.8px; color:var(--dark-ink); white-space:nowrap; }
+.sec009__circle { position:relative; overflow:hidden; width:24px; height:24px; border:1px solid var(--dark-ink); border-radius:50%; flex:none; }
+.sec009__arrow {
+  position:absolute; top:0; left:0; width:22px; height:22px; display:flex; align-items:center; justify-content:center; color:var(--dark-ink);
+  transition:transform .4s cubic-bezier(.4,.4,0,1) .1s;
+}
+.sec009__arrow svg { width:16px; height:16px; }
+.sec009__arrow--in { transform:translateX(-40px); }
+.sec009__more:hover .sec009__arrow { transform:translateX(40px); }
+.sec009__more:hover .sec009__arrow--in { transform:translateX(0); }
+
+@media (max-width:767px) {
+  .sec009 { padding:80px 0; }
+  .sec009__head { gap:24px; }
+  .sec009__en { font-size:14px; line-height:19.6px; letter-spacing:.7px; }
+  .sec009__title { font-size:24px; line-height:40.8px; letter-spacing:1.2px; }
+  .sec009__lead { font-size:15px; line-height:30px; letter-spacing:.75px; }
+  .sec009__list { flex-direction:column; gap:48px 32px; }
+  .sec009__item { flex:none; align-items:center; }
+  .sec009__ph { aspect-ratio:600/330; }
+  .sec009__item:nth-child(2) .sec009__ph { aspect-ratio:600/330; }
+  .sec009__item:nth-child(3) .sec009__ph { aspect-ratio:600/333; }
+  .sec009__text { gap:8px; }
+  .sec009__name { font-size:16px; line-height:28.8px; letter-spacing:.8px; }
+  .sec009__dl-label--pc { display:none; }
+  .sec009__dl-label--sp { display:block; font-weight:400; letter-spacing:1.4px; }
+  .sec009__more-in { gap:8px; }
+  .sec009__more::before { display:none; }
+}
+@media (prefers-reduced-motion:reduce) {
+  .sec009__veil, .sec009__dl, .sec009__more::before, .sec009__arrow { transition:none; }
+}
+
+/* ===== SEC-135 ===== */
+/* ここから下がパーツ本体。組み立て時はこの <style> と <section> をそのまま貼る */
+.sec135 {
+  --bg:#D2DF1E; --surface:#ffffff; --text:#313131; --accent:#0E7F82; --accent-ink:#0B6A6C; --badge:#6A4FA8; --badge-ink:#ffffff; --line:#f0f1f5;
+  --ph-a:#F1FAFA; --ph-b:#E3F4F4; --ph-c:#F4F7D0; --ph-ink:rgba(32,34,38,.45);
+}
+.sec135, .sec135 * { box-sizing:border-box; margin:0; padding:0; }
+.sec135 {
+  padding:80px 0; background:var(--bg); color:var(--text); text-align:center;
+  font-family: "BIZ UDPGothic", sans-serif; font-size:16px; line-height:1.8; font-weight:500;
+  font-feature-settings:"palt"; -webkit-font-smoothing:antialiased;
+}
+.sec135 a { text-decoration:none; }
+.sec135 ul { list-style:none; }
+.sec135__inner { position:relative; max-width:1280px; margin:0 auto; padding:0 60px; }
+.sec135__title {
+  margin-bottom:48px; font-family: "BIZ UDPGothic", sans-serif; font-size:40px; line-height:1.2; font-weight:800; letter-spacing:.1em;
+}
+.sec135__br { display:none; }
+.sec135__list {
+  display:flex; justify-content:center; max-width:962px; margin:0 auto; padding:40px;
+  background:var(--surface); border-radius:8px 8px 0 0;
+}
+.sec135__item { flex:1 1 0%; max-width:427px; margin-right:28px; display:flex; flex-direction:column; align-items:center; }
+.sec135__item:last-child { margin-right:0; }
+.sec135__ph {
+  position:relative; width:100%; aspect-ratio:854/570; display:flex; align-items:flex-end; justify-content:center; padding-bottom:10px;
+  background:
+    linear-gradient(var(--ph-b),var(--ph-b)) 50% 40% / 66% 66% no-repeat,
+    linear-gradient(#ffffff,#ffffff);
+  font-size:12px; line-height:1.4; color:var(--ph-ink); letter-spacing:.04em;
+}
+.sec135__ph--doc { background:
+    linear-gradient(var(--ph-c),var(--ph-c)) 18% 22% / 52% 62% no-repeat,
+    linear-gradient(var(--ph-a),var(--ph-a)) 34% 36% / 58% 56% no-repeat,
+    linear-gradient(#ffffff,#ffffff); }
+.sec135__btn {
+  position:relative; display:flex; flex-direction:column; align-items:center; justify-content:center;
+  width:100%; max-width:357px; height:96px; margin:16px 0; padding:0 8px; border-radius:12px;
+  font-size:24px; line-height:1.4; font-weight:700; letter-spacing:.1em; white-space:nowrap;
+  box-shadow:0 2px 2px 0 rgba(0,0,0,.14), 0 6px 10px -2px rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.2);
+}
+.sec135__btn small { display:block; margin-bottom:4px; font-size:16px; font-weight:500; line-height:1.2; letter-spacing:0; }
+.sec135__btn--line { background:var(--surface); border:2px solid var(--accent); color:var(--accent-ink); }
+.sec135__btn--fill { background:var(--accent); border:2px solid var(--accent); color:var(--surface); }
+.sec135__btn:hover { background:var(--bg); color:var(--accent-ink); }
+.sec135__badge {
+  position:absolute; top:-16px; right:-16px; width:56px; height:56px; border-radius:50%;
+  background:var(--badge); color:var(--badge-ink); font-size:14px; line-height:56px; font-weight:700; letter-spacing:.1em; text-align:center;
+}
+.sec135__others {
+  max-width:962px; margin:0 auto; padding:40px; background:var(--surface);
+  border-top:1px solid var(--line); border-radius:0 0 8px 8px;
+}
+.sec135__sub { font-size:24px; line-height:1.4; font-weight:700; letter-spacing:.0543em; }
+.sec135__tel {
+  display:flex; justify-content:center; align-items:center; margin-top:16px;
+  font-family: "BIZ UDPGothic", sans-serif; font-size:56px; line-height:64px; font-weight:700; color:var(--accent-ink);
+}
+.sec135__tel-icon { display:block; flex:none; width:64px; height:64px; margin-right:16px; }
+.sec135__hours {
+  display:block; padding:8px 0 8px 16px; font-family: "BIZ UDPGothic", sans-serif; font-size:16px; line-height:24px; font-weight:500;
+  text-align:left; color:var(--text); white-space:nowrap;
+}
+.sec135__hours-br { display:block; }
+.sec135__contact { display:inline-block; margin-top:24px; }
+.sec135__contact a {
+  display:flex; align-items:center; justify-content:center; border-bottom:1px solid var(--accent-ink);
+  font-size:16px; line-height:24px; font-weight:700; letter-spacing:.0543em; color:var(--accent-ink); white-space:nowrap;
+}
+.sec135__contact a:hover { border-color:var(--bg); }
+.sec135__mail { display:block; width:24px; height:24px; margin-right:8px; }
+
+@media (max-width: 768px) {
+  .sec135 { padding:60px 0; }
+  .sec135__inner { padding:0 15px; }
+  .sec135__title { margin-bottom:32px; font-size:24px; }
+  .sec135__br { display:inline; }
+  .sec135__list { flex-direction:column; align-items:center; padding:24px; }
+  .sec135__item { width:100%; margin:0; }
+  .sec135__ph { font-size:10px; padding-bottom:6px; }
+  .sec135__btn { height:80px; font-size:20px; }
+  .sec135__btn small { font-size:12px; }
+  .sec135__others { padding:24px; }
+  .sec135__sub { font-size:18px; }
+  .sec135__tel { flex-wrap:wrap; font-size:24px; line-height:32px; }
+  .sec135__tel-icon { width:32px; height:32px; margin-right:8px; }
+  .sec135__hours { padding:4px; font-size:12px; line-height:12px; }
+  .sec135__hours-br { display:inline; }
+  .sec135__hours-br::before { content:" "; }
+}
+
+/* ===== SEC-161 ===== */
+/* ここから下がパーツ本体。組み立て時はこの <style> と <div class="sec161"> をそのまま貼る */
+.sec161 {
+  --bg: #ffffff;
+  --text: #1e1e1e;
+  --navy: #0B6A6C;
+  --white: #ffffff;
+  --dark: #1e1e1e;
+  --sns-bar: #000000;
+  --photo-a: #14A3A6;
+  --photo-b: #0B6A6C;
+  --ph-dark: rgba(255, 255, 255, .45);
+  --ph-light: #9aa8c4;
+}
+.sec161, .sec161 *, .sec161 ::before, .sec161 ::after { box-sizing: border-box; margin: 0; padding: 0; }
+.sec161 {
+  background: var(--bg); color: var(--text);
+  font-family: "BIZ UDPGothic", sans-serif;
+  font-size: 14.4px; font-weight: 400; line-height: 27.2px; letter-spacing: 1.6px;
+}
+.sec161 a { color: inherit; text-decoration: none; }
+.sec161 ul { list-style: none; }
+.sec161 address { font-style: normal; }
+.sec161 button { border: 0; background: none; font: inherit; color: inherit; cursor: pointer; }
+
+/* CTA */
+.sec161__contact { padding-bottom: 130px; }
+.sec161__contactInner { margin: 0 30px; }
+.sec161__logo { width: 195px; margin: 0 auto; }
+.sec161__logo span {
+  display: flex; align-items: center; justify-content: center;
+  aspect-ratio: 306 / 57; border: 1px dashed var(--ph-light); color: var(--ph-light);
+  font-size: 11px; font-weight: 500; line-height: 1; letter-spacing: .05em;
+}
+.sec161__text { margin: 30px 0; font-size: 17.6px; font-weight: 500; line-height: 32px; letter-spacing: 2.08px; text-align: center; }
+.sec161__brSp { display: block; }
+.sec161__btn {
+  position: relative; display: block; width: 100%; margin: 0 auto;
+  border: 3px solid var(--navy); background: var(--navy); color: var(--white); text-align: left;
+}
+.sec161__btn::before { content: ""; position: absolute; top: 0; left: 0; z-index: 1; display: block; width: 100%; height: 100%; background: var(--navy); }
+.sec161__btnInner {
+  position: relative; z-index: 2; display: flex; align-items: center;
+  padding: 16px 45px 16px 23px; font-size: 13.6px; font-weight: 700; line-height: 19.2px;
+}
+.sec161__btnText { display: block; color: var(--white); }
+.sec161__btn svg { position: absolute; top: 50%; right: 20px; z-index: 5; display: block; width: 22px; height: 10px; margin-top: -5px; }
+.sec161__btn svg path { fill: var(--white); }
+
+/* フェードイン（AOS fade-up 相当） */
+.sec161 [data-sec161-aos] { opacity: 0; transform: translate3d(0, 50px, 0); transition: opacity 1s ease, transform 1s ease; }
+.sec161 [data-sec161-aos].is-in { opacity: 1; transform: none; }
+
+/* ページトップのタブ */
+.sec161__pagetop { position: relative; }
+.sec161__pagetop a {
+  position: absolute; top: -30px; left: 50%; z-index: 5; display: block;
+  width: 70px; height: 35px; margin-left: -35px; overflow: hidden;
+  font-size: 0; line-height: 0;
+}
+.sec161__pagetop a::before {
+  content: ""; position: absolute; top: 0; left: 50%; display: block;
+  width: 54px; height: 54px; border-radius: 4px; background: var(--dark);
+  transform: rotate(45deg); transform-origin: 0 0;
+}
+.sec161__pagetop svg { position: absolute; top: 12px; left: 50%; display: block; width: 13px; height: 22px; margin-left: -7px; transition: top .3s ease; }
+
+/* 関連ロゴのスライダー */
+.sec161__slider { background: var(--dark); color: var(--white); }
+.sec161__sliderContents { position: relative; padding: 25px 0 15px; }
+.sec161__viewport { position: relative; overflow: hidden; height: 63px; touch-action: pan-y; cursor: grab; }
+.sec161__track { display: flex; width: max-content; will-change: transform; }
+.sec161__track.is-moving { transition: transform .3s ease; }
+.sec161__item { flex: none; margin: 0 15px; }
+.sec161__item a { display: flex; align-items: center; height: 57px; }
+.sec161__item span {
+  display: flex; align-items: center; justify-content: center; flex: none;
+  border: 1px dashed var(--ph-dark); color: var(--ph-dark);
+  font-size: 9px; line-height: 1; letter-spacing: .05em; white-space: nowrap;
+}
+.sec161__arrow { display: none; }
+
+/* フッター本体 */
+.sec161__main { position: relative; color: var(--white); font-weight: 500; }
+.sec161__sns { padding: 13px 15px; background: var(--sns-bar); }
+.sec161__sns ul { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; line-height: 1; }
+.sec161__sns li { margin-right: 45px; }
+.sec161__sns li:last-child { margin-right: 0; }
+.sec161__sns svg { display: block; fill: var(--white); }
+.sec161__contents {
+  position: relative; padding: 30px 15px 20px;
+  background: linear-gradient(160deg, var(--photo-a) 0%, #0E7F82 45%, var(--photo-b) 100%);
+}
+.sec161__photoLabel { position: absolute; right: 12px; top: 10px; font-size: 10px; line-height: 1; letter-spacing: .05em; color: rgba(255, 255, 255, .6); }
+.sec161__company { font-size: 14.08px; line-height: 1; }
+.sec161__address { margin-top: 15px; font-size: 10.88px; line-height: 19.2px; }
+.sec161__footnav { margin-top: 35px; font-size: 11.2px; line-height: 1; }
+.sec161__footnav ul { display: flex; flex-wrap: wrap; align-items: center; }
+.sec161__footnav li { position: relative; margin-right: 20px; padding-right: 25px; }
+.sec161__footnav li::after { content: "/"; position: absolute; top: 0; right: 0; }
+.sec161__footnav li:last-child { margin-right: 0; padding-right: 0; }
+.sec161__footnav li:last-child::after { display: none; }
+.sec161__footnav a { position: relative; padding-bottom: 2px; }
+.sec161__footnav a::before { content: ""; position: absolute; bottom: 0; left: 0; display: block; width: 100%; height: 1px; background: var(--white); }
+.sec161__copyright { display: block; margin-top: 15px; font-family: Montserrat, "BIZ UDPGothic", sans-serif; font-size: 9.6px; font-weight: 400; line-height: 1; }
+
+@media (max-width: 767px) {
+  .sec161__footnav li { margin-right: 12px; padding-right: 17px; }
+}
+@media only screen and (min-width: 1100px) {
+  .sec161 { font-size: 16px; line-height: 28.8px; }
+  .sec161__contact { padding-bottom: 145px; }
+  .sec161__contactInner { max-width: 1100px; margin: 0 auto; }
+  .sec161__logo { width: 305px; }
+  .sec161__text { font-size: 22.4px; line-height: 36.8px; }
+  .sec161__brSp { display: none; }
+  .sec161__btn { width: 610px; background: var(--white); transition: color .3s ease; }
+  .sec161__btn::before { transition: height .3s ease; }
+  .sec161__btnInner { padding: 28px 85px 25px 55px; font-size: 19.2px; line-height: 28.8px; letter-spacing: 2.4px; }
+  .sec161__btnText { transition: color .3s ease; }
+  .sec161__btn svg { width: 39px; height: 12px; right: 45px; margin-top: -5px; transition: right .3s ease; }
+  .sec161__btn svg path { transition: fill .3s ease; }
+  .sec161__btn:hover { color: var(--navy); }
+  .sec161__btn:hover::before { height: 0; }
+  .sec161__btn:hover .sec161__btnText { color: var(--navy); }
+  .sec161__btn:hover svg { right: 40px; }
+  .sec161__btn:hover svg path { fill: var(--navy); }
+
+  .sec161__pagetop a { left: auto; right: 50%; margin-left: 0; margin-right: -550px; }
+  .sec161__pagetop a:hover svg { top: 9px; }
+
+  .sec161__sliderInner { max-width: 1100px; margin: 0 auto; }
+  .sec161__sliderContents { padding: 30px 40px; }
+  .sec161__viewport { height: 64px; }
+  .sec161__item { margin: 0 16px; }
+  .sec161__item a { transition: opacity .3s ease; }
+  .sec161__item a:hover { opacity: .4; }
+  .sec161 .sec161__arrow {
+    position: absolute; top: 50%; display: block; width: 18px; height: 18px; margin-top: -9px;
+    background: var(--white); font-size: 0; line-height: 0; transition: opacity .3s ease;
+  }
+  .sec161__arrow svg { position: absolute; top: 50%; left: 50%; display: block; width: 6px; height: 10px; transition: margin-left .3s ease; }
+  .sec161__arrow--prev { left: 0; }
+  .sec161__arrow--prev svg { margin: -5px 0 0 -4px; transform: rotate(180deg); }
+  .sec161__arrow--prev:hover svg { margin-left: -6px; }
+  .sec161__arrow--next { right: 0; }
+  .sec161__arrow--next svg { margin: -5px 0 0 -3px; }
+  .sec161__arrow--next:hover svg { margin-left: -1px; }
+
+  .sec161__main {
+    padding: 65px 0 30px;
+    background: linear-gradient(160deg, var(--photo-a) 0%, #0E7F82 45%, var(--photo-b) 100%);
+  }
+  .sec161__mainInner { max-width: 1100px; margin: 0 auto; }
+  .sec161__sns { position: absolute; bottom: 63px; right: 50%; margin-right: -550px; padding: 0; background: none; z-index: 1; }
+  .sec161__sns ul { justify-content: flex-end; }
+  .sec161__sns li { margin-right: 22px; }
+  .sec161__sns a { display: block; transition: all .3s ease; }
+  .sec161__sns a:hover { opacity: .5; }
+  .sec161__contents { padding: 0; background: none; position: static; }
+  .sec161__photoLabel { top: 12px; right: 16px; }
+  .sec161__contentsInner { display: table; width: 100%; }
+  .sec161__info { display: table-cell; width: 50%; vertical-align: top; }
+  .sec161__company { font-size: 16px; }
+  .sec161__address { margin-top: 20px; }
+  .sec161__footnav { display: table-cell; margin: 0; font-size: 10.4px; text-align: right; vertical-align: bottom; }
+  .sec161__footnav ul { justify-content: flex-end; }
+  .sec161__footnav li { margin-right: 15px; padding-right: 20px; }
+  .sec161__footnav a::before { transition: all .3s ease; }
+  .sec161__footnav a:hover::before { width: 0; left: auto; right: 0; }
+  .sec161__copyright { margin-top: -12px; font-size: 12.8px; letter-spacing: 2.08px; text-align: center; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sec161 [data-sec161-aos] { opacity: 1; transform: none; transition: none; }
+  .sec161__track.is-moving, .sec161__btn, .sec161__btn::before, .sec161__btnText, .sec161__btn svg, .sec161__btn svg path,
+  .sec161__pagetop svg, .sec161__item a, .sec161__arrow, .sec161__arrow svg, .sec161__sns a, .sec161__footnav a::before { transition: none; }
+}
+
+/* ===== 案件の中身をスロットに収める（2026-10-11） ===== */
+.rd-pict { width: 48px; height: 48px; fill: currentColor; color: #0E7F82; display: block; }
+.sec121__logo-ph { width: auto; height: 30px; gap: 6px; border: 0; padding: 0; color: #313131; font-size: 13px; font-weight: 700; line-height: 1.15; letter-spacing: 0; text-align: left; }
+.sec121__logo-ph .rd-pict { width: 28px; height: 28px; }
+@media (max-width: 767px) { .sec121__logo-ph { width: auto; height: 28px; font-size: 12px; } }
+.sec163__kvImg { overflow: hidden; border-radius: 0; }
+.rd-kv { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.rd-ill { display: grid; place-items: center; width: 132px; height: 132px; border-radius: 50%; background: var(--ill-fill); }
+.rd-ill .rd-pict { width: 64px; height: 64px; color: var(--ill-line); }
+@media (max-width: 767px) { .rd-ill { width: 88px; height: 88px; } .rd-ill .rd-pict { width: 44px; height: 44px; } }
+.sec044__ph .rd-pict { width: 64px; height: 64px; color: #0B6A6C; }
+@media (max-width: 767px) { .sec044__ph .rd-pict { width: 40px; height: 40px; } }
+.sec090__img { overflow: hidden; background: #fff; border: 1px solid #E6E9EC; }
+.sec090__img img { width: 100%; height: 100%; object-fit: contain; }
+.sec090__img .rd-pict { width: 44px; height: 44px; color: #0E7F82; }
+.sec116__badge { padding-top: 0; display: grid; place-items: center; }
+.sec116__badge .rd-pict { width: 40px; height: 40px; color: #313131; }
+.sec116__icon { padding-top: 0; display: grid; place-items: center; }
+.sec116__icon .rd-pict { width: 56px; height: 56px; }
+.sec142__fig .rd-pict { width: 56px; height: 56px; }
+@media (max-width: 767px) { .sec142__fig .rd-pict { width: 40px; height: 40px; } }
+.rd-cover { padding: 0 12%; font-size: 22px; font-weight: 700; line-height: 1.5; color: #0B6A6C; text-align: center; }
+@media (max-width: 767px) { .rd-cover { font-size: 16px; } }
+.sec135__ph { align-items: center; padding-bottom: 0; }
+.sec135__ph .rd-pict { width: 88px; height: 88px; position: relative; }
+.rd-logo { border: 0 !important; color: #fff !important; font-size: 20px !important; font-weight: 700 !important; letter-spacing: .04em !important; }
+.sec161__item .rd-link { border: 0; padding: 0 4px; color: #313131; font-size: 14px; font-weight: 700; }
+.rd-sns { color: #fff; font-size: 13px; text-decoration: none; }
+.sec161__item .rd-link { color: #fff; }
+.rd-logo { color: #313131 !important; }
+.rd-cover { text-wrap: balance; }
+.sec142__bg { display: none; }
+.sec142 { --ph-fig: #E3F4F4; --arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25.239 9.978'%3E%3Crect fill='%230E7F82' y='4.011' width='13.793' height='1.859'/%3E%3Cpolygon fill='%230E7F82' points='14.722 0 25.239 4.989 14.722 9.978 14.722 0'/%3E%3C/svg%3E"); }
+.sec082__text { text-wrap: balance; }
+</style>
+</head>
+<body>
+<!-- ===== SEC-077 ===== -->
+<div class="sec077" data-part="SEC-077" role="region" aria-label="補助金・税制のお知らせ">
+  <button class="sec077__close" type="button" aria-label="お知らせを閉じる"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+  <a class="sec077__link" href="/subsidy/">
+    <span class="sec077__art">
+      <span class="sec077__dot sec077__dot--l"></span>
+      <span class="sec077__bar sec077__bar--l"></span>
+      <span class="sec077__panel"></span>
+      <span class="sec077__dot sec077__dot--r"></span>
+      <span class="sec077__bar sec077__bar--r"></span>
+      <span class="sec077__badge"><span class="sec077__badge-s">公募中</span><span class="sec077__badge-l">締切<br class="sec077__br">間近も!!</span></span>
+      <span class="sec077__lead"><i>\\</i>要確認!<i>//</i></span>
+      <span class="sec077__label"><span class="sec077__label-a">補助金・税制</span><span class="sec077__label-b">補助<b>½</b>以下</span></span>
+      <span class="sec077__title"><span>全</span><b>10</b><em>制度を比較</em></span>
+      <span class="sec077__note">締切・上限額は<br>2026年10月10日時点</span>
+    </span>
+  </a>
+</div>
+
+<!-- ===== SEC-121 ===== -->
+<header class="sec121" data-part="SEC-121">
+  <div class="sec121__inner">
+    <a class="sec121__logo" href="/redesign/" aria-label="トップへ"><span class="sec121__logo-ph"><svg class="rd-pict" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons.svg#i-diag"></use></svg><span>レーザー溶接機<br>比較・選定</span></span></a>
+    <button class="sec121__burger" type="button" aria-expanded="false" aria-label="メニュー"><span></span></button>
+    <div class="sec121__menu">
+      <label class="sec121__search"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="5"/><path d="m11 11 3.5 3.5"/></svg><input type="search" placeholder="機種名・メーカー名で探す" aria-label="機種名・メーカー名で探す" data-rd-search></label>
+      <ul class="sec121__tabs">
+        <li>
+          <button class="sec121__tab" type="button" aria-expanded="false"><span class="sec121__tab-label">機種を探す</span><svg viewBox="0 0 18 18" aria-hidden="true"><path d="M3.5 6.5 9 12l5.5-5.5"/></svg></button>
+          <div class="sec121__drop sec121__drop--plain">
+            <div class="sec121__drop-box">
+              <div class="sec121__body">
+                <ul class="sec121__grid">
+                  <li><p class="sec121__col-title">素材</p><a class="sec121__card" href="/lineup/?material=ステンレス"><span class="sec121__card-title">鉄・ステンレス</span><span class="sec121__card-text">対応を公表している機種がもっとも多い素材です。</span></a></li>
+                  <li><p class="sec121__col-title">素材</p><a class="sec121__card" href="/lineup/?material=アルミ"><span class="sec121__card-title">アルミ・銅</span><span class="sec121__card-text">反射率の高い素材。対応を公表している機種から探せます。</span></a></li>
+                  <li><p class="sec121__col-title">素材</p><a class="sec121__card" href="/lineup/?material=チタン"><span class="sec121__card-title">チタン</span><span class="sec121__card-text">対応を公表している機種は限られます。</span></a></li>
+                  <li class="sec121__divider" aria-hidden="true"></li>
+                  <li><p class="sec121__col-title">板厚</p><a class="sec121__card" href="/lineup/?thickness=0.5〜3mm"><span class="sec121__card-title">薄板（0.5〜3mm）</span><span class="sec121__card-text">板金・筐体など、ひずみを抑えたい溶接に。</span></a></li>
+                  <li><p class="sec121__col-title">板厚</p><a class="sec121__card" href="/lineup/?thickness=3〜6mm"><span class="sec121__card-title">中厚（3〜6mm）</span><span class="sec121__card-text">TIG から置き換えたい中厚板に。</span></a></li>
+                  <li><p class="sec121__col-title">板厚</p><a class="sec121__card" href="/lineup/?thickness=6mm以上"><span class="sec121__card-title">厚物（6mm以上）</span><span class="sec121__card-text">6mm以上の対応を公表している機種です。</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <button class="sec121__tab" type="button" aria-expanded="false"><span class="sec121__tab-label">条件から選ぶ</span><svg viewBox="0 0 18 18" aria-hidden="true"><path d="M3.5 6.5 9 12l5.5-5.5"/></svg></button>
+          <div class="sec121__drop">
+            <div class="sec121__drop-box">
+              <div class="sec121__side">
+                <ul role="tablist">
+                  <li><button type="button" role="tab" aria-selected="true" data-tab="0">使う人・場所・予算<svg viewBox="0 0 18 18" aria-hidden="true"><path d="M6.5 3.5 12 9l-5.5 5.5"/></svg></button></li>
+                  <li><button type="button" role="tab" aria-selected="false" data-tab="1">方式<svg viewBox="0 0 18 18" aria-hidden="true"><path d="M6.5 3.5 12 9l-5.5 5.5"/></svg></button></li>
+                  <li><button type="button" role="tab" aria-selected="false" data-tab="2">このサイトについて<svg viewBox="0 0 18 18" aria-hidden="true"><path d="M6.5 3.5 12 9l-5.5 5.5"/></svg></button></li>
+                </ul>
+              </div>
+              <div class="sec121__body">
+                <div class="sec121__panel" role="tabpanel">
+                  <ul class="sec121__grid">
+                    <li>
+                      <p class="sec121__col-title">使う人</p>
+                      <a class="sec121__card" href="/lineup/?skill=未経験可"><span class="sec121__card-title">未経験の新人が使う</span><span class="sec121__card-text">メーカーが「初心者でも扱える」と公表している機種です。</span></a>
+                      <a class="sec121__card" href="/diagnosis/"><span class="sec121__card-title">5つの質問で絞り込む</span><span class="sec121__card-text">使う人・素材・板厚・場所・予算から候補を5台に。</span></a>
+                    </li>
+                    <li>
+                      <p class="sec121__col-title">使う場所</p>
+                      <a class="sec121__card" href="/lineup/?support=国内で修理・サポート"><span class="sec121__card-title">国内で修理・サポート</span><span class="sec121__card-text">国内での修理・保守を公式に記載している機種です。</span></a>
+                      <a class="sec121__card" href="/lineup/?cat=line"><span class="sec121__card-title">ライン・ロボットに組み込む</span><span class="sec121__card-text">自動化への対応を公表している機種です。</span></a>
+                    </li>
+                    <li>
+                      <p class="sec121__col-title">予算</p>
+                      <a class="sec121__card" href="/lineup/?price=100〜200万円"><span class="sec121__card-title">100〜200万円</span><span class="sec121__card-text">価格を公開している機種から探せます。</span></a>
+                      <a class="sec121__card" href="/lineup/?price=200〜400万円"><span class="sec121__card-title">200〜400万円</span><span class="sec121__card-text">価格帯は公開価格から当てはめています。</span></a>
+                    </li>
+                    <li class="sec121__divider" aria-hidden="true"></li>
+                    <li>
+                      <p class="sec121__col-title">補助金・税制</p>
+                      <a class="sec121__card" href="/subsidy/"><span class="sec121__card-title">補助金・助成金の一覧</span><span class="sec121__card-text">省力化投資補助金など、締切と上限額つき。</span></a>
+                      <a class="sec121__card" href="/subsidy/#kyoka"><span class="sec121__card-title">即時償却・税額控除</span><span class="sec121__card-text">買った年に経費にできる制度の違い。</span></a>
+                    </li>
+                    <li>
+                      <p class="sec121__col-title">選び方ガイド</p>
+                      <a class="sec121__card" href="/articles/overseas/"><span class="sec121__card-title">海外製を選ぶときのポイント</span><span class="sec121__card-text">修理・部品・保証・電源など、買う前に確かめたい8つの点。</span></a>
+                      <a class="sec121__card" href="/articles/#alcu"><span class="sec121__card-title">アルミ・銅は溶接できるか</span><span class="sec121__card-text">反射率の高い素材と機種の対応。</span></a>
+                    </li>
+                    <li>
+                      <p class="sec121__col-title">相談</p>
+                      <a class="sec121__card" href="/contact/?type=choose"><span class="sec121__card-title">機種選びの相談</span><span class="sec121__card-text">他社機も含めて、用途に合う機種を一緒に考えます。</span></a>
+                      <a class="sec121__card" href="/contact/?type=test"><span class="sec121__card-title">テスト溶接・デモ</span><span class="sec121__card-text">運営元の取り扱い機で、仕上がりを確かめられます。</span></a>
+                      <a class="sec121__card" href="/contact/?type=subsidy"><span class="sec121__card-title">補助金の活用相談</span><span class="sec121__card-text">運営元の活用支援チームが対応します。</span></a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="sec121__panel" role="tabpanel" hidden data-sp-hidden>
+                  <ul class="sec121__grid">
+                    <li><p class="sec121__col-title">ハンドヘルド</p><a class="sec121__card" href="/lineup/?cat=handheld"><span class="sec121__card-title">手で持って溶接する</span><span class="sec121__card-text">掲載機種の大半がこの方式です。</span></a></li>
+                    <li><p class="sec121__col-title">据置・専用機</p><a class="sec121__card" href="/lineup/?cat=fixed"><span class="sec121__card-title">決まった位置で溶接する</span><span class="sec121__card-text">真空チャンバーなどの専用機。</span></a></li>
+                    <li><p class="sec121__col-title">ライン組込</p><a class="sec121__card" href="/lineup/?cat=line"><span class="sec121__card-title">ロボット・ラインで使う</span><span class="sec121__card-text">自動化に組み込める機種。</span></a></li>
+                  </ul>
+                </div>
+                <div class="sec121__panel" role="tabpanel" hidden data-sp-hidden>
+                  <ul class="sec121__grid">
+                    <li><p class="sec121__col-title">掲載の基準</p><a class="sec121__card" href="/about/"><span class="sec121__card-title">中立に並べる</span><span class="sec121__card-text">並び順と診断の順位は、取り扱いの有無に関係しません。</span></a></li>
+                    <li><p class="sec121__col-title">情報源</p><a class="sec121__card" href="/about/"><span class="sec121__card-title">メーカー公式が出典</span><span class="sec121__card-text">公開されていない項目は「非公開」と表示します。</span></a></li>
+                    <li><p class="sec121__col-title">運営者</p><a class="sec121__card" href="/about/"><span class="sec121__card-title">運営者情報</span><span class="sec121__card-text">レーザー溶接機の販売事業者が運営しています。</span></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li><a class="sec121__tab" href="/subsidy/"><span class="sec121__tab-label">補助金・税制</span></a></li>
+        <li>
+          <button class="sec121__tab" type="button" aria-expanded="false"><span class="sec121__tab-label">ガイド</span><svg viewBox="0 0 18 18" aria-hidden="true"><path d="M3.5 6.5 9 12l5.5-5.5"/></svg></button>
+          <div class="sec121__drop sec121__drop--plain">
+            <div class="sec121__drop-box">
+              <div class="sec121__body">
+                <ul class="sec121__grid">
+                  <li><p class="sec121__col-title">選び方</p><a class="sec121__card" href="/articles/"><span class="sec121__card-title">選び方ガイド</span><span class="sec121__card-text">迷いやすいところから順に公開しています。</span></a></li>
+                  <li><p class="sec121__col-title">製造国</p><a class="sec121__card" href="/articles/overseas/"><span class="sec121__card-title">海外製を選ぶときのポイント</span><span class="sec121__card-text">国内の修理体制・部品・保証を確かめる。</span></a></li>
+                  <li><p class="sec121__col-title">費用</p><a class="sec121__card" href="/subsidy/"><span class="sec121__card-title">補助金・助成金・税制</span><span class="sec121__card-text">導入費を抑える制度をまとめています。</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <div class="sec121__ctas">
+        <a class="sec121__btn" href="/diagnosis/">5つの質問で選ぶ→</a>
+        <a class="sec121__btn sec121__btn--sub" href="/lineup/">機種一覧→</a>
+      </div>
+      <a class="sec121__btn sec121__btn--dark" href="/contact/">相談する</a>
+    </div>
+  </div>
+</header>
+
+<!-- ===== SEC-163 ===== -->
+<section class="sec163" data-part="SEC-163">
+  <div class="sec163__inner">
+    <div class="sec163__content">
+      <div class="sec163__contentInner">
+        <div class="sec163__title">
+          <p class="sec163__shoulder">メーカー<small>を問わず、</small><mark>公式情報で比べる</mark></p>
+          <h1 class="sec163__copy">
+            <span class="sec163__line">現場に合う<small>溶接機を、</small></span>
+            <span class="sec163__line sec163__line--2">5つの質問<small>で。</small></span>
+          </h1>
+          <div class="sec163__kv sec163__kv--sp" aria-hidden="true">
+            <div class="sec163__kvImg"><img class="rd-kv" src="/assets/images/workshop.jpg" alt="" width="1536" height="1024"><span class="sec163__kvLabel">溶接現場のイメージ（AI生成）</span></div>
+          </div>
+        </div>
+        <ul class="sec163__buttons">
+          <li class="sec163__btnWrap">
+            <p class="sec163__tag">約1分・登録不要</p>
+            <a class="sec163__btn" href="/diagnosis/">
+              <span class="sec163__thumb sec163__thumb--doc" aria-hidden="true"></span>
+              <span class="sec163__btnText">5つの質問で選ぶ</span>
+              <svg class="sec163__icon sec163__icon--right" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="currentColor"/><path d="M5.8 10h7.6M10.2 6.6 13.6 10l-3.4 3.4" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </li>
+          <li class="sec163__btnWrap">
+            <p class="sec163__tag">87機種を掲載</p>
+            <a class="sec163__btn sec163__btn--dark" href="/lineup/">
+              <span class="sec163__thumb sec163__thumb--screen" aria-hidden="true"></span>
+              <span class="sec163__btnText">機種一覧を見る</span>
+              <svg class="sec163__icon sec163__icon--right" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="currentColor"/><path d="M5.8 10h7.6M10.2 6.6 13.6 10l-3.4 3.4" fill="none" stroke="var(--btn-dark)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="sec163__kv sec163__kv--pc" aria-hidden="true">
+      <div class="sec163__kvImg"><img class="rd-kv" src="/assets/images/workshop.jpg" alt="" width="1536" height="1024"><span class="sec163__kvLabel">溶接現場のイメージ（AI生成）</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SEC-082 ===== -->
+<section class="sec082" data-part="SEC-082">
+  <div class="sec082__inner">
+    <h2 class="sec082__title">こんな悩みから、<br class="sec082__md">現場に合うレーザー溶接機を<br class="sec082__md">探せます。</h2>
+    <div class="sec082__list">
+      <a class="sec082__item" href="/lineup/?skill=未経験可">
+        <div class="sec082__image"><span class="rd-ill"><svg class="rd-pict" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons.svg#i-user"></use></svg></span></div>
+        <div class="sec082__wrap">
+          <h3 class="sec082__name">新人に任せたい</h3>
+          <p class="sec082__text">熟練工がいなくても、新人がすぐ使える機種を</p>
+        </div>
+      </a>
+      <a class="sec082__item" href="/lineup/?material=アルミ">
+        <div class="sec082__image"><span class="rd-ill"><svg class="rd-pict" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons.svg#i-alcu"></use></svg></span></div>
+        <div class="sec082__wrap">
+          <h3 class="sec082__name">アルミ・銅</h3>
+          <p class="sec082__text">外注しているアルミ・銅の溶接を、自社で</p>
+        </div>
+      </a>
+      <a class="sec082__item" href="/lineup/?thickness=3〜6mm">
+        <div class="sec082__image"><span class="rd-ill"><svg class="rd-pict" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons.svg#i-thick"></use></svg></span></div>
+        <div class="sec082__wrap">
+          <h3 class="sec082__name">中厚・厚物を速く</h3>
+          <p class="sec082__text">TIGで時間のかかる中厚板を、レーザーで</p>
+        </div>
+      </a>
+      <a class="sec082__item" href="/subsidy/">
+        <div class="sec082__image"><span class="rd-ill"><svg class="rd-pict" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons.svg#i-yen"></use></svg></span></div>
+        <div class="sec082__wrap">
+          <h3 class="sec082__name">予算を抑えたい</h3>
+          <p class="sec082__text">100〜200万円で、補助金も使って導入</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SEC-044 ===== -->
+<section class="sec044" data-part="SEC-044">
+  <div class="sec044__inner">
+    <div class="sec044__wrap">
+      <hgroup class="sec044__heading">
+        <span class="sec044__en">SEARCH</span>
+        <h2 class="sec044__ja">探し方を選ぶ</h2>
+      </hgroup>
+      <p class="sec044__text">質問に答えて絞り込む、一覧から条件で探す、2台を並べて比べる。目的に合う探し方を選べます。</p>
+      <ul class="sec044__cards">
+        <li class="sec044__card"><a class="sec044__link" href="/diagnosis/">
+          <div class="sec044__img"><div class="sec044__ph"><svg class="rd-pict" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons.svg#i-diag"></use></svg></div></div>
+          <p class="sec044__name">質問で選ぶ<svg class="sec044__arrow" viewBox="0 0 26 6" aria-hidden="true"><path d="M0 5.5h25L19.5.5" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></p>
+        </a></li>
+        <li class="sec044__card"><a class="sec044__link" href="/lineup/">
+          <div class="sec044__img"><div class="sec044__ph"><svg class="rd-pict" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons.svg#i-lineup"></use></svg></div></div>
+          <p class="sec044__name">一覧で探す<svg class="sec044__arrow" viewBox="0 0 26 6" aria-hidden="true"><path d="M0 5.5h25L19.5.5" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></p>
+        </a></li>
+        <li class="sec044__card"><a class="sec044__link" href="/diagnosis/#compare">
+          <div class="sec044__img"><div class="sec044__ph"><svg class="rd-pict" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons.svg#i-compare"></use></svg></div></div>
+          <p class="sec044__name">2台を比べる<svg class="sec044__arrow" viewBox="0 0 26 6" aria-hidden="true"><path d="M0 5.5h25L19.5.5" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></p>
+        </a></li>
+        <li class="sec044__card"><a class="sec044__link" href="/subsidy/">
+          <div class="sec044__img"><div class="sec044__ph"><svg class="rd-pict" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons.svg#i-yen"></use></svg></div></div>
+          <p class="sec044__name">補助金を知る<svg class="sec044__arrow" viewBox="0 0 26 6" aria-hidden="true"><path d="M0 5.5h25L19.5.5" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></p>
+        </a></li>
+      </ul>
+      <div class="sec044__btns">
+        <a class="sec044__btn" href="/contact/">相談・問い合わせ<svg class="sec044__arrow" viewBox="0 0 26 6" aria-hidden="true"><path d="M0 5.5h25L19.5.5" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SEC-090 ===== -->
+<section class="sec090" data-part="SEC-090">
+  <div class="sec090__inner">
+    <h2 class="sec090__title"><a href="/lineup/">掲載機種（メーカーごとに1機種）</a></h2>
+    <div class="sec090__wrap">
+      <ul class="sec090__list" id="rdProducts"></ul>
+    </div>
+    <div class="sec090__more"><a href="/lineup/">87機種の一覧を見る</a></div>
+  </div>
+</section>
+
+<!-- ===== SEC-116 ===== -->
+<section class="sec116" data-part="SEC-116">
+  <div class="sec116__head">
+    <h2 class="sec116__label"><span class="sec116__badge" aria-hidden="true"><svg class="rd-pict" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons.svg#i-cert"></use></svg></span><span class="sec116__claim">掲載87機種・44メーカー*<br><span class="sec116__claim-note">*2026年10月10日時点</span></span></h2>
+    <h2 class="sec116__what">このサイトについて</h2>
+    <div class="sec116__container">
+      <p class="sec116__btn-p"><a class="sec116__btn" href="/about/">掲載の基準と運営者を見る</a></p>
+      <div class="sec116__more"><a href="/about/">情報源と更新の方針について</a></div>
+    </div>
+  </div>
+  <div class="sec116__body">
+    <h2 class="sec116__title">中立に比べられる理由</h2>
+    <div class="sec116__reason">
+      <div class="sec116__panels">
+        <ul class="sec116__row">
+          <li class="sec116__col"><a class="sec116__item" href="/about/"><span class="sec116__text"><span>順位は<br>取り扱いと無関係<span class="sec116__note">※1</span></span></span><i class="sec116__icon" style="width:105px"><svg class="rd-pict" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons.svg#i-compare"></use></svg></i><span class="sec116__link">詳しくはこちら</span></a></li>
+          <li class="sec116__col"><a class="sec116__item" href="/about/"><span class="sec116__text"><span>情報源は<br>メーカー公式</span></span><i class="sec116__icon" style="width:105px"><svg class="rd-pict" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons.svg#i-doc"></use></svg></i><span class="sec116__link">詳しくはこちら</span></a></li>
+          <li class="sec116__col"><a class="sec116__item" href="/about/"><span class="sec116__text"><span>公開されていない<br>項目は「非公開」<span class="sec116__note">※2</span></span></span><i class="sec116__icon" style="width:105px"><svg class="rd-pict" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons.svg#i-info"></use></svg></i><span class="sec116__link">詳しくはこちら</span></a></li>
+          <li class="sec116__col"><a class="sec116__item" href="/articles/overseas/"><span class="sec116__text"><span>製造国・国内<br>サポートも表示</span></span><i class="sec116__icon" style="width:105px"><svg class="rd-pict" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons.svg#i-factory"></use></svg></i><span class="sec116__link">詳しくはこちら</span></a></li>
+          <li class="sec116__col"><a class="sec116__item" href="/lineup/"><span class="sec116__text"><span>実売価格は載せず<br>価格帯で比較</span></span><i class="sec116__icon" style="width:105px"><svg class="rd-pict" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons.svg#i-yen"></use></svg></i><span class="sec116__link">詳しくはこちら</span></a></li>
+          <li class="sec116__col"><a class="sec116__item" href="/subsidy/"><span class="sec116__text"><span>補助金・税制も<br>まとめて確認</span></span><i class="sec116__icon" style="width:105px"><svg class="rd-pict" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons.svg#i-guide"></use></svg></i><span class="sec116__link">詳しくはこちら</span></a></li>
+        </ul>
+      </div>
+      <div class="sec116__toggle">
+        <button class="sec116__toggle-btn" type="button" aria-expanded="false" aria-controls="sec116-terms">※ 1,2 掲載の基準はこちら<svg class="sec116__chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M7 4l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ol class="sec116__toggle-body" id="sec116-terms" hidden>
+          <li>機種一覧は出力の小さい順、診断は条件に合う度合いで並べます。<a href="/about/">運営元</a>が取り扱う機種かどうかは、並び順に使っていません。</li>
+          <li>メーカーが公開していない項目は「非公開」と表示し、推測で埋めていません。</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SEC-142 ===== -->
+<section class="sec142" data-part="SEC-142">
+  <div class="sec142__bg" aria-hidden="true"></div>
+  <div class="sec142__inner">
+    <ul class="sec142__steps">
+      <li class="sec142__step"><span class="sec142__num">1</span><p class="sec142__step-title">5つの質問に答える</p><span class="sec142__fig" aria-hidden="true"><svg class="rd-pict" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons.svg#i-diag"></use></svg></span></li>
+      <li class="sec142__step"><span class="sec142__num">2</span><p class="sec142__step-title">候補5台を見る</p><span class="sec142__fig" aria-hidden="true"><svg class="rd-pict" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons.svg#i-lineup"></use></svg></span></li>
+      <li class="sec142__step"><span class="sec142__num">3</span><p class="sec142__step-title">2台を並べて比べる</p><span class="sec142__fig" aria-hidden="true"><svg class="rd-pict" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons.svg#i-compare"></use></svg></span></li>
+      <li class="sec142__step"><span class="sec142__num">4</span><p class="sec142__step-title">運営元に相談する</p><span class="sec142__fig" aria-hidden="true"><svg class="rd-pict" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons.svg#i-consult"></use></svg></span></li>
+    </ul>
+    <div class="sec142__body">
+      <div class="sec142__head">
+        <h2 class="sec142__title">このサイトでできること。</h2>
+        <p class="sec142__en">ABOUT THIS WEBSITE</p>
+      </div>
+      <p class="sec142__text">素材・板厚・使う人・使う場所・予算の5つに答えると、メーカーの公開情報をもとに候補を5台に絞り込みます。公開されていない項目は「非公開」として扱い、推測では埋めません。</p>
+      <div class="sec142__box">
+        <p class="sec142__box-title">こんな方はぜひご利用ください。</p>
+        <ul>
+          <li class="sec142__check">どのメーカーの溶接機が自社に合うか分からない。</li>
+          <li class="sec142__check">カタログの出力や板厚の読み方に自信がない。</li>
+          <li class="sec142__check">補助金を使って導入費を抑えたい。</li>
+        </ul>
+      </div>
+      <div class="sec142__btns">
+        <a class="sec142__btn" href="/diagnosis/">5つの質問で選ぶ</a>
+        <a class="sec142__btn" href="/lineup/">機種一覧から選ぶ</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SEC-097 ===== -->
+<section class="sec097" data-part="SEC-097">
+  <div class="sec097__inner">
+    <h2 class="sec097__title">よくある質問</h2>
+    <dl class="sec097__list">
+      <dt class="sec097__q"><div class="sec097__q-text">「溶け込み深さ」と「溶接できる板厚」は違いますか？</div></dt>
+      <dd class="sec097__a">
+        <div class="sec097__a-text">
+          <p>違います。溶け込み深さは、溶ける深さの値です。</p><p>メーカーの公表値が溶け込み深さの場合、本サイトでは板厚の区分には使わず、機種ページの「板厚の公表値」にそのまま載せています。</p>
+        </div>
+      </dd>
+      <dt class="sec097__q"><div class="sec097__q-text">掲載の順番は、運営元の取り扱いで変わりますか？</div></dt>
+      <dd class="sec097__a">
+        <div class="sec097__a-text">
+          <p>変わりません。機種一覧は出力の小さい順、診断は条件に合う度合いで並べています。</p><p>運営元が取り扱う機種には「運営元で取り扱い」と表示しています。詳しくは<a href="/about/">運営者情報・評価基準</a>をご覧ください。</p>
+        </div>
+      </dd>
+      <dt class="sec097__q"><div class="sec097__q-text">中国製のレーザー溶接機は大丈夫ですか？</div></dt>
+      <dd class="sec097__a">
+        <div class="sec097__a-text">
+          <p>製造国だけで良し悪しは決まりません。国内での修理体制・交換部品・保証・電源などを、買う前に確かめることが大切です。</p><p>確かめ方は<a href="/articles/overseas/">海外製を選ぶときのポイント</a>にまとめています。</p>
+        </div>
+      </dd>
+      <dt class="sec097__q"><div class="sec097__q-text">補助金は使えますか？</div></dt>
+      <dd class="sec097__a">
+        <div class="sec097__a-text">
+          <p>中小企業省力化投資補助金（カタログ注文型）に「ファイバーレーザー溶接機」のカテゴリがあります（2026年10月10日時点）。</p><p>機種がカタログに登録されているかなどの条件があります。<a href="/subsidy/">補助金・助成金・税制の一覧</a>をご覧ください。</p>
+        </div>
+      </dd>
+      <dt class="sec097__q"><div class="sec097__q-text">価格が「非公開」の機種は、どう調べればよいですか？</div></dt>
+      <dd class="sec097__a">
+        <div class="sec097__a-text">
+          <p>メーカーや販売店に問い合わせてください。</p><p>運営元が取り扱う機種は、本サイトから<a href="/contact/?type=quote">見積もりを相談</a>できます。</p>
+        </div>
+      </dd>
+    </dl>
+  </div>
+</section>
+
+<!-- ===== SEC-009 ===== -->
+<section class="sec009" data-part="SEC-009">
+  <div class="sec009__inner">
+    <div class="sec009__head">
+      <div class="sec009__titles">
+        <p class="sec009__en">Guide</p>
+        <h2 class="sec009__title">選び方ガイド</h2>
+      </div>
+      <p class="sec009__lead">導入前に迷いやすいところを、公的機関やメーカーの公開情報をもとにまとめています。</p>
+    </div>
+    <ul class="sec009__list">
+      <li class="sec009__item">
+        <a class="sec009__thumb" href="/articles/overseas/">
+          <span class="sec009__ph" aria-hidden="true"><span class="rd-cover">海外製（中国製など）を選ぶときのポイント</span></span>
+          <span class="sec009__veil" aria-hidden="true"></span>
+        </a>
+        <div class="sec009__body">
+          <div class="sec009__text">
+            <h3 class="sec009__name">海外製（中国製など）を選ぶときのポイント</h3>
+            <p class="sec009__desc">国内の修理体制・交換部品・保証・電源など、買う前に確かめたい8つの点をまとめました。</p>
+          </div>
+          <a class="sec009__dl" href="/articles/overseas/">
+            <svg class="sec009__dl-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg>
+            <span class="sec009__dl-label sec009__dl-label--pc">記事を読む</span>
+            <span class="sec009__dl-label sec009__dl-label--sp">記事を読む</span>
+          </a>
+        </div>
+      </li>
+      <li class="sec009__item">
+        <a class="sec009__thumb" href="/subsidy/">
+          <span class="sec009__ph" aria-hidden="true"><span class="rd-cover">補助金・助成金・税制</span></span>
+          <span class="sec009__veil" aria-hidden="true"></span>
+        </a>
+        <div class="sec009__body">
+          <div class="sec009__text">
+            <h3 class="sec009__name">補助金・助成金・税制</h3>
+            <p class="sec009__desc">省力化投資補助金や即時償却など、導入費を抑える制度を締切と上限額つきで整理しました。</p>
+          </div>
+          <a class="sec009__dl" href="/subsidy/">
+            <svg class="sec009__dl-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg>
+            <span class="sec009__dl-label sec009__dl-label--pc">一覧を見る</span>
+            <span class="sec009__dl-label sec009__dl-label--sp">一覧を見る</span>
+          </a>
+        </div>
+      </li>
+      <li class="sec009__item">
+        <a class="sec009__thumb" href="/articles/#tig">
+          <span class="sec009__ph" aria-hidden="true"><span class="rd-cover">TIG溶接とレーザー溶接の違い</span></span>
+          <span class="sec009__veil" aria-hidden="true"></span>
+        </a>
+        <div class="sec009__body">
+          <div class="sec009__text">
+            <h3 class="sec009__name">TIG溶接とレーザー溶接の違い</h3>
+            <p class="sec009__desc">仕上がり・ひずみ・習得にかかる時間・設備の大きさを並べて整理します（公開準備中）。</p>
+          </div>
+          <a class="sec009__dl" href="/articles/#tig">
+            <svg class="sec009__dl-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg>
+            <span class="sec009__dl-label sec009__dl-label--pc">内容を見る</span>
+            <span class="sec009__dl-label sec009__dl-label--sp">内容を見る</span>
+          </a>
+        </div>
+      </li>
+    </ul>
+    <a class="sec009__more" href="/articles/">
+      <span class="sec009__more-in">
+        <span class="sec009__more-label">選び方ガイドをすべて見る</span>
+        <span class="sec009__circle" aria-hidden="true">
+          <span class="sec009__arrow sec009__arrow--in"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"><path d="M3 8h9.5M8.5 4l4 4-4 4"/></svg></span>
+          <span class="sec009__arrow"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"><path d="M3 8h9.5M8.5 4l4 4-4 4"/></svg></span>
+        </span>
+      </span>
+    </a>
+  </div>
+</section>
+
+<!-- ===== SEC-135 ===== -->
+<section class="sec135" data-part="SEC-135">
+  <div class="sec135__inner">
+    <h2 class="sec135__title">機種選びも見積もりも、<br class="sec135__br">運営元に相談できます</h2>
+    <ul class="sec135__list">
+      <li class="sec135__item">
+        <div class="sec135__ph sec135__ph--doc" role="img" aria-label="機種選びの相談"><svg class="rd-pict" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons.svg#i-compare"></use></svg></div>
+        <a class="sec135__btn sec135__btn--line" href="/contact/?type=choose"><small>他社機も含めて比べたい方</small>機種選びを相談する</a>
+      </li>
+      <li class="sec135__item">
+        <div class="sec135__ph" role="img" aria-label="見積もり・テスト溶接の相談"><svg class="rd-pict" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons.svg#i-handheld"></use></svg></div>
+        <a class="sec135__btn sec135__btn--fill" href="/contact/?type=quote"><small>運営元の取り扱い機を検討中の方</small>見積もり・テスト溶接を相談<span class="sec135__badge">デモ可</span></a>
+      </li>
+    </ul>
+    <div class="sec135__others">
+      <h3 class="sec135__sub">補助金の活用も相談できます</h3>
+      <p class="sec135__tel">
+        <svg class="sec135__tel-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true">
+          <circle cx="32" cy="32" r="30"/>
+          <path d="M22.5 15.5l5.2-1.6 4.4 9.6-3.6 3c1.4 4.4 4.2 8.8 7.8 12l4-2.2 7.4 7.6-3.6 4.4c-9.2 1.2-23.4-14.8-21.6-32.8z" stroke-linejoin="round"/>
+        </svg>
+        フォームは24時間受付<span class="sec135__hours">電話番号は<span class="sec135__hours-br"></span>掲載準備中</span>
+      </p>
+      <p class="sec135__contact">
+        <a href="/contact/?type=subsidy"><svg class="sec135__mail" viewBox="0 0 24 24" fill="none" stroke="#313131" stroke-width="1.6" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14"/><path d="M2.5 5l9.5 8 9.5-8"/></svg>補助金の活用を相談する</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SEC-161 ===== -->
+<div class="sec161" data-part="SEC-161">
+  <div class="sec161__contact">
+    <div class="sec161__contactInner">
+      <div class="sec161__logo" data-sec161-aos data-delay="200"><span class="rd-logo">レーザー溶接機<br>比較・選定</span></div>
+      <div class="sec161__text" data-sec161-aos data-delay="300">
+        <p>機種選び・見積もり・<br>テスト溶接・補助金の<br class="sec161__brSp">ご相談はこちらへ</p>
+      </div>
+      <a class="sec161__btn" href="/contact/" data-sec161-aos data-delay="400">
+        <span class="sec161__btnInner">
+          <span class="sec161__btnText">相談・問い合わせ</span>
+          <svg viewBox="0 0 30.052 12.539" preserveAspectRatio="none" aria-hidden="true"><path d="M24.032.249a.849.849 0 1 0-1.201 1.202l3.967 3.968H.85a.85.85 0 0 0 0 1.7h25.948l-3.967 3.97a.849.849 0 1 0 1.2 1.2l6.021-6.02-6.02-6.02z"/></svg>
+        </span>
+      </a>
+    </div>
+  </div>
+  <div class="sec161__pagetop">
+    <a href="#" aria-label="ページの先頭へ">pagetop<svg viewBox="0 0 13 22" aria-hidden="true"><path d="M1.5 12 6.5 7l5 5" fill="none" stroke="#fff" stroke-width="2"/></svg></a>
+  </div>
+  <footer class="sec161__footer">
+    <div class="sec161__slider">
+      <div class="sec161__sliderInner">
+        <div class="sec161__sliderContents">
+          <button class="sec161__arrow sec161__arrow--prev" type="button" aria-label="前へ"><svg viewBox="0 0 6 10" aria-hidden="true"><path d="m1 1 4 4-4 4" fill="none" stroke="#1e1e1e" stroke-width="1.5"/></svg></button>
+          <div class="sec161__viewport">
+            <ul class="sec161__track">
+              <li class="sec161__item"><a href="/diagnosis/"><span class="rd-link">5つの質問で選ぶ</span></a></li>
+              <li class="sec161__item"><a href="/lineup/"><span class="rd-link">機種一覧</span></a></li>
+              <li class="sec161__item"><a href="/diagnosis/#compare"><span class="rd-link">2台を比較</span></a></li>
+              <li class="sec161__item"><a href="/articles/"><span class="rd-link">選び方ガイド</span></a></li>
+              <li class="sec161__item"><a href="/articles/overseas/"><span class="rd-link">海外製を選ぶときのポイント</span></a></li>
+              <li class="sec161__item"><a href="/subsidy/"><span class="rd-link">補助金・税制</span></a></li>
+              <li class="sec161__item"><a href="/contact/"><span class="rd-link">相談・問い合わせ</span></a></li>
+              <li class="sec161__item"><a href="/about/"><span class="rd-link">運営者情報・評価基準</span></a></li>
+              <li class="sec161__item"><a href="/redesign/"><span class="rd-link">トップ</span></a></li>
+            </ul>
+          </div>
+          <button class="sec161__arrow sec161__arrow--next" type="button" aria-label="次へ"><svg viewBox="0 0 6 10" aria-hidden="true"><path d="m1 1 4 4-4 4" fill="none" stroke="#1e1e1e" stroke-width="1.5"/></svg></button>
+        </div>
+      </div>
+    </div>
+    <div class="sec161__main">
+      <div class="sec161__mainInner">
+        <div class="sec161__sns">
+          <ul>
+            <li><a href="/about/" class="rd-sns">掲載内容はメーカー公開情報に基づきます</a></li>
+          </ul>
+        </div>
+        <div class="sec161__contents">
+          
+          <div class="sec161__contentsInner">
+            <address class="sec161__info">
+              <div class="sec161__company">レーザー溶接機 比較・選定</div>
+              <div class="sec161__address">運営：レーザー溶接機の販売事業者<br>（詳しくは運営者情報をご覧ください）</div>
+            </address>
+            <div class="sec161__footnav">
+              <ul>
+                <li><a href="/about/">運営者情報・評価基準</a></li>
+                <li><a href="/articles/">選び方ガイド</a></li>
+                <li><a href="/contact/">相談・問い合わせ</a></li>
+              </ul>
+            </div>
+          </div>
+          <small class="sec161__copyright">© 2026 レーザー溶接機 比較・選定</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+<script>
+/* ===== SEC-077 ===== */
+(() => {
+  const root = document.querySelector('.sec077');
+  if (!root) return;
+  root.querySelector('.sec077__close').addEventListener('click', () => {
+    root.classList.add('is-closed');
+    root.setAttribute('aria-hidden', 'true');
+  });
+})();
+
+/* ===== SEC-121 ===== */
+(() => {
+  const root = document.querySelector('.sec121');
+  if (!root) return;
+  const tabs = [...root.querySelectorAll('button.sec121__tab')];
+  const closeAll = (except) => tabs.forEach(t => {
+    if (t === except) return;
+    t.setAttribute('aria-expanded', 'false');
+    t.nextElementSibling.classList.remove('is-open');
+  });
+  tabs.forEach(t => t.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const open = t.getAttribute('aria-expanded') !== 'true';
+    closeAll(t);
+    t.setAttribute('aria-expanded', String(open));
+    t.nextElementSibling.classList.toggle('is-open', open);
+  }));
+  root.querySelectorAll('.sec121__drop').forEach(d => d.addEventListener('click', e => e.stopPropagation()));
+  document.addEventListener('click', () => { if (!root.classList.contains('is-sp-open')) closeAll(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') { closeAll(); setSp(false); } });
+  // サイドのタブ切り替え
+  root.querySelectorAll('.sec121__side').forEach(side => {
+    const btns = [...side.querySelectorAll('[role="tab"]')];
+    const panels = [...side.parentElement.querySelectorAll('.sec121__panel')];
+    const select = (b) => {
+      btns.forEach(x => x.setAttribute('aria-selected', String(x === b)));
+      panels.forEach((p, i) => { p.hidden = i !== +b.dataset.tab; });
+    };
+    btns.forEach(b => { b.addEventListener('click', () => select(b)); b.addEventListener('mouseenter', () => select(b)); });
+  });
+  // SPメニュー
+  const burger = root.querySelector('.sec121__burger');
+  const setSp = (on) => { root.classList.toggle('is-sp-open', on); burger.setAttribute('aria-expanded', String(on)); burger.setAttribute('aria-label', on ? 'メニューを閉じる' : 'メニュー'); };
+  burger.addEventListener('click', (e) => { e.stopPropagation(); setSp(!root.classList.contains('is-sp-open')); });
+})();
+
+/* ===== SEC-116 ===== */
+(() => {
+  const root = document.querySelector('.sec116');
+  if (!root) return;
+  // 注記の開閉（元どおりアニメーションなしで表示/非表示）
+  root.querySelectorAll('.sec116__toggle-btn').forEach(btn => {
+    const body = document.getElementById(btn.getAttribute('aria-controls'));
+    btn.addEventListener('click', () => {
+      const open = btn.getAttribute('aria-expanded') !== 'true';
+      btn.setAttribute('aria-expanded', String(open));
+      body.hidden = !open;
+    });
+  });
+})();
+
+/* ===== SEC-142 ===== */
+(() => {
+  // 元サイトどおり: セクションの上端が「スクロール位置＋画面の高さ×0.9」より上に来たら、下から50pxフェードイン
+  const root = document.querySelector('.sec142');
+  if (!root || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  root.classList.add('is-anim');
+  const check = () => {
+    if (root.getBoundingClientRect().top + scrollY < scrollY + innerHeight * 0.9) {
+      root.classList.add('is-shown');
+      removeEventListener('scroll', check);
+    }
+  };
+  addEventListener('scroll', check, { passive: true });
+  addEventListener('load', check);
+  check();
+})();
+
+/* ===== SEC-097 ===== */
+(() => {
+  const root = document.querySelector('.sec097');
+  if (!root) return;
+  const DURATION = 200;                       // 元: jQuery slideToggle(200)
+  const EASE = 'cubic-bezier(.36,0,.64,1)';   // jQuery の swing に相当
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)');
+  const PROPS = ['height', 'paddingTop', 'paddingBottom', 'marginBottom'];
+
+  const toggle = (q) => {
+    const a = q.nextElementSibling;
+    const opening = !q.classList.contains('is-open');
+    q.classList.toggle('is-open', opening);
+    q.setAttribute('aria-expanded', String(opening));
+    // 途中で押されたら今の高さから折り返す
+    const running = a._sec097anim;
+    const from = {};
+    if (running) {
+      const cs = getComputedStyle(a);
+      PROPS.forEach((p) => { from[p] = cs[p]; });
+      running.cancel();
+    }
+    if (reduce.matches) { a.classList.toggle('is-open', opening); return; }
+    a.classList.add('is-open');
+    const cs = getComputedStyle(a);
+    const full = {};
+    PROPS.forEach((p) => { full[p] = cs[p]; });
+    full.height = a.scrollHeight - parseFloat(cs.paddingTop) - parseFloat(cs.paddingBottom) + 'px';
+    const zero = { height: '0px', paddingTop: '0px', paddingBottom: '0px', marginBottom: '0px' };
+    const start = running ? from : (opening ? zero : full);
+    const end = opening ? full : zero;
+    a.style.overflow = 'hidden';
+    a.style.boxSizing = 'content-box';
+    const anim = a.animate([start, end], { duration: DURATION, easing: EASE });
+    a._sec097anim = anim;
+    anim.onfinish = () => {
+      a._sec097anim = null;
+      a.style.overflow = '';
+      a.style.boxSizing = '';
+      if (!opening) a.classList.remove('is-open');
+    };
+  };
+
+  root.querySelectorAll('.sec097__q').forEach((q) => {
+    q.setAttribute('role', 'button');
+    q.setAttribute('tabindex', '0');
+    q.setAttribute('aria-expanded', 'false');
+    q.addEventListener('click', () => toggle(q));
+    q.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(q); }
+    });
+  });
+})();
+
+/* ===== SEC-161 ===== */
+(() => {
+  const root = document.querySelector('.sec161');
+  if (!root) return;
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // CTAのフェードイン（画面下から200px入ったら、各要素の遅延つき・1回だけ）
+  const aos = [...root.querySelectorAll('[data-sec161-aos]')];
+  aos.forEach(el => { el.style.transitionDelay = (el.dataset.delay || 0) / 1000 + 's'; });
+  if (reduce || !('IntersectionObserver' in window)) {
+    aos.forEach(el => el.classList.add('is-in'));
+  } else {
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+    }), { rootMargin: '0px 0px -200px 0px' });
+    aos.forEach(el => io.observe(el));
+  }
+
+  // ページトップ（0.4秒でページ先頭へ）
+  root.querySelector('.sec161__pagetop a').addEventListener('click', e => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+  });
+
+  // 関連ロゴのスライダー（slick: variableWidth / infinite / autoplay 3秒 / speed 0.3秒 / ホバーで停止 / スワイプ）
+  const viewport = root.querySelector('.sec161__viewport');
+  const track = root.querySelector('.sec161__track');
+  const originals = [...track.children];
+  const n = originals.length;
+  originals.forEach(li => track.appendChild(li.cloneNode(true)));
+  originals.slice().reverse().forEach(li => track.insertBefore(li.cloneNode(true), track.firstChild));
+  [...track.children].forEach((li, i) => { if (i < n || i >= 2 * n) li.setAttribute('aria-hidden', 'true'); });
+  const all = [...track.children];
+  let pos = n, busy = false, timer = null, hover = false;
+  const offset = p => all[p].offsetLeft - parseFloat(getComputedStyle(all[p]).marginLeft);
+  const place = (p, animate) => {
+    track.classList.toggle('is-moving', animate && !reduce);
+    track.style.transform = `translate3d(${-offset(p)}px,0,0)`;
+  };
+  const settle = () => {
+    busy = false;
+    if (pos >= 2 * n) pos -= n;
+    if (pos < n) pos += n;
+    place(pos, false);
+  };
+  const go = p => {
+    if (busy) return;
+    busy = !reduce;
+    pos = p;
+    place(pos, true);
+    if (reduce) settle();
+  };
+  track.addEventListener('transitionend', e => { if (e.target === track) settle(); });
+  const start = () => { if (reduce) return; clearInterval(timer); timer = setInterval(() => { if (!hover && !dragging) go(pos + 1); }, 3000); };
+  root.querySelector('.sec161__arrow--prev').addEventListener('click', () => { go(pos - 1); start(); });
+  root.querySelector('.sec161__arrow--next').addEventListener('click', () => { go(pos + 1); start(); });
+  viewport.addEventListener('mouseenter', () => { hover = true; });
+  viewport.addEventListener('mouseleave', () => { hover = false; });
+
+  // ドラッグ・スワイプ（離した位置にいちばん近いロゴへ）
+  let dragging = false, x0 = 0, base = 0, moved = 0;
+  viewport.addEventListener('pointerdown', e => {
+    if (busy) return;
+    dragging = true; moved = 0; x0 = e.clientX; base = offset(pos);
+    track.classList.remove('is-moving');
+    viewport.setPointerCapture(e.pointerId);
+  });
+  viewport.addEventListener('pointermove', e => {
+    if (!dragging) return;
+    moved = e.clientX - x0;
+    track.style.transform = `translate3d(${-(base - moved)}px,0,0)`;
+  });
+  const end = () => {
+    if (!dragging) return;
+    dragging = false;
+    if (Math.abs(moved) < 10) { place(pos, false); return; }
+    const target = base - moved;
+    let best = pos, d = Infinity;
+    all.forEach((_, i) => { const dd = Math.abs(offset(i) - target); if (dd < d) { d = dd; best = i; } });
+    if (best === pos) best = pos + (moved < 0 ? 1 : -1);
+    go(Math.max(0, Math.min(all.length - 1, best)));
+    start();
+  };
+  viewport.addEventListener('pointerup', end);
+  viewport.addEventListener('pointercancel', end);
+  viewport.addEventListener('click', e => { if (Math.abs(moved) >= 10) e.preventDefault(); }, true);
+  viewport.addEventListener('dragstart', e => e.preventDefault());
+
+  const init = () => place(pos, false);
+  init();
+  window.addEventListener('resize', init);
+  start();
+})();
+</script>
+<script type="module">
+// 掲載機種: 今のトップと同じ選び方（メーカーごとに1機種。出力・対応素材のうち公開されている項目が多い順）
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const products = (await fetch("/data/products.json").then((r) => r.json())).filter((p) => p.is_published !== false);
+const known = (p) => (p.output_w ? 1 : 0) + (p.tags.material.length ? 1 : 0);
+const byMaker = new Map();
+for (const p of products) if (!byMaker.has(p.maker_slug) || known(p) > known(byMaker.get(p.maker_slug))) byMaker.set(p.maker_slug, p);
+const picks = [...byMaker.values()].sort((a, b) => known(b) - known(a)).slice(0, 24);
+const maker = (n) => String(n).replace(/（.*$/, "");
+const kind = (p) => (/^ハンド/.test(p.method || "") ? "ハンドヘルド" : /ロボット|ライン/.test(p.method || "") ? "ライン組込" : /据置|真空|チャンバー/.test(p.method || "") ? "据置・専用機" : "レーザー溶接機");
+document.getElementById("rdProducts").innerHTML = picks.map((p) => `<li class="sec090__item"><a class="sec090__link" href="/products/${esc(p.maker_slug)}-${esc(p.model_slug)}/">
+  <span class="sec090__label">${esc(kind(p))}</span>${p.handled_by_operator ? '<span class="sec090__label sec090__label--fill">運営元の取扱</span>' : ""}
+  <p class="sec090__name">${esc(p.name)}</p>
+  <p class="sec090__price">${p.output_w ? `出力<span class="sec090__val">${(p.output_w / 1000).toFixed(p.output_w % 1000 ? (p.output_w % 100 ? 2 : 1) : 1)}</span>kW` : '<span class="sec090__sub">出力 非公開</span>'}</p>
+  <p class="sec090__text">${esc(maker(p.maker_name))}｜価格帯 ${esc(p.tags.price[0] || (p.handled_by_operator ? "お問い合わせ" : "非公開"))}</p>
+  <p class="sec090__img">${p.image && !p.image.includes("placeholder") ? `<img src="${esc(p.image)}" alt="" loading="lazy">` : '<svg class="rd-pict" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons.svg#i-handheld"></use></svg>'}</p>
+</a></li>`).join("");
+// ヘッダーの検索: Enter で機種一覧のキーワード検索へ
+document.querySelector("[data-rd-search]")?.addEventListener("keydown", (e) => { if (e.key === "Enter" && e.target.value.trim()) location.href = "/lineup/?q=" + encodeURIComponent(e.target.value.trim()); });
+</script>
+</body>
+</html>
