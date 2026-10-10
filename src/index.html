@@ -9,8 +9,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/assets/css/style.css?v=15">
-  <link rel="stylesheet" href="/assets/css/home.css?v=15">
+  <link rel="stylesheet" href="/assets/css/style.css?v=16">
+  <link rel="stylesheet" href="/assets/css/home.css?v=16">
   <title>レーザー溶接機 比較・選定｜5つの質問で現場に合う1台を</title>
   <meta name="description" content="レーザー溶接機を素材・板厚・使う人・場所・予算の5問で選定する中立的な比較サイト。ハンドヘルドから自動化ライン組込まで、他社製品を含めて比較できます。">
   <meta property="og:type" content="website">
@@ -127,9 +127,9 @@
 
 <div id="siteFooter"></div>
 <script type="module">
-  import { mountChrome, productPhoto } from "/assets/js/partials.js?v=15";
-  import { productSlug } from "/assets/js/scoring.js?v=15";
-  import { loadProducts, parseState, filterProducts, card } from "/assets/js/lineup.js?v=15";
+  import { mountChrome, productPhoto } from "/assets/js/partials.js?v=16";
+  import { productSlug } from "/assets/js/scoring.js?v=16";
+  import { loadProducts, parseState, filterProducts, card } from "/assets/js/lineup.js?v=16";
   mountChrome({ current: "/", withBottombar: false });
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const products = await loadProducts();

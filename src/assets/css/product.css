@@ -119,3 +119,32 @@ html { scroll-padding-top: 0; }
 .spec__more .ico { width: 22px; height: 22px; flex: none; }
 .spec__src { margin-left: 6px; font-size: 15px; font-weight: 400; color: var(--c-main-ink); white-space: nowrap; }
 .spec__basis { display: block; margin-top: 4px; font-size: 16px; font-weight: 400; color: var(--c-sub); }
+
+/* ===== マイベストの商品カードからトレース（2026-10-10 計測: my-best.com/164） ===== */
+/* 頭: 小さなタグ → メーカー名（灰色・太字）→ 機種名 */
+.product__chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 8px; }
+.product__chips .badge { margin: 0; }
+.pchip { display: inline-block; font-size: 15px; font-weight: 700; line-height: 1.4; padding: 3px 10px; border-radius: 4px; background: var(--c-gray); color: var(--c-text); }
+.product .product__maker { margin: 0 0 2px; font-size: 16px; font-weight: 700; color: var(--c-sub); }
+.product .product__agent { margin: 4px 0 12px; font-size: 16px; color: var(--c-sub); }
+.product__head h1 { margin: 0 0 8px; }
+/* 選定コメント: 灰色の箱をやめ、本文＋最初の1文をマーカー */
+.product .comment { background: none; padding: 0; font-size: 18px; line-height: 1.8; }
+/* スペック表: 項目の列に薄い色、行の下に罫線（マイベストは #FFF3E6 / 罫線 #FFDAB0 / 8px） */
+.product .spec { border-top: 1px solid var(--c-main-light); }
+.product .spec__row { grid-template-columns: 38% minmax(0, 1fr); gap: 0; padding: 0; border-top: 0; border-bottom: 1px solid var(--c-main-light); }
+.product .spec__row:last-child { border-bottom: 1px solid var(--c-main-light); }
+.product .spec dt { background: var(--c-main-tint); color: var(--c-text); padding: 10px 8px; }
+.product .spec dd { padding: 10px 8px 10px 12px; }
+/* 向いている・向いていない（マイベストの「良い」「気になる」: 枠1px・角丸4px・見出しに薄い背景と下線、顔アイコン） */
+.product .fit > div { padding: 0; border-radius: 4px; overflow: hidden; }
+.product .fit .ok { border: 1px solid var(--c-main-dark); }
+.product .fit .ng { border: 1px solid #666; }
+.product .fit h3 { display: flex; align-items: center; gap: 8px; margin: 0; padding: 10px 12px; font-size: 18px; color: var(--c-text); }
+.product .fit h3 .ico { width: 26px; height: 26px; flex: none; }
+.product .fit .ok h3 { background: var(--c-main-tint); border-bottom: 1px solid var(--c-main-dark); }
+.product .fit .ok h3 .ico { color: var(--c-main-dark); }
+.product .fit .ng h3 { background: #F7F7F7; border-bottom: 1px solid #666; }
+.product .fit .ng h3 .ico { color: #666; }
+.product .fit ul { padding: 12px 14px 12px 2em; }
+.product .fit li { margin: 4px 0; }

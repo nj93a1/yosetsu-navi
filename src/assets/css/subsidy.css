@@ -1,9 +1,9 @@
 /* 補助金・助成金・税制ページ */
-.sb-first { background: var(--c-main-tint); border: 1px solid var(--c-main-light); border-radius: 16px; padding: 20px; margin: 8px 0 0; }
+.sb-first { margin: 8px 0 0; }
 .sb-first h2 { font-size: 22px; margin: 0 0 12px; }
 .sb-first ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; counter-reset: sbf; }
 .sb-first a { display: grid; grid-template-columns: 40px 1fr; gap: 2px 12px; padding: 12px 14px; background: #fff; border: 1px solid var(--c-line); border-radius: 12px; text-decoration: none; color: var(--c-text); counter-increment: sbf; }
-.sb-first a::before { content: counter(sbf); grid-row: 1 / 3; display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: var(--c-main-dark); color: #fff; font-weight: 700; }
+.sb-first a::before { content: counter(sbf); grid-row: 1 / 3; display: grid; place-items: center; width: 40px; height: 40px; font-size: 18px; font-weight: 700; color: var(--c-text); background: color-mix(in srgb, var(--c-main) 38%, #fff); clip-path: polygon(50% 6.7%, 63.3% 33.8%, 93.3% 38%, 71.7% 58.8%, 76.7% 88.3%, 50% 74.6%, 23.3% 88.3%, 28.3% 58.8%, 6.7% 38%, 36.7% 33.8%); }
 .sb-first b { font-size: 19px; }
 .sb-first span { font-size: 16px; color: var(--c-sub); }
 .sb-card { background: #fff; border: 1px solid var(--c-line); border-radius: 16px; padding: 20px; margin: 0 0 16px; scroll-margin-top: 90px; }

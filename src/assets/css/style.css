@@ -628,3 +628,13 @@ p, li, dd { text-wrap: pretty; }
 .form__types input { width: 24px; height: 24px; margin: 0; accent-color: var(--c-main-dark); }
 .form__types label:has(input:checked) { border-color: var(--c-main-dark); background: var(--c-main-light); color: var(--c-main-ink); }
 @media (min-width: 760px) { .form__types { grid-template-columns: repeat(2, 1fr); } .form__types legend { grid-column: 1 / -1; } }
+
+/* ===== マイベストのランキング記事からトレース（2026-10-10 計測: my-best.com/164） =====
+   本文の強調: 下40%のマーカー＋太字（マイベストは rgba(255,218,176,.6)。配色は Accent に置き換え） */
+.mk { font-weight: 700; background: linear-gradient(transparent 60%, rgba(210, 223, 30, .45) 60%); padding: 0 2px 2px; }
+/* 番号見出しの星（40px、薄い色の星に濃い数字。マイベストは #C5ECC8 の星＋#313131 の数字） */
+.star-n { position: relative; flex: none; display: inline-grid; place-items: center; width: 40px; height: 40px; }
+.star-n .ico { position: absolute; inset: 0; width: 40px; height: 40px; color: color-mix(in srgb, var(--c-main) 38%, #fff); }
+.star-n b { position: relative; font-size: 18px; color: var(--c-text); }
+/* 枠で囲むまとめ（マイベストの「検証のポイント」: 3px #EFEFEF・角丸4px・内側16px） */
+.mb-box { border: 3px solid #EFEFEF; border-radius: 4px; padding: 16px; background: #fff; }
