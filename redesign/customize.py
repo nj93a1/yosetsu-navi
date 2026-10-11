@@ -15,53 +15,44 @@ def block(sec, new):
 P = lambda name: f'<svg class="rd-pict" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons.svg#i-{name}"></use></svg>'
 
 # ---------- head ----------
-s = re.sub(r'<link rel="preconnect"[^>]*>\n', '', s)
-s = re.sub(r'<link rel="stylesheet" href="https://fonts\.googleapis\.com[^"]*">\n', '', s)
 rep('<title>レーザー溶接機 比較・選定</title>', '''<title>レーザー溶接機 比較・選定｜デザイン刷新版（確認用）</title>
 <!-- 本番公開時に削除：検索エンジンのインデックスを許可する -->
 <meta name="robots" content="noindex,nofollow">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Montserrat:wght@500;700&display=swap">''')
-# フォントを2種類に統一（日本語は BIZ UDPゴシック、英字の見出しラベルだけ Montserrat）
-def fix_font(m):
-    v = m.group(1)
-    return 'font-family: Montserrat, "BIZ UDPGothic", sans-serif' if 'Montserrat' in v or 'Oswald' in v or 'Sulphur' in v else 'font-family: "BIZ UDPGothic", sans-serif'
-s = re.sub(r'font-family\s*:\s*([^;}{]+)', fix_font, s)
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">''')
+# フォントはトレース元のまま（各パーツの Google Fonts と font-family を変えない）
 
 # ---------- 色（各パーツの一番外側の変数だけ） ----------
 C = dict(main='#14A3A6', dark='#0E7F82', ink='#0B6A6C', light='#E3F4F4', tint='#F1FAFA', sub='#6A4FA8', acc='#D2DF1E', accl='#F4F7D0', text='#313131', subtext='#5F6874')
 rep('--bg:#00b383; --panel:#ffffff; --ink:#204253; --accent:#1055a3; --accent-dark:#0a5096; --accent-ink:#ffffff;',
-    f'--bg:{C["dark"]}; --panel:#ffffff; --ink:{C["text"]}; --accent:{C["sub"]}; --accent-dark:#56408A; --accent-ink:#ffffff;')
+    f'--bg:{C["dark"]}; --panel:#ffffff; --ink:#204253; --accent:{C["sub"]}; --accent-dark:#56408A; --accent-ink:#ffffff;')
 rep('--yellow:#fcc433; --deco:#19685a; --stripe:#6fc494; --mark:#3fd18f;', f'--yellow:{C["acc"]}; --deco:{C["ink"]}; --stripe:{C["main"]}; --mark:{C["acc"]};')
-rep('--bg:#ffffff; --text:#1f1f1f; --accent:#ff4800; --accent-ink:#ffffff;', f'--bg:#ffffff; --text:{C["text"]}; --accent:{C["dark"]}; --accent-ink:#ffffff;')
-rep('--rule:#f6f9fc; --shadow:rgba(33,51,67,.12); --dark:#1f1f1f; --muted:#666666;', f'--rule:{C["tint"]}; --shadow:rgba(33,51,67,.12); --dark:{C["text"]}; --muted:{C["subtext"]};')
+rep('--bg:#ffffff; --text:#1f1f1f; --accent:#ff4800; --accent-ink:#ffffff;', f'--bg:#ffffff; --text:#1f1f1f; --accent:{C["dark"]}; --accent-ink:#ffffff;')
+rep('--rule:#f6f9fc; --shadow:rgba(33,51,67,.12); --dark:#1f1f1f; --muted:#666666;', '--rule:#f6f9fc; --shadow:rgba(33,51,67,.12); --dark:#1f1f1f; --muted:#666666;')
 for a, b in [('--bg-a: #008c92;', f'--bg-a: {C["dark"]};'), ('--bg-b: #00a9b0;', f'--bg-b: {C["main"]};'), ('--bg-c: #00c4cc;', '--bg-c: #2BB8BB;'),
-             ('--ink: #23221f;', f'--ink: {C["text"]};'), ('--label-bg: #12706f;', f'--label-bg: {C["ink"]};'), ('--btn-dark: #005a64;', f'--btn-dark: {C["ink"]};'),
+             ('--label-bg: #12706f;', f'--label-bg: {C["ink"]};'), ('--btn-dark: #005a64;', f'--btn-dark: {C["ink"]};'),
              ('--icon: #12abb1;', f'--icon: {C["main"]};'), ('--tag-bg: #ffee11;', f'--tag-bg: {C["acc"]};'), ('--tag-ink: #0f7f85;', f'--tag-ink: {C["text"]};')]:
     rep(a, b)
-rep('--bg:#ffffff; --text:#323232; --accent:#2864f0; --accent-ink:#1e46aa; --bar:#73a5ff;', f'--bg:#ffffff; --text:{C["text"]}; --accent:{C["dark"]}; --accent-ink:{C["ink"]}; --bar:{C["main"]};')
+rep('--bg:#ffffff; --text:#323232; --accent:#2864f0; --accent-ink:#1e46aa; --bar:#73a5ff;', f'--bg:#ffffff; --text:#323232; --accent:{C["dark"]}; --accent-ink:{C["ink"]}; --bar:{C["main"]};')
 rep('--ill-line:#3c78e6; --ill-fill:#e8f0ff; --ill-sub:#ffc864;', f'--ill-line:{C["dark"]}; --ill-fill:{C["light"]}; --ill-sub:{C["acc"]};')
 rep('--frame:#ffffff; --bg:#f0f4f8; --surface:#ffffff; --text:#222631; --accent:#009baa; --accent-hover:#00788c; --accent-ink:#ffffff;',
-    f'--frame:#ffffff; --bg:{C["tint"]}; --surface:#ffffff; --text:{C["text"]}; --accent:{C["dark"]}; --accent-hover:{C["ink"]}; --accent-ink:#ffffff;')
+    f'--frame:#ffffff; --bg:#f0f4f8; --surface:#ffffff; --text:#222631; --accent:{C["dark"]}; --accent-hover:{C["ink"]}; --accent-ink:#ffffff;')
 rep('--ph-a:#d9dde2; --ph-b:#b9c3cc; --ph-ink:rgba(34,38,49,.45);', f'--ph-a:{C["light"]}; --ph-b:#BFE4E5; --ph-ink:{C["ink"]};')
 rep('--bg:#ffffff; --text:#222222; --ink:#000000; --tile:#fafafa; --price:#009fe7; --link:#00a0e8; --line:#dddddd;',
-    f'--bg:#ffffff; --text:{C["text"]}; --ink:{C["text"]}; --tile:#fafafa; --price:{C["dark"]}; --link:{C["dark"]}; --line:#E6E9EC;')
-rep('--label:#222222; --label-ink:#ffffff; --new:#ff0000; --pink:#e4007e; --strike:#79828c;', f'--label:{C["text"]}; --label-ink:#ffffff; --new:{C["sub"]}; --pink:{C["sub"]}; --strike:#79828c;')
-rep('--bg:#ffffff; --text:#424242; --heading:#000000; --sub-heading:#333333; --accent:#bf0000;', f'--bg:#ffffff; --text:{C["text"]}; --heading:{C["text"]}; --sub-heading:{C["text"]}; --accent:{C["dark"]};')
+    f'--bg:#ffffff; --text:#222222; --ink:#000000; --tile:#fafafa; --price:{C["dark"]}; --link:{C["dark"]}; --line:#dddddd;')
+rep('--label:#222222; --label-ink:#ffffff; --new:#ff0000; --pink:#e4007e; --strike:#79828c;', f'--label:#222222; --label-ink:#ffffff; --new:{C["sub"]}; --pink:{C["sub"]}; --strike:#79828c;')
+rep('--bg:#ffffff; --text:#424242; --heading:#000000; --sub-heading:#333333; --accent:#bf0000;', f'--bg:#ffffff; --text:#424242; --heading:#000000; --sub-heading:#333333; --accent:{C["dark"]};')
 rep('--link:#006ea7; --link-hover:#d80000; --btn:#006ea7; --btn-hover:#006ec2; --btn-ink:#ffffff;', f'--link:{C["dark"]}; --link-hover:{C["ink"]}; --btn:{C["dark"]}; --btn-hover:{C["ink"]}; --btn-ink:#ffffff;')
-rep('--card-line:#eeeeee; --toggle-bg:#ffd3d3; --ph:#f4eed2; --ph-ink:rgba(66,66,66,.55); --badge:#e9d9a6;', f'--card-line:#E6E9EC; --toggle-bg:{C["light"]}; --ph:{C["tint"]}; --ph-ink:{C["ink"]}; --badge:{C["acc"]};')
-for a, b in [('--panel: #f3f1ea;', f'--panel: {C["tint"]};'), ('--text: #3e4240;', f'--text: {C["text"]};'), ('--accent: #1aae6e;', f'--accent: {C["dark"]};'),
-             ('--accent-soft: #e2f9e6;', f'--accent-soft: {C["light"]};'), ('--navy: #0b3a8a;', f'--navy: {C["ink"]};'), ('--dot: #facc5d;', f'--dot: {C["acc"]};')]:
+rep('--card-line:#eeeeee; --toggle-bg:#ffd3d3; --ph:#f4eed2; --ph-ink:rgba(66,66,66,.55); --badge:#e9d9a6;', f'--card-line:#eeeeee; --toggle-bg:{C["light"]}; --ph:#f4eed2; --ph-ink:rgba(66,66,66,.55); --badge:#e9d9a6;')
+for a, b in [('--accent: #1aae6e;', f'--accent: {C["dark"]};'),
+             ('--accent-soft: #e2f9e6;', f'--accent-soft: {C["light"]};'), ('--navy: #0b3a8a;', f'--navy: {C["ink"]};')]:
     rep(a, b)
 rep('--bg:#f8f8f8; --surface:#ffffff; --title:#13202f; --text:#191919; --accent:#f03748; --link:#df1c13; --q:#191919;',
-    f'--bg:{C["tint"]}; --surface:#ffffff; --title:{C["text"]}; --text:{C["text"]}; --accent:{C["dark"]}; --link:{C["dark"]}; --q:{C["text"]};')
-rep('--bg:#ffffff; --text:#231815; --icon:#333333; --accent:#d75a11; --thumb:#f9f8f6;', f'--bg:#ffffff; --text:{C["text"]}; --icon:{C["text"]}; --accent:{C["dark"]}; --thumb:#f9f8f6;')
-rep('--btn:#f2efea; --btn-hover:#e8e2d9; --dark:#231815; --dark-ink:#ffffff;', f'--btn:{C["tint"]}; --btn-hover:{C["light"]}; --dark:{C["text"]}; --dark-ink:#ffffff;')
+    f'--bg:#f8f8f8; --surface:#ffffff; --title:#13202f; --text:#191919; --accent:{C["dark"]}; --link:{C["dark"]}; --q:#191919;')
+rep('--bg:#ffffff; --text:#231815; --icon:#333333; --accent:#d75a11; --thumb:#f9f8f6;', f'--bg:#ffffff; --text:#231815; --icon:#333333; --accent:{C["dark"]}; --thumb:#f9f8f6;')
+rep('--btn:#f2efea; --btn-hover:#e8e2d9; --dark:#231815; --dark-ink:#ffffff;', '--btn:#f2efea; --btn-hover:#e8e2d9; --dark:#231815; --dark-ink:#ffffff;')
 rep('--ph-a:#f3efe8; --ph-b:#e4dccf; --ph-ink:rgba(35,24,21,.45);', f'--ph-a:{C["light"]}; --ph-b:#BFE4E5; --ph-ink:{C["ink"]};')
 rep('--bg:#ffda1b; --surface:#ffffff; --text:#202226; --accent:#447fe0; --accent-ink:#3f6ecc; --badge:#ee7100; --badge-ink:#ffffff; --line:#f0f1f5;',
-    f'--bg:{C["acc"]}; --surface:#ffffff; --text:{C["text"]}; --accent:{C["dark"]}; --accent-ink:{C["ink"]}; --badge:{C["sub"]}; --badge-ink:#ffffff; --line:#f0f1f5;')
+    f'--bg:{C["acc"]}; --surface:#ffffff; --text:#202226; --accent:{C["dark"]}; --accent-ink:{C["ink"]}; --badge:{C["sub"]}; --badge-ink:#ffffff; --line:#f0f1f5;')
 rep('--ph-a:#f5f7fb; --ph-b:#e3eaf7; --ph-c:#f3e6c4;', f'--ph-a:{C["tint"]}; --ph-b:{C["light"]}; --ph-c:{C["accl"]};')
 for a, b in [('--navy: #002777;', f'--navy: {C["ink"]};'), ('--photo-a: #8fb0d6;', f'--photo-a: {C["main"]};'), ('--photo-b: #1d3f7a;', f'--photo-b: {C["ink"]};')]:
     rep(a, b)
@@ -212,7 +203,7 @@ block('SEC-163', '''
             <span class="sec163__line sec163__line--2">5つの質問<small>で。</small></span>
           </h1>
           <div class="sec163__kv sec163__kv--sp" aria-hidden="true">
-            <div class="sec163__kvImg"><img class="rd-kv" src="/assets/images/workshop.jpg" alt="" width="1536" height="1024"><span class="sec163__kvLabel">溶接現場のイメージ（AI生成）</span></div>
+            <div class="sec163__kvImg"><img class="rd-person rd-person--l" src="/assets/images/redesign/hero-person-l.webp" alt=""><img class="rd-person rd-person--r" src="/assets/images/redesign/hero-person-r.webp" alt=""><img class="rd-person rd-person--c" src="/assets/images/redesign/hero-person-c.webp" alt=""></div>
           </div>
         </div>
         <ul class="sec163__buttons">
@@ -236,15 +227,52 @@ block('SEC-163', '''
       </div>
     </div>
     <div class="sec163__kv sec163__kv--pc" aria-hidden="true">
-      <div class="sec163__kvImg"><img class="rd-kv" src="/assets/images/workshop.jpg" alt="" width="1536" height="1024"><span class="sec163__kvLabel">溶接現場のイメージ（AI生成）</span></div>
+      <div class="sec163__kvImg"><img class="rd-person rd-person--l" src="/assets/images/redesign/hero-person-l.webp" alt=""><img class="rd-person rd-person--r" src="/assets/images/redesign/hero-person-r.webp" alt=""><img class="rd-person rd-person--c" src="/assets/images/redesign/hero-person-c.webp" alt=""></div>
     </div>
   </div>
 </section>''')
 
 # ---------- ③ 悩み ----------
+# 悩みのイラスト: トレース元（freee）と同じ描き方（線2.5・薄い塗り・黄色の差し色・点線のつなぎ）で、内容だけ溶接に置き換える
+ILL = {
+ "user": '''<svg viewBox="0 0 172 150" fill="none" stroke="var(--ill-line)" stroke-width="2.5" aria-hidden="true">
+            <path d="M64 62 52 84M108 62l12 22M72 120h28" stroke-dasharray="2 5"/>
+            <circle cx="86" cy="36" r="33" fill="var(--ill-fill)"/>
+            <path d="M66 50c0-14 9-25 20-25s20 11 20 25v6H66z" fill="#fff"/><rect x="73" y="36" width="26" height="10" rx="3" fill="var(--ill-sub)"/>
+            <circle cx="38" cy="113" r="33" fill="var(--ill-fill)"/>
+            <path d="M20 104h24l6 6v6H34l-4 14h-8l2-14h-4z" fill="#fff"/><path d="M52 113h8M56 106l5-4M56 120l5 4"/>
+            <circle cx="134" cy="113" r="33" fill="var(--ill-fill)"/>
+            <path d="M120 113l9 9 17-18" stroke-width="3.5"/>
+          </svg>''',
+ "alcu": '''<svg viewBox="0 0 130 150" fill="none" stroke="var(--ill-line)" stroke-width="2.5" aria-hidden="true">
+            <path d="M24 34l16 22M65 36v20M106 34 90 56" stroke-dasharray="2 4"/>
+            <circle cx="18" cy="22" r="14" fill="var(--ill-fill)"/><circle cx="65" cy="16" r="14" fill="var(--ill-sub)"/><circle cx="112" cy="22" r="14" fill="var(--ill-fill)"/>
+            <path d="M14 62h102l-8 18H6z" fill="#fff"/>
+            <path d="M20 86h102l-8 18H12z" fill="var(--ill-fill)"/>
+            <path d="M26 110h96l-8 18H18z" fill="var(--ill-sub)"/>
+            <path d="M10 140h110"/>
+          </svg>''',
+ "thick": '''<svg viewBox="0 0 176 150" fill="none" stroke="var(--ill-line)" stroke-width="2.5" aria-hidden="true">
+            <rect x="128" y="14" width="18" height="56" fill="var(--ill-sub)"/>
+            <path d="M12 144V72l34-24v24l34-24v24l34-24v24l34-24v96z" fill="#fff"/>
+            <path d="M26 96h28v20H26zM74 96h28v20H74zM122 96h28v20h-28z" fill="var(--ill-fill)" stroke-width="1.8"/>
+            <path d="M4 144h168"/>
+            <rect x="60" y="126" width="56" height="18" fill="var(--ill-fill)"/><path d="M60 126h56" stroke="var(--bar)" stroke-width="6"/>
+          </svg>''',
+ "yen": '''<svg viewBox="0 0 197 150" fill="none" stroke="var(--ill-line)" stroke-width="2.5" aria-hidden="true">
+            <rect x="20" y="6" width="96" height="138" rx="6" fill="#fff"/>
+            <rect x="32" y="18" width="72" height="28" fill="var(--ill-fill)" stroke-width="1.8"/>
+            <path d="M32 60h18v14H32zM59 60h18v14H59zM86 60h18v14H86zM32 84h18v14H32zM59 84h18v14H59zM32 108h18v14H32zM59 108h18v14H59z" fill="var(--ill-fill)" stroke-width="1.8"/>
+            <rect x="86" y="84" width="18" height="38" fill="var(--ill-sub)" stroke-width="1.8"/>
+            <circle cx="156" cy="104" r="34" fill="var(--ill-sub)"/>
+            <path d="M144 86l12 16 12-16M156 102v24M145 108h22M145 117h22"/>
+          </svg>''',
+}
 def it082(pict, name, text, href):
     return f'''      <a class="sec082__item" href="{href}">
-        <div class="sec082__image"><span class="rd-ill">{P(pict)}</span></div>
+        <div class="sec082__image">
+          {ILL[pict]}
+        </div>
         <div class="sec082__wrap">
           <h3 class="sec082__name">{name}</h3>
           <p class="sec082__text">{text}</p>
@@ -255,10 +283,10 @@ block('SEC-082', f'''
   <div class="sec082__inner">
     <h2 class="sec082__title">こんな悩みから、<br class="sec082__md">現場に合うレーザー溶接機を<br class="sec082__md">探せます。</h2>
     <div class="sec082__list">
-{it082("user", "新人に任せたい", "熟練工がいなくても、新人がすぐ使える機種を", q("skill", "未経験可"))}
-{it082("alcu", "アルミ・銅", "外注しているアルミ・銅の溶接を、自社で", q("material", "アルミ"))}
-{it082("thick", "中厚・厚物を速く", "TIGで時間のかかる中厚板を、レーザーで", q("thickness", "3〜6mm"))}
-{it082("yen", "予算を抑えたい", "100〜200万円で、補助金も使って導入", "/subsidy/")}
+{it082("user", "新人に任せたい", "熟練工がいなくても、<br>新人がすぐ使える機種を", q("skill", "未経験可"))}
+{it082("alcu", "アルミ・銅", "外注しているアルミ・銅の<br>溶接を、自社でやりたい", q("material", "アルミ"))}
+{it082("thick", "中厚・厚物を速く", "TIGで時間のかかる中厚板を、<br>レーザーで溶接したい", q("thickness", "3〜6mm"))}
+{it082("yen", "予算を抑えたい", "100〜200万円で、<br>補助金も使って導入したい", "/subsidy/")}
     </div>
   </div>
 </section>''')
@@ -496,14 +524,14 @@ extra = '''
 .sec121__logo-ph { width: auto; height: 30px; gap: 6px; border: 0; padding: 0; color: #313131; font-size: 13px; font-weight: 700; line-height: 1.15; letter-spacing: 0; text-align: left; }
 .sec121__logo-ph .rd-pict { width: 28px; height: 28px; }
 @media (max-width: 767px) { .sec121__logo-ph { width: auto; height: 28px; font-size: 12px; } }
-.sec163__kvImg { overflow: hidden; border-radius: 0; }
-.rd-kv { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.rd-ill { display: grid; place-items: center; width: 132px; height: 132px; border-radius: 50%; background: var(--ill-fill); }
-.rd-ill .rd-pict { width: 64px; height: 64px; color: var(--ill-line); }
-@media (max-width: 767px) { .rd-ill { width: 88px; height: 88px; } .rd-ill .rd-pict { width: 44px; height: 44px; } }
+/* ヒーロー: トレース元の「切り抜き人物 3人（左・中央手前・右）」の位置に、切り抜いた人物写真を置く */
+.rd-person { position: absolute; bottom: 0; width: auto; display: block; }
+.rd-person--l { left: 0; height: 74%; }
+.rd-person--c { left: 28%; height: 84%; z-index: 2; }
+.rd-person--r { right: 6%; height: 78%; z-index: 1; }
 .sec044__ph .rd-pict { width: 64px; height: 64px; color: #0B6A6C; }
 @media (max-width: 767px) { .sec044__ph .rd-pict { width: 40px; height: 40px; } }
-.sec090__img { overflow: hidden; background: #fff; border: 1px solid #E6E9EC; }
+.sec090__img { overflow: hidden; }
 .sec090__img img { width: 100%; height: 100%; object-fit: contain; }
 .sec090__img .rd-pict { width: 44px; height: 44px; color: #0E7F82; }
 .sec116__badge { padding-top: 0; display: grid; place-items: center; }
@@ -521,14 +549,13 @@ extra = '''
 .rd-sns { color: #fff; font-size: 13px; text-decoration: none; }
 .sec161__item .rd-link { color: #fff; }
 .rd-logo { color: #313131 !important; }
-.rd-cover { text-wrap: balance; }
-.sec142__bg { display: none; }
-.sec142 { --ph-fig: #E3F4F4; --arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25.239 9.978'%3E%3Crect fill='%230E7F82' y='4.011' width='13.793' height='1.859'/%3E%3Cpolygon fill='%230E7F82' points='14.722 0 25.239 4.989 14.722 9.978 14.722 0'/%3E%3C/svg%3E"); }
-.sec082__text { text-wrap: balance; }
+.sec142 { --arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25.239 9.978'%3E%3Crect fill='%230E7F82' y='4.011' width='13.793' height='1.859'/%3E%3Cpolygon fill='%230E7F82' points='14.722 0 25.239 4.989 14.722 9.978 14.722 0'/%3E%3C/svg%3E"); }
 /* --- 崩れの修正（2026-10-11） ---
    1) 上部の帯（SEC-077）とヘッダー（SEC-121）がどちらも上に貼り付き、スクロールすると帯がヘッダーと本文に重なっていた。
       帯は先頭で流れて消えるようにし、上に残るのはヘッダーだけにする */
-.sec077 { position: relative; top: auto; }
+.sec121 { top: 48px; }
+.sec077.is-closed + .sec121 { top: 0; }
+@media (max-width: 767px) { .sec121 { top: 56px; } }
 /* 2) 掲載機種カード: 機種名・説明が右の写真の下に潜り込んでいた（元パーツより文字が長い）。写真の幅だけ右をあける */
 .sec090__name, .sec090__price, .sec090__text { padding-right: 122px; }
 .sec090__name { overflow-wrap: anywhere; }
@@ -539,16 +566,16 @@ extra = '''
 /* 4) 写真を入れたスロット: 枠いっぱいに切り抜く */
 .rd-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
 .sec009__ph, .sec135__ph { position: relative; overflow: hidden; }
-.sec135__ph--doc .rd-photo { inset: 4% 22% 16% 4%; width: auto; height: auto; }
+/* 相談の画像: トレース元のイラストが占める範囲（資料=52%×62%、画面=66%×66%）に写真を収める */
+.sec135__ph .rd-photo { left: 17%; top: 13.6%; width: 66%; height: 66%; }
+.sec135__ph--doc .rd-photo { left: 8.64%; top: 8.36%; width: 52%; height: 62%; z-index: 1; }
 /* フッターの写真: 1100px 未満は .sec161__contents、1100px 以上は .sec161__main が背景を持つ（元パーツの切り替えに合わせる） */
 .sec161__contents { background: linear-gradient(160deg, rgba(20,163,166,.88) 0%, rgba(14,127,130,.86) 45%, rgba(11,106,108,.94) 100%), url("/assets/images/redesign/footer-factory.jpg") center / cover no-repeat; }
 @media only screen and (min-width: 1100px) {
   .sec161__contents { background: none; }
   .sec161__main { background: linear-gradient(160deg, rgba(20,163,166,.88) 0%, rgba(14,127,130,.86) 45%, rgba(11,106,108,.94) 100%), url("/assets/images/redesign/footer-factory.jpg") center / cover no-repeat; }
 }
-.sec135__ph--doc .rd-photo { object-position: 72% 30%; }
-/* 5) 探し方のカード: 元パーツは5列の枠に並べる作り。4枚だと右に1列ぶん空きが出て左に寄るので、4列にする */
-@media (min-width: 768px) { .sec044__cards { grid-template-columns: repeat(4, 1fr); } }
+.sec135__ph--doc .rd-photo { object-position: 64% 30%; }
 /* 6) 768〜1099px（タブレット）: 元パーツの PC 寸法のままだと詰まる所を、割合で収める */
 @media (min-width: 768px) and (max-width: 1099px) {
   .sec082__list { gap: 40px 20px; padding: 0 24px; }

@@ -7,24 +7,34 @@
 <!-- 本番公開時に削除：検索エンジンのインデックスを許可する -->
 <meta name="robots" content="noindex,nofollow">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Montserrat:wght@500;700&display=swap">
 <!-- 組み立て: SEC-077 → SEC-121 → SEC-163 → SEC-082 → SEC-044 → SEC-090 → SEC-116 → SEC-142 → SEC-097 → SEC-009 → SEC-135 → SEC-161 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700;900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700;900&family=Zen+Kaku+Gothic+New:wght@700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600&family=Roboto:wght@400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=LINE+Seed+JP:wght@400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Noto+Sans+JP:wght@500;700;800&family=Roboto:wght@500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Oswald:wght@400&display=swap">
 <style>
 html{-webkit-text-size-adjust:100%}
 body{margin:0}
 /* ===== SEC-077 ===== */
 /* ここから下がパーツ本体。組み立て時はこの <style> と <div> をそのまま貼る */
 .sec077 {
-  --bg:#0E7F82; --panel:#ffffff; --ink:#313131; --accent:#6A4FA8; --accent-dark:#56408A; --accent-ink:#ffffff;
+  --bg:#0E7F82; --panel:#ffffff; --ink:#204253; --accent:#6A4FA8; --accent-dark:#56408A; --accent-ink:#ffffff;
   --yellow:#D2DF1E; --deco:#0B6A6C; --stripe:#14A3A6; --mark:#D2DF1E;
   --top:0px;
 }
 .sec077, .sec077 * { box-sizing:border-box; margin:0; padding:0; }
 .sec077 {
   position:sticky; top:var(--top); z-index:200; overflow:hidden; height:48px; background:var(--bg);
-  font-family: "BIZ UDPGothic", sans-serif; font-weight:700; line-height:1; color:var(--ink); -webkit-font-smoothing:antialiased;
+  font-family:"Noto Sans JP",sans-serif; font-weight:700; line-height:1; color:var(--ink); -webkit-font-smoothing:antialiased;
   transition:height .3s ease;
 }
 .sec077.is-closed { height:0; }
@@ -105,13 +115,13 @@ body{margin:0}
 /* ===== SEC-121 ===== */
 /* ここから下がパーツ本体。組み立て時はこの <style> と <header> をそのまま貼る */
 .sec121 {
-  --bg:#ffffff; --text:#313131; --accent:#0E7F82; --accent-ink:#ffffff; --line:rgba(0,0,0,.11); --soft:rgba(0,0,0,.05);
-  --rule:#F1FAFA; --shadow:rgba(33,51,67,.12); --dark:#313131; --muted:#5F6874;
+  --bg:#ffffff; --text:#1f1f1f; --accent:#0E7F82; --accent-ink:#ffffff; --line:rgba(0,0,0,.11); --soft:rgba(0,0,0,.05);
+  --rule:#f6f9fc; --shadow:rgba(33,51,67,.12); --dark:#1f1f1f; --muted:#666666;
 }
 .sec121, .sec121 * { box-sizing:border-box; margin:0; padding:0; }
 .sec121 {
   position:sticky; top:0; z-index:95; background:var(--bg); color:var(--text); box-shadow:0 2px 4px var(--shadow);
-  font-family: "BIZ UDPGothic", sans-serif; font-size:16px; font-weight:400; line-height:28px; -webkit-font-smoothing:antialiased;
+  font-family:"Zen Kaku Gothic New",sans-serif; font-size:16px; font-weight:400; line-height:28px; -webkit-font-smoothing:antialiased;
 }
 .sec121 a { color:inherit; text-decoration:none; }
 .sec121 ul { list-style:none; }
@@ -233,7 +243,7 @@ body{margin:0}
   --bg-b: #14A3A6;
   --bg-c: #2BB8BB;
   --text: #fff;
-  --ink: #313131;
+  --ink: #23221f;
   --label-bg: #0B6A6C;
   --btn: #fff;
   --btn-dark: #0B6A6C;
@@ -252,7 +262,7 @@ body{margin:0}
   overflow: hidden;
   background: linear-gradient(229deg, var(--bg-a) 3.72%, var(--bg-b) 25.4%, var(--bg-c) 45.5%, var(--bg-a) 85.7%);
   color: var(--ink);
-  font-family: "BIZ UDPGothic", sans-serif;
+  font-family: "Zen Kaku Gothic New", sans-serif;
   font-size: 16px; line-height: 1.5;
 }
 .sec163__inner { position: relative; display: grid; align-items: center; width: 100%; max-width: 1240px; }
@@ -264,7 +274,7 @@ body{margin:0}
 .sec163__shoulder {
   display: flex; align-items: center;
   height: 42px; margin-left: 2px;
-  font-family: "BIZ UDPGothic", sans-serif; font-weight: 700;
+  font-family: "Noto Sans JP", sans-serif; font-weight: 700;
   font-size: 27px; line-height: 1; letter-spacing: -.02em;
   color: var(--text); white-space: nowrap;
   font-feature-settings: "palt";
@@ -279,7 +289,7 @@ body{margin:0}
 /* 大見出し：太いゴシックを横に詰めて、つなぎの字だけ小さく */
 .sec163__copy {
   display: grid; gap: 18px;
-  font-family: "BIZ UDPGothic", sans-serif; font-weight: 900;
+  font-family: "Noto Sans JP", sans-serif; font-weight: 900;
   color: var(--text); white-space: nowrap;
   font-feature-settings: "palt";
 }
@@ -431,13 +441,13 @@ body{margin:0}
 /* ===== SEC-082 ===== */
 /* ここから下がパーツ本体。組み立て時はこの <style> と <section> をそのまま貼る */
 .sec082 {
-  --bg:#ffffff; --text:#313131; --accent:#0E7F82; --accent-ink:#0B6A6C; --bar:#14A3A6;
+  --bg:#ffffff; --text:#323232; --accent:#0E7F82; --accent-ink:#0B6A6C; --bar:#14A3A6;
   --ill-line:#0E7F82; --ill-fill:#E3F4F4; --ill-sub:#D2DF1E;
 }
 .sec082, .sec082 * { box-sizing:border-box; margin:0; padding:0; }
 .sec082 {
   padding:75px 0 120px; background:var(--bg); color:var(--text);
-  font-family: "BIZ UDPGothic", sans-serif; font-size:16px; font-weight:400; line-height:24px;
+  font-family:"Noto Sans JP", sans-serif; font-size:16px; font-weight:400; line-height:24px;
   -webkit-font-smoothing:antialiased;
 }
 .sec082__inner { max-width:1068px; margin:0 auto; }
@@ -475,14 +485,14 @@ body{margin:0}
 /* ===== SEC-044 ===== */
 /* ここから下がパーツ本体。組み立て時はこの <style> と <section> をそのまま貼る */
 .sec044 {
-  --frame:#ffffff; --bg:#F1FAFA; --surface:#ffffff; --text:#313131; --accent:#0E7F82; --accent-hover:#0B6A6C; --accent-ink:#ffffff;
+  --frame:#ffffff; --bg:#f0f4f8; --surface:#ffffff; --text:#222631; --accent:#0E7F82; --accent-hover:#0B6A6C; --accent-ink:#ffffff;
   --shadow:rgba(0,20,50,.08); --accent-tint:rgba(0,155,170,.2); --pattern:rgba(255,255,255,.85);
   --ph-a:#E3F4F4; --ph-b:#BFE4E5; --ph-ink:#0B6A6C;
 }
 .sec044, .sec044 * { box-sizing:border-box; margin:0; padding:0; }
 .sec044 {
   padding:20px; background:var(--frame); color:var(--text);
-  font-family: "BIZ UDPGothic", sans-serif; font-size:16px; font-weight:400; line-height:24px;
+  font-family:"Noto Sans JP", sans-serif; font-size:16px; font-weight:400; line-height:24px;
   -webkit-font-smoothing:antialiased;
 }
 .sec044 a { color:inherit; text-decoration:none; }
@@ -497,7 +507,7 @@ body{margin:0}
 /* 見出し */
 .sec044__heading { position:relative; padding-bottom:20px; text-align:center; }
 .sec044__heading::after { content:""; position:absolute; left:50%; top:94.4px; width:60px; height:2px; margin-left:-30px; background:var(--accent); }
-.sec044__en { font-family: "BIZ UDPGothic", sans-serif; font-size:48px; line-height:48px; letter-spacing:1.92px; }
+.sec044__en { font-family:"Lato", sans-serif; font-size:48px; line-height:48px; letter-spacing:1.92px; }
 .sec044__ja { margin-top:6px; font-size:16px; font-weight:700; line-height:22.4px; letter-spacing:.64px; }
 .sec044__text { margin-top:21px; font-size:14px; font-weight:500; line-height:30.8px; letter-spacing:.56px; text-align:center; }
 
@@ -549,14 +559,14 @@ body{margin:0}
 /* ===== SEC-090 ===== */
 /* ここから下がパーツ本体。組み立て時はこの <style> と <section> をそのまま貼る */
 .sec090 {
-  --bg:#ffffff; --text:#313131; --ink:#313131; --tile:#fafafa; --price:#0E7F82; --link:#0E7F82; --line:#E6E9EC;
-  --label:#313131; --label-ink:#ffffff; --new:#6A4FA8; --pink:#6A4FA8; --strike:#79828c;
+  --bg:#ffffff; --text:#222222; --ink:#000000; --tile:#fafafa; --price:#0E7F82; --link:#0E7F82; --line:#dddddd;
+  --label:#222222; --label-ink:#ffffff; --new:#6A4FA8; --pink:#6A4FA8; --strike:#79828c;
   --ph:rgba(34,48,60,.07); --ph-ink:rgba(34,34,34,.4);
 }
 .sec090, .sec090 * { box-sizing:border-box; margin:0; padding:0; }
 .sec090 {
   background:var(--bg); color:var(--text);
-  font-family: "BIZ UDPGothic", sans-serif; font-size:14px; line-height:1.5; font-weight:400;
+  font-family:Roboto, "Noto Sans JP", sans-serif; font-size:14px; line-height:1.5; font-weight:400;
   -webkit-font-smoothing:antialiased;
 }
 .sec090 a { text-decoration:none; color:inherit; }
@@ -617,14 +627,14 @@ body{margin:0}
 /* ===== SEC-116 ===== */
 /* ここから下がパーツ本体。組み立て時はこの <style> と <section> をそのまま貼る */
 .sec116 {
-  --bg:#ffffff; --text:#313131; --heading:#313131; --sub-heading:#313131; --accent:#0E7F82;
+  --bg:#ffffff; --text:#424242; --heading:#000000; --sub-heading:#333333; --accent:#0E7F82;
   --link:#0E7F82; --link-hover:#0B6A6C; --btn:#0E7F82; --btn-hover:#0B6A6C; --btn-ink:#ffffff;
-  --card-line:#E6E9EC; --toggle-bg:#E3F4F4; --ph:#F1FAFA; --ph-ink:#0B6A6C; --badge:#D2DF1E;
+  --card-line:#eeeeee; --toggle-bg:#E3F4F4; --ph:#f4eed2; --ph-ink:rgba(66,66,66,.55); --badge:#e9d9a6;
 }
 .sec116, .sec116 * { box-sizing:border-box; margin:0; padding:0; }
 .sec116 {
   background:var(--bg); color:var(--text); text-align:center;
-  font-family: "BIZ UDPGothic", sans-serif; font-size:14px; line-height:1.75; font-weight:400;
+  font-family:"Noto Sans JP", sans-serif; font-size:14px; line-height:1.75; font-weight:400;
   -webkit-font-smoothing:antialiased;
 }
 .sec116 a { color:var(--link); text-decoration:none; transition:color .2s cubic-bezier(.25,0,.45,1); }
@@ -713,12 +723,12 @@ body{margin:0}
 /* ここから下がパーツ本体。組み立て時はこの <style> と <section> をそのまま貼る */
 .sec142 {
   --bg: #ffffff;
-  --panel: #F1FAFA;
-  --text: #313131;
+  --panel: #f3f1ea;
+  --text: #3e4240;
   --accent: #0E7F82;
   --accent-soft: #E3F4F4;
   --navy: #0B6A6C;
-  --dot: #D2DF1E;
+  --dot: #facc5d;
   --btn-line: #d8dedb;
   --btn-shadow: rgba(101, 141, 124, .15);
   --on-accent: #ffffff;
@@ -734,7 +744,7 @@ body{margin:0}
   padding: 65px 0 90px;
   background: var(--bg);
   color: var(--text);
-  font-family: "BIZ UDPGothic", sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.8;
@@ -776,7 +786,7 @@ body{margin:0}
 .sec142__num {
   display: flex; align-items: center; justify-content: center; flex-shrink: 0; width: 40px; height: 40px;
   border-radius: 50%; background: var(--accent); color: var(--on-accent);
-  font-family: Montserrat, "BIZ UDPGothic", sans-serif; font-size: 22px; font-weight: 500;
+  font-family: Montserrat, sans-serif; font-size: 22px; font-weight: 500;
 }
 .sec142__step-title { width: calc(100% - 55px); margin-left: 15px; font-size: 26px; font-weight: 700; line-height: 1.3; }
 .sec142__fig {
@@ -791,7 +801,7 @@ body{margin:0}
 /* 右の説明 */
 .sec142__body { width: 50%; padding-top: 20px; }
 .sec142__title { font-size: 28px; font-weight: 700; line-height: 1.3; }
-.sec142__en { margin-top: 5px; color: var(--accent); font-family: Montserrat, "BIZ UDPGothic", sans-serif; font-size: 12px; font-weight: 700; letter-spacing: .1em; }
+.sec142__en { margin-top: 5px; color: var(--accent); font-family: Montserrat, sans-serif; font-size: 12px; font-weight: 700; letter-spacing: .1em; }
 .sec142__text { margin-top: 40px; }
 .sec142__box { position: relative; margin: 60px 25px 0; padding: 50px 25px 30px; background: var(--bg); }
 .sec142__box-title {
@@ -876,12 +886,12 @@ body{margin:0}
 /* ===== SEC-097 ===== */
 /* ここから下がパーツ本体。組み立て時はこの <style> と <section> をそのまま貼る */
 .sec097 {
-  --bg:#F1FAFA; --surface:#ffffff; --title:#313131; --text:#313131; --accent:#0E7F82; --link:#0E7F82; --q:#313131; --badge-ink:#ffffff;
+  --bg:#f8f8f8; --surface:#ffffff; --title:#13202f; --text:#191919; --accent:#0E7F82; --link:#0E7F82; --q:#191919; --badge-ink:#ffffff;
 }
 .sec097, .sec097 *, .sec097 *::before, .sec097 *::after { box-sizing:border-box; margin:0; padding:0; }
 .sec097 {
   padding:100px 0 50px; background:var(--bg); color:var(--text);
-  font-family: "BIZ UDPGothic", sans-serif; font-size:16px; font-weight:400; line-height:1.6; -webkit-font-smoothing:antialiased;
+  font-family:"LINE Seed JP", sans-serif; font-size:16px; font-weight:400; line-height:1.6; -webkit-font-smoothing:antialiased;
 }
 .sec097__inner { max-width:980px; margin:0 auto; padding:0 10px; }
 .sec097__title { position:relative; margin-bottom:32px; font-weight:700; font-size:32px; line-height:1.3; color:var(--title); }
@@ -890,7 +900,7 @@ body{margin:0}
 .sec097__q, .sec097__a { display:flex; align-items:center; }
 .sec097__q::before, .sec097__a::before {
   display:block; flex-shrink:0; width:2em; height:2em; margin-right:15px; border-radius:100vh;
-  color:var(--badge-ink); font-family: "BIZ UDPGothic", sans-serif; font-size:16px; font-weight:700; line-height:2em; text-align:center;
+  color:var(--badge-ink); font-family:"Hiragino Sans", "LINE Seed JP", sans-serif; font-size:16px; font-weight:700; line-height:2em; text-align:center;
 }
 .sec097__q {
   position:relative; margin-bottom:10px; padding:20px; background:var(--surface); border-radius:20px;
@@ -925,21 +935,21 @@ body{margin:0}
 /* ===== SEC-009 ===== */
 /* ここから下がパーツ本体。組み立て時はこの <style> と <section> をそのまま貼る */
 .sec009 {
-  --bg:#ffffff; --text:#313131; --icon:#313131; --accent:#0E7F82; --thumb:#f9f8f6;
-  --btn:#F1FAFA; --btn-hover:#E3F4F4; --dark:#313131; --dark-ink:#ffffff;
+  --bg:#ffffff; --text:#231815; --icon:#333333; --accent:#0E7F82; --thumb:#f9f8f6;
+  --btn:#f2efea; --btn-hover:#e8e2d9; --dark:#231815; --dark-ink:#ffffff;
   --ph-a:#E3F4F4; --ph-b:#BFE4E5; --ph-ink:#0B6A6C;
 }
 .sec009, .sec009 * { box-sizing:border-box; margin:0; padding:0; }
 .sec009 {
   display:flex; justify-content:center; padding:120px 0; background:var(--bg); color:var(--text);
-  font-family: "BIZ UDPGothic", sans-serif; font-weight:500; font-size:16px; line-height:1;
+  font-family:"Zen Kaku Gothic New", sans-serif; font-weight:500; font-size:16px; line-height:1;
   -webkit-font-smoothing:antialiased;
 }
 .sec009 a { color:inherit; text-decoration:none; }
 .sec009__inner { width:1200px; max-width:calc(100% - 48px); display:flex; flex-direction:column; align-items:center; gap:80px; }
 .sec009__head { width:100%; display:flex; flex-direction:column; gap:16px; }
 .sec009__titles { display:flex; flex-direction:column; gap:8px; }
-.sec009__en { font-family: Montserrat, "BIZ UDPGothic", sans-serif; font-weight:700; font-size:16px; line-height:22.4px; letter-spacing:.8px; color:var(--accent); }
+.sec009__en { font-family:"Sulphur Point", sans-serif; font-weight:700; font-size:16px; line-height:22.4px; letter-spacing:.8px; color:var(--accent); }
 .sec009__title { font-weight:700; font-size:40px; line-height:68px; letter-spacing:2px; }
 .sec009__lead { font-size:16px; line-height:32px; letter-spacing:.8px; }
 
@@ -1017,20 +1027,20 @@ body{margin:0}
 /* ===== SEC-135 ===== */
 /* ここから下がパーツ本体。組み立て時はこの <style> と <section> をそのまま貼る */
 .sec135 {
-  --bg:#D2DF1E; --surface:#ffffff; --text:#313131; --accent:#0E7F82; --accent-ink:#0B6A6C; --badge:#6A4FA8; --badge-ink:#ffffff; --line:#f0f1f5;
+  --bg:#D2DF1E; --surface:#ffffff; --text:#202226; --accent:#0E7F82; --accent-ink:#0B6A6C; --badge:#6A4FA8; --badge-ink:#ffffff; --line:#f0f1f5;
   --ph-a:#F1FAFA; --ph-b:#E3F4F4; --ph-c:#F4F7D0; --ph-ink:rgba(32,34,38,.45);
 }
 .sec135, .sec135 * { box-sizing:border-box; margin:0; padding:0; }
 .sec135 {
   padding:80px 0; background:var(--bg); color:var(--text); text-align:center;
-  font-family: "BIZ UDPGothic", sans-serif; font-size:16px; line-height:1.8; font-weight:500;
+  font-family:"Noto Sans JP",sans-serif; font-size:16px; line-height:1.8; font-weight:500;
   font-feature-settings:"palt"; -webkit-font-smoothing:antialiased;
 }
 .sec135 a { text-decoration:none; }
 .sec135 ul { list-style:none; }
 .sec135__inner { position:relative; max-width:1280px; margin:0 auto; padding:0 60px; }
 .sec135__title {
-  margin-bottom:48px; font-family: "BIZ UDPGothic", sans-serif; font-size:40px; line-height:1.2; font-weight:800; letter-spacing:.1em;
+  margin-bottom:48px; font-family:"Noto Sans JP",sans-serif; font-size:40px; line-height:1.2; font-weight:800; letter-spacing:.1em;
 }
 .sec135__br { display:none; }
 .sec135__list {
@@ -1071,11 +1081,11 @@ body{margin:0}
 .sec135__sub { font-size:24px; line-height:1.4; font-weight:700; letter-spacing:.0543em; }
 .sec135__tel {
   display:flex; justify-content:center; align-items:center; margin-top:16px;
-  font-family: "BIZ UDPGothic", sans-serif; font-size:56px; line-height:64px; font-weight:700; color:var(--accent-ink);
+  font-family:"Inter",sans-serif; font-size:56px; line-height:64px; font-weight:700; color:var(--accent-ink);
 }
 .sec135__tel-icon { display:block; flex:none; width:64px; height:64px; margin-right:16px; }
 .sec135__hours {
-  display:block; padding:8px 0 8px 16px; font-family: "BIZ UDPGothic", sans-serif; font-size:16px; line-height:24px; font-weight:500;
+  display:block; padding:8px 0 8px 16px; font-family:"Roboto",sans-serif; font-size:16px; line-height:24px; font-weight:500;
   text-align:left; color:var(--text); white-space:nowrap;
 }
 .sec135__hours-br { display:block; }
@@ -1123,7 +1133,7 @@ body{margin:0}
 .sec161, .sec161 *, .sec161 ::before, .sec161 ::after { box-sizing: border-box; margin: 0; padding: 0; }
 .sec161 {
   background: var(--bg); color: var(--text);
-  font-family: "BIZ UDPGothic", sans-serif;
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
   font-size: 14.4px; font-weight: 400; line-height: 27.2px; letter-spacing: 1.6px;
 }
 .sec161 a { color: inherit; text-decoration: none; }
@@ -1210,7 +1220,7 @@ body{margin:0}
 .sec161__footnav li:last-child::after { display: none; }
 .sec161__footnav a { position: relative; padding-bottom: 2px; }
 .sec161__footnav a::before { content: ""; position: absolute; bottom: 0; left: 0; display: block; width: 100%; height: 1px; background: var(--white); }
-.sec161__copyright { display: block; margin-top: 15px; font-family: Montserrat, "BIZ UDPGothic", sans-serif; font-size: 9.6px; font-weight: 400; line-height: 1; }
+.sec161__copyright { display: block; margin-top: 15px; font-family: Oswald, "Helvetica Neue", Arial, sans-serif; font-size: 9.6px; font-weight: 400; line-height: 1; }
 
 @media (max-width: 767px) {
   .sec161__footnav li { margin-right: 12px; padding-right: 17px; }
@@ -1289,14 +1299,14 @@ body{margin:0}
 .sec121__logo-ph { width: auto; height: 30px; gap: 6px; border: 0; padding: 0; color: #313131; font-size: 13px; font-weight: 700; line-height: 1.15; letter-spacing: 0; text-align: left; }
 .sec121__logo-ph .rd-pict { width: 28px; height: 28px; }
 @media (max-width: 767px) { .sec121__logo-ph { width: auto; height: 28px; font-size: 12px; } }
-.sec163__kvImg { overflow: hidden; border-radius: 0; }
-.rd-kv { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.rd-ill { display: grid; place-items: center; width: 132px; height: 132px; border-radius: 50%; background: var(--ill-fill); }
-.rd-ill .rd-pict { width: 64px; height: 64px; color: var(--ill-line); }
-@media (max-width: 767px) { .rd-ill { width: 88px; height: 88px; } .rd-ill .rd-pict { width: 44px; height: 44px; } }
+/* ヒーロー: トレース元の「切り抜き人物 3人（左・中央手前・右）」の位置に、切り抜いた人物写真を置く */
+.rd-person { position: absolute; bottom: 0; width: auto; display: block; }
+.rd-person--l { left: 0; height: 74%; }
+.rd-person--c { left: 28%; height: 84%; z-index: 2; }
+.rd-person--r { right: 6%; height: 78%; z-index: 1; }
 .sec044__ph .rd-pict { width: 64px; height: 64px; color: #0B6A6C; }
 @media (max-width: 767px) { .sec044__ph .rd-pict { width: 40px; height: 40px; } }
-.sec090__img { overflow: hidden; background: #fff; border: 1px solid #E6E9EC; }
+.sec090__img { overflow: hidden; }
 .sec090__img img { width: 100%; height: 100%; object-fit: contain; }
 .sec090__img .rd-pict { width: 44px; height: 44px; color: #0E7F82; }
 .sec116__badge { padding-top: 0; display: grid; place-items: center; }
@@ -1314,14 +1324,13 @@ body{margin:0}
 .rd-sns { color: #fff; font-size: 13px; text-decoration: none; }
 .sec161__item .rd-link { color: #fff; }
 .rd-logo { color: #313131 !important; }
-.rd-cover { text-wrap: balance; }
-.sec142__bg { display: none; }
-.sec142 { --ph-fig: #E3F4F4; --arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25.239 9.978'%3E%3Crect fill='%230E7F82' y='4.011' width='13.793' height='1.859'/%3E%3Cpolygon fill='%230E7F82' points='14.722 0 25.239 4.989 14.722 9.978 14.722 0'/%3E%3C/svg%3E"); }
-.sec082__text { text-wrap: balance; }
+.sec142 { --arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25.239 9.978'%3E%3Crect fill='%230E7F82' y='4.011' width='13.793' height='1.859'/%3E%3Cpolygon fill='%230E7F82' points='14.722 0 25.239 4.989 14.722 9.978 14.722 0'/%3E%3C/svg%3E"); }
 /* --- 崩れの修正（2026-10-11） ---
    1) 上部の帯（SEC-077）とヘッダー（SEC-121）がどちらも上に貼り付き、スクロールすると帯がヘッダーと本文に重なっていた。
       帯は先頭で流れて消えるようにし、上に残るのはヘッダーだけにする */
-.sec077 { position: relative; top: auto; }
+.sec121 { top: 48px; }
+.sec077.is-closed + .sec121 { top: 0; }
+@media (max-width: 767px) { .sec121 { top: 56px; } }
 /* 2) 掲載機種カード: 機種名・説明が右の写真の下に潜り込んでいた（元パーツより文字が長い）。写真の幅だけ右をあける */
 .sec090__name, .sec090__price, .sec090__text { padding-right: 122px; }
 .sec090__name { overflow-wrap: anywhere; }
@@ -1332,16 +1341,16 @@ body{margin:0}
 /* 4) 写真を入れたスロット: 枠いっぱいに切り抜く */
 .rd-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
 .sec009__ph, .sec135__ph { position: relative; overflow: hidden; }
-.sec135__ph--doc .rd-photo { inset: 4% 22% 16% 4%; width: auto; height: auto; }
+/* 相談の画像: トレース元のイラストが占める範囲（資料=52%×62%、画面=66%×66%）に写真を収める */
+.sec135__ph .rd-photo { left: 17%; top: 13.6%; width: 66%; height: 66%; }
+.sec135__ph--doc .rd-photo { left: 8.64%; top: 8.36%; width: 52%; height: 62%; z-index: 1; }
 /* フッターの写真: 1100px 未満は .sec161__contents、1100px 以上は .sec161__main が背景を持つ（元パーツの切り替えに合わせる） */
 .sec161__contents { background: linear-gradient(160deg, rgba(20,163,166,.88) 0%, rgba(14,127,130,.86) 45%, rgba(11,106,108,.94) 100%), url("/assets/images/redesign/footer-factory.jpg") center / cover no-repeat; }
 @media only screen and (min-width: 1100px) {
   .sec161__contents { background: none; }
   .sec161__main { background: linear-gradient(160deg, rgba(20,163,166,.88) 0%, rgba(14,127,130,.86) 45%, rgba(11,106,108,.94) 100%), url("/assets/images/redesign/footer-factory.jpg") center / cover no-repeat; }
 }
-.sec135__ph--doc .rd-photo { object-position: 72% 30%; }
-/* 5) 探し方のカード: 元パーツは5列の枠に並べる作り。4枚だと右に1列ぶん空きが出て左に寄るので、4列にする */
-@media (min-width: 768px) { .sec044__cards { grid-template-columns: repeat(4, 1fr); } }
+.sec135__ph--doc .rd-photo { object-position: 64% 30%; }
 /* 6) 768〜1099px（タブレット）: 元パーツの PC 寸法のままだと詰まる所を、割合で収める */
 @media (min-width: 768px) and (max-width: 1099px) {
   .sec082__list { gap: 40px 20px; padding: 0 24px; }
@@ -1509,7 +1518,7 @@ body{margin:0}
             <span class="sec163__line sec163__line--2">5つの質問<small>で。</small></span>
           </h1>
           <div class="sec163__kv sec163__kv--sp" aria-hidden="true">
-            <div class="sec163__kvImg"><img class="rd-kv" src="/assets/images/workshop.jpg" alt="" width="1536" height="1024"><span class="sec163__kvLabel">溶接現場のイメージ（AI生成）</span></div>
+            <div class="sec163__kvImg"><img class="rd-person rd-person--l" src="/assets/images/redesign/hero-person-l.webp" alt=""><img class="rd-person rd-person--r" src="/assets/images/redesign/hero-person-r.webp" alt=""><img class="rd-person rd-person--c" src="/assets/images/redesign/hero-person-c.webp" alt=""></div>
           </div>
         </div>
         <ul class="sec163__buttons">
@@ -1533,7 +1542,7 @@ body{margin:0}
       </div>
     </div>
     <div class="sec163__kv sec163__kv--pc" aria-hidden="true">
-      <div class="sec163__kvImg"><img class="rd-kv" src="/assets/images/workshop.jpg" alt="" width="1536" height="1024"><span class="sec163__kvLabel">溶接現場のイメージ（AI生成）</span></div>
+      <div class="sec163__kvImg"><img class="rd-person rd-person--l" src="/assets/images/redesign/hero-person-l.webp" alt=""><img class="rd-person rd-person--r" src="/assets/images/redesign/hero-person-r.webp" alt=""><img class="rd-person rd-person--c" src="/assets/images/redesign/hero-person-c.webp" alt=""></div>
     </div>
   </div>
 </section>
@@ -1544,31 +1553,67 @@ body{margin:0}
     <h2 class="sec082__title">こんな悩みから、<br class="sec082__md">現場に合うレーザー溶接機を<br class="sec082__md">探せます。</h2>
     <div class="sec082__list">
       <a class="sec082__item" href="/lineup/?skill=未経験可">
-        <div class="sec082__image"><span class="rd-ill"><svg class="rd-pict" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons.svg#i-user"></use></svg></span></div>
+        <div class="sec082__image">
+          <svg viewBox="0 0 172 150" fill="none" stroke="var(--ill-line)" stroke-width="2.5" aria-hidden="true">
+            <path d="M64 62 52 84M108 62l12 22M72 120h28" stroke-dasharray="2 5"/>
+            <circle cx="86" cy="36" r="33" fill="var(--ill-fill)"/>
+            <path d="M66 50c0-14 9-25 20-25s20 11 20 25v6H66z" fill="#fff"/><rect x="73" y="36" width="26" height="10" rx="3" fill="var(--ill-sub)"/>
+            <circle cx="38" cy="113" r="33" fill="var(--ill-fill)"/>
+            <path d="M20 104h24l6 6v6H34l-4 14h-8l2-14h-4z" fill="#fff"/><path d="M52 113h8M56 106l5-4M56 120l5 4"/>
+            <circle cx="134" cy="113" r="33" fill="var(--ill-fill)"/>
+            <path d="M120 113l9 9 17-18" stroke-width="3.5"/>
+          </svg>
+        </div>
         <div class="sec082__wrap">
           <h3 class="sec082__name">新人に任せたい</h3>
-          <p class="sec082__text">熟練工がいなくても、新人がすぐ使える機種を</p>
+          <p class="sec082__text">熟練工がいなくても、<br>新人がすぐ使える機種を</p>
         </div>
       </a>
       <a class="sec082__item" href="/lineup/?material=アルミ">
-        <div class="sec082__image"><span class="rd-ill"><svg class="rd-pict" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons.svg#i-alcu"></use></svg></span></div>
+        <div class="sec082__image">
+          <svg viewBox="0 0 130 150" fill="none" stroke="var(--ill-line)" stroke-width="2.5" aria-hidden="true">
+            <path d="M24 34l16 22M65 36v20M106 34 90 56" stroke-dasharray="2 4"/>
+            <circle cx="18" cy="22" r="14" fill="var(--ill-fill)"/><circle cx="65" cy="16" r="14" fill="var(--ill-sub)"/><circle cx="112" cy="22" r="14" fill="var(--ill-fill)"/>
+            <path d="M14 62h102l-8 18H6z" fill="#fff"/>
+            <path d="M20 86h102l-8 18H12z" fill="var(--ill-fill)"/>
+            <path d="M26 110h96l-8 18H18z" fill="var(--ill-sub)"/>
+            <path d="M10 140h110"/>
+          </svg>
+        </div>
         <div class="sec082__wrap">
           <h3 class="sec082__name">アルミ・銅</h3>
-          <p class="sec082__text">外注しているアルミ・銅の溶接を、自社で</p>
+          <p class="sec082__text">外注しているアルミ・銅の<br>溶接を、自社でやりたい</p>
         </div>
       </a>
       <a class="sec082__item" href="/lineup/?thickness=3〜6mm">
-        <div class="sec082__image"><span class="rd-ill"><svg class="rd-pict" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons.svg#i-thick"></use></svg></span></div>
+        <div class="sec082__image">
+          <svg viewBox="0 0 176 150" fill="none" stroke="var(--ill-line)" stroke-width="2.5" aria-hidden="true">
+            <rect x="128" y="14" width="18" height="56" fill="var(--ill-sub)"/>
+            <path d="M12 144V72l34-24v24l34-24v24l34-24v24l34-24v96z" fill="#fff"/>
+            <path d="M26 96h28v20H26zM74 96h28v20H74zM122 96h28v20h-28z" fill="var(--ill-fill)" stroke-width="1.8"/>
+            <path d="M4 144h168"/>
+            <rect x="60" y="126" width="56" height="18" fill="var(--ill-fill)"/><path d="M60 126h56" stroke="var(--bar)" stroke-width="6"/>
+          </svg>
+        </div>
         <div class="sec082__wrap">
           <h3 class="sec082__name">中厚・厚物を速く</h3>
-          <p class="sec082__text">TIGで時間のかかる中厚板を、レーザーで</p>
+          <p class="sec082__text">TIGで時間のかかる中厚板を、<br>レーザーで溶接したい</p>
         </div>
       </a>
       <a class="sec082__item" href="/subsidy/">
-        <div class="sec082__image"><span class="rd-ill"><svg class="rd-pict" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons.svg#i-yen"></use></svg></span></div>
+        <div class="sec082__image">
+          <svg viewBox="0 0 197 150" fill="none" stroke="var(--ill-line)" stroke-width="2.5" aria-hidden="true">
+            <rect x="20" y="6" width="96" height="138" rx="6" fill="#fff"/>
+            <rect x="32" y="18" width="72" height="28" fill="var(--ill-fill)" stroke-width="1.8"/>
+            <path d="M32 60h18v14H32zM59 60h18v14H59zM86 60h18v14H86zM32 84h18v14H32zM59 84h18v14H59zM32 108h18v14H32zM59 108h18v14H59z" fill="var(--ill-fill)" stroke-width="1.8"/>
+            <rect x="86" y="84" width="18" height="38" fill="var(--ill-sub)" stroke-width="1.8"/>
+            <circle cx="156" cy="104" r="34" fill="var(--ill-sub)"/>
+            <path d="M144 86l12 16 12-16M156 102v24M145 108h22M145 117h22"/>
+          </svg>
+        </div>
         <div class="sec082__wrap">
           <h3 class="sec082__name">予算を抑えたい</h3>
-          <p class="sec082__text">100〜200万円で、補助金も使って導入</p>
+          <p class="sec082__text">100〜200万円で、<br>補助金も使って導入したい</p>
         </div>
       </a>
     </div>

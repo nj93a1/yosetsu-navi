@@ -14,3 +14,6 @@
 | consult-choose.jpg | https://images.unsplash.com/photo-1758518729794-456bbd9f70f8 |
 | consult-test.jpg | https://images.unsplash.com/photo-1565313842307-7ef5f013b669 |
 | footer-factory.jpg | https://images.unsplash.com/photo-1496247749665-49cf5b1022e9 |
+| hero-person-l.webp | https://images.unsplash.com/photo-1507497806295-753c4108560c （人物を切り抜き） |
+| hero-person-c.webp | https://images.unsplash.com/photo-1685475887169-9c9a84bf740f （人物を切り抜き） |
+| hero-person-r.webp | https://images.unsplash.com/photo-1621905252507-b35492cc74b4 （人物を切り抜き） |
