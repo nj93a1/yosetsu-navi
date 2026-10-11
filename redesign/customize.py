@@ -264,9 +264,9 @@ block('SEC-082', f'''
 </section>''')
 
 # ---------- ④ 探し方 ----------
-def card044(pict, name, href):
+def card044(photo, name, href):
     return f'''        <li class="sec044__card"><a class="sec044__link" href="{href}">
-          <div class="sec044__img"><div class="sec044__ph">{P(pict)}</div></div>
+          <div class="sec044__img"><div class="sec044__ph"><img class="rd-photo" src="/assets/images/redesign/{photo}.jpg" alt="" loading="lazy"></div></div>
           <p class="sec044__name">{name}<svg class="sec044__arrow" viewBox="0 0 26 6" aria-hidden="true"><path d="M0 5.5h25L19.5.5" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></p>
         </a></li>'''
 block('SEC-044', f'''
@@ -279,10 +279,10 @@ block('SEC-044', f'''
       </hgroup>
       <p class="sec044__text">質問に答えて絞り込む、一覧から条件で探す、2台を並べて比べる。目的に合う探し方を選べます。</p>
       <ul class="sec044__cards">
-{card044("diag", "質問で選ぶ", "/diagnosis/")}
-{card044("lineup", "一覧で探す", "/lineup/")}
-{card044("compare", "2台を比べる", "/diagnosis/#compare")}
-{card044("yen", "補助金を知る", "/subsidy/")}
+{card044("search-diagnosis", "質問で選ぶ", "/diagnosis/")}
+{card044("search-lineup", "一覧で探す", "/lineup/")}
+{card044("search-compare", "2台を比べる", "/diagnosis/#compare")}
+{card044("search-subsidy", "補助金を知る", "/subsidy/")}
       </ul>
       <div class="sec044__btns">
         <a class="sec044__btn" href="/contact/">相談・問い合わせ<svg class="sec044__arrow" viewBox="0 0 26 6" aria-hidden="true"><path d="M0 5.5h25L19.5.5" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></a>
@@ -396,10 +396,10 @@ block('SEC-097', f'''
 </section>''')
 
 # ---------- ⑨ 選び方ガイド ----------
-def doc(name, desc, href, label):
+def doc(name, desc, href, label, photo):
     return f'''      <li class="sec009__item">
         <a class="sec009__thumb" href="{href}">
-          <span class="sec009__ph" aria-hidden="true"><span class="rd-cover">{name}</span></span>
+          <span class="sec009__ph" aria-hidden="true"><img class="rd-photo" src="/assets/images/redesign/{photo}.jpg" alt="" loading="lazy"></span>
           <span class="sec009__veil" aria-hidden="true"></span>
         </a>
         <div class="sec009__body">
@@ -425,9 +425,9 @@ block('SEC-009', f'''
       <p class="sec009__lead">導入前に迷いやすいところを、公的機関やメーカーの公開情報をもとにまとめています。</p>
     </div>
     <ul class="sec009__list">
-{doc("海外製（中国製など）を選ぶときのポイント", "国内の修理体制・交換部品・保証・電源など、買う前に確かめたい8つの点をまとめました。", "/articles/overseas/", "記事を読む")}
-{doc("補助金・助成金・税制", "省力化投資補助金や即時償却など、導入費を抑える制度を締切と上限額つきで整理しました。", "/subsidy/", "一覧を見る")}
-{doc("TIG溶接とレーザー溶接の違い", "仕上がり・ひずみ・習得にかかる時間・設備の大きさを並べて整理します（公開準備中）。", "/articles/#tig", "内容を見る")}
+{doc("海外製（中国製など）を選ぶときのポイント", "国内の修理体制・交換部品・保証・電源など、買う前に確かめたい8つの点をまとめました。", "/articles/overseas/", "記事を読む", "guide-overseas")}
+{doc("補助金・助成金・税制", "省力化投資補助金や即時償却など、導入費を抑える制度を締切と上限額つきで整理しました。", "/subsidy/", "一覧を見る", "guide-subsidy")}
+{doc("TIG溶接とレーザー溶接の違い", "仕上がり・ひずみ・習得にかかる時間・設備の大きさを並べて整理します（公開準備中）。", "/articles/#tig", "内容を見る", "guide-tig")}
     </ul>
     <a class="sec009__more" href="/articles/">
       <span class="sec009__more-in">
@@ -448,11 +448,11 @@ block('SEC-135', f'''
     <h2 class="sec135__title">機種選びも見積もりも、<br class="sec135__br">運営元に相談できます</h2>
     <ul class="sec135__list">
       <li class="sec135__item">
-        <div class="sec135__ph sec135__ph--doc" role="img" aria-label="機種選びの相談">{P("compare")}</div>
+        <div class="sec135__ph sec135__ph--doc" role="img" aria-label="機種選びの相談"><img class="rd-photo" src="/assets/images/redesign/consult-choose.jpg" alt="" loading="lazy"></div>
         <a class="sec135__btn sec135__btn--line" href="/contact/?type=choose"><small>他社機も含めて比べたい方</small>機種選びを相談する</a>
       </li>
       <li class="sec135__item">
-        <div class="sec135__ph" role="img" aria-label="見積もり・テスト溶接の相談">{P("handheld")}</div>
+        <div class="sec135__ph" role="img" aria-label="見積もり・テスト溶接の相談"><img class="rd-photo" src="/assets/images/redesign/consult-test.jpg" alt="" loading="lazy"></div>
         <a class="sec135__btn sec135__btn--fill" href="/contact/?type=quote"><small>運営元の取り扱い機を検討中の方</small>見積もり・テスト溶接を相談<span class="sec135__badge">デモ可</span></a>
       </li>
     </ul>
@@ -473,7 +473,7 @@ block('SEC-135', f'''
 </section>''')
 
 # ---------- ⑪ フッター ----------
-rep('<div class="sec161__logo" data-sec161-aos data-delay="200"><span>ロゴ 306×57</span></div>', '<div class="sec161__logo" data-sec161-aos data-delay="200"><span class="rd-logo">レーザー溶接機<br>比較・選定</span></div>')
+rep('<div class="sec161__logo" data-sec161-aos data-delay="200"><span>ロゴ 306×57</span></div>', '<div class="sec161__logo" data-sec161-aos data-delay="200"><span class="rd-logo">レーザー溶接機 比較・選定</span></div>')
 rep('<p>事業に関するご相談や、<br>ミホングループに関する<br class="sec161__brSp">お問い合わせはこちらへ</p>', '<p>機種選び・見積もり・<br>テスト溶接・補助金の<br class="sec161__brSp">ご相談はこちらへ</p>')
 rep('<a class="sec161__btn" href="#" data-sec161-aos data-delay="400">', '<a class="sec161__btn" href="/contact/" data-sec161-aos data-delay="400">')
 rep('<span class="sec161__btnText">お問い合わせ</span>', '<span class="sec161__btnText">相談・問い合わせ</span>')
@@ -525,6 +525,46 @@ extra = '''
 .sec142__bg { display: none; }
 .sec142 { --ph-fig: #E3F4F4; --arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25.239 9.978'%3E%3Crect fill='%230E7F82' y='4.011' width='13.793' height='1.859'/%3E%3Cpolygon fill='%230E7F82' points='14.722 0 25.239 4.989 14.722 9.978 14.722 0'/%3E%3C/svg%3E"); }
 .sec082__text { text-wrap: balance; }
+/* --- 崩れの修正（2026-10-11） ---
+   1) 上部の帯（SEC-077）とヘッダー（SEC-121）がどちらも上に貼り付き、スクロールすると帯がヘッダーと本文に重なっていた。
+      帯は先頭で流れて消えるようにし、上に残るのはヘッダーだけにする */
+.sec077 { position: relative; top: auto; }
+/* 2) 掲載機種カード: 機種名・説明が右の写真の下に潜り込んでいた（元パーツより文字が長い）。写真の幅だけ右をあける */
+.sec090__name, .sec090__price, .sec090__text { padding-right: 122px; }
+.sec090__name { overflow-wrap: anywhere; }
+@media (max-width:480px) { .sec090__name, .sec090__price, .sec090__text { padding-right: 80px; } }
+/* 3) フッターのロゴ: 枠（306×57 / SP 195幅）に1行で収める */
+.rd-logo { white-space: nowrap; font-size: 20px !important; line-height: 1 !important; }
+@media (max-width: 767px) { .rd-logo { font-size: 14px !important; } }
+/* 4) 写真を入れたスロット: 枠いっぱいに切り抜く */
+.rd-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+.sec009__ph, .sec135__ph { position: relative; overflow: hidden; }
+.sec135__ph--doc .rd-photo { inset: 4% 22% 16% 4%; width: auto; height: auto; }
+/* フッターの写真: 1100px 未満は .sec161__contents、1100px 以上は .sec161__main が背景を持つ（元パーツの切り替えに合わせる） */
+.sec161__contents { background: linear-gradient(160deg, rgba(20,163,166,.88) 0%, rgba(14,127,130,.86) 45%, rgba(11,106,108,.94) 100%), url("/assets/images/redesign/footer-factory.jpg") center / cover no-repeat; }
+@media only screen and (min-width: 1100px) {
+  .sec161__contents { background: none; }
+  .sec161__main { background: linear-gradient(160deg, rgba(20,163,166,.88) 0%, rgba(14,127,130,.86) 45%, rgba(11,106,108,.94) 100%), url("/assets/images/redesign/footer-factory.jpg") center / cover no-repeat; }
+}
+.sec135__ph--doc .rd-photo { object-position: 72% 30%; }
+/* 5) 探し方のカード: 元パーツは5列の枠に並べる作り。4枚だと右に1列ぶん空きが出て左に寄るので、4列にする */
+@media (min-width: 768px) { .sec044__cards { grid-template-columns: repeat(4, 1fr); } }
+/* 6) 768〜1099px（タブレット）: 元パーツの PC 寸法のままだと詰まる所を、割合で収める */
+@media (min-width: 768px) and (max-width: 1099px) {
+  .sec082__list { gap: 40px 20px; padding: 0 24px; }
+  .sec082__item { width: calc((100% - 60px) / 4); }
+  .sec090__list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+}
+/* 7) 375px 未満: ヒーローのコピー（幅320px固定）とボタン（300px＋余白）が画面からはみ出していた（元パーツも同じ）。幅に合わせて縮める */
+@media (max-width: 374px) {
+  .sec163 { padding-left: 10px; padding-right: 10px; }
+  .sec163__copy { width: 100%; }
+  .sec163__line { font-size: 44px; height: 46px; line-height: 46px; }
+  .sec163__line--2 { font-size: 46px; height: 48px; line-height: 48px; }
+  .sec163__buttons { grid-template-columns: 100%; max-width: 100%; margin: 12px 0 0; }
+  .sec163__content, .sec163__contentInner, .sec163__title { min-width: 0; width: 100%; }
+  .sec163__kv { width: 100%; }
+}
 '''
 rep('</style>\n</head>', extra + '</style>\n</head>')
 
@@ -537,15 +577,18 @@ const known = (p) => (p.output_w ? 1 : 0) + (p.tags.material.length ? 1 : 0);
 const byMaker = new Map();
 for (const p of products) if (!byMaker.has(p.maker_slug) || known(p) > known(byMaker.get(p.maker_slug))) byMaker.set(p.maker_slug, p);
 const picks = [...byMaker.values()].sort((a, b) => known(b) - known(a)).slice(0, 24);
-const maker = (n) => String(n).replace(/（.*$/, "");
+const maker = (n) => String(n).replace(/（.*$/, "").replace(/株式会社|合同会社/g, "").trim();
 const kind = (p) => (/^ハンド/.test(p.method || "") ? "ハンドヘルド" : /ロボット|ライン/.test(p.method || "") ? "ライン組込" : /据置|真空|チャンバー/.test(p.method || "") ? "据置・専用機" : "レーザー溶接機");
 document.getElementById("rdProducts").innerHTML = picks.map((p) => `<li class="sec090__item"><a class="sec090__link" href="/products/${esc(p.maker_slug)}-${esc(p.model_slug)}/">
   <span class="sec090__label">${esc(kind(p))}</span>${p.handled_by_operator ? '<span class="sec090__label sec090__label--fill">運営元の取扱</span>' : ""}
   <p class="sec090__name">${esc(p.name)}</p>
   <p class="sec090__price">${p.output_w ? `出力<span class="sec090__val">${(p.output_w / 1000).toFixed(p.output_w % 1000 ? (p.output_w % 100 ? 2 : 1) : 1)}</span>kW` : '<span class="sec090__sub">出力 非公開</span>'}</p>
-  <p class="sec090__text">${esc(maker(p.maker_name))}｜価格帯 ${esc(p.tags.price[0] || (p.handled_by_operator ? "お問い合わせ" : "非公開"))}</p>
+  <p class="sec090__text">${esc(maker(p.maker_name))}<br>価格帯 ${esc(p.tags.price[0] || (p.handled_by_operator ? "お問い合わせ" : "非公開"))}</p>
   <p class="sec090__img">${p.image && !p.image.includes("placeholder") ? `<img src="${esc(p.image)}" alt="" loading="lazy">` : '<svg class="rd-pict" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons.svg#i-handheld"></use></svg>'}</p>
 </a></li>`).join("");
+// スマホのメニュー: ヘッダーの下端の位置から開く（ページ先頭で帯が見えているときに、ヘッダーと重ならないように）
+const rdHead = document.querySelector(".sec121"), rdMenu = document.querySelector(".sec121__menu");
+document.querySelector(".sec121__burger")?.addEventListener("click", () => { if (rdMenu) rdMenu.style.top = Math.max(0, rdHead.getBoundingClientRect().bottom) + "px"; });
 // ヘッダーの検索: Enter で機種一覧のキーワード検索へ
 document.querySelector("[data-rd-search]")?.addEventListener("keydown", (e) => { if (e.key === "Enter" && e.target.value.trim()) location.href = "/lineup/?q=" + encodeURIComponent(e.target.value.trim()); });
 </script>
