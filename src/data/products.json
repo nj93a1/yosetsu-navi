@@ -127,7 +127,10 @@
       "made_basis": "運営元（ノースヒルズ溶接工業）への確認（2026年10月13日）",
       "service": "UW JAPAN が国内で修理・メンテナンスに対応（連絡の当日か翌日に全国対応、保証2年）",
       "service_url": "https://uw-j.co.jp/support/"
-    }
+    },
+    "wire_feed": null,
+    "fiber_core_um": 14,
+    "cooling": "水冷"
   },
   {
     "id": "p102",
@@ -257,7 +260,10 @@
       "made_basis": "運営元（ノースヒルズ溶接工業）への確認（2026年10月13日）",
       "service": "UW JAPAN が国内で修理・メンテナンスに対応（連絡の当日か翌日に全国対応、保証2年）",
       "service_url": "https://uw-j.co.jp/support/"
-    }
+    },
+    "wire_feed": null,
+    "fiber_core_um": 20,
+    "cooling": "水冷"
   },
   {
     "id": "p103",
@@ -389,7 +395,10 @@
       "made_basis": "運営元（ノースヒルズ溶接工業）への確認（2026年10月13日）",
       "service": "UW JAPAN が国内で修理・メンテナンスに対応（連絡の当日か翌日に全国対応、保証2年）",
       "service_url": "https://uw-j.co.jp/support/"
-    }
+    },
+    "wire_feed": null,
+    "fiber_core_um": 20,
+    "cooling": "水冷"
   },
   {
     "id": "p201",
@@ -447,7 +456,10 @@
       "made_url": "https://laser-navi.com/products/opticelfh/",
       "service": "本社（愛知県知立市）をサービス拠点に修理・年次点検。修理中は代替デモ機を貸出",
       "service_url": "https://laser-navi.com/products/opticelfh/"
-    }
+    },
+    "wire_feed": null,
+    "fiber_core_um": null,
+    "cooling": "水冷"
   },
   {
     "id": "p202",
@@ -504,7 +516,10 @@
       "made_url": "https://laser-navi.com/products/opticelfh/",
       "service": "本社（愛知県知立市）をサービス拠点に修理・年次点検。修理中は代替デモ機を貸出",
       "service_url": "https://laser-navi.com/products/opticelfh/"
-    }
+    },
+    "wire_feed": null,
+    "fiber_core_um": null,
+    "cooling": "水冷"
   },
   {
     "id": "p203",
@@ -563,7 +578,10 @@
       "hq_url": "https://www.amada.co.jp/ja/corporate/profile/",
       "service": "直販・直サービス体制で保守点検・修理を自社対応",
       "service_url": "https://www.amada.co.jp/ja/innovation/sales_service/"
-    }
+    },
+    "wire_feed": "オプション",
+    "fiber_core_um": null,
+    "cooling": null
   },
   {
     "id": "p204",
@@ -605,7 +623,10 @@
     "origin": {
       "hq": "日本（神奈川県横浜市金沢区）",
       "hq_url": "https://thm-co.jp/company/corporate_profile"
-    }
+    },
+    "wire_feed": "標準",
+    "fiber_core_um": 25,
+    "cooling": "空冷"
   },
   {
     "id": "p205",
@@ -658,7 +679,10 @@
       "made_url": "https://www.wel-ken.co.jp/v-hf2000/",
       "service": "国内拠点のサポート窓口で修理・代替機の相談に対応",
       "service_url": "https://www.wel-ken.co.jp/"
-    }
+    },
+    "wire_feed": null,
+    "fiber_core_um": null,
+    "cooling": "水冷"
   },
   {
     "id": "p206",
@@ -709,7 +733,10 @@
       "made_url": "https://www.wel-ken.co.jp/v-hf2000/",
       "service": "国内拠点のサポート窓口で修理・代替機の相談に対応",
       "service_url": "https://www.wel-ken.co.jp/"
-    }
+    },
+    "wire_feed": null,
+    "fiber_core_um": null,
+    "cooling": "水冷"
   },
   {
     "id": "p207",
@@ -761,7 +788,10 @@
       "made_url": "https://www.wel-ken.co.jp/v-hf2000/",
       "service": "国内拠点のサポート窓口で修理・代替機の相談に対応",
       "service_url": "https://www.wel-ken.co.jp/"
-    }
+    },
+    "wire_feed": null,
+    "fiber_core_um": null,
+    "cooling": "水冷"
   },
   {
     "id": "p208",
@@ -800,7 +830,10 @@
       "hq_url": "https://www.wel-ken.co.jp/company/",
       "service": "国内拠点のサポート窓口で修理・代替機の相談に対応",
       "service_url": "https://www.wel-ken.co.jp/"
-    }
+    },
+    "wire_feed": "対応",
+    "fiber_core_um": null,
+    "cooling": "水冷"
   },
   {
     "id": "p209",
@@ -853,7 +886,10 @@
       "hq_url": "https://www.ikuratools.com/company.html",
       "service": "自社ブランド品は製造・販売・メンテナンスまで自社一貫と説明",
       "service_url": "https://www.ikuratools.com/company.html"
-    }
+    },
+    "wire_feed": "対応",
+    "fiber_core_um": null,
+    "cooling": "水冷"
   },
   {
     "id": "p210",
@@ -906,7 +942,10 @@
       "hq_url": "https://www.ikuratools.com/company.html",
       "service": "自社ブランド品は製造・販売・メンテナンスまで自社一貫と説明",
       "service_url": "https://www.ikuratools.com/company.html"
-    }
+    },
+    "wire_feed": "対応",
+    "fiber_core_um": null,
+    "cooling": "水冷"
   },
   {
     "id": "p211",
@@ -954,7 +993,10 @@
     "origin": {
       "hq": "日本（東京都武蔵村山市）",
       "hq_url": "https://www.fuji-kiko.co.jp/company/about"
-    }
+    },
+    "wire_feed": "標準",
+    "fiber_core_um": null,
+    "cooling": "空冷"
   },
   {
     "id": "p212",
@@ -1002,7 +1044,10 @@
     "origin": {
       "hq": "日本（東京都武蔵村山市）",
       "hq_url": "https://www.fuji-kiko.co.jp/company/about"
-    }
+    },
+    "wire_feed": "標準",
+    "fiber_core_um": null,
+    "cooling": "空冷"
   },
   {
     "id": "p213",
@@ -1052,7 +1097,10 @@
     "origin": {
       "hq": "日本（東京都武蔵村山市）",
       "hq_url": "https://www.fuji-kiko.co.jp/company/about"
-    }
+    },
+    "wire_feed": "標準",
+    "fiber_core_um": null,
+    "cooling": "空冷"
   },
   {
     "id": "p214",
@@ -1102,7 +1150,10 @@
     "origin": {
       "hq": "日本（東京都武蔵村山市）",
       "hq_url": "https://www.fuji-kiko.co.jp/company/about"
-    }
+    },
+    "wire_feed": "標準",
+    "fiber_core_um": null,
+    "cooling": "空冷"
   },
   {
     "id": "p215",
@@ -1156,7 +1207,10 @@
       "hq_url": "https://www.hsglaser.com/pages/about",
       "service": "国内販売元ヨコハマシステムズのエンジニアが国内サポート（保守受付・保証1年）",
       "service_url": "https://yokohamalaser.com/guide/support/"
-    }
+    },
+    "wire_feed": "標準",
+    "fiber_core_um": null,
+    "cooling": "水冷"
   },
   {
     "id": "p216",
@@ -1207,7 +1261,10 @@
       "made_url": "https://dynalaserstech.com/about-us/",
       "service": "国内販売元ヨコハマシステムズのエンジニアが国内サポート（保守受付・保証1年）",
       "service_url": "https://yokohamalaser.com/guide/support/"
-    }
+    },
+    "wire_feed": "標準",
+    "fiber_core_um": null,
+    "cooling": "空冷"
   },
   {
     "id": "p217",
@@ -1257,7 +1314,10 @@
       "made_url": "https://dynalaserstech.com/about-us/",
       "service": "国内販売元ヨコハマシステムズのエンジニアが国内サポート（保守受付・保証1年）",
       "service_url": "https://yokohamalaser.com/guide/support/"
-    }
+    },
+    "wire_feed": "標準",
+    "fiber_core_um": null,
+    "cooling": "空冷"
   },
   {
     "id": "p218",
@@ -1307,7 +1367,10 @@
       "made_url": "https://dynalaserstech.com/about-us/",
       "service": "国内販売元ヨコハマシステムズのエンジニアが国内サポート（保守受付・保証1年）",
       "service_url": "https://yokohamalaser.com/guide/support/"
-    }
+    },
+    "wire_feed": "標準",
+    "fiber_core_um": null,
+    "cooling": "空冷"
   },
   {
     "id": "p219",
@@ -1367,7 +1430,10 @@
       "made_url": "https://www.smartdiys.com/slw1500/",
       "service": "本社（山梨）の整備工場へ返送して修理。修理中は代替機を貸出（訪問修理なし）",
       "service_url": "https://www.smartdiys.com/support/"
-    }
+    },
+    "wire_feed": "オプション",
+    "fiber_core_um": null,
+    "cooling": "空冷"
   },
   {
     "id": "p220",
@@ -1425,7 +1491,10 @@
       "made_url": "https://www.smartdiys.com/slw1500/",
       "service": "本社（山梨）の整備工場へ返送して修理。修理中は代替機を貸出（訪問修理なし）",
       "service_url": "https://www.smartdiys.com/support/"
-    }
+    },
+    "wire_feed": "標準",
+    "fiber_core_um": null,
+    "cooling": "空冷"
   },
   {
     "id": "p221",
@@ -1484,7 +1553,10 @@
       "made_url": "https://www.smartdiys.com/slw1500/",
       "service": "本社（山梨）の整備工場へ返送して修理。修理中は代替機を貸出（訪問修理なし）",
       "service_url": "https://www.smartdiys.com/support/"
-    }
+    },
+    "wire_feed": "標準",
+    "fiber_core_um": null,
+    "cooling": "水冷"
   },
   {
     "id": "p104",
@@ -1609,7 +1681,10 @@
       "made_basis": "カタログに「日本設計監修 日本製造」",
       "service": "UW JAPAN が国内で修理・メンテナンスに対応（連絡の当日か翌日に全国対応、保証2年）",
       "service_url": "https://uw-j.co.jp/support/"
-    }
+    },
+    "wire_feed": "オプション",
+    "fiber_core_um": null,
+    "cooling": "空冷"
   },
   {
     "id": "p105",
@@ -1669,7 +1744,10 @@
       "service": "修理は販売窓口（運営元グループのミライク）で受け付け、内容に応じて自社またはメーカーが対応。KS・S も自社でメンテナンス・アフターフォローに対応",
       "service_url": "https://kss-kr.com/brand/"
     },
-    "handled_label": "運営元グループで取り扱い"
+    "handled_label": "運営元グループで取り扱い",
+    "wire_feed": "オプション",
+    "fiber_core_um": null,
+    "cooling": "水冷"
   },
   {
     "id": "p106",
@@ -1731,7 +1809,10 @@
       "service": "修理は販売窓口（運営元グループのミライク）で受け付け、内容に応じて自社またはメーカーが対応。KS・S も自社でメンテナンス・アフターフォローに対応",
       "service_url": "https://kss-kr.com/brand/"
     },
-    "handled_label": "運営元グループで取り扱い"
+    "handled_label": "運営元グループで取り扱い",
+    "wire_feed": "オプション",
+    "fiber_core_um": null,
+    "cooling": "水冷"
   },
   {
     "id": "p107",
@@ -1787,7 +1868,10 @@
       "service": "修理は販売窓口（運営元グループのミライク）で受け付け、内容に応じて自社またはメーカーが対応。KS・S も自社でメンテナンス・アフターフォローに対応",
       "service_url": "https://kss-kr.com/brand/"
     },
-    "handled_label": "運営元グループで取り扱い"
+    "handled_label": "運営元グループで取り扱い",
+    "wire_feed": "オプション",
+    "fiber_core_um": null,
+    "cooling": "空冷"
   },
   {
     "id": "p108",
@@ -1842,7 +1926,10 @@
       "hq_url": "https://www.maxlasers.com/about-us",
       "service": "修理は販売窓口（運営元グループのミライク）で受け付け、内容に応じて自社またはメーカーが対応"
     },
-    "handled_label": "運営元グループで取り扱い"
+    "handled_label": "運営元グループで取り扱い",
+    "wire_feed": "標準",
+    "fiber_core_um": 20,
+    "cooling": "空冷"
   },
   {
     "id": "p109",
@@ -1899,7 +1986,10 @@
       "hq_url": "https://www.maxlasers.com/about-us",
       "service": "修理は販売窓口（運営元グループのミライク）で受け付け、内容に応じて自社またはメーカーが対応"
     },
-    "handled_label": "運営元グループで取り扱い"
+    "handled_label": "運営元グループで取り扱い",
+    "wire_feed": "標準",
+    "fiber_core_um": 20,
+    "cooling": "空冷"
   },
   {
     "id": "p110",
@@ -1955,7 +2045,10 @@
       "hq_url": "https://www.maxlasers.com/about-us",
       "service": "修理は販売窓口（運営元グループのミライク）で受け付け、内容に応じて自社またはメーカーが対応"
     },
-    "handled_label": "運営元グループで取り扱い"
+    "handled_label": "運営元グループで取り扱い",
+    "wire_feed": "標準",
+    "fiber_core_um": 20,
+    "cooling": "空冷"
   },
   {
     "id": "p111",
@@ -2012,7 +2105,10 @@
       "made_url": "https://www.qilinlaser.cn/about-us/",
       "service": "修理は販売窓口（運営元グループのミライク）で受け付け、内容に応じて自社またはメーカーが対応"
     },
-    "handled_label": "運営元グループで取り扱い"
+    "handled_label": "運営元グループで取り扱い",
+    "wire_feed": "オプション",
+    "fiber_core_um": 20,
+    "cooling": "空冷"
   },
   {
     "id": "p112",
@@ -2071,7 +2167,10 @@
       "made_url": "https://www.qilinlaser.cn/about-us/",
       "service": "修理は販売窓口（運営元グループのミライク）で受け付け、内容に応じて自社またはメーカーが対応"
     },
-    "handled_label": "運営元グループで取り扱い"
+    "handled_label": "運営元グループで取り扱い",
+    "wire_feed": "オプション",
+    "fiber_core_um": 20,
+    "cooling": "空冷"
   },
   {
     "id": "p113",
@@ -2127,7 +2226,10 @@
       "made_url": "https://www.qilinlaser.cn/about-us/",
       "service": "修理は販売窓口（運営元グループのミライク）で受け付け、内容に応じて自社またはメーカーが対応"
     },
-    "handled_label": "運営元グループで取り扱い"
+    "handled_label": "運営元グループで取り扱い",
+    "wire_feed": "オプション",
+    "fiber_core_um": 20,
+    "cooling": "空冷"
   },
   {
     "id": "p222",
@@ -2186,7 +2288,10 @@
       "hq_url": "https://www.symphotony.com/company/company-profile",
       "service": "光響が修理または代替機の納入で対応（サブスク契約中の故障）",
       "service_url": "https://www.symphotony.com/welder/flaw1500/"
-    }
+    },
+    "wire_feed": "オプション",
+    "fiber_core_um": null,
+    "cooling": "空冷"
   },
   {
     "id": "p223",
@@ -2249,7 +2354,10 @@
       "hq_url": "https://www.gunkyo.co.jp/company/",
       "service": "群協製作所が保守・修理（部品在庫、サービスマン訪問、必要時は代替機）",
       "service_url": "https://www.gunkyo.co.jp/gunyu_weld/"
-    }
+    },
+    "wire_feed": null,
+    "fiber_core_um": null,
+    "cooling": "水冷"
   },
   {
     "id": "p224",
@@ -2300,7 +2408,10 @@
       "hq_url": "https://www.physicalphoton.com/company/companyoutline",
       "service": "自社で保守サービス・メンテナンス（会社概要の事業内容）",
       "service_url": "https://www.physicalphoton.com/company/companyoutline"
-    }
+    },
+    "wire_feed": "オプション",
+    "fiber_core_um": null,
+    "cooling": "水冷"
   },
   {
     "id": "p225",
@@ -2360,7 +2471,10 @@
       "hq_url": "https://aimcorp.co.jp/kaisyaannnai/",
       "service": "担当営業の訪問サポート。不具合時は訪問対応（サービスパック加入で最優先）",
       "service_url": "https://aimcorp.co.jp/yag/"
-    }
+    },
+    "wire_feed": "オプション",
+    "fiber_core_um": null,
+    "cooling": "空冷"
   },
   {
     "id": "p226",
@@ -2408,7 +2522,10 @@
       "hq_url": "https://aimcorp.co.jp/kaisyaannnai/",
       "service": "担当営業の訪問サポート。不具合時は訪問対応（サービスパック加入で最優先）",
       "service_url": "https://aimcorp.co.jp/yag/"
-    }
+    },
+    "wire_feed": "オプション",
+    "fiber_core_um": 22,
+    "cooling": "水冷"
   },
   {
     "id": "p227",
@@ -2470,7 +2587,10 @@
     "origin": {
       "hq": "米国（マサチューセッツ州マールボロ）",
       "hq_url": "https://www.ipgphotonics.com/ja/company/locations"
-    }
+    },
+    "wire_feed": "オプション",
+    "fiber_core_um": null,
+    "cooling": "空冷"
   },
   {
     "id": "p228",
@@ -2533,7 +2653,10 @@
     "origin": {
       "hq": "米国（マサチューセッツ州マールボロ）",
       "hq_url": "https://www.ipgphotonics.com/ja/company/locations"
-    }
+    },
+    "wire_feed": "オプション",
+    "fiber_core_um": null,
+    "cooling": "空冷"
   },
   {
     "id": "p229",
@@ -2602,7 +2725,10 @@
       "hq_url": "https://fanuci-falcon.com/en",
       "service": "国内のサービスセンター（京都・横浜・小田原）で全国対応。2年保証・代替機貸出",
       "service_url": "https://kyowa-ctc.co.jp/technical_info/%e3%83%95%e3%82%a1%e3%82%a4%e3%83%90%e3%83%bc%e3%83%ac%e3%83%bc%e3%82%b6%e3%83%bc%e6%ba%b6%e6%8e%a5%e6%a9%9f%e3%83%8f%e3%83%b3%e3%83%89%e3%83%88%e3%83%bc%e3%83%81%e5%9e%8b/"
-    }
+    },
+    "wire_feed": "標準",
+    "fiber_core_um": null,
+    "cooling": "水冷"
   },
   {
     "id": "p230",
@@ -2664,7 +2790,10 @@
       "hq_url": "https://fanuci-falcon.com/en",
       "service": "国内のサービスセンター（京都・横浜・小田原）で全国対応。2年保証・代替機貸出",
       "service_url": "https://kyowa-ctc.co.jp/technical_info/%e3%83%95%e3%82%a1%e3%82%a4%e3%83%90%e3%83%bc%e3%83%ac%e3%83%bc%e3%82%b6%e3%83%bc%e6%ba%b6%e6%8e%a5%e6%a9%9f%e3%83%8f%e3%83%b3%e3%83%89%e3%83%88%e3%83%bc%e3%83%81%e5%9e%8b/"
-    }
+    },
+    "wire_feed": "標準",
+    "fiber_core_um": null,
+    "cooling": "空冷"
   },
   {
     "id": "p231",
@@ -2730,7 +2859,10 @@
       "made_url": "https://laserts.com/aboutus",
       "service": "日本総代理店レーザ技術サービスが訪問修理・交換、予備部品を常備し代替機も用意",
       "service_url": "https://laserts.com/hw1000"
-    }
+    },
+    "wire_feed": "標準",
+    "fiber_core_um": 50,
+    "cooling": "水冷"
   },
   {
     "id": "p232",
@@ -2794,7 +2926,10 @@
       "made_url": "https://laserts.com/aboutus",
       "service": "日本総代理店レーザ技術サービスが訪問修理・交換、予備部品を常備し代替機も用意",
       "service_url": "https://laserts.com/hw1000"
-    }
+    },
+    "wire_feed": "標準",
+    "fiber_core_um": 50,
+    "cooling": "水冷"
   },
   {
     "id": "p233",
@@ -2854,7 +2989,10 @@
     "origin": {
       "hq": "日本（大阪府大阪市淀川区）　※販売元。製造元は公式に記載なし",
       "hq_url": "https://www.globalgloria.com/%E3%83%9B%E3%83%BC%E3%83%A0/%E4%BC%9A%E7%A4%BE%E7%B4%B9%E4%BB%8B"
-    }
+    },
+    "wire_feed": "標準",
+    "fiber_core_um": null,
+    "cooling": "水冷"
   },
   {
     "id": "p234",
@@ -2914,7 +3052,10 @@
     "origin": {
       "hq": "日本（大阪府大阪市淀川区）　※販売元。製造元は公式に記載なし",
       "hq_url": "https://www.globalgloria.com/%E3%83%9B%E3%83%BC%E3%83%A0/%E4%BC%9A%E7%A4%BE%E7%B4%B9%E4%BB%8B"
-    }
+    },
+    "wire_feed": "標準",
+    "fiber_core_um": null,
+    "cooling": "水冷"
   },
   {
     "id": "p235",
@@ -2970,7 +3111,10 @@
     "origin": {
       "hq": "日本（愛知県豊橋市）　※販売元。製造元は公式に記載なし",
       "hq_url": "https://www.youbon.co.jp/corporate/"
-    }
+    },
+    "wire_feed": "標準",
+    "fiber_core_um": null,
+    "cooling": "水冷"
   },
   {
     "id": "p236",
@@ -3026,7 +3170,10 @@
     "origin": {
       "hq": "日本（愛知県豊橋市）　※販売元。製造元は公式に記載なし",
       "hq_url": "https://www.youbon.co.jp/corporate/"
-    }
+    },
+    "wire_feed": "標準",
+    "fiber_core_um": null,
+    "cooling": "水冷"
   },
   {
     "id": "p237",
@@ -3074,7 +3221,10 @@
       "hq_url": "http://www.jp-union.com/about/index.html",
       "service": "日本本社（西宮市）の事業内容にアフターメンテナンスを明記",
       "service_url": "http://www.jp-union.com/about/index.html"
-    }
+    },
+    "wire_feed": "対応",
+    "fiber_core_um": 50,
+    "cooling": "水冷"
   },
   {
     "id": "p238",
@@ -3122,7 +3272,10 @@
       "hq_url": "http://www.jp-union.com/about/index.html",
       "service": "日本本社（西宮市）の事業内容にアフターメンテナンスを明記",
       "service_url": "http://www.jp-union.com/about/index.html"
-    }
+    },
+    "wire_feed": "対応",
+    "fiber_core_um": 50,
+    "cooling": "水冷"
   },
   {
     "id": "p239",
@@ -3187,7 +3340,10 @@
       "made_url": "https://www.technocoat.co.jp/about",
       "service": "専任スタッフが導入後のメンテナンス・アフターサービスに対応",
       "service_url": "https://www.technocoat.co.jp/support"
-    }
+    },
+    "wire_feed": null,
+    "fiber_core_um": null,
+    "cooling": null
   },
   {
     "id": "p240",
@@ -3250,7 +3406,10 @@
       "made_url": "https://www.chu-cra.co.jp/welding/",
       "service": "修理・メンテナンスを自社工場（クリーンルーム）で対応、出張修理・代替機貸出あり",
       "service_url": "https://www.chu-cra-facility.com/support/"
-    }
+    },
+    "wire_feed": "オプション",
+    "fiber_core_um": null,
+    "cooling": "水冷"
   },
   {
     "id": "p241",
@@ -3307,7 +3466,10 @@
       "hq_url": "https://www.chu-cra.co.jp/company/profile/",
       "service": "修理・メンテナンスを自社工場（クリーンルーム）で対応、出張修理・代替機貸出あり",
       "service_url": "https://www.chu-cra-facility.com/support/"
-    }
+    },
+    "wire_feed": "標準",
+    "fiber_core_um": null,
+    "cooling": "空冷"
   },
   {
     "id": "p242",
@@ -3368,7 +3530,10 @@
       "hq_url": "https://www.akebono-c.co.jp/",
       "service": "故障時は電話サポートまたは出張修理、必要に応じ代替機貸出（2年保証）",
       "service_url": "https://www.akebono-c.com/"
-    }
+    },
+    "wire_feed": "標準",
+    "fiber_core_um": null,
+    "cooling": "水冷"
   },
   {
     "id": "p243",
@@ -3430,7 +3595,10 @@
       "hq_url": "https://www.akebono-c.co.jp/",
       "service": "故障時は電話サポートまたは出張修理、必要に応じ代替機貸出（2年保証）",
       "service_url": "https://www.akebono-c.com/"
-    }
+    },
+    "wire_feed": "標準",
+    "fiber_core_um": null,
+    "cooling": "水冷"
   },
   {
     "id": "p244",
@@ -3483,7 +3651,10 @@
     "origin": {
       "hq": "日本（大阪府大阪市東淀川区）　※販売元。製造元は公式に記載なし",
       "hq_url": "https://nbceng.com/company/"
-    }
+    },
+    "wire_feed": null,
+    "fiber_core_um": null,
+    "cooling": "空冷"
   },
   {
     "id": "p245",
@@ -3524,7 +3695,10 @@
     "origin": {
       "hq": "日本（大阪府大阪市東淀川区）　※販売元。製造元は公式に記載なし",
       "hq_url": "https://nbceng.com/company/"
-    }
+    },
+    "wire_feed": "対応",
+    "fiber_core_um": null,
+    "cooling": "水冷"
   },
   {
     "id": "p246",
@@ -3578,7 +3752,10 @@
     "origin": {
       "hq": "日本（石川県金沢市）　※販売元。製造元は公式に記載なし",
       "hq_url": "https://rapyuta.jp/company/"
-    }
+    },
+    "wire_feed": "標準",
+    "fiber_core_um": null,
+    "cooling": "水冷"
   },
   {
     "id": "p247",
@@ -3626,7 +3803,10 @@
       "hq_url": "https://www.profitet.com/companyinfo/gaiyou.html",
       "service": "「国内メンテナンス」として故障時対応の専門スタッフを用意。保証期間内は自社で無償修理",
       "service_url": "https://www.profitet.com/products/materialprocessing/handyweld.html"
-    }
+    },
+    "wire_feed": null,
+    "fiber_core_um": null,
+    "cooling": "空冷"
   },
   {
     "id": "p248",
@@ -3674,7 +3854,10 @@
       "hq_url": "https://www.profitet.com/companyinfo/gaiyou.html",
       "service": "「国内メンテナンス」として故障時対応の専門スタッフを用意。保証期間内は自社で無償修理",
       "service_url": "https://www.profitet.com/products/materialprocessing/handyweld.html"
-    }
+    },
+    "wire_feed": null,
+    "fiber_core_um": null,
+    "cooling": "空冷"
   },
   {
     "id": "p249",
@@ -3732,7 +3915,10 @@
       "made": "中国",
       "made_basis": "済南の本社工場でレーザー溶接機を生産と記載。会社全体の記載で、機種ごとの記載はなし",
       "made_url": "https://www.bodor.com/en/news/company/Bodor-Laser-Dream-Park-Smart-Factory-Begins-Production.html"
-    }
+    },
+    "wire_feed": "標準",
+    "fiber_core_um": null,
+    "cooling": null
   },
   {
     "id": "p250",
@@ -3790,7 +3976,10 @@
       "made": "中国",
       "made_basis": "済南の本社工場でレーザー溶接機を生産と記載。会社全体の記載で、機種ごとの記載はなし",
       "made_url": "https://www.bodor.com/en/news/company/Bodor-Laser-Dream-Park-Smart-Factory-Begins-Production.html"
-    }
+    },
+    "wire_feed": "標準",
+    "fiber_core_um": null,
+    "cooling": "空冷"
   },
   {
     "id": "p251",
@@ -3856,7 +4045,10 @@
       "made_url": "https://ggblaser.com/about-us",
       "service": "自社で導入後の修理・メンテナンスに対応（2年間のメーカー保証）",
       "service_url": "https://ggblaser.com/about-us"
-    }
+    },
+    "wire_feed": null,
+    "fiber_core_um": null,
+    "cooling": "空冷"
   },
   {
     "id": "p252",
@@ -3921,7 +4113,10 @@
       "made_url": "https://ggblaser.com/about-us",
       "service": "自社で導入後の修理・メンテナンスに対応（2年間のメーカー保証）",
       "service_url": "https://ggblaser.com/about-us"
-    }
+    },
+    "wire_feed": "対応",
+    "fiber_core_um": null,
+    "cooling": "空冷"
   },
   {
     "id": "p253",
@@ -3982,7 +4177,10 @@
       "hq_url": "https://www.gwklaser.com/contact/",
       "service": "日本正規代理店・遠誠が保証修理・保守契約・現地訪問対応",
       "service_url": "https://ensei-m.jp/support/"
-    }
+    },
+    "wire_feed": "標準",
+    "fiber_core_um": null,
+    "cooling": "水冷"
   },
   {
     "id": "p254",
@@ -4043,7 +4241,10 @@
       "hq_url": "https://www.gwklaser.com/contact/",
       "service": "日本正規代理店・遠誠が保証修理・保守契約・現地訪問対応",
       "service_url": "https://ensei-m.jp/support/"
-    }
+    },
+    "wire_feed": "標準",
+    "fiber_core_um": null,
+    "cooling": "水冷"
   },
   {
     "id": "p255",
@@ -4108,7 +4309,10 @@
       "made_url": "https://jp.senfenglaser.com/about/",
       "service": "国内のSENFENG認定パートナー（アグサメタル）が全国保守ネットワークで修理・メンテナンス",
       "service_url": "https://agusa.co.jp/service/fiber_laser-support/"
-    }
+    },
+    "wire_feed": "対応",
+    "fiber_core_um": null,
+    "cooling": "空冷"
   },
   {
     "id": "p256",
@@ -4178,7 +4382,10 @@
       "made_url": "https://jp.senfenglaser.com/about/",
       "service": "国内のSENFENG認定パートナー（アグサメタル）が全国保守ネットワークで修理・メンテナンス",
       "service_url": "https://agusa.co.jp/service/fiber_laser-support/"
-    }
+    },
+    "wire_feed": "オプション",
+    "fiber_core_um": null,
+    "cooling": "水冷"
   },
   {
     "id": "p257",
@@ -4239,7 +4446,10 @@
       "made": "中国",
       "made_basis": "工場所在地は山東省徳州市。会社全体の記載で、機種ごとの記載はなし",
       "made_url": "https://www.accteklaser.com/about/"
-    }
+    },
+    "wire_feed": null,
+    "fiber_core_um": null,
+    "cooling": "空冷"
   },
   {
     "id": "p258",
@@ -4309,7 +4519,10 @@
       "made_url": "https://www.laser-machine.com/company.shtml",
       "service": "出張修理・センドバック修理・保守契約（6年プラン）、修理7営業日超は貸出機",
       "service_url": "https://www.laser-machine.com/FL/lcw_gray.shtml"
-    }
+    },
+    "wire_feed": "標準",
+    "fiber_core_um": 25,
+    "cooling": "水冷"
   },
   {
     "id": "p259",
@@ -4380,7 +4593,10 @@
       "made_url": "https://www.laser-machine.com/company.shtml",
       "service": "出張修理・センドバック修理・保守契約（6年プラン）、修理7営業日超は貸出機",
       "service_url": "https://www.laser-machine.com/FL/lcw_gray.shtml"
-    }
+    },
+    "wire_feed": "標準",
+    "fiber_core_um": 50,
+    "cooling": "水冷"
   },
   {
     "id": "p260",
@@ -4442,7 +4658,10 @@
     "origin": {
       "hq": "日本（東京都大田区）",
       "hq_url": "https://www.nihonwelding.co.jp/profile.html"
-    }
+    },
+    "wire_feed": "オプション",
+    "fiber_core_um": null,
+    "cooling": "水冷"
   },
   {
     "id": "p261",
@@ -4501,7 +4720,10 @@
     "origin": {
       "hq": "日本（東京都大田区）",
       "hq_url": "https://www.nihonwelding.co.jp/profile.html"
-    }
+    },
+    "wire_feed": "対応",
+    "fiber_core_um": null,
+    "cooling": "空冷"
   },
   {
     "id": "p262",
@@ -4550,7 +4772,10 @@
     "origin": {
       "hq": "日本（石川県金沢市）",
       "hq_url": "https://www.shibuya.co.jp/corporate/company-profile/"
-    }
+    },
+    "wire_feed": null,
+    "fiber_core_um": null,
+    "cooling": "水冷"
   },
   {
     "id": "p263",
@@ -4611,7 +4836,10 @@
       "hq_url": "https://www.might-jp.com/company/",
       "service": "国内修理対応（断線修理・トーチ交換・ケーブル交換修理）",
       "service_url": "https://www.might-jp.com/products/mfl-w1500mfl-w2000/"
-    }
+    },
+    "wire_feed": "対応",
+    "fiber_core_um": null,
+    "cooling": "水冷"
   },
   {
     "id": "p264",
@@ -4673,7 +4901,10 @@
       "hq_url": "https://www.might-jp.com/company/",
       "service": "国内修理対応（断線修理・トーチ交換・ケーブル交換修理）",
       "service_url": "https://www.might-jp.com/products/mfl-w1500mfl-w2000/"
-    }
+    },
+    "wire_feed": "対応",
+    "fiber_core_um": null,
+    "cooling": "水冷"
   },
   {
     "id": "p265",
@@ -4731,7 +4962,10 @@
       "made_url": "https://ensei-m.jp/product/d/35",
       "service": "国内販売店・遠誠が保証修理・保守契約・現地訪問対応",
       "service_url": "https://ensei-m.jp/support/"
-    }
+    },
+    "wire_feed": "対応",
+    "fiber_core_um": null,
+    "cooling": "水冷"
   },
   {
     "id": "p266",
@@ -4793,7 +5027,10 @@
       "made_url": "https://ensei-m.jp/product/d/35",
       "service": "国内販売店・遠誠が保証修理・保守契約・現地訪問対応",
       "service_url": "https://ensei-m.jp/support/"
-    }
+    },
+    "wire_feed": "対応",
+    "fiber_core_um": null,
+    "cooling": "水冷"
   },
   {
     "id": "p267",
@@ -4843,7 +5080,10 @@
       "made_url": "https://alphalaser.eu/unternehmen/daten-fakten.html",
       "service": "国内正規代理店ALPHA LASER ENGINEERING（愛知県一宮市）が販売・メンテナンス",
       "service_url": "https://alphalaser-eng.com/services/laser-machine/"
-    }
+    },
+    "wire_feed": "オプション",
+    "fiber_core_um": null,
+    "cooling": null
   },
   {
     "id": "p268",
@@ -4905,7 +5145,10 @@
       "made_url": "https://denaliweld.com/ja/about-us/",
       "service": "日本支社（神奈川県小田原市）を含む各支社がスペアパーツ・サービスを提供",
       "service_url": "https://denaliweld.com/ja/products/air-cooled-laser-welding-machine/"
-    }
+    },
+    "wire_feed": "標準",
+    "fiber_core_um": null,
+    "cooling": "空冷"
   },
   {
     "id": "p269",
@@ -4967,7 +5210,10 @@
       "made_url": "https://denaliweld.com/ja/about-us/",
       "service": "日本支社（神奈川県小田原市）を含む各支社がスペアパーツ・サービスを提供",
       "service_url": "https://denaliweld.com/ja/products/air-cooled-laser-welding-machine/"
-    }
+    },
+    "wire_feed": "標準",
+    "fiber_core_um": null,
+    "cooling": "空冷"
   },
   {
     "id": "p270",
@@ -5031,7 +5277,10 @@
       "made_url": "https://ls-tool.com/",
       "service": "国内から保証期間内の部品無償発送・代替機貸出（訪問修理・現地メンテナンスは行わない）",
       "service_url": "https://ls-tool.com/"
-    }
+    },
+    "wire_feed": "標準",
+    "fiber_core_um": null,
+    "cooling": "水冷"
   },
   {
     "id": "p271",
@@ -5095,7 +5344,10 @@
       "made_url": "https://ls-tool.com/",
       "service": "国内から保証期間内の部品無償発送・代替機貸出（訪問修理・現地メンテナンスは行わない）",
       "service_url": "https://ls-tool.com/"
-    }
+    },
+    "wire_feed": "標準",
+    "fiber_core_um": null,
+    "cooling": "水冷"
   },
   {
     "id": "p272",
@@ -5151,7 +5403,10 @@
       "made": "中国",
       "made_basis": "恵州市の生産拠点で製造。会社全体の記載で、機種ごとの記載はなし",
       "made_url": "https://dynalasers.jp/%e7%a7%81%e3%81%9f%e3%81%a1%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6/"
-    }
+    },
+    "wire_feed": "標準",
+    "fiber_core_um": null,
+    "cooling": "空冷"
   },
   {
     "id": "p273",
@@ -5206,7 +5461,10 @@
       "made": "中国",
       "made_basis": "恵州市の生産拠点で製造。会社全体の記載で、機種ごとの記載はなし",
       "made_url": "https://dynalasers.jp/%e7%a7%81%e3%81%9f%e3%81%a1%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6/"
-    }
+    },
+    "wire_feed": "標準",
+    "fiber_core_um": null,
+    "cooling": "空冷"
   },
   {
     "id": "p274",
@@ -5256,6 +5514,9 @@
       "made_url": "https://fiberlaser.co.jp/?page_id=140",
       "service": "日本国内常駐エンジニアによる設置・メンテナンス体制",
       "service_url": "https://fiberlaser.co.jp/?page_id=140"
-    }
+    },
+    "wire_feed": "対応",
+    "fiber_core_um": 20,
+    "cooling": "空冷"
   }
 ]

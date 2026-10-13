@@ -54,3 +54,4 @@
 .pcard__spec { margin: 4px 0 0; font-size: 16px; line-height: 1.5; }
 .pcard__spec > span { color: var(--c-sub); }
 .pcard__spec .nw { white-space: nowrap; }
+.filter__note { margin: -4px 0 10px; font-size: 16px; color: var(--c-sub); }

@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { existsSync, readFileSync } from "node:fs";
-import { runDiagnosis, productSlug, alternatives, scoreProduct, resolveAnswers, optionMatches, thicknessGuide } from "../src/assets/js/scoring.js";
+import { runDiagnosis, productSlug, alternatives, scoreProduct, resolveAnswers, optionMatches, thicknessGuide, materialCriteria, coolingOf, compareTarget } from "../src/assets/js/scoring.js";
 
 const config = JSON.parse(readFileSync(new URL("../src/data/diagnosis.json", import.meta.url)));
 // src/data/products.json は公開分だけの生成物になる予定なので、診断のテストは is_published で絞った公開機種だけを対象にする
@@ -265,4 +265,35 @@ test("板厚が非公開の機種は、選定理由に出力から見た目安�
   if (hit) assert.match(hit.reason, /対応板厚は非公開.*出力から見た目安は(薄板|中板|厚板)/);
   const noGuide = runDiagnosis({ ...config, thicknessGuide: undefined }, published, { q2_thickness: "mid" });
   assert.deepEqual(r.results.map((x) => x.product.id), noGuide.results.map((x) => x.product.id));
+});
+
+test("アルミ・銅の運営元の基準: コア径（アルミ60μm以下・銅20μm以下）か出力（アルミ1,500W以上・銅2,000W以上）。コア径が非公開なら出力だけ", () => {
+  const m = (core, w) => { const r = materialCriteria(config, { fiber_core_um: core, output_w: w }); return [r.アルミ.ok, r.銅.ok, r.アルミ.by, r.銅.by]; };
+  assert.deepEqual(m(20, 500), [true, true, "core", "core"]);       // UW-SH500C（14μm）相当
+  assert.deepEqual(m(50, 1000), [true, false, "core", "none"]);
+  assert.deepEqual(m(100, 1500), [true, false, "output", "none"]);
+  assert.deepEqual(m(null, 2000), [true, true, "output", "output"]);
+  assert.deepEqual(m(null, 1200), [false, false, "none", "none"]);
+  assert.deepEqual(m(null, null), [false, false, null, null]);
+});
+
+test("他社機ページで比べる相手: 空冷→UW-S1500F、水冷→UW-SH1500C、判定できない→UW-SH1500C（その旨の一文あり）", () => {
+  assert.equal(coolingOf({ cooling: "空冷" }), "空冷");
+  assert.equal(coolingOf({ portability: "本体45kg・強制空冷" }), "空冷");
+  assert.equal(coolingOf({ portability: "本体150kg、チラー内蔵" }), "水冷");
+  assert.equal(coolingOf({ portability: "本体39kg、空冷（チラー不要）" }), "空冷");
+  assert.equal(coolingOf({ portability: "非公開" }), null);
+  assert.equal(compareTarget(config, { cooling: "空冷" }).slug, "uwjapan-uw-s1500f");
+  assert.equal(compareTarget(config, { cooling: "水冷" }).slug, "uwjapan-uw-sh1500c");
+  const u = compareTarget(config, { portability: "非公開" });
+  assert.equal(u.slug, "uwjapan-uw-sh1500c");
+  assert.ok(u.note);
+  // 比べる相手は公開中の運営元の取り扱い機
+  for (const slug of ["uwjapan-uw-s1500f", "uwjapan-uw-sh1500c"]) assert.ok(published.some((p) => productSlug(p) === slug && p.handled_by_operator));
+});
+
+test("アルミ・銅と答えても、運営元の基準は順位に使わない（理由文に添えるだけ）", () => {
+  const ans = { q1_material: "alcu" };
+  const a = runDiagnosis(config, published, ans), b = runDiagnosis({ ...config, materialCriteria: undefined }, published, ans);
+  assert.deepEqual(a.results.map((x) => x.product.id), b.results.map((x) => x.product.id));
 });

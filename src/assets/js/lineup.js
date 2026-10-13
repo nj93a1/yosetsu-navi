@@ -1,6 +1,6 @@
 // 機種一覧: 種類タブ・キーワード検索・用途/素材/板厚/価格帯の絞り込み（URL と同期）
 import { icon, productPhoto } from "./partials.js";
-import { productSlug } from "./scoring.js";
+import { productSlug, thicknessGuide, materialCriteria } from "./scoring.js";
 
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
@@ -18,8 +18,19 @@ export const CATEGORIES = [
 // 用途の「厚物」はチップにしない。該当機種は板厚「3〜6mm」と同じで、診断の「厚物（6mm以上）」と呼び方が食い違うため、板厚の軸で探してもらう
 export const AXES = [
   { key: "use", label: "用途", tag: "use", values: ["薄板接合", "異材接合", "補修", "自動化"], names: { 自動化: "ロボット・自動化" } },
-  { key: "material", label: "素材", tag: "material", values: ["鉄", "ステンレス", "アルミ", "銅", "チタン", "マグネシウム"] },
-  { key: "thickness", label: "板厚", tag: "thickness", values: ["0.5mm未満", "0.5〜3mm", "3〜6mm", "6mm以上"], names: { "0.5mm未満": "極薄（0.5mm未満）", "0.5〜3mm": "薄板（0.5〜3mm）", "3〜6mm": "中板（3〜6mm）", "6mm以上": "厚板（6mm以上）" } },
+  // ワイヤー供給: 標準装備・オプション・対応のいずれかを公式に記載している機種
+  { key: "wire", label: "ワイヤー供給", values: ["ワイヤー供給できる"], get: (p) => (p.wire_feed ? ["ワイヤー供給できる"] : []) },
+  // 素材: アルミ・銅は運営元の基準（ファイバコア径・出力。diagnosis.json の materialCriteria）で絞り込む。ほかはメーカーの公表値
+  { key: "material", label: "素材", tag: "material", values: ["鉄", "ステンレス", "アルミ", "銅", "チタン", "マグネシウム"],
+    names: { アルミ: "アルミ（運営元の基準）", 銅: "銅（運営元の基準）" },
+    note: (c) => c.materialCriteria && `アルミ・銅は${c.materialCriteria.label}で絞り込みます（${Object.entries(c.materialCriteria.rules).map(([m, x]) => `${m}: ファイバコア径${x.maxCoreUm}μm以下か出力${x.minOutputW.toLocaleString()}W以上`).join("、")}。コア径が非公開なら出力だけで判定）。${c.materialCriteria.note}`,
+    get: (p) => (p._mc ? [...p.tags.material.filter((m) => !(m in p._mc)), ...Object.keys(p._mc).filter((m) => p._mc[m].ok)] : p.tags.material) },
+  // 板厚の目安: 運営元の目安（出力から。diagnosis.json の thicknessGuide）
+  { key: "class", label: "板厚の目安（運営元の目安）", values: ["薄板", "中板", "厚板"],
+    names: { 薄板: "薄板（3.0mm未満）", 中板: "中板（3.0〜6.0mm未満）", 厚板: "厚板（6.0mm以上）" },
+    note: (c) => c.thicknessGuide && `${c.thicknessGuide.label}です（${c.thicknessGuide.classes.map((x) => `${x.name} ${x.minW ? `${x.minW.toLocaleString()}W` : ""}${x.maxW ? `〜${(x.maxW + 1).toLocaleString()}W未満` : "以上"}`).join("／")}）。${c.thicknessGuide.note}`,
+    get: (p) => (p._guide ? [p._guide] : []) },
+  { key: "thickness", label: "板厚（メーカーの公表値）", tag: "thickness", values: ["0.5mm未満", "0.5〜3mm", "3〜6mm", "6mm以上"], names: { "0.5mm未満": "極薄（0.5mm未満）", "0.5〜3mm": "薄板（0.5〜3mm）", "3〜6mm": "中板（3〜6mm）", "6mm以上": "厚板（6mm以上）" } },
   { key: "price", label: "価格帯", tag: "price", values: ["100万円未満", "100〜200万円", "200〜400万円", "400〜600万円", "600万円以上"], keepEmpty: true },
   { key: "skill", label: "使う人", tag: "skill", values: [], names: { 未経験可: "未経験から使える" } },
   { key: "env", label: "使う場所", tag: "environment", values: [] },
@@ -32,10 +43,20 @@ const tagsOf = (p, axis) => (axis.get ? axis.get(p) : axis.key === "price" ? [p.
 /** 検索用の正規化: 全角半角（NFKC）・大文字小文字・空白・ハイフンの違いを無視する */
 export const normalize = (s) => String(s ?? "").normalize("NFKC").toLowerCase().replace(/[\s\-‐‑‒–—―−_]/g, "");
 
+/** 運営元の目安・基準の設定（diagnosis.json）。loadProducts で読み込む */
+let CONFIG = {};
+
 /** 公開機種を中立な順（出力の小さい順。出力が非公開の機種は最後、同じなら機種名順）で返す。
  *  運営元の取り扱いの有無は並び順に使わない（運営者ページの説明どおり） */
 export async function loadProducts() {
-  const list = (await fetch("/data/products.json").then((r) => r.json())).filter((p) => p.is_published !== false);
+  const [all, config] = await Promise.all([
+    fetch("/data/products.json").then((r) => r.json()),
+    fetch("/data/diagnosis.json?v=15").then((r) => r.json()).catch(() => ({})),
+  ]);
+  const list = all.filter((p) => p.is_published !== false);
+  // 運営元の目安・基準（メーカーの公表値とは別に持つ）
+  CONFIG = config;
+  for (const p of list) { p._guide = thicknessGuide(config, p)?.name || null; p._mc = config.materialCriteria ? materialCriteria(config, p) : null; }
   return list.sort((a, b) => (a.output_w ?? Infinity) - (b.output_w ?? Infinity) || a.name.localeCompare(b.name, "ja"));
 }
 
@@ -131,9 +152,9 @@ export async function mountLineup(root) {
       <button class="btn btn--primary" type="submit">${icon("search")}検索</button>
     </form>
     <details class="filterbox" id="filterbox">
-      <summary><span>用途・素材・板厚・価格帯・サポートで絞り込む<span class="filterbox__n" id="filterN"></span></span>${icon("chevron", "ico ico--chev")}</summary>
+      <summary><span>用途・素材・板厚・価格帯などで絞り込む<span class="filterbox__n" id="filterN"></span></span>${icon("chevron", "ico ico--chev")}</summary>
       <p class="filterbox__note">同じ項目で複数選ぶと、どれかに当てはまる機種を出します。数字は該当する機種の数です。</p>
-      ${groups.map((a) => `<div class="filter"><p class="filter__title">${a.label}</p><ul class="chips">${a.values.map((v) => `<li><button type="button" aria-pressed="false" data-axis="${a.key}" data-v="${esc(v)}">${icon("check")}<span>${esc(valueName(a, v))}</span><span class="chips__n"></span></button></li>`).join("")}</ul></div>`).join("")}
+      ${groups.map((a) => `<div class="filter"><p class="filter__title">${a.label}</p>${(typeof a.note === "function" ? a.note(CONFIG) : a.note) ? `<p class="filter__note">${esc(typeof a.note === "function" ? a.note(CONFIG) : a.note)}</p>` : ""}<ul class="chips">${a.values.map((v) => `<li><button type="button" aria-pressed="false" data-axis="${a.key}" data-v="${esc(v)}">${icon("check")}<span>${esc(valueName(a, v))}</span><span class="chips__n"></span></button></li>`).join("")}</ul></div>`).join("")}
     </details>
     <div class="active" id="active" hidden></div>
     <div class="tabpanel" role="tabpanel" id="lineupPanel">

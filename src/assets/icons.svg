@@ -64,4 +64,6 @@
   <!-- 向いている（笑顔）・向いていない（困り顔）。マイベストの「良い」「気になる」に倣う -->
   <symbol id="i-good" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20zM8.5 8a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm7 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM7.5 13.5h9a4.5 4.5 0 0 1-9 0z"/></symbol>
   <symbol id="i-bad" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20zM8.5 8a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm7 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM7.5 17.5a4.5 4 0 0 1 9 0z"/></symbol>
+  <!-- ワイヤー供給: ワイヤーを巻いたリールと、繰り出されるワイヤー -->
+  <symbol id="i-wire" viewBox="0 0 24 24" fill="currentColor"><path d="M2 3h3v18H2zM13 3h3v18h-3zM5 6h8v2.5H5zM5 10.75h8v2.5H5zM5 15.5h8v2.5H5zM16 11h4.5a1.5 1.5 0 0 1 1.5 1.5V21h-2v-8h-4z"/></symbol>
 </svg>

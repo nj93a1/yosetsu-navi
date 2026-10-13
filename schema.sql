@@ -33,6 +33,9 @@ CREATE TABLE IF NOT EXISTS products (
   not_suitable_for TEXT NOT NULL DEFAULT '[]',    -- 向いていない用途（JSON配列）
   handled_by_operator INTEGER NOT NULL DEFAULT 0, -- 自社取り扱い区分（1=運営元で取り扱い）
   handled_label   TEXT,                           -- 取り扱い表示の文言（NULL なら「運営元で取り扱い」。グループ会社が販売窓口なら「運営元グループで取り扱い」）
+  wire_feed       TEXT,                           -- ワイヤー供給（標準 / オプション / 対応 / NULL=公式に記載なし）
+  fiber_core_um   REAL,                           -- ファイバコア径（μm。非公開なら NULL）
+  cooling         TEXT,                           -- 冷却方式（空冷 / 水冷 / NULL）
   image           TEXT,                           -- 画像パス
   source          TEXT,                           -- 情報源の名称（カタログ名等）
   official_url    TEXT,                           -- メーカー公式の商品ページURL

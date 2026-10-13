@@ -4,7 +4,7 @@
 
 import { allocateAlternatives, productKind } from "./alternatives.js";
 import diagnosis from "../src/data/diagnosis.json";
-import { thicknessGuide } from "../src/assets/js/scoring.js";
+import { thicknessGuide, materialCriteria, compareTarget, coolingOf } from "../src/assets/js/scoring.js";
 
 const json = (data, status = 200) =>
   new Response(JSON.stringify(data), { status, headers: { "content-type": "application/json; charset=utf-8" } });
@@ -206,24 +206,6 @@ function originRows(o = {}) {
   ];
 }
 
-/**
- * 他社機のページで並べて見せる「運営元の取り扱い機」を1台選ぶ。
- * 方式（ハンドヘルド等）が同じ → 対応素材・板厚区分・用途の重なり → 出力の近さ、で比べる。出力が非公開の取り扱い機は選ばない。
- * 一覧の並び順や診断の順位には使わない（このページの末尾の比較欄だけ）。
- */
-function nearestHandled(p, all, tagsOf) {
-  const t = tagsOf.get(p.id) || {};
-  const ov = (a = [], b = []) => a.filter((x) => b.includes(x)).length;
-  const score = (o) => {
-    const u = tagsOf.get(o.id) || {};
-    const out = p.output_w ? Math.abs(Math.log(o.output_w / p.output_w)) * 4 : 0;
-    return (productKind(o) === productKind(p) ? 3 : 0) + ov(t.material, u.material) * 2 + ov(t.thickness, u.thickness) + ov(t.use, u.use) - out;
-  };
-  return all.filter((o) => o.handled_by_operator && o.id !== p.id && o.output_w)
-    .map((o) => ({ o, s: score(o) }))
-    .sort((a, b) => b.s - a.s || a.o.id.localeCompare(b.o.id))[0]?.o || null;
-}
-
 // 商品詳細ページ: /products/{maker_slug}-{model_slug}/
 // URL はスラッグのみで決まるため、メーカー実名NGの場合は maker_slug を差し替えるだけで移行できる。
 async function productPage(env, slug) {
@@ -257,9 +239,20 @@ async function productPage(env, slug) {
   // 出力から見た板厚の目安（運営元の目安）。メーカーの公表値とは別の行に出す
   const guide = thicknessGuide(diagnosis, p);
   if (guide) thicknessRows.push(["板厚の目安", kw(`${guide.name}（${guide.range}）クラス`) + `<span class="spec__basis">${kw(`${diagnosis.thicknessGuide.label}。${diagnosis.thicknessGuide.note}`)}</span>`]);
+  // アルミ・銅の運営元の基準（ファイバコア径・出力）。メーカーの対応素材とは別の行
+  const mc = materialCriteria(diagnosis, p);
+  const mcCfg = diagnosis.materialCriteria;
+  const mcText = Object.entries(mc).map(([m, x]) => `${m}：${x.ok ? `基準を満たす（${x.by === "core" ? "ファイバコア径" : "出力"}）` : x.by === null ? "判定できない" : "基準に届かない"}`).join("／");
+  const mcRule = Object.entries(mcCfg.rules).map(([m, x]) => `${m}はファイバコア径${x.maxCoreUm}μm以下か出力${x.minOutputW.toLocaleString("ja-JP")}W以上`).join("、");
+  const cooling = coolingOf(p);
   const spec = [
     ["方式", kw(p.method)], ["波長", kw(p.wavelength)], ["出力", outputHtml(p)], ["可搬性", kw(p.portability)],
-    ["対応素材", kw((tags.material || []).join("・"))], ...thicknessRows,
+    ["冷却方式", cooling && kw(cooling + (p.cooling ? "" : "（可搬性の記載から）"))],
+    ["ファイバコア径", p.fiber_core_um != null && kw(`${p.fiber_core_um}μm`), "公式に記載なし"],
+    ["ワイヤー供給", p.wire_feed && kw(p.wire_feed === "対応" ? "対応（標準かオプションかは記載なし）" : p.wire_feed === "標準" ? "標準装備" : "オプション"), "公式に記載なし"],
+    ["対応素材", kw((tags.material || []).join("・"))],
+    ["アルミ・銅の目安", kw(mcText) + `<span class="spec__basis">${kw(`${mcCfg.label}：${mcRule}（コア径が非公開なら出力だけで判定）。${mcCfg.note}`)}</span>`],
+    ...thicknessRows,
     ["使用環境", kw((tags.environment || []).join("・"))], ["価格帯", p.price_band ? kw(p.price_band) : p.handled_by_operator ? `<a href="/contact/?type=quote&amp;product=${esc(p.slug)}">お問い合わせ</a>` : ""], ["習得難易度", kw(p.skill_level)],
     ...(p.spec_rows || []).map(([k, v]) => [k, kw(v)]),
     ...originRows(p.origin),
@@ -282,7 +275,8 @@ async function productPage(env, slug) {
   ].join("");
 
   // 他社機のページ: 条件の近い運営元の取り扱い機と並べて見せ、実機で比べる相談につなげる
-  const vsItem = p.handled_by_operator ? null : nearestHandled(p, all.map(rowToProduct), tagsOf);
+  const target = p.handled_by_operator ? null : compareTarget(diagnosis, p);
+  const vsItem = target ? all.map(rowToProduct).find((o) => o.slug === target.slug && o.handled_by_operator) || null : null;
   let vsSection = "";
   if (vsItem) {
     const vt = tagsOf.get(vsItem.id) || {};
@@ -291,16 +285,18 @@ async function productPage(env, slug) {
       mat: kw((xt.material || []).join("・")), thick: x.thickness_note && kw(x.thickness_note),
       price: x.price_band ? kw(x.price_band) : x.handled_by_operator ? "お問い合わせ" : "",
       skill: kw(x.skill_level), service: x.origin?.service && kw(x.origin.service),
+      cooling: coolingOf(x) && kw(coolingOf(x)), core: x.fiber_core_um != null && kw(`${x.fiber_core_um}μm`),
+      wire: x.wire_feed && kw(x.wire_feed === "標準" ? "標準装備" : x.wire_feed),
     })[k];
-    const rows = [["出力", "out"], ["方式", "method"], ["可搬性", "port"], ["対応素材", "mat"], ["板厚の公表値", "thick"], ["価格帯", "price"], ["習得難易度", "skill"], ["国内のサポート", "service"]]
+    const rows = [["出力", "out"], ["冷却方式", "cooling"], ["方式", "method"], ["可搬性", "port"], ["ファイバコア径", "core"], ["ワイヤー供給", "wire"], ["対応素材", "mat"], ["板厚の公表値", "thick"], ["価格帯", "price"], ["習得難易度", "skill"], ["国内のサポート", "service"]]
       .map(([label, k]) => {
         const a = val(p, tags, k), b = val(vsItem, vt, k);
-        const na = k === "service" ? "公式に記載なし" : NA;
+        const na = ["service", "core", "wire"].includes(k) ? "公式に記載なし" : NA;
         return `<div class="vs__row"><dt>${kw(label)}</dt>${a ? `<dd>${a}</dd>` : `<dd class="is-na">${na}</dd>`}${b ? `<dd>${b}</dd>` : `<dd class="is-na">${na}</dd>`}</div>`;
       }).join("");
     vsSection = `<section class="subsec vs" id="vs">
     <h2>${kw("運営元の取り扱い機と比べる")}</h2>
-    <p class="vs__note">${kw("この機種と方式・対応素材・出力が近い、本サイトの運営元が取り扱う機種です。機種一覧の並び順や診断の順位には関係しません。")}</p>
+    <p class="vs__note">${kw(`${target.cooling ? `${target.cooling}の機種なので、運営元が取り扱う${target.cooling}の機種と比べています。` : target.note || ""}機種一覧の並び順や診断の順位には関係しません。`)}</p>
     <div class="vs__names"><div><span class="vs__tag">この機種</span>${productPhoto(p, "row")}<b>${kw(p.name)}</b><small>${kw(maker)}</small></div><div><span class="vs__tag vs__tag--op">${esc(vsItem.handled_label || "運営元で取り扱い")}</span>${productPhoto(vsItem, "row")}<b>${kw(vsItem.name)}</b><small>${kw(splitMaker(vsItem.maker_name)[0])}</small></div></div>
     <dl class="vs__rows">${rows}</dl>
     <div class="vs__cta">
@@ -436,10 +432,10 @@ function pageShell(title, body, { current = "/lineup/" } = {}) {
 <meta name="robots" content="noindex,nofollow"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><meta property="og:type" content="website"><meta property="og:site_name" content="レーザー溶接機 比較・選定"><meta property="og:title" content="${esc(title)}"><meta property="og:image" content="https://yosetsu-navi.jolly-frost-2311.workers.dev/assets/images/ogp.jpg"><meta name="twitter:card" content="summary_large_image"><title>${esc(title)}｜${SITE_NAME}</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/css/style.css?v=18"><link rel="stylesheet" href="/assets/css/product.css?v=18"></head><body>
+<link rel="stylesheet" href="/assets/css/style.css?v=19"><link rel="stylesheet" href="/assets/css/product.css?v=19"></head><body>
 <div id="siteHeader"></div>
 ${body}
 <div id="siteFooter"></div>
-<script type="module">import { mountChrome } from "/assets/js/partials.js?v=18"; mountChrome({ current: ${JSON.stringify(current)} });</script>
+<script type="module">import { mountChrome } from "/assets/js/partials.js?v=19"; mountChrome({ current: ${JSON.stringify(current)} });</script>
 </body></html>`;
 }
