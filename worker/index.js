@@ -296,7 +296,7 @@ async function productPage(env, slug) {
     vsSection = `<section class="subsec vs" id="vs">
     <h2>${kw("運営元の取り扱い機と比べる")}</h2>
     <p class="vs__note">${kw("この機種と方式・対応素材・出力が近い、本サイトの運営元が取り扱う機種です。機種一覧の並び順や診断の順位には関係しません。")}</p>
-    <div class="vs__names"><div><span class="vs__tag">この機種</span>${productPhoto(p, "row")}<b>${kw(p.name)}</b><small>${kw(maker)}</small></div><div><span class="vs__tag vs__tag--op">運営元で取り扱い</span>${productPhoto(vsItem, "row")}<b>${kw(vsItem.name)}</b><small>${kw(splitMaker(vsItem.maker_name)[0])}</small></div></div>
+    <div class="vs__names"><div><span class="vs__tag">この機種</span>${productPhoto(p, "row")}<b>${kw(p.name)}</b><small>${kw(maker)}</small></div><div><span class="vs__tag vs__tag--op">${esc(vsItem.handled_label || "運営元で取り扱い")}</span>${productPhoto(vsItem, "row")}<b>${kw(vsItem.name)}</b><small>${kw(splitMaker(vsItem.maker_name)[0])}</small></div></div>
     <dl class="vs__rows">${rows}</dl>
     <div class="vs__cta">
       <a class="btn btn--accent" href="/contact/?type=test&amp;product=${esc(p.slug)}&amp;compare=${esc(vsItem.slug)}">${kw("2台を実機で比べる（テスト溶接）")}</a>
@@ -314,7 +314,7 @@ async function productPage(env, slug) {
         kw(splitMaker(o.maker_name)[0]),
         outputHtml(o, "出力 "),
         o.price_band ? `<span class="nowrap">価格帯 ${esc(o.price_band)}</span>` : "",
-        o.handled_by_operator ? `<span class="nowrap">運営元で取り扱い</span>` : "",
+        o.handled_by_operator ? `<span class="nowrap">${esc(o.handled_label || "運営元で取り扱い")}</span>` : "",
       ].filter(Boolean).join("&#8288;｜<wbr>"); // U+2060（改行させない印）で「｜」を前の項目に付け、行頭に来ないようにする
       return `<li><a href="/products/${esc(o.slug)}/">${icon(productKind(o))}<span class="pnav__label">${kw(o.name)}<span class="pnav__sub">${sub}</span></span>${icon("chevron", "ico ico--chev")}</a></li>`;
     }).join("")}</ul></section>`;
@@ -329,7 +329,7 @@ async function productPage(env, slug) {
   <section class="product__intro" id="top">
     <div class="product__top">
       <div class="product__head">
-        <p class="product__chips">${p.handled_by_operator ? `<span class="badge">運営元で取り扱い</span>` : ""}${/ハンド|ロボット|ライン|据置|真空|チャンバー/.test(p.method || "") ? `<span class="pchip">${kw(PRODUCT_KIND_LABEL[productKind(p)])}</span>` : ""}${p.skill_level ? `<span class="pchip">${kw(p.skill_level)}</span>` : ""}</p>
+        <p class="product__chips">${p.handled_by_operator ? `<span class="badge">${esc(p.handled_label || "運営元で取り扱い")}</span>` : ""}${/ハンド|ロボット|ライン|据置|真空|チャンバー/.test(p.method || "") ? `<span class="pchip">${kw(PRODUCT_KIND_LABEL[productKind(p)])}</span>` : ""}${p.skill_level ? `<span class="pchip">${kw(p.skill_level)}</span>` : ""}</p>
         <p class="product__maker">${kw(maker)}</p>
         <h1>${kw(p.name)}</h1>
         ${makerAgent ? `<p class="product__agent">${kw(makerAgent)}</p>` : ""}
@@ -342,7 +342,7 @@ async function productPage(env, slug) {
   ${(p.features || []).length ? `<section class="subsec" id="features"><h2>特長</h2><ul class="features">${p.features.map((f) => `<li>${icon("check")}<span>${kw(f)}</span></li>`).join("")}</ul></section>` : ""}
   ${p.handled_by_operator && (p.support || []).length ? `<section class="subsec opsupport" id="support">
     <h2>${kw("運営元のサポート")}</h2>
-    <p class="opsupport__lead">${kw(p.support.some((x) => x.includes("修理")) ? "この機種は本サイトの運営元が取り扱っています。導入前の確認から導入後の修理まで、運営元が対応します。" : "この機種は本サイトの運営元が取り扱っています。テスト溶接・見積もり・補助金の活用を運営元に相談できます。")}</p>
+    <p class="opsupport__lead">${kw(p.handled_label ? "この機種は、本サイトの運営元のグループ会社が販売窓口です。見積もり・テスト溶接・補助金の活用を相談できます。" : p.support.some((x) => x.includes("修理")) ? "この機種は本サイトの運営元が取り扱っています。導入前の確認から導入後の修理まで、運営元が対応します。" : "この機種は本サイトの運営元が取り扱っています。テスト溶接・見積もり・補助金の活用を運営元に相談できます。")}</p>
     <ul class="opsupport__list">${p.support.map((x) => `<li>${icon("check")}<span>${kw(x)}</span></li>`).join("")}</ul>
     <div class="opsupport__cta">
       <a class="btn btn--accent" href="/contact/?type=test&amp;product=${esc(p.slug)}">${kw("テスト溶接・デモを相談する")}</a>
@@ -431,10 +431,10 @@ function pageShell(title, body, { current = "/lineup/" } = {}) {
 <meta name="robots" content="noindex,nofollow"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><meta property="og:type" content="website"><meta property="og:site_name" content="レーザー溶接機 比較・選定"><meta property="og:title" content="${esc(title)}"><meta property="og:image" content="https://yosetsu-navi.jolly-frost-2311.workers.dev/assets/images/ogp.jpg"><meta name="twitter:card" content="summary_large_image"><title>${esc(title)}｜${SITE_NAME}</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/css/style.css?v=16"><link rel="stylesheet" href="/assets/css/product.css?v=16"></head><body>
+<link rel="stylesheet" href="/assets/css/style.css?v=17"><link rel="stylesheet" href="/assets/css/product.css?v=17"></head><body>
 <div id="siteHeader"></div>
 ${body}
 <div id="siteFooter"></div>
-<script type="module">import { mountChrome } from "/assets/js/partials.js?v=16"; mountChrome({ current: ${JSON.stringify(current)} });</script>
+<script type="module">import { mountChrome } from "/assets/js/partials.js?v=17"; mountChrome({ current: ${JSON.stringify(current)} });</script>
 </body></html>`;
 }

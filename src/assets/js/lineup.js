@@ -19,7 +19,7 @@ export const CATEGORIES = [
 export const AXES = [
   { key: "use", label: "用途", tag: "use", values: ["薄板接合", "異材接合", "補修", "自動化"], names: { 自動化: "ロボット・自動化" } },
   { key: "material", label: "素材", tag: "material", values: ["鉄", "ステンレス", "アルミ", "銅", "チタン", "マグネシウム"] },
-  { key: "thickness", label: "板厚", tag: "thickness", values: ["0.5mm未満", "0.5〜3mm", "3〜6mm", "6mm以上"] },
+  { key: "thickness", label: "板厚", tag: "thickness", values: ["0.5mm未満", "0.5〜3mm", "3〜6mm", "6mm以上"], names: { "0.5mm未満": "極薄（0.5mm未満）", "0.5〜3mm": "薄板（0.5〜3mm）", "3〜6mm": "中板（3〜6mm）", "6mm以上": "厚板（6mm以上）" } },
   { key: "price", label: "価格帯", tag: "price", values: ["100万円未満", "100〜200万円", "200〜400万円", "400〜600万円", "600万円以上"], keepEmpty: true },
   { key: "skill", label: "使う人", tag: "skill", values: [], names: { 未経験可: "未経験から使える" } },
   { key: "env", label: "使う場所", tag: "environment", values: [] },
@@ -91,7 +91,7 @@ export function catchLine(p) {
 
 /** カードのタグ（対応素材・板厚・使う人・価格帯。公開されている項目だけ） */
 export function cardTags(p) {
-  const th = { "0.5mm未満": "極薄", "0.5〜3mm": "薄板", "3〜6mm": "中厚", "6mm以上": "厚物" };
+  const th = { "0.5mm未満": "極薄", "0.5〜3mm": "薄板", "3〜6mm": "中板", "6mm以上": "厚板" };
   const tags = [...p.tags.material.slice(0, 4), ...p.tags.thickness.map((t) => th[t]).filter(Boolean)];
   if (p.tags.skill[0] === "未経験可") tags.push("未経験可");
   tags.push(priceLabel(p));
@@ -102,7 +102,7 @@ export function cardTags(p) {
 export function card(p) {
   return `<li class="pcard${p.handled_by_operator ? " pcard--op" : ""}"><a href="/products/${esc(productSlug(p))}/">
     <div class="pcard__text">
-      ${p.handled_by_operator ? `<span class="badge">運営元で取り扱い</span>` : ""}
+      ${p.handled_by_operator ? `<span class="badge">${esc(p.handled_label || "運営元で取り扱い")}</span>` : ""}
       <p class="pcard__name">${nameHtml(p.name)}</p>
       <p class="pcard__maker">${esc(p.maker_name)}</p>
       <p class="pcard__catch">${esc(catchLine(p))}</p>

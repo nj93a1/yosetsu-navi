@@ -1,6 +1,6 @@
 // 選定診断の画面制御。スコアリングは scoring.js、設問・商品は /data/*.json。
-import { runDiagnosis, productSlug } from "./scoring.js?v=16";
-import { mountChrome, icon, productPhoto } from "./partials.js?v=16";
+import { runDiagnosis, productSlug } from "./scoring.js?v=17";
+import { mountChrome, icon, productPhoto } from "./partials.js?v=17";
 
 const app = document.getElementById("app");
 const foot = document.getElementById("foot");
@@ -29,7 +29,7 @@ const firstUnanswered = () => state.config.questions.findIndex((q) => !(q.id in 
 async function init() {
   mountChrome({ current: "/diagnosis/", withBottombar: false });
   const [config, products] = await Promise.all([
-    fetch("/data/diagnosis.json?v=12").then((r) => r.json()),
+    fetch("/data/diagnosis.json?v=13").then((r) => r.json()),
     fetch("/data/products.json").then((r) => r.json()),
   ]);
   state.config = config;
@@ -322,7 +322,7 @@ function card(x) {
   const skill = (p.tags.skill || [])[0];
   return `
     <li class="rcard">
-      <div class="rcard__head"><span class="rcard__slot ${slotClass}">${x.slot}位 ${esc(x.slotLabel)}</span>${p.handled_by_operator ? `<span class="badge" style="margin:0">運営元で取り扱い</span>` : ""}</div>
+      <div class="rcard__head"><span class="rcard__slot ${slotClass}">${x.slot}位 ${esc(x.slotLabel)}</span>${p.handled_by_operator ? `<span class="badge" style="margin:0">${esc(p.handled_label || "運営元で取り扱い")}</span>` : ""}</div>
       <div class="rcard__body">
         ${productPhoto(p, "result")}
         <div>
@@ -374,7 +374,7 @@ function renderCompare() {
             ${productPhoto(p, "compare")}
             <p class="cmp__name">${esc(p.name)}</p>
             <p class="cmp__maker">${esc(p.maker_name)}</p>
-            ${p.handled_by_operator ? `<span class="badge">運営元で取り扱い</span>` : ""}
+            ${p.handled_by_operator ? `<span class="badge">${esc(p.handled_label || "運営元で取り扱い")}</span>` : ""}
           </div>`).join("")}
       </div>
       <dl class="cmp__rows">

@@ -1408,8 +1408,8 @@ body{margin:0}
                   <li><p class="sec121__col-title">素材</p><a class="sec121__card" href="/lineup/?material=チタン"><span class="sec121__card-title">チタン</span><span class="sec121__card-text">対応を公表している機種は限られます。</span></a></li>
                   <li class="sec121__divider" aria-hidden="true"></li>
                   <li><p class="sec121__col-title">板厚</p><a class="sec121__card" href="/lineup/?thickness=0.5〜3mm"><span class="sec121__card-title">薄板（0.5〜3mm）</span><span class="sec121__card-text">板金・筐体など、ひずみを抑えたい溶接に。</span></a></li>
-                  <li><p class="sec121__col-title">板厚</p><a class="sec121__card" href="/lineup/?thickness=3〜6mm"><span class="sec121__card-title">中厚（3〜6mm）</span><span class="sec121__card-text">TIG から置き換えたい中厚板に。</span></a></li>
-                  <li><p class="sec121__col-title">板厚</p><a class="sec121__card" href="/lineup/?thickness=6mm以上"><span class="sec121__card-title">厚物（6mm以上）</span><span class="sec121__card-text">6mm以上の対応を公表している機種です。</span></a></li>
+                  <li><p class="sec121__col-title">板厚</p><a class="sec121__card" href="/lineup/?thickness=3〜6mm"><span class="sec121__card-title">中板（3〜6mm）</span><span class="sec121__card-text">TIG から置き換えたい中板に。</span></a></li>
+                  <li><p class="sec121__col-title">板厚</p><a class="sec121__card" href="/lineup/?thickness=6mm以上"><span class="sec121__card-title">厚板（6mm以上）</span><span class="sec121__card-text">6mm以上の対応を公表している機種です。</span></a></li>
                 </ul>
               </div>
             </div>
@@ -1596,8 +1596,8 @@ body{margin:0}
           </svg>
         </div>
         <div class="sec082__wrap">
-          <h3 class="sec082__name">中厚・厚物を速く</h3>
-          <p class="sec082__text">TIGで時間のかかる中厚板を、<br>レーザーで溶接したい</p>
+          <h3 class="sec082__name">中板・厚板を速く</h3>
+          <p class="sec082__text">TIGで時間のかかる中板を、<br>レーザーで溶接したい</p>
         </div>
       </a>
       <a class="sec082__item" href="/subsidy/">
@@ -2182,7 +2182,7 @@ const picks = [...byMaker.values()].sort((a, b) => known(b) - known(a)).slice(0,
 const maker = (n) => String(n).replace(/（.*$/, "").replace(/株式会社|合同会社/g, "").trim();
 const kind = (p) => (/^ハンド/.test(p.method || "") ? "ハンドヘルド" : /ロボット|ライン/.test(p.method || "") ? "ライン組込" : /据置|真空|チャンバー/.test(p.method || "") ? "据置・専用機" : "レーザー溶接機");
 document.getElementById("rdProducts").innerHTML = picks.map((p) => `<li class="sec090__item"><a class="sec090__link" href="/products/${esc(p.maker_slug)}-${esc(p.model_slug)}/">
-  <span class="sec090__label">${esc(kind(p))}</span>${p.handled_by_operator ? '<span class="sec090__label sec090__label--fill">運営元の取扱</span>' : ""}
+  <span class="sec090__label">${esc(kind(p))}</span>${p.handled_by_operator ? `<span class="sec090__label sec090__label--fill">${p.handled_label ? "運営元グループ" : "運営元の取扱"}</span>` : ""}
   <p class="sec090__name">${esc(p.name)}</p>
   <p class="sec090__price">${p.output_w ? `出力<span class="sec090__val">${(p.output_w / 1000).toFixed(p.output_w % 1000 ? (p.output_w % 100 ? 2 : 1) : 1)}</span>kW` : '<span class="sec090__sub">出力 非公開</span>'}</p>
   <p class="sec090__text">${esc(maker(p.maker_name))}<br>価格帯 ${esc(p.tags.price[0] || (p.handled_by_operator ? "お問い合わせ" : "非公開"))}</p>

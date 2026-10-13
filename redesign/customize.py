@@ -92,8 +92,8 @@ block('SEC-121', f'''
                   <li><p class="sec121__col-title">素材</p>{L("チタン", "対応を公表している機種は限られます。", q("material", "チタン"))}</li>
                   <li class="sec121__divider" aria-hidden="true"></li>
                   <li><p class="sec121__col-title">板厚</p>{L("薄板（0.5〜3mm）", "板金・筐体など、ひずみを抑えたい溶接に。", q("thickness", "0.5〜3mm"))}</li>
-                  <li><p class="sec121__col-title">板厚</p>{L("中厚（3〜6mm）", "TIG から置き換えたい中厚板に。", q("thickness", "3〜6mm"))}</li>
-                  <li><p class="sec121__col-title">板厚</p>{L("厚物（6mm以上）", "6mm以上の対応を公表している機種です。", q("thickness", "6mm以上"))}</li>
+                  <li><p class="sec121__col-title">板厚</p>{L("中板（3〜6mm）", "TIG から置き換えたい中板に。", q("thickness", "3〜6mm"))}</li>
+                  <li><p class="sec121__col-title">板厚</p>{L("厚板（6mm以上）", "6mm以上の対応を公表している機種です。", q("thickness", "6mm以上"))}</li>
                 </ul>
               </div>
             </div>
@@ -285,7 +285,7 @@ block('SEC-082', f'''
     <div class="sec082__list">
 {it082("user", "新人に任せたい", "熟練工がいなくても、<br>新人がすぐ使える機種を", q("skill", "未経験可"))}
 {it082("alcu", "アルミ・銅", "外注しているアルミ・銅の<br>溶接を、自社でやりたい", q("material", "アルミ"))}
-{it082("thick", "中厚・厚物を速く", "TIGで時間のかかる中厚板を、<br>レーザーで溶接したい", q("thickness", "3〜6mm"))}
+{it082("thick", "中板・厚板を速く", "TIGで時間のかかる中板を、<br>レーザーで溶接したい", q("thickness", "3〜6mm"))}
 {it082("yen", "予算を抑えたい", "100〜200万円で、<br>補助金も使って導入したい", "/subsidy/")}
     </div>
   </div>
@@ -607,7 +607,7 @@ const picks = [...byMaker.values()].sort((a, b) => known(b) - known(a)).slice(0,
 const maker = (n) => String(n).replace(/（.*$/, "").replace(/株式会社|合同会社/g, "").trim();
 const kind = (p) => (/^ハンド/.test(p.method || "") ? "ハンドヘルド" : /ロボット|ライン/.test(p.method || "") ? "ライン組込" : /据置|真空|チャンバー/.test(p.method || "") ? "据置・専用機" : "レーザー溶接機");
 document.getElementById("rdProducts").innerHTML = picks.map((p) => `<li class="sec090__item"><a class="sec090__link" href="/products/${esc(p.maker_slug)}-${esc(p.model_slug)}/">
-  <span class="sec090__label">${esc(kind(p))}</span>${p.handled_by_operator ? '<span class="sec090__label sec090__label--fill">運営元の取扱</span>' : ""}
+  <span class="sec090__label">${esc(kind(p))}</span>${p.handled_by_operator ? `<span class="sec090__label sec090__label--fill">${p.handled_label ? "運営元グループ" : "運営元の取扱"}</span>` : ""}
   <p class="sec090__name">${esc(p.name)}</p>
   <p class="sec090__price">${p.output_w ? `出力<span class="sec090__val">${(p.output_w / 1000).toFixed(p.output_w % 1000 ? (p.output_w % 100 ? 2 : 1) : 1)}</span>kW` : '<span class="sec090__sub">出力 非公開</span>'}</p>
   <p class="sec090__text">${esc(maker(p.maker_name))}<br>価格帯 ${esc(p.tags.price[0] || (p.handled_by_operator ? "お問い合わせ" : "非公開"))}</p>

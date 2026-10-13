@@ -109,7 +109,7 @@
         {
           "id": "thin",
           "label": "薄板",
-          "sub": "3mm 以下",
+          "sub": "3.0mm 未満",
           "icon": "thin",
           "match": {
             "mode": "any",
@@ -122,8 +122,8 @@
         },
         {
           "id": "mid",
-          "label": "中厚",
-          "sub": "3〜6mm",
+          "label": "中板",
+          "sub": "3.0〜6.0mm 未満",
           "icon": "mid",
           "match": {
             "mode": "any",
@@ -131,12 +131,12 @@
               "3〜6mm"
             ]
           },
-          "reason": "3〜6mm の中厚に対応"
+          "reason": "3〜6mm の中板に対応"
         },
         {
           "id": "thick",
-          "label": "厚物",
-          "sub": "6mm 以上",
+          "label": "厚板",
+          "sub": "6.0mm 以上",
           "icon": "thick",
           "match": {
             "mode": "any",
@@ -144,16 +144,16 @@
               "6mm以上"
             ]
           },
-          "reason": "厚物に対応",
+          "reason": "厚板に対応",
           "relaxPrefer": {
-            "_comment": "厚物（6mm以上）への対応を公開している機種が条件の中に無いときは、まず「3〜6mm に対応」に置き換えて探す（relax.preferBeforeDrop）。板厚を公開していない機種は、3〜6mm 対応を公開している機種より後ろに並べる（rankAboveUnknown）",
+            "_comment": "厚板（6mm以上）への対応を公開している機種が条件の中に無いときは、まず「3〜6mm に対応」に置き換えて探す（relax.preferBeforeDrop）。板厚を公開していない機種は、3〜6mm 対応を公開している機種より後ろに並べる（rankAboveUnknown）",
             "mode": "any",
             "tags": [
               "3〜6mm"
             ],
             "reason": "3〜6mm まで対応",
             "note": "板厚は、3〜6mm に対応する機種を先に表示しています。",
-            "preferNote": "厚物（6mm以上）への対応を公開している機種が見つからなかったため、板厚は 3〜6mm に対応する機種で探しました。",
+            "preferNote": "厚板（6mm以上）への対応を公開している機種が見つからなかったため、板厚は 3〜6mm に対応する機種で探しました。",
             "rankAboveUnknown": true
           }
         },

@@ -32,6 +32,7 @@ CREATE TABLE IF NOT EXISTS products (
   suitable_for    TEXT NOT NULL DEFAULT '[]',     -- 向いている用途（JSON配列）
   not_suitable_for TEXT NOT NULL DEFAULT '[]',    -- 向いていない用途（JSON配列）
   handled_by_operator INTEGER NOT NULL DEFAULT 0, -- 自社取り扱い区分（1=運営元で取り扱い）
+  handled_label   TEXT,                           -- 取り扱い表示の文言（NULL なら「運営元で取り扱い」。グループ会社が販売窓口なら「運営元グループで取り扱い」）
   image           TEXT,                           -- 画像パス
   source          TEXT,                           -- 情報源の名称（カタログ名等）
   official_url    TEXT,                           -- メーカー公式の商品ページURL
