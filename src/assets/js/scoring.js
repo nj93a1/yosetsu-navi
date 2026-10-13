@@ -34,6 +34,17 @@ export function resolveAnswers(config, answers) {
   return out;
 }
 
+/**
+ * 出力から見た板厚の目安（運営元の目安。diagnosis.json の thicknessGuide）。出力が非公開なら null。
+ * メーカーの公表値とは別物で、診断の順位には使わない（選定理由に添えるだけ）
+ */
+export function thicknessGuide(config, product) {
+  const g = config.thicknessGuide;
+  const w = product.output_w;
+  if (!g || !w) return null;
+  return g.classes.find((c) => (c.minW == null || w >= c.minW) && (c.maxW == null || w <= c.maxW)) || null;
+}
+
 /** 商品がその軸のタグを持っているか（空 = メーカー非公開） */
 export function axisKnown(product, axis) {
   return (product.tags?.[axis] || []).length > 0;
@@ -289,10 +300,10 @@ export function runDiagnosis(config, products, answers) {
   // 適合が5件以上でも、メーカー上限で5台そろわないときは非適合を予備として使う
   const unmatched = scored.filter((s) => !s.matched);
   const enough = matched.length >= 5;
-  const results = allocateSlots(config, enough ? matched : [...matched, ...unmatched], resolved, enough ? unmatched : []).map((r) => ({
-    ...r,
-    reason: buildReason(r),
-  }));
+  const results = allocateSlots(config, enough ? matched : [...matched, ...unmatched], resolved, enough ? unmatched : []).map((r) => {
+    const guide = thicknessGuide(config, r.product);
+    return { ...r, guide, reason: buildReason({ ...r, guide }) };
+  });
   // メーカー上限のために表示しなかった「条件に合う機種」（その代わりに条件外の機種を出したときだけ数える）
   const shown = new Set(results.map((r) => r.product.id));
   const cappedOut = results.some((r) => !r.matched) ? matched.filter((s) => !shown.has(s.product.id)).length : 0;
@@ -343,6 +354,8 @@ export function buildReason(r) {
     const rest = op ? r.unknowns.filter((u) => u !== "価格帯") : r.unknowns;
     const parts = [];
     if (rest.length) parts.push(r.matched ? `${rest.join("・")}は非公開` : `${rest.join("・")}は非公開のため要確認`);
+    // 板厚が非公開のときは、出力から見た目安（運営元の目安）を添える
+    if (r.guide && rest.includes("対応板厚")) parts.push(`出力から見た目安は${r.guide.name}`);
     if (op) parts.push("価格帯はお問い合わせ");
     text += `（${parts.join("。")}）`;
   }

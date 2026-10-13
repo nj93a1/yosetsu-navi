@@ -3,6 +3,8 @@
 // Worker は D1 の「商品マスタ」と「診断ログ」だけを扱う。
 
 import { allocateAlternatives, productKind } from "./alternatives.js";
+import diagnosis from "../src/data/diagnosis.json";
+import { thicknessGuide } from "../src/assets/js/scoring.js";
 
 const json = (data, status = 200) =>
   new Response(JSON.stringify(data), { status, headers: { "content-type": "application/json; charset=utf-8" } });
@@ -252,6 +254,9 @@ async function productPage(env, slug) {
   const thicknessTags = (tags.thickness || []).join("・");
   const thicknessRows = [["板厚の公表値", p.thickness_note && kw(p.thickness_note)]];
   if (!p.thickness_note && thicknessTags) thicknessRows.push(["板厚の区分（診断用）", kw(thicknessTags)]);
+  // 出力から見た板厚の目安（運営元の目安）。メーカーの公表値とは別の行に出す
+  const guide = thicknessGuide(diagnosis, p);
+  if (guide) thicknessRows.push(["板厚の目安", kw(`${guide.name}（${guide.range}）クラス`) + `<span class="spec__basis">${kw(`${diagnosis.thicknessGuide.label}。${diagnosis.thicknessGuide.note}`)}</span>`]);
   const spec = [
     ["方式", kw(p.method)], ["波長", kw(p.wavelength)], ["出力", outputHtml(p)], ["可搬性", kw(p.portability)],
     ["対応素材", kw((tags.material || []).join("・"))], ...thicknessRows,
@@ -431,10 +436,10 @@ function pageShell(title, body, { current = "/lineup/" } = {}) {
 <meta name="robots" content="noindex,nofollow"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><meta property="og:type" content="website"><meta property="og:site_name" content="レーザー溶接機 比較・選定"><meta property="og:title" content="${esc(title)}"><meta property="og:image" content="https://yosetsu-navi.jolly-frost-2311.workers.dev/assets/images/ogp.jpg"><meta name="twitter:card" content="summary_large_image"><title>${esc(title)}｜${SITE_NAME}</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/css/style.css?v=17"><link rel="stylesheet" href="/assets/css/product.css?v=17"></head><body>
+<link rel="stylesheet" href="/assets/css/style.css?v=18"><link rel="stylesheet" href="/assets/css/product.css?v=18"></head><body>
 <div id="siteHeader"></div>
 ${body}
 <div id="siteFooter"></div>
-<script type="module">import { mountChrome } from "/assets/js/partials.js?v=17"; mountChrome({ current: ${JSON.stringify(current)} });</script>
+<script type="module">import { mountChrome } from "/assets/js/partials.js?v=18"; mountChrome({ current: ${JSON.stringify(current)} });</script>
 </body></html>`;
 }

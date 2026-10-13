@@ -1,6 +1,6 @@
 // 選定診断の画面制御。スコアリングは scoring.js、設問・商品は /data/*.json。
-import { runDiagnosis, productSlug } from "./scoring.js?v=17";
-import { mountChrome, icon, productPhoto } from "./partials.js?v=17";
+import { runDiagnosis, productSlug } from "./scoring.js?v=18";
+import { mountChrome, icon, productPhoto } from "./partials.js?v=18";
 
 const app = document.getElementById("app");
 const foot = document.getElementById("foot");
@@ -29,7 +29,7 @@ const firstUnanswered = () => state.config.questions.findIndex((q) => !(q.id in 
 async function init() {
   mountChrome({ current: "/diagnosis/", withBottombar: false });
   const [config, products] = await Promise.all([
-    fetch("/data/diagnosis.json?v=13").then((r) => r.json()),
+    fetch("/data/diagnosis.json?v=14").then((r) => r.json()),
     fetch("/data/products.json").then((r) => r.json()),
   ]);
   state.config = config;

@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { existsSync, readFileSync } from "node:fs";
-import { runDiagnosis, productSlug, alternatives, scoreProduct, resolveAnswers, optionMatches } from "../src/assets/js/scoring.js";
+import { runDiagnosis, productSlug, alternatives, scoreProduct, resolveAnswers, optionMatches, thicknessGuide } from "../src/assets/js/scoring.js";
 
 const config = JSON.parse(readFileSync(new URL("../src/data/diagnosis.json", import.meta.url)));
 // src/data/products.json は公開分だけの生成物になる予定なので、診断のテストは is_published で絞った公開機種だけを対象にする
@@ -252,4 +252,17 @@ test("代替候補は同価格帯・自分以外・最大2件", () => {
   const alts = alternatives(published, p);
   assert.ok(alts.length >= 1 && alts.length <= 2);
   assert.ok(alts.every((a) => a.id !== p.id && a.tags.price[0] === "100〜200万円"));
+});
+
+test("板厚の目安（運営元の目安）: 出力で 薄板 〜999W／中板 1000〜1599W／厚板 1600W〜。出力が非公開なら出さない", () => {
+  const g = (w) => thicknessGuide(config, { output_w: w })?.name ?? null;
+  assert.deepEqual([g(500), g(999), g(1000), g(1500), g(1599), g(1600), g(3000), g(null)], ["薄板", "薄板", "中板", "中板", "中板", "厚板", "厚板", null]);
+});
+
+test("板厚が非公開の機種は、選定理由に出力から見た目安を添える（順位には使わない）", () => {
+  const r = runDiagnosis(config, published, { q2_thickness: "mid" });
+  const hit = r.results.find((x) => !(x.product.tags.thickness || []).length && x.product.output_w);
+  if (hit) assert.match(hit.reason, /対応板厚は非公開.*出力から見た目安は(薄板|中板|厚板)/);
+  const noGuide = runDiagnosis({ ...config, thicknessGuide: undefined }, published, { q2_thickness: "mid" });
+  assert.deepEqual(r.results.map((x) => x.product.id), noGuide.results.map((x) => x.product.id));
 });
