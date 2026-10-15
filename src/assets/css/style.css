@@ -547,6 +547,11 @@ mark { background: linear-gradient(transparent 55%, var(--c-marker) 55%); color:
 /* 運営者ページの手順リスト */
 .steps-list { margin: 0; padding-left: 1.4em; }
 .steps-list li { margin: 0 0 10px; }
+/* プライバシーポリシー・免責事項などの箇条書き */
+.nowrap { white-space: nowrap; }
+.policy-list { margin: 0; padding-left: 1.4em; }
+.policy-list li { margin: 0 0 12px; }
+.form__privacy { margin: 0 0 12px; }
 
 /* 商品詳細: 写真が無いときのタイル、空の向き不向き */
 .ph--product { width: 100%; aspect-ratio: 16 / 9; margin: 12px 0 20px; border-radius: 16px; }

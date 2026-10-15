@@ -35,12 +35,23 @@ test("厚物（6mm以上）を公開している機種があれば、置き換�
   assert.ok(r.results[0].matched && (r.results[0].product.tags.thickness || []).includes("6mm以上"));
 });
 
-test("公開商品は87点（他社74＋運営元の取り扱い13）・スラッグ重複なし・公式か情報源のURLあり", () => {
-  assert.equal(published.length, 87);
+test("公開商品は85点（他社72＋運営元の取り扱い13）・スラッグ重複なし・公式か情報源のURLあり", () => {
+  assert.equal(published.length, 85);
   assert.equal(published.filter((p) => p.handled_by_operator).length, 13);
   assert.equal(base.length, 21);
   assert.equal(new Set(published.map(productSlug)).size, published.length);
   assert.ok(published.every((p) => p.official_url || p.source_url));
+});
+
+test("同じ機械は1ページ: 群協（UW と同じ製品）と八木産機 Fシリーズ（Qilin F4 に統合）は載せない。UW シリーズは UW JAPAN とノースヒルズを併記", () => {
+  assert.ok(!published.some((p) => /群協|グンユー|八木産機/.test(p.maker_name + p.name)));
+  const f4 = published.find((p) => p.name === "F4");
+  assert.ok(f4.origin.sellers.some((x) => x.name === "八木産機"));
+  const uw = published.filter((p) => /^UW-/.test(p.name));
+  assert.equal(uw.length, 4);
+  for (const p of uw) assert.deepEqual(p.origin.makers.map((m) => m.name), ["UW JAPAN株式会社", "ノースヒルズ溶接工業株式会社"]);
+  assert.equal(uw.find((p) => p.name === "UW-S1500F").fiber_core_um, 20);
+  assert.equal(config.materialCriteria.label, "コア径/出力を基準");
 });
 
 test("マスタの非公開は10点（ダミー）", { skip: master ? false : "マスタ data/products.json が無い" }, () => {
@@ -267,7 +278,7 @@ test("板厚が非公開の機種は、選定理由に出力から見た目安�
   assert.deepEqual(r.results.map((x) => x.product.id), noGuide.results.map((x) => x.product.id));
 });
 
-test("アルミ・銅の運営元の基準: コア径（アルミ60μm以下・銅20μm以下）か出力（アルミ1,500W以上・銅2,000W以上）。コア径が非公開なら出力だけ", () => {
+test("アルミ・銅をコア径/出力を基準に見る: コア径（アルミ60μm以下・銅20μm以下）か出力（アルミ1,500W以上・銅2,000W以上）。コア径が非公開なら出力だけ", () => {
   const m = (core, w) => { const r = materialCriteria(config, { fiber_core_um: core, output_w: w }); return [r.アルミ.ok, r.銅.ok, r.アルミ.by, r.銅.by]; };
   assert.deepEqual(m(20, 500), [true, true, "core", "core"]);       // UW-SH500C（14μm）相当
   assert.deepEqual(m(50, 1000), [true, false, "core", "none"]);
@@ -292,7 +303,7 @@ test("他社機ページで比べる相手: 空冷→UW-S1500F、水冷→UW-SH1
   for (const slug of ["uwjapan-uw-s1500f", "uwjapan-uw-sh1500c"]) assert.ok(published.some((p) => productSlug(p) === slug && p.handled_by_operator));
 });
 
-test("アルミ・銅と答えても、運営元の基準は順位に使わない（理由文に添えるだけ）", () => {
+test("アルミ・銅と答えても、コア径/出力の基準は順位に使わない（理由文に添えるだけ）", () => {
   const ans = { q1_material: "alcu" };
   const a = runDiagnosis(config, published, ans), b = runDiagnosis({ ...config, materialCriteria: undefined }, published, ans);
   assert.deepEqual(a.results.map((x) => x.product.id), b.results.map((x) => x.product.id));

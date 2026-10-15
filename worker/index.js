@@ -192,17 +192,32 @@ function altsHeading(p, tags, picked) {
   return ["代替候補", `${basis}の近さをもとに選んだ、メーカーが異なる機種です。`];
 }
 
-/** スペック表の「本社所在地・製造国・国内のサポート」。公式に書かれた事実だけ（origin が空なら「公式に記載なし」） */
+/**
+ * スペック表の「本社所在地（または製造元・販売元）・製造国・国内のサポート・国内の販売店」。公式に書かれた事実だけ（origin が空なら「公式に記載なし」）。
+ * makers があれば会社ごとに役割と所在地を並べる（UW シリーズは UW JAPAN とノースヒルズ溶接工業を併記）。sellers は確認できた国内の販売店で、makers と同じ会社は出さない
+ */
 function originRows(o = {}) {
   const none = "公式に記載なし";
   const src = (url) => (url ? `<a class="spec__src" href="${esc(url)}" target="_blank" rel="noopener">出典</a>` : "");
   const link = (text, url) => kw(text) + src(url);
+  const line = (main, sub) => `<span class="spec__line">${main}${sub ? `<span class="spec__basis">${kw(sub)}</span>` : ""}</span>`;
   // 「※販売元…」と製造国の根拠は、値と分けて細字で出す
   const [hq, hqNote] = String(o.hq || "").split(/\s*※/);
+  const makers = o.makers || [];
+  const bare = (name) => String(name).replace(/株式会社/g, "");
+  // 「UW JAPAN株式会社」の英字部分は途中で改行させない
+  const companyName = (name) => {
+    const m = /^([A-Za-z][A-Za-z ]*[A-Za-z])(.*)$/.exec(name);
+    return m ? `<span class="nowrap">${esc(m[1])}</span>${kw(m[2])}` : kw(name);
+  };
+  const sellers = (o.sellers || []).filter((x) => !makers.some((m) => bare(m.name) === bare(x.name)));
   return [
-    ["本社所在地", o.hq && kw(hq) + (hqNote ? `<span class="spec__basis">${kw(`※${hqNote}`)}</span>` : "") + src(o.hq_url), none],
+    makers.length
+      ? ["製造元・販売元", makers.map((m) => line(companyName(m.name) + src(m.url), [m.role, m.place].filter(Boolean).join("／"))).join("")]
+      : ["本社所在地", o.hq && kw(hq) + (hqNote ? `<span class="spec__basis">${kw(`※${hqNote}`)}</span>` : "") + src(o.hq_url), none],
     ["製造国", o.made && kw(o.made) + (o.made_basis ? `<span class="spec__basis">${kw(`根拠：${o.made_basis}`)}</span>` : "") + src(o.made_url), none],
     ["国内のサポート", o.service && link(o.service, o.service_url), none],
+    ...(sellers.length ? [["国内の販売店", sellers.map((x) => line(kw(x.name), x.note)).join("") + `<span class="spec__basis">${kw("公開情報で確認できた販売店です。ほかにも取り扱う店がある場合があります。")}</span>`]] : []),
   ];
 }
 
@@ -239,7 +254,7 @@ async function productPage(env, slug) {
   // 出力から見た板厚の目安（運営元の目安）。メーカーの公表値とは別の行に出す
   const guide = thicknessGuide(diagnosis, p);
   if (guide) thicknessRows.push(["板厚の目安", kw(`${guide.name}（${guide.range}）クラス`) + `<span class="spec__basis">${kw(`${diagnosis.thicknessGuide.label}。${diagnosis.thicknessGuide.note}`)}</span>`]);
-  // アルミ・銅の運営元の基準（ファイバコア径・出力）。メーカーの対応素材とは別の行
+  // アルミ・銅をコア径/出力を基準に見た目安（diagnosis.json の materialCriteria）。メーカーの対応素材とは別の行
   const mc = materialCriteria(diagnosis, p);
   const mcCfg = diagnosis.materialCriteria;
   const mcText = Object.entries(mc).map(([m, x]) => `${m}：${x.ok ? `基準を満たす（${x.by === "core" ? "ファイバコア径" : "出力"}）` : x.by === null ? "判定できない" : "基準に届かない"}`).join("／");
@@ -335,6 +350,7 @@ async function productPage(env, slug) {
         <h1>${kw(p.name)}</h1>
         ${makerAgent ? `<p class="product__agent">${kw(makerAgent)}</p>` : ""}
         <div class="product__band">${band}</div>
+        <p class="product__basis">${icon("info")}<span>${kw("この機種の情報は、メーカーや販売店が公開している情報を基に記載しています")}${p.origin.makers ? kw("（一部の項目は、運営元への確認によります）") : ""}。<a href="#links">${kw("出典を見る")}</a></span></p>
       </div>
       <figure class="product__fig">${productPhoto(p, "product")}${p.image_credit ? `<figcaption class="photo-credit">画像：${p.image_source ? `<a href="${esc(p.image_source)}" target="_blank" rel="noopener">${kw(p.image_credit)}</a>` : kw(p.image_credit)}</figcaption>` : ""}</figure>
     </div>
@@ -432,10 +448,10 @@ function pageShell(title, body, { current = "/lineup/" } = {}) {
 <meta name="robots" content="noindex,nofollow"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><meta property="og:type" content="website"><meta property="og:site_name" content="レーザー溶接機 比較・選定"><meta property="og:title" content="${esc(title)}"><meta property="og:image" content="https://yosetsu-navi.jolly-frost-2311.workers.dev/assets/images/ogp.jpg"><meta name="twitter:card" content="summary_large_image"><title>${esc(title)}｜${SITE_NAME}</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/css/style.css?v=19"><link rel="stylesheet" href="/assets/css/product.css?v=19"></head><body>
+<link rel="stylesheet" href="/assets/css/style.css?v=20"><link rel="stylesheet" href="/assets/css/product.css?v=20"></head><body>
 <div id="siteHeader"></div>
 ${body}
 <div id="siteFooter"></div>
-<script type="module">import { mountChrome } from "/assets/js/partials.js?v=19"; mountChrome({ current: ${JSON.stringify(current)} });</script>
+<script type="module">import { mountChrome } from "/assets/js/partials.js?v=20"; mountChrome({ current: ${JSON.stringify(current)} });</script>
 </body></html>`;
 }

@@ -20,10 +20,10 @@ export const AXES = [
   { key: "use", label: "用途", tag: "use", values: ["薄板接合", "異材接合", "補修", "自動化"], names: { 自動化: "ロボット・自動化" } },
   // ワイヤー供給: 標準装備・オプション・対応のいずれかを公式に記載している機種
   { key: "wire", label: "ワイヤー供給", values: ["ワイヤー供給できる"], get: (p) => (p.wire_feed ? ["ワイヤー供給できる"] : []) },
-  // 素材: アルミ・銅は運営元の基準（ファイバコア径・出力。diagnosis.json の materialCriteria）で絞り込む。ほかはメーカーの公表値
+  // 素材: アルミ・銅はコア径/出力を基準（diagnosis.json の materialCriteria）に絞り込む。ほかはメーカーの公表値
   { key: "material", label: "素材", tag: "material", values: ["鉄", "ステンレス", "アルミ", "銅", "チタン", "マグネシウム"],
-    names: { アルミ: "アルミ（運営元の基準）", 銅: "銅（運営元の基準）" },
-    note: (c) => c.materialCriteria && `アルミ・銅は${c.materialCriteria.label}で絞り込みます（${Object.entries(c.materialCriteria.rules).map(([m, x]) => `${m}: ファイバコア径${x.maxCoreUm}μm以下か出力${x.minOutputW.toLocaleString()}W以上`).join("、")}。コア径が非公開なら出力だけで判定）。${c.materialCriteria.note}`,
+    names: { アルミ: "アルミ（コア径/出力を基準）", 銅: "銅（コア径/出力を基準）" },
+    note: (c) => c.materialCriteria && `アルミ・銅は、ファイバコア径か出力を基準に絞り込みます（${Object.entries(c.materialCriteria.rules).map(([m, x]) => `${m}: ファイバコア径${x.maxCoreUm}μm以下か出力${x.minOutputW.toLocaleString()}W以上`).join("、")}。コア径が非公開なら出力だけで判定）。${c.materialCriteria.note}`,
     get: (p) => (p._mc ? [...p.tags.material.filter((m) => !(m in p._mc)), ...Object.keys(p._mc).filter((m) => p._mc[m].ok)] : p.tags.material) },
   // 板厚の目安: 運営元の目安（出力から。diagnosis.json の thicknessGuide）
   { key: "class", label: "板厚の目安（運営元の目安）", values: ["薄板", "中板", "厚板"],
@@ -51,7 +51,7 @@ let CONFIG = {};
 export async function loadProducts() {
   const [all, config] = await Promise.all([
     fetch("/data/products.json").then((r) => r.json()),
-    fetch("/data/diagnosis.json?v=15").then((r) => r.json()).catch(() => ({})),
+    fetch("/data/diagnosis.json?v=16").then((r) => r.json()).catch(() => ({})),
   ]);
   const list = all.filter((p) => p.is_published !== false);
   // 運営元の目安・基準（メーカーの公表値とは別に持つ）

@@ -125,8 +125,28 @@
       "hq_url": "https://uw-j.co.jp/company/",
       "made": "日本",
       "made_basis": "運営元（ノースヒルズ溶接工業）への確認（2026年10月13日）",
-      "service": "UW JAPAN が国内で修理・メンテナンスに対応（連絡の当日か翌日に全国対応、保証2年）",
-      "service_url": "https://uw-j.co.jp/support/"
+      "service": "UW JAPAN とノースヒルズ溶接工業が国内で修理・メンテナンスに対応（UW JAPAN は連絡の当日か翌日に全国対応、保証2年）",
+      "service_url": "https://uw-j.co.jp/support/",
+      "makers": [
+        {
+          "name": "UW JAPAN株式会社",
+          "place": "東京都江東区",
+          "url": "https://uw-j.co.jp/company/",
+          "role": "製造"
+        },
+        {
+          "name": "ノースヒルズ溶接工業株式会社",
+          "place": "大阪府東大阪市",
+          "url": "https://nhillz.jp/company",
+          "role": "国内共同開発・販売・修理"
+        }
+      ],
+      "sellers": [
+        {
+          "name": "ノースヒルズ溶接工業",
+          "note": "運営元"
+        }
+      ]
     },
     "wire_feed": null,
     "fiber_core_um": 14,
@@ -258,8 +278,28 @@
       "hq_url": "https://uw-j.co.jp/company/",
       "made": "日本",
       "made_basis": "運営元（ノースヒルズ溶接工業）への確認（2026年10月13日）",
-      "service": "UW JAPAN が国内で修理・メンテナンスに対応（連絡の当日か翌日に全国対応、保証2年）",
-      "service_url": "https://uw-j.co.jp/support/"
+      "service": "UW JAPAN とノースヒルズ溶接工業が国内で修理・メンテナンスに対応（UW JAPAN は連絡の当日か翌日に全国対応、保証2年）",
+      "service_url": "https://uw-j.co.jp/support/",
+      "makers": [
+        {
+          "name": "UW JAPAN株式会社",
+          "place": "東京都江東区",
+          "url": "https://uw-j.co.jp/company/",
+          "role": "製造"
+        },
+        {
+          "name": "ノースヒルズ溶接工業株式会社",
+          "place": "大阪府東大阪市",
+          "url": "https://nhillz.jp/company",
+          "role": "国内共同開発・販売・修理"
+        }
+      ],
+      "sellers": [
+        {
+          "name": "ノースヒルズ溶接工業",
+          "note": "運営元"
+        }
+      ]
     },
     "wire_feed": null,
     "fiber_core_um": 20,
@@ -393,8 +433,28 @@
       "hq_url": "https://uw-j.co.jp/company/",
       "made": "日本",
       "made_basis": "運営元（ノースヒルズ溶接工業）への確認（2026年10月13日）",
-      "service": "UW JAPAN が国内で修理・メンテナンスに対応（連絡の当日か翌日に全国対応、保証2年）",
-      "service_url": "https://uw-j.co.jp/support/"
+      "service": "UW JAPAN とノースヒルズ溶接工業が国内で修理・メンテナンスに対応（UW JAPAN は連絡の当日か翌日に全国対応、保証2年）",
+      "service_url": "https://uw-j.co.jp/support/",
+      "makers": [
+        {
+          "name": "UW JAPAN株式会社",
+          "place": "東京都江東区",
+          "url": "https://uw-j.co.jp/company/",
+          "role": "製造"
+        },
+        {
+          "name": "ノースヒルズ溶接工業株式会社",
+          "place": "大阪府東大阪市",
+          "url": "https://nhillz.jp/company",
+          "role": "国内共同開発・販売・修理"
+        }
+      ],
+      "sellers": [
+        {
+          "name": "ノースヒルズ溶接工業",
+          "note": "運営元"
+        }
+      ]
     },
     "wire_feed": null,
     "fiber_core_um": 20,
@@ -1563,7 +1623,7 @@
     "maker_slug": "uwjapan",
     "model_slug": "uw-s1500f",
     "name": "UW-S1500F",
-    "maker_name": "UW JAPAN",
+    "maker_name": "UW JAPAN（国内販売・修理：ノースヒルズ溶接工業）",
     "method": "ハンドヘルド（ハンドトーチ型・スイング式）",
     "wavelength": "1080nm ±10nm",
     "output_w": 1500,
@@ -1679,11 +1739,31 @@
       "hq_url": "https://uw-j.co.jp/company/",
       "made": "日本",
       "made_basis": "カタログに「日本設計監修 日本製造」",
-      "service": "UW JAPAN が国内で修理・メンテナンスに対応（連絡の当日か翌日に全国対応、保証2年）",
-      "service_url": "https://uw-j.co.jp/support/"
+      "service": "UW JAPAN とノースヒルズ溶接工業が国内で修理・メンテナンスに対応（UW JAPAN は連絡の当日か翌日に全国対応、保証2年）",
+      "service_url": "https://uw-j.co.jp/support/",
+      "makers": [
+        {
+          "name": "UW JAPAN株式会社",
+          "place": "東京都江東区",
+          "url": "https://uw-j.co.jp/company/",
+          "role": "製造"
+        },
+        {
+          "name": "ノースヒルズ溶接工業株式会社",
+          "place": "大阪府東大阪市",
+          "url": "https://nhillz.jp/company",
+          "role": "販売・修理"
+        }
+      ],
+      "sellers": [
+        {
+          "name": "ノースヒルズ溶接工業",
+          "note": "運営元"
+        }
+      ]
     },
     "wire_feed": "オプション",
-    "fiber_core_um": null,
+    "fiber_core_um": 20,
     "cooling": "空冷"
   },
   {
@@ -1742,7 +1822,13 @@
       "made_basis": "会社案内に「中国生産工場」の写真。会社全体の記載で、機種ごとの記載はなし",
       "made_url": "https://kss-kr.com/guidance/",
       "service": "修理は販売窓口（運営元グループのミライク）で受け付け、内容に応じて自社またはメーカーが対応。KS・S も自社でメンテナンス・アフターフォローに対応",
-      "service_url": "https://kss-kr.com/brand/"
+      "service_url": "https://kss-kr.com/brand/",
+      "sellers": [
+        {
+          "name": "ミライク",
+          "note": "運営元グループ"
+        }
+      ]
     },
     "handled_label": "運営元グループで取り扱い",
     "wire_feed": "オプション",
@@ -1807,7 +1893,17 @@
       "made_basis": "会社案内に「中国生産工場」の写真。会社全体の記載で、機種ごとの記載はなし",
       "made_url": "https://kss-kr.com/guidance/",
       "service": "修理は販売窓口（運営元グループのミライク）で受け付け、内容に応じて自社またはメーカーが対応。KS・S も自社でメンテナンス・アフターフォローに対応",
-      "service_url": "https://kss-kr.com/brand/"
+      "service_url": "https://kss-kr.com/brand/",
+      "sellers": [
+        {
+          "name": "ミライク",
+          "note": "運営元グループ"
+        },
+        {
+          "name": "ガスマシンツール",
+          "note": "Metoreeに掲載"
+        }
+      ]
     },
     "handled_label": "運営元グループで取り扱い",
     "wire_feed": "オプション",
@@ -1866,7 +1962,13 @@
       "made_basis": "会社案内に「中国生産工場」の写真。会社全体の記載で、機種ごとの記載はなし",
       "made_url": "https://kss-kr.com/guidance/",
       "service": "修理は販売窓口（運営元グループのミライク）で受け付け、内容に応じて自社またはメーカーが対応。KS・S も自社でメンテナンス・アフターフォローに対応",
-      "service_url": "https://kss-kr.com/brand/"
+      "service_url": "https://kss-kr.com/brand/",
+      "sellers": [
+        {
+          "name": "ミライク",
+          "note": "運営元グループ"
+        }
+      ]
     },
     "handled_label": "運営元グループで取り扱い",
     "wire_feed": "オプション",
@@ -1924,7 +2026,19 @@
     "origin": {
       "hq": "中国（広東省深圳市）",
       "hq_url": "https://www.maxlasers.com/about-us",
-      "service": "修理は販売窓口（運営元グループのミライク）で受け付け、内容に応じて自社またはメーカーが対応"
+      "service": "修理は販売窓口（運営元グループのミライク）で受け付け、内容に応じて自社またはメーカーが対応",
+      "sellers": [
+        {
+          "name": "ミライク",
+          "note": "運営元グループ"
+        },
+        {
+          "name": "エル・ビー・ウエルド"
+        },
+        {
+          "name": "三條酸素商会"
+        }
+      ]
     },
     "handled_label": "運営元グループで取り扱い",
     "wire_feed": "標準",
@@ -1984,7 +2098,16 @@
     "origin": {
       "hq": "中国（広東省深圳市）",
       "hq_url": "https://www.maxlasers.com/about-us",
-      "service": "修理は販売窓口（運営元グループのミライク）で受け付け、内容に応じて自社またはメーカーが対応"
+      "service": "修理は販売窓口（運営元グループのミライク）で受け付け、内容に応じて自社またはメーカーが対応",
+      "sellers": [
+        {
+          "name": "ミライク",
+          "note": "運営元グループ"
+        },
+        {
+          "name": "エル・ビー・ウエルド"
+        }
+      ]
     },
     "handled_label": "運営元グループで取り扱い",
     "wire_feed": "標準",
@@ -2043,7 +2166,13 @@
     "origin": {
       "hq": "中国（広東省深圳市）",
       "hq_url": "https://www.maxlasers.com/about-us",
-      "service": "修理は販売窓口（運営元グループのミライク）で受け付け、内容に応じて自社またはメーカーが対応"
+      "service": "修理は販売窓口（運営元グループのミライク）で受け付け、内容に応じて自社またはメーカーが対応",
+      "sellers": [
+        {
+          "name": "ミライク",
+          "note": "運営元グループ"
+        }
+      ]
     },
     "handled_label": "運営元グループで取り扱い",
     "wire_feed": "標準",
@@ -2103,7 +2232,21 @@
       "made": "中国",
       "made_basis": "東莞の自社工場で研究開発・生産と記載。会社全体の記載で、機種ごとの記載はなし",
       "made_url": "https://www.qilinlaser.cn/about-us/",
-      "service": "修理は販売窓口（運営元グループのミライク）で受け付け、内容に応じて自社またはメーカーが対応"
+      "service": "修理は販売窓口（運営元グループのミライク）で受け付け、内容に応じて自社またはメーカーが対応",
+      "sellers": [
+        {
+          "name": "ミライク",
+          "note": "運営元グループ"
+        },
+        {
+          "name": "八木産機",
+          "note": "「Fシリーズ」の名前で販売"
+        },
+        {
+          "name": "日本酸素G＆W",
+          "note": "八木産機のFシリーズをMetoreeに掲載"
+        }
+      ]
     },
     "handled_label": "運営元グループで取り扱い",
     "wire_feed": "オプション",
@@ -2165,7 +2308,13 @@
       "made": "中国",
       "made_basis": "東莞の自社工場で研究開発・生産と記載。会社全体の記載で、機種ごとの記載はなし",
       "made_url": "https://www.qilinlaser.cn/about-us/",
-      "service": "修理は販売窓口（運営元グループのミライク）で受け付け、内容に応じて自社またはメーカーが対応"
+      "service": "修理は販売窓口（運営元グループのミライク）で受け付け、内容に応じて自社またはメーカーが対応",
+      "sellers": [
+        {
+          "name": "ミライク",
+          "note": "運営元グループ"
+        }
+      ]
     },
     "handled_label": "運営元グループで取り扱い",
     "wire_feed": "オプション",
@@ -2224,7 +2373,13 @@
       "made": "中国",
       "made_basis": "東莞の自社工場で研究開発・生産と記載。会社全体の記載で、機種ごとの記載はなし",
       "made_url": "https://www.qilinlaser.cn/about-us/",
-      "service": "修理は販売窓口（運営元グループのミライク）で受け付け、内容に応じて自社またはメーカーが対応"
+      "service": "修理は販売窓口（運営元グループのミライク）で受け付け、内容に応じて自社またはメーカーが対応",
+      "sellers": [
+        {
+          "name": "ミライク",
+          "note": "運営元グループ"
+        }
+      ]
     },
     "handled_label": "運営元グループで取り扱い",
     "wire_feed": "オプション",
@@ -2292,72 +2447,6 @@
     "wire_feed": "オプション",
     "fiber_core_um": null,
     "cooling": "空冷"
-  },
-  {
-    "id": "p223",
-    "maker_slug": "gunkyo",
-    "model_slug": "gunyu-weld",
-    "name": "グンユーウェルド",
-    "maker_name": "株式会社群協製作所",
-    "method": "ハンドヘルド",
-    "wavelength": "1075nm ±10nm",
-    "output_w": 1500,
-    "output_note": "定格出力（CW）。500W／1000W／1500W のラインナップ（型式表記 G-500/1000/1500-GU）",
-    "portability": "質量210kg（冷却水含まず）、W555×D1049×H1060mm、水冷タイプ",
-    "thickness_note": "最大加工板厚：アルミ3mm、SUS6mm、鉄6mm（1500W）。スイング機能で最大0.3mmの隙間まで溶接可",
-    "tags": {
-      "use": [
-        "薄板接合",
-        "厚物",
-        "異材接合"
-      ],
-      "material": [
-        "鉄",
-        "ステンレス",
-        "アルミ",
-        "チタン"
-      ],
-      "thickness": [
-        "0.5〜3mm",
-        "3〜6mm"
-      ],
-      "environment": [],
-      "price": [],
-      "skill": [
-        "未経験可"
-      ]
-    },
-    "comment": "質量210kg（冷却水含まず）・水冷の1,500W機です。最大加工板厚はSUS・鉄6mm、アルミ3mmで、トーチを材料に接触させたまま溶接します。",
-    "suitable_for": [
-      "アルミ・鉄（ボンデ含む）・SUS・チタンの溶接",
-      "網の溶接",
-      "厚み違い・異素材の溶接（組み合わせによる）",
-      "薄板の焼け・歪みを抑えた溶接"
-    ],
-    "not_suitable_for": [],
-    "handled_by_operator": false,
-    "image": "/assets/images/products/placeholder.svg",
-    "official_url": "https://www.gunkyo.co.jp/gunyu_weld/",
-    "source_url": "https://www.gunkyo.co.jp/gunyu_weld/",
-    "source": "株式会社群協製作所 公式サイト",
-    "image_credit": null,
-    "image_source": null,
-    "features": [
-      "シングルモードのファイバーレーザ（波長1075nm±10nm）",
-      "スイング機能でレーザ光線を左右に振り、最大0.3mmの隙間を溶接可能（振り幅・周波数は任意設定）",
-      "パルスモード（ショート／ロング）と CW モード、最大32条件を設定可能",
-      "ハンドトーチを材料に接触させたまま溶接する方式で、メーカーは初心者でも簡単と案内",
-      "修理部品を在庫し、修理に時間を要する場合は代替機を手配"
-    ],
-    "origin": {
-      "hq": "日本（群馬県高崎市）",
-      "hq_url": "https://www.gunkyo.co.jp/company/",
-      "service": "群協製作所が保守・修理（部品在庫、サービスマン訪問、必要時は代替機）",
-      "service_url": "https://www.gunkyo.co.jp/gunyu_weld/"
-    },
-    "wire_feed": null,
-    "fiber_core_um": null,
-    "cooling": "水冷"
   },
   {
     "id": "p224",
@@ -5464,59 +5553,6 @@
     },
     "wire_feed": "標準",
     "fiber_core_um": null,
-    "cooling": "空冷"
-  },
-  {
-    "id": "p274",
-    "maker_slug": "yagisanki",
-    "model_slug": "f-series",
-    "name": "空冷ダブルスイングハンディレーザー溶接機 Fシリーズ（F3 / F4）",
-    "maker_name": "株式会社八木産機（販売：日本酸素G＆W株式会社）",
-    "method": "ハンドヘルド（空冷ダブルスイング式）",
-    "wavelength": "1080±10nm",
-    "output_w": 1600,
-    "output_note": "定格出力 F3：800W、F4：1600W",
-    "portability": "本体重量 F3：35kg以下、F4：55kg以下。本体寸法 F3：498×319×530mm、F4：547×319×640mm。空冷、キャスター付き。トーチ重量0.4kg。出力ファイバー長5m。AC220V",
-    "thickness_note": "溶け込み深さ F3：＞3mm、F4：＞4mm（カタログの技術パラメーター。対応板厚ではない）。発振器の説明として「溶け込み溶接深さは最大7〜8mm」との記載もある",
-    "tags": {
-      "use": [],
-      "material": [],
-      "thickness": [],
-      "environment": [],
-      "price": [],
-      "skill": []
-    },
-    "comment": "空冷・キャスター付きで、F3（800W・35kg以下）とF4（1,600W・55kg以下）の2機種があります。トーチ重量は0.4kgです。",
-    "suitable_for": [
-      "狭小部や細部への溶接（超軽量トーチ）",
-      "ウロコ模様のビードを出したい溶接（ダブルスイング・ワイヤ送給）"
-    ],
-    "not_suitable_for": [],
-    "handled_by_operator": false,
-    "image": "/assets/images/products/placeholder.svg",
-    "official_url": "https://fiberlaser.co.jp/?page_id=388",
-    "source_url": "https://fiberlaser.co.jp/wp-content/uploads/2026/08/%E7%A9%BA%E5%86%B7%E3%83%80%E3%83%96%E3%83%AB%E3%82%B9%E3%82%A4%E3%83%B3%E3%82%B0%E3%83%8F%E3%83%B3%E3%83%87%E3%82%A3%E3%83%AC%E3%83%BC%E3%82%B6%E3%83%BC%E6%BA%B6%E6%8E%A5%E6%A9%9FF%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA.pdf",
-    "source": "株式会社八木産機 公式サイト（製品カタログPDF「空冷ダブルスイングハンディレーザー溶接機 Fシリーズ」）",
-    "image_credit": null,
-    "image_source": null,
-    "features": [
-      "空冷ダブルスイング式で消費電力を削減（総消費電力 F3：2700W以下、F4：4800W以下）",
-      "最長72時間の連続運転が可能（メーカー記載）",
-      "温度自動検知・風量調整・稼働状態のリアルタイム監視",
-      "トーチ重量0.4kg、ダブルスイングによるウロコ溶接で溶接幅は最大8mm",
-      "使用環境温度 -40℃〜45℃"
-    ],
-    "origin": {
-      "hq": "日本（静岡県磐田市）　※販売元。製造元は公式に記載なし",
-      "hq_url": "https://fiberlaser.co.jp/?page_id=140",
-      "made": "中国",
-      "made_basis": "「中国製レーザー機器の専門商社」。会社全体の記載で、機種ごとの記載はなし",
-      "made_url": "https://fiberlaser.co.jp/?page_id=140",
-      "service": "日本国内常駐エンジニアによる設置・メンテナンス体制",
-      "service_url": "https://fiberlaser.co.jp/?page_id=140"
-    },
-    "wire_feed": "対応",
-    "fiber_core_um": 20,
     "cooling": "空冷"
   }
 ]

@@ -69,8 +69,10 @@ export function footer() {
       <li><a href="/subsidy/">補助金・税制${icon("chevron")}</a></li>
       <li><a href="/contact/">相談・問い合わせ${icon("chevron")}</a></li>
       <li><a href="/about/">運営者情報・評価基準${icon("chevron")}</a></li>
+      <li><a href="/privacy/">プライバシーポリシー${icon("chevron")}</a></li>
+      <li><a href="/disclaimer/">免責事項${icon("chevron")}</a></li>
     </ul>
-    <p class="footer__op">掲載内容はメーカー公開情報に基づきます。</p>
+    <p class="footer__op">運営：ノースヒルズ溶接工業株式会社（グループ会社：ミライク）<br>掲載内容は、メーカーや販売店が公開している情報に基づきます。</p>
     <p class="footer__copy">© 2026 レーザー溶接機 比較・選定</p>
   </div>
 </footer>`;

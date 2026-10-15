@@ -508,13 +508,13 @@ rep('<span class="sec161__btnText">お問い合わせ</span>', '<span class="sec
 items = [("5つの質問で選ぶ", "/diagnosis/"), ("機種一覧", "/lineup/"), ("2台を比較", "/diagnosis/#compare"), ("選び方ガイド", "/articles/"), ("海外製を選ぶときのポイント", "/articles/overseas/"), ("補助金・税制", "/subsidy/"), ("相談・問い合わせ", "/contact/"), ("運営者情報・評価基準", "/about/"), ("トップ", "/redesign/")]
 track = "\n".join(f'              <li class="sec161__item"><a href="{h}"><span class="rd-link">{t}</span></a></li>' for t, h in items)
 s = re.sub(r'(<ul class="sec161__track">\n)(.*?)(\n\s*</ul>)', lambda m: m.group(1) + track + m.group(3), s, count=1, flags=re.S)
-s = re.sub(r'(<div class="sec161__sns">\s*<ul>)(.*?)(</ul>)', lambda m: m.group(1) + '\n            <li><a href="/about/" class="rd-sns">掲載内容はメーカー公開情報に基づきます</a></li>\n          ' + m.group(3), s, count=1, flags=re.S)
+s = re.sub(r'(<div class="sec161__sns">\s*<ul>)(.*?)(</ul>)', lambda m: m.group(1) + '\n            <li><a href="/about/" class="rd-sns">掲載内容は、メーカーや販売店が公開している情報に基づきます</a></li>\n          ' + m.group(3), s, count=1, flags=re.S)
 rep('<span class="sec161__photoLabel" aria-hidden="true">写真 背景（空と社屋）</span>', '')
 rep('<div class="sec161__company">株式会社ミホン</div>', '<div class="sec161__company">レーザー溶接機 比較・選定</div>')
-rep('<div class="sec161__address">〒000-0000<br>〇〇〇県〇〇市〇〇区見本町南1-2-3<br>TEL : 0120-000-000</div>', '<div class="sec161__address">運営：レーザー溶接機の販売事業者<br>（詳しくは運営者情報をご覧ください）</div>')
-rep('<li><a href="#">個人情報保護方針</a></li>', '<li><a href="/about/">運営者情報・評価基準</a></li>')
-rep('<li><a href="#">サイトマップ</a></li>', '<li><a href="/articles/">選び方ガイド</a></li>')
-rep('<li><a href="#">ハラスメント防止</a></li>', '<li><a href="/contact/">相談・問い合わせ</a></li>')
+rep('<div class="sec161__address">〒000-0000<br>〇〇〇県〇〇市〇〇区見本町南1-2-3<br>TEL : 0120-000-000</div>', '<div class="sec161__address">運営：ノースヒルズ溶接工業株式会社<br>（グループ会社：ミライク）</div>')
+rep('<li><a href="#">個人情報保護方針</a></li>', '<li><a href="/privacy/">プライバシーポリシー</a></li>')
+rep('<li><a href="#">サイトマップ</a></li>', '<li><a href="/disclaimer/">免責事項</a></li>')
+rep('<li><a href="#">ハラスメント防止</a></li>', '<li><a href="/about/">運営者情報・評価基準</a></li>')
 rep('<small class="sec161__copyright">© ACME Co.,Ltd. All rights Reserved.</small>', '<small class="sec161__copyright">© 2026 レーザー溶接機 比較・選定</small>')
 
 # ---------- 差し込んだ中身の見た目（スロットの寸法は変えない） ----------

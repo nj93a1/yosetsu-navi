@@ -46,7 +46,7 @@ export function thicknessGuide(config, product) {
 }
 
 /**
- * アルミ・銅の運営元の基準（diagnosis.json の materialCriteria）。
+ * アルミ・銅をコア径/出力を基準に見た目安（diagnosis.json の materialCriteria）。
  * { アルミ: { ok, by }, 銅: { ok, by } }。by は "core"（ファイバコア径）/"output"（出力）/null（どちらも満たさない・判定材料なし）
  */
 export function materialCriteria(config, product) {
@@ -335,9 +335,9 @@ export function runDiagnosis(config, products, answers) {
   const enough = matched.length >= 5;
   const results = allocateSlots(config, enough ? matched : [...matched, ...unmatched], resolved, enough ? unmatched : []).map((r) => {
     const guide = thicknessGuide(config, r.product);
-    // アルミ・銅と答えて対応素材が非公開の機種は、運営元の基準での判定を理由に添える（順位には使わない）
+    // アルミ・銅と答えて対応素材が非公開の機種は、コア径/出力を基準にした判定を理由に添える（順位には使わない）
     const mc = resolved.some((x) => x.axis === "material" && x.option.id === "alcu") && config.materialCriteria ? materialCriteria(config, r.product) : null;
-    return { ...r, guide, mc, reason: buildReason({ ...r, guide, mc }) };
+    return { ...r, guide, mc, reason: buildReason({ ...r, guide, mc, mcLabel: config.materialCriteria?.label }) };
   });
   // メーカー上限のために表示しなかった「条件に合う機種」（その代わりに条件外の機種を出したときだけ数える）
   const shown = new Set(results.map((r) => r.product.id));
@@ -391,7 +391,10 @@ export function buildReason(r) {
     if (rest.length) parts.push(r.matched ? `${rest.join("・")}は非公開` : `${rest.join("・")}は非公開のため要確認`);
     // 板厚が非公開のときは、出力から見た目安（運営元の目安）を添える
     if (r.guide && rest.includes("対応板厚")) parts.push(`出力から見た目安は${r.guide.name}`);
-    if (r.mc && rest.includes("対応素材")) parts.push(`運営元の基準では${Object.entries(r.mc).map(([m, x]) => `${m}${x.ok ? "に届く" : "は届かない"}`).join("・")}`);
+    if (r.mc && rest.includes("対応素材")) {
+      const ok = Object.keys(r.mc).filter((m) => r.mc[m].ok), ng = Object.keys(r.mc).filter((m) => !r.mc[m].ok);
+      parts.push(`${r.mcLabel || "コア径/出力を基準"}にすると、${[ok.length ? `${ok.join("・")}に届く` : "", ng.length ? `${ng.join("・")}は届かない` : ""].filter(Boolean).join("、")}`);
+    }
     if (op) parts.push("価格帯はお問い合わせ");
     text += `（${parts.join("。")}）`;
   }
