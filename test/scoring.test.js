@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { existsSync, readFileSync } from "node:fs";
-import { runDiagnosis, productSlug, alternatives, scoreProduct, resolveAnswers, optionMatches, thicknessGuide, materialCriteria, coolingOf, compareTarget } from "../src/assets/js/scoring.js";
+import { runDiagnosis, productSlug, alternatives, scoreProduct, resolveAnswers, optionMatches, thicknessGuide, materialCriteria, coolingOf, compareTarget, operatorPick } from "../src/assets/js/scoring.js";
 
 const config = JSON.parse(readFileSync(new URL("../src/data/diagnosis.json", import.meta.url)));
 // src/data/products.json は公開分だけの生成物になる予定なので、診断のテストは is_published で絞った公開機種だけを対象にする
@@ -306,5 +306,20 @@ test("他社機ページで比べる相手: 空冷→UW-S1500F、水冷→UW-SH1
 test("アルミ・銅と答えても、コア径/出力の基準は順位に使わない（理由文に添えるだけ）", () => {
   const ans = { q1_material: "alcu" };
   const a = runDiagnosis(config, published, ans), b = runDiagnosis({ ...config, materialCriteria: undefined }, published, ans);
+  assert.deepEqual(a.results.map((x) => x.product.id), b.results.map((x) => x.product.id));
+});
+
+test("運営元の機種の案内枠: どの回答でも運営元（UW）の機種を1台案内する。TOP5 の順位は変えない", () => {
+  for (const { ans, r } of RESULTS) {
+    const o = operatorPick(config, published, ans, r.results);
+    assert.ok(o && (o.pick || o.inTop), JSON.stringify(ans));
+    for (const p of o.pick ? [o.pick.product] : o.inTop.map((x) => x.product)) {
+      assert.equal(p.maker_slug, config.operatorPick.makerSlug);
+      assert.ok(p.handled_by_operator);
+    }
+    if (o.pick) assert.ok(!r.results.some((x) => x.product.maker_slug === config.operatorPick.makerSlug));
+  }
+  const ans = { q1_material: "steel", q2_thickness: "thin" };
+  const a = runDiagnosis(config, published, ans), b = runDiagnosis({ ...config, operatorPick: undefined }, published, ans);
   assert.deepEqual(a.results.map((x) => x.product.id), b.results.map((x) => x.product.id));
 });

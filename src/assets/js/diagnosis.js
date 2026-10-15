@@ -1,6 +1,6 @@
 // 選定診断の画面制御。スコアリングは scoring.js、設問・商品は /data/*.json。
-import { runDiagnosis, productSlug } from "./scoring.js?v=20";
-import { mountChrome, icon, productPhoto } from "./partials.js?v=20";
+import { runDiagnosis, productSlug, operatorPick } from "./scoring.js?v=21";
+import { mountChrome, icon, productPhoto } from "./partials.js?v=21";
 
 const app = document.getElementById("app");
 const foot = document.getElementById("foot");
@@ -29,7 +29,7 @@ const firstUnanswered = () => state.config.questions.findIndex((q) => !(q.id in 
 async function init() {
   mountChrome({ current: "/diagnosis/", withBottombar: false });
   const [config, products] = await Promise.all([
-    fetch("/data/diagnosis.json?v=16").then((r) => r.json()),
+    fetch("/data/diagnosis.json?v=17").then((r) => r.json()),
     fetch("/data/products.json").then((r) => r.json()),
   ]);
   state.config = config;
@@ -253,7 +253,8 @@ function renderResult(scrollTop = 0) {
     ${r.relaxedLabel ? `<div class="notice"><p>条件にぴったり合う機種がなかったため、<strong>「${esc(r.relaxedLabel)}」の条件を外して</strong>候補を広げました。${esc(r.relaxedNote || "")}</p></div>` : ""}
     ${countInfo(r) ? `<div class="info"><p>${esc(countInfo(r))}</p></div>` : ""}
     ${r.results.some((x) => x.unknowns?.length) ? `<p class="note">メーカーが公開していない項目（価格帯・使用環境など）は「非公開」と表示し、不一致とはしていません。導入前にメーカーへご確認ください。</p>` : ""}
-    <ul class="results">${r.results.map(card).join("")}</ul>
+    <ul class="results">${r.results.map((x) => card(x)).join("")}</ul>
+    ${operatorSection(inquiryQs)}
 
     <section class="subsec">
       <h2>条件を1つ変えて再検索</h2>
@@ -314,15 +315,37 @@ function updateCompareBtn() {
   btn.disabled = n !== 2;
   btn.innerHTML = `${icon("compare")}${n === 2 ? "2台を比較" : `比較（${n}/2）`}`;
 }
-function card(x) {
+/**
+ * 運営元の機種の案内（diagnosis.json の operatorPick）。TOP5 の下に、順位とは別の枠として出す。
+ * TOP5 に運営元の機種が入っていればその順位を案内し、入っていなければ運営元の機種から回答に近い1台をカードで出す
+ */
+function operatorSection(inquiryQs) {
+  const cfg = state.config.operatorPick;
+  const o = operatorPick(state.config, state.products, state.answers, state.result.results);
+  state.opPick = o?.pick || null;
+  if (!cfg || !o) return "";
+  const p = (o.pick || o.inTop[0]).product;
+  const lead = o.inTop
+    ? esc(cfg.inTopLead.replace("{items}", o.inTop.map((x) => `${x.slot}位の ${x.product.name}`).join("、")))
+    : esc(cfg.lead);
+  return `
+    <section class="subsec oppick" id="operator">
+      <h2>${esc(cfg.title)}</h2>
+      <p>${lead}</p>
+      ${o.pick ? `<ul class="results">${card(o.pick, { label: "運営元の機種" })}</ul>` : ""}
+      <ul class="oppick__points">${cfg.points.map((x) => `<li>${icon("check")}<span>${esc(x)}</span></li>`).join("")}</ul>
+      <a class="btn btn--accent" href="/contact/?type=test&product=${esc(productSlug(p))}&${esc(inquiryQs)}">${icon("handheld")}テスト溶接・デモを相談する</a>
+    </section>`;
+}
+function card(x, { label } = {}) {
   const p = x.product;
   const on = state.compare.includes(p.id);
-  const slotClass = x.slotType === "specialty" ? "rcard__slot--specialty" : x.slotType === "price" ? "rcard__slot--price" : "";
+  const slotClass = label ? "rcard__slot--operator" : x.slotType === "specialty" ? "rcard__slot--specialty" : x.slotType === "price" ? "rcard__slot--price" : "";
   const price = (p.tags.price || [])[0];
   const skill = (p.tags.skill || [])[0];
   return `
     <li class="rcard">
-      <div class="rcard__head"><span class="rcard__slot ${slotClass}">${x.slot}位 ${esc(x.slotLabel)}</span>${p.handled_by_operator ? `<span class="badge" style="margin:0">${esc(p.handled_label || "運営元で取り扱い")}</span>` : ""}</div>
+      <div class="rcard__head"><span class="rcard__slot ${slotClass}">${label ? esc(label) : `${x.slot}位 ${esc(x.slotLabel)}`}</span>${p.handled_by_operator && !label ? `<span class="badge" style="margin:0">${esc(p.handled_label || "運営元で取り扱い")}</span>` : ""}</div>
       <div class="rcard__body">
         ${productPhoto(p, "result")}
         <div>
@@ -345,7 +368,9 @@ function renderCompare() {
   drawSteps(N());
   backBtn.innerHTML = `${icon("back")}結果に戻る`;
   setFoot([backBtn]);
-  const items = state.compare.map((id) => state.result.results.find((r) => r.product.id === id)?.product).filter(Boolean);
+  // 運営元の機種の案内枠（state.opPick）も比較に追加できる
+  const pool = [...state.result.results, ...(state.opPick ? [state.opPick] : [])];
+  const items = state.compare.map((id) => pool.find((r) => r.product.id === id)?.product).filter(Boolean);
   const list = (arr, empty) => (arr && arr.length
     ? `<ul class="cmp__list">${arr.map((v) => `<li>${esc(v)}</li>`).join("")}</ul>`
     : `<span class="cmp__none">${empty}</span>`);

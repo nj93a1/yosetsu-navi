@@ -401,6 +401,22 @@ export function buildReason(r) {
   return text;
 }
 
+/**
+ * 運営元の機種の案内枠（diagnosis.json の operatorPick）。TOP5 の順位には使わない（TOP5 は取り扱いの有無に関係なく決める）。
+ * TOP5（shown）に運営元の機種が入っていれば { inTop: その結果の配列 }、無ければ運営元の機種だけを同じ採点で並べた1位を { pick } で返す
+ */
+export function operatorPick(config, products, answers, shown = []) {
+  const cfg = config.operatorPick;
+  if (!cfg) return null;
+  const own = products.filter((p) => p.maker_slug === cfg.makerSlug && p.handled_by_operator);
+  if (!own.length) return null;
+  const inTop = shown.filter((r) => own.some((p) => p.id === r.product.id));
+  if (inTop.length) return { inTop };
+  // 運営元の機種どうしで比べるので、メーカー上限と価格重視の枠は外す
+  const r = runDiagnosis({ ...config, slots: { ...config.slots, maxPerMaker: Infinity, priceSlot: { withinBudget: false } } }, own, answers);
+  return r.results[0] ? { pick: r.results[0] } : null;
+}
+
 /** 同価格帯の代替候補（最大 n 件、自分を除く） */
 export function alternatives(products, product, n = 2) {
   const band = (product.tags?.price || [])[0];

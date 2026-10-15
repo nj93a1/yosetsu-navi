@@ -51,7 +51,7 @@ let CONFIG = {};
 export async function loadProducts() {
   const [all, config] = await Promise.all([
     fetch("/data/products.json").then((r) => r.json()),
-    fetch("/data/diagnosis.json?v=16").then((r) => r.json()).catch(() => ({})),
+    fetch("/data/diagnosis.json?v=17").then((r) => r.json()).catch(() => ({})),
   ]);
   const list = all.filter((p) => p.is_published !== false);
   // 運営元の目安・基準（メーカーの公表値とは別に持つ）

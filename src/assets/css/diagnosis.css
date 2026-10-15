@@ -73,3 +73,16 @@ body.diag .ph small { font-size: 16px; color: var(--c-text); line-height: 1.2; w
 @media (min-width: 600px) {
   .cmp .ph--compare { aspect-ratio: auto; height: 160px; }
 }
+
+/* ===== 運営元の機種の案内枠（TOP5 とは別。diagnosis.json の operatorPick） ===== */
+.oppick { margin-top: 32px; padding: 20px 16px; background: var(--c-main-light); border-radius: 8px; }
+.oppick > h2 { margin-top: 0; }
+.oppick > p { margin: 0 0 16px; }
+.oppick .results { margin: 0 0 16px; }
+.rcard__slot--operator { background: var(--c-main-dark); }
+.oppick__points { list-style: none; margin: 0 0 16px; padding: 0; display: grid; gap: 10px; }
+.oppick__points li { display: flex; gap: 8px; align-items: flex-start; }
+.oppick__points .ico { width: 22px; height: 22px; flex: none; margin-top: 3px; color: var(--c-main-dark); }
+.oppick > .btn { width: 100%; }
+/* スマホは枠を画面の端まで広げ、中のカードを上の5台と同じ幅にする（ボタンの文字が折り返さないように） */
+@media (max-width: 600px) { .oppick { margin-left: -16px; margin-right: -16px; border-radius: 0; } }
