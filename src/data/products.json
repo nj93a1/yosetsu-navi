@@ -682,7 +682,9 @@
     "image_source": "https://thm-co.jp/fiber/thm-30r-f-2",
     "origin": {
       "hq": "日本（神奈川県横浜市金沢区）",
-      "hq_url": "https://thm-co.jp/company/corporate_profile"
+      "hq_url": "https://thm-co.jp/company/corporate_profile",
+      "service": "国内外のサービス網で対応とメーカーが説明（修理・保守の具体的な体制は記載なし）",
+      "service_url": "https://thm-co.jp/solution/service"
     },
     "wire_feed": "標準",
     "fiber_core_um": 25,
@@ -912,7 +914,10 @@
         "薄板接合",
         "自動化"
       ],
-      "material": [],
+      "material": [
+        "ステンレス",
+        "アルミ"
+      ],
       "thickness": [
         "0.5〜3mm"
       ],
@@ -968,7 +973,10 @@
         "厚物",
         "自動化"
       ],
-      "material": [],
+      "material": [
+        "ステンレス",
+        "アルミ"
+      ],
       "thickness": [
         "3〜6mm"
       ],
@@ -1052,7 +1060,9 @@
     "image_source": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
     "origin": {
       "hq": "日本（東京都武蔵村山市）",
-      "hq_url": "https://www.fuji-kiko.co.jp/company/about"
+      "hq_url": "https://www.fuji-kiko.co.jp/company/about",
+      "service": "メーカーの営業と専門スタッフが引き取り修理・現地メンテナンスに対応（本社 東京都武蔵村山市、名古屋・大阪営業所）。会社全体の記載で、溶接機の名指しはなし",
+      "service_url": "https://www.fuji-kiko.co.jp/strength"
     },
     "wire_feed": "標準",
     "fiber_core_um": null,
@@ -1103,7 +1113,9 @@
     "image_source": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
     "origin": {
       "hq": "日本（東京都武蔵村山市）",
-      "hq_url": "https://www.fuji-kiko.co.jp/company/about"
+      "hq_url": "https://www.fuji-kiko.co.jp/company/about",
+      "service": "メーカーの営業と専門スタッフが引き取り修理・現地メンテナンスに対応（本社 東京都武蔵村山市、名古屋・大阪営業所）。会社全体の記載で、溶接機の名指しはなし",
+      "service_url": "https://www.fuji-kiko.co.jp/strength"
     },
     "wire_feed": "標準",
     "fiber_core_um": null,
@@ -1156,7 +1168,9 @@
     "image_source": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
     "origin": {
       "hq": "日本（東京都武蔵村山市）",
-      "hq_url": "https://www.fuji-kiko.co.jp/company/about"
+      "hq_url": "https://www.fuji-kiko.co.jp/company/about",
+      "service": "メーカーの営業と専門スタッフが引き取り修理・現地メンテナンスに対応（本社 東京都武蔵村山市、名古屋・大阪営業所）。会社全体の記載で、溶接機の名指しはなし",
+      "service_url": "https://www.fuji-kiko.co.jp/strength"
     },
     "wire_feed": "標準",
     "fiber_core_um": null,
@@ -1209,7 +1223,9 @@
     "image_source": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
     "origin": {
       "hq": "日本（東京都武蔵村山市）",
-      "hq_url": "https://www.fuji-kiko.co.jp/company/about"
+      "hq_url": "https://www.fuji-kiko.co.jp/company/about",
+      "service": "メーカーの営業と専門スタッフが引き取り修理・現地メンテナンスに対応（本社 東京都武蔵村山市、名古屋・大阪営業所）。会社全体の記載で、溶接機の名指しはなし",
+      "service_url": "https://www.fuji-kiko.co.jp/strength"
     },
     "wire_feed": "標準",
     "fiber_core_um": null,
@@ -1923,7 +1939,9 @@
     "portability": "本体 50kg、空冷（コンパクトタイプ）、本体サイズ 400×600×550H、ファイバーケーブル 10m",
     "thickness_note": "加工板厚 3.0t（公表値）",
     "tags": {
-      "use": [],
+      "use": [
+        "自動化"
+      ],
       "material": [],
       "thickness": [
         "0.5〜3mm"
@@ -1988,7 +2006,9 @@
     "portability": "本体 28kg、576×265×425mm、空冷（外部チラー不要）、キャスター付き。トーチ 680g",
     "thickness_note": "溶け込み深さ（公式表記 Weld Penetration）ステンレス最大3.5mm。日本語カタログの表は「溶接厚さ」表記でステンレス・炭素鋼・亜鉛めっき鋼板3.5mm／アルミ3mm／銅は記載なし（注記は「溶接深さ」）。対応板厚ではない",
     "tags": {
-      "use": [],
+      "use": [
+        "薄板接合"
+      ],
       "material": [
         "鉄",
         "ステンレス",
@@ -2058,7 +2078,9 @@
     "portability": "本体 39kg、667×276×542mm、空冷（外部チラー不要）、キャスター付き。トーチ 680g",
     "thickness_note": "溶け込み深さ（公式表記 Weld Penetration）ステンレス最大6.5mm。日本語カタログの表は「溶接厚さ」表記でステンレス・炭素鋼・亜鉛めっき鋼板6.5mm／アルミ5.5mm／銅3mm（注記は「溶接深さ」）。対応板厚ではない",
     "tags": {
-      "use": [],
+      "use": [
+        "薄板接合"
+      ],
       "material": [
         "鉄",
         "ステンレス",
@@ -2127,7 +2149,9 @@
     "portability": "本体 39kg、667×276×542mm、空冷（外部チラー不要）、キャスター付き。トーチ 680g",
     "thickness_note": "溶け込み深さ（公式表記 Weld Penetration）ステンレス最大8.5mm。対応板厚ではない",
     "tags": {
-      "use": [],
+      "use": [
+        "薄板接合"
+      ],
       "material": [
         "鉄",
         "ステンレス",
@@ -2190,7 +2214,7 @@
     "output_w": 1600,
     "output_note": "定格出力（Rated Power）",
     "portability": "本体 55kg以下、強制空冷、本体サイズ 547×319×640mm、ファイバーケーブル 5m",
-    "thickness_note": "溶け込み深さ（公式表記 Weld Depth／焊接深度）4mm。対応板厚ではない",
+    "thickness_note": "取扱説明書の推奨溶接厚：ステンレス0〜5mm、アルミ0〜4mm、銅0〜1mm（製品ページの Weld Depth 4mm は溶け込み深さ）",
     "tags": {
       "use": [],
       "material": [
@@ -2199,10 +2223,15 @@
         "銅",
         "ステンレス"
       ],
-      "thickness": [],
+      "thickness": [
+        "0.5〜3mm",
+        "3〜6mm"
+      ],
       "environment": [],
       "price": [],
-      "skill": []
+      "skill": [
+        "未経験可"
+      ]
     },
     "comment": "本体55kg以下・強制空冷の1,600W機です。公表されている溶け込み深さは4mmで、鋼・アルミ・銅・ステンレスに対応します。",
     "suitable_for": [],
@@ -2266,7 +2295,10 @@
     "portability": "本体 55kg以下、強制空冷、本体サイズ 516×318×550mm、ファイバーケーブル 5m",
     "thickness_note": "Weld Depth 4mm（製品ページ）／Welding Thickness ≤4mm（取扱説明書）。プリセットはステンレス・炭素鋼・亜鉛めっき鋼板・アルミの 1.0〜3.5mm",
     "tags": {
-      "use": [],
+      "use": [
+        "薄板接合",
+        "補修"
+      ],
       "material": [
         "鉄",
         "アルミ",
@@ -2279,7 +2311,9 @@
       ],
       "environment": [],
       "price": [],
-      "skill": []
+      "skill": [
+        "未経験可"
+      ]
     },
     "comment": "本体55kg以下・強制空冷の1,600W機です。ステンレス・炭素鋼・亜鉛めっき鋼板・アルミの1.0〜3.5mmの溶接条件をあらかじめ登録しています。",
     "suitable_for": [],
@@ -2332,19 +2366,26 @@
     "output_w": 1600,
     "output_note": "定格出力（Rated Power）",
     "portability": "本体 55kg以下、強制空冷、本体サイズ 516×318×550mm、ファイバーケーブル 5m",
-    "thickness_note": "溶け込み深さ（公式表記 Weld Depth）4mm。対応板厚ではない",
+    "thickness_note": "取扱説明書の推奨溶接厚：ステンレス0〜5mm（製品ページの Weld Depth 4mm は溶け込み深さ）",
     "tags": {
-      "use": [],
+      "use": [
+        "薄板接合"
+      ],
       "material": [
         "鉄",
         "アルミ",
         "銅",
         "ステンレス"
       ],
-      "thickness": [],
+      "thickness": [
+        "0.5〜3mm",
+        "3〜6mm"
+      ],
       "environment": [],
       "price": [],
-      "skill": []
+      "skill": [
+        "未経験可"
+      ]
     },
     "comment": "ダブル揺動の溶接ヘッドを備えた、強制空冷の1,600W機です。パルス・連続・鱗状などの溶接モードを切り替えられます。",
     "suitable_for": [],
@@ -2578,14 +2619,20 @@
     "portability": "本体380kg（700W×1,000D×1,700Hmm）、水冷（チラー12.2kW）、ファイバー長10m",
     "thickness_note": null,
     "tags": {
-      "use": [],
+      "use": [
+        "薄板接合",
+        "補修",
+        "自動化"
+      ],
       "material": [
         "鉄"
       ],
       "thickness": [],
       "environment": [],
       "price": [],
-      "skill": []
+      "skill": [
+        "未経験可"
+      ]
     },
     "comment": "本体380kg・水冷の4,000Wリングモード機です。センターとリングの出力を個別に設定でき、亜鉛メッキ鋼板などブローしやすい材質に使えます。",
     "suitable_for": [
@@ -3432,7 +3479,7 @@
     },
     "wire_feed": null,
     "fiber_core_um": null,
-    "cooling": null
+    "cooling": "空冷"
   },
   {
     "id": "p240",
@@ -3739,7 +3786,9 @@
     ],
     "origin": {
       "hq": "日本（大阪府大阪市東淀川区）　※販売元。製造元は公式に記載なし",
-      "hq_url": "https://nbceng.com/company/"
+      "hq_url": "https://nbceng.com/company/",
+      "service": "販売元の NBCエンジニア（大阪市）が公式サイトの修理依頼窓口で受け付け（対応範囲・方法の記載なし）",
+      "service_url": "https://nbceng.biz/repair"
     },
     "wire_feed": null,
     "fiber_core_um": null,
@@ -3758,7 +3807,10 @@
     "portability": "水冷式、本体とチラー一体型（取り外し不可）。公式図面の外形寸法 約436×958.5×803.2mm。重量は非公開",
     "thickness_note": null,
     "tags": {
-      "use": [],
+      "use": [
+        "補修",
+        "自動化"
+      ],
       "material": [],
       "thickness": [],
       "environment": [],
@@ -3783,7 +3835,9 @@
     ],
     "origin": {
       "hq": "日本（大阪府大阪市東淀川区）　※販売元。製造元は公式に記載なし",
-      "hq_url": "https://nbceng.com/company/"
+      "hq_url": "https://nbceng.com/company/",
+      "service": "販売元の NBCエンジニア（大阪市）が公式サイトの修理依頼窓口で受け付け（対応範囲・方法の記載なし）",
+      "service_url": "https://nbceng.biz/repair"
     },
     "wire_feed": "対応",
     "fiber_core_um": null,
@@ -4007,7 +4061,7 @@
     },
     "wire_feed": "標準",
     "fiber_core_um": null,
-    "cooling": null
+    "cooling": "空冷"
   },
   {
     "id": "p250",
@@ -4860,7 +4914,9 @@
     ],
     "origin": {
       "hq": "日本（石川県金沢市）",
-      "hq_url": "https://www.shibuya.co.jp/corporate/company-profile/"
+      "hq_url": "https://www.shibuya.co.jp/corporate/company-profile/",
+      "service": "メーカーが営業・技術・サービス一体型のサポート体制と説明（全社共通。レーザ溶接機の修理体制の明記なし）",
+      "service_url": "https://www.shibuya.co.jp/articles/product/to_ss_01.html"
     },
     "wire_feed": null,
     "fiber_core_um": null,
@@ -5134,8 +5190,15 @@
     "portability": "キャタピラ付き約910kg／キャタピラ無し約610kg。外形1200×1030×1150mm。自走式キャタピラ付きモデルと手動移動モデルあり。レンズ水冷搭載。電源3×400V",
     "thickness_note": null,
     "tags": {
-      "use": [],
-      "material": [],
+      "use": [
+        "補修",
+        "自動化"
+      ],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ"
+      ],
       "thickness": [],
       "environment": [],
       "price": [],
@@ -5451,7 +5514,11 @@
     "portability": "本体45kg未満（654×286×574mm）、強制空冷（外部チラー不要）。溶接ガン0.48kg未満",
     "thickness_note": "溶け込み深さ（最大溶接深さ） ステンレス・炭素鋼・亜鉛めっき鋼7mm／アルミ5.5mm／真鍮6mm／銅2.5mm（対応板厚ではない）",
     "tags": {
-      "use": [],
+      "use": [
+        "薄板接合",
+        "厚物",
+        "補修"
+      ],
       "material": [
         "鉄",
         "ステンレス",
@@ -5510,7 +5577,10 @@
     "portability": "本体42kg未満（654×286×574mm）、強制空冷（外部チラー不要）。溶接ガン0.48kg未満",
     "thickness_note": "溶け込み深さ（最大溶接深さ） ステンレス・炭素鋼・亜鉛めっき鋼5mm／アルミ3.5mm／真鍮4mm／銅1mm（対応板厚ではない）",
     "tags": {
-      "use": [],
+      "use": [
+        "薄板接合",
+        "補修"
+      ],
       "material": [
         "鉄",
         "ステンレス",

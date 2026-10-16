@@ -261,8 +261,8 @@ async function productPage(env, slug) {
   const mcRule = Object.entries(mcCfg.rules).map(([m, x]) => `${m}はファイバコア径${x.maxCoreUm}μm以下か出力${x.minOutputW.toLocaleString("ja-JP")}W以上`).join("、");
   const cooling = coolingOf(p);
   const spec = [
-    ["方式", kw(p.method)], ["波長", kw(p.wavelength)], ["出力", outputHtml(p)], ["可搬性", kw(p.portability)],
-    ["冷却方式", cooling && kw(cooling + (p.cooling ? "" : "（可搬性の記載から）"))],
+    ["方式", kw(p.method)], ["波長", kw(p.wavelength)], ["出力", outputHtml(p)], ["本体の重さ・大きさ", kw(p.portability)],
+    ["冷却方式", cooling && kw(cooling + (p.cooling ? "" : "（本体の記載から）"))],
     ["ファイバコア径", p.fiber_core_um != null && kw(`${p.fiber_core_um}μm`), "公式に記載なし"],
     ["ワイヤー供給", p.wire_feed && kw(p.wire_feed === "対応" ? "対応（標準かオプションかは記載なし）" : p.wire_feed === "標準" ? "標準装備" : "オプション"), "公式に記載なし"],
     ["対応素材", kw((tags.material || []).join("・"))],
@@ -303,7 +303,7 @@ async function productPage(env, slug) {
       cooling: coolingOf(x) && kw(coolingOf(x)), core: x.fiber_core_um != null && kw(`${x.fiber_core_um}μm`),
       wire: x.wire_feed && kw(x.wire_feed === "標準" ? "標準装備" : x.wire_feed),
     })[k];
-    const rows = [["出力", "out"], ["冷却方式", "cooling"], ["方式", "method"], ["可搬性", "port"], ["ファイバコア径", "core"], ["ワイヤー供給", "wire"], ["対応素材", "mat"], ["板厚の公表値", "thick"], ["価格帯", "price"], ["習得難易度", "skill"], ["国内のサポート", "service"]]
+    const rows = [["出力", "out"], ["冷却方式", "cooling"], ["方式", "method"], ["本体の重さ・大きさ", "port"], ["ファイバコア径", "core"], ["ワイヤー供給", "wire"], ["対応素材", "mat"], ["板厚の公表値", "thick"], ["価格帯", "price"], ["習得難易度", "skill"], ["国内のサポート", "service"]]
       .map(([label, k]) => {
         const a = val(p, tags, k), b = val(vsItem, vt, k);
         const na = ["service", "core", "wire"].includes(k) ? "公式に記載なし" : NA;
@@ -448,10 +448,10 @@ function pageShell(title, body, { current = "/lineup/" } = {}) {
 <meta name="robots" content="noindex,nofollow"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><meta property="og:type" content="website"><meta property="og:site_name" content="レーザー溶接機 比較・選定"><meta property="og:title" content="${esc(title)}"><meta property="og:image" content="https://yosetsu-navi.jolly-frost-2311.workers.dev/assets/images/ogp.jpg"><meta name="twitter:card" content="summary_large_image"><title>${esc(title)}｜${SITE_NAME}</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/css/style.css?v=21"><link rel="stylesheet" href="/assets/css/product.css?v=21"></head><body>
+<link rel="stylesheet" href="/assets/css/style.css?v=22"><link rel="stylesheet" href="/assets/css/product.css?v=22"></head><body>
 <div id="siteHeader"></div>
 ${body}
 <div id="siteFooter"></div>
-<script type="module">import { mountChrome } from "/assets/js/partials.js?v=21"; mountChrome({ current: ${JSON.stringify(current)} });</script>
+<script type="module">import { mountChrome } from "/assets/js/partials.js?v=22"; mountChrome({ current: ${JSON.stringify(current)} });</script>
 </body></html>`;
 }

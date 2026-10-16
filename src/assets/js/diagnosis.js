@@ -1,6 +1,6 @@
 // 選定診断の画面制御。スコアリングは scoring.js、設問・商品は /data/*.json。
-import { runDiagnosis, productSlug, operatorPick } from "./scoring.js?v=21";
-import { mountChrome, icon, productPhoto } from "./partials.js?v=21";
+import { runDiagnosis, productSlug, operatorPick, coolingOf } from "./scoring.js?v=22";
+import { mountChrome, icon, productPhoto } from "./partials.js?v=22";
 
 const app = document.getElementById("app");
 const foot = document.getElementById("foot");
@@ -380,11 +380,13 @@ function renderCompare() {
     ["方式", (p) => text(p.method)],
     ["出力", (p) => text(p.output_w ? `${p.output_w} W` : "")],
     ["波長", (p) => text(p.wavelength)],
-    ["可搬性", (p) => text(p.portability)],
+    ["冷却方式", (p) => text(coolingOf(p))],
+    ["本体の重さ・大きさ", (p) => text(p.portability)],
+    ["ワイヤー供給", (p) => text(p.wire_feed ? { 標準: "標準装備", オプション: "オプション", 対応: "対応（標準かオプションかは記載なし）" }[p.wire_feed] : "")],
     ["対応素材", (p) => tags(p.tags.material)],
     ["対応板厚", (p) => tags(p.tags.thickness)],
     ["使用環境", (p) => tags(p.tags.environment)],
-    ["価格帯", (p) => tags(p.tags.price)],
+    ["価格帯", (p) => (p.tags.price?.length || !p.handled_by_operator ? tags(p.tags.price) : "お問い合わせ")],
     ["習得難易度", (p) => tags(p.tags.skill)],
     ["向いている用途", (p) => list(p.suitable_for, "記載なし")],
     ["向いていない用途", (p) => list(p.not_suitable_for, "記載なし")],

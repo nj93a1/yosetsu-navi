@@ -1271,7 +1271,7 @@
     "handled_by_operator": false,
     "image": "/assets/images/products/amada-flw-1500mts.png",
     "is_published": true,
-    "notes": "定格1,500W／最大2,500W。価格は非公開 / 2026-10-14 調査: ワイヤー供給の根拠「オプション欄に「ダブルフィラー装置」（Φ0.8〜1.6mm、2本同時自動送給）」; FLW-1500MTS の公式ページ・標準パッケージ画像・イプロス掲載に冷却方式の記載なし。前機種 FLW-1500MT の公式ページは『完全空冷方式のため、チラー不要』だが MTS には転用していない。コア径の記載なし。カタログはフォーム請求制",
+    "notes": "定格1,500W／最大2,500W。価格は非公開 / 2026-10-14 調査: ワイヤー供給の根拠「オプション欄に「ダブルフィラー装置」（Φ0.8〜1.6mm、2本同時自動送給）」; FLW-1500MTS の公式ページ・標準パッケージ画像・イプロス掲載に冷却方式の記載なし。前機種 FLW-1500MT の公式ページは『完全空冷方式のため、チラー不要』だが MTS には転用していない。コア径の記載なし。カタログはフォーム請求制 / 2026-10-16 調査（冷却）: 本体の冷却方式は公式に記載なし。MTS の製品ページ・仕様表・標準パッケージ画像・イプロス掲載に冷却方式の記載なし。MTS ページの「デジタルカタログ」リンク先は前機種 FLW-1500MT のカタログ（2022年10月版）で、MTS 用ではない（その仕様表にも冷却方式の",
     "image_credit": "株式会社アマダ 公式サイト",
     "image_source": "https://www.sheetmetal.amada.co.jp/lineup/weld/flw-mts/flw-1500mts.html",
     "field_sources": {
@@ -1332,7 +1332,7 @@
     "handled_by_operator": false,
     "image": "/assets/images/products/thm-thfi-1500h.jpg",
     "is_published": true,
-    "notes": "波長・出力・素材・板厚・環境・価格・難易度は非公開 / 2026-10-14 調査: ワイヤー供給の根拠「標準装備：THFI-1500H用ワイヤ送給装置」; コア径は公式ページの仕様表画像（ファイバーコア径 25μm）。冷却は『空冷タイプでチラーの接続が不要』",
+    "notes": "波長・出力・素材・板厚・環境・価格・難易度は非公開 / 2026-10-14 調査: ワイヤー供給の根拠「標準装備：THFI-1500H用ワイヤ送給装置」; コア径は公式ページの仕様表画像（ファイバーコア径 25μm）。冷却は『空冷タイプでチラーの接続が不要』 / 2026-10-16 調査（国内サポート）: 『国内外の充実したサービス、ネットワークにより』（https://thm-co.jp/solution/service）",
     "image_credit": "THM株式会社 公式サイト",
     "image_source": "https://thm-co.jp/fiber/thm-30r-f-2",
     "field_sources": {
@@ -1345,7 +1345,9 @@
     },
     "origin": {
       "hq": "日本（神奈川県横浜市金沢区）",
-      "hq_url": "https://thm-co.jp/company/corporate_profile"
+      "hq_url": "https://thm-co.jp/company/corporate_profile",
+      "service": "国内外のサービス網で対応とメーカーが説明（修理・保守の具体的な体制は記載なし）",
+      "service_url": "https://thm-co.jp/solution/service"
     },
     "wire_feed": "標準",
     "fiber_core_um": 25,
@@ -1649,7 +1651,10 @@
         "薄板接合",
         "自動化"
       ],
-      "material": [],
+      "material": [
+        "ステンレス",
+        "アルミ"
+      ],
       "thickness": [
         "0.5〜3mm"
       ],
@@ -1674,7 +1679,7 @@
     "handled_by_operator": false,
     "image": "/assets/images/products/ikura-isk-fl.jpg",
     "is_published": true,
-    "notes": "価格根拠: 販売店公開価格 税込2,763,200円 / 2026-10-14 調査: ワイヤー供給の根拠「仕様表に「フィーダー質量 シングル:13.5kg/ダブル:23.5kg」」; 仕様表にフィーダー質量があり製品写真にも送給装置が写るが、標準かオプションかの記載なし。冷却は『水冷（16リットル・純水使用）』。コア径の記載なし",
+    "notes": "価格根拠: 販売店公開価格 税込2,763,200円 / 2026-10-14 調査: ワイヤー供給の根拠「仕様表に「フィーダー質量 シングル:13.5kg/ダブル:23.5kg」」; 仕様表にフィーダー質量があり製品写真にも送給装置が写るが、標準かオプションかの記載なし。冷却は『水冷（16リットル・純水使用）』。コア径の記載なし / 2026-10-16 調査（空欄の補完）: material=ステンレス・アルミ（『ステンレス溶接』／『アルミ溶接』）",
     "image_credit": "育良精機株式会社 公式サイト（2機種共通の写真）",
     "image_source": "https://www.ikuratools.com/w_FL.html",
     "field_sources": {
@@ -1689,7 +1694,8 @@
       "suitable_for": "https://www.ikuratools.com/w_FL.html",
       "not_suitable_for": "https://www.ikuratools.com/w_FL.html",
       "wire_feed": "https://www.ikuratools.com/w_FL.html",
-      "cooling": "https://www.ikuratools.com/w_FL.html"
+      "cooling": "https://www.ikuratools.com/w_FL.html",
+      "tags.material": "https://www.ikuratools.com/w_FL.html"
     },
     "dealer_only_fields": [
       "tags.price（価格帯 200〜400万円。根拠はウエダ金物の販売価格 税込2,763,200円。メーカーはオープン価格で価格を公開していない）"
@@ -1724,7 +1730,10 @@
         "厚物",
         "自動化"
       ],
-      "material": [],
+      "material": [
+        "ステンレス",
+        "アルミ"
+      ],
       "thickness": [
         "3〜6mm"
       ],
@@ -1749,7 +1758,7 @@
     "handled_by_operator": false,
     "image": "/assets/images/products/ikura-isk-fl.jpg",
     "is_published": true,
-    "notes": "価格根拠: ウエダ金物 税込3,593,700円。別販売店では税込4,332,706円の掲載あり。板厚タグは受領データ（板厚：3〜6）のとおり「3〜6mm」だけにしている。公表値は「最大6mm」で、同程度の上限の機種（HW450・HW550・SLW2000・FLW-1500MTS・FMW-V2.0）は「0.5〜3mm」も持つため、薄板も可と扱うか要クライアント確認（足すと診断で薄板を選んだ人にも一致機種として出る） / 2026-10-14 調査: ワイヤー供給の根拠「仕様表に「フィーダー質量 シングル:13.5kg/ダブル:23.5kg」」; 仕様表にフィーダー質量があり製品写真にも送給装置が写るが、標準かオプションかの記載なし。冷却は『水冷（16リットル・純水使用）』。コア径の記載なし",
+    "notes": "価格根拠: ウエダ金物 税込3,593,700円。別販売店では税込4,332,706円の掲載あり。板厚タグは受領データ（板厚：3〜6）のとおり「3〜6mm」だけにしている。公表値は「最大6mm」で、同程度の上限の機種（HW450・HW550・SLW2000・FLW-1500MTS・FMW-V2.0）は「0.5〜3mm」も持つため、薄板も可と扱うか要クライアント確認（足すと診断で薄板を選んだ人にも一致機種として出る） / 2026-10-14 調査: ワイヤー供給の根拠「仕様表に「フィーダー質量 シングル:13.5kg/ダブル:23.5kg」」; 仕様表にフィーダー質量があり製品写真にも送給装置が写るが、標準かオプションかの記載なし。冷却は『水冷（16リットル・純水使用）』。コア径の記載なし / 2026-10-16 調査（空欄の補完）: material=ステンレス・アルミ（『ステンレス溶接』／『アルミ溶接』）",
     "image_credit": "育良精機株式会社 公式サイト（2機種共通の写真）",
     "image_source": "https://www.ikuratools.com/w_FL.html",
     "field_sources": {
@@ -1764,7 +1773,8 @@
       "suitable_for": "https://www.ikuratools.com/w_FL.html",
       "not_suitable_for": "https://www.ikuratools.com/w_FL.html",
       "wire_feed": "https://www.ikuratools.com/w_FL.html",
-      "cooling": "https://www.ikuratools.com/w_FL.html"
+      "cooling": "https://www.ikuratools.com/w_FL.html",
+      "tags.material": "https://www.ikuratools.com/w_FL.html"
     },
     "dealer_only_fields": [
       "tags.price（価格帯 200〜400万円。根拠はウエダ金物の販売価格 税込3,593,700円。メーカーはオープン価格で価格を公開していない）"
@@ -1821,7 +1831,7 @@
     "handled_by_operator": false,
     "image": "/assets/images/products/fuji-kiko-hw200.jpg",
     "is_published": true,
-    "notes": "出力はレーザーピーク出力相当。波長の単位は公式表記のまま。環境・価格・難易度は非公開 / 2026-10-14 調査: ワイヤー供給の根拠「特長に「ワイヤ送給装置付き」。HW200 はシングル」; 仕様表のワイヤ送給装置欄は HW200・HW350 がシングル、HW450・HW550 が『シングルorダブルから選択可能』（colspan で確認）。冷却は『ハイブリッド空冷（ヒートパイプ冷媒ダイレクト方式）』。コア径の記載なし",
+    "notes": "出力はレーザーピーク出力相当。波長の単位は公式表記のまま。環境・価格・難易度は非公開 / 2026-10-14 調査: ワイヤー供給の根拠「特長に「ワイヤ送給装置付き」。HW200 はシングル」; 仕様表のワイヤ送給装置欄は HW200・HW350 がシングル、HW450・HW550 が『シングルorダブルから選択可能』（colspan で確認）。冷却は『ハイブリッド空冷（ヒートパイプ冷媒ダイレクト方式）』。コア径の記載なし / 2026-10-16 調査（国内サポート）: 『引き取り修理、現地でのメンテナンスは弊社営業と専門スタッフが対応』（https://www.fuji-kiko.co.jp/strength）",
     "image_credit": "富士機工株式会社 公式サイト（シリーズ共通の写真）",
     "image_source": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
     "field_sources": {
@@ -1839,7 +1849,9 @@
     },
     "origin": {
       "hq": "日本（東京都武蔵村山市）",
-      "hq_url": "https://www.fuji-kiko.co.jp/company/about"
+      "hq_url": "https://www.fuji-kiko.co.jp/company/about",
+      "service": "メーカーの営業と専門スタッフが引き取り修理・現地メンテナンスに対応（本社 東京都武蔵村山市、名古屋・大阪営業所）。会社全体の記載で、溶接機の名指しはなし",
+      "service_url": "https://www.fuji-kiko.co.jp/strength"
     },
     "wire_feed": "標準",
     "fiber_core_um": null,
@@ -1887,7 +1899,7 @@
     "handled_by_operator": false,
     "image": "/assets/images/products/fuji-kiko-hw350.jpg",
     "is_published": true,
-    "notes": "出力はレーザーピーク出力相当。波長の単位は公式表記のまま。環境・価格・難易度は非公開 / 2026-10-14 調査: ワイヤー供給の根拠「特長に「ワイヤ送給装置付き」。HW350 はシングル」; 仕様表のワイヤ送給装置欄は HW200・HW350 がシングル、HW450・HW550 が『シングルorダブルから選択可能』（colspan で確認）。冷却は『ハイブリッド空冷（ヒートパイプ冷媒ダイレクト方式）』。コア径の記載なし",
+    "notes": "出力はレーザーピーク出力相当。波長の単位は公式表記のまま。環境・価格・難易度は非公開 / 2026-10-14 調査: ワイヤー供給の根拠「特長に「ワイヤ送給装置付き」。HW350 はシングル」; 仕様表のワイヤ送給装置欄は HW200・HW350 がシングル、HW450・HW550 が『シングルorダブルから選択可能』（colspan で確認）。冷却は『ハイブリッド空冷（ヒートパイプ冷媒ダイレクト方式）』。コア径の記載なし / 2026-10-16 調査（国内サポート）: 『引き取り修理、現地でのメンテナンスは弊社営業と専門スタッフが対応』（https://www.fuji-kiko.co.jp/strength）",
     "image_credit": "富士機工株式会社 公式サイト",
     "image_source": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
     "field_sources": {
@@ -1905,7 +1917,9 @@
     },
     "origin": {
       "hq": "日本（東京都武蔵村山市）",
-      "hq_url": "https://www.fuji-kiko.co.jp/company/about"
+      "hq_url": "https://www.fuji-kiko.co.jp/company/about",
+      "service": "メーカーの営業と専門スタッフが引き取り修理・現地メンテナンスに対応（本社 東京都武蔵村山市、名古屋・大阪営業所）。会社全体の記載で、溶接機の名指しはなし",
+      "service_url": "https://www.fuji-kiko.co.jp/strength"
     },
     "wire_feed": "標準",
     "fiber_core_um": null,
@@ -1955,7 +1969,7 @@
     "handled_by_operator": false,
     "image": "/assets/images/products/fuji-kiko-hw450.jpg",
     "is_published": true,
-    "notes": "出力はレーザーピーク出力相当。波長の単位は公式表記のまま。環境・価格・難易度は非公開 / 2026-10-14 調査: ワイヤー供給の根拠「「ワイヤ送給装置付き」。HW450 はシングルorダブルから選択可能」; 仕様表のワイヤ送給装置欄は HW200・HW350 がシングル、HW450・HW550 が『シングルorダブルから選択可能』（colspan で確認）。冷却は『ハイブリッド空冷（ヒートパイプ冷媒ダイレクト方式）』。コア径の記載なし",
+    "notes": "出力はレーザーピーク出力相当。波長の単位は公式表記のまま。環境・価格・難易度は非公開 / 2026-10-14 調査: ワイヤー供給の根拠「「ワイヤ送給装置付き」。HW450 はシングルorダブルから選択可能」; 仕様表のワイヤ送給装置欄は HW200・HW350 がシングル、HW450・HW550 が『シングルorダブルから選択可能』（colspan で確認）。冷却は『ハイブリッド空冷（ヒートパイプ冷媒ダイレクト方式）』。コア径の記載なし / 2026-10-16 調査（国内サポート）: 『引き取り修理、現地でのメンテナンスは弊社営業と専門スタッフが対応』（https://www.fuji-kiko.co.jp/strength）",
     "image_credit": "富士機工株式会社 公式サイト",
     "image_source": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
     "field_sources": {
@@ -1973,7 +1987,9 @@
     },
     "origin": {
       "hq": "日本（東京都武蔵村山市）",
-      "hq_url": "https://www.fuji-kiko.co.jp/company/about"
+      "hq_url": "https://www.fuji-kiko.co.jp/company/about",
+      "service": "メーカーの営業と専門スタッフが引き取り修理・現地メンテナンスに対応（本社 東京都武蔵村山市、名古屋・大阪営業所）。会社全体の記載で、溶接機の名指しはなし",
+      "service_url": "https://www.fuji-kiko.co.jp/strength"
     },
     "wire_feed": "標準",
     "fiber_core_um": null,
@@ -2023,7 +2039,7 @@
     "handled_by_operator": false,
     "image": "/assets/images/products/fuji-kiko-hw550.jpg",
     "is_published": true,
-    "notes": "出力はレーザーピーク出力相当。波長の単位は公式表記のまま。環境・価格・難易度は非公開 / 2026-10-14 調査: ワイヤー供給の根拠「「ワイヤ送給装置付き」。HW550 はシングルorダブルから選択可能」; 仕様表のワイヤ送給装置欄は HW200・HW350 がシングル、HW450・HW550 が『シングルorダブルから選択可能』（colspan で確認）。冷却は『ハイブリッド空冷（ヒートパイプ冷媒ダイレクト方式）』。コア径の記載なし",
+    "notes": "出力はレーザーピーク出力相当。波長の単位は公式表記のまま。環境・価格・難易度は非公開 / 2026-10-14 調査: ワイヤー供給の根拠「「ワイヤ送給装置付き」。HW550 はシングルorダブルから選択可能」; 仕様表のワイヤ送給装置欄は HW200・HW350 がシングル、HW450・HW550 が『シングルorダブルから選択可能』（colspan で確認）。冷却は『ハイブリッド空冷（ヒートパイプ冷媒ダイレクト方式）』。コア径の記載なし / 2026-10-16 調査（国内サポート）: 『引き取り修理、現地でのメンテナンスは弊社営業と専門スタッフが対応』（https://www.fuji-kiko.co.jp/strength）",
     "image_credit": "富士機工株式会社 公式サイト",
     "image_source": "https://www.fuji-kiko.co.jp/products/welding/fiber-laser-welding/",
     "field_sources": {
@@ -2041,7 +2057,9 @@
     },
     "origin": {
       "hq": "日本（東京都武蔵村山市）",
-      "hq_url": "https://www.fuji-kiko.co.jp/company/about"
+      "hq_url": "https://www.fuji-kiko.co.jp/company/about",
+      "service": "メーカーの営業と専門スタッフが引き取り修理・現地メンテナンスに対応（本社 東京都武蔵村山市、名古屋・大阪営業所）。会社全体の記載で、溶接機の名指しはなし",
+      "service_url": "https://www.fuji-kiko.co.jp/strength"
     },
     "wire_feed": "標準",
     "fiber_core_um": null,
@@ -2955,7 +2973,9 @@
     "source_url": "https://kss-kr.com/kr-detail/218/",
     "source": "株式会社KS・S 公式サイト",
     "tags": {
-      "use": [],
+      "use": [
+        "自動化"
+      ],
       "material": [],
       "thickness": [
         "0.5〜3mm"
@@ -2987,7 +3007,7 @@
       "thickness_note": "https://kss-kr.com/kr-detail/218/",
       "portability": "https://kss-kr.com/kr-detail/218/",
       "features": "https://kss-kr.com/fiber-laser-welding-machine/474/",
-      "tags.use": "https://kss-kr.com/fiber-laser-welding-machine/474/",
+      "tags.use": "https://kss-kr.com/robot_1/207/",
       "tags.material": "https://kss-kr.com/fiber-laser-welding-machine/474/",
       "tags.skill": "https://kss-kr.com/fiber-laser-welding-machine/474/",
       "country": "https://kss-kr.com/guidance/",
@@ -2996,7 +3016,7 @@
       "cooling": "https://kss-kr.com/kr-detail/218/"
     },
     "is_published": true,
-    "notes": "定格電圧 単相200V 30A（50/60Hz）、消費電力量 5.0kVA、使用ガス アルゴン・窒素、使用環境温度 10〜40°C。メンテナンス・アフターフォローとオーダーメイド（筐体サイズ変更など）に対応（ブランドページ）。東大阪の本社にデモ・持ち込みテストができるショールームあり（会社案内）。価格は公式サイトに掲載なし。会社所在地は大阪府東大阪市大蓮東4-12-34（公式の会社案内）で、八尾市ではない（グループの建洲テクノス株式会社が八尾工場を持つ）。依頼の「八尾市の KSS」はこの会社と判断したが、住所が一致しない点は要確認。会社案内に「中国生産工場」の写真があり、country は本社国。空冷シリーズには KR-1500AC新型（1500W・単体ワイヤー供給装置内蔵、本体 500×1000×650H・100kg）と KR-2000AC（2000W）もある。2ガン同時溶接の KR-WG シリーズ（KR-1500ACWG／KR-2000WG）あり。導入事例ページは KR-1500AC の納入例（社名伏せ）。画像はワイヤ送給装置などを含むセット写真。 / 2026年10月13日 北坂社長回答: 3社の製品はグループ会社ミライクで受注。KS・Sは代理店販売、MAX・Qilinは販売方法未定（窓口はミライク）。修理は販売会社で受付し、自社対応とメーカー対応に分ける。 / 2026-10-14 調査: ワイヤー供給の根拠「オプションでシングル・ダブルのワイヤー供給装置を追加選択可」; 仕様表『冷却方式 空冷』。オプションページ（【追加】ワイヤー供給装置 アシスト付き）は機種を限定しないシリーズ共通の記載。製品画像は送給装置を含むセット写真。同社で送給装置の内蔵を明記しているのは KR-1500AC新型（/kr-detail/427/『シングルワイヤー供給装置内蔵』）だけ。コア径の記載なし",
+    "notes": "定格電圧 単相200V 30A（50/60Hz）、消費電力量 5.0kVA、使用ガス アルゴン・窒素、使用環境温度 10〜40°C。メンテナンス・アフターフォローとオーダーメイド（筐体サイズ変更など）に対応（ブランドページ）。東大阪の本社にデモ・持ち込みテストができるショールームあり（会社案内）。価格は公式サイトに掲載なし。会社所在地は大阪府東大阪市大蓮東4-12-34（公式の会社案内）で、八尾市ではない（グループの建洲テクノス株式会社が八尾工場を持つ）。依頼の「八尾市の KSS」はこの会社と判断したが、住所が一致しない点は要確認。会社案内に「中国生産工場」の写真があり、country は本社国。空冷シリーズには KR-1500AC新型（1500W・単体ワイヤー供給装置内蔵、本体 500×1000×650H・100kg）と KR-2000AC（2000W）もある。2ガン同時溶接の KR-WG シリーズ（KR-1500ACWG／KR-2000WG）あり。導入事例ページは KR-1500AC の納入例（社名伏せ）。画像はワイヤ送給装置などを含むセット写真。 / 2026年10月13日 北坂社長回答: 3社の製品はグループ会社ミライクで受注。KS・Sは代理店販売、MAX・Qilinは販売方法未定（窓口はミライク）。修理は販売会社で受付し、自社対応とメーカー対応に分ける。 / 2026-10-14 調査: ワイヤー供給の根拠「オプションでシングル・ダブルのワイヤー供給装置を追加選択可」; 仕様表『冷却方式 空冷』。オプションページ（【追加】ワイヤー供給装置 アシスト付き）は機種を限定しないシリーズ共通の記載。製品画像は送給装置を含むセット写真。同社で送給装置の内蔵を明記しているのは KR-1500AC新型（/kr-detail/427/『シングルワイヤー供給装置内蔵』）だけ。コア径の記載なし / 2026-10-16 調査（空欄の補完）: use=自動化（『ファナック(株)社製CRX-10iA/(株)KS·S製KR-1500AC』）",
     "support": [
       "販売窓口は運営元のグループ会社（ミライク）です（代理店として販売）",
       "修理は販売窓口（運営元グループのミライク）で受け付け、内容に応じて自社またはメーカーが対応します",
@@ -3038,7 +3058,9 @@
     "source_url": "https://theo.inc/theo-ma1-laser-welding-machine/",
     "source": "THEO（Maxphotonics のハンドヘルド溶接ブランド）公式サイト",
     "tags": {
-      "use": [],
+      "use": [
+        "薄板接合"
+      ],
       "material": [
         "鉄",
         "ステンレス",
@@ -3081,10 +3103,14 @@
       "wire_feed": "https://theo.inc/product/theo-ma1-35/",
       "fiber_core_um": "https://theo.inc/theo-ma1-laser-welding-machine/",
       "cooling": "https://theo.inc/theo-ma1-laser-welding-machine/",
-      "origin.sellers": "https://lb-weld.com/ / https://sanjo-ox.jp/"
+      "origin.sellers": "https://lb-weld.com/ / https://sanjo-ox.jp/",
+      "tags.use": [
+        "https://theo.inc/theo-ma1-laser-welding-machine-old/advantages-of-laser-welding/",
+        "https://theo.inc/theo-ma1-laser-welding-machine-old/laser-welding-faq/"
+      ]
     },
     "is_published": true,
-    "notes": "米国公式サイトの表示価格 $7,480（税別、theo.inc）。国内価格は非公開。波長は公式に記載なし。theo.inc は Cloudflare のボット対策で curl -sIL が 403 を返すが、ブラウザ相当の取得（WebFetch）で本文・画像の表示を確認済み（2026-10-10）。日本法人 Maxphotonics Japan株式会社（2025年10月31日法人番号指定、神奈川県横浜市都筑区）の公式サイトは見つからず。日本語カタログ（THEO MA1 Brochure JP v13）はエル・ビー・ウエルド株式会社（愛知県、岩倉工場にデモ機）が掲載。theo.inc/ja/ は機械翻訳の日本語ページ。タッチスクリーンは上面配置（他機種は前面）。 / 2026年10月13日 北坂社長回答: 3社の製品はグループ会社ミライクで受注。KS・Sは代理店販売、MAX・Qilinは販売方法未定（窓口はミライク）。修理は販売会社で受付し、自社対応とメーカー対応に分ける。 / 2026-10-14 調査: ワイヤー供給の根拠「商品名「THEO MA1-35 including Wire-Feeder」」; theo.inc は curl -sIL が 403（Cloudflare）のため WebFetch で本文確認（2026-10-14）。コア径は MA1 シリーズ共通の記載『employs a 20µm fiber core』（商品ページの『14μm Laser Spotsize』はスポット径でコア径ではない）。冷却『air-cooled and no external chiller is required』。ワイヤーフィーダーのページは T1 Single（MA1 Series 専用、0.8〜1.6mm）とデュアル TD1 WF を掲載。日本語カタログ（エル・ビー・ウエルド掲載）も標準装備",
+    "notes": "米国公式サイトの表示価格 $7,480（税別、theo.inc）。国内価格は非公開。波長は公式に記載なし。theo.inc は Cloudflare のボット対策で curl -sIL が 403 を返すが、ブラウザ相当の取得（WebFetch）で本文・画像の表示を確認済み（2026-10-10）。日本法人 Maxphotonics Japan株式会社（2025年10月31日法人番号指定、神奈川県横浜市都筑区）の公式サイトは見つからず。日本語カタログ（THEO MA1 Brochure JP v13）はエル・ビー・ウエルド株式会社（愛知県、岩倉工場にデモ機）が掲載。theo.inc/ja/ は機械翻訳の日本語ページ。タッチスクリーンは上面配置（他機種は前面）。 / 2026年10月13日 北坂社長回答: 3社の製品はグループ会社ミライクで受注。KS・Sは代理店販売、MAX・Qilinは販売方法未定（窓口はミライク）。修理は販売会社で受付し、自社対応とメーカー対応に分ける。 / 2026-10-14 調査: ワイヤー供給の根拠「商品名「THEO MA1-35 including Wire-Feeder」」; theo.inc は curl -sIL が 403（Cloudflare）のため WebFetch で本文確認（2026-10-14）。コア径は MA1 シリーズ共通の記載『employs a 20µm fiber core』（商品ページの『14μm Laser Spotsize』はスポット径でコア径ではない）。冷却『air-cooled and no external chiller is required』。ワイヤーフィーダーのページは T1 Single（MA1 Series 専用、0.8〜1.6mm）とデュアル TD1 WF を掲載。日本語カタログ（エル・ビー・ウエルド掲載）も標準装備 / 2026-10-16 調査（空欄の補完）: use=薄板接合（『ideal for small parts & thin gauge』／『thin sheet be welded to a thick sheet?』）",
     "support": [
       "販売窓口は運営元のグループ会社（ミライク）です",
       "修理は販売窓口（運営元グループのミライク）で受け付け、内容に応じて自社またはメーカーが対応します",
@@ -3128,7 +3154,9 @@
     "source_url": "https://theo.inc/theo-ma1-laser-welding-machine/",
     "source": "THEO（Maxphotonics のハンドヘルド溶接ブランド）公式サイト",
     "tags": {
-      "use": [],
+      "use": [
+        "薄板接合"
+      ],
       "material": [
         "鉄",
         "ステンレス",
@@ -3173,10 +3201,14 @@
       "wire_feed": "https://theo.inc/product/theo-ma1-65/",
       "fiber_core_um": "https://theo.inc/theo-ma1-laser-welding-machine/",
       "cooling": "https://theo.inc/product/theo-ma1-65/",
-      "origin.sellers": "https://lb-weld.com/"
+      "origin.sellers": "https://lb-weld.com/",
+      "tags.use": [
+        "https://theo.inc/theo-ma1-laser-welding-machine-old/advantages-of-laser-welding/",
+        "https://theo.inc/theo-ma1-laser-welding-machine-old/laser-welding-faq/"
+      ]
     },
     "is_published": true,
-    "notes": "米国公式サイトの表示価格 $19,980（税別、theo.inc）。国内価格は非公開。波長は公式に記載なし。theo.inc は Cloudflare のボット対策で curl -sIL が 403 を返すが、ブラウザ相当の取得（WebFetch）で本文・画像の表示を確認済み（2026-10-10）。日本法人 Maxphotonics Japan株式会社（2025年10月31日法人番号指定、神奈川県横浜市都筑区）の公式サイトは見つからず。日本語カタログ（THEO MA1 Brochure JP v13）はエル・ビー・ウエルド株式会社（愛知県、岩倉工場にデモ機）が掲載。theo.inc/ja/ は機械翻訳の日本語ページ。中間機種 MA1-45（1200W・38kg〜39kg、ステンレス4.5mm）もある。材料のチタンは英語版公式ページの対応材料一覧（Nickel Alloys, Titanium 含む）による。 / 2026年10月13日 北坂社長回答: 3社の製品はグループ会社ミライクで受注。KS・Sは代理店販売、MAX・Qilinは販売方法未定（窓口はミライク）。修理は販売会社で受付し、自社対応とメーカー対応に分ける。 / 2026-10-14 調査: ワイヤー供給の根拠「製品ページに「Included Wire Feeder & Wobble Welding」」; theo.inc は curl -sIL で403（Cloudflare）のため WebFetch で本文を確認（2026-10-14）。コア径はシリーズページの「The MA1 Series … employs a 20µm fiber core」（MA1シリーズ共通の記載）。製品ページの「14μm Laser Spotsize」はスポット径でコア径ではない。冷却は「The fiberlaser system is air-cooled and no external chiller is required」。日本語カタログ（https://lb-weld.com/wp/wp-content/uploads/2025/01/THEO-MA1-Brochure-JP-v13.pdf 、200）も「ワイヤーフィーダーユニットおよびウォブル溶接機能が標準装備」と記載。",
+    "notes": "米国公式サイトの表示価格 $19,980（税別、theo.inc）。国内価格は非公開。波長は公式に記載なし。theo.inc は Cloudflare のボット対策で curl -sIL が 403 を返すが、ブラウザ相当の取得（WebFetch）で本文・画像の表示を確認済み（2026-10-10）。日本法人 Maxphotonics Japan株式会社（2025年10月31日法人番号指定、神奈川県横浜市都筑区）の公式サイトは見つからず。日本語カタログ（THEO MA1 Brochure JP v13）はエル・ビー・ウエルド株式会社（愛知県、岩倉工場にデモ機）が掲載。theo.inc/ja/ は機械翻訳の日本語ページ。中間機種 MA1-45（1200W・38kg〜39kg、ステンレス4.5mm）もある。材料のチタンは英語版公式ページの対応材料一覧（Nickel Alloys, Titanium 含む）による。 / 2026年10月13日 北坂社長回答: 3社の製品はグループ会社ミライクで受注。KS・Sは代理店販売、MAX・Qilinは販売方法未定（窓口はミライク）。修理は販売会社で受付し、自社対応とメーカー対応に分ける。 / 2026-10-14 調査: ワイヤー供給の根拠「製品ページに「Included Wire Feeder & Wobble Welding」」; theo.inc は curl -sIL で403（Cloudflare）のため WebFetch で本文を確認（2026-10-14）。コア径はシリーズページの「The MA1 Series … employs a 20µm fiber core」（MA1シリーズ共通の記載）。製品ページの「14μm Laser Spotsize」はスポット径でコア径ではない。冷却は「The fiberlaser system is air-cooled and no external chiller is required」。日本語カタログ（https://lb-weld.com/wp/wp-content/uploads/2025/01/THEO-MA1-Brochure-JP-v13.pdf 、200）も「ワイヤーフィーダーユニットおよびウォブル溶接機能が標準装備」と記載。 / 2026-10-16 調査（空欄の補完）: use=薄板接合（『ideal for small parts & thin gauge』／『thin sheet be welded to a thick sheet?』）",
     "support": [
       "販売窓口は運営元のグループ会社（ミライク）です",
       "修理は販売窓口（運営元グループのミライク）で受け付け、内容に応じて自社またはメーカーが対応します",
@@ -3217,7 +3249,9 @@
     "source_url": "https://theo.inc/theo-ma1-laser-welding-machine/",
     "source": "THEO（Maxphotonics のハンドヘルド溶接ブランド）公式サイト",
     "tags": {
-      "use": [],
+      "use": [
+        "薄板接合"
+      ],
       "material": [
         "鉄",
         "ステンレス",
@@ -3260,10 +3294,14 @@
       "japanese_catalog": "https://lb-weld.com/wp/wp-content/uploads/2025/01/THEO-MA1-Brochure-JP-v13.pdf",
       "wire_feed": "https://theo.inc/product/theo-ma1-ultra/",
       "fiber_core_um": "https://theo.inc/theo-ma1-laser-welding-machine/",
-      "cooling": "https://theo.inc/product/theo-ma1-ultra/"
+      "cooling": "https://theo.inc/product/theo-ma1-ultra/",
+      "tags.use": [
+        "https://theo.inc/theo-ma1-laser-welding-machine-old/advantages-of-laser-welding/",
+        "https://theo.inc/theo-ma1-laser-welding-machine-old/laser-welding-faq/"
+      ]
     },
     "is_published": true,
-    "notes": "公式サイトに価格表示なし。波長は公式に記載なし。theo.inc は Cloudflare のボット対策で curl -sIL が 403 を返すが、ブラウザ相当の取得（WebFetch）で本文・画像の表示を確認済み（2026-10-10）。日本法人 Maxphotonics Japan株式会社（2025年10月31日法人番号指定、神奈川県横浜市都筑区）の公式サイトは見つからず。日本語カタログ（THEO MA1 Brochure JP v13）はエル・ビー・ウエルド株式会社（愛知県、岩倉工場にデモ機）が掲載。theo.inc/ja/ は機械翻訳の日本語ページ。MA1 シリーズの最新機種。日本語カタログ（v13）には未掲載で、仕様は英語版公式ページのみ。材料タグは英語版のシリーズ共通の対応材料一覧（Stainless Steel, Galvanized Steel, Mild Steel, Aluminum, Nickel Alloys, Titanium）から当てはめ。ワイヤーフィーダー・プリセット数などの特長は MA1 シリーズ共通の記載。 / 2026年10月13日 北坂社長回答: 3社の製品はグループ会社ミライクで受注。KS・Sは代理店販売、MAX・Qilinは販売方法未定（窓口はミライク）。修理は販売会社で受付し、自社対応とメーカー対応に分ける。 / 2026-10-14 調査: ワイヤー供給の根拠「製品ページに「Included Wire Feeder & Wobble Welding」」; theo.inc は curl -sIL で403（Cloudflare）のため WebFetch で本文を確認（2026-10-14）。コア径20µmはシリーズページの MA1 Series 共通の記載で、ULTRA 個別の数値ではない（ULTRA の製品ページにはコア径の記載なし）。冷却は ULTRA 製品ページの「air-cooled and no external chiller is required」。ULTRA の英語ブローシャ（販売店 solik.sk 掲載）は「new updated T1x wire feeder」と記載。",
+    "notes": "公式サイトに価格表示なし。波長は公式に記載なし。theo.inc は Cloudflare のボット対策で curl -sIL が 403 を返すが、ブラウザ相当の取得（WebFetch）で本文・画像の表示を確認済み（2026-10-10）。日本法人 Maxphotonics Japan株式会社（2025年10月31日法人番号指定、神奈川県横浜市都筑区）の公式サイトは見つからず。日本語カタログ（THEO MA1 Brochure JP v13）はエル・ビー・ウエルド株式会社（愛知県、岩倉工場にデモ機）が掲載。theo.inc/ja/ は機械翻訳の日本語ページ。MA1 シリーズの最新機種。日本語カタログ（v13）には未掲載で、仕様は英語版公式ページのみ。材料タグは英語版のシリーズ共通の対応材料一覧（Stainless Steel, Galvanized Steel, Mild Steel, Aluminum, Nickel Alloys, Titanium）から当てはめ。ワイヤーフィーダー・プリセット数などの特長は MA1 シリーズ共通の記載。 / 2026年10月13日 北坂社長回答: 3社の製品はグループ会社ミライクで受注。KS・Sは代理店販売、MAX・Qilinは販売方法未定（窓口はミライク）。修理は販売会社で受付し、自社対応とメーカー対応に分ける。 / 2026-10-14 調査: ワイヤー供給の根拠「製品ページに「Included Wire Feeder & Wobble Welding」」; theo.inc は curl -sIL で403（Cloudflare）のため WebFetch で本文を確認（2026-10-14）。コア径20µmはシリーズページの MA1 Series 共通の記載で、ULTRA 個別の数値ではない（ULTRA の製品ページにはコア径の記載なし）。冷却は ULTRA 製品ページの「air-cooled and no external chiller is required」。ULTRA の英語ブローシャ（販売店 solik.sk 掲載）は「new updated T1x wire feeder」と記載。 / 2026-10-16 調査（空欄の補完）: use=薄板接合（『ideal for small parts & thin gauge』／『thin sheet be welded to a thick sheet?』）",
     "support": [
       "販売窓口は運営元のグループ会社（ミライク）です",
       "修理は販売窓口（運営元グループのミライク）で受け付け、内容に応じて自社またはメーカーが対応します",
@@ -3296,7 +3334,7 @@
     "output_w": 1600,
     "output_note": "定格出力（Rated Power）",
     "portability": "本体 55kg以下、強制空冷、本体サイズ 547×319×640mm、ファイバーケーブル 5m",
-    "thickness_note": "溶け込み深さ（公式表記 Weld Depth／焊接深度）4mm。対応板厚ではない",
+    "thickness_note": "取扱説明書の推奨溶接厚：ステンレス0〜5mm、アルミ0〜4mm、銅0〜1mm（製品ページの Weld Depth 4mm は溶け込み深さ）",
     "official_url": "https://www.qilinlaser.cn/products_60/281.html",
     "source_url": "https://www.qilinlaser.cn/products_60/281.html",
     "source": "Qilin Laser（广东骐麟激光科技）公式サイト",
@@ -3308,10 +3346,15 @@
         "銅",
         "ステンレス"
       ],
-      "thickness": [],
+      "thickness": [
+        "0.5〜3mm",
+        "3〜6mm"
+      ],
       "environment": [],
       "price": [],
-      "skill": []
+      "skill": [
+        "未経験可"
+      ]
     },
     "comment": "本体55kg以下・強制空冷の1,600W機です。公表されている溶け込み深さは4mmで、鋼・アルミ・銅・ステンレスに対応します。",
     "suitable_for": [],
@@ -3333,7 +3376,7 @@
       "output_w": "https://www.qilinlaser.cn/static/upload/image/20260204/1770166327133544.png",
       "wavelength": "https://www.qilinlaser.cn/static/upload/image/20260204/1770166327133544.png",
       "portability": "https://www.qilinlaser.cn/static/upload/image/20260204/1770166327133544.png",
-      "thickness_note": "https://www.qilinlaser.cn/static/upload/image/20260204/1770166327133544.png",
+      "thickness_note": "https://www.qilinlaser.cn/static/upload/file/20260531/1780226140410352.pdf",
       "features": "https://www.qilinlaser.cn/static/upload/image/20260204/1770166327133544.png",
       "tags.material": "https://www.qilinlaser.cn/cn/products_21/389.html",
       "method": "https://www.qilinlaser.cn/cn/products_21/389.html",
@@ -3342,10 +3385,12 @@
       "wire_feed": "https://www.qilinlaser.cn/static/upload/file/20260531/1780226140410352.pdf",
       "fiber_core_um": "https://www.qilinlaser.cn/static/upload/image/20260204/1770166327133544.png",
       "cooling": "https://www.qilinlaser.cn/static/upload/image/20260204/1770166327133544.png",
-      "origin.sellers": "https://fiberlaser.co.jp/?page_id=388 / https://metoree.com/products/74018/"
+      "origin.sellers": "https://fiberlaser.co.jp/?page_id=388 / https://metoree.com/products/74018/",
+      "tags.thickness": "https://www.qilinlaser.cn/static/upload/file/20260531/1780226140410352.pdf",
+      "tags.skill": "https://www.qilinlaser.cn/exhibition/524.html"
     },
     "is_published": true,
-    "notes": "仕様は公式製品ページの画像（Technical Parameter 表）から転記。電源 AC220V 50/60Hz、使用環境温度 -40〜45°C、ファイバーコア径 20µm、miniQBH。価格は公式サイトに掲載なし。国内代理店は確認できず（ノースヒルズが直接調達という依頼情報による）。ノースヒルズのサイトに Qilin の記載は無い。整機消費電力 4800W以下（中国語版仕様表）。中国語版の説明では「風冷手持激光焊接機」、材料は鋼・アルミ・銅・ステンレス、用途は配管・厨房・金物・手すり装飾・車両・航空宇宙など。「5〜10倍速い」は公式の主張。 / 2026年10月13日 北坂社長回答: 3社の製品はグループ会社ミライクで受注。KS・Sは代理店販売、MAX・Qilinは販売方法未定（窓口はミライク）。修理は販売会社で受付し、自社対応とメーカー対応に分ける。 / 2026-10-14 調査: ワイヤー供給の根拠「取扱説明書で送丝机と自動送丝系统がいずれも「选配」」; コア径・冷却は製品ページ（https://www.qilinlaser.cn/products_60/281.html）の仕様画像「Fiber Core Diameter 20um」「Cooling Way: Forced air cooling」。F4系列取扱説明書（DWT22X-1 V1.3、公式 /cn/product-manual/ 掲載）でも「输出光纤芯径 20μm」「空气冷却」、出荷リストの「T20直流送丝机」と「3.7 焊接头自动送丝系统(选配)」が選配（オプション）。 / 2026年10月15日 八木産機「Fシリーズ」（F3/F4、カタログ https://fiberlaser.co.jp/?page_id=388 ）は本機と同じ機械（仕様が一致し本体に KIRIN LASER WELDER 表記）のため、このページに合体。八木産機の旧掲載（p274）の内容: 空冷・キャスター付きで、F3（800W・35kg以下）とF4（1,600W・55kg以下）の2機種があります。トーチ重量は0.4kgです。",
+    "notes": "仕様は公式製品ページの画像（Technical Parameter 表）から転記。電源 AC220V 50/60Hz、使用環境温度 -40〜45°C、ファイバーコア径 20µm、miniQBH。価格は公式サイトに掲載なし。国内代理店は確認できず（ノースヒルズが直接調達という依頼情報による）。ノースヒルズのサイトに Qilin の記載は無い。整機消費電力 4800W以下（中国語版仕様表）。中国語版の説明では「風冷手持激光焊接機」、材料は鋼・アルミ・銅・ステンレス、用途は配管・厨房・金物・手すり装飾・車両・航空宇宙など。「5〜10倍速い」は公式の主張。 / 2026年10月13日 北坂社長回答: 3社の製品はグループ会社ミライクで受注。KS・Sは代理店販売、MAX・Qilinは販売方法未定（窓口はミライク）。修理は販売会社で受付し、自社対応とメーカー対応に分ける。 / 2026-10-14 調査: ワイヤー供給の根拠「取扱説明書で送丝机と自動送丝系统がいずれも「选配」」; コア径・冷却は製品ページ（https://www.qilinlaser.cn/products_60/281.html）の仕様画像「Fiber Core Diameter 20um」「Cooling Way: Forced air cooling」。F4系列取扱説明書（DWT22X-1 V1.3、公式 /cn/product-manual/ 掲載）でも「输出光纤芯径 20μm」「空气冷却」、出荷リストの「T20直流送丝机」と「3.7 焊接头自动送丝系统(选配)」が選配（オプション）。 / 2026年10月15日 八木産機「Fシリーズ」（F3/F4、カタログ https://fiberlaser.co.jp/?page_id=388 ）は本機と同じ機械（仕様が一致し本体に KIRIN LASER WELDER 表記）のため、このページに合体。八木産機の旧掲載（p274）の内容: 空冷・キャスター付きで、F3（800W・35kg以下）とF4（1,600W・55kg以下）の2機種があります。トーチ重量は0.4kgです。 / 2026-10-16 調査（空欄の補完）: thickness=0.5〜3mm・3〜6mm（『建议焊接的不锈钢钢材质厚度在 0~5mm』／『建议焊接的不锈钢钢材质厚度在 0~5mm』／『焊接厚度 ≤4mm』）; skill=未経験可（『No professional welders are required』）",
     "support": [
       "販売窓口は運営元のグループ会社（ミライク）です",
       "修理は販売窓口（運営元グループのミライク）で受け付け、内容に応じて自社またはメーカーが対応します",
@@ -3394,7 +3439,10 @@
     "source_url": "https://www.qilinlaser.cn/products_60/472.html",
     "source": "Qilin Laser（广东骐麟激光科技）公式サイト",
     "tags": {
-      "use": [],
+      "use": [
+        "薄板接合",
+        "補修"
+      ],
       "material": [
         "鉄",
         "アルミ",
@@ -3407,7 +3455,9 @@
       ],
       "environment": [],
       "price": [],
-      "skill": []
+      "skill": [
+        "未経験可"
+      ]
     },
     "comment": "本体55kg以下・強制空冷の1,600W機です。ステンレス・炭素鋼・亜鉛めっき鋼板・アルミの1.0〜3.5mmの溶接条件をあらかじめ登録しています。",
     "suitable_for": [],
@@ -3436,10 +3486,15 @@
       "manual": "https://www.qilinlaser.cn/static/upload/file/20260605/1780625700188711.pdf",
       "wire_feed": "https://www.qilinlaser.cn/static/upload/file/20260605/1780625700188711.pdf",
       "fiber_core_um": "https://www.qilinlaser.cn/static/upload/image/20260204/1770167139676182.png",
-      "cooling": "https://www.qilinlaser.cn/static/upload/image/20260204/1770167139676182.png"
+      "cooling": "https://www.qilinlaser.cn/static/upload/image/20260204/1770167139676182.png",
+      "tags.use": "https://www.qilinlaser.cn/newsexhibition/530.html",
+      "tags.skill": [
+        "https://www.qilinlaser.cn/exhibition/524.html",
+        "https://www.qilinlaser.cn/newsexhibition/530.html"
+      ]
     },
     "is_published": true,
-    "notes": "仕様は公式製品ページの画像（Technical Parameter 表）から転記。電源 AC220V 50/60Hz、使用環境温度 -20〜45°C、ファイバーコア径 20µm、miniQBH。価格は公式サイトに掲載なし。国内代理店は確認できず（ノースヒルズが直接調達という依頼情報による）。ノースヒルズのサイトに Qilin の記載は無い。取扱説明書（K4 Series User Manual V1.0）では出力 1500W（100%連続）、最大消費電力 4500W以下、作動ガス 窒素またはアルゴン 0.25〜0.6MPa、湿度 85%RH以下と記載され、製品ページの 1600W と食い違う。板厚タグは取扱説明書の「Welding Thickness ≤4mm」とプリセット板厚から当てはめ（製品ページは Weld Depth 表記なので、溶け込み深さとみなす場合はタグを外す）。材料は取扱説明書の用途欄（steel, aluminum, copper, stainless steel）。 / 2026年10月13日 北坂社長回答: 3社の製品はグループ会社ミライクで受注。KS・Sは代理店販売、MAX・Qilinは販売方法未定（窓口はミライク）。修理は販売会社で受付し、自社対応とメーカー対応に分ける。 / 2026-10-14 調査: ワイヤー供給の根拠「取扱説明書の出荷リストで wire feeder が Optional」; 取扱説明書（K4 Series User Manual V1.0、英語サイトの Download 掲載）で「T21 wire feeder … Optional」「3.8 Welding Torch Automatic Wire Feeding System (Optional)」、「Output Fiber Core Diameter 20 μm」「air-cooled」。製品ページ仕様画像も「Fiber Core Diameter 20um」「Forced air cooling」。中国語版説明書V1.1（https://www.qilinlaser.cn/static/upload/file/20260901/1788250747223571.pdf）も送丝机は「选配」。",
+    "notes": "仕様は公式製品ページの画像（Technical Parameter 表）から転記。電源 AC220V 50/60Hz、使用環境温度 -20〜45°C、ファイバーコア径 20µm、miniQBH。価格は公式サイトに掲載なし。国内代理店は確認できず（ノースヒルズが直接調達という依頼情報による）。ノースヒルズのサイトに Qilin の記載は無い。取扱説明書（K4 Series User Manual V1.0）では出力 1500W（100%連続）、最大消費電力 4500W以下、作動ガス 窒素またはアルゴン 0.25〜0.6MPa、湿度 85%RH以下と記載され、製品ページの 1600W と食い違う。板厚タグは取扱説明書の「Welding Thickness ≤4mm」とプリセット板厚から当てはめ（製品ページは Weld Depth 表記なので、溶け込み深さとみなす場合はタグを外す）。材料は取扱説明書の用途欄（steel, aluminum, copper, stainless steel）。 / 2026年10月13日 北坂社長回答: 3社の製品はグループ会社ミライクで受注。KS・Sは代理店販売、MAX・Qilinは販売方法未定（窓口はミライク）。修理は販売会社で受付し、自社対応とメーカー対応に分ける。 / 2026-10-14 調査: ワイヤー供給の根拠「取扱説明書の出荷リストで wire feeder が Optional」; 取扱説明書（K4 Series User Manual V1.0、英語サイトの Download 掲載）で「T21 wire feeder … Optional」「3.8 Welding Torch Automatic Wire Feeding System (Optional)」、「Output Fiber Core Diameter 20 μm」「air-cooled」。製品ページ仕様画像も「Fiber Core Diameter 20um」「Forced air cooling」。中国語版説明書V1.1（https://www.qilinlaser.cn/static/upload/file/20260901/1788250747223571.pdf）も送丝机は「选配」。 / 2026-10-16 調査（空欄の補完）: use=薄板接合・補修（『thin to medium-thick plates』／『perfect for on-site repairs』）; skill=未経験可（『Even beginners can achieve master-level』／『No professional welders are required』）",
     "support": [
       "販売窓口は運営元のグループ会社（ミライク）です",
       "修理は販売窓口（運営元グループのミライク）で受け付け、内容に応じて自社またはメーカーが対応します",
@@ -3475,22 +3530,29 @@
     "output_w": 1600,
     "output_note": "定格出力（Rated Power）",
     "portability": "本体 55kg以下、強制空冷、本体サイズ 516×318×550mm、ファイバーケーブル 5m",
-    "thickness_note": "溶け込み深さ（公式表記 Weld Depth）4mm。対応板厚ではない",
+    "thickness_note": "取扱説明書の推奨溶接厚：ステンレス0〜5mm（製品ページの Weld Depth 4mm は溶け込み深さ）",
     "official_url": "https://www.qilinlaser.cn/products_60/476.html",
     "source_url": "https://www.qilinlaser.cn/products_60/476.html",
     "source": "Qilin Laser（广东骐麟激光科技）公式サイト",
     "tags": {
-      "use": [],
+      "use": [
+        "薄板接合"
+      ],
       "material": [
         "鉄",
         "アルミ",
         "銅",
         "ステンレス"
       ],
-      "thickness": [],
+      "thickness": [
+        "0.5〜3mm",
+        "3〜6mm"
+      ],
       "environment": [],
       "price": [],
-      "skill": []
+      "skill": [
+        "未経験可"
+      ]
     },
     "comment": "ダブル揺動の溶接ヘッドを備えた、強制空冷の1,600W機です。パルス・連続・鱗状などの溶接モードを切り替えられます。",
     "suitable_for": [],
@@ -3511,17 +3573,26 @@
       "output_w": "https://www.qilinlaser.cn/static/upload/image/20260204/1770166973136570.png",
       "wavelength": "https://www.qilinlaser.cn/static/upload/image/20260204/1770166973136570.png",
       "portability": "https://www.qilinlaser.cn/static/upload/image/20260204/1770166973136570.png",
-      "thickness_note": "https://www.qilinlaser.cn/static/upload/image/20260204/1770166973136570.png",
+      "thickness_note": "https://www.qilinlaser.cn/static/upload/file/20260531/1780225593459220.pdf",
       "features": "https://www.qilinlaser.cn/cn/products_21/457.html",
       "tags.material": "https://www.qilinlaser.cn/cn/products_21/457.html",
       "method": "https://www.qilinlaser.cn/cn/products_21/457.html",
       "country": "https://www.qilinlaser.cn/about-us/",
       "wire_feed": "https://www.qilinlaser.cn/static/upload/file/20260531/1780225593459220.pdf",
       "fiber_core_um": "https://www.qilinlaser.cn/static/upload/image/20260204/1770166973136570.png",
-      "cooling": "https://www.qilinlaser.cn/static/upload/image/20260204/1770166973136570.png"
+      "cooling": "https://www.qilinlaser.cn/static/upload/image/20260204/1770166973136570.png",
+      "tags.use": [
+        "https://www.qilinlaser.cn/newsexhibition/498.html",
+        "https://www.qilinlaser.cn/newsexhibition/500.html"
+      ],
+      "tags.thickness": "https://www.qilinlaser.cn/static/upload/file/20260531/1780225593459220.pdf",
+      "tags.skill": [
+        "https://www.qilinlaser.cn/exhibition/524.html",
+        "https://www.qilinlaser.cn/newsexhibition/500.html"
+      ]
     },
     "is_published": true,
-    "notes": "仕様は公式製品ページの画像（Technical Parameter 表）から転記。電源 AC220V 50/60Hz、使用環境温度 -20〜45°C、ファイバーコア径 20µm、miniQBH。価格は公式サイトに掲載なし。国内代理店は確認できず（ノースヒルズが直接調達という依頼情報による）。ノースヒルズのサイトに Qilin の記載は無い。中国語版の説明では材料は鋼・アルミ・銅・ステンレス、用途は配管・厨房・金物・手すり装飾・車両・航空宇宙など。仕様表の数値は K4 と同じ。 / 2026年10月13日 北坂社長回答: 3社の製品はグループ会社ミライクで受注。KS・Sは代理店販売、MAX・Qilinは販売方法未定（窓口はミライク）。修理は販売会社で受付し、自社対応とメーカー対応に分ける。 / 2026-10-14 調査: ワイヤー供給の根拠「取扱説明書で双送丝机と自動送丝系统がいずれも「选配」」; M4系列取扱説明書（BWS20 V1、公式 /cn/product-manual/ 掲載）で出荷リストの「T21+1步进双送丝机」と「3.7 焊接头自动送丝系统(选配)」が選配、「输出光纤芯径 20μm」「空气冷却」。中国語版製品ページ（https://www.qilinlaser.cn/cn/products_21/457.html）の仕様画像（https://www.qilinlaser.cn/static/upload/image/20260204/1770174620122798.png）に「送丝范围 单0.8-1.6/双1.2-1.6」「冷却方式 风冷」。",
+    "notes": "仕様は公式製品ページの画像（Technical Parameter 表）から転記。電源 AC220V 50/60Hz、使用環境温度 -20〜45°C、ファイバーコア径 20µm、miniQBH。価格は公式サイトに掲載なし。国内代理店は確認できず（ノースヒルズが直接調達という依頼情報による）。ノースヒルズのサイトに Qilin の記載は無い。中国語版の説明では材料は鋼・アルミ・銅・ステンレス、用途は配管・厨房・金物・手すり装飾・車両・航空宇宙など。仕様表の数値は K4 と同じ。 / 2026年10月13日 北坂社長回答: 3社の製品はグループ会社ミライクで受注。KS・Sは代理店販売、MAX・Qilinは販売方法未定（窓口はミライク）。修理は販売会社で受付し、自社対応とメーカー対応に分ける。 / 2026-10-14 調査: ワイヤー供給の根拠「取扱説明書で双送丝机と自動送丝系统がいずれも「选配」」; M4系列取扱説明書（BWS20 V1、公式 /cn/product-manual/ 掲載）で出荷リストの「T21+1步进双送丝机」と「3.7 焊接头自动送丝系统(选配)」が選配、「输出光纤芯径 20μm」「空气冷却」。中国語版製品ページ（https://www.qilinlaser.cn/cn/products_21/457.html）の仕様画像（https://www.qilinlaser.cn/static/upload/image/20260204/1770174620122798.png）に「送丝范围 单0.8-1.6/双1.2-1.6」「冷却方式 风冷」。 / 2026-10-16 調査（空欄の補完）: use=薄板接合（『Designed for thin plates』／『For thin sheets, the pulse mode』）; thickness=0.5〜3mm・3〜6mm（『建议焊接的不锈钢钢材质厚度在 0~5mm』／『建议焊接的不锈钢钢材质厚度在 0~5mm』）; skill=未経験可（『easy for non-professional welders』／『No professional welders are required』）",
     "support": [
       "販売窓口は運営元のグループ会社（ミライク）です",
       "修理は販売窓口（運営元グループのミライク）で受け付け、内容に応じて自社またはメーカーが対応します",
@@ -3786,14 +3857,20 @@
     "source_url": "https://aimcorp.co.jp/yag/",
     "source": "株式会社エイム 公式サイト",
     "tags": {
-      "use": [],
+      "use": [
+        "薄板接合",
+        "補修",
+        "自動化"
+      ],
       "material": [
         "鉄"
       ],
       "thickness": [],
       "environment": [],
       "price": [],
-      "skill": []
+      "skill": [
+        "未経験可"
+      ]
     },
     "comment": "本体380kg・水冷の4,000Wリングモード機です。センターとリングの出力を個別に設定でき、亜鉛メッキ鋼板などブローしやすい材質に使えます。",
     "suitable_for": [
@@ -3821,10 +3898,12 @@
       "features": "https://aimcorp.co.jp/yag/",
       "wire_feed": "https://aimcorp.co.jp/yag/",
       "fiber_core_um": "https://aimcorp.co.jp/yag/",
-      "cooling": "https://aimcorp.co.jp/yag/"
+      "cooling": "https://aimcorp.co.jp/yag/",
+      "tags.use": "https://aimcorp.co.jp/yag/",
+      "tags.skill": "https://aimcorp.co.jp/yag/"
     },
     "is_published": true,
-    "notes": "価格・波長・対応板厚は非公開。電源 AC200V三相・電源容量13kVA、CW／パルス（10〜200Hz）、トーチ φ32×170mm。発振器のセンター／リング出力はカスタマイズ可能（例: センター1kW＋リング1.5kW、センター1.5kW＋リング2kW）で、output_w は仕様表の合計値。トップページで「新製品 リングモードファイバーレーザー溶接機 販売開始」と案内。画像は本体と外付けチラーが並んだ写真 / 2026-10-14 調査: ワイヤー供給の根拠「「肉盛もオプションのワイヤー供給機をつければ」（ページ共通）」; コア径は「センターコア径22μm リング 170μm」（リングモード）で、数値はセンター側。仕様表に冷却方式欄は無く「冷却能力 チラー 12.2KW」の記載から水冷（製品写真も外付けチラー）。ワイヤーはページ共通の記載で機種名の明記なし。",
+    "notes": "価格・波長・対応板厚は非公開。電源 AC200V三相・電源容量13kVA、CW／パルス（10〜200Hz）、トーチ φ32×170mm。発振器のセンター／リング出力はカスタマイズ可能（例: センター1kW＋リング1.5kW、センター1.5kW＋リング2kW）で、output_w は仕様表の合計値。トップページで「新製品 リングモードファイバーレーザー溶接機 販売開始」と案内。画像は本体と外付けチラーが並んだ写真 / 2026-10-14 調査: ワイヤー供給の根拠「「肉盛もオプションのワイヤー供給機をつければ」（ページ共通）」; コア径は「センターコア径22μm リング 170μm」（リングモード）で、数値はセンター側。仕様表に冷却方式欄は無く「冷却能力 チラー 12.2KW」の記載から水冷（製品写真も外付けチラー）。ワイヤーはページ共通の記載で機種名の明記なし。 / 2026-10-16 調査（空欄の補完）: use=薄板接合・補修・自動化（『薄物の溶接も可能！』／『肉盛もオプションのワイヤー供給機をつければお望みの肉盛ができます』／『ロボットにトーチを搭載することで量産にも対応できます』）; skill=未経験可（『熟練の溶接工でなくても簡単に溶接できます』）",
     "origin": {
       "hq": "日本（東京都青梅市）",
       "hq_url": "https://aimcorp.co.jp/kaisyaannnai/",
@@ -3907,7 +3986,7 @@
       "cooling": "https://www.ipgphotonics.com/ja/products/lightweld/lightweld-handheld-laser-welding-and-cleaning"
     },
     "is_published": true,
-    "notes": "価格は非公開（日本語ページは見積もり依頼）。波長は公式ページの仕様欄に記載がなく、IPG の LightWELD サイトの安全ガイド（https://www.lightweld.com/handheld-laser-welder/）にある「1070 nm の波長に対応した保護具」の記載による。本体重量・寸法・電源などの詳細仕様は LightWELD ガイド（フォーム登録でダウンロード）にあり、公開ページでは確認できなかった。板厚は公式のインチ表記をミリに換算（1インチ=25.4mm、小数第1位）。FAQ に「初めてのユーザーでもわずか数時間で高品質の溶接」とある。シリーズには LightWELD 1000（1000Wまで、鋼0.156インチまで）もある。1500 XR の板厚は概要ページの「LightWELD製品の比較」表による（能力ページは 2000 XR と 1000 のみ掲載）。 / 2026-10-14 調査: ワイヤー供給の根拠「能力ページ「オプションのワイヤー供給パッケージ」」; 比較表で「ワイヤー溶接 はい」「冷却 空冷」。ワイヤー供給パッケージはワイヤー径0.8〜1.6mm、送給ユニット・ノズル・ワイヤ溶接プリセットを含む（LightWELD 共通）。コア径は公開ページに記載なし（詳細仕様はフォーム登録制の LightWELD ガイド）。",
+    "notes": "価格は非公開（日本語ページは見積もり依頼）。波長は公式ページの仕様欄に記載がなく、IPG の LightWELD サイトの安全ガイド（https://www.lightweld.com/handheld-laser-welder/）にある「1070 nm の波長に対応した保護具」の記載による。本体重量・寸法・電源などの詳細仕様は LightWELD ガイド（フォーム登録でダウンロード）にあり、公開ページでは確認できなかった。板厚は公式のインチ表記をミリに換算（1インチ=25.4mm、小数第1位）。FAQ に「初めてのユーザーでもわずか数時間で高品質の溶接」とある。シリーズには LightWELD 1000（1000Wまで、鋼0.156インチまで）もある。1500 XR の板厚は概要ページの「LightWELD製品の比較」表による（能力ページは 2000 XR と 1000 のみ掲載）。 / 2026-10-14 調査: ワイヤー供給の根拠「能力ページ「オプションのワイヤー供給パッケージ」」; 比較表で「ワイヤー溶接 はい」「冷却 空冷」。ワイヤー供給パッケージはワイヤー径0.8〜1.6mm、送給ユニット・ノズル・ワイヤ溶接プリセットを含む（LightWELD 共通）。コア径は公開ページに記載なし（詳細仕様はフォーム登録制の LightWELD ガイド）。 / 2026-10-16 調査（国内サポート）: 国内での修理の明記なし。国内で修理すると明記したページはない。LightWELD サポートページの窓口は Tel +1 508.506.2877 と LightWELD@IPGPhotonics.com（サービス依頼・部品・トレーニング）。サポートページの保証説明は IPG レーザ全般で「標準的なファイバーレーザの保証期間は出荷後3年間」（L",
     "origin": {
       "hq": "米国（マサチューセッツ州マールボロ）",
       "hq_url": "https://www.ipgphotonics.com/ja/company/locations"
@@ -3989,7 +4068,7 @@
       "cooling": "https://www.ipgphotonics.com/ja/products/lightweld/lightweld-handheld-laser-welding-and-cleaning"
     },
     "is_published": true,
-    "notes": "価格は非公開（日本語ページは見積もり依頼）。波長は公式ページの仕様欄に記載がなく、IPG の LightWELD サイトの安全ガイド（https://www.lightweld.com/handheld-laser-welder/）にある「1070 nm の波長に対応した保護具」の記載による。本体重量・寸法・電源などの詳細仕様は LightWELD ガイド（フォーム登録でダウンロード）にあり、公開ページでは確認できなかった。板厚は公式のインチ表記をミリに換算（1インチ=25.4mm、小数第1位）。FAQ に「初めてのユーザーでもわずか数時間で高品質の溶接」とある。シリーズには LightWELD 1000（1000Wまで、鋼0.156インチまで）もある。 / 2026-10-14 調査: ワイヤー供給の根拠「能力ページ「オプションのワイヤー供給パッケージ」」; 比較表で「ワイヤー溶接 はい」「冷却 空冷」。ワイヤー供給パッケージはワイヤー径0.8〜1.6mm、送給ユニット・ノズル・ワイヤ溶接プリセットを含む（LightWELD 共通）。コア径は公開ページに記載なし（詳細仕様はフォーム登録制の LightWELD ガイド）。",
+    "notes": "価格は非公開（日本語ページは見積もり依頼）。波長は公式ページの仕様欄に記載がなく、IPG の LightWELD サイトの安全ガイド（https://www.lightweld.com/handheld-laser-welder/）にある「1070 nm の波長に対応した保護具」の記載による。本体重量・寸法・電源などの詳細仕様は LightWELD ガイド（フォーム登録でダウンロード）にあり、公開ページでは確認できなかった。板厚は公式のインチ表記をミリに換算（1インチ=25.4mm、小数第1位）。FAQ に「初めてのユーザーでもわずか数時間で高品質の溶接」とある。シリーズには LightWELD 1000（1000Wまで、鋼0.156インチまで）もある。 / 2026-10-14 調査: ワイヤー供給の根拠「能力ページ「オプションのワイヤー供給パッケージ」」; 比較表で「ワイヤー溶接 はい」「冷却 空冷」。ワイヤー供給パッケージはワイヤー径0.8〜1.6mm、送給ユニット・ノズル・ワイヤ溶接プリセットを含む（LightWELD 共通）。コア径は公開ページに記載なし（詳細仕様はフォーム登録制の LightWELD ガイド）。 / 2026-10-16 調査（国内サポート）: 国内での修理の明記なし。国内で修理すると明記したページはない。LightWELD サポートページの窓口は Tel +1 508.506.2877 と LightWELD@IPGPhotonics.com（サービス依頼・部品・トレーニング）。サポートページの保証説明は IPG レーザ全般で「標準的なファイバーレーザの保証期間は出荷後3年間」（L",
     "origin": {
       "hq": "米国（マサチューセッツ州マールボロ）",
       "hq_url": "https://www.ipgphotonics.com/ja/company/locations"
@@ -4404,7 +4483,7 @@
       "cooling": "https://www.globalgloria.com/%E3%83%AC%E3%83%BC%E3%82%B6%E3%83%BC%E6%BA%B6%E6%8E%A5%E6%A9%9F"
     },
     "is_published": true,
-    "notes": "公式ページに「150万円（本体税抜き）から導入可能！」とあり、最下位機種の TLSC-15 に当たると判断して price タグを 100〜200万円 とした（型番の明記はない）。電源容量 8.5kW、最大溶接速度0〜120mm/s、環境温度5〜35℃・湿度70%未満。skill は「簡単操作で、専門技術者不要」の記載による。仕様は公式ページの仕様表（画像、https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72s62VTHgC-8wFpjN7t60B0247-BA47_DnJUnupYvWZ3Fen5WVdSVSrKjBxGjxpRcU1aLxd-djDh0k6z3ifhX58MGPQJ4ngZAePaYsr5fo70wyeEKozjoIlnDR0mpbyUfH1j0O-R9k73RSAgcshQ98q5Qosq7DN8ya_zt7sSJwsLFeSWN_I0I3QGgxdoJp-8eKPIU1PETL-p8cT0wuEjm2SbgrGe3GUsoCQk8BQYD6k=w1280）から読み取り。株式会社Gloria（大阪市淀川区、加工機械の総合商社）の自社ブランド機。製造国は公式に記載がないため country は本社所在国。発振器メーカーは 創鑫／鋭科（公式表記）。重量・冷却方式（チラー内蔵とのみ記載）・電源電圧は非公開。画像は Google サイトの画像URL（googleusercontent）で長期の到達性が保証されないため、掲載時はダウンロードして使うことを推奨。Metoree の候補名「HLGW」は公式ページでは確認できず、公式の型番は TLSC-15／TLSC-20／TLSC-30。 / 2026-10-14 調査: ワイヤー供給の根拠「梱包リスト「本体: 発振器、トーチ、チラー、フィラー自動供給装置含む」」; 仕様表（画像）は「チラー 内蔵式」「フィラーユニット 1種類/2種類/3種類 別置き」で、「水冷」の語は無い（チラー内蔵＝水冷として扱った）。コア径の記載なし。仕様画像は Google サイトの画像で URL が更新されるため ページURLを出典とした。",
+    "notes": "公式ページに「150万円（本体税抜き）から導入可能！」とあり、最下位機種の TLSC-15 に当たると判断して price タグを 100〜200万円 とした（型番の明記はない）。電源容量 8.5kW、最大溶接速度0〜120mm/s、環境温度5〜35℃・湿度70%未満。skill は「簡単操作で、専門技術者不要」の記載による。仕様は公式ページの仕様表（画像、https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72s62VTHgC-8wFpjN7t60B0247-BA47_DnJUnupYvWZ3Fen5WVdSVSrKjBxGjxpRcU1aLxd-djDh0k6z3ifhX58MGPQJ4ngZAePaYsr5fo70wyeEKozjoIlnDR0mpbyUfH1j0O-R9k73RSAgcshQ98q5Qosq7DN8ya_zt7sSJwsLFeSWN_I0I3QGgxdoJp-8eKPIU1PETL-p8cT0wuEjm2SbgrGe3GUsoCQk8BQYD6k=w1280）から読み取り。株式会社Gloria（大阪市淀川区、加工機械の総合商社）の自社ブランド機。製造国は公式に記載がないため country は本社所在国。発振器メーカーは 創鑫／鋭科（公式表記）。重量・冷却方式（チラー内蔵とのみ記載）・電源電圧は非公開。画像は Google サイトの画像URL（googleusercontent）で長期の到達性が保証されないため、掲載時はダウンロードして使うことを推奨。Metoree の候補名「HLGW」は公式ページでは確認できず、公式の型番は TLSC-15／TLSC-20／TLSC-30。 / 2026-10-14 調査: ワイヤー供給の根拠「梱包リスト「本体: 発振器、トーチ、チラー、フィラー自動供給装置含む」」; 仕様表（画像）は「チラー 内蔵式」「フィラーユニット 1種類/2種類/3種類 別置き」で、「水冷」の語は無い（チラー内蔵＝水冷として扱った）。コア径の記載なし。仕様画像は Google サイトの画像で URL が更新されるため ページURLを出典とした。 / 2026-10-16 調査（国内サポート）: 国内での修理の明記なし。製品ページ・ホーム・会社紹介に修理・保守・保証の記載なし（「導入支援サポート」は補助金申請の話で、実務は協力会社）",
     "origin": {
       "hq": "日本（大阪府大阪市淀川区）　※販売元。製造元は公式に記載なし",
       "hq_url": "https://www.globalgloria.com/%E3%83%9B%E3%83%BC%E3%83%A0/%E4%BC%9A%E7%A4%BE%E7%B4%B9%E4%BB%8B"
@@ -4483,7 +4562,7 @@
       "cooling": "https://www.globalgloria.com/%E3%83%AC%E3%83%BC%E3%82%B6%E3%83%BC%E6%BA%B6%E6%8E%A5%E6%A9%9F"
     },
     "is_published": true,
-    "notes": "価格は非公開（公式の「150万円（本体税抜き）から」は最低価格の表示）。電源容量 16.5kW、最大溶接速度0〜120mm/s、環境温度5〜35℃・湿度70%未満。skill は「簡単操作で、専門技術者不要」の記載による。仕様は公式ページの仕様表（画像、https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72s62VTHgC-8wFpjN7t60B0247-BA47_DnJUnupYvWZ3Fen5WVdSVSrKjBxGjxpRcU1aLxd-djDh0k6z3ifhX58MGPQJ4ngZAePaYsr5fo70wyeEKozjoIlnDR0mpbyUfH1j0O-R9k73RSAgcshQ98q5Qosq7DN8ya_zt7sSJwsLFeSWN_I0I3QGgxdoJp-8eKPIU1PETL-p8cT0wuEjm2SbgrGe3GUsoCQk8BQYD6k=w1280）から読み取り。株式会社Gloria（大阪市淀川区、加工機械の総合商社）の自社ブランド機。製造国は公式に記載がないため country は本社所在国。発振器メーカーは 創鑫／鋭科（公式表記）。重量・冷却方式（チラー内蔵とのみ記載）・電源電圧は非公開。画像は Google サイトの画像URL（googleusercontent）で長期の到達性が保証されないため、掲載時はダウンロードして使うことを推奨。Metoree の候補名「HLGW」は公式ページでは確認できず、公式の型番は TLSC-15／TLSC-20／TLSC-30。 中間機種の TLSC-20（2000W、溶接厚さ0.5〜6mm、電源容量11kW）もある。 / 2026-10-14 調査: ワイヤー供給の根拠「梱包リスト「本体: 発振器、トーチ、チラー、フィラー自動供給装置含む」」; 仕様表（画像）は「チラー 内蔵式」「フィラーユニット 1種類/2種類/3種類 別置き」で、「水冷」の語は無い（チラー内蔵＝水冷として扱った）。コア径の記載なし。仕様画像は Google サイトの画像で URL が更新されるため ページURLを出典とした。",
+    "notes": "価格は非公開（公式の「150万円（本体税抜き）から」は最低価格の表示）。電源容量 16.5kW、最大溶接速度0〜120mm/s、環境温度5〜35℃・湿度70%未満。skill は「簡単操作で、専門技術者不要」の記載による。仕様は公式ページの仕様表（画像、https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72s62VTHgC-8wFpjN7t60B0247-BA47_DnJUnupYvWZ3Fen5WVdSVSrKjBxGjxpRcU1aLxd-djDh0k6z3ifhX58MGPQJ4ngZAePaYsr5fo70wyeEKozjoIlnDR0mpbyUfH1j0O-R9k73RSAgcshQ98q5Qosq7DN8ya_zt7sSJwsLFeSWN_I0I3QGgxdoJp-8eKPIU1PETL-p8cT0wuEjm2SbgrGe3GUsoCQk8BQYD6k=w1280）から読み取り。株式会社Gloria（大阪市淀川区、加工機械の総合商社）の自社ブランド機。製造国は公式に記載がないため country は本社所在国。発振器メーカーは 創鑫／鋭科（公式表記）。重量・冷却方式（チラー内蔵とのみ記載）・電源電圧は非公開。画像は Google サイトの画像URL（googleusercontent）で長期の到達性が保証されないため、掲載時はダウンロードして使うことを推奨。Metoree の候補名「HLGW」は公式ページでは確認できず、公式の型番は TLSC-15／TLSC-20／TLSC-30。 中間機種の TLSC-20（2000W、溶接厚さ0.5〜6mm、電源容量11kW）もある。 / 2026-10-14 調査: ワイヤー供給の根拠「梱包リスト「本体: 発振器、トーチ、チラー、フィラー自動供給装置含む」」; 仕様表（画像）は「チラー 内蔵式」「フィラーユニット 1種類/2種類/3種類 別置き」で、「水冷」の語は無い（チラー内蔵＝水冷として扱った）。コア径の記載なし。仕様画像は Google サイトの画像で URL が更新されるため ページURLを出典とした。 / 2026-10-16 調査（国内サポート）: 国内での修理の明記なし。製品ページ・ホーム・会社紹介に修理・保守・保証の記載なし（「導入支援サポート」は補助金申請の話で、実務は協力会社）",
     "origin": {
       "hq": "日本（大阪府大阪市淀川区）　※販売元。製造元は公式に記載なし",
       "hq_url": "https://www.globalgloria.com/%E3%83%9B%E3%83%BC%E3%83%A0/%E4%BC%9A%E7%A4%BE%E7%B4%B9%E4%BB%8B"
@@ -4558,7 +4637,7 @@
       "cooling": "https://www.youbon.co.jp/kizai/05ipg1500w.html"
     },
     "is_published": true,
-    "notes": "標準価格 ￥7,700,000（税別、本体、https://www.youbon.co.jp/kizai/05ipg1500w.html）。電源 単相200V、消費電力7kW、可動温度10〜40℃。溶接目安は「溶接の深さ」（溶け込み深さ）のため thickness タグは空。skill は「溶接経験のない初心者の方でも簡単に操作可能」の記載による。株式会社ユーボン（愛知県豊橋市、看板機材・資材の商社）が販売。製造元・製造国は公式ページに記載がないため country は null。CY-F1500I と CY-F1500C は発振器（IPG製／中国製）と価格のみ異なり、本体仕様・画像は共通。 / 2026-10-14 調査: ワイヤー供給の根拠「「標準装備でオートワイヤーフィーダーが付いています」」; 仕様表「冷却ユニット 水冷一体型」。ワイヤー径0.8/1.0/1.2/1.6mm（ワイヤー別売り）。コア径の記載なし。販売元（ユーボン）のページで、製造元の記載なし。",
+    "notes": "標準価格 ￥7,700,000（税別、本体、https://www.youbon.co.jp/kizai/05ipg1500w.html）。電源 単相200V、消費電力7kW、可動温度10〜40℃。溶接目安は「溶接の深さ」（溶け込み深さ）のため thickness タグは空。skill は「溶接経験のない初心者の方でも簡単に操作可能」の記載による。株式会社ユーボン（愛知県豊橋市、看板機材・資材の商社）が販売。製造元・製造国は公式ページに記載がないため country は null。CY-F1500I と CY-F1500C は発振器（IPG製／中国製）と価格のみ異なり、本体仕様・画像は共通。 / 2026-10-14 調査: ワイヤー供給の根拠「「標準装備でオートワイヤーフィーダーが付いています」」; 仕様表「冷却ユニット 水冷一体型」。ワイヤー径0.8/1.0/1.2/1.6mm（ワイヤー別売り）。コア径の記載なし。販売元（ユーボン）のページで、製造元の記載なし。 / 2026-10-16 調査（国内サポート）: 国内での修理の明記なし。製品ページ・会社概要に修理・保守・保証の記載なし（会社概要は「技術スタッフが柔軟に対応」と加工サービスについて述べるのみ）",
     "origin": {
       "hq": "日本（愛知県豊橋市）　※販売元。製造元は公式に記載なし",
       "hq_url": "https://www.youbon.co.jp/corporate/"
@@ -4633,7 +4712,7 @@
       "cooling": "https://www.youbon.co.jp/kizai/05ipg1500w.html"
     },
     "is_published": true,
-    "notes": "標準価格 ￥3,300,000（税別、本体、https://www.youbon.co.jp/kizai/05ipg1500w.html）。電源 単相200V、消費電力7kW、可動温度10〜40℃。溶接目安は「溶接の深さ」（溶け込み深さ）のため thickness タグは空。skill は「溶接経験のない初心者の方でも簡単に操作可能」の記載による。株式会社ユーボン（愛知県豊橋市、看板機材・資材の商社）が販売。製造元・製造国は公式ページに記載がないため country は null。CY-F1500I と CY-F1500C は発振器（IPG製／中国製）と価格のみ異なり、本体仕様・画像は共通。 / 2026-10-14 調査: ワイヤー供給の根拠「「標準装備でオートワイヤーフィーダーが付いています」」; 仕様表「冷却ユニット 水冷一体型」。ワイヤー径0.8/1.0/1.2/1.6mm（ワイヤー別売り）。コア径の記載なし。販売元（ユーボン）のページで、製造元の記載なし。",
+    "notes": "標準価格 ￥3,300,000（税別、本体、https://www.youbon.co.jp/kizai/05ipg1500w.html）。電源 単相200V、消費電力7kW、可動温度10〜40℃。溶接目安は「溶接の深さ」（溶け込み深さ）のため thickness タグは空。skill は「溶接経験のない初心者の方でも簡単に操作可能」の記載による。株式会社ユーボン（愛知県豊橋市、看板機材・資材の商社）が販売。製造元・製造国は公式ページに記載がないため country は null。CY-F1500I と CY-F1500C は発振器（IPG製／中国製）と価格のみ異なり、本体仕様・画像は共通。 / 2026-10-14 調査: ワイヤー供給の根拠「「標準装備でオートワイヤーフィーダーが付いています」」; 仕様表「冷却ユニット 水冷一体型」。ワイヤー径0.8/1.0/1.2/1.6mm（ワイヤー別売り）。コア径の記載なし。販売元（ユーボン）のページで、製造元の記載なし。 / 2026-10-16 調査（国内サポート）: 国内での修理の明記なし。製品ページ・会社概要に修理・保守・保証の記載なし（会社概要は「技術スタッフが柔軟に対応」と加工サービスについて述べるのみ）",
     "origin": {
       "hq": "日本（愛知県豊橋市）　※販売元。製造元は公式に記載なし",
       "hq_url": "https://www.youbon.co.jp/corporate/"
@@ -4839,10 +4918,11 @@
       "thickness_note": "https://www.technocoat.co.jp/applications/331/",
       "material": "https://www.technocoat.co.jp/applications/331/",
       "use": "https://www.technocoat.co.jp/products/smartlaser/",
-      "features": "https://www.technocoat.co.jp/products/smartlaser/"
+      "features": "https://www.technocoat.co.jp/products/smartlaser/",
+      "cooling": "https://www.technocoat.co.jp/products/smartlaser/"
     },
     "is_published": true,
-    "notes": "肉盛補修と精密溶接が主用途の低出力ファイバーレーザー装置で、1〜2kW級のハンドヘルド溶接機とは用途が異なる。厚板向けの公表値なし。板厚タグは公式事例の数値（t0.05〜0.5mm）から当てはめた。Al t0.5mm は境界値のため 0.5〜3mm も付けた。価格は非公開（カタログはフォームからのダウンロード）。重量・寸法は公式仕様表の表記（「寸法（電源本体）」欄に 2 つの値があり、括弧内が電源本体）。何を含む値かは公式に明記なし。 / 2026-10-14 調査: 公式は「チラー不要のシンプル構造」とのみ記載し、「空冷」の明記がないため cooling は null（チラー不要＝空冷とみなすなら 空冷、出典 https://www.technocoat.co.jp/products/smartlaser/ ）。ワイヤー送給・コア径は概要・仕様・事例ページに記載なし（カタログはフォーム送信制）。",
+    "notes": "肉盛補修と精密溶接が主用途の低出力ファイバーレーザー装置で、1〜2kW級のハンドヘルド溶接機とは用途が異なる。厚板向けの公表値なし。板厚タグは公式事例の数値（t0.05〜0.5mm）から当てはめた。Al t0.5mm は境界値のため 0.5〜3mm も付けた。価格は非公開（カタログはフォームからのダウンロード）。重量・寸法は公式仕様表の表記（「寸法（電源本体）」欄に 2 つの値があり、括弧内が電源本体）。何を含む値かは公式に明記なし。 / 2026-10-14 調査: 公式は「チラー不要のシンプル構造」とのみ記載し、「空冷」の明記がないため cooling は null（チラー不要＝空冷とみなすなら 空冷、出典 https://www.technocoat.co.jp/products/smartlaser/ ）。ワイヤー送給・コア径は概要・仕様・事例ページに記載なし（カタログはフォーム送信制）。 / 2026-10-16 調査（冷却）: 『チラー不要のシンプル構造』→ 空冷（チラー・水を使わない）",
     "origin": {
       "hq": "日本（静岡県藤枝市）",
       "hq_url": "https://www.technocoat.co.jp/about",
@@ -4854,7 +4934,7 @@
     },
     "wire_feed": null,
     "fiber_core_um": null,
-    "cooling": null
+    "cooling": "空冷"
   },
   {
     "id": "p240",
@@ -5236,10 +5316,12 @@
       "cooling": "https://nbceng.biz/nbclaser"
     },
     "is_published": true,
-    "notes": "Metoree の掲載は同社の LWM シリーズ。公式ページで空冷式の主力（おすすめ表示）が AW-1500W のため採用。波長・重量・対応板厚・価格は公式ページに記載なし（詳細カタログはフォーム送信でのダウンロードのため未確認）。「初心者でも簡単に扱うことが可能」は公式ページの AW-1500W テスト動画の説明文による。同ページに AW-800W（最大800W）も掲載。製造国は公式に記載なし。 / 2026-10-14 調査: 冷却は「空冷式ポータブルレーザー溶接機」。同ページの別売品ワイヤーフィーダー AW-F20 は「AW-700W用」と表記され、AW-1500W に使えるかは記載なし（詳細カタログはフォーム送信制で未確認）。コア径の記載なし。",
+    "notes": "Metoree の掲載は同社の LWM シリーズ。公式ページで空冷式の主力（おすすめ表示）が AW-1500W のため採用。波長・重量・対応板厚・価格は公式ページに記載なし（詳細カタログはフォーム送信でのダウンロードのため未確認）。「初心者でも簡単に扱うことが可能」は公式ページの AW-1500W テスト動画の説明文による。同ページに AW-800W（最大800W）も掲載。製造国は公式に記載なし。 / 2026-10-14 調査: 冷却は「空冷式ポータブルレーザー溶接機」。同ページの別売品ワイヤーフィーダー AW-F20 は「AW-700W用」と表記され、AW-1500W に使えるかは記載なし（詳細カタログはフォーム送信制で未確認）。コア径の記載なし。 / 2026-10-16 調査（国内サポート）: 『修理依頼 / 06-6829-7602 / 受付時間:平日9:00~17:00』（https://nbceng.biz/repair） / 2026-10-16 調査（ワイヤー）: 公式ページの（別売品）欄にあるワイヤーフィーダー AW-F20 は「AW-700W用」と表記（対応ワイヤー径0.6〜1.6mm）。AW-1500W に使えるか、標準・オプションかの記載なし。製品写真・AW-700W 発売ニュースにも記載なし",
     "origin": {
       "hq": "日本（大阪府大阪市東淀川区）　※販売元。製造元は公式に記載なし",
-      "hq_url": "https://nbceng.com/company/"
+      "hq_url": "https://nbceng.com/company/",
+      "service": "販売元の NBCエンジニア（大阪市）が公式サイトの修理依頼窓口で受け付け（対応範囲・方法の記載なし）",
+      "service_url": "https://nbceng.biz/repair"
     },
     "wire_feed": null,
     "fiber_core_um": null,
@@ -5261,7 +5343,10 @@
     "source_url": "https://nbceng.biz/nbclaser",
     "source": "NBCエンジニア株式会社 公式サイト（NBCレーザー）",
     "tags": {
-      "use": [],
+      "use": [
+        "補修",
+        "自動化"
+      ],
       "material": [],
       "thickness": [],
       "environment": [],
@@ -5289,13 +5374,16 @@
       "portability": "https://nbceng.biz/nbclaser",
       "features": "https://nbceng.biz/nbclaser",
       "wire_feed": "https://nbceng.biz/nbclaser",
-      "cooling": "https://nbceng.biz/nbclaser"
+      "cooling": "https://nbceng.biz/nbclaser",
+      "tags.use": "https://nbceng.biz/nbclaser"
     },
     "is_published": true,
-    "notes": "Metoree では LWM-1000W/1500W/2000W の3型番だが、公式ページの掲載は LWM-1500W/2000W のみ。対応材料・板厚・波長・重量・価格は公式ページに記載なし。外形寸法は公式ページの図面（LWM 欄の画像）から読み取った値。製造国は公式に記載なし。 / 2026-10-14 調査: ワイヤー供給の根拠「オプションの「ダブルフィーダー」（通常1本のワイヤーを2本に）」; 冷却は「水冷式」「本体とチラーが取り外しができない一体型」。シングルのワイヤーフィーダーが標準かオプションかは記載なし（ダブルフィーダーのみオプションと明記）。コア径の記載なし。",
+    "notes": "Metoree では LWM-1000W/1500W/2000W の3型番だが、公式ページの掲載は LWM-1500W/2000W のみ。対応材料・板厚・波長・重量・価格は公式ページに記載なし。外形寸法は公式ページの図面（LWM 欄の画像）から読み取った値。製造国は公式に記載なし。 / 2026-10-14 調査: ワイヤー供給の根拠「オプションの「ダブルフィーダー」（通常1本のワイヤーを2本に）」; 冷却は「水冷式」「本体とチラーが取り外しができない一体型」。シングルのワイヤーフィーダーが標準かオプションかは記載なし（ダブルフィーダーのみオプションと明記）。コア径の記載なし。 / 2026-10-16 調査（空欄の補完）: use=補修・自動化（『通常１本のワイヤーを２本使用することにより肉盛溶接を可能にしました』／『ロボットへの取り付け接続口』） / 2026-10-16 調査（国内サポート）: 『修理依頼 / 06-6829-7602 / 受付時間:平日9:00~17:00』（https://nbceng.biz/repair）",
     "origin": {
       "hq": "日本（大阪府大阪市東淀川区）　※販売元。製造元は公式に記載なし",
-      "hq_url": "https://nbceng.com/company/"
+      "hq_url": "https://nbceng.com/company/",
+      "service": "販売元の NBCエンジニア（大阪市）が公式サイトの修理依頼窓口で受け付け（対応範囲・方法の記載なし）",
+      "service_url": "https://nbceng.biz/repair"
     },
     "wire_feed": "対応",
     "fiber_core_um": null,
@@ -5365,7 +5453,7 @@
       "cooling": "https://rapyuta.jp/item/machine/fiberlazer1500/"
     },
     "is_published": true,
-    "notes": "公式ページは本文がなく、仕様・特長はページ内の画像（仕様表・特長一覧）で掲載。重量は仕様表150kg、特長欄160kgで不一致。仕様表の機種名表記は「La Lucc Dio ハンディ」（Luce の誤記とみられるが原文ママ）。加工サンプル欄に「※溶接形状は直線のみ可能です」との注記あり（サンプルに対する注記か機械の制約かは不明）。製造国・価格は公式に記載なし。同社は SENFENG 製の 4in1 レーザー溶接機 SF-HWM（1.5/2/3kW）の総販売元としてカタログも掲載（https://rapyuta.jp/item/machine/4in1laserwelding/）しているが、候補一覧の #23 SENFENG と重複するためレコード化していない。 / 2026-10-14 調査: ワイヤー供給の根拠「特長欄「ワイヤーフィーダー付きでφ1.6mmまで対応可能」」; 公式ページは画像のみ。ワイヤーは特長画像 image-2-1024x594.png、冷却は仕様表画像 WeChat-Image_20221108105232.png の「チラー 50Hz/60Hz併用」行による（「水冷」の語そのものは無いがチラー付きと明記）。コア径の記載なし。全URL 200確認。",
+    "notes": "公式ページは本文がなく、仕様・特長はページ内の画像（仕様表・特長一覧）で掲載。重量は仕様表150kg、特長欄160kgで不一致。仕様表の機種名表記は「La Lucc Dio ハンディ」（Luce の誤記とみられるが原文ママ）。加工サンプル欄に「※溶接形状は直線のみ可能です」との注記あり（サンプルに対する注記か機械の制約かは不明）。製造国・価格は公式に記載なし。同社は SENFENG 製の 4in1 レーザー溶接機 SF-HWM（1.5/2/3kW）の総販売元としてカタログも掲載（https://rapyuta.jp/item/machine/4in1laserwelding/）しているが、候補一覧の #23 SENFENG と重複するためレコード化していない。 / 2026-10-14 調査: ワイヤー供給の根拠「特長欄「ワイヤーフィーダー付きでφ1.6mmまで対応可能」」; 公式ページは画像のみ。ワイヤーは特長画像 image-2-1024x594.png、冷却は仕様表画像 WeChat-Image_20221108105232.png の「チラー 50Hz/60Hz併用」行による（「水冷」の語そのものは無いがチラー付きと明記）。コア径の記載なし。全URL 200確認。 / 2026-10-16 調査（国内サポート）: 国内での修理の明記なし。製品ページ（画像のみ。特長画像も確認）と会社概要に修理・保守・保証の記載なし。事業内容はレーザ加工機などの国内外販売（輸出入貿易業）",
     "origin": {
       "hq": "日本（石川県金沢市）　※販売元。製造元は公式に記載なし",
       "hq_url": "https://rapyuta.jp/company/"
@@ -5561,10 +5649,10 @@
       "skill": "https://ssk-net.jp/brandnew/fiberlaserwelder.html",
       "country": "https://www.bodor.com/en/contact/",
       "wire_feed": "https://www.waspsupplies.com/files/WMBLPRO1500/Pro_Brochure.pdf",
-      "cooling": "https://bodor.com/en/laser-welding-machine/handheld-laser-welding-machine/bodorwelder-1500.html"
+      "cooling": "https://ssk-net.jp/brandnew/pro_series.html"
     },
     "is_published": true,
-    "notes": "名称はメーカー公式ページで「Pro 1500」、製品写真の表記は「BodorWelder 1500 Pro」、Metoree は「Welder 1500 Pro」。重量はメーカー82kg・国内販売店65kgで不一致。波長は公式に記載なし。country は Bodor 公式の問い合わせ先電話番号が +86（中国、0531 は済南の市外局番）であることによる（本社所在地の明記は公式ページで確認できず）。価格は国内販売店・メーカーとも非公開（日本向け）。溶接厚は国内販売店の仕様表の値（メーカーの英語ページ・データでは材料別の厚さ欄に同値、Air シリーズは本文で「4mm penetration」とも表現）で、板厚タグは最大値までの範囲を当てはめた。 / 2026-10-14 調査: ワイヤー供給の根拠「Bodorカタログ構成品に「wire feeder」を記載」; Pro 1500 カタログ（Bodor作成「UPD20250703」、英国販売店 Wasp Supplies のサイトに掲載のPDF）の Machine Parameter に Components: Handheld welding head, laser welding power source, wire feeder。ノズル表にワイヤ径0.8〜2.0mm。bodor.com の製品ページ本体にはワイヤの記載なし。冷却はメーカーが Self-cooling（コンプレッサー＋冷媒、水タンク無し）、国内販売店アイムSSKは「冷媒冷却」と表記し、空冷・水冷のどちらとも書いていないため null。コア径の記載なし。URL 200確認。",
+    "notes": "名称はメーカー公式ページで「Pro 1500」、製品写真の表記は「BodorWelder 1500 Pro」、Metoree は「Welder 1500 Pro」。重量はメーカー82kg・国内販売店65kgで不一致。波長は公式に記載なし。country は Bodor 公式の問い合わせ先電話番号が +86（中国、0531 は済南の市外局番）であることによる（本社所在地の明記は公式ページで確認できず）。価格は国内販売店・メーカーとも非公開（日本向け）。溶接厚は国内販売店の仕様表の値（メーカーの英語ページ・データでは材料別の厚さ欄に同値、Air シリーズは本文で「4mm penetration」とも表現）で、板厚タグは最大値までの範囲を当てはめた。 / 2026-10-14 調査: ワイヤー供給の根拠「Bodorカタログ構成品に「wire feeder」を記載」; Pro 1500 カタログ（Bodor作成「UPD20250703」、英国販売店 Wasp Supplies のサイトに掲載のPDF）の Machine Parameter に Components: Handheld welding head, laser welding power source, wire feeder。ノズル表にワイヤ径0.8〜2.0mm。bodor.com の製品ページ本体にはワイヤの記載なし。冷却はメーカーが Self-cooling（コンプレッサー＋冷媒、水タンク無し）、国内販売店アイムSSKは「冷媒冷却」と表記し、空冷・水冷のどちらとも書いていないため null。コア径の記載なし。URL 200確認。 / 2026-10-16 調査（国内サポート）: 国内での修理の明記なし。出典は英語（Bodor 公式ニュース 2024-11-21「About Bodor Japan」。jp 版も同じ英文）。原文: network of professional agents in major cities like Tokyo, Osaka, Nagoya … ensuring prompt on-si / 2026-10-16 調査（冷却）: 『本体のサイズが小さく、軽量で内蔵水タンクが不要です』→ 空冷（チラー・水を使わない）",
     "origin": {
       "hq": "中国（山東省済南市）",
       "hq_url": "https://www.bodor.com/en/news/official_announcement.html",
@@ -5574,7 +5662,7 @@
     },
     "wire_feed": "標準",
     "fiber_core_um": null,
-    "cooling": null
+    "cooling": "空冷"
   },
   {
     "id": "p250",
@@ -5640,7 +5728,7 @@
       "cooling": "https://bodor.com/en/laser-welding-machine/handheld-laser-welding-machine/Air1200.html"
     },
     "is_published": true,
-    "notes": "Metoree の候補は Welder 1500 Pro。同じ国内販売店が掲載する空冷の主力として採用。重量はメーカー43kg・国内販売店42kgで不一致。電源はメーカー100〜240V、国内販売店200〜240V。波長は公式に記載なし。画像は webp 形式。country は Bodor 公式の問い合わせ先電話番号が +86（中国、0531 は済南の市外局番）であることによる（本社所在地の明記は公式ページで確認できず）。価格は国内販売店・メーカーとも非公開（日本向け）。溶接厚は国内販売店の仕様表の値（メーカーの英語ページ・データでは材料別の厚さ欄に同値、Air シリーズは本文で「4mm penetration」とも表現）で、板厚タグは最大値までの範囲を当てはめた。 / 2026-10-14 調査: ワイヤー供給の根拠「Bodorカタログ構成品に「wire feeder」を記載」; Air Series カタログ（Bodor作成、Wasp Supplies掲載PDF）の Components に wire feeder。冷却はメーカー製品ページ「Innovative Air Cooling Technology」（カタログ表は Self-cooling、相変化の冷却媒体も併用と説明）、国内販売店アイムSSK https://ssk-net.jp/brandnew/air_series.html は「空冷冷却」。コア径の記載なし。URL 200確認。",
+    "notes": "Metoree の候補は Welder 1500 Pro。同じ国内販売店が掲載する空冷の主力として採用。重量はメーカー43kg・国内販売店42kgで不一致。電源はメーカー100〜240V、国内販売店200〜240V。波長は公式に記載なし。画像は webp 形式。country は Bodor 公式の問い合わせ先電話番号が +86（中国、0531 は済南の市外局番）であることによる（本社所在地の明記は公式ページで確認できず）。価格は国内販売店・メーカーとも非公開（日本向け）。溶接厚は国内販売店の仕様表の値（メーカーの英語ページ・データでは材料別の厚さ欄に同値、Air シリーズは本文で「4mm penetration」とも表現）で、板厚タグは最大値までの範囲を当てはめた。 / 2026-10-14 調査: ワイヤー供給の根拠「Bodorカタログ構成品に「wire feeder」を記載」; Air Series カタログ（Bodor作成、Wasp Supplies掲載PDF）の Components に wire feeder。冷却はメーカー製品ページ「Innovative Air Cooling Technology」（カタログ表は Self-cooling、相変化の冷却媒体も併用と説明）、国内販売店アイムSSK https://ssk-net.jp/brandnew/air_series.html は「空冷冷却」。コア径の記載なし。URL 200確認。 / 2026-10-16 調査（国内サポート）: 国内での修理の明記なし。出典は英語（Bodor 公式ニュース 2024-11-21「About Bodor Japan」。jp 版も同じ英文）。原文: network of professional agents in major cities like Tokyo, Osaka, Nagoya … ensuring prompt on-si",
     "origin": {
       "hq": "中国（山東省済南市）",
       "hq_url": "https://www.bodor.com/en/news/official_announcement.html",
@@ -6232,7 +6320,7 @@
       "cooling": "https://www.accteklaser.com/product/portable-air-cooled-laser-welding-machine/"
     },
     "is_published": true,
-    "notes": "国内代理店は確認できず（metree には済南 AccTek 機械有限公司が自社で登録）。公式サイトの表示価格は US$4,200〜6,500（AKH-1500/2000 の幅。送料・関税・国内での保守は含まれない）。円換算は為替次第のため価格帯タグは付けない。型番の AKH-1500 は同社の水冷式ハンドヘルド（AKH-1500/2000/3000/6000）でも使われているため、model_slug を akh-1500-air とした（name は公式表記の AKH-1500 のまま。表示時は「ポータブル空冷式」と添えると区別しやすい）。ページ上部の概要では溶接ヘッドを Au3tech、仕様表では Qilin と記載（食い違い）。発振器は Max / Rlaser、電源 380V/220V 50/60Hz、作業環境10〜40℃・湿度5〜95%。初心者向けの明記はない（FAQ・レビューに習得が早い旨の記述はあるが skill タグは付けない） / 2026-10-14 調査: 仕様表「Cooling Type: Air Cooling」。ワイヤ送給装置の記載なし（Optional Configuration はダブルウォブルヘッド・ヒューム集塵機・ポジショナー・窒素発生器のみ。比較表に一般論として「filler can be added if required」）。コア径の記載なし。URL 200確認。",
+    "notes": "国内代理店は確認できず（metree には済南 AccTek 機械有限公司が自社で登録）。公式サイトの表示価格は US$4,200〜6,500（AKH-1500/2000 の幅。送料・関税・国内での保守は含まれない）。円換算は為替次第のため価格帯タグは付けない。型番の AKH-1500 は同社の水冷式ハンドヘルド（AKH-1500/2000/3000/6000）でも使われているため、model_slug を akh-1500-air とした（name は公式表記の AKH-1500 のまま。表示時は「ポータブル空冷式」と添えると区別しやすい）。ページ上部の概要では溶接ヘッドを Au3tech、仕様表では Qilin と記載（食い違い）。発振器は Max / Rlaser、電源 380V/220V 50/60Hz、作業環境10〜40℃・湿度5〜95%。初心者向けの明記はない（FAQ・レビューに習得が早い旨の記述はあるが skill タグは付けない） / 2026-10-14 調査: 仕様表「Cooling Type: Air Cooling」。ワイヤ送給装置の記載なし（Optional Configuration はダブルウォブルヘッド・ヒューム集塵機・ポジショナー・窒素発生器のみ。比較表に一般論として「filler can be added if required」）。コア径の記載なし。URL 200確認。 / 2026-10-16 調査（国内サポート）: 国内での修理の明記なし。トップページの「グローバルアフターセールス」の記述（障害の原因を検出し24時間以内に解決策を策定）。日本国内での修理は記載なし。製品ページとサービス詳細ページはサーバーが 502／タイムアウトで読めなかった（ボット対策の回避はしていない）。国内修理として表示するなら null が無難",
     "origin": {
       "hq": "中国（山東省済南市）",
       "hq_url": "https://www.accteklaser.com/about/",
@@ -6500,7 +6588,7 @@
       "cooling": "https://www.nihonwelding.co.jp/1000cw.html"
     },
     "is_published": true,
-    "notes": "候補一覧の「CW発振ファイバーレーザー溶接機」に当たる機種。価格は非公開。画像は公式の製品紹介画像（本体写真に機種名・説明文が入った画像で、CMYKのJPEG）。最大消費電力約3.5kW、チラー定格消費電力1.7/2.2kVA。使用環境温度10〜40℃。低電力契約で3相200Vを使っている場合は電灯契約の変更や配線工事が必要になる場合があると記載。会社概要の主な事業内容は「YAGレーザー溶接・切断機の製造及び販売」（本社：東京都大田区）。製造国の明記はないため country は本社国（協会記事では製造国 日本） / 2026-10-14 調査: ワイヤー供給の根拠「製品画像でワイヤ送給装置WS-5に「オプション」表示」; 製品画像（1000 imagemap.jpg）の「オプション」マーク位置のリンク先が「ワイヤ送給装置WS-5」画像（https://www.nihonwelding.co.jp/ws-5.jpg、「WS-5を組合せて使用する事で…肉盛り溶接ができます」）。仕様表「冷却方式 水冷」「水冷(チラー装置による)」。光ファイバーは「SI型」とのみ記載、コア径なし。ページは Shift_JIS。URL 200確認。",
+    "notes": "候補一覧の「CW発振ファイバーレーザー溶接機」に当たる機種。価格は非公開。画像は公式の製品紹介画像（本体写真に機種名・説明文が入った画像で、CMYKのJPEG）。最大消費電力約3.5kW、チラー定格消費電力1.7/2.2kVA。使用環境温度10〜40℃。低電力契約で3相200Vを使っている場合は電灯契約の変更や配線工事が必要になる場合があると記載。会社概要の主な事業内容は「YAGレーザー溶接・切断機の製造及び販売」（本社：東京都大田区）。製造国の明記はないため country は本社国（協会記事では製造国 日本） / 2026-10-14 調査: ワイヤー供給の根拠「製品画像でワイヤ送給装置WS-5に「オプション」表示」; 製品画像（1000 imagemap.jpg）の「オプション」マーク位置のリンク先が「ワイヤ送給装置WS-5」画像（https://www.nihonwelding.co.jp/ws-5.jpg、「WS-5を組合せて使用する事で…肉盛り溶接ができます」）。仕様表「冷却方式 水冷」「水冷(チラー装置による)」。光ファイバーは「SI型」とのみ記載、コア径なし。ページは Shift_JIS。URL 200確認。 / 2026-10-16 調査（国内サポート）: 国内での修理の明記なし。製品ページ（仕様表・製品画像）と会社概要に修理・保守・保証の記載なし。あるのは訪問デモ（実演カー）の案内と、旧プラズマ機の部品販売終了のお知らせのみ",
     "origin": {
       "hq": "日本（東京都大田区）",
       "hq_url": "https://www.nihonwelding.co.jp/profile.html"
@@ -6578,7 +6666,7 @@
       "cooling": "https://www.nihonwelding.co.jp/1200x.html"
     },
     "is_published": true,
-    "notes": "同社のファイバー機は FBL-1000CW と FBL-1200X の2機種（製品一覧 2026年版）。価格は非公開。画像は公式の製品紹介画像（本体写真に機種名・説明文が入った画像で、CMYKのJPEG）。最大消費電力約3.8kW。ワイヤースプールは付属しない。skill の「未経験可」はウエルペンレーザーシリーズ全体の説明（TIG溶接のような熟練を必要としません）にもとづく。製造国の明記はないため country は本社国（東京都大田区） / 2026-10-14 調査: ワイヤー供給の根拠「仕様表にワイヤー送給装置（φ0.8〜1.6mm、DC24V給電）の項目」; 仕様表にワイヤー送給装置（H420×W240×D560mm・12kg・適応ワイヤー径φ0.8〜1.6mm）。「ワイヤースプールは付属していません」。標準付属品欄に送給装置は無く、標準/オプションの明記なし。冷却方式「空冷」。コア径の記載なし。URL 200確認。",
+    "notes": "同社のファイバー機は FBL-1000CW と FBL-1200X の2機種（製品一覧 2026年版）。価格は非公開。画像は公式の製品紹介画像（本体写真に機種名・説明文が入った画像で、CMYKのJPEG）。最大消費電力約3.8kW。ワイヤースプールは付属しない。skill の「未経験可」はウエルペンレーザーシリーズ全体の説明（TIG溶接のような熟練を必要としません）にもとづく。製造国の明記はないため country は本社国（東京都大田区） / 2026-10-14 調査: ワイヤー供給の根拠「仕様表にワイヤー送給装置（φ0.8〜1.6mm、DC24V給電）の項目」; 仕様表にワイヤー送給装置（H420×W240×D560mm・12kg・適応ワイヤー径φ0.8〜1.6mm）。「ワイヤースプールは付属していません」。標準付属品欄に送給装置は無く、標準/オプションの明記なし。冷却方式「空冷」。コア径の記載なし。URL 200確認。 / 2026-10-16 調査（国内サポート）: 国内での修理の明記なし。製品ページ（仕様表・製品画像）と会社概要に修理・保守・保証の記載なし。あるのは訪問デモ（実演カー）の案内と、旧プラズマ機の部品販売終了のお知らせのみ",
     "origin": {
       "hq": "日本（東京都大田区）",
       "hq_url": "https://www.nihonwelding.co.jp/profile.html"
@@ -6645,10 +6733,12 @@
       "cooling": "https://www.shibuya.co.jp/articles/product/ma_lwm_02.html"
     },
     "is_published": true,
-    "notes": "現行の公式製品ページ（2026年のサイト改装後）には手持ち（ハンディ）である旨の記載がない。改装前の公式ページ（旧パス /cutting/las_fiber_1500SH.html は現在404。sources.method の Wayback Machine 2026-05-11 保存版）には同ページ内に「ハンディトーチ（オプション）：板金溶接用手持ち型レーザ溶接機…薄板でも熱影響の少ない加工が可能…アルミも加工できます」「時間差分岐に対応しており、1台でハンディトーチ、もう1台で切断用加工ヘッド」とあり、method・material・use はこの記載にもとづく（ハンディトーチは標準ではなくオプション）。協会記事では澁谷工業のファイバーハンドのラインナップを500W/1000W/1500W（スイング）と記載しているが、公式で現在確認できる機種は FWL1500SH のみ（旧 FWL500型のページは404）。対応板厚・対応材質の一覧・価格は非公開。本社は石川県金沢市 / 2026-10-14 調査: 仕様表「冷却方式 水冷（チラー）」（改装前ページの Wayback 版も同じ）。ワイヤ送給・コア径の記載なし。URL 200確認。",
+    "notes": "現行の公式製品ページ（2026年のサイト改装後）には手持ち（ハンディ）である旨の記載がない。改装前の公式ページ（旧パス /cutting/las_fiber_1500SH.html は現在404。sources.method の Wayback Machine 2026-05-11 保存版）には同ページ内に「ハンディトーチ（オプション）：板金溶接用手持ち型レーザ溶接機…薄板でも熱影響の少ない加工が可能…アルミも加工できます」「時間差分岐に対応しており、1台でハンディトーチ、もう1台で切断用加工ヘッド」とあり、method・material・use はこの記載にもとづく（ハンディトーチは標準ではなくオプション）。協会記事では澁谷工業のファイバーハンドのラインナップを500W/1000W/1500W（スイング）と記載しているが、公式で現在確認できる機種は FWL1500SH のみ（旧 FWL500型のページは404）。対応板厚・対応材質の一覧・価格は非公開。本社は石川県金沢市 / 2026-10-14 調査: 仕様表「冷却方式 水冷（チラー）」（改装前ページの Wayback 版も同じ）。ワイヤ送給・コア径の記載なし。URL 200確認。 / 2026-10-16 調査（国内サポート）: 『営業・技術・サービス一体型のきめ細かなサポート体制』（https://www.shibuya.co.jp/articles/product/to_ss_01.html）",
     "origin": {
       "hq": "日本（石川県金沢市）",
-      "hq_url": "https://www.shibuya.co.jp/corporate/company-profile/"
+      "hq_url": "https://www.shibuya.co.jp/corporate/company-profile/",
+      "service": "メーカーが営業・技術・サービス一体型のサポート体制と説明（全社共通。レーザ溶接機の修理体制の明記なし）",
+      "service_url": "https://www.shibuya.co.jp/articles/product/to_ss_01.html"
     },
     "wire_feed": null,
     "fiber_core_um": null,
@@ -6988,8 +7078,15 @@
     "source_url": "https://alphalaser.eu/lasersystemeprodukte/mobile-offene-systeme/alflak.html",
     "source": "ALPHA LASER GmbH 公式サイト（ALFlak 製品ページ）",
     "tags": {
-      "use": [],
-      "material": [],
+      "use": [
+        "補修",
+        "自動化"
+      ],
+      "material": [
+        "鉄",
+        "ステンレス",
+        "アルミ"
+      ],
       "thickness": [],
       "environment": [],
       "price": [],
@@ -7025,10 +7122,15 @@
       "japan_distributor": "https://alphalaser.co.jp/seihin/alflak/",
       "image_url": "https://alphalaser.co.jp/seihin/alflak/",
       "wire_feed": "https://alphalaser.eu/lasersystemeprodukte/mobile-offene-systeme/alflak.html",
-      "cooling": "https://alphalaser.eu/lasersystemeprodukte/mobile-offene-systeme/alflak.html"
+      "cooling": "https://alphalaser.eu/lasersystemeprodukte/mobile-offene-systeme/alflak.html",
+      "tags.use": [
+        "https://alphalaser.eu/fileadmin/user_upload/downloads/ALFlak_Datenblatt_V1.1.pdf",
+        "https://alphalaser.eu/lasersystemeprodukte/mobile-offene-systeme/alflak.html"
+      ],
+      "tags.material": "https://alphalaser.eu/fileadmin/user_upload/downloads/ALFlak_Datenblatt_V1.1.pdf"
     },
     "is_published": true,
-    "notes": "ハンドヘルドではなく、双眼顕微鏡付きの長いアームを持つ自走式（キャタピラ）の移動式レーザー溶接システム（金型など向け）。対応材質・板厚・溶け込みの公表値なし。価格非公開。連続溶接長はメーカー本社サイトでは340mm、国内代理店のチラシ・製品ページでは500mmと記載が食い違う。移動範囲（X,Y,Z）は本社サイト340×330×370mm、国内代理店チラシ320×330×370mm、国内代理店製品ページ340×320×420mm。シリーズのファイバー版は300/450/600/900W（300W・450Wは後から出力倍増の改造が可能）。国内代理店 ALPHA LASER JAPAN株式会社（佐賀県鳥栖市、2018年1月から正規代理店）。 2026国際ウエルディングショーでは GALAXYホールディングス株式会社ブースに ALPHA LASER JAPAN㈱ が共同出展。 / 2026-10-14 調査: ワイヤー供給の根拠「メーカー:自動ワイヤ送給AL-DVを取付可能（技術付属品）」; メーカー独語ページ「automatische Drahtzufuhr (AL-DV) montierbar」、技術付属品に「Laserdrahtvorschubsystem AL-DV…0,2–1,6 mm」。国内代理店ALPHA LASER JAPANのチラシPDF・製品ページ（https://alphalaser.co.jp/seihin/alflak/）はオプション欄に「LAfet® ワイヤー送給システム」。冷却は「Externe Kühlung: Optik-Wasserkühlung und Sperrluft integriert」（国内チラシ「レンズ水冷搭載」）で、光学系の水冷であり装置全体の空冷/水冷の明記がないため null。コア径の記載なし。URL 200確認。",
+    "notes": "ハンドヘルドではなく、双眼顕微鏡付きの長いアームを持つ自走式（キャタピラ）の移動式レーザー溶接システム（金型など向け）。対応材質・板厚・溶け込みの公表値なし。価格非公開。連続溶接長はメーカー本社サイトでは340mm、国内代理店のチラシ・製品ページでは500mmと記載が食い違う。移動範囲（X,Y,Z）は本社サイト340×330×370mm、国内代理店チラシ320×330×370mm、国内代理店製品ページ340×320×420mm。シリーズのファイバー版は300/450/600/900W（300W・450Wは後から出力倍増の改造が可能）。国内代理店 ALPHA LASER JAPAN株式会社（佐賀県鳥栖市、2018年1月から正規代理店）。 2026国際ウエルディングショーでは GALAXYホールディングス株式会社ブースに ALPHA LASER JAPAN㈱ が共同出展。 / 2026-10-14 調査: ワイヤー供給の根拠「メーカー:自動ワイヤ送給AL-DVを取付可能（技術付属品）」; メーカー独語ページ「automatische Drahtzufuhr (AL-DV) montierbar」、技術付属品に「Laserdrahtvorschubsystem AL-DV…0,2–1,6 mm」。国内代理店ALPHA LASER JAPANのチラシPDF・製品ページ（https://alphalaser.co.jp/seihin/alflak/）はオプション欄に「LAfet® ワイヤー送給システム」。冷却は「Externe Kühlung: Optik-Wasserkühlung und Sperrluft integriert」（国内チラシ「レンズ水冷搭載」）で、光学系の水冷であり装置全体の空冷/水冷の明記がないため null。コア径の記載なし。URL 200確認。 / 2026-10-16 調査（空欄の補完）: use=補修・自動化（『Reparaturen und Änderungen ausführen』／『ideal zum programmierten Laserschweißen』／『oder automatisch geschweißt werden』）; material=鉄・ステンレス・アルミ（『Aluminium, Edelstahl und Formstähle』／『Aluminium, Edelstahl und Formstähle』／『Aluminium, Edelstahl und Formstähle』） / 2026-10-16 調査（冷却）: 本体の冷却方式は公式に記載なし。発振器の冷却方式はどの公式資料にもない。冷却の記載は「外部冷却」欄のみで、メーカーは「Optik-Wasserkühlung und Sperrluft integriert」（英語版 Integrated lens water cooli",
     "origin": {
       "hq": "ドイツ（バイエルン州プッフハイム）",
       "hq_url": "https://alphalaser.eu/rechtliches/impressum.html",
@@ -7392,7 +7494,11 @@
     "source_url": "https://dynalaserstech.com/product/dynalaser-m70-smart-handheld-laser-welding-machine/",
     "source": "Shenzhen Dynalasers Technology 公式サイト（製品ページ）",
     "tags": {
-      "use": [],
+      "use": [
+        "薄板接合",
+        "厚物",
+        "補修"
+      ],
       "material": [
         "鉄",
         "ステンレス",
@@ -7437,10 +7543,14 @@
       "image_url": "https://dynalaserstech.com/products/m-series/",
       "japanese_page": "https://dynalasers.jp/products/m-series/",
       "wire_feed": "https://dynalaserstech.com/product/dynalaser-m70-smart-handheld-laser-welding-machine/",
-      "cooling": "https://dynalaserstech.com/product/dynalaser-m70-smart-handheld-laser-welding-machine/"
+      "cooling": "https://dynalaserstech.com/product/dynalaser-m70-smart-handheld-laser-welding-machine/",
+      "tags.use": [
+        "https://dynalasers.jp/products/m-series/",
+        "https://dynalaserstech.com/products/m-series/"
+      ]
     },
     "is_published": true,
-    "notes": "動作モード 連続／スポット／パルス／Turbo。入力電源180–264VAC。価格は非公開（見積り）。波長は公式ページに記載なし。メーカーの日本語サイト dynalasers.jp（日本の電話・FAX番号あり）は M シリーズを「主力シリーズ」と記載。M シリーズの国内販売店は確認できず（サンクス製作所は S30/S40/D50/D60/D70 を扱う）。同社の D シリーズ（D50P/D70P）は掲載中の YDL D50P/D70P と仕様が一致するため対象外としたが、M シリーズは筐体寸法（654×286×574mm、D は637×274×574mm）・重量が異なる別シリーズ。「初心者でもすぐ使える」旨の記載（150の簡易モード）あり。 本体重量は英語サイトと日本語サイトで食い違う（日本語サイトは50kg未満、冷却方式を「相変化冷却」、作業モードを全機種 Continuous/Pulse/Spot/Turbo と記載）。日本語サイトFAQに「初心者でも使用できる（安全教育・保護具は必要）」との記載。 / 2026-10-14 調査: ワイヤー供給の根拠「「laser source, welding gun, wire feeder…」一体型設計」; Key Features「Integrated design with laser source, welding gun, wire feeder, and gas system」。仕様「Cooling Method: Forced Air Cooling」（日本語サイト dynalasers.jp は「相変化冷却構造、外部チラー不要」と表記）。コア径の記載なし。URL 200確認。",
+    "notes": "動作モード 連続／スポット／パルス／Turbo。入力電源180–264VAC。価格は非公開（見積り）。波長は公式ページに記載なし。メーカーの日本語サイト dynalasers.jp（日本の電話・FAX番号あり）は M シリーズを「主力シリーズ」と記載。M シリーズの国内販売店は確認できず（サンクス製作所は S30/S40/D50/D60/D70 を扱う）。同社の D シリーズ（D50P/D70P）は掲載中の YDL D50P/D70P と仕様が一致するため対象外としたが、M シリーズは筐体寸法（654×286×574mm、D は637×274×574mm）・重量が異なる別シリーズ。「初心者でもすぐ使える」旨の記載（150の簡易モード）あり。 本体重量は英語サイトと日本語サイトで食い違う（日本語サイトは50kg未満、冷却方式を「相変化冷却」、作業モードを全機種 Continuous/Pulse/Spot/Turbo と記載）。日本語サイトFAQに「初心者でも使用できる（安全教育・保護具は必要）」との記載。 / 2026-10-14 調査: ワイヤー供給の根拠「「laser source, welding gun, wire feeder…」一体型設計」; Key Features「Integrated design with laser source, welding gun, wire feeder, and gas system」。仕様「Cooling Method: Forced Air Cooling」（日本語サイト dynalasers.jp は「相変化冷却構造、外部チラー不要」と表記）。コア径の記載なし。URL 200確認。 / 2026-10-16 調査（空欄の補完）: use=薄板接合・厚物・補修（『it handles thick materials』／『厚めのステンレス 板金 加工』／『Supports thin metal welding』／『薄板金属の家具、フレーム、装飾部品』／『機械部品の溶接、補修、メンテナンスに使用できます』） / 2026-10-16 調査（国内サポート）: 国内での修理の明記なし。サービスページの「保証サービス」欄の箇条書き。オンサイトを日本国内で行うとは書いていない（同ページは各国共通の内容とみられる）。お問い合わせページの会社住所は千葉県柏市富里、電話 047-196-7669。返品ポリシーに「保証条件に基づき、修理、交換、または返金」とある",
     "origin": {
       "hq": "中国（広東省深圳市）",
       "hq_url": "https://dynalasers.jp/%e7%a7%81%e3%81%9f%e3%81%a1%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6/",
@@ -7468,7 +7578,10 @@
     "source_url": "https://dynalaserstech.com/product/dynalasers-m50-portable-4-in-1-smart-handheld-laser-welder/",
     "source": "Shenzhen Dynalasers Technology 公式サイト（製品ページ）",
     "tags": {
-      "use": [],
+      "use": [
+        "薄板接合",
+        "補修"
+      ],
       "material": [
         "鉄",
         "ステンレス",
@@ -7512,10 +7625,14 @@
       "image_url": "https://dynalaserstech.com/products/m-series/",
       "japanese_page": "https://dynalasers.jp/products/m-series/",
       "wire_feed": "https://dynalaserstech.com/product/dynalasers-m50-portable-4-in-1-smart-handheld-laser-welder/",
-      "cooling": "https://dynalaserstech.com/product/dynalasers-m50-portable-4-in-1-smart-handheld-laser-welder/"
+      "cooling": "https://dynalaserstech.com/product/dynalasers-m50-portable-4-in-1-smart-handheld-laser-welder/",
+      "tags.use": [
+        "https://dynalasers.jp/products/m-series/",
+        "https://dynalaserstech.com/products/m-series/"
+      ]
     },
     "is_published": true,
-    "notes": "動作モード 連続／スポット／パルス。入力電源180–264VAC。価格は非公開（見積り）。波長は公式ページに記載なし。メーカーの日本語サイト dynalasers.jp（日本の電話・FAX番号あり）は M シリーズを「主力シリーズ」と記載。M シリーズの国内販売店は確認できず（サンクス製作所は S30/S40/D50/D60/D70 を扱う）。同社の D シリーズ（D50P/D70P）は掲載中の YDL D50P/D70P と仕様が一致するため対象外としたが、M シリーズは筐体寸法（654×286×574mm、D は637×274×574mm）・重量が異なる別シリーズ。「初心者でもすぐ使える」旨の記載（150の簡易モード）あり。 本体重量は英語サイトと日本語サイトで食い違う（日本語サイトは46kg未満、冷却方式を「相変化冷却」、作業モードを全機種 Continuous/Pulse/Spot/Turbo と記載）。日本語サイトFAQに「初心者でも使用できる（安全教育・保護具は必要）」との記載。 / 2026-10-14 調査: ワイヤー供給の根拠「「laser source, welding gun, wire feeder…」一体型設計」; p272と同じ根拠（M50）。URL 200確認。",
+    "notes": "動作モード 連続／スポット／パルス。入力電源180–264VAC。価格は非公開（見積り）。波長は公式ページに記載なし。メーカーの日本語サイト dynalasers.jp（日本の電話・FAX番号あり）は M シリーズを「主力シリーズ」と記載。M シリーズの国内販売店は確認できず（サンクス製作所は S30/S40/D50/D60/D70 を扱う）。同社の D シリーズ（D50P/D70P）は掲載中の YDL D50P/D70P と仕様が一致するため対象外としたが、M シリーズは筐体寸法（654×286×574mm、D は637×274×574mm）・重量が異なる別シリーズ。「初心者でもすぐ使える」旨の記載（150の簡易モード）あり。 本体重量は英語サイトと日本語サイトで食い違う（日本語サイトは46kg未満、冷却方式を「相変化冷却」、作業モードを全機種 Continuous/Pulse/Spot/Turbo と記載）。日本語サイトFAQに「初心者でも使用できる（安全教育・保護具は必要）」との記載。 / 2026-10-14 調査: ワイヤー供給の根拠「「laser source, welding gun, wire feeder…」一体型設計」; p272と同じ根拠（M50）。URL 200確認。 / 2026-10-16 調査（空欄の補完）: use=薄板接合・補修（『板金 部品の補修、溶接前のレーザー 洗浄にも使いやすく』／『機械部品の溶接、補修、メンテナンスに使用できます』／『Supports thin metal welding』／『薄板金属の家具、フレーム、装飾部品』） / 2026-10-16 調査（国内サポート）: 国内での修理の明記なし。サービスページの「保証サービス」欄の箇条書き。オンサイトを日本国内で行うとは書いていない（同ページは各国共通の内容とみられる）。お問い合わせページの会社住所は千葉県柏市富里、電話 047-196-7669。返品ポリシーに「保証条件に基づき、修理、交換、または返金」とある",
     "origin": {
       "hq": "中国（広東省深圳市）",
       "hq_url": "https://dynalasers.jp/%e7%a7%81%e3%81%9f%e3%81%a1%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6/",

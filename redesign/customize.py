@@ -121,7 +121,7 @@ block('SEC-121', f'''
                     <li>
                       <p class="sec121__col-title">使う場所</p>
                       {L("国内で修理・サポート", "国内での修理・保守を公式に記載している機種です。", "/lineup/?support=国内で修理・サポート")}
-                      {L("ライン・ロボットに組み込む", "自動化への対応を公表している機種です。", "/lineup/?cat=line")}
+                      {L("ライン・ロボットに組み込む", "自動化への対応を公表している機種です。", q("use", "自動化"))}
                     </li>
                     <li>
                       <p class="sec121__col-title">予算</p>
@@ -149,9 +149,9 @@ block('SEC-121', f'''
                 </div>
                 <div class="sec121__panel" role="tabpanel" hidden data-sp-hidden>
                   <ul class="sec121__grid">
-                    <li><p class="sec121__col-title">ハンドヘルド</p>{L("手で持って溶接する", "掲載機種の大半がこの方式です。", "/lineup/?cat=handheld")}</li>
-                    <li><p class="sec121__col-title">据置・専用機</p>{L("決まった位置で溶接する", "真空チャンバーなどの専用機。", "/lineup/?cat=fixed")}</li>
-                    <li><p class="sec121__col-title">ライン組込</p>{L("ロボット・ラインで使う", "自動化に組み込める機種。", "/lineup/?cat=line")}</li>
+                    <li><p class="sec121__col-title">空冷</p>{L("チラーを使わない", "チラー（冷却水の装置）を使わない機種です。", "/lineup/?cat=air")}</li>
+                    <li><p class="sec121__col-title">水冷</p>{L("チラーで冷やす", "チラー（冷却水の装置）で冷やす機種です。", "/lineup/?cat=water")}</li>
+                    <li><p class="sec121__col-title">ロボット・自動化</p>{L("ロボット・ラインで使う", "自動化への対応を公表している機種です。", q("use", "自動化"))}</li>
                   </ul>
                 </div>
                 <div class="sec121__panel" role="tabpanel" hidden data-sp-hidden>

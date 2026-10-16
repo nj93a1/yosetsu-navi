@@ -61,10 +61,11 @@ export function materialCriteria(config, product) {
   return out;
 }
 
-/** 冷却方式。products.cooling、無ければ可搬性の記載から（「空冷」「水冷」「チラー」）。判定できなければ null */
+/** 冷却方式。products.cooling、無ければ可搬性の記載から（「空冷」「水冷」「チラー」）。判定できなければ null。
+ *  「レンズ水冷」はレンズの冷却で、本体（発振器）の冷却方式ではないので数えない */
 export function coolingOf(product) {
   if (product.cooling) return product.cooling;
-  const t = String(product.portability || "");
+  const t = String(product.portability || "").replace(/レンズ水冷/g, "");
   const air = /空冷/.test(t), water = /水冷|チラー/.test(t) && !/チラー不要/.test(t);
   if (air && !water) return "空冷";
   if (water && !air) return "水冷";

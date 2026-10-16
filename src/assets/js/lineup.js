@@ -1,16 +1,19 @@
-// 機種一覧: 種類タブ・キーワード検索・用途/素材/板厚/価格帯の絞り込み（URL と同期）
+// 機種一覧: 冷却方式のタブ・キーワード検索・用途/素材/板厚/価格帯の絞り込み（URL と同期）
 import { icon, productPhoto } from "./partials.js";
-import { productSlug, thicknessGuide, materialCriteria } from "./scoring.js";
+import { productSlug, thicknessGuide, materialCriteria, coolingOf } from "./scoring.js";
 
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
-// 可搬性からカテゴリを決める（商品データを変えずに絞り込めるようにする）
+// タブは冷却方式で分ける（2026-10-16）。掲載機種はほぼすべてハンドヘルドなので、以前の「種類」タブ（ハンドヘルド・据置・ライン組込）は
+// 分ける意味が無かった。冷却方式は空冷・水冷がほぼ半々で、チラーの有無は設置場所・重さ・電源に関わる。冷却方式が非公開の機種は「すべて」にだけ出る
 export const CATEGORIES = [
   { id: "all", label: "すべて", test: () => true },
-  { id: "handheld", label: "ハンドヘルド", test: (p) => /ハンド/.test(p.method) || ["ハンドヘルド", "台車型"].includes(p.portability) },
-  { id: "fixed", label: "据置・専用機", test: (p) => /据置|真空|チャンバー/.test(p.method) || p.portability === "据置" },
-  { id: "line", label: "ライン組込", test: (p) => /ロボット|ライン|自動化/.test(p.method) || p.tags.environment.includes("ライン組込") || p.portability === "ライン組込" },
+  { id: "air", label: "空冷", test: (p) => coolingOf(p) === "空冷" },
+  { id: "water", label: "水冷", test: (p) => coolingOf(p) === "水冷" },
 ];
+const CATEGORY_NOTE = ["空冷：チラー（冷却水の装置）を使わない機種", "水冷：チラーで冷やす機種"];
+// 以前の種類タブの URL（?cat=handheld など）は、近い絞り込みに置き換える
+const LEGACY_CAT = { line: { use: "自動化" } };
 
 // 絞り込みの軸（URL のパラメータ名＝key）。values は商品データ仕様のタグ語彙で、チップとして並べる順。
 // 公開機種に1件も無い値のチップは出さない（keepEmpty の価格帯だけは0件でも並べ、押せない見た目にする）。
@@ -19,7 +22,8 @@ export const CATEGORIES = [
 export const AXES = [
   { key: "use", label: "用途", tag: "use", values: ["薄板接合", "異材接合", "補修", "自動化"], names: { 自動化: "ロボット・自動化" } },
   // ワイヤー供給: 標準装備・オプション・対応のいずれかを公式に記載している機種
-  { key: "wire", label: "ワイヤー供給", values: ["ワイヤー供給できる"], get: (p) => (p.wire_feed ? ["ワイヤー供給できる"] : []) },
+  { key: "wire", label: "ワイヤー供給", values: ["ワイヤー供給できる", "標準装備"], names: { 標準装備: "ワイヤー送給装置が標準装備" },
+    get: (p) => (p.wire_feed ? ["ワイヤー供給できる", ...(p.wire_feed === "標準" ? ["標準装備"] : [])] : []) },
   // 素材: アルミ・銅はコア径/出力を基準（diagnosis.json の materialCriteria）に絞り込む。ほかはメーカーの公表値
   { key: "material", label: "素材", tag: "material", values: ["鉄", "ステンレス", "アルミ", "銅", "チタン", "マグネシウム"],
     names: { アルミ: "アルミ（コア径/出力を基準）", 銅: "銅（コア径/出力を基準）" },
@@ -30,8 +34,11 @@ export const AXES = [
     names: { 薄板: "薄板（3.0mm未満）", 中板: "中板（3.0〜6.0mm未満）", 厚板: "厚板（6.0mm以上）" },
     note: (c) => c.thicknessGuide && `${c.thicknessGuide.label}です（${c.thicknessGuide.classes.map((x) => `${x.name} ${x.minW ? `${x.minW.toLocaleString()}W` : ""}${x.maxW ? `〜${(x.maxW + 1).toLocaleString()}W未満` : "以上"}`).join("／")}）。${c.thicknessGuide.note}`,
     get: (p) => (p._guide ? [p._guide] : []) },
-  { key: "thickness", label: "板厚（メーカーの公表値）", tag: "thickness", values: ["0.5mm未満", "0.5〜3mm", "3〜6mm", "6mm以上"], names: { "0.5mm未満": "極薄（0.5mm未満）", "0.5〜3mm": "薄板（0.5〜3mm）", "3〜6mm": "中板（3〜6mm）", "6mm以上": "厚板（6mm以上）" } },
-  { key: "price", label: "価格帯", tag: "price", values: ["100万円未満", "100〜200万円", "200〜400万円", "400〜600万円", "600万円以上"], keepEmpty: true },
+  // メーカーの公表値は数字だけで出す（上の「板厚の目安」の薄板・中板・厚板と名前が重ならないように）
+  { key: "thickness", label: "対応板厚（メーカーの公表値）", tag: "thickness", values: ["0.5mm未満", "0.5〜3mm", "3〜6mm", "6mm以上"],
+    note: "メーカーが対応板厚を公表している機種だけが対象です。溶け込み深さだけを公表している機種は含みません。" },
+  { key: "price", label: "価格帯", tag: "price", values: ["100万円未満", "100〜200万円", "200〜400万円", "400〜600万円", "600万円以上"], keepEmpty: true,
+    note: "価格帯を公開している機種だけが対象です（運営元の取り扱い機は「お問い合わせ」です）。" },
   { key: "skill", label: "使う人", tag: "skill", values: [], names: { 未経験可: "未経験から使える" } },
   { key: "env", label: "使う場所", tag: "environment", values: [] },
   // 国内での修理・保守を、メーカーか国内代理店の公式サイトが明記している機種（商品データの origin.service）
@@ -66,6 +73,7 @@ export function parseState(params) {
   const cat = params.get("cat");
   const st = { cat: CATEGORIES.some((c) => c.id === cat) ? cat : "all", q: (params.get("q") || "").trim() };
   for (const a of AXES) st[a.key] = new Set(list(a.key));
+  for (const [k, v] of Object.entries(LEGACY_CAT[cat] || {})) st[k].add(v);
   return st;
 }
 
@@ -77,11 +85,15 @@ export function toParams(st) {
   return params;
 }
 
+/** キーワード検索の対象: 機種名・メーカー名・方式・スラッグに加え、製造元・国内の販売店の名前（統合した販売店名でも見つかるように） */
+const searchText = (p) => [p.name, p.maker_name, p.method, p.maker_slug, p.model_slug,
+  ...(p.origin?.makers || []).map((m) => m.name), ...(p.origin?.sellers || []).map((x) => x.name)].map(normalize).join("|");
+
 export function filterProducts(products, st) {
   const cat = CATEGORIES.find((c) => c.id === st.cat) || CATEGORIES[0];
   const q = normalize(st.q);
   return products.filter((p) => cat.test(p)
-    && (!q || [p.name, p.maker_name, p.method, p.maker_slug, p.model_slug].map(normalize).join("|").includes(q))
+    && (!q || searchText(p).includes(q))
     && AXES.every((a) => !st[a.key].size || tagsOf(p, a).some((t) => st[a.key].has(t))));
 }
 
@@ -141,11 +153,12 @@ export async function mountLineup(root) {
   // チップに出す値: 公開機種にある値だけ（価格帯は全部）
   const groups = AXES.map((a) => ({ ...a, values: a.keepEmpty ? a.values : a.values.filter((v) => products.some((p) => tagsOf(p, a).includes(v))) }))
     .filter((a) => a.values.length);
-  // 種類タブ: 条件なしで0件の種類は出さない（URL の ?cat= で選ばれたときだけ、選んだ状態で出して外せるようにする）
+  // 冷却方式のタブ: 条件なしで0件のタブは出さない（URL の ?cat= で選ばれたときだけ、選んだ状態で出して外せるようにする）
   const hasAny = Object.fromEntries(CATEGORIES.map((c) => [c.id, c.id === "all" || products.some(c.test)]));
 
   root.innerHTML = `
-    <ul class="tabs" role="tablist" aria-label="機種の種類">${CATEGORIES.map((c) => `<li role="presentation" data-tab="${c.id}"><button role="tab" type="button" data-cat="${c.id}" aria-selected="${c.id === st.cat}" aria-controls="lineupPanel">${c.label}<span class="tabs__n"></span></button></li>`).join("")}</ul>
+    <ul class="tabs" role="tablist" aria-label="冷却方式">${CATEGORIES.map((c) => `<li role="presentation" data-tab="${c.id}"><button role="tab" type="button" data-cat="${c.id}" aria-selected="${c.id === st.cat}" aria-controls="lineupPanel">${c.label}<span class="tabs__n"></span></button></li>`).join("")}</ul>
+    <p class="tabs__note">${CATEGORY_NOTE.map(esc).join("<br>")}</p>
     <form class="search" role="search" id="searchForm">
       <label class="sr" for="q">機種名・メーカー名で探す</label>
       <input id="q" type="search" placeholder="機種名・メーカー名で探す" autocomplete="off" enterkeyhint="search">
@@ -199,7 +212,7 @@ export async function mountLineup(root) {
 
     // 絞り込み中の条件（URL で渡されたものも含めて全部）を、外せるチップで出す
     const items = [];
-    if (st.cat !== "all") items.push({ key: "cat", v: st.cat, text: `種類：${CATEGORIES.find((c) => c.id === st.cat).label}` });
+    if (st.cat !== "all") items.push({ key: "cat", v: st.cat, text: `冷却方式：${CATEGORIES.find((c) => c.id === st.cat).label}` });
     if (st.q) items.push({ key: "q", v: "", text: `検索：${st.q}` });
     for (const a of AXES) for (const v of st[a.key]) items.push({ key: a.key, v, text: `${a.label}：${valueName(a, v)}` });
     const picked = groups.reduce((n, a) => n + a.values.filter((v) => st[a.key].has(v)).length, 0);

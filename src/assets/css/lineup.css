@@ -1,10 +1,10 @@
 /* ==========================================================
    機種一覧ページ専用（style.css の後に読み込む）
-   並び: 種類タブ → 検索 → 絞り込み（折りたたみ）→ 絞り込み中のチップ → 件数 → 一覧
+   並び: 冷却方式のタブ → 検索 → 絞り込み（折りたたみ）→ 絞り込み中のチップ → 件数 → 一覧
    ========================================================== */
 .sec-head__eyebrow { font-size: 16px; }
 
-/* 種類タブ。件数を添え、0件のタブは押せない見た目にする */
+/* 冷却方式のタブ。件数を添え、0件のタブは押せない見た目にする */
 #lineup .tabs { gap: 12px; margin: 0 0 16px; }
 #lineup .tabs button { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0 8px; font-size: 18px; }
 .tabs__n { font-size: 16px; font-weight: 400; }
@@ -12,6 +12,7 @@
 /* 条件なしで0件の種類のタブは出さない（li は display:contents なので hidden を明示する）。
    出ているタブの数で列を決め、スマホで奇数のときは「すべて」を1段まるごと使う */
 #lineup .tabs li[hidden] { display: none; }
+.tabs__note { margin: -4px 0 16px; font-size: 16px; color: var(--c-sub); }
 @media (min-width: 600px) { #lineup .tabs { grid-template-columns: repeat(var(--tabs-n, 4), minmax(0, 1fr)); } }
 @media (max-width: 599px) { #lineup .tabs--odd [data-cat="all"] { grid-column: 1 / -1; } }
 
