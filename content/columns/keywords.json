@@ -1,0 +1,84 @@
+{
+  "_comment": "記事にするサジェストワード（Google の検索候補）。2026-10-16 に「レーザー溶接機」「レーザー溶接機 価格」「ファイバーレーザー溶接機」「ハンディレーザー溶接機」「溶接機 価格」などの候補から、商品名・他社ブランド名・関係の薄いもの（TIG・ジュエリー等）を除いて選んだ。上から順に書く。status: todo（未着手）/ draft（承認待ち）/ published（公開）",
+  "collected": "2026-10-16",
+  "words": [
+    {
+      "keyword": "レーザー溶接機 価格 相場",
+      "theme": "価格相場",
+      "path": "price-guide",
+      "status": "draft"
+    },
+    {
+      "keyword": "レーザー溶接機 ハンディ 価格",
+      "theme": "ハンディ型の価格",
+      "path": "handheld-price",
+      "status": "todo"
+    },
+    {
+      "keyword": "レーザー溶接機 日本製",
+      "theme": "日本製の選び方",
+      "path": "made-in-japan",
+      "status": "todo"
+    },
+    {
+      "keyword": "ファイバーレーザー溶接機 補助金",
+      "theme": "補助金",
+      "path": "subsidy",
+      "status": "todo"
+    },
+    {
+      "keyword": "レーザー溶接機 100v",
+      "theme": "100V で使えるか",
+      "path": "100v",
+      "status": "todo"
+    },
+    {
+      "keyword": "レーザー溶接機 家庭用",
+      "theme": "家庭用はあるか",
+      "path": "home-use",
+      "status": "todo"
+    },
+    {
+      "keyword": "ファイバーレーザー溶接機 アルミ",
+      "theme": "アルミの溶接",
+      "path": "aluminum",
+      "status": "todo"
+    },
+    {
+      "keyword": "ファイバーレーザー溶接機 ガス",
+      "theme": "シールドガス",
+      "path": "shield-gas",
+      "status": "todo"
+    },
+    {
+      "keyword": "ファイバーレーザー溶接機 レンタル",
+      "theme": "レンタル・デモ",
+      "path": "rental",
+      "status": "todo"
+    },
+    {
+      "keyword": "レーザー溶接 資格",
+      "theme": "資格と安全講習",
+      "path": "license",
+      "status": "todo"
+    },
+    {
+      "keyword": "レーザー溶接とは",
+      "theme": "レーザー溶接のしくみ",
+      "path": "what-is-laser-welding",
+      "status": "todo"
+    },
+    {
+      "keyword": "ファイバーレーザー溶接機 メーカー",
+      "theme": "メーカーの選び方",
+      "path": "makers",
+      "status": "todo"
+    },
+    {
+      "keyword": "中古 溶接機 価格",
+      "theme": "中古を買うときの注意",
+      "path": "used",
+      "status": "todo"
+    }
+  ]
+}

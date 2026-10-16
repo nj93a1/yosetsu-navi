@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "dev": "wrangler dev",
-    "build": "node scripts/build-seed.js",
+    "build": "node scripts/build-seed.js && node scripts/build-columns.js",
+    "columns:preview": "node scripts/build-columns.js --with-drafts",
     "deploy": "npm run build && wrangler deploy",
     "test": "node --test",
     "validate": "node scripts/build-seed.js --check",

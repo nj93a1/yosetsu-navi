@@ -28,4 +28,10 @@ document.getElementById("guide").innerHTML = GUIDES.map((g) => `
     <p class="guide__lead">${esc(g.lead)}</p>
     <ul class="guide__links">${g.links.map(([label, href, n]) => `<li><a href="${href}"><span>${esc(label)}${n != null ? `<b>${n}機種</b>` : ""}</span>${icon("chevron", "ico ico--chev")}</a></li>`).join("")}</ul>
   </li>`).join("");
+// コラム（content/columns → scripts/build-columns.js が作る一覧）。公開済みが1本以上あるときだけ出す
+const columns = await fetch("/data/columns.json").then((r) => (r.ok ? r.json() : [])).catch(() => []);
+if (columns.length) {
+  document.getElementById("columnList").innerHTML = columns.slice(0, 5).map((c) => `<li><a href="/columns/${encodeURIComponent(c.path)}/"><span class="pnav__label">${esc(c.title)}</span>${icon("chevron", "ico ico--chev")}</a></li>`).join("");
+  document.getElementById("columns").hidden = false;
+}
 if (location.hash) document.querySelector(location.hash)?.scrollIntoView();
