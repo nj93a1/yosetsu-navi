@@ -10,7 +10,7 @@
     "output_w": 500,
     "output_note": "定格出力（CW）",
     "portability": "本体 220kg（冷却水含まず）。チラー内蔵で移動しやすい",
-    "thickness_note": "対応板厚の上限は定めていません（出力が低くても、速度を落とせば厚い板も加工できます。運営元の回答）",
+    "thickness_note": "対応板厚の上限は定めていません。出力が低くても、速度を落とせば厚い板も加工できます。",
     "tags": {
       "use": [
         "薄板接合",
@@ -92,18 +92,6 @@
         "7m"
       ],
       [
-        "レーザ分類",
-        "クラス4（JIS C6802）"
-      ],
-      [
-        "パルス幅",
-        "ショート 0.0〜900.0ms／ロング 0.00〜99.99s／CW"
-      ],
-      [
-        "変調機能",
-        "20〜10,000Hz（矩形波）"
-      ],
-      [
         "入力電源",
         "単相AC200V ±10%、50/60Hz"
       ],
@@ -114,31 +102,25 @@
       [
         "トーチ",
         "スイング幅 0〜4mm、スイングスピード 250Hz、質量 約1.0kg"
-      ],
-      [
-        "使用環境",
-        "外気温 5〜30℃、湿度85%以下（結露なきこと）"
       ]
     ],
     "origin": {
       "hq": "日本（東京都江東区）",
       "hq_url": "https://uw-j.co.jp/company/",
       "made": "日本",
-      "made_basis": "運営元（ノースヒルズ溶接工業）への確認（2026年10月13日）",
-      "service": "UW JAPAN とノースヒルズ溶接工業が国内で修理・メンテナンスに対応（UW JAPAN は連絡の当日か翌日に全国対応、保証2年）",
-      "service_url": "https://uw-j.co.jp/support/",
+      "service": "あり",
       "makers": [
-        {
-          "name": "UW JAPAN株式会社",
-          "place": "東京都江東区",
-          "url": "https://uw-j.co.jp/company/",
-          "role": "製造"
-        },
         {
           "name": "ノースヒルズ溶接工業株式会社",
           "place": "大阪府東大阪市",
           "url": "https://nhillz.jp/company",
           "role": "国内共同開発・販売・修理"
+        },
+        {
+          "name": "UW JAPAN株式会社",
+          "place": "東京都江東区",
+          "url": "https://uw-j.co.jp/company/",
+          "role": "製造"
         }
       ],
       "sellers": [
@@ -148,7 +130,7 @@
         }
       ]
     },
-    "wire_feed": null,
+    "wire_feed": "オプション",
     "fiber_core_um": 14,
     "cooling": "水冷"
   },
@@ -163,7 +145,7 @@
     "output_w": 1000,
     "output_note": "定格出力（CW）",
     "portability": "本体 230kg（冷却水含まず）。チラー内蔵で移動しやすい",
-    "thickness_note": "対応板厚の上限は定めていません（出力が低くても、速度を落とせば厚い板も加工できます。運営元の回答）",
+    "thickness_note": "対応板厚の上限は定めていません。出力が低くても、速度を落とせば厚い板も加工できます。",
     "tags": {
       "use": [
         "薄板接合",
@@ -245,18 +227,6 @@
         "7m"
       ],
       [
-        "レーザ分類",
-        "クラス4（JIS C6802）"
-      ],
-      [
-        "パルス幅",
-        "ショート 0.0〜900.0ms／ロング 0.00〜99.99s／CW"
-      ],
-      [
-        "変調機能",
-        "20〜10,000Hz（矩形波）"
-      ],
-      [
         "入力電源",
         "単相AC200V ±10%、50/60Hz"
       ],
@@ -267,31 +237,25 @@
       [
         "トーチ",
         "スイング幅 0〜4mm、スイングスピード 250Hz、質量 約1.0kg"
-      ],
-      [
-        "使用環境",
-        "外気温 5〜30℃、湿度85%以下（結露なきこと）"
       ]
     ],
     "origin": {
       "hq": "日本（東京都江東区）",
       "hq_url": "https://uw-j.co.jp/company/",
       "made": "日本",
-      "made_basis": "運営元（ノースヒルズ溶接工業）への確認（2026年10月13日）",
-      "service": "UW JAPAN とノースヒルズ溶接工業が国内で修理・メンテナンスに対応（UW JAPAN は連絡の当日か翌日に全国対応、保証2年）",
-      "service_url": "https://uw-j.co.jp/support/",
+      "service": "あり",
       "makers": [
-        {
-          "name": "UW JAPAN株式会社",
-          "place": "東京都江東区",
-          "url": "https://uw-j.co.jp/company/",
-          "role": "製造"
-        },
         {
           "name": "ノースヒルズ溶接工業株式会社",
           "place": "大阪府東大阪市",
           "url": "https://nhillz.jp/company",
           "role": "国内共同開発・販売・修理"
+        },
+        {
+          "name": "UW JAPAN株式会社",
+          "place": "東京都江東区",
+          "url": "https://uw-j.co.jp/company/",
+          "role": "製造"
         }
       ],
       "sellers": [
@@ -301,7 +265,7 @@
         }
       ]
     },
-    "wire_feed": null,
+    "wire_feed": "オプション",
     "fiber_core_um": 20,
     "cooling": "水冷"
   },
@@ -316,7 +280,7 @@
     "output_w": 1500,
     "output_note": "定格出力（CW）",
     "portability": "本体 240kg（冷却水含まず）。チラー内蔵で移動しやすい",
-    "thickness_note": "対応板厚の上限は定めていません（出力が低くても、速度を落とせば厚い板も加工できます。運営元の回答）",
+    "thickness_note": "対応板厚の上限は定めていません。出力が低くても、速度を落とせば厚い板も加工できます。",
     "tags": {
       "use": [
         "薄板接合",
@@ -332,7 +296,8 @@
       ],
       "thickness": [
         "0.5〜3mm",
-        "3〜6mm"
+        "3〜6mm",
+        "6mm以上"
       ],
       "environment": [
         "屋内"
@@ -349,7 +314,7 @@
       "自動化との併用"
     ],
     "not_suitable_for": [
-      "省電力での運用（最大消費電力9.0kW）"
+      "持ち運んで使う現場（本体240kg）"
     ],
     "handled_by_operator": true,
     "image": "/assets/images/products/uwjapan-uw-sh.png",
@@ -400,18 +365,6 @@
         "7m"
       ],
       [
-        "レーザ分類",
-        "クラス4（JIS C6802）"
-      ],
-      [
-        "パルス幅",
-        "ショート 0.0〜900.0ms／ロング 0.00〜99.99s／CW"
-      ],
-      [
-        "変調機能",
-        "20〜10,000Hz（矩形波）"
-      ],
-      [
         "入力電源",
         "単相AC200V ±10%、50/60Hz"
       ],
@@ -422,31 +375,25 @@
       [
         "トーチ",
         "スイング幅 0〜4mm、スイングスピード 250Hz、質量 約1.0kg"
-      ],
-      [
-        "使用環境",
-        "外気温 5〜30℃、湿度85%以下（結露なきこと）"
       ]
     ],
     "origin": {
       "hq": "日本（東京都江東区）",
       "hq_url": "https://uw-j.co.jp/company/",
       "made": "日本",
-      "made_basis": "運営元（ノースヒルズ溶接工業）への確認（2026年10月13日）",
-      "service": "UW JAPAN とノースヒルズ溶接工業が国内で修理・メンテナンスに対応（UW JAPAN は連絡の当日か翌日に全国対応、保証2年）",
-      "service_url": "https://uw-j.co.jp/support/",
+      "service": "あり",
       "makers": [
-        {
-          "name": "UW JAPAN株式会社",
-          "place": "東京都江東区",
-          "url": "https://uw-j.co.jp/company/",
-          "role": "製造"
-        },
         {
           "name": "ノースヒルズ溶接工業株式会社",
           "place": "大阪府東大阪市",
           "url": "https://nhillz.jp/company",
           "role": "国内共同開発・販売・修理"
+        },
+        {
+          "name": "UW JAPAN株式会社",
+          "place": "東京都江東区",
+          "url": "https://uw-j.co.jp/company/",
+          "role": "製造"
         }
       ],
       "sellers": [
@@ -456,7 +403,7 @@
         }
       ]
     },
-    "wire_feed": null,
+    "wire_feed": "オプション",
     "fiber_core_um": 20,
     "cooling": "水冷"
   },
@@ -1645,7 +1592,7 @@
     "output_w": 1500,
     "output_note": "定格出力（CW）",
     "portability": "本体70kg（トーチ・コントローラ含む）、完全空冷。キャスター付き",
-    "thickness_note": "対応板厚の上限は定めていません（出力が低くても、速度を落とせば厚い板も加工できます。運営元の回答）",
+    "thickness_note": "対応板厚の上限は定めていません。出力が低くても、速度を落とせば厚い板も加工できます。",
     "tags": {
       "use": [
         "異材接合"
@@ -1702,18 +1649,6 @@
         "10m"
       ],
       [
-        "レーザ分類",
-        "クラス4（JIS C6802）"
-      ],
-      [
-        "パルス幅",
-        "ショート 0.0〜900.0ms／ロング 0.00〜99.99s／CW"
-      ],
-      [
-        "変調機能",
-        "20〜10,000Hz（矩形波）"
-      ],
-      [
         "入力電源",
         "単相AC200V ±10%、50/60Hz"
       ],
@@ -1740,35 +1675,25 @@
       [
         "トーチ",
         "スイング幅 0〜5.0mm、スイングスピード 10〜300Hz、質量 570g"
-      ],
-      [
-        "使用環境",
-        "外気温 5〜30℃、湿度85%以下（結露なきこと）"
-      ],
-      [
-        "オプション",
-        "ワイヤー供給機 CRA-346（φ0.8〜1.6、13kg）"
       ]
     ],
     "origin": {
       "hq": "日本（東京都江東区）",
       "hq_url": "https://uw-j.co.jp/company/",
       "made": "日本",
-      "made_basis": "カタログに「日本設計監修 日本製造」",
-      "service": "UW JAPAN とノースヒルズ溶接工業が国内で修理・メンテナンスに対応（UW JAPAN は連絡の当日か翌日に全国対応、保証2年）",
-      "service_url": "https://uw-j.co.jp/support/",
+      "service": "あり",
       "makers": [
-        {
-          "name": "UW JAPAN株式会社",
-          "place": "東京都江東区",
-          "url": "https://uw-j.co.jp/company/",
-          "role": "製造"
-        },
         {
           "name": "ノースヒルズ溶接工業株式会社",
           "place": "大阪府東大阪市",
           "url": "https://nhillz.jp/company",
           "role": "販売・修理"
+        },
+        {
+          "name": "UW JAPAN株式会社",
+          "place": "東京都江東区",
+          "url": "https://uw-j.co.jp/company/",
+          "role": "製造"
         }
       ],
       "sellers": [
@@ -1813,7 +1738,7 @@
     "comment": "本体190kg・水冷の1,500W機です。加工板厚は3.0mmと公表され、ステンレスと真鍮などの異種金属の溶接にも対応します。",
     "suitable_for": [],
     "not_suitable_for": [],
-    "handled_by_operator": true,
+    "handled_by_operator": false,
     "image": "/assets/images/products/kss-kr-1500m.png",
     "official_url": "https://kss-kr.com/kr-detail/517/",
     "source_url": "https://kss-kr.com/kr-detail/517/",
@@ -1826,27 +1751,15 @@
       "タッチパネル操作で、登録した溶接条件をボタンひとつで呼び出せる",
       "ピストル型トーチ（700g）"
     ],
-    "support": [
-      "販売窓口は運営元のグループ会社（ミライク）です（代理店として販売）",
-      "修理は販売窓口（運営元グループのミライク）で受け付け、内容に応じて自社またはメーカーが対応します",
-      "見積もり・テスト溶接・補助金の活用を相談できます"
-    ],
     "origin": {
       "hq": "日本（大阪府東大阪市）",
       "hq_url": "https://kss-kr.com/guidance/",
       "made": "中国",
       "made_basis": "会社案内に「中国生産工場」の写真。会社全体の記載で、機種ごとの記載はなし",
       "made_url": "https://kss-kr.com/guidance/",
-      "service": "修理は販売窓口（運営元グループのミライク）で受け付け、内容に応じて自社またはメーカーが対応。KS・S も自社でメンテナンス・アフターフォローに対応",
-      "service_url": "https://kss-kr.com/brand/",
-      "sellers": [
-        {
-          "name": "ミライク",
-          "note": "運営元グループ"
-        }
-      ]
+      "service": "KS・S が自社でメンテナンス・アフターフォローに対応",
+      "service_url": "https://kss-kr.com/brand/"
     },
-    "handled_label": "運営元グループで取り扱い",
     "wire_feed": "オプション",
     "fiber_core_um": null,
     "cooling": "水冷"
@@ -1884,7 +1797,7 @@
     "comment": "本体190kg・水冷の2,000W機です。加工板厚は最大9.0mmと公表されています。登録した溶接条件をタッチパネルからボタンひとつで呼び出せます。",
     "suitable_for": [],
     "not_suitable_for": [],
-    "handled_by_operator": true,
+    "handled_by_operator": false,
     "image": "/assets/images/products/kss-kr-2000m.png",
     "official_url": "https://kss-kr.com/kr-detail/514/",
     "source_url": "https://kss-kr.com/kr-detail/514/",
@@ -1897,31 +1810,21 @@
       "タッチパネル操作で、登録した溶接条件をボタンひとつで呼び出せる",
       "ピストル型トーチ（700g）"
     ],
-    "support": [
-      "販売窓口は運営元のグループ会社（ミライク）です（代理店として販売）",
-      "修理は販売窓口（運営元グループのミライク）で受け付け、内容に応じて自社またはメーカーが対応します",
-      "見積もり・テスト溶接・補助金の活用を相談できます"
-    ],
     "origin": {
       "hq": "日本（大阪府東大阪市）",
       "hq_url": "https://kss-kr.com/guidance/",
       "made": "中国",
       "made_basis": "会社案内に「中国生産工場」の写真。会社全体の記載で、機種ごとの記載はなし",
       "made_url": "https://kss-kr.com/guidance/",
-      "service": "修理は販売窓口（運営元グループのミライク）で受け付け、内容に応じて自社またはメーカーが対応。KS・S も自社でメンテナンス・アフターフォローに対応",
+      "service": "KS・S が自社でメンテナンス・アフターフォローに対応",
       "service_url": "https://kss-kr.com/brand/",
       "sellers": [
-        {
-          "name": "ミライク",
-          "note": "運営元グループ"
-        },
         {
           "name": "ガスマシンツール",
           "note": "Metoreeに掲載"
         }
       ]
     },
-    "handled_label": "運営元グループで取り扱い",
     "wire_feed": "オプション",
     "fiber_core_um": null,
     "cooling": "水冷"
@@ -1955,7 +1858,7 @@
     "comment": "本体50kg・空冷のコンパクトな1,500W機です。加工板厚は3.0mmと公表され、現場作業や置き場所の狭い工場向けとされています。",
     "suitable_for": [],
     "not_suitable_for": [],
-    "handled_by_operator": true,
+    "handled_by_operator": false,
     "image": "/assets/images/products/kss-kr-1500ac.png",
     "official_url": "https://kss-kr.com/kr-detail/218/",
     "source_url": "https://kss-kr.com/kr-detail/218/",
@@ -1968,27 +1871,15 @@
       "ピストル型トーチ（700g）",
       "シリーズとして「初めての方でも扱いやすい設計」と記載"
     ],
-    "support": [
-      "販売窓口は運営元のグループ会社（ミライク）です（代理店として販売）",
-      "修理は販売窓口（運営元グループのミライク）で受け付け、内容に応じて自社またはメーカーが対応します",
-      "見積もり・テスト溶接・補助金の活用を相談できます"
-    ],
     "origin": {
       "hq": "日本（大阪府東大阪市）",
       "hq_url": "https://kss-kr.com/guidance/",
       "made": "中国",
       "made_basis": "会社案内に「中国生産工場」の写真。会社全体の記載で、機種ごとの記載はなし",
       "made_url": "https://kss-kr.com/guidance/",
-      "service": "修理は販売窓口（運営元グループのミライク）で受け付け、内容に応じて自社またはメーカーが対応。KS・S も自社でメンテナンス・アフターフォローに対応",
-      "service_url": "https://kss-kr.com/brand/",
-      "sellers": [
-        {
-          "name": "ミライク",
-          "note": "運営元グループ"
-        }
-      ]
+      "service": "KS・S が自社でメンテナンス・アフターフォローに対応",
+      "service_url": "https://kss-kr.com/brand/"
     },
-    "handled_label": "運営元グループで取り扱い",
     "wire_feed": "オプション",
     "fiber_core_um": null,
     "cooling": "空冷"
@@ -2025,12 +1916,12 @@
     "suitable_for": [],
     "not_suitable_for": [],
     "handled_by_operator": true,
-    "image": "/assets/images/products/placeholder.svg",
+    "image": "/assets/images/products/theo-ma1-35.png",
     "official_url": "https://theo.inc/theo-ma1-laser-welding-machine/",
     "source_url": "https://theo.inc/theo-ma1-laser-welding-machine/",
     "source": "THEO（Maxphotonics のハンドヘルド溶接ブランド）公式サイト",
-    "image_credit": null,
-    "image_source": null,
+    "image_credit": "THEO 公式サイト",
+    "image_source": "https://theo.inc/product/theo-ma1-35/",
     "features": [
       "空冷のファイバーレーザーで外部チラー不要",
       "トーチ重量 680g。ウォブル（揺動）機能で溶接幅は最大4.0mm",
@@ -2099,12 +1990,12 @@
     "suitable_for": [],
     "not_suitable_for": [],
     "handled_by_operator": true,
-    "image": "/assets/images/products/placeholder.svg",
+    "image": "/assets/images/products/theo-ma1-65.png",
     "official_url": "https://theo.inc/theo-ma1-laser-welding-machine/",
     "source_url": "https://theo.inc/theo-ma1-laser-welding-machine/",
     "source": "THEO（Maxphotonics のハンドヘルド溶接ブランド）公式サイト",
-    "image_credit": null,
-    "image_source": null,
+    "image_credit": "THEO 公式サイト",
+    "image_source": "https://theo.inc/product/theo-ma1-65/",
     "features": [
       "空冷のファイバーレーザーで外部チラー不要",
       "トーチ重量 680g。ウォブル（揺動）機能で溶接幅は最大4.0mm",
@@ -2169,12 +2060,12 @@
     "suitable_for": [],
     "not_suitable_for": [],
     "handled_by_operator": true,
-    "image": "/assets/images/products/placeholder.svg",
+    "image": "/assets/images/products/theo-ma1-ultra.png",
     "official_url": "https://theo.inc/theo-ma1-laser-welding-machine/",
     "source_url": "https://theo.inc/theo-ma1-laser-welding-machine/",
     "source": "THEO（Maxphotonics のハンドヘルド溶接ブランド）公式サイト",
-    "image_credit": null,
-    "image_source": null,
+    "image_credit": "THEO 公式サイト",
+    "image_source": "https://theo.inc/product/theo-ma1-ultra/",
     "features": [
       "空冷のファイバーレーザーで外部チラー不要",
       "トーチ重量 680g。ウォブル（揺動）機能で溶接幅は最大4.0mm",
@@ -2204,51 +2095,51 @@
     "cooling": "空冷"
   },
   {
-    "id": "p111",
-    "maker_slug": "qilin",
-    "model_slug": "f4",
-    "name": "F4",
-    "maker_name": "Qilin Laser（广东骐麟激光科技有限公司）",
-    "method": "ハンドヘルド（空冷）",
-    "wavelength": "1080±10nm",
-    "output_w": 1600,
-    "output_note": "定格出力（Rated Power）",
-    "portability": "本体 55kg以下、強制空冷、本体サイズ 547×319×640mm、ファイバーケーブル 5m",
-    "thickness_note": "取扱説明書の推奨溶接厚：ステンレス0〜5mm、アルミ0〜4mm、銅0〜1mm（製品ページの Weld Depth 4mm は溶け込み深さ）",
+    "id": "p114",
+    "maker_slug": "maxphotonics",
+    "model_slug": "theo-ma1-45",
+    "name": "THEO MA1-45",
+    "maker_name": "Maxphotonics（ブランド：THEO／日本法人：Maxphotonics Japan株式会社）",
+    "method": "ハンドヘルド",
+    "wavelength": null,
+    "output_w": 1200,
+    "output_note": "Typical Laser Output（公式表記）",
+    "portability": "本体 39kg（日本語カタログは38kg）、667×276×542mm、空冷（外部チラー不要）、キャスター付き。トーチ 680g",
+    "thickness_note": "溶け込み深さ（公式表記 Welding Depth）ステンレス最大4.5mm。日本語カタログの表は「溶接厚さ」表記でステンレス・炭素鋼・亜鉛めっき鋼板4.5mm／アルミ4mm／銅1.5mm（注記は「溶接深さ」）。対応板厚ではない",
     "tags": {
-      "use": [],
+      "use": [
+        "薄板接合"
+      ],
       "material": [
         "鉄",
+        "ステンレス",
         "アルミ",
         "銅",
-        "ステンレス"
+        "チタン"
       ],
-      "thickness": [
-        "0.5〜3mm",
-        "3〜6mm"
-      ],
+      "thickness": [],
       "environment": [],
       "price": [],
       "skill": [
         "未経験可"
       ]
     },
-    "comment": "本体55kg以下・強制空冷の1,600W機です。公表されている溶け込み深さは4mmで、鋼・アルミ・銅・ステンレスに対応します。",
+    "comment": "本体39kg・空冷の1,200W機です。ワイヤーフィーダーが付属し、公表されている溶け込み深さはステンレス4.5mm、アルミ4mm、銅1.5mmです。",
     "suitable_for": [],
     "not_suitable_for": [],
     "handled_by_operator": true,
-    "image": "/assets/images/products/qilin-f4.png",
-    "official_url": "https://www.qilinlaser.cn/products_60/281.html",
-    "source_url": "https://www.qilinlaser.cn/products_60/281.html",
-    "source": "Qilin Laser（广东骐麟激光科技）公式サイト",
-    "image_credit": "Qilin Laser 公式サイト",
-    "image_source": "https://www.qilinlaser.cn/products_60/281.html",
+    "image": "/assets/images/products/theo-ma1-45.png",
+    "official_url": "https://theo.inc/product/theo-ma1-45/",
+    "source_url": "https://theo.inc/product/theo-ma1-45/",
+    "source": "THEO（Maxphotonics のハンドヘルド溶接ブランド）公式サイト",
+    "image_credit": "THEO 公式サイト",
+    "image_source": "https://theo.inc/product/theo-ma1-45/",
     "features": [
-      "本体内蔵の制御システムで操作が簡単（公式記載）",
-      "小型・軽量で持ち運び・移動がしやすい（公式記載）",
-      "自社開発の手持ち溶接ヘッド",
-      "連続72時間の稼働に対応（中国語版の製品特点）",
-      "温度の自動検出と風速調整による設備状態の監視（中国語版の製品特点）"
+      "空冷のファイバーレーザーで外部チラー不要",
+      "トーチ重量 680g。ウォブル（揺動）機能で溶接幅は最大4.0mm",
+      "ワイヤーフィーダー（ワイヤ径0.8/1.0/1.2/1.6mm）とウォブル溶接機能を標準装備",
+      "7インチ LED タッチスクリーン、32組のプリセット条件（日本語カタログ）",
+      "動作温度 0〜40℃、電源 220V（日本語カタログ）"
     ],
     "support": [
       "販売窓口は運営元のグループ会社（ミライク）です",
@@ -2256,11 +2147,8 @@
       "見積もり・テスト溶接・補助金の活用を相談できます"
     ],
     "origin": {
-      "hq": "中国（広東省東莞市）",
-      "hq_url": "https://www.qilinlaser.cn/about-us/",
-      "made": "中国",
-      "made_basis": "東莞の自社工場で研究開発・生産と記載。会社全体の記載で、機種ごとの記載はなし",
-      "made_url": "https://www.qilinlaser.cn/about-us/",
+      "hq": "中国（広東省深圳市）",
+      "hq_url": "https://www.maxlasers.com/about-us",
       "service": "修理は販売窓口（運営元グループのミライク）で受け付け、内容に応じて自社またはメーカーが対応",
       "sellers": [
         {
@@ -2268,26 +2156,21 @@
           "note": "運営元グループ"
         },
         {
-          "name": "八木産機",
-          "note": "「Fシリーズ」の名前で販売"
-        },
-        {
-          "name": "日本酸素G＆W",
-          "note": "八木産機のFシリーズをMetoreeに掲載"
+          "name": "エル・ビー・ウエルド"
         }
       ]
     },
     "handled_label": "運営元グループで取り扱い",
-    "wire_feed": "オプション",
+    "wire_feed": "標準",
     "fiber_core_um": 20,
     "cooling": "空冷"
   },
   {
     "id": "p112",
-    "maker_slug": "qilin",
+    "maker_slug": "koala",
     "model_slug": "k4",
-    "name": "K4",
-    "maker_name": "Qilin Laser（广东骐麟激光科技有限公司）",
+    "name": "コアラ K4",
+    "maker_name": "コアラ",
     "method": "ハンドヘルド（空冷）",
     "wavelength": "1080±10nm",
     "output_w": 1600,
@@ -2337,11 +2220,8 @@
       "見積もり・テスト溶接・補助金の活用を相談できます"
     ],
     "origin": {
-      "hq": "中国（広東省東莞市）",
-      "hq_url": "https://www.qilinlaser.cn/about-us/",
+      "hq": "中国",
       "made": "中国",
-      "made_basis": "東莞の自社工場で研究開発・生産と記載。会社全体の記載で、機種ごとの記載はなし",
-      "made_url": "https://www.qilinlaser.cn/about-us/",
       "service": "修理は販売窓口（運営元グループのミライク）で受け付け、内容に応じて自社またはメーカーが対応",
       "sellers": [
         {
@@ -2351,16 +2231,16 @@
       ]
     },
     "handled_label": "運営元グループで取り扱い",
-    "wire_feed": "オプション",
+    "wire_feed": "標準",
     "fiber_core_um": 20,
     "cooling": "空冷"
   },
   {
     "id": "p113",
-    "maker_slug": "qilin",
+    "maker_slug": "koala",
     "model_slug": "m4",
-    "name": "M4",
-    "maker_name": "Qilin Laser（广东骐麟激光科技有限公司）",
+    "name": "コアラ M4",
+    "maker_name": "コアラ",
     "method": "ハンドヘルド（空冷・ダブル揺動）",
     "wavelength": "1080±10nm",
     "output_w": 1600,
@@ -2409,11 +2289,8 @@
       "見積もり・テスト溶接・補助金の活用を相談できます"
     ],
     "origin": {
-      "hq": "中国（広東省東莞市）",
-      "hq_url": "https://www.qilinlaser.cn/about-us/",
+      "hq": "中国",
       "made": "中国",
-      "made_basis": "東莞の自社工場で研究開発・生産と記載。会社全体の記載で、機種ごとの記載はなし",
-      "made_url": "https://www.qilinlaser.cn/about-us/",
       "service": "修理は販売窓口（運営元グループのミライク）で受け付け、内容に応じて自社またはメーカーが対応",
       "sellers": [
         {
@@ -2423,7 +2300,7 @@
       ]
     },
     "handled_label": "運営元グループで取り扱い",
-    "wire_feed": "オプション",
+    "wire_feed": "標準",
     "fiber_core_um": 20,
     "cooling": "空冷"
   },

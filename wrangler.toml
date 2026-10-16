@@ -12,3 +12,15 @@ binding = "ASSETS"
 binding = "DB"
 database_name = "yosetsu-navi"
 database_id = "2bb93c16-5b60-42f1-9f51-c540801d8695"
+
+# 相談フォームのメール送信（Cloudflare Email Routing の send_email）。
+# ドメイン（溶接価格.com）を Cloudflare に追加して Email Routing を有効にし、受付用 Gmail を「宛先アドレス」として確認したら、下のコメントを外す。
+# 送信元はそのドメインのアドレス（日本語ドメインは xn-- の形）。宛先は確認済みのアドレスだけ。
+# [[send_email]]
+# name = "MAIL"
+# destination_address = "受付用のGmailアドレス"
+#
+# [vars]
+# CONTACT_TO = "受付用のGmailアドレス"
+# CONTACT_FROM = "form@（ドメインの xn-- 形）"
+# CONTACT_FROM_NAME = "相談フォーム"

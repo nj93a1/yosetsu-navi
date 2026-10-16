@@ -119,6 +119,13 @@ html { scroll-padding-top: 0; }
 .spec__more .ico { width: 22px; height: 22px; flex: none; }
 .spec__src { margin-left: 6px; font-size: 15px; font-weight: 400; color: var(--c-main-ink); white-space: nowrap; }
 .spec__basis { display: block; margin-top: 4px; font-size: 16px; font-weight: 400; color: var(--c-sub); }
+/* 目安の説明: 押すと開く（details）。閉じているときは「この目安について ▼」だけ */
+.spec__note { margin-top: 6px; }
+.spec__note summary { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; font-size: 16px; font-weight: 700; color: var(--c-main-ink); cursor: pointer; list-style: none; }
+.spec__note summary::-webkit-details-marker { display: none; }
+.spec__note summary::after { content: ""; width: 8px; height: 8px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg) translateY(-2px); }
+.spec__note[open] summary::after { transform: rotate(-135deg) translateY(-2px); }
+.spec__note .spec__basis { margin-top: 0; }
 /* 製造元・販売元や国内の販売店は、会社ごとに1行 */
 .spec__line { display: block; }
 .spec__line + .spec__line { margin-top: 10px; }

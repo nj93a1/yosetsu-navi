@@ -41,6 +41,9 @@ export const AXES = [
     note: "価格帯を公開している機種だけが対象です（運営元の取り扱い機は「お問い合わせ」です）。" },
   { key: "skill", label: "使う人", tag: "skill", values: [], names: { 未経験可: "未経験から使える" } },
   { key: "env", label: "使う場所", tag: "environment", values: [] },
+  // 製造国が日本の機種（商品データの origin.made が「日本」で始まる。「中国（日本で検査）」などは含めない）
+  { key: "made", label: "製造国", values: ["日本製"], get: (p) => (/^日本/.test(p.origin?.made || "") ? ["日本製"] : []),
+    note: "メーカーか販売店の情報で、日本で製造していると確認できた機種です。" },
   // 国内での修理・保守を、メーカーか国内代理店の公式サイトが明記している機種（商品データの origin.service）
   { key: "support", label: "サポート（公式に記載がある機種）", values: ["国内で修理・サポート"], get: (p) => (p.origin?.service ? ["国内で修理・サポート"] : []) },
 ];

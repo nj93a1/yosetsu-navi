@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/assets/css/style.css?v=22">
+  <link rel="stylesheet" href="/assets/css/style.css?v=23">
   <title>相談・問い合わせ｜レーザー溶接機 比較・選定</title>
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="レーザー溶接機 比較・選定">
@@ -60,6 +60,7 @@
       <div class="form__row"><label for="email">メールアドレス<span class="req">必須</span></label><input id="email" name="email" type="email" autocomplete="email" inputmode="email" required></div>
       <div class="form__row"><label for="tel2">電話番号</label><input id="tel2" name="tel" type="tel" autocomplete="tel" inputmode="tel"></div>
       <div class="form__row"><label for="body">ご相談内容</label><textarea id="body" name="body" rows="6" placeholder="例：SUS304 の 1.5mm を溶接したい。新人2名で使う予定。"></textarea></div>
+      <div class="form__hp" aria-hidden="true"><label for="website">この欄は空のままにしてください</label><input id="website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
       <p class="form__error" id="formError" hidden>お名前とメールアドレスを入力してください。</p>
       <p class="form__privacy">ご入力の内容は、<a href="/privacy/">プライバシーポリシー</a>に沿って取り扱います。</p>
       <button class="btn btn--accent" type="submit">入力内容を確認する</button>
@@ -68,12 +69,24 @@
     <section class="confirm" id="confirm" hidden aria-live="polite">
       <h2>入力内容の確認</h2>
       <dl class="attach__list" id="confirmList"></dl>
-      <p class="confirm__demo">デモ版のため、送信は行っていません。公開時には、この内容（診断の回答を含む）が相談窓口に届きます。</p>
-      <button class="btn" type="button" id="backToForm">入力画面に戻る</button>
+      <p class="confirm__lead">この内容でよろしければ、「この内容で送信する」を押してください。</p>
+      <p class="form__error" id="sendError" hidden></p>
+      <div class="confirm__actions">
+        <button class="btn btn--accent" type="button" id="sendBtn">この内容で送信する</button>
+        <button class="btn" type="button" id="backToForm">入力画面に戻る</button>
+      </div>
+    </section>
+
+    <section class="confirm" id="sent" hidden aria-live="polite" tabindex="-1">
+      <h2>送信しました</h2>
+      <p id="sentText">ご相談ありがとうございます。内容を確認し、担当者からご連絡します。</p>
+      <p class="confirm__demo" id="sentDemo" hidden>公開前の確認用の画面のため、送信した内容はまだ担当者にメールで届きません。</p>
+      <p>受付番号：<span id="sentId"></span></p>
+      <a class="btn" href="/">トップに戻る</a>
     </section>
   </div>
 </main>
 <div id="siteFooter"></div>
-<script type="module" src="/assets/js/contact.js?v=22"></script>
+<script type="module" src="/assets/js/contact.js?v=23"></script>
 </body>
 </html>

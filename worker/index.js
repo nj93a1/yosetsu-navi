@@ -2,8 +2,9 @@
 // 診断スコアリングはクライアント側（src/assets/js/scoring.js）で行い、
 // Worker は D1 の「商品マスタ」と「診断ログ」だけを扱う。
 
-import { allocateAlternatives, productKind } from "./alternatives.js";
+import { allocateAlternatives, productKind, regionOf } from "./alternatives.js";
 import diagnosis from "../src/data/diagnosis.json";
+import { handleContact } from "./contact.js";
 import { thicknessGuide, materialCriteria, compareTarget, coolingOf } from "../src/assets/js/scoring.js";
 
 const json = (data, status = 200) =>
@@ -58,6 +59,8 @@ async function handleApi(request, env, path) {
       JSON.stringify((b.shown_products || []).slice(0, 5)), b.exit_point ?? "result", request.headers.get("user-agent") || "").run();
     return json({ ok: true, id: b.id });
   }
+  // 相談フォームの送信（保存し、設定があれば受付用アドレスへメール。worker/contact.js）
+  if (path === "/api/contact" && method === "POST") return handleContact(request, env, { diagnosis, rowToProduct, json });
   // 相談の記録（種類 × 見ていた機種 × 来たページ。個人情報は受け取らない）
   if (path === "/api/inquiries" && method === "POST") {
     const b = await safeJson(request);
@@ -193,6 +196,18 @@ function altsHeading(p, tags, picked) {
 }
 
 /**
+ * 所在地の表記。海外は国名だけ（「中国（広東省深圳市）」→「中国」）、国内は都道府県まで（「日本（大阪府東大阪市）」「大阪府東大阪市」→「大阪府」）
+ */
+function placeOf(text = "") {
+  const t = String(text).trim();
+  const m = /^(.+?)（(.+)）$/.exec(t);
+  const [country, region] = m ? [m[1], m[2]] : /^[^（]+?[都道府県]/.test(t) ? ["日本", t] : [t, ""];
+  if (country !== "日本") return country;
+  const pref = /^(東京都|北海道|(?:京都|大阪)府|.{2,3}県)/.exec(region);
+  return pref ? pref[1] : "日本";
+}
+
+/**
  * スペック表の「本社所在地（または製造元・販売元）・製造国・国内のサポート・国内の販売店」。公式に書かれた事実だけ（origin が空なら「公式に記載なし」）。
  * makers があれば会社ごとに役割と所在地を並べる（UW シリーズは UW JAPAN とノースヒルズ溶接工業を併記）。sellers は確認できた国内の販売店で、makers と同じ会社は出さない
  */
@@ -201,8 +216,9 @@ function originRows(o = {}) {
   const src = (url) => (url ? `<a class="spec__src" href="${esc(url)}" target="_blank" rel="noopener">出典</a>` : "");
   const link = (text, url) => kw(text) + src(url);
   const line = (main, sub) => `<span class="spec__line">${main}${sub ? `<span class="spec__basis">${kw(sub)}</span>` : ""}</span>`;
-  // 「※販売元…」と製造国の根拠は、値と分けて細字で出す
-  const [hq, hqNote] = String(o.hq || "").split(/\s*※/);
+  // 「※販売元…」と製造国の根拠は、値と分けて細字で出す。所在地は、海外は国名だけ、国内は都道府県まで（placeOf）
+  const [hqRaw, hqNote] = String(o.hq || "").split(/\s*※/);
+  const hq = placeOf(hqRaw);
   const makers = o.makers || [];
   const bare = (name) => String(name).replace(/株式会社/g, "");
   // 「UW JAPAN株式会社」の英字部分は途中で改行させない
@@ -213,12 +229,17 @@ function originRows(o = {}) {
   const sellers = (o.sellers || []).filter((x) => !makers.some((m) => bare(m.name) === bare(x.name)));
   return [
     makers.length
-      ? ["製造元・販売元", makers.map((m) => line(companyName(m.name) + src(m.url), [m.role, m.place].filter(Boolean).join("／"))).join("")]
+      ? ["製造元・販売元", makers.map((m) => line(companyName(m.name) + src(m.url), [m.role, m.place && placeOf(m.place)].filter(Boolean).join("／"))).join("")]
       : ["本社所在地", o.hq && kw(hq) + (hqNote ? `<span class="spec__basis">${kw(`※${hqNote}`)}</span>` : "") + src(o.hq_url), none],
     ["製造国", o.made && kw(o.made) + (o.made_basis ? `<span class="spec__basis">${kw(`根拠：${o.made_basis}`)}</span>` : "") + src(o.made_url), none],
     ["国内のサポート", o.service && link(o.service, o.service_url), none],
     ...(sellers.length ? [["国内の販売店", sellers.map((x) => line(kw(x.name), x.note)).join("") + `<span class="spec__basis">${kw("公開情報で確認できた販売店です。ほかにも取り扱う店がある場合があります。")}</span>`]] : []),
   ];
+}
+
+/** スペック表の値の下に置く説明。押すと開く（ホバーでは開かない） */
+function specNote(text) {
+  return `<details class="spec__note"><summary>${kw("この目安について")}</summary><span class="spec__basis">${kw(text)}</span></details>`;
 }
 
 // 商品詳細ページ: /products/{maker_slug}-{model_slug}/
@@ -253,7 +274,7 @@ async function productPage(env, slug) {
   if (!p.thickness_note && thicknessTags) thicknessRows.push(["板厚の区分（診断用）", kw(thicknessTags)]);
   // 出力から見た板厚の目安（運営元の目安）。メーカーの公表値とは別の行に出す
   const guide = thicknessGuide(diagnosis, p);
-  if (guide) thicknessRows.push(["板厚の目安", kw(`${guide.name}（${guide.range}）クラス`) + `<span class="spec__basis">${kw(`${diagnosis.thicknessGuide.label}。${diagnosis.thicknessGuide.note}`)}</span>`]);
+  if (guide) thicknessRows.push(["板厚の目安", kw(`${guide.name}（${guide.range}）クラス`) + specNote(`${diagnosis.thicknessGuide.label}。${diagnosis.thicknessGuide.note}`)]);
   // アルミ・銅をコア径/出力を基準に見た目安（diagnosis.json の materialCriteria）。メーカーの対応素材とは別の行
   const mc = materialCriteria(diagnosis, p);
   const mcCfg = diagnosis.materialCriteria;
@@ -264,11 +285,12 @@ async function productPage(env, slug) {
     ["方式", kw(p.method)], ["波長", kw(p.wavelength)], ["出力", outputHtml(p)], ["本体の重さ・大きさ", kw(p.portability)],
     ["冷却方式", cooling && kw(cooling + (p.cooling ? "" : "（本体の記載から）"))],
     ["ファイバコア径", p.fiber_core_um != null && kw(`${p.fiber_core_um}μm`), "公式に記載なし"],
-    ["ワイヤー供給", p.wire_feed && kw(p.wire_feed === "対応" ? "対応（標準かオプションかは記載なし）" : p.wire_feed === "標準" ? "標準装備" : "オプション"), "公式に記載なし"],
+    ["ワイヤー供給", p.wire_feed && kw(p.wire_feed === "対応" ? "対応（標準かオプションかは記載なし）" : p.wire_feed === "標準" ? "標準装備" : "オプションであり"), "公式に記載なし"],
     ["対応素材", kw((tags.material || []).join("・"))],
-    ["アルミ・銅の目安", kw(mcText) + `<span class="spec__basis">${kw(`${mcCfg.label}：${mcRule}（コア径が非公開なら出力だけで判定）。${mcCfg.note}`)}</span>`],
+    ["アルミ・銅の目安", kw(mcText) + specNote(`${mcCfg.label}：${mcRule}（コア径が非公開なら出力だけで判定）。${mcCfg.note}`)],
     ...thicknessRows,
-    ["使用環境", kw((tags.environment || []).join("・"))], ["価格帯", p.price_band ? kw(p.price_band) : p.handled_by_operator ? `<a href="/contact/?type=quote&amp;product=${esc(p.slug)}">お問い合わせ</a>` : ""], ["習得難易度", kw(p.skill_level)],
+    // UW シリーズ（製造元・販売元を併記する機種）は、使用環境が空なら行ごと出さない（2026-10-16 北坂社長）
+    ...((tags.environment || []).length || !p.origin.makers ? [["使用環境", kw((tags.environment || []).join("・"))]] : []), ["価格帯", p.price_band ? kw(p.price_band) : p.handled_by_operator ? `<a href="/contact/?type=quote&amp;product=${esc(p.slug)}">お問い合わせ</a>` : ""], ["習得難易度", kw(p.skill_level)],
     ...(p.spec_rows || []).map(([k, v]) => [k, kw(v)]),
     ...originRows(p.origin),
   ].map(([k, v, na]) => `<div class="spec__row"><dt>${kw(k)}</dt>${v ? `<dd>${v}</dd>` : `<dd class="is-na">${na || NA}</dd>`}</div>`).join("");
@@ -323,7 +345,9 @@ async function productPage(env, slug) {
 
   let altsSection = "";
   if (alts.length) {
-    const [altTitle, altNote] = altsHeading(p, tags, alts);
+    const [altTitle, altNote0] = altsHeading(p, tags, alts);
+    const region = regionOf(p);
+    const altNote = altNote0 + (region === "domestic" ? "国内メーカー（本社が日本）の中から選んでいます。" : region === "overseas" ? "海外メーカーの中から選んでいます。" : "");
     altsSection = `<section class="subsec" id="alts"><h2>${kw(altTitle)}</h2><p class="alts__note">${kw(altNote)}</p>
     <ul class="pnav">${alts.map(({ o }) => {
       const sub = [
@@ -350,7 +374,7 @@ async function productPage(env, slug) {
         <h1>${kw(p.name)}</h1>
         ${makerAgent ? `<p class="product__agent">${kw(makerAgent)}</p>` : ""}
         <div class="product__band">${band}</div>
-        <p class="product__basis">${icon("info")}<span>${kw("この機種の情報は、メーカーや販売店が公開している情報を基に記載しています")}${p.origin.makers ? kw("（一部の項目は、運営元への確認によります）") : ""}。<a href="#links">${kw("出典を見る")}</a></span></p>
+        <p class="product__basis">${icon("info")}<span>${kw("この機種の情報は、メーカーや販売店が公開している情報を基に記載しています")}。<a href="#links">${kw("出典を見る")}</a></span></p>
       </div>
       <figure class="product__fig">${productPhoto(p, "product")}${p.image_credit ? `<figcaption class="photo-credit">画像：${p.image_source ? `<a href="${esc(p.image_source)}" target="_blank" rel="noopener">${kw(p.image_credit)}</a>` : kw(p.image_credit)}</figcaption>` : ""}</figure>
     </div>
@@ -448,10 +472,10 @@ function pageShell(title, body, { current = "/lineup/" } = {}) {
 <meta name="robots" content="noindex,nofollow"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><meta property="og:type" content="website"><meta property="og:site_name" content="レーザー溶接機 比較・選定"><meta property="og:title" content="${esc(title)}"><meta property="og:image" content="https://yosetsu-navi.jolly-frost-2311.workers.dev/assets/images/ogp.jpg"><meta name="twitter:card" content="summary_large_image"><title>${esc(title)}｜${SITE_NAME}</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/css/style.css?v=22"><link rel="stylesheet" href="/assets/css/product.css?v=22"></head><body>
+<link rel="stylesheet" href="/assets/css/style.css?v=23"><link rel="stylesheet" href="/assets/css/product.css?v=23"></head><body>
 <div id="siteHeader"></div>
 ${body}
 <div id="siteFooter"></div>
-<script type="module">import { mountChrome } from "/assets/js/partials.js?v=22"; mountChrome({ current: ${JSON.stringify(current)} });</script>
+<script type="module">import { mountChrome } from "/assets/js/partials.js?v=23"; mountChrome({ current: ${JSON.stringify(current)} });</script>
 </body></html>`;
 }

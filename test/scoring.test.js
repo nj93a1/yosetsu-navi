@@ -35,23 +35,61 @@ test("厚物（6mm以上）を公開している機種があれば、置き換�
   assert.ok(r.results[0].matched && (r.results[0].product.tags.thickness || []).includes("6mm以上"));
 });
 
-test("公開商品は85点（他社72＋運営元の取り扱い13）・スラッグ重複なし・公式か情報源のURLあり", () => {
+test("公開商品は85点（他社75＋運営元の取り扱い10）・スラッグ重複なし・公式か情報源のURLあり", () => {
   assert.equal(published.length, 85);
-  assert.equal(published.filter((p) => p.handled_by_operator).length, 13);
+  assert.equal(published.filter((p) => p.handled_by_operator).length, 10);
   assert.equal(base.length, 21);
   assert.equal(new Set(published.map(productSlug)).size, published.length);
   assert.ok(published.every((p) => p.official_url || p.source_url));
 });
 
-test("同じ機械は1ページ: 群協（UW と同じ製品）と八木産機 Fシリーズ（Qilin F4 に統合）は載せない。UW シリーズは UW JAPAN とノースヒルズを併記", () => {
-  assert.ok(!published.some((p) => /群協|グンユー|八木産機/.test(p.maker_name + p.name)));
-  const f4 = published.find((p) => p.name === "F4");
-  assert.ok(f4.origin.sellers.some((x) => x.name === "八木産機"));
+test("同じ機械は1ページ: 群協（UW と同じ製品）は載せない。UW シリーズはノースヒルズ、UW JAPAN の順に併記", () => {
+  assert.ok(!published.some((p) => /群協|グンユー/.test(p.maker_name + p.name)));
   const uw = published.filter((p) => /^UW-/.test(p.name));
   assert.equal(uw.length, 4);
-  for (const p of uw) assert.deepEqual(p.origin.makers.map((m) => m.name), ["UW JAPAN株式会社", "ノースヒルズ溶接工業株式会社"]);
+  for (const p of uw) assert.deepEqual(p.origin.makers.map((m) => m.name), ["ノースヒルズ溶接工業株式会社", "UW JAPAN株式会社"]);
   assert.equal(uw.find((p) => p.name === "UW-S1500F").fiber_core_um, 20);
   assert.equal(config.materialCriteria.label, "コア径/出力を基準");
+});
+
+test("10/16 打ち合わせ: UW の表示項目・KS・S・コアラ・THEO MA1-45", () => {
+  const uw = published.filter((p) => p.maker_slug === "uwjapan");
+  for (const p of uw) {
+    assert.equal(p.wire_feed, "オプション", p.name);
+    assert.equal(p.origin.service, "あり");
+    assert.ok(!p.origin.made_basis);
+    const keys = (p.spec_rows || []).map(([k]) => k);
+    for (const k of ["レーザ分類", "パルス幅", "変調機能", "使用環境", "オプション"]) assert.ok(!keys.includes(k), `${p.name} ${k}`);
+    assert.ok(!JSON.stringify([p.thickness_note, p.not_suitable_for, p.origin]).match(/運営元の回答|運営元への確認|省電力/), p.name);
+  }
+  const kss = published.filter((p) => p.maker_slug === "kss");
+  assert.equal(kss.length, 3);
+  for (const p of kss) {
+    assert.ok(!p.handled_by_operator && !p.handled_label);
+    assert.ok(!JSON.stringify([p.support, p.origin]).includes("ミライク"), p.name);
+  }
+  assert.ok(!published.some((p) => p.maker_slug === "qilin" || p.name === "F4"));
+  const koala = published.filter((p) => p.maker_slug === "koala");
+  assert.deepEqual(koala.map((p) => p.name).sort(), ["コアラ K4", "コアラ M4"]);
+  for (const p of koala) {
+    assert.equal(p.wire_feed, "標準");
+    assert.equal(p.origin.made, "中国");
+    assert.equal(p.origin.hq, "中国");
+  }
+  const theo = published.filter((p) => /^THEO/.test(p.name));
+  assert.deepEqual(theo.map((p) => p.name).sort(), ["THEO MA1 ULTRA", "THEO MA1-35", "THEO MA1-45", "THEO MA1-65"]);
+  for (const p of theo) assert.ok(p.image && !p.image.includes("placeholder"), p.name);
+});
+
+test("ノースヒルズ（UW）の機種が TOP5 に入る割合は、全回答の3〜4割（順位の決め方は取り扱いの有無を使わない）", () => {
+  const n = RESULTS.filter(({ r }) => r.results.some((x) => x.product.maker_slug === "uwjapan")).length;
+  const rate = n / RESULTS.length;
+  assert.ok(rate >= 0.3 && rate <= 0.4, `${(rate * 100).toFixed(1)}%`);
+  // 取り扱いの有無を入れ替えても順位は変わらない
+  const flipped = published.map((p) => ({ ...p, handled_by_operator: !p.handled_by_operator }));
+  for (const ans of [{ q1_material: "steel" }, { q2_thickness: "thick" }, { q1_material: "alcu", q4_environment: "indoor" }]) {
+    assert.deepEqual(runDiagnosis(config, flipped, ans).results.map((x) => x.product.id), runDiagnosis(config, published, ans).results.map((x) => x.product.id));
+  }
 });
 
 test("マスタの非公開は10点（ダミー）", { skip: master ? false : "マスタ data/products.json が無い" }, () => {

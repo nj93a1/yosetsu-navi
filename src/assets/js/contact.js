@@ -1,7 +1,8 @@
 // 相談・問い合わせ。診断結果や商品ページから来たときは、その内容を「一緒に送られる内容」として表示する。
-// 送信先は未確定のため、デモでは確認画面までで止める（送信したように見せない）。
-import { mountChrome } from "./partials.js?v=22";
-import { productSlug } from "./scoring.js?v=22";
+// 確認画面の「この内容で送信する」で /api/contact に送る（保存し、設定があれば受付用アドレスへメール。worker/contact.js）。
+// メールの設定がまだのときは、送信後の画面で「まだ担当者に届かない」ことをはっきり出す（送ったように見せない）。
+import { mountChrome, track } from "./partials.js?v=23";
+import { productSlug } from "./scoring.js?v=23";
 
 mountChrome({ current: "/contact/" });
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -57,9 +58,11 @@ const syncType = () => {
 for (const el of document.querySelectorAll('input[name="type"]')) el.addEventListener("change", syncType);
 syncType();
 
-// 確認画面（送信はしない）
+// 確認画面 → 送信
 const form = document.getElementById("form");
 const confirm = document.getElementById("confirm");
+const sent = document.getElementById("sent");
+let payload = null;
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   const fd = new FormData(form);
@@ -73,13 +76,44 @@ form.addEventListener("submit", (e) => {
   document.getElementById("confirmList").innerHTML = rows.map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${esc(v).replace(/\n/g, "<br>")}</dd></div>`).join("");
   form.hidden = true;
   confirm.hidden = false;
+  document.getElementById("sendError").hidden = true;
   confirm.scrollIntoView({ block: "start" });
-  // 相談の種類 × 見ていた機種 × 来たページを記録（個人情報は送らない。API の無い環境では無視）
+  // 送る内容。診断の回答と機種は、ラベルではなく ID で送り、サーバー側で名前に直す
   let from = "";
   try { const r = new URL(document.referrer); if (r.origin === location.origin) from = r.pathname; } catch {}
-  fetch("/api/inquiries", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ type, product: prod ? prod.id : null, compare: cmp ? cmp.id : null, from }) }).catch(() => {});
-  // 診断ログに「問い合わせ」を記録（API の無い環境では無視）
-  const log = params.get("log");
-  if (log && /^[0-9a-f-]{36}$/.test(log)) fetch(`/api/logs/${log}`, { method: "PATCH", headers: { "content-type": "application/json" }, body: JSON.stringify({ inquired: true, exit_point: "inquiry" }) }).catch(() => {});
+  const answers = Object.fromEntries(config.questions.map((q) => [q.id, params.get(q.id)]).filter(([, v]) => v));
+  payload = {
+    type, company: fd.get("company"), name: fd.get("name"), email: fd.get("email"), tel: fd.get("tel"), body: fd.get("body"),
+    qty: type === "quote" ? fd.get("qty") : "", when: type === "quote" ? fd.get("when") : "", work: type === "test" ? fd.get("work") : "",
+    website: fd.get("website"), product: prod ? productSlug(prod) : null, compare: cmp ? productSlug(cmp) : null,
+    answers, log: params.get("log"), from,
+  };
 });
 document.getElementById("backToForm").addEventListener("click", () => { confirm.hidden = true; form.hidden = false; });
+
+const sendBtn = document.getElementById("sendBtn");
+const ERRORS = { name: "お名前を入力してください。", email: "メールアドレスの形を確かめてください。", tel: "電話番号は数字とハイフンで入力してください。", type: "ご相談の種類を選んでください。" };
+sendBtn.addEventListener("click", async () => {
+  if (!payload || sendBtn.disabled) return;
+  sendBtn.disabled = true;
+  sendBtn.textContent = "送信しています…";
+  const err = document.getElementById("sendError");
+  err.hidden = true;
+  try {
+    const res = await fetch("/api/contact", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(payload) });
+    const r = await res.json().catch(() => ({}));
+    if (!res.ok || !r.ok) throw new Error(r.error || "send");
+    track("contact_submit", { inquiry_type: payload.type, product: payload.product || "", mailed: r.mailed ? "yes" : "no" });
+    document.getElementById("sentId").textContent = r.id || "";
+    document.getElementById("sentDemo").hidden = !!r.mailed;
+    confirm.hidden = true;
+    sent.hidden = false;
+    sent.focus();
+    sent.scrollIntoView({ block: "start" });
+  } catch (e) {
+    err.textContent = ERRORS[e.message] || "送信できませんでした。時間をおいて、もう一度お試しください。";
+    err.hidden = false;
+    sendBtn.disabled = false;
+    sendBtn.textContent = "この内容で送信する";
+  }
+});

@@ -2,6 +2,7 @@
 //
 // 選び方
 //   1. 同じメーカーの機種は出さない。1ページに同じメーカーは1機種まで
+//      国内メーカー（本社が日本）のページには国内メーカー、海外メーカーのページには海外メーカーの機種だけを出す（2026-10-16 北坂社長）
 //   2. 価格帯が公開されていれば、同じ価格帯の機種を先に出す
 //   3. それ以外は「用途・対応素材のタグの重なり」と「出力の近さ」を1つの点数にまとめ、点数の高い順に出す
 //      （用途タグが空の機種も、対応素材や出力が近ければ候補に入る）
@@ -30,6 +31,15 @@ export function productKind(p) {
   if (/ロボット|ライン/.test(m)) return "robot";
   if (/据置|真空|チャンバー/.test(m)) return "fixed";
   return "handheld";
+}
+
+/** 本社が日本なら "domestic"、海外なら "overseas"、本社が分からなければ null（origin は D1 の JSON 文字列でもオブジェクトでもよい） */
+export function regionOf(p) {
+  let o = p.origin || {};
+  if (typeof o === "string") { try { o = JSON.parse(o || "{}"); } catch { o = {}; } }
+  const hq = String(o.hq || "");
+  if (!hq) return null;
+  return /^日本/.test(hq) ? "domestic" : "overseas";
 }
 
 const tagKeys = (t = {}) => [...(t.use || []).map((x) => `use:${x}`), ...(t.material || []).map((x) => `material:${x}`)];
@@ -77,6 +87,7 @@ export function allocateAlternatives(products, tagsOf, rules = ALT_RULES) {
   for (const p of products) {
     for (const o of products) {
       if (o.maker_slug === p.maker_slug) continue;
+      if (regionOf(o) !== regionOf(p)) continue; // 国内は国内、海外は海外の中から選ぶ
       const c = closeness(p, o, tagsOf.get(p.id) || {}, tagsOf.get(o.id) || {}, rules);
       if (c) pairs.push({ p, o, ...c, order: spread(`${p.slug}>${o.slug}`) });
     }

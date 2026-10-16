@@ -529,6 +529,11 @@ mark { background: linear-gradient(transparent 55%, var(--c-marker) 55%); color:
 .confirm { background: #fff; border: 1px solid var(--c-line); border-radius: 16px; padding: 24px 20px; }
 .confirm h2 { margin: 0 0 12px; }
 .confirm__demo { background: var(--c-accent-light); border-radius: var(--radius-s); padding: 12px 14px; margin: 16px 0; }
+.confirm__lead { margin: 16px 0 12px; }
+.confirm__actions { display: grid; gap: 12px; }
+#sent:focus { outline: none; }
+/* 機械による送信よけの入力欄（画面にも読み上げにも出さない） */
+.form__hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 
 /* 選び方ガイド（テーマごとのカード。近道は大きな行ボタン） */
 .guide { list-style: none; margin: 0; padding: 0; display: grid; gap: 20px; }

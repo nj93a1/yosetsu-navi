@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
-import { allocateAlternatives, ALT_RULES } from "../worker/alternatives.js";
+import { allocateAlternatives, ALT_RULES, regionOf } from "../worker/alternatives.js";
 
 // 商品詳細ページの代替候補（worker/alternatives.js）を、公開中の機種（src/data/products.json）で確かめる
 const products = JSON.parse(readFileSync(new URL("../src/data/products.json", import.meta.url)))
@@ -47,4 +47,12 @@ test("代替候補: 価格帯が同じ機種（別メーカー）があれば先
 test("代替候補: 用途タグが空でも、対応素材と出力が近ければ候補が出る", () => {
   const noUse = products.filter((p) => !(p.tags?.use || []).length && (p.tags?.material || []).length && p.output_w);
   for (const p of noUse) assert.ok(result.get(p.id).length > 0, p.slug);
+});
+
+test("代替候補: 国内メーカーのページには国内、海外メーカーのページには海外の機種だけを出す", () => {
+  for (const p of products) {
+    for (const { o } of result.get(p.id)) assert.equal(regionOf(o), regionOf(p), `${p.slug} → ${o.slug}`);
+  }
+  assert.equal(regionOf({ origin: { hq: "日本（大阪府東大阪市）" } }), "domestic");
+  assert.equal(regionOf({ origin: JSON.stringify({ hq: "中国（広東省深圳市）" }) }), "overseas");
 });

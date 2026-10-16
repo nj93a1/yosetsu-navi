@@ -1,6 +1,6 @@
 // 選定診断の画面制御。スコアリングは scoring.js、設問・商品は /data/*.json。
-import { runDiagnosis, productSlug, operatorPick, coolingOf } from "./scoring.js?v=22";
-import { mountChrome, icon, productPhoto } from "./partials.js?v=22";
+import { runDiagnosis, productSlug, operatorPick, coolingOf } from "./scoring.js?v=23";
+import { mountChrome, icon, productPhoto, track } from "./partials.js?v=23";
 
 const app = document.getElementById("app");
 const foot = document.getElementById("foot");
@@ -131,6 +131,9 @@ function goBack() {
   replaceWith(state.step > N() ? N() : state.step - 1);
 }
 function answer(qid, optId) {
+  // GA4: 選択肢のボタンごとのイベント（どの質問で何を選んだか）
+  const q = state.config.questions.find((x) => x.id === qid);
+  track("diagnosis_answer", { question_id: qid, question_no: state.config.questions.indexOf(q) + 1, answer_id: optId, answer_label: q.options.find((o) => o.id === optId)?.label || "", rechange: state.rechangeOnly ? "yes" : "no" });
   if (state.rechangeOnly) {            // 「条件を1つ変える」からの回答は、その1問だけ変えて結果へ戻る
     const before = state.result ? ids(state.result) : null;
     const changed = state.answers[qid] !== optId;
@@ -210,6 +213,8 @@ function runAndLog() {
   state.compare = [];
   state.logId = crypto.randomUUID();
   const r = state.result;
+  const own = state.config.operatorPick?.makerSlug;
+  track("diagnosis_complete", { ...state.answers, relaxed: r.relaxedAxis || "none", northills_in_top5: r.results.some((x) => x.product.maker_slug === own) ? "yes" : "no" });
   postJson("/api/logs", {
     // 近い条件に置き換えたとき（厚物→3〜6mm）は「thickness:prefer」と記録する
     id: state.logId, answers: state.answers, relaxed_axis: r.relaxedAxis || (r.preferredAxis ? `${r.preferredAxis}:prefer` : null),
@@ -281,6 +286,7 @@ function renderResult(scrollTop = 0) {
   cmp.addEventListener("click", () => {
     if (state.compare.length !== 2) return;
     patchLog({ compared_products: state.compare, exit_point: "compare" });
+    track("result_compare", { products: state.compare.join(",") });
     go(N() + 1);
   });
   setFoot([backBtn, cmp], 2);
@@ -303,8 +309,10 @@ function renderResult(scrollTop = 0) {
   app.querySelectorAll("[data-detail]").forEach((a) => a.addEventListener("click", () => {
     state.viewed.add(a.dataset.detail);
     patchLog({ viewed_products: [...state.viewed], exit_point: "detail" });
+    track("result_detail_click", { product_id: a.dataset.detail, place: a.closest("#operator") ? "northills" : "top5" });
   }));
   app.querySelectorAll("[data-rechange]").forEach((b) => b.addEventListener("click", () => {
+    track("result_rechange", { question_id: b.dataset.rechange });
     go(state.config.questions.findIndex((q) => q.id === b.dataset.rechange), b.dataset.rechange);
   }));
 }

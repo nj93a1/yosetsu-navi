@@ -21,9 +21,15 @@ test("以前の種類タブの URL: ?cat=line はロボット・自動化の絞�
   assert.equal(run("cat=fixed").length, products.length);
 });
 
-test("キーワード検索は、統合した販売店の名前（八木産機 → Qilin F4）でも見つかる", () => {
-  assert.ok(run("q=八木産機").some((p) => p.name === "F4"));
+test("キーワード検索は、製造元・国内販売店の名前でも見つかる（ノースヒルズ → UW、エル・ビー・ウエルド → THEO）", () => {
   assert.ok(run("q=ノースヒルズ").some((p) => /^UW-/.test(p.name)));
+  assert.ok(run("q=エル・ビー・ウエルド").some((p) => /^THEO/.test(p.name)));
+});
+
+test("「日本製」で絞り込める（製造国が日本の機種だけ。「中国（日本で検査）」などは入れない）", () => {
+  const list = run("made=日本製");
+  assert.ok(list.length >= 4 && list.some((p) => /^UW-/.test(p.name)));
+  assert.ok(list.every((p) => /^日本/.test(p.origin?.made || "")));
 });
 
 test("絞り込みのチップは、別の項目どうしで同じ名前にならない（板厚の目安とメーカーの公表値など）", () => {

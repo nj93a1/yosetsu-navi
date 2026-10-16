@@ -603,18 +603,6 @@
         "7m"
       ],
       [
-        "レーザ分類",
-        "クラス4（JIS C6802）"
-      ],
-      [
-        "パルス幅",
-        "ショート 0.0〜900.0ms／ロング 0.00〜99.99s／CW"
-      ],
-      [
-        "変調機能",
-        "20〜10,000Hz（矩形波）"
-      ],
-      [
         "入力電源",
         "単相AC200V ±10%、50/60Hz"
       ],
@@ -625,10 +613,6 @@
       [
         "トーチ",
         "スイング幅 0〜4mm、スイングスピード 250Hz、質量 約1.0kg"
-      ],
-      [
-        "使用環境",
-        "外気温 5〜30℃、湿度85%以下（結露なきこと）"
       ]
     ],
     "notes": "2026-10-09 公開。価格帯・板厚の上限・屋外使用の可否・UW JAPAN 名の掲載可否はクライアント確認中（社内メモ。配信しない） / 2026年10月13日 北坂社長回答: 製造国（組立地）は日本。対応板厚の上限は無く、出力で薄板500W・中板1000〜1500W・厚板1600W以上の目安。1500Cの6mm以上タグを外した。 / 2026-10-14 調査: コア径はノースヒルズ溶接工業のサイト（nhillz-laser.com）の基本仕様表。UW JAPAN 公式（uw-j.co.jp/chiller_fiber_laser_series/）の仕様表にはコア径なし。冷却はメーカー公式で『チラー一体型（内蔵）』、質量は『冷却水含まず』。ワイヤ送給装置は nhillz-laser.com・uw-j.co.jp（sitemap の全ページを確認）とも記載なし",
@@ -653,27 +637,26 @@
       "not_suitable_for": "https://nhillz-laser.com/",
       "thickness_note": "運営元（ノースヒルズ溶接工業）への確認（2026年10月13日）",
       "fiber_core_um": "https://nhillz-laser.com/",
-      "cooling": "https://uw-j.co.jp/chiller_fiber_laser_series/"
+      "cooling": "https://uw-j.co.jp/chiller_fiber_laser_series/",
+      "wire_feed_2026_10_16": "2026-10-16 北坂社長との打ち合わせ（UW 全機種 ワイヤー供給はオプションであり）"
     },
     "origin": {
       "hq": "日本（東京都江東区）",
       "hq_url": "https://uw-j.co.jp/company/",
       "made": "日本",
-      "made_basis": "運営元（ノースヒルズ溶接工業）への確認（2026年10月13日）",
-      "service": "UW JAPAN とノースヒルズ溶接工業が国内で修理・メンテナンスに対応（UW JAPAN は連絡の当日か翌日に全国対応、保証2年）",
-      "service_url": "https://uw-j.co.jp/support/",
+      "service": "あり",
       "makers": [
-        {
-          "name": "UW JAPAN株式会社",
-          "place": "東京都江東区",
-          "url": "https://uw-j.co.jp/company/",
-          "role": "製造"
-        },
         {
           "name": "ノースヒルズ溶接工業株式会社",
           "place": "大阪府東大阪市",
           "url": "https://nhillz.jp/company",
           "role": "国内共同開発・販売・修理"
+        },
+        {
+          "name": "UW JAPAN株式会社",
+          "place": "東京都江東区",
+          "url": "https://uw-j.co.jp/company/",
+          "role": "製造"
         }
       ],
       "sellers": [
@@ -683,8 +666,8 @@
         }
       ]
     },
-    "thickness_note": "対応板厚の上限は定めていません（出力が低くても、速度を落とせば厚い板も加工できます。運営元の回答）",
-    "wire_feed": null,
+    "thickness_note": "対応板厚の上限は定めていません。出力が低くても、速度を落とせば厚い板も加工できます。",
+    "wire_feed": "オプション",
     "fiber_core_um": 14,
     "cooling": "水冷"
   },
@@ -790,18 +773,6 @@
         "7m"
       ],
       [
-        "レーザ分類",
-        "クラス4（JIS C6802）"
-      ],
-      [
-        "パルス幅",
-        "ショート 0.0〜900.0ms／ロング 0.00〜99.99s／CW"
-      ],
-      [
-        "変調機能",
-        "20〜10,000Hz（矩形波）"
-      ],
-      [
         "入力電源",
         "単相AC200V ±10%、50/60Hz"
       ],
@@ -812,10 +783,6 @@
       [
         "トーチ",
         "スイング幅 0〜4mm、スイングスピード 250Hz、質量 約1.0kg"
-      ],
-      [
-        "使用環境",
-        "外気温 5〜30℃、湿度85%以下（結露なきこと）"
       ]
     ],
     "notes": "2026-10-09 公開。価格帯・板厚の上限・屋外使用の可否・UW JAPAN 名の掲載可否はクライアント確認中（社内メモ。配信しない） / 2026年10月13日 北坂社長回答: 製造国（組立地）は日本。対応板厚の上限は無く、出力で薄板500W・中板1000〜1500W・厚板1600W以上の目安。1500Cの6mm以上タグを外した。 / 2026-10-14 調査: コア径はノースヒルズ溶接工業のサイト（nhillz-laser.com）の基本仕様表。UW JAPAN 公式（uw-j.co.jp/chiller_fiber_laser_series/）の仕様表にはコア径なし。冷却はメーカー公式で『チラー一体型（内蔵）』、質量は『冷却水含まず』。ワイヤ送給装置は nhillz-laser.com・uw-j.co.jp（sitemap の全ページを確認）とも記載なし",
@@ -840,27 +807,26 @@
       "not_suitable_for": "https://nhillz-laser.com/",
       "thickness_note": "運営元（ノースヒルズ溶接工業）への確認（2026年10月13日）",
       "fiber_core_um": "https://nhillz-laser.com/",
-      "cooling": "https://uw-j.co.jp/chiller_fiber_laser_series/"
+      "cooling": "https://uw-j.co.jp/chiller_fiber_laser_series/",
+      "wire_feed_2026_10_16": "2026-10-16 北坂社長との打ち合わせ（UW 全機種 ワイヤー供給はオプションであり）"
     },
     "origin": {
       "hq": "日本（東京都江東区）",
       "hq_url": "https://uw-j.co.jp/company/",
       "made": "日本",
-      "made_basis": "運営元（ノースヒルズ溶接工業）への確認（2026年10月13日）",
-      "service": "UW JAPAN とノースヒルズ溶接工業が国内で修理・メンテナンスに対応（UW JAPAN は連絡の当日か翌日に全国対応、保証2年）",
-      "service_url": "https://uw-j.co.jp/support/",
+      "service": "あり",
       "makers": [
-        {
-          "name": "UW JAPAN株式会社",
-          "place": "東京都江東区",
-          "url": "https://uw-j.co.jp/company/",
-          "role": "製造"
-        },
         {
           "name": "ノースヒルズ溶接工業株式会社",
           "place": "大阪府東大阪市",
           "url": "https://nhillz.jp/company",
           "role": "国内共同開発・販売・修理"
+        },
+        {
+          "name": "UW JAPAN株式会社",
+          "place": "東京都江東区",
+          "url": "https://uw-j.co.jp/company/",
+          "role": "製造"
         }
       ],
       "sellers": [
@@ -870,8 +836,8 @@
         }
       ]
     },
-    "thickness_note": "対応板厚の上限は定めていません（出力が低くても、速度を落とせば厚い板も加工できます。運営元の回答）",
-    "wire_feed": null,
+    "thickness_note": "対応板厚の上限は定めていません。出力が低くても、速度を落とせば厚い板も加工できます。",
+    "wire_feed": "オプション",
     "fiber_core_um": 20,
     "cooling": "水冷"
   },
@@ -904,7 +870,8 @@
       ],
       "thickness": [
         "0.5〜3mm",
-        "3〜6mm"
+        "3〜6mm",
+        "6mm以上"
       ],
       "environment": [
         "屋内"
@@ -921,7 +888,7 @@
       "自動化との併用"
     ],
     "not_suitable_for": [
-      "省電力での運用（最大消費電力9.0kW）"
+      "持ち運んで使う現場（本体240kg）"
     ],
     "spec": {
       "fiber_length": "7m",
@@ -979,18 +946,6 @@
         "7m"
       ],
       [
-        "レーザ分類",
-        "クラス4（JIS C6802）"
-      ],
-      [
-        "パルス幅",
-        "ショート 0.0〜900.0ms／ロング 0.00〜99.99s／CW"
-      ],
-      [
-        "変調機能",
-        "20〜10,000Hz（矩形波）"
-      ],
-      [
         "入力電源",
         "単相AC200V ±10%、50/60Hz"
       ],
@@ -1001,10 +956,6 @@
       [
         "トーチ",
         "スイング幅 0〜4mm、スイングスピード 250Hz、質量 約1.0kg"
-      ],
-      [
-        "使用環境",
-        "外気温 5〜30℃、湿度85%以下（結露なきこと）"
       ]
     ],
     "notes": "2026-10-09 公開。価格帯・板厚の上限・屋外使用の可否・UW JAPAN 名の掲載可否はクライアント確認中（社内メモ。配信しない） / 2026年10月13日 北坂社長回答: 製造国（組立地）は日本。対応板厚の上限は無く、出力で薄板500W・中板1000〜1500W・厚板1600W以上の目安。1500Cの6mm以上タグを外した。 / 2026-10-14 調査: コア径はノースヒルズ溶接工業のサイト（nhillz-laser.com）の基本仕様表。UW JAPAN 公式（uw-j.co.jp/chiller_fiber_laser_series/）の仕様表にはコア径なし。冷却はメーカー公式で『チラー一体型（内蔵）』、質量は『冷却水含まず』。ワイヤ送給装置は nhillz-laser.com・uw-j.co.jp（sitemap の全ページを確認）とも記載なし",
@@ -1029,27 +980,27 @@
       "not_suitable_for": "https://nhillz-laser.com/",
       "thickness_note": "運営元（ノースヒルズ溶接工業）への確認（2026年10月13日）",
       "fiber_core_um": "https://nhillz-laser.com/",
-      "cooling": "https://uw-j.co.jp/chiller_fiber_laser_series/"
+      "cooling": "https://uw-j.co.jp/chiller_fiber_laser_series/",
+      "wire_feed_2026_10_16": "2026-10-16 北坂社長との打ち合わせ（UW 全機種 ワイヤー供給はオプションであり）",
+      "tags.thickness_6mm": "2026-10-16 北坂社長との打ち合わせ（対応板厚の上限なし・厚い板も加工できる）と、この機種の向いている用途「中厚板〜厚物」"
     },
     "origin": {
       "hq": "日本（東京都江東区）",
       "hq_url": "https://uw-j.co.jp/company/",
       "made": "日本",
-      "made_basis": "運営元（ノースヒルズ溶接工業）への確認（2026年10月13日）",
-      "service": "UW JAPAN とノースヒルズ溶接工業が国内で修理・メンテナンスに対応（UW JAPAN は連絡の当日か翌日に全国対応、保証2年）",
-      "service_url": "https://uw-j.co.jp/support/",
+      "service": "あり",
       "makers": [
-        {
-          "name": "UW JAPAN株式会社",
-          "place": "東京都江東区",
-          "url": "https://uw-j.co.jp/company/",
-          "role": "製造"
-        },
         {
           "name": "ノースヒルズ溶接工業株式会社",
           "place": "大阪府東大阪市",
           "url": "https://nhillz.jp/company",
           "role": "国内共同開発・販売・修理"
+        },
+        {
+          "name": "UW JAPAN株式会社",
+          "place": "東京都江東区",
+          "url": "https://uw-j.co.jp/company/",
+          "role": "製造"
         }
       ],
       "sellers": [
@@ -1059,8 +1010,8 @@
         }
       ]
     },
-    "thickness_note": "対応板厚の上限は定めていません（出力が低くても、速度を落とせば厚い板も加工できます。運営元の回答）",
-    "wire_feed": null,
+    "thickness_note": "対応板厚の上限は定めていません。出力が低くても、速度を落とせば厚い板も加工できます。",
+    "wire_feed": "オプション",
     "fiber_core_um": 20,
     "cooling": "水冷"
   },
@@ -2624,7 +2575,7 @@
     "output_w": 1500,
     "output_note": "定格出力（CW）",
     "portability": "本体70kg（トーチ・コントローラ含む）、完全空冷。キャスター付き",
-    "thickness_note": "対応板厚の上限は定めていません（出力が低くても、速度を落とせば厚い板も加工できます。運営元の回答）",
+    "thickness_note": "対応板厚の上限は定めていません。出力が低くても、速度を落とせば厚い板も加工できます。",
     "official_url": null,
     "source_url": "https://uw-j.co.jp/product-release-information/",
     "source": "UW JAPAN株式会社 カタログ「ハンドトーチ型ファイバレーザ溶接機 UW-S1500F」（2026年版、運営元提供）",
@@ -2677,7 +2628,8 @@
       "tags.material": "UW JAPAN株式会社 カタログ「ハンドトーチ型ファイバレーザ溶接機 UW-S1500F」（2026年版、運営元提供）",
       "tags.skill": "UW JAPAN株式会社 カタログ「ハンドトーチ型ファイバレーザ溶接機 UW-S1500F」（2026年版、運営元提供）",
       "origin.made": "UW JAPAN株式会社 カタログ「ハンドトーチ型ファイバレーザ溶接機 UW-S1500F」（2026年版、運営元提供）",
-      "fiber_core_um": "運営元（ノースヒルズ溶接工業）への確認（2026年10月15日）"
+      "fiber_core_um": "運営元（ノースヒルズ溶接工業）への確認（2026年10月15日）",
+      "wire_feed_2026_10_16": "2026-10-16 北坂社長との打ち合わせ（UW 全機種 ワイヤー供給はオプションであり）"
     },
     "is_published": true,
     "notes": "2026年10月13日 運営元提供のカタログ（2026年 空冷ハンドカタログ）で仕様を確認。カタログ内に「UW-SH1500F」と書かれた箇所が2か所あり（仕様表は UW-S1500F）。北坂社長回答で製造国は日本。 / 2026-10-14 調査: ワイヤー供給の根拠「カタログ: オプション ワイヤー供給機 CRA-346」; uw-j.co.jp は製品リリース情報に『2026.4 ハンドトーチ型 ファイバレーザ溶接機UW-S1500Fを販売開始』の1行だけで製品ページなし（sitemap 確認、最新の固定ページは 2025-08）。冷却（完全空冷）とワイヤ供給機は運営元提供カタログ（2026年 空冷ハンドカタログ）による。コア径は公式サイト・カタログとも記載なし。Web 検索でも型番の掲載は見つからず / 2026年10月15日 北坂社長回答: ファイバコア径20μm。群協製作所のグンユーウェルドは UW JAPAN・ノースヒルズと同じ製品のため掲載から外した。",
@@ -2690,21 +2642,19 @@
       "hq": "日本（東京都江東区）",
       "hq_url": "https://uw-j.co.jp/company/",
       "made": "日本",
-      "made_basis": "カタログに「日本設計監修 日本製造」",
-      "service": "UW JAPAN とノースヒルズ溶接工業が国内で修理・メンテナンスに対応（UW JAPAN は連絡の当日か翌日に全国対応、保証2年）",
-      "service_url": "https://uw-j.co.jp/support/",
+      "service": "あり",
       "makers": [
-        {
-          "name": "UW JAPAN株式会社",
-          "place": "東京都江東区",
-          "url": "https://uw-j.co.jp/company/",
-          "role": "製造"
-        },
         {
           "name": "ノースヒルズ溶接工業株式会社",
           "place": "大阪府東大阪市",
           "url": "https://nhillz.jp/company",
           "role": "販売・修理"
+        },
+        {
+          "name": "UW JAPAN株式会社",
+          "place": "東京都江東区",
+          "url": "https://uw-j.co.jp/company/",
+          "role": "製造"
         }
       ],
       "sellers": [
@@ -2722,18 +2672,6 @@
       [
         "ファイバ長",
         "10m"
-      ],
-      [
-        "レーザ分類",
-        "クラス4（JIS C6802）"
-      ],
-      [
-        "パルス幅",
-        "ショート 0.0〜900.0ms／ロング 0.00〜99.99s／CW"
-      ],
-      [
-        "変調機能",
-        "20〜10,000Hz（矩形波）"
       ],
       [
         "入力電源",
@@ -2762,14 +2700,6 @@
       [
         "トーチ",
         "スイング幅 0〜5.0mm、スイングスピード 10〜300Hz、質量 570g"
-      ],
-      [
-        "使用環境",
-        "外気温 5〜30℃、湿度85%以下（結露なきこと）"
-      ],
-      [
-        "オプション",
-        "ワイヤー供給機 CRA-346（φ0.8〜1.6、13kg）"
       ]
     ],
     "wire_feed": "オプション",
@@ -2816,7 +2746,7 @@
       "タッチパネル操作で、登録した溶接条件をボタンひとつで呼び出せる",
       "ピストル型トーチ（700g）"
     ],
-    "handled_by_operator": true,
+    "handled_by_operator": false,
     "image": "/assets/images/products/kss-kr-1500m.png",
     "image_credit": "株式会社KS・S 公式サイト",
     "image_source": "https://kss-kr.com/kr-detail/517/",
@@ -2838,27 +2768,15 @@
     },
     "is_published": true,
     "notes": "定格電圧 単相200V 30A（50/60Hz）、消費電力量 5.0kVA、使用ガス アルゴン・窒素、使用環境温度 10〜40°C。メンテナンス・アフターフォローとオーダーメイド（筐体サイズ変更など）に対応（ブランドページ）。東大阪の本社にデモ・持ち込みテストができるショールームあり（会社案内）。価格は公式サイトに掲載なし。会社所在地は大阪府東大阪市大蓮東4-12-34（公式の会社案内）で、八尾市ではない（グループの建洲テクノス株式会社が八尾工場を持つ）。依頼の「八尾市の KSS」はこの会社と判断したが、住所が一致しない点は要確認。会社案内に「中国生産工場」の写真があり、country は本社国。公式の詳細ページ表記は「KR-1500M（250VS）」、一覧では「KR-1500M（1500W）」。特長・異材接合・「初心者や女性でも簡単に熟練工並みの溶接が可能」は KR シリーズ（M）の紹介ページの記載。画像はワイヤ送給装置などを含むセット写真。 / 2026年10月13日 北坂社長回答: 3社の製品はグループ会社ミライクで受注。KS・Sは代理店販売、MAX・Qilinは販売方法未定（窓口はミライク）。修理は販売会社で受付し、自社対応とメーカー対応に分ける。 / 2026-10-14 調査: ワイヤー供給の根拠「オプションでシングル・ダブルのワイヤー供給装置を追加選択可」; 仕様表『冷却方式 水冷（純水使用）』。オプションページ（【追加】ワイヤー供給装置 アシスト付き）は機種を限定しないシリーズ共通の記載。製品画像は送給装置を含むセット写真。同社で送給装置の内蔵を明記しているのは KR-1500AC新型（/kr-detail/427/『シングルワイヤー供給装置内蔵』）だけ。コア径の記載なし",
-    "support": [
-      "販売窓口は運営元のグループ会社（ミライク）です（代理店として販売）",
-      "修理は販売窓口（運営元グループのミライク）で受け付け、内容に応じて自社またはメーカーが対応します",
-      "見積もり・テスト溶接・補助金の活用を相談できます"
-    ],
     "origin": {
       "hq": "日本（大阪府東大阪市）",
       "hq_url": "https://kss-kr.com/guidance/",
       "made": "中国",
       "made_basis": "会社案内に「中国生産工場」の写真。会社全体の記載で、機種ごとの記載はなし",
       "made_url": "https://kss-kr.com/guidance/",
-      "service": "修理は販売窓口（運営元グループのミライク）で受け付け、内容に応じて自社またはメーカーが対応。KS・S も自社でメンテナンス・アフターフォローに対応",
-      "service_url": "https://kss-kr.com/brand/",
-      "sellers": [
-        {
-          "name": "ミライク",
-          "note": "運営元グループ"
-        }
-      ]
+      "service": "KS・S が自社でメンテナンス・アフターフォローに対応",
+      "service_url": "https://kss-kr.com/brand/"
     },
-    "handled_label": "運営元グループで取り扱い",
     "wire_feed": "オプション",
     "fiber_core_um": null,
     "cooling": "水冷"
@@ -2905,7 +2823,7 @@
       "タッチパネル操作で、登録した溶接条件をボタンひとつで呼び出せる",
       "ピストル型トーチ（700g）"
     ],
-    "handled_by_operator": true,
+    "handled_by_operator": false,
     "image": "/assets/images/products/kss-kr-2000m.png",
     "image_credit": "株式会社KS・S 公式サイト",
     "image_source": "https://kss-kr.com/kr-detail/514/",
@@ -2928,31 +2846,21 @@
     },
     "is_published": true,
     "notes": "定格電圧 単相200V 40A（50/60Hz）、消費電力量 6.0kVA、使用ガス アルゴン・窒素、使用環境温度 10〜40°C。メンテナンス・アフターフォローとオーダーメイド（筐体サイズ変更など）に対応（ブランドページ）。東大阪の本社にデモ・持ち込みテストができるショールームあり（会社案内）。価格は公式サイトに掲載なし。会社所在地は大阪府東大阪市大蓮東4-12-34（公式の会社案内）で、八尾市ではない（グループの建洲テクノス株式会社が八尾工場を持つ）。依頼の「八尾市の KSS」はこの会社と判断したが、住所が一致しない点は要確認。会社案内に「中国生産工場」の写真があり、country は本社国。公式の詳細ページ見出しは「KR-2000M（350VS）」、仕様表の機種欄は「KR-2000（350VS）」と表記ゆれあり。KR-3000M（3000W・最大12.0t）と KR-6000M（近日発売）も同シリーズにある。画像はワイヤ送給装置などを含むセット写真。 / 2026年10月13日 北坂社長回答: 3社の製品はグループ会社ミライクで受注。KS・Sは代理店販売、MAX・Qilinは販売方法未定（窓口はミライク）。修理は販売会社で受付し、自社対応とメーカー対応に分ける。 / 2026-10-14 調査: ワイヤー供給の根拠「オプションでシングル・ダブルのワイヤー供給装置を追加選択可」; 仕様表『冷却方式 水冷（純水使用）』。オプションページ（【追加】ワイヤー供給装置 アシスト付き）は機種を限定しないシリーズ共通の記載。製品画像は送給装置を含むセット写真。同社で送給装置の内蔵を明記しているのは KR-1500AC新型（/kr-detail/427/『シングルワイヤー供給装置内蔵』）だけ。コア径の記載なし",
-    "support": [
-      "販売窓口は運営元のグループ会社（ミライク）です（代理店として販売）",
-      "修理は販売窓口（運営元グループのミライク）で受け付け、内容に応じて自社またはメーカーが対応します",
-      "見積もり・テスト溶接・補助金の活用を相談できます"
-    ],
     "origin": {
       "hq": "日本（大阪府東大阪市）",
       "hq_url": "https://kss-kr.com/guidance/",
       "made": "中国",
       "made_basis": "会社案内に「中国生産工場」の写真。会社全体の記載で、機種ごとの記載はなし",
       "made_url": "https://kss-kr.com/guidance/",
-      "service": "修理は販売窓口（運営元グループのミライク）で受け付け、内容に応じて自社またはメーカーが対応。KS・S も自社でメンテナンス・アフターフォローに対応",
+      "service": "KS・S が自社でメンテナンス・アフターフォローに対応",
       "service_url": "https://kss-kr.com/brand/",
       "sellers": [
-        {
-          "name": "ミライク",
-          "note": "運営元グループ"
-        },
         {
           "name": "ガスマシンツール",
           "note": "Metoreeに掲載"
         }
       ]
     },
-    "handled_label": "運営元グループで取り扱い",
     "wire_feed": "オプション",
     "fiber_core_um": null,
     "cooling": "水冷"
@@ -2995,7 +2903,7 @@
       "ピストル型トーチ（700g）",
       "シリーズとして「初めての方でも扱いやすい設計」と記載"
     ],
-    "handled_by_operator": true,
+    "handled_by_operator": false,
     "image": "/assets/images/products/kss-kr-1500ac.png",
     "image_credit": "株式会社KS・S 公式サイト",
     "image_source": "https://kss-kr.com/kr-detail/218/",
@@ -3017,27 +2925,15 @@
     },
     "is_published": true,
     "notes": "定格電圧 単相200V 30A（50/60Hz）、消費電力量 5.0kVA、使用ガス アルゴン・窒素、使用環境温度 10〜40°C。メンテナンス・アフターフォローとオーダーメイド（筐体サイズ変更など）に対応（ブランドページ）。東大阪の本社にデモ・持ち込みテストができるショールームあり（会社案内）。価格は公式サイトに掲載なし。会社所在地は大阪府東大阪市大蓮東4-12-34（公式の会社案内）で、八尾市ではない（グループの建洲テクノス株式会社が八尾工場を持つ）。依頼の「八尾市の KSS」はこの会社と判断したが、住所が一致しない点は要確認。会社案内に「中国生産工場」の写真があり、country は本社国。空冷シリーズには KR-1500AC新型（1500W・単体ワイヤー供給装置内蔵、本体 500×1000×650H・100kg）と KR-2000AC（2000W）もある。2ガン同時溶接の KR-WG シリーズ（KR-1500ACWG／KR-2000WG）あり。導入事例ページは KR-1500AC の納入例（社名伏せ）。画像はワイヤ送給装置などを含むセット写真。 / 2026年10月13日 北坂社長回答: 3社の製品はグループ会社ミライクで受注。KS・Sは代理店販売、MAX・Qilinは販売方法未定（窓口はミライク）。修理は販売会社で受付し、自社対応とメーカー対応に分ける。 / 2026-10-14 調査: ワイヤー供給の根拠「オプションでシングル・ダブルのワイヤー供給装置を追加選択可」; 仕様表『冷却方式 空冷』。オプションページ（【追加】ワイヤー供給装置 アシスト付き）は機種を限定しないシリーズ共通の記載。製品画像は送給装置を含むセット写真。同社で送給装置の内蔵を明記しているのは KR-1500AC新型（/kr-detail/427/『シングルワイヤー供給装置内蔵』）だけ。コア径の記載なし / 2026-10-16 調査（空欄の補完）: use=自動化（『ファナック(株)社製CRX-10iA/(株)KS·S製KR-1500AC』）",
-    "support": [
-      "販売窓口は運営元のグループ会社（ミライク）です（代理店として販売）",
-      "修理は販売窓口（運営元グループのミライク）で受け付け、内容に応じて自社またはメーカーが対応します",
-      "見積もり・テスト溶接・補助金の活用を相談できます"
-    ],
     "origin": {
       "hq": "日本（大阪府東大阪市）",
       "hq_url": "https://kss-kr.com/guidance/",
       "made": "中国",
       "made_basis": "会社案内に「中国生産工場」の写真。会社全体の記載で、機種ごとの記載はなし",
       "made_url": "https://kss-kr.com/guidance/",
-      "service": "修理は販売窓口（運営元グループのミライク）で受け付け、内容に応じて自社またはメーカーが対応。KS・S も自社でメンテナンス・アフターフォローに対応",
-      "service_url": "https://kss-kr.com/brand/",
-      "sellers": [
-        {
-          "name": "ミライク",
-          "note": "運営元グループ"
-        }
-      ]
+      "service": "KS・S が自社でメンテナンス・アフターフォローに対応",
+      "service_url": "https://kss-kr.com/brand/"
     },
-    "handled_label": "運営元グループで取り扱い",
     "wire_feed": "オプション",
     "fiber_core_um": null,
     "cooling": "空冷"
@@ -3084,9 +2980,9 @@
       "トーチがワークに接触しトリガーを握っている間だけ照射する二重の安全接触センサー"
     ],
     "handled_by_operator": true,
-    "image": "/assets/images/products/placeholder.svg",
-    "image_credit": null,
-    "image_source": null,
+    "image": "/assets/images/products/theo-ma1-35.png",
+    "image_credit": "THEO 公式サイト",
+    "image_source": "https://theo.inc/product/theo-ma1-35/",
     "country": "中国",
     "found_via": "Maxphotonics 公式サイト（maxlasers.com）フッターの「Handheld Laser Tools (THEO)」リンク、エル・ビー・ウエルド株式会社の販売開始告知",
     "field_sources": {
@@ -3107,7 +3003,8 @@
       "tags.use": [
         "https://theo.inc/theo-ma1-laser-welding-machine-old/advantages-of-laser-welding/",
         "https://theo.inc/theo-ma1-laser-welding-machine-old/laser-welding-faq/"
-      ]
+      ],
+      "image": "https://theo.inc/product/theo-ma1-35/（画像ファイルは theo.inc が Cloudflare で直接取得できないため、Internet Archive に保存された同じURLのファイルを使用。2026-10-16）"
     },
     "is_published": true,
     "notes": "米国公式サイトの表示価格 $7,480（税別、theo.inc）。国内価格は非公開。波長は公式に記載なし。theo.inc は Cloudflare のボット対策で curl -sIL が 403 を返すが、ブラウザ相当の取得（WebFetch）で本文・画像の表示を確認済み（2026-10-10）。日本法人 Maxphotonics Japan株式会社（2025年10月31日法人番号指定、神奈川県横浜市都筑区）の公式サイトは見つからず。日本語カタログ（THEO MA1 Brochure JP v13）はエル・ビー・ウエルド株式会社（愛知県、岩倉工場にデモ機）が掲載。theo.inc/ja/ は機械翻訳の日本語ページ。タッチスクリーンは上面配置（他機種は前面）。 / 2026年10月13日 北坂社長回答: 3社の製品はグループ会社ミライクで受注。KS・Sは代理店販売、MAX・Qilinは販売方法未定（窓口はミライク）。修理は販売会社で受付し、自社対応とメーカー対応に分ける。 / 2026-10-14 調査: ワイヤー供給の根拠「商品名「THEO MA1-35 including Wire-Feeder」」; theo.inc は curl -sIL が 403（Cloudflare）のため WebFetch で本文確認（2026-10-14）。コア径は MA1 シリーズ共通の記載『employs a 20µm fiber core』（商品ページの『14μm Laser Spotsize』はスポット径でコア径ではない）。冷却『air-cooled and no external chiller is required』。ワイヤーフィーダーのページは T1 Single（MA1 Series 専用、0.8〜1.6mm）とデュアル TD1 WF を掲載。日本語カタログ（エル・ビー・ウエルド掲載）も標準装備 / 2026-10-16 調査（空欄の補完）: use=薄板接合（『ideal for small parts & thin gauge』／『thin sheet be welded to a thick sheet?』）",
@@ -3182,9 +3079,9 @@
       "トーチがワークに接触しトリガーを握っている間だけ照射する二重の安全接触センサー"
     ],
     "handled_by_operator": true,
-    "image": "/assets/images/products/placeholder.svg",
-    "image_credit": null,
-    "image_source": null,
+    "image": "/assets/images/products/theo-ma1-65.png",
+    "image_credit": "THEO 公式サイト",
+    "image_source": "https://theo.inc/product/theo-ma1-65/",
     "country": "中国",
     "found_via": "Maxphotonics 公式サイト（maxlasers.com）フッターの「Handheld Laser Tools (THEO)」リンク、エル・ビー・ウエルド株式会社の販売開始告知",
     "field_sources": {
@@ -3205,7 +3102,8 @@
       "tags.use": [
         "https://theo.inc/theo-ma1-laser-welding-machine-old/advantages-of-laser-welding/",
         "https://theo.inc/theo-ma1-laser-welding-machine-old/laser-welding-faq/"
-      ]
+      ],
+      "image": "https://theo.inc/product/theo-ma1-65/（画像ファイルは theo.inc が Cloudflare で直接取得できないため、Internet Archive に保存された同じURLのファイルを使用。2026-10-16）"
     },
     "is_published": true,
     "notes": "米国公式サイトの表示価格 $19,980（税別、theo.inc）。国内価格は非公開。波長は公式に記載なし。theo.inc は Cloudflare のボット対策で curl -sIL が 403 を返すが、ブラウザ相当の取得（WebFetch）で本文・画像の表示を確認済み（2026-10-10）。日本法人 Maxphotonics Japan株式会社（2025年10月31日法人番号指定、神奈川県横浜市都筑区）の公式サイトは見つからず。日本語カタログ（THEO MA1 Brochure JP v13）はエル・ビー・ウエルド株式会社（愛知県、岩倉工場にデモ機）が掲載。theo.inc/ja/ は機械翻訳の日本語ページ。中間機種 MA1-45（1200W・38kg〜39kg、ステンレス4.5mm）もある。材料のチタンは英語版公式ページの対応材料一覧（Nickel Alloys, Titanium 含む）による。 / 2026年10月13日 北坂社長回答: 3社の製品はグループ会社ミライクで受注。KS・Sは代理店販売、MAX・Qilinは販売方法未定（窓口はミライク）。修理は販売会社で受付し、自社対応とメーカー対応に分ける。 / 2026-10-14 調査: ワイヤー供給の根拠「製品ページに「Included Wire Feeder & Wobble Welding」」; theo.inc は curl -sIL で403（Cloudflare）のため WebFetch で本文を確認（2026-10-14）。コア径はシリーズページの「The MA1 Series … employs a 20µm fiber core」（MA1シリーズ共通の記載）。製品ページの「14μm Laser Spotsize」はスポット径でコア径ではない。冷却は「The fiberlaser system is air-cooled and no external chiller is required」。日本語カタログ（https://lb-weld.com/wp/wp-content/uploads/2025/01/THEO-MA1-Brochure-JP-v13.pdf 、200）も「ワイヤーフィーダーユニットおよびウォブル溶接機能が標準装備」と記載。 / 2026-10-16 調査（空欄の補完）: use=薄板接合（『ideal for small parts & thin gauge』／『thin sheet be welded to a thick sheet?』）",
@@ -3276,9 +3174,9 @@
       "トーチがワークに接触しトリガーを握っている間だけ照射する二重の安全接触センサー"
     ],
     "handled_by_operator": true,
-    "image": "/assets/images/products/placeholder.svg",
-    "image_credit": null,
-    "image_source": null,
+    "image": "/assets/images/products/theo-ma1-ultra.png",
+    "image_credit": "THEO 公式サイト",
+    "image_source": "https://theo.inc/product/theo-ma1-ultra/",
     "country": "中国",
     "found_via": "Maxphotonics 公式サイト（maxlasers.com）フッターの「Handheld Laser Tools (THEO)」リンク、エル・ビー・ウエルド株式会社の販売開始告知",
     "field_sources": {
@@ -3298,7 +3196,8 @@
       "tags.use": [
         "https://theo.inc/theo-ma1-laser-welding-machine-old/advantages-of-laser-welding/",
         "https://theo.inc/theo-ma1-laser-welding-machine-old/laser-welding-faq/"
-      ]
+      ],
+      "image": "https://theo.inc/product/theo-ma1-ultra/（画像ファイルは theo.inc が Cloudflare で直接取得できないため、Internet Archive に保存された同じURLのファイルを使用。2026-10-16）"
     },
     "is_published": true,
     "notes": "公式サイトに価格表示なし。波長は公式に記載なし。theo.inc は Cloudflare のボット対策で curl -sIL が 403 を返すが、ブラウザ相当の取得（WebFetch）で本文・画像の表示を確認済み（2026-10-10）。日本法人 Maxphotonics Japan株式会社（2025年10月31日法人番号指定、神奈川県横浜市都筑区）の公式サイトは見つからず。日本語カタログ（THEO MA1 Brochure JP v13）はエル・ビー・ウエルド株式会社（愛知県、岩倉工場にデモ機）が掲載。theo.inc/ja/ は機械翻訳の日本語ページ。MA1 シリーズの最新機種。日本語カタログ（v13）には未掲載で、仕様は英語版公式ページのみ。材料タグは英語版のシリーズ共通の対応材料一覧（Stainless Steel, Galvanized Steel, Mild Steel, Aluminum, Nickel Alloys, Titanium）から当てはめ。ワイヤーフィーダー・プリセット数などの特長は MA1 シリーズ共通の記載。 / 2026年10月13日 北坂社長回答: 3社の製品はグループ会社ミライクで受注。KS・Sは代理店販売、MAX・Qilinは販売方法未定（窓口はミライク）。修理は販売会社で受付し、自社対応とメーカー対応に分ける。 / 2026-10-14 調査: ワイヤー供給の根拠「製品ページに「Included Wire Feeder & Wobble Welding」」; theo.inc は curl -sIL で403（Cloudflare）のため WebFetch で本文を確認（2026-10-14）。コア径20µmはシリーズページの MA1 Series 共通の記載で、ULTRA 個別の数値ではない（ULTRA の製品ページにはコア径の記載なし）。冷却は ULTRA 製品ページの「air-cooled and no external chiller is required」。ULTRA の英語ブローシャ（販売店 solik.sk 掲載）は「new updated T1x wire feeder」と記載。 / 2026-10-16 調査（空欄の補完）: use=薄板接合（『ideal for small parts & thin gauge』／『thin sheet be welded to a thick sheet?』）",
@@ -3324,84 +3223,74 @@
     "cooling": "空冷"
   },
   {
-    "id": "p111",
-    "maker_slug": "qilin",
-    "model_slug": "f4",
-    "name": "F4",
-    "maker_name": "Qilin Laser（广东骐麟激光科技有限公司）",
-    "method": "ハンドヘルド（空冷）",
-    "wavelength": "1080±10nm",
-    "output_w": 1600,
-    "output_note": "定格出力（Rated Power）",
-    "portability": "本体 55kg以下、強制空冷、本体サイズ 547×319×640mm、ファイバーケーブル 5m",
-    "thickness_note": "取扱説明書の推奨溶接厚：ステンレス0〜5mm、アルミ0〜4mm、銅0〜1mm（製品ページの Weld Depth 4mm は溶け込み深さ）",
-    "official_url": "https://www.qilinlaser.cn/products_60/281.html",
-    "source_url": "https://www.qilinlaser.cn/products_60/281.html",
-    "source": "Qilin Laser（广东骐麟激光科技）公式サイト",
+    "id": "p114",
+    "maker_slug": "maxphotonics",
+    "model_slug": "theo-ma1-45",
+    "name": "THEO MA1-45",
+    "maker_name": "Maxphotonics（ブランド：THEO／日本法人：Maxphotonics Japan株式会社）",
+    "method": "ハンドヘルド",
+    "wavelength": null,
+    "output_w": 1200,
+    "output_note": "Typical Laser Output（公式表記）",
+    "portability": "本体 39kg（日本語カタログは38kg）、667×276×542mm、空冷（外部チラー不要）、キャスター付き。トーチ 680g",
+    "thickness_note": "溶け込み深さ（公式表記 Welding Depth）ステンレス最大4.5mm。日本語カタログの表は「溶接厚さ」表記でステンレス・炭素鋼・亜鉛めっき鋼板4.5mm／アルミ4mm／銅1.5mm（注記は「溶接深さ」）。対応板厚ではない",
+    "official_url": "https://theo.inc/product/theo-ma1-45/",
+    "source_url": "https://theo.inc/product/theo-ma1-45/",
+    "source": "THEO（Maxphotonics のハンドヘルド溶接ブランド）公式サイト",
     "tags": {
-      "use": [],
+      "use": [
+        "薄板接合"
+      ],
       "material": [
         "鉄",
+        "ステンレス",
         "アルミ",
         "銅",
-        "ステンレス"
+        "チタン"
       ],
-      "thickness": [
-        "0.5〜3mm",
-        "3〜6mm"
-      ],
+      "thickness": [],
       "environment": [],
       "price": [],
       "skill": [
         "未経験可"
       ]
     },
-    "comment": "本体55kg以下・強制空冷の1,600W機です。公表されている溶け込み深さは4mmで、鋼・アルミ・銅・ステンレスに対応します。",
+    "comment": "本体39kg・空冷の1,200W機です。ワイヤーフィーダーが付属し、公表されている溶け込み深さはステンレス4.5mm、アルミ4mm、銅1.5mmです。",
     "suitable_for": [],
     "not_suitable_for": [],
     "features": [
-      "本体内蔵の制御システムで操作が簡単（公式記載）",
-      "小型・軽量で持ち運び・移動がしやすい（公式記載）",
-      "自社開発の手持ち溶接ヘッド",
-      "連続72時間の稼働に対応（中国語版の製品特点）",
-      "温度の自動検出と風速調整による設備状態の監視（中国語版の製品特点）"
+      "空冷のファイバーレーザーで外部チラー不要",
+      "トーチ重量 680g。ウォブル（揺動）機能で溶接幅は最大4.0mm",
+      "ワイヤーフィーダー（ワイヤ径0.8/1.0/1.2/1.6mm）とウォブル溶接機能を標準装備",
+      "7インチ LED タッチスクリーン、32組のプリセット条件（日本語カタログ）",
+      "動作温度 0〜40℃、電源 220V（日本語カタログ）"
     ],
     "handled_by_operator": true,
-    "image": "/assets/images/products/qilin-f4.png",
-    "image_credit": "Qilin Laser 公式サイト",
-    "image_source": "https://www.qilinlaser.cn/products_60/281.html",
+    "image": "/assets/images/products/theo-ma1-45.png",
+    "image_credit": "THEO 公式サイト",
+    "image_source": "https://theo.inc/product/theo-ma1-45/",
     "country": "中国",
-    "found_via": "Web検索（Qilin Laser＝广东骐麟激光科技、東莞市）",
+    "found_via": "THEO 公式サイトの MA1 シリーズページ（MA1-35・45・65・ULTRA の4機種）",
     "field_sources": {
-      "output_w": "https://www.qilinlaser.cn/static/upload/image/20260204/1770166327133544.png",
-      "wavelength": "https://www.qilinlaser.cn/static/upload/image/20260204/1770166327133544.png",
-      "portability": "https://www.qilinlaser.cn/static/upload/image/20260204/1770166327133544.png",
-      "thickness_note": "https://www.qilinlaser.cn/static/upload/file/20260531/1780226140410352.pdf",
-      "features": "https://www.qilinlaser.cn/static/upload/image/20260204/1770166327133544.png",
-      "tags.material": "https://www.qilinlaser.cn/cn/products_21/389.html",
-      "method": "https://www.qilinlaser.cn/cn/products_21/389.html",
-      "country": "https://www.qilinlaser.cn/about-us/",
-      "features_cn": "https://www.qilinlaser.cn/static/upload/image/20251211/1765413532108072.png",
-      "wire_feed": "https://www.qilinlaser.cn/static/upload/file/20260531/1780226140410352.pdf",
-      "fiber_core_um": "https://www.qilinlaser.cn/static/upload/image/20260204/1770166327133544.png",
-      "cooling": "https://www.qilinlaser.cn/static/upload/image/20260204/1770166327133544.png",
-      "origin.sellers": "https://fiberlaser.co.jp/?page_id=388 / https://metoree.com/products/74018/",
-      "tags.thickness": "https://www.qilinlaser.cn/static/upload/file/20260531/1780226140410352.pdf",
-      "tags.skill": "https://www.qilinlaser.cn/exhibition/524.html"
+      "output_w": "https://theo.inc/theo-ma1-laser-welding-machine/",
+      "portability": "https://theo.inc/theo-ma1-laser-welding-machine/",
+      "thickness_note": "https://lb-weld.com/wp/wp-content/uploads/2025/01/THEO-MA1-Brochure-JP-v13.pdf",
+      "wire_feed": "https://theo.inc/product/theo-ma1-45/",
+      "cooling": "https://theo.inc/product/theo-ma1-45/",
+      "fiber_core_um": "https://theo.inc/theo-ma1-laser-welding-machine/",
+      "tags.material": "https://lb-weld.com/wp/wp-content/uploads/2025/01/THEO-MA1-Brochure-JP-v13.pdf",
+      "image": "https://theo.inc/product/theo-ma1-45/（Internet Archive の保存版から取得）"
     },
     "is_published": true,
-    "notes": "仕様は公式製品ページの画像（Technical Parameter 表）から転記。電源 AC220V 50/60Hz、使用環境温度 -40〜45°C、ファイバーコア径 20µm、miniQBH。価格は公式サイトに掲載なし。国内代理店は確認できず（ノースヒルズが直接調達という依頼情報による）。ノースヒルズのサイトに Qilin の記載は無い。整機消費電力 4800W以下（中国語版仕様表）。中国語版の説明では「風冷手持激光焊接機」、材料は鋼・アルミ・銅・ステンレス、用途は配管・厨房・金物・手すり装飾・車両・航空宇宙など。「5〜10倍速い」は公式の主張。 / 2026年10月13日 北坂社長回答: 3社の製品はグループ会社ミライクで受注。KS・Sは代理店販売、MAX・Qilinは販売方法未定（窓口はミライク）。修理は販売会社で受付し、自社対応とメーカー対応に分ける。 / 2026-10-14 調査: ワイヤー供給の根拠「取扱説明書で送丝机と自動送丝系统がいずれも「选配」」; コア径・冷却は製品ページ（https://www.qilinlaser.cn/products_60/281.html）の仕様画像「Fiber Core Diameter 20um」「Cooling Way: Forced air cooling」。F4系列取扱説明書（DWT22X-1 V1.3、公式 /cn/product-manual/ 掲載）でも「输出光纤芯径 20μm」「空气冷却」、出荷リストの「T20直流送丝机」と「3.7 焊接头自动送丝系统(选配)」が選配（オプション）。 / 2026年10月15日 八木産機「Fシリーズ」（F3/F4、カタログ https://fiberlaser.co.jp/?page_id=388 ）は本機と同じ機械（仕様が一致し本体に KIRIN LASER WELDER 表記）のため、このページに合体。八木産機の旧掲載（p274）の内容: 空冷・キャスター付きで、F3（800W・35kg以下）とF4（1,600W・55kg以下）の2機種があります。トーチ重量は0.4kgです。 / 2026-10-16 調査（空欄の補完）: thickness=0.5〜3mm・3〜6mm（『建议焊接的不锈钢钢材质厚度在 0~5mm』／『建议焊接的不锈钢钢材质厚度在 0~5mm』／『焊接厚度 ≤4mm』）; skill=未経験可（『No professional welders are required』）",
+    "notes": "2026-10-16 追加（北坂社長との打ち合わせ）。米国公式サイトの表示価格 $11,980（税別）。表示通貨はアクセスごとに円・ユーロ・ドルで変わり、¥5,800,000（税別）と出ることもあった。国内価格は非公開。重量は公式サイト39kg・日本語カタログ38kg。製品ページの「from 28kg」はシリーズ最軽量の値。コア径20µmはシリーズページの記載（機種ごとの記載なし）。製品ページの「14μm Laser Spotsize」はスポット径。数値の 4.5mm はシリーズページでは Material Thickness、製品ページでは Welding Depth、カタログは見出し「溶接厚さ」・注記「溶接深さ」（実験室テスト）→ 溶け込み深さとして扱う。",
     "support": [
       "販売窓口は運営元のグループ会社（ミライク）です",
       "修理は販売窓口（運営元グループのミライク）で受け付け、内容に応じて自社またはメーカーが対応します",
       "見積もり・テスト溶接・補助金の活用を相談できます"
     ],
     "origin": {
-      "hq": "中国（広東省東莞市）",
-      "hq_url": "https://www.qilinlaser.cn/about-us/",
-      "made": "中国",
-      "made_basis": "東莞の自社工場で研究開発・生産と記載。会社全体の記載で、機種ごとの記載はなし",
-      "made_url": "https://www.qilinlaser.cn/about-us/",
+      "hq": "中国（広東省深圳市）",
+      "hq_url": "https://www.maxlasers.com/about-us",
       "service": "修理は販売窓口（運営元グループのミライク）で受け付け、内容に応じて自社またはメーカーが対応",
       "sellers": [
         {
@@ -3409,26 +3298,21 @@
           "note": "運営元グループ"
         },
         {
-          "name": "八木産機",
-          "note": "「Fシリーズ」の名前で販売"
-        },
-        {
-          "name": "日本酸素G＆W",
-          "note": "八木産機のFシリーズをMetoreeに掲載"
+          "name": "エル・ビー・ウエルド"
         }
       ]
     },
     "handled_label": "運営元グループで取り扱い",
-    "wire_feed": "オプション",
+    "wire_feed": "標準",
     "fiber_core_um": 20,
     "cooling": "空冷"
   },
   {
     "id": "p112",
-    "maker_slug": "qilin",
+    "maker_slug": "koala",
     "model_slug": "k4",
-    "name": "K4",
-    "maker_name": "Qilin Laser（广东骐麟激光科技有限公司）",
+    "name": "コアラ K4",
+    "maker_name": "コアラ",
     "method": "ハンドヘルド（空冷）",
     "wavelength": "1080±10nm",
     "output_w": 1600,
@@ -3501,11 +3385,8 @@
       "見積もり・テスト溶接・補助金の活用を相談できます"
     ],
     "origin": {
-      "hq": "中国（広東省東莞市）",
-      "hq_url": "https://www.qilinlaser.cn/about-us/",
+      "hq": "中国",
       "made": "中国",
-      "made_basis": "東莞の自社工場で研究開発・生産と記載。会社全体の記載で、機種ごとの記載はなし",
-      "made_url": "https://www.qilinlaser.cn/about-us/",
       "service": "修理は販売窓口（運営元グループのミライク）で受け付け、内容に応じて自社またはメーカーが対応",
       "sellers": [
         {
@@ -3515,16 +3396,16 @@
       ]
     },
     "handled_label": "運営元グループで取り扱い",
-    "wire_feed": "オプション",
+    "wire_feed": "標準",
     "fiber_core_um": 20,
     "cooling": "空冷"
   },
   {
     "id": "p113",
-    "maker_slug": "qilin",
+    "maker_slug": "koala",
     "model_slug": "m4",
-    "name": "M4",
-    "maker_name": "Qilin Laser（广东骐麟激光科技有限公司）",
+    "name": "コアラ M4",
+    "maker_name": "コアラ",
     "method": "ハンドヘルド（空冷・ダブル揺動）",
     "wavelength": "1080±10nm",
     "output_w": 1600,
@@ -3599,11 +3480,8 @@
       "見積もり・テスト溶接・補助金の活用を相談できます"
     ],
     "origin": {
-      "hq": "中国（広東省東莞市）",
-      "hq_url": "https://www.qilinlaser.cn/about-us/",
+      "hq": "中国",
       "made": "中国",
-      "made_basis": "東莞の自社工場で研究開発・生産と記載。会社全体の記載で、機種ごとの記載はなし",
-      "made_url": "https://www.qilinlaser.cn/about-us/",
       "service": "修理は販売窓口（運営元グループのミライク）で受け付け、内容に応じて自社またはメーカーが対応",
       "sellers": [
         {
@@ -3613,7 +3491,7 @@
       ]
     },
     "handled_label": "運営元グループで取り扱い",
-    "wire_feed": "オプション",
+    "wire_feed": "標準",
     "fiber_core_um": 20,
     "cooling": "空冷"
   },

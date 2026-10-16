@@ -17,6 +17,43 @@ export function productPhoto(p, variant = "card") {
   return `<span class="ph ph--${variant}" role="img" aria-label="${escHtml(p.name)}の写真は準備中"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#i-${productKind(p)}"></use></svg><small>写真 準備中</small></span>`;
 }
 
+// ---- GA4（Google アナリティクス 4） ----------------------------------
+// 測定ID（例 "G-XXXXXXXXXX"）。空のあいだは何も読み込まず、track() も何もしない。
+// 送るイベント: 診断の選択肢（diagnosis_answer）・診断完了（diagnosis_complete）・結果の操作（result_*）・相談ボタン（inquiry_click）・相談フォーム送信（contact_submit）・data-ga を付けたボタン
+export const GA4_ID = "";
+function loadGa() {
+  if (!GA4_ID || window.gtag) return;
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function gtag() { window.dataLayer.push(arguments); };
+  window.gtag("js", new Date());
+  window.gtag("config", GA4_ID);
+  const s = document.createElement("script");
+  s.async = true;
+  s.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(GA4_ID)}`;
+  document.head.appendChild(s);
+}
+/** GA4 のイベントを送る（測定IDが未設定なら何もしない）。値は文字列か数値だけ */
+export function track(name, params = {}) {
+  if (!GA4_ID || !window.gtag) return;
+  window.gtag("event", name, params);
+}
+/** ページ共通のクリック計測: 相談ページへのリンク（inquiry_click）と、data-ga="イベント名" を付けた要素（data-ga-xxx がパラメータ） */
+function trackClicks() {
+  document.addEventListener("click", (e) => {
+    const el = e.target.closest("a, button");
+    if (!el) return;
+    if (el.dataset.ga) {
+      const params = Object.fromEntries(Object.entries(el.dataset).filter(([k]) => k.startsWith("ga") && k !== "ga").map(([k, v]) => [k.slice(2).replace(/^./, (c) => c.toLowerCase()), v]));
+      track(el.dataset.ga, params);
+    }
+    const href = el.getAttribute("href") || "";
+    if (href.startsWith("/contact/")) {
+      const q = new URL(href, location.origin).searchParams;
+      track("inquiry_click", { inquiry_type: q.get("type") || "none", product: q.get("product") || "", from_path: location.pathname, link_text: el.textContent.trim().slice(0, 40) });
+    }
+  });
+}
+
 export const icon = (name, cls = "ico") => `<svg class="${cls}" aria-hidden="true"><use href="${ICONS}#i-${name}"></use></svg>`;
 
 export function header(current = "") {
@@ -79,6 +116,8 @@ export function footer() {
 }
 
 export function mountChrome({ current = "", withBottombar = true } = {}) {
+  loadGa();
+  trackClicks();
   document.getElementById("siteHeader").innerHTML = header(current);
   document.getElementById("siteFooter").innerHTML = footer() + (withBottombar ? bottombar(current) : "");
   if (withBottombar) document.body.classList.add("has-bar");
