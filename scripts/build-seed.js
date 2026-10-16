@@ -1,5 +1,6 @@
 // 商品マスタ data/products.json を検証し、次の2つを生成する。
-//   (a) seed.sql                … D1（products / product_tags）投入用。非公開機種も含む（is_published=0）
+//   (a) seed.sql                … D1（products / product_tags / product_alternatives）投入用。非公開機種も含む（is_published=0）
+//                                  代替候補（product_alternatives）は公開機種どうしで、ここで1回だけ計算する（商品ページで毎回計算すると Worker の CPU 上限を超えるため）
 //   (b) src/data/products.json  … 診断・機種一覧などブラウザが読む配信用 JSON。
 //                                  公開機種（is_published !== false）だけを、PUBLIC_FIELDS の項目に絞って書き出す。
 //
@@ -10,6 +11,7 @@
 //   node scripts/build-seed.js --check  → 検証のみ（マスタを読む。配信用 JSON がマスタと一致しなければ exit 1）
 // 将来の CSV 一括更新は「CSV → data/products.json → 本スクリプト」の経路で D1 とクライアントJSONを同期する。
 import { readFileSync, writeFileSync, existsSync } from "node:fs";
+import { allocateAlternatives } from "../worker/alternatives.js";
 
 const MASTER = new URL("../data/products.json", import.meta.url);
 const PUBLIC_JSON = new URL("../src/data/products.json", import.meta.url);
@@ -82,7 +84,12 @@ if (process.argv.includes("--check")) {
 console.log(`検証OK: ${products.length} 商品（公開 ${published}）/ 平均タグ数 ${avg.toFixed(1)}`);
 
 const q = (v) => (v == null ? "NULL" : `'${String(v).replace(/'/g, "''")}'`);
-const lines = ["-- 自動生成: scripts/build-seed.js（手で編集しない。元データは data/products.json）", "DELETE FROM product_tags;", "DELETE FROM products;"];
+const lines = [
+  "-- 自動生成: scripts/build-seed.js（手で編集しない。元データは data/products.json）",
+  // 代替候補の表は、マイグレーションを流していない D1 でも seed だけで用意できるようにする（schema.sql と同じ定義）
+  "CREATE TABLE IF NOT EXISTS product_alternatives (product_id TEXT NOT NULL, rank INTEGER NOT NULL, alt_id TEXT NOT NULL, basis TEXT NOT NULL, PRIMARY KEY (product_id, rank));",
+  "DELETE FROM product_alternatives;", "DELETE FROM product_tags;", "DELETE FROM products;",
+];
 for (const p of products) {
   const slug = `${p.maker_slug}-${p.model_slug}`;
   lines.push(
@@ -95,6 +102,11 @@ for (const p of products) {
   );
   for (const a of AXES) for (const t of p.tags[a]) lines.push(`INSERT INTO product_tags (product_id, axis, tag) VALUES (${q(p.id)}, ${q(a)}, ${q(t)});`);
 }
+// 代替候補（公開機種どうし。worker/alternatives.js の規則。D1 の行と同じ形にして渡す）
+const pubMaster = products.filter((p) => p.is_published !== false)
+  .map((p) => ({ ...p, slug: `${p.maker_slug}-${p.model_slug}`, price_band: p.tags.price[0] ?? null }));
+const alts = allocateAlternatives(pubMaster, new Map(pubMaster.map((p) => [p.id, p.tags])));
+for (const [id, list] of alts) list.forEach(({ o, basis }, i) => lines.push(`INSERT INTO product_alternatives (product_id, rank, alt_id, basis) VALUES (${q(id)}, ${i + 1}, ${q(o.id)}, ${q(basis)});`));
 writeFileSync(SEED, lines.join("\n") + "\n");
 writeFileSync(PUBLIC_JSON, publicJson);
 console.log(`seed.sql と src/data/products.json（公開 ${published} 商品）を書き出しました`);

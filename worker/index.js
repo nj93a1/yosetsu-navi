@@ -242,6 +242,21 @@ function specNote(text) {
   return `<details class="spec__note"><summary>${kw("この目安について")}</summary><span class="spec__basis">${kw(text)}</span></details>`;
 }
 
+let altMemo = null; // { key, map }。D1 の公開機種が同じ間は、計算した代替候補を使い回す
+async function alternativesOf(env, id, all, tagsOf) {
+  const byId = new Map(all.map((r) => [r.id, r]));
+  try {
+    const { results } = await env.DB.prepare("SELECT alt_id, basis FROM product_alternatives WHERE product_id = ? ORDER BY rank").bind(id).all();
+    const list = results.map((r) => ({ o: byId.get(r.alt_id), basis: r.basis })).filter((x) => x.o);
+    if (list.length) return list;
+  } catch (e) {
+    console.warn("product_alternatives を読めませんでした（seed 前の D1）", e && e.message);
+  }
+  const key = all.map((r) => `${r.id}:${r.output_w}:${r.price_band}`).join("|");
+  if (!altMemo || altMemo.key !== key) altMemo = { key, map: allocateAlternatives(all, tagsOf) };
+  return altMemo.map.get(id) || [];
+}
+
 // 商品詳細ページ: /products/{maker_slug}-{model_slug}/
 // URL はスラッグのみで決まるため、メーカー実名NGの場合は maker_slug を差し替えるだけで移行できる。
 async function productPage(env, slug) {
@@ -260,8 +275,9 @@ async function productPage(env, slug) {
     tagsOf.set(t.product_id, m);
   }
   const tags = tagsOf.get(p.id) || {};
-  // 代替候補は公開中の全ページ分をまとめて割り当てる（特定のメーカーに偏らないように。worker/alternatives.js）
-  const alts = allocateAlternatives(all, tagsOf).get(p.id) || [];
+  // 代替候補は公開中の全ページ分をまとめて割り当てたもの（特定のメーカーに偏らないように。worker/alternatives.js）。
+  // seed のときに計算した product_alternatives を読む。表が無い・空のときだけ、ここで計算する（結果は isolate の中で使い回す）
+  const alts = await alternativesOf(env, p.id, all, tagsOf);
   const [maker, makerAgent] = splitMaker(p.maker_name);
   const NA = "非公開";
 
