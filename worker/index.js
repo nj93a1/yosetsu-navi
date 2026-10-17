@@ -33,6 +33,8 @@ export default {
 async function route(request, env, url) {
     const path = url.pathname;
     if (url.host === `www.${CANONICAL_HOST}`) return Response.redirect(`${ORIGIN}${path}${url.search}`, 301);
+    // http（s なし）で来たら https へ
+    if (url.protocol === "http:" && url.host === CANONICAL_HOST) return Response.redirect(`${ORIGIN}${path}${url.search}`, 301);
     // 公開後に workers.dev の仮 URL を正式なドメインへ転送する（wrangler.toml の REDIRECT_TO_ORIGIN = "1"）
     if (env.REDIRECT_TO_ORIGIN === "1" && url.host.endsWith(".workers.dev")) return Response.redirect(`${ORIGIN}${path}${url.search}`, 301);
 
@@ -129,7 +131,8 @@ const icon = (name, cls = "ico") => `<svg class="${cls}" aria-hidden="true"><use
 
 /** 商品写真（partials.js の productPhoto と同じ HTML）。実写真が無いときは青緑のタイル＋種類のピクトグラム */
 function productPhoto(p, variant = "card") {
-  if (p.image && !p.image.includes("placeholder")) return `<img class="ph-img ph-img--${variant}" src="${esc(p.image)}" alt="" loading="lazy">`;
+  // 商品ページの頭の写真はすぐ読み込む（一覧・代替候補などの小さい写真は遅れて読み込む）
+  if (p.image && !p.image.includes("placeholder")) return `<img class="ph-img ph-img--${variant}" src="${esc(p.image)}" alt="" ${variant === "product" ? 'fetchpriority="high"' : 'loading="lazy"'}>`;
   return `<span class="ph ph--${variant}" role="img" aria-label="${esc(p.name)}の写真は準備中">${icon(productKind(p))}<small>写真 準備中</small></span>`;
 }
 
