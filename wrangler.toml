@@ -2,6 +2,14 @@ name = "yosetsu-navi"
 main = "worker/index.js"
 compatibility_date = "2026-09-01"
 
+# 正式なドメイン（2026-10-17 公開。Xサーバーで取得、DNS は Cloudflare の KDM アカウント）。www は Worker が正式なドメインへ 301
+routes = [
+  { pattern = "yosetsu-kakaku.com", custom_domain = true },
+  { pattern = "www.yosetsu-kakaku.com", custom_domain = true },
+]
+# 仮 URL（yosetsu-navi.jolly-frost-2311.workers.dev）も残す。以前のリンクから来た人は、REDIRECT_TO_ORIGIN = "1" で正式なドメインへ 301
+workers_dev = true
+
 # src/ 配下（HTML・CSS・JS・診断用JSON）は静的アセットとして配信し、
 # /api/* と /products/* だけ Worker が処理する。
 [assets]
@@ -22,7 +30,11 @@ database_id = "2bb93c16-5b60-42f1-9f51-c540801d8695"
 # name = "MAIL"
 # destination_address = "受付用のGmailアドレス"
 #
-# [vars]
+# （[vars] は下にある。CONTACT_TO などはそこに足す）
 # CONTACT_TO = "受付用のGmailアドレス"
 # CONTACT_FROM = "form@（ドメインの xn-- 形）"
 # CONTACT_FROM_NAME = "相談フォーム"
+
+[vars]
+# 仮 URL（workers.dev）に来た人を正式なドメインへ 301 で転送する
+REDIRECT_TO_ORIGIN = "1"
