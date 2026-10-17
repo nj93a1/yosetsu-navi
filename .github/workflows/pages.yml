@@ -35,6 +35,9 @@ jobs:
             s#href="/"#href="/yosetsu-navi/"#g;
             s#location\.href = "/"#location.href = "/yosetsu-navi/"#g;
           '
+          # 確認用のコピーは検索に出さない（正式なサイトは https://yosetsu-kakaku.com）
+          find out -type f -name '*.html' -print0 | xargs -0 perl -pi -e 's#<head>#<head><meta name="robots" content="noindex,nofollow">#'
+          printf 'User-agent: *\nDisallow: /\n' > out/robots.txt
       - uses: actions/configure-pages@v5
         with:
           enablement: true

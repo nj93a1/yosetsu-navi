@@ -14,11 +14,27 @@ const html = (body, status = 200) =>
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const QUESTIONS = ["q1_material", "q2_thickness", "q3_skill", "q4_environment", "q5_budget"];
 const SITE_NAME = "レーザー溶接機 比較・選定";
+// 正式な URL（2026-10-17 公開。ドメインは Xサーバーで取得し、DNS は Cloudflare）
+const ORIGIN = "https://yosetsu-kakaku.com";
+const CANONICAL_HOST = new URL(ORIGIN).host;
 
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
+    const res = await route(request, env, url);
+    // 正式なドメイン以外（workers.dev・localhost など）は検索に出さない。www は正式なドメインへ転送する
+    if (url.host === CANONICAL_HOST) return res;
+    const out = new Response(res.body, res);
+    out.headers.set("x-robots-tag", "noindex, nofollow");
+    return out;
+  },
+};
+
+async function route(request, env, url) {
     const path = url.pathname;
+    if (url.host === `www.${CANONICAL_HOST}`) return Response.redirect(`${ORIGIN}${path}${url.search}`, 301);
+    // 公開後に workers.dev の仮 URL を正式なドメインへ転送する（wrangler.toml の REDIRECT_TO_ORIGIN = "1"）
+    if (env.REDIRECT_TO_ORIGIN === "1" && url.host.endsWith(".workers.dev")) return Response.redirect(`${ORIGIN}${path}${url.search}`, 301);
 
     if (path.startsWith("/api/")) return handleApi(request, env, path);
 
@@ -37,8 +53,7 @@ export default {
     // 存在しないページ（拡張子の無い URL）は、他のページと同じ体裁の 404 にする
     if (res.status === 404 && request.method === "GET" && !/\.[a-z0-9]+$/i.test(path)) return notFoundPage();
     return res;
-  },
-};
+}
 
 async function handleApi(request, env, path) {
   const method = request.method;
@@ -445,7 +460,10 @@ async function productPage(env, slug) {
   update();
 })();
 </script>`;
-  return html(pageShell(p.name.includes(maker) ? p.name : `${p.name}（${maker}）`, body));
+  return html(pageShell(p.name.includes(maker) ? p.name : `${p.name}（${maker}）`, body, {
+    path: `/products/${p.slug}/`,
+    description: `${p.name}（${maker}）の公開仕様、向いている用途・向いていない用途、代替候補。メーカーや販売店が公開している情報を基に記載しています。`,
+  }));
 }
 
 /** 商品が見つからない・存在しないページ（404） */
@@ -483,9 +501,13 @@ function errorPage() {
   return html(pageShell("ただいま表示できません", body, { current: "" }), 500);
 }
 
-function pageShell(title, body, { current = "/lineup/" } = {}) {
+/** Worker が作るページの共通部分。path があるページ（商品ページ）は検索に出し、無いページ（404・エラー）は noindex */
+function pageShell(title, body, { current = "/lineup/", path = null, description = "" } = {}) {
+  const meta = path
+    ? `<link rel="canonical" href="${ORIGIN}${esc(path)}"><meta property="og:url" content="${ORIGIN}${esc(path)}">${description ? `<meta name="description" content="${esc(description)}"><meta property="og:description" content="${esc(description)}">` : ""}`
+    : `<meta name="robots" content="noindex,nofollow">`;
   return `<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="robots" content="noindex,nofollow"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><meta property="og:type" content="website"><meta property="og:site_name" content="レーザー溶接機 比較・選定"><meta property="og:title" content="${esc(title)}"><meta property="og:image" content="https://yosetsu-navi.jolly-frost-2311.workers.dev/assets/images/ogp.jpg"><meta name="twitter:card" content="summary_large_image"><title>${esc(title)}｜${SITE_NAME}</title>
+${meta}<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><meta property="og:type" content="website"><meta property="og:site_name" content="レーザー溶接機 比較・選定"><meta property="og:title" content="${esc(title)}"><meta property="og:image" content="${ORIGIN}/assets/images/ogp.jpg"><meta name="twitter:card" content="summary_large_image"><title>${esc(title)}｜${SITE_NAME}</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/style.css?v=23"><link rel="stylesheet" href="/assets/css/product.css?v=23"></head><body>

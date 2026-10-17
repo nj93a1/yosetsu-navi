@@ -7,6 +7,8 @@ compatibility_date = "2026-09-01"
 [assets]
 directory = "./src"
 binding = "ASSETS"
+# 静的ファイルも Worker を通す（正式なドメイン以外に noindex を付ける・www を転送するため）
+run_worker_first = true
 
 [[d1_databases]]
 binding = "DB"

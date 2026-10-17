@@ -11,7 +11,7 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const SRC = join(ROOT, "content/columns");
 const OUT = join(ROOT, "src/columns");
 const SITE = "レーザー溶接機 比較・選定";
-const ORIGIN = "https://yosetsu-navi.jolly-frost-2311.workers.dev";
+const ORIGIN = "https://yosetsu-kakaku.com";
 
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 /** 1 行の中の **太字** と [リンク](URL)。URL は / か https:// で始まるものだけ */
@@ -72,8 +72,6 @@ function head({ title, description, path, version }) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- 本番公開時に削除：検索エンジンのインデックスを許可する -->
-  <meta name="robots" content="noindex,nofollow">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
@@ -86,6 +84,7 @@ function head({ title, description, path, version }) {
   <meta property="og:title" content="${esc(full)}">
   <meta property="og:description" content="${esc(description)}">
   <meta property="og:url" content="${ORIGIN}${path}">
+  <link rel="canonical" href="${ORIGIN}${path}">
   <meta property="og:image" content="${ORIGIN}/assets/images/ogp.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
