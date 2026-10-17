@@ -1,8 +1,8 @@
 // 相談・問い合わせ。診断結果や商品ページから来たときは、その内容を「一緒に送られる内容」として表示する。
 // 確認画面の「この内容で送信する」で /api/contact に送る（保存し、設定があれば受付用アドレスへメール。worker/contact.js）。
 // メールの設定がまだのときは、送信後の画面で「まだ担当者に届かない」ことをはっきり出す（送ったように見せない）。
-import { mountChrome, track } from "./partials.js?v=23";
-import { productSlug } from "./scoring.js?v=23";
+import { mountChrome, track } from "./partials.js?v=24";
+import { productSlug } from "./scoring.js?v=24";
 
 mountChrome({ current: "/contact/" });
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));

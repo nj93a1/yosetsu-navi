@@ -18,11 +18,13 @@ export function productPhoto(p, variant = "card") {
 }
 
 // ---- GA4（Google アナリティクス 4） ----------------------------------
-// 測定ID（例 "G-XXXXXXXXXX"）。空のあいだは何も読み込まず、track() も何もしない。
+// 測定ID（GA4 プロパティ「yosetsu-kakaku.com」properties/559289896、KDM の GA4 アカウント。2026-10-17 作成）。
+// 正式なドメイン（yosetsu-kakaku.com）で開いたときだけ読み込む（手元の確認や workers.dev は数えない）。
 // 送るイベント: 診断の選択肢（diagnosis_answer）・診断完了（diagnosis_complete）・結果の操作（result_*）・相談ボタン（inquiry_click）・相談フォーム送信（contact_submit）・data-ga を付けたボタン
-export const GA4_ID = "";
+export const GA4_ID = "G-4NXGD9C7J1";
+const GA4_HOST = "yosetsu-kakaku.com";
 function loadGa() {
-  if (!GA4_ID || window.gtag) return;
+  if (!GA4_ID || location.hostname !== GA4_HOST || window.gtag) return;
   window.dataLayer = window.dataLayer || [];
   window.gtag = function gtag() { window.dataLayer.push(arguments); };
   window.gtag("js", new Date());
